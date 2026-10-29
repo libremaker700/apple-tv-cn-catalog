@@ -30,6 +30,12 @@ jobs:
           python-version: '3.12'
       - run: pip install requests Pillow opencc-python-reimplemented
       - run: python -m unittest discover -s tests -v
+      - name: Check configured keys without issuing title searches
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          TAVILY_API_KEY_1: ${{ secrets.TAVILY_API_KEY_1 }}
+          TAVILY_API_KEY_2: ${{ secrets.TAVILY_API_KEY_2 }}
+        run: python scripts/check_search_keys.py
       - name: Reuse verified names and search unresolved works within one shared budget
         id: lookup
         env:
