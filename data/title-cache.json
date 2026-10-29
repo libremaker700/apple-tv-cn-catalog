@@ -51,10 +51,609 @@
         "status": "pending_review"
       },
       "next_retry_at": "2026-11-28T18:25:27+00:00"
+    },
+    "c092387871b9d7a29bfaf128f691958b1844bcf5ae803afd1efd1e6afbab4bd9": {
+      "identity": {
+        "slug": "bearbrick",
+        "english_title": "BE@RBRICK",
+        "kind": "series",
+        "year": "2025",
+        "official_id": "umc.cmc.18fsq2h43zx0v5h31hyeq1d7w"
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "BE@RBRICK 2025 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "BE@RBRICK Series 100% | Overview of the latest series",
+            "url": "https://www.mybearbrick.de/en/pages/bearbrick-series-100",
+            "score": 0.6388584
+          },
+          {
+            "title": "BE@RBRICK SERIES 52 | TOP",
+            "url": "https://bearbrick.com",
+            "score": 0.54303354
+          },
+          {
+            "title": "Bearbrick (TV series)",
+            "url": "https://en.wikipedia.org/wiki/Bearbrick_(TV_series)",
+            "score": 0.5177909
+          },
+          {
+            "title": "Apple TV+ unveils sneak peek at “BE@RBRICK,” the music ...",
+            "url": "https://www.apple.com/tv-pr/news/2025/02/apple-tv-unveils-sneak-peek-at-berbrick-the-new-music-driven-animated-comedy-series-for-kids-and-families-based-on-medicom-toys-iconic-collectible-figures-premiering-globally-on-march-21",
+            "score": 0.5087155
+          },
+          {
+            "title": "Be@rbrick (TV Series 2025)",
+            "url": "https://www.imdb.com/title/tt27607776",
+            "score": 0.45595008
+          },
+          {
+            "title": "BE@RBRICK — Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=h_xYQpudrfk",
+            "score": 0.33359057
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "af959efaa440a7ce8579d43390909529e61cba3c83eecf13288c5de8af633570": {
+      "identity": {
+        "slug": "duck-and-goose",
+        "english_title": "Duck & Goose",
+        "kind": "series",
+        "year": "2022",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Duck & Goose 2022 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Duck & Goose - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Duck_%26_Goose",
+            "score": 0.78334314
+          },
+          {
+            "title": "Duck & Goose (TV Series 2022–2023)",
+            "url": "https://www.imdb.com/title/tt7999864",
+            "score": 0.6757865
+          },
+          {
+            "title": "Duck & Goose - Season 1",
+            "url": "https://www.primevideo.com/detail/0GM92TKSSP46GOILF9RF5J3KTZ?tr=au",
+            "score": 0.6599319
+          },
+          {
+            "title": "Duck & Goose - Apple TV Press (CA)",
+            "url": "https://www.apple.com/ca/tv-pr/originals/duck-and-goose",
+            "score": 0.41137156
+          },
+          {
+            "title": "Solve Problems with Duck & Goose | Apple TV",
+            "url": "https://www.youtube.com/watch?v=VYxm2Nwksv8",
+            "score": 0.38484335
+          },
+          {
+            "title": "Duck & Goose — Season 2 Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=ez0XJLb64NY",
+            "score": 0.22520393
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "4b8b19fabbaffa2419e60d2bdd6eaf03a11cc8139d6e19b02d4534e8ab9729f8": {
+      "identity": {
+        "slug": "eva-the-owlet",
+        "english_title": "Eva the Owlet",
+        "kind": "series",
+        "year": "2025",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Eva the Owlet 2025 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Eva the Owlet - Säsong 2",
+            "url": "https://www.primevideo.com/-/sv/detail/0G2ETI1LHJC2CY6NKUFJWIA6TZ?tr=us",
+            "score": 0.63777614
+          },
+          {
+            "title": "Eva the Owlet (TV Series 2023–2025)",
+            "url": "https://www.imdb.com/title/tt20248376",
+            "score": 0.51032627
+          },
+          {
+            "title": "Eva the Owlet: Season 2",
+            "url": "https://www.rottentomatoes.com/tv/eva_the_owlet/s02",
+            "score": 0.48879638
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "65939a32cfb16740507b4caa6640a688a6ca50794adfbdb22252913dbfa3e3d6": {
+      "identity": {
+        "slug": "fraggle-rock-back-to-the-rock",
+        "english_title": "Fraggle Rock: Back to the Rock",
+        "kind": "series",
+        "year": "2022",
+        "official_id": "umc.cmc.2r077021gw7fu0noml0hln2yq"
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Fraggle Rock: Back to the Rock 2022 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Fraggle Rock: Back to the Rock - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Fraggle_Rock:_Back_to_the_Rock",
+            "score": 0.7680558
+          },
+          {
+            "title": "Fraggle Rock: Back to the Rock (TV Series 2022– )",
+            "url": "https://www.imdb.com/title/tt12397680",
+            "score": 0.7031221
+          },
+          {
+            "title": "Back to the Rock,” premiering January 21, 2022",
+            "url": "https://www.apple.com/tv-pr/news/2021/11/the-fraggles-are-back-in-apples-fraggle-rock-back-to-the-rock-premiering-january-21-2022-on-apple-tv",
+            "score": 0.50432175
+          },
+          {
+            "title": "Fraggle Rock: Back to the Rock LIVE",
+            "url": "https://www.fragglerocklive.com",
+            "score": 0.42176673
+          },
+          {
+            "title": "Fraggle Rock: Back to the Rock —  Season 2 Guest Star Puppet Surprise | Apple TV",
+            "url": "https://www.youtube.com/watch?v=LPhN5brguEw",
+            "score": 0.39768162
+          },
+          {
+            "title": "Fraggle Rock: Back to the Rock — Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=H21eTqk9BP8",
+            "score": 0.39068562
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "d71d1cae97460be5c5dbee876eee5629b237d0b27c72aa85066c5df1f546b6eb": {
+      "identity": {
+        "slug": "fraggle-rock-rock-on",
+        "english_title": "Fraggle Rock: Rock On!",
+        "kind": "series",
+        "year": "2020",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Fraggle Rock: Rock On! 2020 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Fraggle Rock - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Fraggle_Rock",
+            "score": 0.6959795
+          },
+          {
+            "title": "Fraggle Rock: Rock On! - Season 1",
+            "url": "https://www.primevideo.com/detail/0HY9GOB6L103YAZR4USQ03WM7N?tr=in",
+            "score": 0.680136
+          },
+          {
+            "title": "Fraggle Rock: Rock On! (TV Series 2020)",
+            "url": "https://www.imdb.com/title/tt12187270",
+            "score": 0.64128816
+          },
+          {
+            "title": "Fraggle Rock: Rock On! - Muppet Wiki - Fandom",
+            "url": "https://muppet.fandom.com/wiki/Fraggle_Rock:_Rock_On!",
+            "score": 0.40995342
+          },
+          {
+            "title": "Fraggle Rock: Rock On! — Official Teaser | Apple TV",
+            "url": "https://www.youtube.com/watch?v=iAXFu-KFVGI",
+            "score": 0.32283598
+          },
+          {
+            "title": "Fraggle Rock | Rotten Tomatoes",
+            "url": "https://www.rottentomatoes.com/tv/fraggle_rock",
+            "score": 0.25660416
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "321daabaa875cc3e89e50095b32d7a932af2fbc1515aa62e29bc7cb8c7ea4bef": {
+      "identity": {
+        "slug": "frog-and-toad",
+        "english_title": "Frog and Toad",
+        "kind": "series",
+        "year": "2024",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Frog and Toad 2024 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Frog and Toad - Season 2",
+            "url": "https://www.primevideo.com/-/zh_TW/detail/0KQPOGON8E5RD61YHN0JF6CRYV?tr=us",
+            "score": 0.6549173
+          },
+          {
+            "title": "Frog and Toad (TV Series 2023–2024)",
+            "url": "https://www.imdb.com/title/tt2197822",
+            "score": 0.4833807
+          },
+          {
+            "title": "Frog and Toad (TV Series 2023)",
+            "url": "https://www.themoviedb.org/tv/219056-frog-and-toad",
+            "score": 0.4272061
+          },
+          {
+            "title": "Frog and Toad - Official Season 2 Trailer (2024) Nat Faxon ...",
+            "url": "https://www.youtube.com/watch?v=0cmZizX3K5Q",
+            "score": 0.38477397
+          },
+          {
+            "title": "FROG AND TOAD Season 2 Trailer (2024) Apple TV+",
+            "url": "https://www.youtube.com/watch?v=9tBL81uZQ5w",
+            "score": 0.31586307
+          },
+          {
+            "title": "觀看《Frog and Toad》",
+            "url": "https://tv.apple.com/mo/show/frog-and-toad/umc.cmc.xvcgt6ied9s3atejpk92tv1h",
+            "score": 0.2417672
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "0e9b2a7a19d028a6a8a059b75b3299f5c7673215e54add4bd86b457ce5968176": {
+      "identity": {
+        "slug": "hello-jack-the-kindness-show",
+        "english_title": "Hello, Jack! The Kindness Show",
+        "kind": "series",
+        "year": "2022",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Hello, Jack! The Kindness Show 2022 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Hello, Jack! The Kindness Show - Apple TV Press",
+            "url": "https://www.apple.com/tv-pr/originals/hello-jack-the-kindness-show",
+            "score": 0.54971373
+          },
+          {
+            "title": "Watch Hello, Jack! The Kindness Show - Season 1",
+            "url": "https://www.amazon.com/gp/video/detail/B0D9J2X28R",
+            "score": 0.54187006
+          },
+          {
+            "title": "Hello, Jack! The Kindness Show — Start With Kindness",
+            "url": "https://www.youtube.com/playlist?list=PLx-VtE7KiW8yGwQoDRAywLtAocZc7h6CQ",
+            "score": 0.502564
+          },
+          {
+            "title": "Hello, Jack! The Kindness Show (TV Series 2021– )",
+            "url": "https://www.imdb.com/title/tt14676680",
+            "score": 0.4400126
+          },
+          {
+            "title": "Hello, Jack! The Kindness Show — Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=hcsEn51ZakY",
+            "score": 0.4042963
+          },
+          {
+            "title": "Hello, Jack! The Kindness Show - News - Apple TV Press",
+            "url": "https://www.apple.com/tv-pr/originals/hello-jack-the-kindness-show/news",
+            "score": 0.22088856
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "8706f4efde9d88dde68f69e7371f376366dbb908af54195d1a3f58f0415818b7": {
+      "identity": {
+        "slug": "helpsters",
+        "english_title": "Helpsters",
+        "kind": "series",
+        "year": "2023",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Helpsters 2023 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Helpsters (TV Series 2019",
+            "url": "https://www.imdb.com/title/tt10515488",
+            "score": 0.47051823
+          },
+          {
+            "title": "Helpsters",
+            "url": "https://en.wikipedia.org/wiki/Helpsters",
+            "score": 0.43885794
+          },
+          {
+            "title": "Watch Helpsters",
+            "url": "https://tv.apple.com/us/show/helpsters/umc.cmc.kfh7cellb1a3dmiehxhvq8gl",
+            "score": 0.35160094
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-CN&ie=UTF8&sl=ko&tl=zh-CN",
+            "score": 0.05018624
+          },
+          {
+            "title": "香港電台網站 : 電視",
+            "url": "https://www.rthk.hk/tv/progPlayer/dtt31/chineseworks/1083682",
+            "score": 0.047043618
+          },
+          {
+            "title": "小红书 - 你访问的页面不见了",
+            "url": "https://www.xiaohongshu.com/discovery/item/6ad3b7e900000000180398b2",
+            "score": 0.019184623
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "e2a2521d5976a11336926b540f3470a0bf7da5171653599051d1f2bbc2c28aa7": {
+      "identity": {
+        "slug": "lovely-little-farm",
+        "english_title": "Lovely Little Farm",
+        "kind": "series",
+        "year": "2023",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Lovely Little Farm 2023 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Lovely Little Farm (TV Series 2022–2023)",
+            "url": "https://www.imdb.com/title/tt20218952",
+            "score": 0.6496014
+          },
+          {
+            "title": "Lovely Little Farm - Season 2",
+            "url": "https://www.primevideo.com/detail/0KPL48Q50ERLAJV0RNGTBOQA7X",
+            "score": 0.6356076
+          },
+          {
+            "title": "Lovely Little Farm - Apple TV Press",
+            "url": "https://www.apple.com/tv-pr/originals/lovely-little-farm",
+            "score": 0.61363083
+          },
+          {
+            "title": "Watch Lovely Little Farm - Season 1 | Prime Video",
+            "url": "https://www.amazon.com/gp/video/detail/B0DGJS5M2F",
+            "score": 0.4081122
+          },
+          {
+            "title": "Lovely Little Farm — Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=06K6vH9il5s&pp=0gcJCY8Co7VqN5tD",
+            "score": 0.3584434
+          },
+          {
+            "title": "Lovely Little Farm",
+            "url": "https://www.rottentomatoes.com/tv/lovely_little_farm",
+            "score": 0.19567129
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "e4142ac63c242e297b238af5b4543525c35a69025adc86b504c456cf5c416dac": {
+      "identity": {
+        "slug": "not-a-box",
+        "english_title": "Not a Box",
+        "kind": "series",
+        "year": "2025",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Not a Box 2025 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Not a Box (TV Series 2025",
+            "url": "https://www.imdb.com/title/tt37024432",
+            "score": 0.64182705
+          },
+          {
+            "title": "黑盒子 (电视剧) - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-hans/%E9%BB%91%E7%9B%92%E5%AD%90_(%E9%9B%BB%E8%A6%96%E5%8A%87)",
+            "score": 0.575517,
+            "definition": "《黑盒子》（英语：The Black Box）是一部由LINE台湾与兔将创意影业双方合资于2024年5月开拍的影集。故事内容改编自LINE WEBTOON同名惊悚网路漫画《黑盒子》。原著漫画作者Pony。。",
+            "page_sha256": "381eecf568eda7a64052130c69556b0ff3e271a17a60fca9ffb51300fc04d4fc"
+          },
+          {
+            "title": "Apple TV+ announces “Not a Box,” an all-new animated preschool series - Apple TV Press",
+            "url": "https://www.apple.com/tv-pr/news/2025/05/apple-tv-announces-not-a-box-an-all-new-animated-preschool-series-premiering-globally-friday-june-13",
+            "score": 0.50490767
+          },
+          {
+            "title": "Imagine the possibilities. Not A Box — June 13 - #NotABox",
+            "url": "https://www.facebook.com/appletv/videos/imagine-the-possibilitiesnot-a-box-june-13notabox-appletv-appletvplus/578882078591380",
+            "score": 0.19608657
+          },
+          {
+            "title": "Season 1 – Not a Box",
+            "url": "https://www.rottentomatoes.com/tv/not_a_box/s01",
+            "score": 0.14324789
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-CN&sl=en&tl=zh-CN&text=",
+            "score": 0.08377804
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "0427f226cca13d02560941831fc7626a510c821894f06772db4e08ccc0e1b046": {
+      "identity": {
+        "slug": "pretzel-and-the-puppies",
+        "english_title": "Pretzel and the Puppies",
+        "kind": "series",
+        "year": "2023",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Pretzel and the Puppies 2023 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Pretzel and the Puppies (TV Series 2022–2023)",
+            "url": "https://www.imdb.com/title/tt17524490",
+            "score": 0.70871735
+          },
+          {
+            "title": "PRETZEL AND THE PUPPIES Season 2 Trailer (2023) ...",
+            "url": "https://www.youtube.com/watch?v=FdfH7GG4_Js",
+            "score": 0.4974371
+          },
+          {
+            "title": "Pretzel and the Puppies",
+            "url": "https://en.wikipedia.org/wiki/Pretzel_and_the_Puppies",
+            "score": 0.46964246
+          },
+          {
+            "title": "Pretzel and the Puppies — Official Trailer | Apple TV",
+            "url": "https://www.youtube.com/watch?v=YVuJO_SsKiY",
+            "score": 0.45784017
+          },
+          {
+            "title": "Pretzel and the Puppies — Season 2 Official Trailer",
+            "url": "https://www.youtube.com/watch?v=PJVN9g6m3yY",
+            "score": 0.3650723
+          },
+          {
+            "title": "Apple TV+ announces “Pretzel and the Puppies,” new ...",
+            "url": "https://www.apple.com/tv-pr/news/2022/01/apple-tv-announces-pretzel-and-the-puppies-new-animated-series-for-kids-and-families-premiering-globally-on-friday-february-11",
+            "score": 0.31217125
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
+    },
+    "34c9ffb5612c550e60e6e31c0498698ec13ff20cda9456bf5dac792f6cf6a52e": {
+      "identity": {
+        "slug": "sago-mini-friends",
+        "english_title": "Sago Mini Friends",
+        "kind": "series",
+        "year": "2024",
+        "official_id": ""
+      },
+      "status": "pending_review",
+      "checked_at": "2026-10-29T18:27:35+00:00",
+      "evidence": {
+        "query": "Sago Mini Friends 2024 电视剧 中文名 国内译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "Sago Mini Friends (TV Series 2022–2024)",
+            "url": "https://www.imdb.com/title/tt19770764",
+            "score": 0.67527276
+          },
+          {
+            "title": "Sago Mini Friends - Season 1",
+            "url": "https://www.primevideo.com/-/zh_TW/detail/0GKOL4FAG4E909CYZUWTG9UFQ3?tr=tw",
+            "score": 0.6522641
+          },
+          {
+            "title": "Sago Mini Friends Season 3 (2024) | Hollywood.com Movie ...",
+            "url": "https://www.youtube.com/watch?v=8Ba5JBc83Z4",
+            "score": 0.40443742
+          },
+          {
+            "title": "Sago Mini Friends",
+            "url": "https://www.rottentomatoes.com/tv/sago_mini_friends",
+            "score": 0.40112522
+          },
+          {
+            "title": "Sago Mini Friends S2 Animation Series - video Dailymotion",
+            "url": "https://www.dailymotion.com/video/x8rfhyb",
+            "score": 0.2809102
+          },
+          {
+            "title": "我在哪里可以观看Sago Mini Friends?",
+            "url": "https://www.themoviedb.org/tv/205258-sago-mini-friends/watch?language=zh-TW",
+            "score": 0.2105069
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-28T18:27:35+00:00"
     }
   },
   "budgets": {
-    "2026-10": 1
+    "2026-10": 13
   },
-  "last_run_at": "2026-10-29T18:25:27+00:00"
+  "last_run_at": "2026-10-29T18:27:35+00:00"
 }
