@@ -114,5 +114,7 @@ def main():
     if a.seed: publish(load(ROOT/'data/seed.json'),None,'bundled-reviewed-snapshot');return
     prior=load(DOCS/'catalog.json');manifest=load(DOCS/'version.json');last=manifest.get('checked_at') or 0
     if not a.force and time.time()-last<604800: print('Not due; retain verified snapshot');return
-    value=collect(prior);publish(value,int(time.time()),'official-network-collection')
+    value=collect(prior)
+    from title_lookup import reapply_cache
+    value=reapply_cache(value);publish(value,int(time.time()),'official-network-collection')
 if __name__=='__main__':main()

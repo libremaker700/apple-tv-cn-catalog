@@ -27,6 +27,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests Pillow opencc-python-reimplemented
+      - run: python -m unittest discover -s tests -v
       - name: Collect weekly, manual sync forces a new check
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
         run: python scripts/catalog.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
