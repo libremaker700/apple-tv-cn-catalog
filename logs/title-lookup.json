@@ -1,62 +1,18 @@
 {
-  "checked_at": "2026-10-29T18:27:35+00:00",
+  "checked_at": "2026-10-29T18:30:52+00:00",
   "api_configured": true,
-  "attempted": 12,
-  "searched": 12,
+  "attempted": 1,
+  "searched": 1,
   "direct_verified": 0,
   "cache_hits": 0,
   "verified_changes": [],
   "monthly_limit": 100,
-  "pending": 12,
+  "pending": 1,
   "reused_verified": 218,
   "status": "completed",
-  "monthly_reserved": 13,
+  "monthly_reserved": 14,
   "remaining_unverified": 326,
   "api_results": [
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
     {
       "key_slot": 1,
       "http_status": 200
