@@ -39,7 +39,7 @@ def apply_verified(entry,cached,ident):
 
 class SearchClient:
     def __init__(self,keys,session=None):
-        self.keys=keys;self.session=session;self.index=0;self.stopped=False;self.requests=0
+        self.keys=keys;self.session=session;self.index=0;self.stopped=False;self.requests=0;self.statuses=[]
         self.direct_client=Lookup('',session=session)
     def direct(self,reference,checked_at):return self.direct_client.direct(reference,checked_at)
     def verify(self,reference,results,checked_at):return self.direct_client.verify_results(reference,results,checked_at)
@@ -50,6 +50,7 @@ class SearchClient:
             lookup=Lookup(self.keys[self.index],session=self.session);self.requests+=1
             patch,evidence=lookup.search(reference,checked_at)
             error=evidence.get('error','')
+            self.statuses.append({'key_slot':self.index+1,'http_status':int(error.split()[-1]) if re.fullmatch(r'HTTP \d{3}',error) else (0 if error else 200)})
             if error in ('HTTP 401','HTTP 403','search_unavailable') and self.index+1<len(self.keys):
                 self.index+=1;continue
             # Respect throttling/quota errors; do not switch keys to bypass rate limits.
@@ -104,6 +105,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         cache['records'][key]=clean(entry,client.keys);output.append(e)
     output.sort(key=lambda e:order[e['slug']]);cache['last_run_at']=checked
     report['monthly_reserved']=used;report['remaining_unverified']=sum(e.get('nameStatus')!='verified_title_sources' for e in output)
+    report['api_results']=getattr(client,'statuses',[])
     report['status']='degraded' if client.stopped else ('missing_api_key' if not client.keys else 'completed')
     dump(path,clean(cache,client.keys));dump(root/'logs/title-lookup.json',clean(report,client.keys))
     if output!=current['entries']:
