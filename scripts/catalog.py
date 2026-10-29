@@ -52,6 +52,7 @@ def publish(catalog,checked_at,mode):
     print(json.dumps({'version':sha,'entries':len(value['entries']),'images':len(images),'mode':mode}))
 def collect(previous):
     rows=get(INDEX).json()['results']['originals'];old={e['slug']:e for e in previous['entries']}
+    seeds={e['slug']:e for e in load(ROOT/'data/seed.json')['entries']}
     rows=[r for r in rows if r.get('showTypeKey') in ('films','series')]
     assert len(rows)>=max(50,int(len(old)*0.9)), 'incomplete source inventory'
     def entry(r):
@@ -72,8 +73,14 @@ def collect(previous):
             except Exception as exc:error=exc
         if error:raise RuntimeError('Official artwork failed: '+slug) from error
         e['sourceArtwork']=source
-        if e.get('heroArtwork') and (prior!=e['version'] or old.get(slug,{}).get('sourceArtwork')!=source):
-            e['heroArtwork']=save_image(get(source.replace('.medium.','.large_2x.')).content)
+        hero_source=e.get('heroSource') or seeds.get(slug,{}).get('heroSource')
+        if hero_source:
+            assert re.match(r'https://is[0-9]+-ssl\.mzstatic\.com/image/',hero_source)
+            # Keep hero imagery large and landscape instead of upscaling small PR thumbnails.
+            with Image.open(io.BytesIO(get(hero_source).content)) as im:
+                from PIL import ImageOps
+                im=ImageOps.fit(im.convert('RGB'),(1280,720));out=io.BytesIO();im.save(out,format='JPEG',quality=88)
+            e['heroArtwork']=save_image(out.getvalue());e['heroSource']=hero_source
         if not e.get('zh') or prior!=e['version']:
             # Identity is the official UMC id, shared by the US and Chinese storefronts.
             try:
