@@ -14,6 +14,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-savant/images/season-01/thumbnail/key-art-02/Apple_TV_The_Savant_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9b9e14d732f932b8c1e23313ea234dbc7f42aa7176f15c66f27dc676efeb7ada.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-savant",
         "title": "反仇专家",
@@ -56,6 +57,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/silo/images/season-03/thumbnail/key-art-02/Apple_TV_Silo_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ebe1dd96ebb6ebb52d67fedd098ca475c27aa64910928134bbf729da1efdf373.jpg",
       "heroArtwork": "images/eb7084c108cfb3260f2a029dee223adab0c4ce3e75d9ac765011b847380d2206.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/Ts1eX5lbkAKXD4FfvBoEFA/1280x960sr.jpg",
       "zh": {
         "slug": "silo",
         "title": "末日地堡",
@@ -114,6 +116,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/prodigies/images/season-01/thumbnail/key-art-01/Apple_TV_Prodigies_Key_Art_16_9_main_16_9.jpg.medium.jpg",
       "artwork": "images/8804904b9f313381b483220b5a84df18878943828cf5fa81db23bc34829f76bd.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "prodigies",
         "title": "天才的普普人生",
@@ -156,6 +159,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fleetwood-mac-the-chain/images/thumbnail/first-look/Apple_TV_Fleetwood_Mac_The_Chain_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6320ba16177bddde92a51ff7eab3ca0b8297a8642bd4bce49c9f7ce1b80a5af7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -173,6 +177,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/neuromancer/images/season-01/thumbnail/key-art-01/Apple_TV_Neuromancer_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/55eefad8758b81d49cdaa726d1e1b9c1a562fb7b31585d3a2824b531e15da040.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "neuromancer",
         "title": "神经唤术士",
@@ -214,6 +219,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-wanted-man/images/season-01/thumbnail/key-art-01/Apple_TV_The_Wanted_Man_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/466d9b6f9ab2f6a3d7abc23d487ad7f25ae51028de157ed00098af5ab7205f2a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-wanted-man",
         "title": "亡命教父",
@@ -256,6 +262,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-unleashed/images/thumbnail/key-art-01/Apple_TV_Snoopy_Unleashed_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d2900d80222b41a2609b2e00e9ae78cc60bde3e7ce238eed99a3dc6a1f1f4469.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -274,6 +281,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fraggle-rock-a-holiday-gift/images/thumbnail/key-art-02/Apple_TV_Fraggle_Rock_A_Holiday_Gift_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a978cf0501e84e0d6a59216214e538919625bacb82dc00ab9503fb0d75798ed8.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -291,6 +299,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bad-monkey/images/season-01/thumbnail/key-art-02/Apple_TV_Bad_Monkey_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e76163e20e500aec93d88c442f5487e479b863f45d1806dfb799afa8019a8c4f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bad-monkey",
         "title": "坏猴子",
@@ -339,6 +348,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/way-of-the-warrior-kid/images/thumbnail/key-art-02/Apple_TV_Way_of_the_Warrior_Kid_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a81fa1079994f922e5fb76de1f62f39e870dd8396ab6380fb46cfade63edfc3a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "way-of-the-warrior-kid",
         "title": "海豹小子",
@@ -383,6 +393,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/being-heumann/images/thumbnail/key-art-01/Apple_TV_Being_Heumann_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2ca43f685c98f01402c4a251b6329b3630d6d82dd934cdc31df90452463b3d80.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "being-heumann",
         "title": "身而为人：茱蒂休曼",
@@ -427,6 +438,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/1/12-12-12/images/season-01/thumbnail/key-art-02/Apple_TV_12_12_12_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/98cc4f405fe325631cfae2212e94d8db401e7f3a2358ebe87a84882a2914afeb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "12-12-12",
         "title": "12 12 12",
@@ -465,6 +477,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/awkwafina-the-unlikely-cook/images/season-01/thumbnail/first-look/Apple_TV_The_Unlikely_Cook_with_Awkwafina_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7d78fa3aed2190520c8876665ebd483771bf95a4fc0c5ef5ffd3b77c2a729364.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "awkwafina-the-unlikely-cook",
         "title": "奥卡菲娜：天兵大厨",
@@ -504,6 +517,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/stick/images/season-02/thumbnail/key-art-01/Apple_TV_Stick_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7bced8a8ff83944cb36ec392564ab594b8d1d5b76403c40ff422dc8fb97b88e2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "stick",
         "title": "高杆拍档",
@@ -555,6 +569,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/nocturne/images/season-01/thumbnail/key-art-02/Apple_TV_Nocturne_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9525a0d3eb4d2cef08f9f5e69b6853912c834fc83de8f0b51f931e8cfbca5e41.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "nocturne",
         "title": "夜行杀机",
@@ -596,6 +611,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wheres-wanda/images/season-02/thumbnail/key-art-01/Apple_TV_Wheres_Wanda_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b8144c655b3e508aee15787a4ef50ad775246e672b581c2b3d0c5fba80094959.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wheres-wanda",
         "title": "汪达在哪里？",
@@ -644,6 +660,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/tenzing/images/thumbnail/key-art-03/Apple_TV_Tenzing_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2c9ab4ad46a76ab1b29693bc3b485cd4b4c160d881992cc91acb39a044906299.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "tenzing",
         "title": "雪山之虎：丹增诺盖",
@@ -688,6 +705,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/matchbox-the-movie/images/thumbnail/key-art-03/Apple_TV_Matchbox_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8486988455fbf7fd821cca4c33b09832169c2bffc3859a06dd64695275fe2a74.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "matchbox-the-movie",
         "title": "Matchbox 电影",
@@ -732,6 +750,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/small-prophets/images/season-01/thumbnail/key-art-02/Apple_TV_Small_Prophets_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/30ad04bde54e8f2365df11977864141c5a276af7fd575360be94bc320ab04e38.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "small-prophets",
         "title": "瓶中小先知",
@@ -778,6 +797,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-sisters-grimm/images/season-02/thumbnail/key-art-01/Apple_TV_The_Sisters_Grimm_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a244eb9867faa9fa9d9346c6e769ff85d97a980ccce2417fd8e95a7811851ffe.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-sisters-grimm",
         "title": "格林姊妹大冒险",
@@ -817,6 +837,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-last-first-winter-k2/images/thumbnail/key-art-02/Apple_TV_The_Last_First_Winter_K2_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/db353f7ec2415f481112a967ef27abaedfa06358c4710b496e0e19ab7d6218b5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-last-first-winter-k2",
         "title": "万人之上：冬攀乔戈里峰",
@@ -855,6 +876,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/k/knife-edge-chasing-michelin-stars/images/season-02/thumbnail/key-art-01/Apple_TV_Knife_Edge_Chasing_Michelin_Stars_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e4afd5204419dbb1ffc3be89684f3b62b9a3ce4b3bdd6280cc688875ba9e48f3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "knife-edge-chasing-michelin-stars",
         "title": "厨刀难握：摘星米其林",
@@ -900,6 +922,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/brothers/images/season-01/thumbnail/key-art-02/Apple_TV_Brothers_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/78e3ac573d6e33cf92b2182c49eb4897b35d781c9211eb8a2f768593ec9ef33e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "brothers",
         "title": "无间兄弟情",
@@ -950,6 +973,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/slow-horses/images/season-06/thumbnail/key-art-01/Apple_TV_Slow_Horses_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cdb1206025d17ef9ab0574133cc72fd0957bb630de6733dc3671dc41e50f1ca9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "slow-horses",
         "title": "外放特务组",
@@ -1030,6 +1054,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/last-seen/images/season-01/thumbnail/key-art-02/Apple_TV_Last_Seen_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b51336fdc0d2eea363e24d878dad43e8ef672ad0ce0974bbf90422cf4089adc3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "last-seen",
         "title": "有人看见她",
@@ -1078,6 +1103,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mayday/images/thumbnail/key-art-03/Apple_TV_Mayday_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8df1fbfb5cb7bcd23d2ea2c2676649d1cea601869ff25afa188f6d27163895fb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mayday",
         "title": "碍的迫降",
@@ -1125,6 +1151,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dark-matter/images/season-02/thumbnail/key-art-01/Apple_TV_Dark_Matter_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cb02e6b637ed5d28a789db538272bfb1962653f50c6171decb7b6cfb6654f030.jpg",
       "heroArtwork": "images/1bab0a6ce6b4d33c10736e7c9de5e27464a240c7949e66df6608b532d1717692.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/C7ajZSlk19LEco3WngrE7A/1280x960sr.jpg",
       "zh": {
         "slug": "dark-matter",
         "title": "人生复本",
@@ -1180,6 +1207,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/stillwater/images/season-05/thumbnail/key-art-01/Apple_TV_Stillwater_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ea721ca194c5718816c6172e284a564a85dee19c8a1c879eb7e4a935626ea6fd.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "stillwater",
         "title": "熊猫静水",
@@ -1217,6 +1245,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-dynasty-uconn-huskies/images/season-01/thumbnail/key-art-02/Apple_TV_The_Dynasty_Uconn_Huskies_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/484796d1afc01c6b56a6cd10677c43b7a72bc6153ecd79f537275ee9cf5c4be1.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-dynasty-uconn-huskies",
         "title": "哈士奇王朝：康乃狄克大学女篮",
@@ -1267,6 +1296,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/women-in-blue-las-azules/images/season-02/thumbnail/key-art-02/Apple_TV_Women_in_Blue_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4d28a689f3faeb80c020b41617d91a5d3f79d44a0a8a603c629c5a55394db14c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "women-in-blue-las-azules",
         "title": "女警急先锋",
@@ -1307,6 +1337,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/ted-lasso/images/season-04/thumbnail/key-art-02/Apple_TV_Ted_Lasso_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/357673f846ff63176e6e9bfb1f5586aa23ba253f1eaa6d500d3c704865190d0c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "ted-lasso",
         "title": "泰德拉索：错棚教练趣事多",
@@ -1373,6 +1404,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-presents-theres-no-place-like-home-snoopy/images/season-01/thumbnail/key-art-02/Apple_TV_Theres_No_Place_Like_Home_Snoopy_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4a4fe4cd0600e9b50c2390135592a8a839533fd7e9e989bb156896967ad855b7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
         "title": "史努比开心呈献：有家真好",
@@ -1416,6 +1448,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-dink/images/thumbnail/key-art-01/Apple_TV_The_Dink_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d4df6edb088b6e22a4184ca282681d2aa6aabbf5ee739bd6da8514582bfde784.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-dink",
         "title": "轻拍先生",
@@ -1461,6 +1494,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lucky/images/season-01/thumbnail/key-art-02/Apple_TV_Lucky_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3c29a5e23858ba2520c816dd80c19fdbe3474a4988f4f7a02d9ab8aa5fc4c5cc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lucky",
         "title": "幸运女神",
@@ -1509,6 +1543,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/trying/images/season-05/thumbnail/key-art-01/Apple_Trying_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4b5fd718f0786227707cc2302c2c3c914f55758010433e01e6ebbea9a16c5bec.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "trying",
         "title": "而立人生",
@@ -1581,6 +1616,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/camp-snoopy/images/season-02/thumbnail/key-art-01/Apple_TV_Camp_Snoopy_Key_Artpng_main_16_9.jpg.medium.jpg",
       "artwork": "images/c305e36db4cfe8285d10e58bbf47fa0048fbf416822ef370ed96d3379fa29180.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "camp-snoopy",
         "title": "史努比的欢乐夏令营",
@@ -1621,6 +1657,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/sugar/images/season-02/thumbnail/key-art-01/Apple_TV_Sugar_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6727067c0e8e6a7d29f8ce27888ea07912dda51176308307d52e3bf0817ad7bb.jpg",
       "heroArtwork": "images/5c9b88f98133fb194e88bf3768cd3bf82f5980c88313c1644c9ce7db7d6155d9.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/sPlLx2C25gTki3wEAIa5hQ/1280x960sr.jpg",
       "zh": {
         "slug": "sugar",
         "title": "谜探休格",
@@ -1675,6 +1712,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/cape-fear/images/season-01/thumbnail/key-art-02/Apple_TV_Cape_Fear_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/06e25d58dfd4db5cb731ca6e6f91c83037aec043405a816c10388bdf0f327dc6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "cape-fear",
         "title": "恐怖角",
@@ -1723,6 +1761,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/star-city/images/season-01/thumbnail/key-art-02/Apple_TV_Star_City_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/dc2b0e5671e46b6973b4c0810fb247f80ade629185ba36d70d942f085200a45a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "star-city",
         "title": "苏联星城",
@@ -1762,6 +1801,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/propeller-one-way-night-coach/images/thumbnail/key-art-02/Apple_TV_Propeller_One-Way_Night_Coach_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2b2ce1683858080fba3df84e9b880e436a55df3d0aca82ad18176fa65f27d6e2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "propeller-one-way-night-coach",
         "title": "男孩的奇幻夜航",
@@ -1805,6 +1845,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/maximum-pleasure-guaranteed/images/season-01/thumbnail/key-art-01/Apple_TV_Maximum_Pleasure_Guaranteed_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bee4d292b9b1259915dea7d777d713bfc5873f5f4a2c1e9e4f1d4a21fa59e300.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "maximum-pleasure-guaranteed",
         "title": "极乐直播中",
@@ -1846,6 +1887,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/u/unconditional/images/season-01/thumbnail/key-art-02/Apple_TV_Unconditional_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c59f5f77b1f6a26e7c78f5c9e7cb77f68629b82b5282569bd0a0e0cf342bb8c6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "unconditional",
         "title": "越界母亲",
@@ -1895,6 +1937,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/widows-bay/images/season-01/thumbnail/key-art-04/Apple_TV_Widows_Bay_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3bdc05c625e78e7061b13736a80b2c26c5232e92459e68d88dbb16bda038d1aa.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "widows-bay",
         "title": "寡妇湾",
@@ -1934,6 +1977,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/my-brother-the-minotaur/images/season-01/thumbnail/key-art-02/Apple_Tv_My_Brother_The_Minotaur_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/90c274c318d102e35f1605a24e6203d00e2b62d39ddf5b3072011e3ee8881f8f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "my-brother-the-minotaur",
         "title": "我哥是牛头人",
@@ -1981,6 +2025,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/criminal-record/images/season-02/thumbnail/key-art-01/Apple_TV_Criminal_Record_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0f6bc0310ebf9b23d3957dd347aefe76cc615461cb0bc15d361246bfae924351.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "criminal-record",
         "title": "犯罪纪录",
@@ -2031,6 +2076,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/margos-got-money-troubles/images/season-01/thumbnail/key-art-02/Apple_Tv_Margos_Got_Money_Trouble_Key_Artpng_main_16_9.jpg.medium.jpg",
       "artwork": "images/6cd338b10dbec29aa953e80a66e8ca41b8032c8b8549d5295160941a4f25c24f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "margos-got-money-troubles",
         "title": "玛歌没钱途",
@@ -2075,6 +2121,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/outcome/images/thumbnail/key-art-01/Apple_Tv_Outcome_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/addcdb9ea7a753f3bac4abcb1f324919271b1b3c4f644aa0169a11cdfa8000fb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "outcome",
         "title": "腥途恶果",
@@ -2121,6 +2168,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/y/your-friends-and-neighbors/images/season-02/thumbnail/key-art-01/Apple_TV_Your_Friends_and_Neighbors_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/89a41eae52ca749063811b03a5448b3deff98e3ff673ee6958b2d39d686a173f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "your-friends-and-neighbors",
         "title": "掩耳盗邻",
@@ -2177,6 +2225,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/for-all-mankind/images/season-05/thumbnail/key-art-02/Apple_TV_For_All_Mankind_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2f2f1e52375e58247ab23560823b55bf0b0456dd5b91f3cbe46ac5e8d71d3a20.jpg",
       "heroArtwork": "images/3abc8af47d1a524b604b4e99fcffe66add99d69ecde60c517faac37178dff3ef.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/kv9b35xlrtObOPCNCl5njw/1280x960sr.jpg",
       "zh": {
         "slug": "for-all-mankind",
         "title": "太空使命",
@@ -2249,6 +2298,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wonder-pets-in-the-city/images/season-02/thumbnail/key-art-01/Apple_TV_Wonder_Pets_In_The_City_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/200e60621448aa39eb6a9504c21e1226908e4d42df8bf3bd209cb979983dfe60.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -2266,6 +2316,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/i/imperfect-women/images/season-01/thumbnail/key-art-02/Apple_TV_Imperfect_Women_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4a406a257c38541de821f3bd54b042f745c4af7660a12a85514a0134ecaa26ec.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "imperfect-women",
         "title": "不完美女人",
@@ -2305,6 +2356,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/twisted-yoga/images/season-01/thumbnail/key-art-01/Apple_TV_Twisted_Yoga_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/99a0a6fc2c52141ac9dacbf40987a85797857932f598a75765b7033540f2870d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "twisted-yoga",
         "title": "变调瑜伽",
@@ -2348,6 +2400,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-hunt/images/season-01/thumbnail/key-art-02/Apple_TV_The_Hunt_Traques_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/96b9e555afbc1cb833e67872737b88e5b3c4ccd9e86c1189a8b8dec1f5f8e187.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-hunt",
         "title": "是谁在狩猎",
@@ -2390,6 +2443,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/monarch-legacy-of-monsters/images/season-02/thumbnail/key-art-03/Apple_TV_Monarch_Legacy_of_Monsters_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/53f8c4b1ffcba90bab92ed569b2a121ebe015b08c7faa496ecf0141f3dc84c5c.jpg",
       "heroArtwork": "images/6b1aca048703257b3b15cd385f47f6963e995c93354b4e185572a3ba4417cfff.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/BwMgB_etCOsDJ_-W-raPTw/1280x960sr.jpg",
       "zh": {
         "slug": "monarch-legacy-of-monsters",
         "title": "君主计划：神秘组织与怪兽之谜",
@@ -2445,6 +2499,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-last-thing-he-told-me/images/season-02/thumbnail/key-art-02/Apple_TV_The_Last_Thing_He_Told_Me_S2_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f799284e58011436077f22d76d91a27015bdfa1d89b69616844393359829a2e2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-last-thing-he-told-me",
         "title": "残句线索",
@@ -2501,6 +2556,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/eternity/images/thumbnail/key-art-01/Apple_TV_Eternity_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f18d956f0fdafc9e8cf2d5a097a836375c4254e92307648e84b3574c94b2bfd3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "eternity",
         "title": "换乘真爱",
@@ -2547,6 +2603,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/y/yo-gabba-gabbaland/images/season-02/thumbnail/key-art-01/Apple_TV_Yo_Gabba_GabbaLand_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/889ec5a111bea7df518fa8d959136a10f1db1ec72d615251b0fa6060127b53f6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -2564,6 +2621,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/shrinking/images/season-03/thumbnail/key-art-01/Apple_TV_Shrinking_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/94fb4db3891f63a008417b8bf51f658c4690ad212c83711e1751ecc994c4c701.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "shrinking",
         "title": "诚实诊疗室",
@@ -2625,6 +2683,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/drops-of-god/images/season-02/thumbnail/key-art-01/Apple_TV_Drops_Of_God_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cd568670261810272addba509abca5f3b3f3cc1066dde26cac7105933224284f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "drops-of-god",
         "title": "神之雫",
@@ -2677,6 +2736,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hijack/images/season-02/thumbnail/key-art-02/Apple_Tv_Hijack_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/857243f4478a0b1b4e2a9c6e768bfad1f48e5f27143d9e07f0bab24841c2e02d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "hijack",
         "title": "劫持惊魂录",
@@ -2727,6 +2787,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/tehran/images/season-03/thumbnail/key-art-01/Apple_TV_Tehran_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f28e0498aa4e5bbd7ceedd0239d4ffe17a957e6400cc381b54f61df3b90f5bf9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "tehran",
         "title": "德黑兰行动",
@@ -2788,6 +2849,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/born-to-be-wild/images/season-01/thumbnail/key-art-02/16x9/Apple_Tv_Born_to_be_Wild_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e9eb5bc3682a28b22b905a3a426f8b9aea1c7824af777ab28e113630b8a37aba.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "born-to-be-wild",
         "title": "野生之心",
@@ -2826,6 +2888,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/f1/images/thumbnail/key-art-03/Apple_TV_F1_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/45a1dbb89a4ff7ff704f8c9b7bc93a8f34695a86b3fc337c54e8b74c9cc68a61.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "f1",
         "title": "F1 电影",
@@ -2870,6 +2933,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-first-snow-of-fraggle-rock/images/thumbnail/key-art-02/Apple_TV_The_First_Snow_of_Fraggle_Rock_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/512abc1670267ae1e3d1036095bda74649b049fba102e8b082591c5fba2be728.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-first-snow-of-fraggle-rock",
         "title": "Fraggle Rock：美好初雪",
@@ -2911,6 +2975,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wondla/images/season-03/thumbnail/key-art-01/Apple_TV_WondLa_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0139e89cd084e3b7cc4045974156b92d6054c4fb152811603756c6e463d2427c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wondla",
         "title": "云朵拉",
@@ -2953,6 +3018,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/prehistoric-planet-ice-age/images/season-01/thumbnail/key-art-01/Apple_TV_Prehistoric_Planet_Ice_Age_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/050cedfd9b5afbc97ac231c119922b5665149a4f2c1f25b016f1421d71f5ef83.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "prehistoric-planet-ice-age",
         "title": "史前地球",
@@ -2989,6 +3055,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-family-plan-2/images/thumbnail/key-art-01/Apple_TV_The_Family_Plan_2_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/84f1ee42c2b4807773f6bd4618a1dfcf6e55383afd58374a689e8f34418aaa9b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-family-plan-2",
         "title": "全家逃走中 2：在节难逃",
@@ -3033,6 +3100,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/come-see-me-in-the-good-light/images/thumbnail/key-art-02/Apple_TV_Come_See_Me_in_the_Good_Light_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0271e5956be1b7452e4223738f7f310768732f60b4391a7a25116fc2e18aa5fb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "come-see-me-in-the-good-light",
         "title": "我们的诗生活",
@@ -3076,6 +3144,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/palm-royale/images/season-02/thumbnail/key-art-02/Apple_TV_Palm_Royale_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7dbb56ab49a289e5c410629300c06f0ba52d68abd2009e8891321ff23e6d0466.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "palm-royale",
         "title": "媛梦棕榈滩",
@@ -3131,6 +3200,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/pluribus/images/season-01/thumbnail/key-art-02/Apple_TV_Pluribus_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/de25beebe8813eabe700ac38ce7943f57493f456e1d4a667d28142e707c57c3a.jpg",
       "heroArtwork": "images/76194a87e32c26b5000fa18f250ab55462b8c471f858366a490410246ed58291.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/qagrktsiJ8QoSbRpIuqihw/1280x960sr.jpg",
       "zh": {
         "slug": "pluribus",
         "title": "万中选一",
@@ -3180,6 +3250,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/down-cemetery-road/images/season-01/thumbnail/key-art-01/Apple_TV_Down_Cemetery_Road_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f1449208f3c5780f9ae1ede209eea0912e62970c1c195e7ab9c6805cee8ad103.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "down-cemetery-road",
         "title": "险路同行",
@@ -3229,6 +3300,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/stiller-meara-nothing-is-lost/images/thumbnail/key-art-01/Apple_TV_Stiller_and_Meara_Nothing_is_Lost_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/63f3362de91a57bd4a43309d6e90f88651394221b45333e73fce03053a4cb9f3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "stiller-meara-nothing-is-lost",
         "title": "史提勒与米拉：未曾落幕",
@@ -3273,6 +3345,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mr-scorsese/images/season-01/thumbnail/key-art-01/Apple_TV_Mr_Scorsese_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e0680e8be9e932da0081fa5f1dae4f1a8cf75bdf6f1a08ac63e13ea72d8f68b5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mr-scorsese",
         "title": "史柯西斯先生",
@@ -3316,6 +3389,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/loot/images/season-03/thumbnail/key-art-01/Apple_TV_Loot_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/23c732ac0d9e3024059f7230ae0958a781e9c1ebc91cc4f71a3b87cd4caff48a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "loot",
         "title": "钱钱钱钱",
@@ -3374,6 +3448,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-last-frontier/images/season-01/thumbnail/key-art-02/Apple_TV_The_Last_Frontier_main_16_9.jpg.medium.jpg",
       "artwork": "images/ce3c760089ce6925fdbe28a152e498dcbc15a7e9537b0f9a3381ace0082179c6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-last-frontier",
         "title": "冰封边狱",
@@ -3424,6 +3499,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-lost-bus/images/thumbnail/key-art-02/Apple_TV_The_Lost_Bus_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1c53a366ee376d68a0bbdd301cc4da5ef73fdecdf21ce716d549409561ed1b56.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-lost-bus",
         "title": "火烧天堂镇",
@@ -3471,6 +3547,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/all-of-you/images/thumbnail/key-art-03/Apple_TV_All_of_You_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ffce29a86a7df4ced492bbfa202b85d585c8eee6a596778c5f912b31470a6835.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "all-of-you",
         "title": "你未曾给我的",
@@ -3516,6 +3593,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-reluctant-traveler/images/season-03/thumbnail/key-art-01/Apple_TV_The_Reluctant_Traveler_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/952fe459cb7acd4f8fc1f1254f62c0e01d86049d31257690452d7b2f8642feed.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-reluctant-traveler",
         "title": "尤金李维的宅老爹旅行",
@@ -3561,6 +3639,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-morning-show/images/season-04/thumbnail/key-art-02/Apple_TV_The_Morning_Show_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d50b2ab2226d79e42dd7dc5e137fb8d9b3a64629f8a391d5f9d20d15b9b40254.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-morning-show",
         "title": "晨间直播秀",
@@ -3627,6 +3706,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/highest-2-lowest/images/thumbnail/key-art-02/Apple_TV_Highest2Lowest_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c8a3e8bb303e2aa7024d0cbca0abb2338d10000d3e3339627a6556b099606ea8.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "highest-2-lowest",
         "title": "上流 × 下流",
@@ -3671,6 +3751,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/shape-island/images/season-02/thumbnail/key-art-01/Apple_TV_Shape_Island_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/597892fbe09b4b94820847e31b1af201467ed24cde81b79d9f3cfbbc7f72334e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "shape-island",
         "title": "形状岛",
@@ -3717,6 +3798,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/k/kpopped/images/season-01/thumbnail/key-art-01/Apple_TV_KPOPPED_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/777ad1e115e8755e4002c5b27d1b37490fb3ac262edd186eca655e718d117b1e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "kpopped",
         "title": "K-Pop 跨界战",
@@ -3759,6 +3841,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/i/invasion/images/season-03/thumbnail/key-art-01/key-art-01/Apple_TV_Invasion_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d7075edc9a61f813d9ddb2c56d96b16fbdaa3da1f251d524b532e327f90e7c85.jpg",
       "heroArtwork": "images/c40e27aa791f9a5da604dba69a93d5699bad660a7ced2a6da29d9b2a3c19fa0a.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/w5-aFmRGPHWRNsHSqnNQrQ/1280x960sr.jpg",
       "zh": {
         "slug": "invasion",
         "title": "全面入侵",
@@ -3815,6 +3898,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-presents-a-summer-musical/images/thumbnail/key-art-02/Apple_TV_Snoopy_Presents_Summer_Camp_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bc140cdceffaa3a8136cd1779a09c5e2f4d05263e3260d60664b0db4007d1050.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-presents-a-summer-musical",
         "title": "史努比开心呈献：盛夏音乐剧",
@@ -3857,6 +3941,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/platonic/images/season-02/thumbnail/key-art-01/Apple_TV_Platonic_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/881931806ee49b4717b09438c20a2c980f4f0fbaacad7d7d6d67ba2b699e78b6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "platonic",
         "title": "柏拉图式关系",
@@ -3913,6 +3998,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/chief-of-war/images/season-01/thumbnail/key-art-02/Apple_TV_Chief_of_War_Key_Art_16_9_main_16_9.jpg.medium.jpg",
       "artwork": "images/b868c09c823e4597a84836e247b548843a164dd5ecf3d753f472e8301a401971.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "chief-of-war",
         "title": "战酋",
@@ -3959,6 +4045,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/acapulco/images/season-04/thumbnail/key-art-01/Apple_TV_Acapulco_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/efe27ba3479feba2f881478f5a458f50fc46cd29e8ae04beb4739f8b93c029ef.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "acapulco",
         "title": "阿卡普科",
@@ -4005,6 +4092,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/foundation/images/season-03/thumbnail/key-art-02/Apple_TV_Foundation_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/032b4342a197e17749fec43ff532c079cbf8426f7f42fa06195607edb501436e.jpg",
       "heroArtwork": "images/a26edc7214cc03f291085ede3f006ac408b0e5f54e421d7799354bb81e4fc429.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/djWEh0WrOhJFCXt6h0SspA/1280x960sr.jpg",
       "zh": {
         "slug": "foundation",
         "title": "基地",
@@ -4063,6 +4151,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-wild-ones/images/season-01/thumbnail/key-art-02/Apple_TV_The_Wild_Ones_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b75b0fd3104dbf2b4e2d2597dcd72cb912085b481c8ee10b38d8aecd065c3d17.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-wild-ones",
         "title": "野性见证",
@@ -4103,6 +4192,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/smoke/images/season-01/thumbnail/key-art-01/Apple_TV_Smoke_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/41ce5ad491c48da6062d952776235ce486c63b27f464808b93f59b1eac7cfdf3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "smoke",
         "title": "玩火燎原",
@@ -4150,6 +4240,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-buccaneers/images/season-02/thumbnail/key-art-01/Apple_TV_The_Buccaneers_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3ec40a5895cf3824788074e181ed8bcae11431cebfd27289ceba10b948d53b62.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-buccaneers",
         "title": "浮华年代",
@@ -4201,6 +4292,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/echo-valley/images/thumbnail/key-art-02/Apple_Tv_Echo_Valley_main_16_9.jpg.medium.jpg",
       "artwork": "images/fbbe3eedc57d032549f07c63651b7cd28fb550a1fe01df14c03a20099ef08950.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "echo-valley",
         "title": "回声谷",
@@ -4245,6 +4337,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/not-a-box/images/season-01/thumbnail/key-art-02/Apple_TV_Not_A_Box_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b14de65fc295bea4af5e54a78d43e1dcfb0a7cb95227e7af07561265e07cefb3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -4262,6 +4355,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bono-stories-of-surrender/images/thumbnail/key-art-01/Apple_TV_Bono_Stories_of_Surrender_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fa786d0fb4eb528b614b5b8008a7e31fbc3ae532a8b46dd13c45ec76888f866e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bono-stories-of-surrender",
         "title": "Bono：臣服之旅",
@@ -4302,6 +4396,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lulu-is-a-rhinoceros/images/thumbnail/key-art-01/Apple_TV_Lulu_Is_A_Rhinoceros_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/de493b18961260a8110ce845efde4b051928fe832e25c1de3ad4eef5b897028e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lulu-is-a-rhinoceros",
         "title": "露露是犀牛",
@@ -4344,6 +4439,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fountain-of-youth/images/thumbnail/key-art-02/Apple_TV_Fountain_of_Youth_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bbfc41b68f6465e5cead3fc36576b4bb9a47e71ced41210e7da18ed16a38c99c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fountain-of-youth",
         "title": "寻秘不老泉",
@@ -4389,6 +4485,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/deaf-president-now/images/thumbnail/key-art-02/Apple_TV_Deaf_Presidents_Now_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/585d712fd22670591ddd323cd1c8acf48cd193f0700d4303601647b43e40bb3b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "deaf-president-now",
         "title": "八日学运：还我听障校长！",
@@ -4429,6 +4526,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/murderbot/images/season-01/thumbnail/key-art-02/Apple_TV_Murderbot_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/250b90c866b1b1dfac704984d140f21cdb4e8d6ca5388d95c4b69d4e7150d01e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "murderbot",
         "title": "厌世机器人",
@@ -4471,6 +4569,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/long-way-home/images/season-01/thumbnail/key-art-01/Apple_TV_Long_Way_Home_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/41fbaba0fea3c1f1b0ff9aecb9c3e78c3a835e95315c25a71c5984995c8a1356.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "long-way-home",
         "title": "长路绵绵",
@@ -4507,6 +4606,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/careme/images/season-01/thumbnail/key-art-01/Apple_TV_Careme_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6678daaee542eb9e51d6cc1cef425816ac556c72372bd30dfcbce47da0dba9b2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "careme",
         "title": "叛逆御厨",
@@ -4558,6 +4658,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/j/jane/images/season-03/thumbnail/Apple_TV_Jane_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4c01a898ea5a5e651ebc73702fafe8192c047115f35bf5bb426e8ff9f5daa0fb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "jane",
         "title": "珍爱地球大探险",
@@ -4616,6 +4717,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/government-cheese/images/season-01/thumbnail/key-art-02/Apple_TV_Government_Cheese_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7f641a2bd066d601e236255e591d2cda1fd85192a2412f70ea064b754528382e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "government-cheese",
         "title": "起司美国梦",
@@ -4664,6 +4766,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/number-one-on-the-call-sheet/images/season-01/thumbnail/key-art-03/Apple_TV_Number_One_on_the_Call_Sheet_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2d3058692baa55ef7407d87934236805ff2703c7b7e3df03374502ffebaaf288.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "number-one-on-the-call-sheet",
         "title": "通告大咖",
@@ -4705,6 +4808,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fight-for-glory-2024-world-series/images/season-01/thumbnail/key-art-01/Apple_TV_Fight_For_Glory_2024_World_Serie_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/693776bd2c9c9cc27663c03b054454fec88ac3cf1dedca69fc05038829154d20.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fight-for-glory-2024-world-series",
         "title": "成王在望：2024 World Series",
@@ -4751,6 +4855,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/side-quest/images/season-01/thumbnail/key-art-02/Apple_TV_Side_Quest_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bafe550a8010a034f13004041a0f0bc0c5023bbeb40f306f2bb01e83bd1bc03e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "side-quest",
         "title": "神话任务：支线挑战",
@@ -4798,6 +4903,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-studio/images/season-01/thumbnail/key-art-02/Apple_TV_The_Studio_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5f687ae09575cfc08677ba3bed22f0b2c81c89f87a4dd9727daa8e4fb396f701.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-studio",
         "title": "片厂风云",
@@ -4848,6 +4954,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bearbrick/images/season-01/thumbnail/key-art-01/Apple_TV_BE_RBRICK_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2284ab95df3a925a9cae1e660ec07dea34587da16faaaa01aefa4f8891b97b2c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bearbrick",
         "title": "BE@RBRICK",
@@ -4885,6 +4992,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dope-thief/images/season-01/thumbnail/key-art-01/Apple_TV_Dope_Thief_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/90b418ac81d536f52abc0ef506d1462687a9246a83ebd31e150dcb21c34eb5ac.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "dope-thief",
         "title": "毒命之徒",
@@ -4934,6 +5042,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/berlin-er/images/season-01/thumbnail/key-art-02/Apple_TV_Berlin_ER_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/015091f5d244faa412afe9a208a063ed320850e24ed033c787f6767248d9d207.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "berlin-er",
         "title": "柏林急诊室",
@@ -4981,6 +5090,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/surface/images/season-02/thumbnail/key-art-01/Apple_TV_Surface_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/628ffd450b426162e573aee0f34c71402ccccfb66338d1d4d876a219e38cc994.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "surface",
         "title": "表象之下",
@@ -5035,6 +5145,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/onside-major-league-soccer/images/season-01/thumbnail/key-art-01/Apple_TV_Onside_Major_League_Soccer_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9fd8aa0f14a4051b3018762a7de43bc52317c8aa0810c2655aff39e5749b90fe.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "onside-major-league-soccer",
         "title": "始于足下：职业足球大联盟",
@@ -5078,6 +5189,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-gorge/images/thumbnail/key-art-02/Apple_TV_The_Gorge_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c3de1f70b21991b857386eba4fbae59099307a741462d5b455ef60f23e71804c.jpg",
       "heroArtwork": "images/d60a7f02e9c431b53d67ff404f3f5b3c4be0e5bef315bd9194eeb5af62611df4.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/1yccMF-r5KnerGwioaubNA/1280x960sr.jpg",
       "zh": {
         "slug": "the-gorge",
         "title": "禁谷",
@@ -5121,6 +5233,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/goldie/images/season-01/thumbnail/key-art-02/Apple_TV_Goldie_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2189c4575ea71af107949b3fb35ed2a4b9b7d02b454baea8a71776737ae46a1c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "goldie",
         "title": "大女孩歌蒂",
@@ -5166,6 +5279,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/love-you-to-death/images/season-01/thumbnail/key-art-01/Apple_TV_Love_You_to_Death_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/98b9378da00f6d159bf31f5f548ac112a08b80ff642718227ed0c519f8b074d9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "love-you-to-death",
         "title": "死心恋爱",
@@ -5215,6 +5329,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/v/vietnam-the-war-that-changed-america/images/season-01/thumbnail/key-art-01/Apple_TV_Vietnam_The_War_That_Changed_America_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/977b0a381ff546082a83d67e73d5daf96d5f9cc9157e91a68d51d3ae1ca88841.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "vietnam-the-war-that-changed-america",
         "title": "越战记忆：美国巨变之役",
@@ -5252,6 +5367,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mythic-quest/images/season-04/thumbnail/key-art-02/Apple_TV_Mythic_Quest_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ddc32dba9bcd164671092c6dd9c76f102fd8774de79377e6b2c25a06d444018d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mythic-quest",
         "title": "神话任务",
@@ -5299,6 +5415,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/eva-the-owlet/images/season-02/thumbnail/key-art-01/Apple_TV_Eva_the_Owlet_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/44dcaad5f548e9868c9ec328ae259a89e1bfc21095f5593ab7d1306203be43bb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -5316,6 +5433,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/prime-target/images/season-01/thumbnail/key-art-02/Apple_TV_Prime_Target_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6204fed145bfb9379e49bcee2bc91b54ea47135a587ae7ca29398b9554c4dec1.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "prime-target",
         "title": "关键暗算",
@@ -5359,6 +5477,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/severance/images/season-02/thumbnail/key-art-01/Apple_TV_Severance_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0487888aa6d29c438ede8f94638517ceba4d56e13b1c4483d944050649af50ee.jpg",
       "heroArtwork": "images/690183a152513c94106378ca53a830bc4c8226c02eb2f3699be28d3ddb613cfb.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/sWbO9RKGr81f6-iTFF9d4g/1280x960sr.jpg",
       "zh": {
         "slug": "severance",
         "title": "人生切割术",
@@ -5414,6 +5533,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-secret-lives-of-animals/images/season-01/thumbnail/key-art-02/Apple_TV_The_Secret_Lives_of_Animals_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e7ce6fda413e53bea2672e91f7dae9d7a250ae13b5570ebe1c310737147e2550.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-secret-lives-of-animals",
         "title": "动物生活大解密",
@@ -5460,6 +5580,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/carpool-karaoke-the-series/images/season-01/thumbnail/key-art-01/Apple_TV_Carpool_Karaoke_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0724649a125d74021c1facd42f923cc66b52306df383760160f93b5c537a7048.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "carpool-karaoke-the-series",
         "title": "Carpool Karaoke 兜风 KTV",
@@ -5502,6 +5623,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fly-me-to-the-moon/images/thumbnail/key-art-02/Apple_TV_Fly_Me_To_The_Moon_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/024bb10a9131bedd03b758c8db7451ea661de4c7e09269ab8493217f9c42f8a3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -5519,6 +5641,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/sago-mini-friends/images/season-03/thumbnail/key-art-01/Apple_TV_Sago_Mini_Friends_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a81bbd67e977a7f36401d3c91934822e6539822371c72527d0490c4cda12d229.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -5536,6 +5659,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bread-roses/images/thumbnail/key-art-01/Apple_TV_Bread_and_Roses_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/75cf7e3d4693b48a635c58116a1436765b976bf8322864f8ef58915d4e4c7f64.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bread-roses",
         "title": "面包与玫瑰",
@@ -5572,6 +5696,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/blitz/images/thumbnail/key-art-02/Apple_TV_Blitz_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1175c1a92b9cac6c5ec769bf4b04f28c5ec37633cbca039548602cc13b1db880.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "blitz",
         "title": "战火寻亲路",
@@ -5616,6 +5741,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bad-sisters/images/season-02/thumbnail/key-art-02/Apple_TV_Bad_Sisters_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b8f1c6ab34928e0b9e364a338c797530587f7a54dbd711a399c12d88d8cf1509.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bad-sisters",
         "title": "不良姐妹",
@@ -5670,6 +5796,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/tu-tambien-lo-harias/images/season-01/thumbnail/key-art-01/Apple_TV_Tu_Tambien_lo_Harias_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0b6580a17f134c4ad0153385c2458d8a1d56a2a302f9d82d44ff366663218246.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "tu-tambien-lo-harias",
         "title": "#赌你也会做",
@@ -5709,6 +5836,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/before/images/season-01/thumbnail/key-art-02/Apple_TV_Before_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1aa0aa8de398f0f3891d0fe5b5afee3c7db3687325a72dad202fd403d9a27991.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "before",
         "title": "往日迷雾",
@@ -5757,6 +5885,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/disclaimer/images/season-01/thumbnail/key-art-03/Apple_TV_Disclaimer_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/02e49a20d80cdd58f309771999be89570324276644d2832a8385d55ea5eda225.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "disclaimer",
         "title": "免责声明",
@@ -5810,6 +5939,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-last-of-the-sea-women/images/thumbnail/key-art-02/Apple_TV_The_Last_of_the_Sea_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/83b56926bdd26c89db872c63da5210953095d43a464a0cfd60c47fad77e6e12a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-last-of-the-sea-women",
         "title": "最后的海女",
@@ -5852,6 +5982,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/curses/images/season-02/thumbnail/key-art-01/Apple_TV_Curses_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/898de3b8964101e7ad7ef132c8f31e5154e08d278ae6925862409176d7a63b62.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "curses",
         "title": "魔咒谜遇记",
@@ -5899,6 +6030,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/midnight-family/images/season-01/thumbnail/key-art-02/Apple_TV_Midnight_Family_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/014874f45ecf4df32d0b57900a65c71099389eefaadd3af0115f29ed91b4bb9b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "midnight-family",
         "title": "抢命一族",
@@ -5941,6 +6073,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wolfs/images/thumbnail/key-art-01/Apple_TV_Wolfs_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d789af6b5e612299fa020b2084059e278244e33431043b528fd196de52b9fca2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wolfs",
         "title": "恶狼特工",
@@ -5986,6 +6119,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/la-maison/images/season-01/thumbnail/key-art-02/Apple_TV_La_Maison_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/be8ccb9d7a58cb22dcf6593e90e5ea2598c3c603250408dc97093f8bb689234c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "la-maison",
         "title": "时尚世家",
@@ -6033,6 +6167,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/k/k-pop-idols/images/season-01/thumbnail/key-art-01/Apple_TV_K-Pop_Idols_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/08790a94ab6b0c7315383500978534ce4697bb76b5f2a615fb40e7ee9a1e0089.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "k-pop-idols",
         "title": "如何炼成 K-pop 偶像",
@@ -6069,6 +6204,7 @@
       "sourceArtwork": "https://www.apple.com/uk/tv-pr/shows-and-films/n/napoleon-the-directors-cut/images/thumbnail/key-art-01/Apple_TV_Napoleon_The_Directors_Cut_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/dee72153553b737dd130667ce02f6748b7a3940c64fb1ca4c11d0a7f86e4200f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "napoleon-the-directors-cut",
         "title": "拿破仑：导演版",
@@ -6114,6 +6250,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/pachinko/images/season-02/thumbnail/key-art-01/Apple_TV_Pachinko_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5714ec307797344624cbd9761c12a4cd582b22922dac129b25ff2da68fd222cc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "pachinko",
         "title": "柏青哥",
@@ -6169,6 +6306,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-instigators/images/thumbnail/key-art-02/Apple_TV_The_Instigators_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/57366a8dabb104bb3e8aae79ff53ca192de9d81f6d1b9cf891fe00f4c542c2f4.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-instigators",
         "title": "闹事之徒",
@@ -6213,6 +6351,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/cowboy-cartel/images/season-01/thumbnail/key-art-01/Apple_TV_Cowboy_Cartel_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/935f27f2a1c06a68a60e85bcb23b6b79933afcb8b334c50856d4a3531503b2ed.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "cowboy-cartel",
         "title": "黑金牛仔",
@@ -6254,6 +6393,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/time-bandits/images/season-01/thumbnail/key-art-02/Apple_TV_Time_Bandits_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b5bb8cd53e278678d350910e522e2804421898a86a7863a29f0c87b12a84dec1.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "time-bandits",
         "title": "时光大盗",
@@ -6305,6 +6445,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lady-in-the-lake/images/season-01/thumbnail/key-art-02/Apple_TV_Lady_In_The_Lake_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7420ab75a02033311882404685207061f0c312b9e9fd5eac6102f66fcde9d56c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lady-in-the-lake",
         "title": "湖中的女人",
@@ -6351,6 +6492,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/omnivore/images/season-01/thumbnail/key-art-02/Apple_TV_Omnivore_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5611f502f2a7ff7058b68c8ec30bf16a6e2ccb75cf56d03158f09c58cc3d260d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "omnivore",
         "title": "生活之味",
@@ -6387,6 +6529,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/me/images/season-01/thumbnail/key-art-01/Apple_TV_Me_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1070cd75e1fe1471a7e36cde7809fab050a5f6b264e03516bb536e060128d540.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "me",
         "title": "我的万千样貌",
@@ -6428,6 +6571,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/sunny/images/season-01/thumbnail/key-art-01/Apple_TV_Sunny_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/47e340cc3c2bccc9a9f906fe375664969de9b83286bbed5c659dc5425764ee4c.jpg",
       "heroArtwork": "images/a0b7420cb4a7fd8f2289e2ccc7d1a79889334ccaebb1f7b542cbd2db16470fb5.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/Ml8uvHnDhWg-ef7dhx6zMw/1280x960sr.jpg",
       "zh": {
         "slug": "sunny",
         "title": "桑妮：AI 管家",
@@ -6471,6 +6615,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fancy-dance/images/thumbnail/key-art-02/Apple_TV_Fancy_Dance_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5c8c2d1ff9c3707a991eea8607a4b053320066313fffc0c84d6fe3651e812248.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fancy-dance",
         "title": "帕瓦之舞",
@@ -6514,6 +6659,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/land-of-women/images/season-01/thumbnail/key-art-01/Apple_TV_Land_Of_Women_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fb3db1632e3e7a399e8e7ebeada637d24ad03e08c699c5ac3fd5666e366a639d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "land-of-women",
         "title": "酒乡心天地",
@@ -6555,6 +6701,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/presumed-innocent/images/season-01/thumbnail/key-art-01/Apple_TV_Presumed_Innocent_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/549b827ee0bdef5c42c5df2386036ee68aa2974cb096fc77f70da7d3aefb9d64.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "presumed-innocent",
         "title": "无罪的罪人",
@@ -6609,6 +6756,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/frog-and-toad/images/season-02/thumbnail/key-art-01/Apple_TV_Frog_and_Toad_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/68e5fb9fcd1026f4cf8ed97db386b38399cf309010f90e5d70242760a7592a5a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -6626,6 +6774,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-big-cigar/images/season-01/thumbnail/key-art-02/Apple_TV_The_Big_Cigar_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f34e371680b357cacf989e0476ed9fca1abfbe6ab5acb75b274a3d0702b8a4cc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-big-cigar",
         "title": "行动代号：大雪茄",
@@ -6672,6 +6821,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hollywood-con-queen/images/season-01/thumbnail/key-art-02/Apple_TV_Hollywood_Con_Queen_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/46e6f1ec3a2aeb5fe91be3c5b6118c49d6322e369f787fda15adcf8c29c2d17e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "hollywood-con-queen",
         "title": "好莱坞制骗女王",
@@ -6710,6 +6860,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-big-door-prize/images/season-02/thumbnail/key-art-01/Apple_TV_The_Big_Door_Prize_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/440a0d9022f6918eb8ac399248ca68aa4992724b07305896ad7d72e8c5e84611.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-big-door-prize",
         "title": "命运来敲门",
@@ -6752,6 +6903,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/argylle/images/thumbnail/key-art-02/Apple_TV_Argylle_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c4b37bc636c2a515a82c05c9f2637a53d91b2ed037536d062b656b2e81d58625.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "argylle",
         "title": "机密特务：阿盖尔",
@@ -6797,6 +6949,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/franklin/images/season-01/thumbnail/key-art-01/Apple_TV_Franklin_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8d83106119c4ae957863c0cec22ee0b93b967475c8613f6543750f9341dfff4c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "franklin",
         "title": "富兰克林",
@@ -6845,6 +6998,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/girls-state/images/thumbnail/key-art-02/Apple_TV_Girls_State_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4b54a4eff720c0da2893a72ececa30245f1fac5485a58ee9b3a6557531ee2fd5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "girls-state",
         "title": "新世代公民：女孩来做主",
@@ -6884,6 +7038,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fraggle-rock-back-to-the-rock/images/season-02/thumbnail/key-art-01/Apple_TV_Fraggle_Rock_Back_To_The_Rock_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a0a1484aa39642105ace679bd8d7a624938cb70c3841ab93ca90c0bf7cfdb54c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fraggle-rock-back-to-the-rock",
         "title": "Fraggle Rock: Back to the Rock",
@@ -6924,6 +7079,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/steve-martin-a-documentary-in-two-pieces/images/season-01/thumbnail/key-art-01/Apple_TV_Steve_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3fedf6f1d8f027c3586572fa4156b886d95e3581d7d078fc132ba7ce073ea07e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "steve-martin-a-documentary-in-two-pieces",
         "title": "史提夫马丁：喜剧人生 2 部曲",
@@ -6970,6 +7126,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/manhunt/images/season-01/thumbnail/key-art-01/Apple_TV_Manhunt_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3b220fc91fb9df5998d3f7032cf8640d0aed210232294cb99cffcafbe4caa2f0.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": [
         {
@@ -6992,6 +7149,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-bloody-hundredth/images/thumbnail/key-art-01/Apple_TV_The_Bloody_Hundredth_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/13e91a6163ae618f3c63c10248d6d6e9f389180c7a685faabc54e41151e1b39d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-bloody-hundredth",
         "title": "浴血之师：第 100 轰炸机大队",
@@ -7034,6 +7192,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/napoleon/images/thumbnail/key-art-02/Apple_TV_Napoleon_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/366b6702b7f985753882aaa38319cd70c0e92e7d89070ecef2dae216f2dbe51c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "napoleon",
         "title": "拿破仑",
@@ -7077,6 +7236,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-completely-made-up-adventures-of-dick-turpin/images/season-01/thumbnail/key-art-01/Apple_TV_Adventures_of_Dick_Turpin_main_16_9.jpg.medium.jpg",
       "artwork": "images/6c3575b8111cee429f78557ce787e255939a940cead83f53a4ae70ffe8fac6f2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-completely-made-up-adventures-of-dick-turpin",
         "title": "迪克特平的冒险歪传",
@@ -7123,6 +7283,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/earthsounds/images/season-01/thumbnail/key-art-01/Apple_TV_Earthsounds_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b72a992fd71870f2d809134b4dccb3d66ae594b875dfc5d728497ca70d8440d7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": [
         {
@@ -7145,6 +7306,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/constellation/images/season-01/thumbnail/key-art-01/Apple_TV_Constellation_Key_Art_01_main_apple_originals_16x9.jpg.medium.jpg",
       "artwork": "images/057e9622b12d2ea78008f7d68149aae414a6c4447800f8fb1141d6a7e3f0b377.jpg",
       "heroArtwork": "images/d13f5217e7674d489254fdf33bc89b9f3d9c0ab157db85bb7ef114d6cc960126.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/SXdcDrhbQMtd4Y4G4L8qyw/1280x960sr.jpg",
       "zh": {
         "slug": "constellation",
         "title": "异星谜变",
@@ -7194,6 +7356,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/messis-world-cup-the-rise-of-a-legend/images/season-01/thumbnail/key-art-02/Apple_TV_Messi_World_Cup_The_Rise_of_a_Legend_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b77fb39273281085045bd16972ae1ea515df46df5cae81bc829d8477a413111f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "messis-world-cup-the-rise-of-a-legend",
         "title": "征服世界杯：梅西的传奇之路",
@@ -7237,6 +7400,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-presents-welcome-home-franklin/images/thumbnail/key-art-01/Apple_TV_Welcome_Home_Franklin_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/61eec765592421e3cdc5f006756f61a883d9fa5876626cc68ddc932ec20302b6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-presents-welcome-home-franklin",
         "title": "史努比开心呈献：友你真好，富兰克林",
@@ -7279,6 +7443,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-dynasty-new-england-patriots/images/season-01/thumbnail/key-art-01/Apple_TV_The_Dynasty_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a4a9c8d3216220b359ac5d5176fa81666d27484825282a8a7201ee6edfca94db.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-dynasty-new-england-patriots",
         "title": "爱国者王朝：冠军荣耀",
@@ -7328,6 +7493,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-new-look/images/season-01/thumbnail/key-art-02/Apple_TV_The_New_Look_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c70d0d307be455e52cac7353eaf4aa5ddf8b05cad0add720ec6a43b53f993aaf.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-new-look",
         "title": "The New Look：时尚战场",
@@ -7378,6 +7544,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/masters-of-the-air/images/season-01/thumbnail/key-art-02/Apple_TV_MotA_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2ce3a48bb5e6dd938752ef048c8bea2f00db5ae905894b8cbab57707e5ff36ff.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "masters-of-the-air",
         "title": "空战群英",
@@ -7424,6 +7591,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/k/killers-of-the-flower-moon/images/thumbnail/Apple_TV_Killers_of_the_Flower_Moon_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8dea6403783f5291e7dd0ac26bfb4124598c42e0212a51a9138685ba07d77088.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "killers-of-the-flower-moon",
         "title": "花月杀手",
@@ -7467,6 +7635,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-family-plan/images/thumbnail/key-art-01/Apple_TV_The_Family_Plan_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/da78382fa40259a38a4377c9f47054544de7a6557dc48e5b75c7fede6bf45fb5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -7484,6 +7653,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/j/john-lennon-murder-without-a-trial/images/season-01/thumbnail/key-art-01/Apple_TV_John_Lennon_Murder_Without_A_Trial_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5939aedd83075b709496ba34b8c5d7423296279a7b4a178e4dcf60c0712f8340.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "john-lennon-murder-without-a-trial",
         "title": "约翰蓝侬谋杀案：审判疑云",
@@ -7532,6 +7702,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-velveteen-rabbit/images/thumbnail/key-art-01/Apple_TV_The_Velveteen_Rabbit_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2978510c8ebf0beedfb7c1293e003c7d4c94150bb454d44ac9b380208cbf4de3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-velveteen-rabbit",
         "title": "绒毛兔",
@@ -7575,6 +7746,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hannah-waddingham-home-for-christmas/images/thumbnail/key-art-01/Apple_TV_Hannah_Waddingham_Home_for_Christmas_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fe3c24b9421feae7e52af69010598a5123bdc95db3f9591460d2497c61512f4e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "hannah-waddingham-home-for-christmas",
         "title": "汉娜卫丁汉回家过耶诞",
@@ -7620,6 +7792,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fingernails/images/thumbnail/key-art-01/Apple_TV_Fingernails_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bcf86318b7deb9a41988fb1fd879b4d9fdd06a3cc24d0d7a22e57e8c38211d25.jpg",
       "heroArtwork": "images/5d8063d0f0b6a87fa11e37e53777ab6cc10ca5d3aea07942f04bcf9799b4e4ff.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/ya30oGhO8a16-C94d-CftQ/1280x960sr.jpg",
       "zh": {
         "slug": "fingernails",
         "title": "指尖验爱",
@@ -7665,6 +7838,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-enfield-poltergeist/images/season-01/thumbnail/key-art-01/Apple_TV_The_Enfield_Poltergeist_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ab85f1f7ecd1a27ca9385029fd9f87c46c12b9a0d6acfd053de3f6a2715de4c7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-enfield-poltergeist",
         "title": "恩菲尔德鬼屋",
@@ -7714,6 +7888,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-pigeon-tunnel/images/thumbnail/key-art-01/Apple_TV_The_Pigeon_Tunnel_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/76b3b5d9591428ef27f9dfeb9e920cc18e7d8a4f18966b3779115a7dc3333aa9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-pigeon-tunnel",
         "title": "此生如鸽：间谍小说大师勒卡雷",
@@ -7751,6 +7926,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lessons-in-chemistry/images/season-01/thumbnail/key-art-02/Apple_TV_Lessons_Chemistry_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/01f757d5898517f829fe66ebfc634f3152431a21d401d78985fea4051177ca28.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lessons-in-chemistry",
         "title": "化学课",
@@ -7800,6 +7976,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/messi-meets-america/images/season-01/thumbnail/key-art-01/Apple_TV_Messi_Meets_America_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/635630e0a2bb03db7b70f31f8aef086d7cdbe99855714e7290c1b946678bee17.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "messi-meets-america",
         "title": "梅西降临：美国足球新时代",
@@ -7845,6 +8022,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/flora-and-son/images/thumbnail/key-art-01/Apple_TV_Flora_and_Son_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a7710509250d1ea4fbc02222e665da71c83cba4d3ef4e326cefdbaa1d9013f4a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "flora-and-son",
         "title": "爱的练习曲",
@@ -7889,6 +8067,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/i/interrupting-chicken/images/season-01/thumbnail/key-art-01/ATV_Interrupting_Chicken_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/91c1e9a20938ee6d99bf80243a538d32f141ef2ace2e52c553b25da44b636f56.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": [
         {
@@ -7913,6 +8092,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/still-up/images/season-01/thumbnail/key-art-02/Apple_TV_Still_Up_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/40a55f93b29d01663ef4323a26a076ed7f22bffad8a7a6ed52c77f12a4c4ac0b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "still-up",
         "title": "爱情夜未眠",
@@ -7954,6 +8134,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-super-models/images/season-01/thumbnail/key-art-02/Apple_TV_The_Super_Models_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f6f81ae102a6d69959d128486d3e92e572b18a0741e640ff738c8463fd3a1336.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-super-models",
         "title": "超模传奇",
@@ -7995,6 +8176,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-changeling/images/season-01/thumbnail/key-art-01/Apple_TV_The_Changeling_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/85826e8fa7642764bc1b9c0b0369f2e8485a8ab6d72a6b9594f56d1c5105ed2b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-changeling",
         "title": "纽约失婴记",
@@ -8036,6 +8218,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wanted-the-escape-of-carlos-ghosn/images/season-01/thumbnail/key-art-01/Apple_TV_Wanted_The_Escape_Of_Carlos_Ghosn_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5912680428eba72242a7f84aecabbcd3f41681d40218b717bffd5597f5109e2c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wanted-the-escape-of-carlos-ghosn",
         "title": "追缉汽车大亨",
@@ -8074,6 +8257,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-presents-one-of-a-kind-marcie/images/thumbnail/key-art-01/Apple_TV_Snoopy_Presents_Kind_Marcie_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e11d0f84f0c83b5b6c3eb31d568d1f7db9fcbe56fa472a6258232df9f92c1288.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-presents-one-of-a-kind-marcie",
         "title": "史努比开心呈献：做自己很棒，玛茜",
@@ -8114,6 +8298,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/strange-planet/images/season-01/thumbnail/key-art-01/Apple_TV_Strange_Planet_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fa9dc58c8e629278fa093cab554ed2f4d07c4becd7e4e24d5d1862e4443f14bd.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "strange-planet",
         "title": "异星妙世界",
@@ -8156,6 +8341,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/physical/images/season-03/thumbnail/key-art-01/Apple_TV_Physical_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6e82ed0603f31003047415cbcfe503085305e08b0f04b511d6d2cd1e92ab1a2f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "physical",
         "title": "舞出新方向",
@@ -8215,6 +8401,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-beanie-bubble/images/thumbnail/key-art-01/Apple_TV_The_Beanie_Bubble_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d28c0f4e0a5964d09b7c1007e25f830f5bba5668e91707998d8b0c11e10beadb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-beanie-bubble",
         "title": "钞级布偶",
@@ -8261,6 +8448,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/stephen-curry-underrated/images/thumbnail/key-art-01/Apple_TV_Stephen_Curry_Underrated_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/384a63bbba75348f92c6d32526c9de4461a56a42eea0f8ff212588c8dd253889.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "stephen-curry-underrated",
         "title": "史蒂芬柯瑞：不容小觑",
@@ -8306,6 +8494,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-afterparty/images/season-02/thumbnail/key-art-01/Apple_TV_The_Afterparty_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/42facd2eeb67354b9ed95196ac58172db30ce6a566566952e1e778ab799d1696.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-afterparty",
         "title": "续摊真要命",
@@ -8360,6 +8549,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/swagger/images/season-02/thumbnail/key-art-01/Apple_TV_Swagger_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5c1d734bfbeb26407d8dea7fee245817e689f35943539f0e6b8cea62def806d7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "swagger",
         "title": "傲气篮球魂",
@@ -8401,6 +8591,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lovely-little-farm/images/season-01/thumbnail/ATV_Lovely_Little_Farm_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/88bb4270b9e22993e06507bba9f88d8cacc8ed0420550b9755c9caa2c0de87c3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -8418,6 +8609,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-crowded-room/images/season-01/thumbnail/key-art-01/Apple_TV_The_Crowded_Room_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/975a1e5bc2a8f8cc4759cfee0c0200b5a156852fcc3e931da76c0e4af21846e5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-crowded-room",
         "title": "拥挤的房间",
@@ -8469,6 +8661,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-snoopy-show/images/season-03/thumbnail/key-art-01/Apple_TV_The_Snoopy_Show_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9d0a8bf98d10993cd4f6defa6188846e4a11b910c38d7d5ff4f1dcf768edc2fe.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-snoopy-show",
         "title": "史努比欢乐秀",
@@ -8516,6 +8709,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/prehistoric-planet/images/season-02/thumbnail/key-art-01/Apple_TV_Prehistoric_Planet_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/abc5ff5599f201141a7cd3febf02d4ad2b0f9b2638389281a135fb22931c650d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "prehistoric-planet",
         "title": "史前地球",
@@ -8559,6 +8753,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/high-desert/images/season-01/thumbnail/key-art-01/Apple_TV_High_Desert_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6b06838a4b3d20bafaffa33d7f0a2cb606f023628154d5033d09cf82ce5210ce.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "high-desert",
         "title": "荒漠妙探",
@@ -8606,6 +8801,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/still-a-michael-j-fox-movie/images/thumbnail/key-art-01/Apple_TV_STILL_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/72991a09ca7b7751ca91360a3b48de0c1eb20999fc2a4396b3cca2630254b743.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "still-a-michael-j-fox-movie",
         "title": "我还是我：米高福克斯",
@@ -8647,6 +8843,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/city-on-fire/images/season-01/thumbnail/key-art-01/Apple_TV_City_On_Fire_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ca0543f3d96cfe38da5ce227d0d3d433ea5290aeac2238887f539c9afcb3cbbc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "city-on-fire",
         "title": "烈焰焚城",
@@ -8685,6 +8882,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/harriet-the-spy/images/season-01/thumbnail/Apple_TV_Harriet_the_Spy_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/21c0281687d0a2d1a23320223963f49231d2cc9aa39cbb0f3de23750a7029d8a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "harriet-the-spy",
         "title": "超级侦探海莉",
@@ -8740,6 +8938,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/ghosted/images/thumbnail/key-art/ATV_Ghosted_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/32a77876764cccae258f157e77b57cbf867917b2db25315af6c0d498405688db.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "ghosted",
         "title": "真爱搞失踪",
@@ -8786,6 +8985,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/big-beasts/images/season-01/thumbnail/key-art-01/Apple_TV_Big_Beasts_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6e7ca19411110e1f18a05f96c5243262869c429346699ddaad06a67959677b65.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "big-beasts",
         "title": "大动物・大不易",
@@ -8832,6 +9032,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/boom-boom-the-world-vs-boris-becker/images/season-01/thumbnail/key-art-01/Apple_TV_Boom_Boom_World_Boris_Becker_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c486731f6c1dffdbcc7671f4f1b3a6a10e2776694afa8eccc017cc80c8b4a25b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "boom-boom-the-world-vs-boris-becker",
         "title": "鲍里斯贝克 vs 全世界",
@@ -8872,6 +9073,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/schmigadoon/images/season-02/thumbnail/key_art_01/ATV_Schmigadoon_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/14f2c93208d5915a7a6476b147481b783f8e48141d0bf68366881682999a652d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "schmigadoon",
         "title": "欢迎来到施米加多！",
@@ -8914,6 +9116,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/tetris/images/thumbnail/key-art-01/Apple_TV_Tetris_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/18d7c9a09e8e6e47f3804cd1ba5c0807865369ccfd9d65bcce21963f1b4b23ba.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "tetris",
         "title": "俄罗斯方块：版权之战",
@@ -8959,6 +9162,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/my-kind-of-country/images/season-01/thumbnail/key-art-02/ATV_My_Kind_Of_Country_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f2a55874462f4570d7ab4bda355c0d681a9fffde6e08bc05e85229afc4b375c6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "my-kind-of-country",
         "title": "我的乡村Style",
@@ -9000,6 +9204,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/extrapolations/images/season-01/thumbnail/key-art-01/Apple_TV_Extrapolations_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8d3a13f30d291d23f280b469783b3321424a02a7f2223d60873257729329ee3b.jpg",
       "heroArtwork": "images/2a480b3e37ed5810c409c38daee11f306aa94dabbbff5478cafd7575c79448d7.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/xXvySZO201ukapR41UduKw/1280x960sr.jpg",
       "zh": {
         "slug": "extrapolations",
         "title": "别说不可能",
@@ -9050,6 +9255,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/monster-factory/images/season-01/thumbnail/key-art-01/16x9/ATV_Monster_Factory_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0b4055627a22a0279b7af4bd0cd824ea387b09e9b72200e0916f561621bfed1a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "monster-factory",
         "title": "怪物工厂：职业摔角梦",
@@ -9097,6 +9303,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/r/real-madrid-until-the-end/images/season-01/thumbnail/key-art-01/Apple_TV_Real_Madrid_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bda8faf71cc597d4d3295b06a4cf31a0e701e4e7368dd3afb761537780e81051.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "real-madrid-until-the-end",
         "title": "皇家马德里：直到最后",
@@ -9133,6 +9340,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-problem-with-jon-stewart/images/season-02/thumbnail/ATV_The_Problem_with_Jon_Stewart_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/77e94658dc522dd599019b9965b18ccf8070dc9d9200b5b4da60c5d96f9ff917.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-problem-with-jon-stewart",
         "title": "乔恩史都华到底有什么问题？",
@@ -9172,6 +9380,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/liaison/images/season-01/thumbnail/key-art-02/Apple_TV_Liaison_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ec9e3dbaf52737aae2bb4134221bf74557c898a9da03fe1b60e71e6bd5ecf409.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "liaison",
         "title": "非常关系",
@@ -9214,6 +9423,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/pretzel-and-the-puppies/images/season-01/thumbnail/key-art-01/ATV_Pretzel_and_the_Puppies_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fea5b1d2ddda7c77fb243a1817def6c06a7d414fd5aab27bbfe50b51d10eeaba.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -9231,6 +9441,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/sharper/images/thumbnail/key-art-02/16x9/ATV_Sharper_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6da646d21325243fbdad4f4297e51637c5d5fd6a646acad575d92a7bd2f33d6a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "sharper",
         "title": "骗子",
@@ -9277,6 +9488,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/make-or-break/images/season-02/thumbnail/Make_or_Break_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/41acdec7f55a93cabe504ec2f97e17f4d6649ff0da205b85429ba0430755ed7d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "make-or-break",
         "title": "与浪争锋",
@@ -9327,6 +9539,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hello-tomorrow/images/season-01/thumbnail/key-art-01/Apple_TV_Hello_Tomorrow_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d80e963254007aa06f257d0b41a9809519712a127862de3270bf30d989ad42cb.jpg",
       "heroArtwork": "images/2608696c3bc340b5342df04cee3df5426b95149995a71cc5835bb779e07fce51.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/UrWlq3f7s-X-C69nlCXIZw/1280x960sr.jpg",
       "zh": {
         "slug": "hello-tomorrow",
         "title": "明天会更好！",
@@ -9375,6 +9588,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dear-edward/images/season-01/thumbnail/key-art-01/Dear_Edward_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2ac73ce37b56d877bc8744885fff34cca3c762b97611307c6f6378eacb2ed53d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "dear-edward",
         "title": "亲爱的艾德华",
@@ -9425,6 +9639,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/pinecone-and-pony/images/season-02/thumbnail/key-art-01/Pinecone_And_Pony_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1221418c140e63f7c41dcd80f39f678bf3acfe3303b95f6f3f2f880bfbfbc467.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "pinecone-and-pony",
         "title": "果果与小马历险记",
@@ -9465,6 +9680,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/truth-be-told/images/season-03/thumbnail/key-art-01/ATV_Truth_Be_Told_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d6bd077902f6ed39fe4d53cb9e2e4f4fe42a4569cc26d6a09cff6d9c869d202a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "truth-be-told",
         "title": "直言真相",
@@ -9525,6 +9741,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/servant/images/season-04/thumbnail/key-art-01/ATV_Servant_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/89c8ead8ec16f3c373c773f7f06ac7f966342fff8394b5a3aa04593851c73371.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "servant",
         "title": "灵异女仆",
@@ -9590,6 +9807,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/super-league-the-war-for-football/images/season-01/thumbnail/key-art-01/Apple_TV_Super_League_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c89927e34f240ff2e36834db0081d0fb9019f54760cc1d8ff75f666479474ede.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "super-league-the-war-for-football",
         "title": "欧洲超级联赛：足坛风暴",
@@ -9631,6 +9849,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/helpsters/images/season-03/thumbnail/ATV_Helpsters_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f5eab2f580dddf989b94ed27f65d076ed9b92765d82cb012fdc1f08126582479.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -9648,6 +9867,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-boy-the-mole-the-fox-and-the-horse/images/thumbnail/key-art-01/ATV_The_Boy_The_Mole_The_Fox_The_Horse_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5a8236150bf6ddeb70383de23c18a22d006324e336c64243282b32fa8c531a8f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-boy-the-mole-the-fox-and-the-horse",
         "title": "男孩、鼹鼠、狐狸与马",
@@ -9692,6 +9912,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/emancipation/images/thumbnail/key-art-01/Apple_TV_Emancipation_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8ab6f5e61f64e872b1c9ed607304632b732824400bc501b5ab47f3eb0defe3df.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "emancipation",
         "title": "自由路上",
@@ -9737,6 +9958,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/little-america/images/season-02/thumbnail/key-art-01/Apple_TV_Little_America_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b74f6812b678ca2c05796c13d99c986315fee63a8d04519e72b4d1d48e595200.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "little-america",
         "title": "异乡人，美国梦",
@@ -9786,6 +10008,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/puppy-place/images/season-02/thumbnail/ATV_Puppy_Place_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c2f81ad433b6fd0cb4d48b74aab95cdff91d0e359ff5d2b1f6f79ef00d235780.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "puppy-place",
         "title": "狗狗找小窝",
@@ -9826,6 +10049,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/echo-3/images/season-01/thumbnail/key-art-02/Apple_TV_Echo_3_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/634f853c23885ac2b34846d5d68371be0591d558428485a3cf36b961fcf11ac4.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "echo-3",
         "title": "Echo 3：救援任务",
@@ -9869,6 +10093,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/spirited/images/thumbnail/key-art-03/Apple_TV_Spirited_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9d6229cd77aa25711503e595a750bf14c518744c6ae9bf66a4158dfa59b35452.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "spirited",
         "title": "耶诞魔力响叮当",
@@ -9915,6 +10140,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/circuit-breakers/images/season-01/thumbnail/key-art-01/Apple_TV_Cricuit_Breakers_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9e02073865ae1b33ab669bb80caf83701ec155031024cd6bd72b20a40c31750f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "circuit-breakers",
         "title": "奇想天开",
@@ -9962,6 +10188,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/selena-gomez-my-mind-and-me/images/thumbnail/key-art-01/Apple_TV_Selena_Gomze_Mind_Me_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/8e5ff9aa6928ff8558b11e542d618055ba3a5014756f644c9cad9ea1b0e700ca.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "selena-gomez-my-mind-and-me",
         "title": "席琳娜戈梅兹：倾听我心",
@@ -10004,6 +10231,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/slumberkins/images/season-01/thumbnail/ATV_Slumberkins_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/49aa186eb35d0f4bb679b3d9dae80325aec11a29bf8ca23238d2f2f1a05eb16f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -10022,6 +10250,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-mosquito-coast/images/season-02/thumbnail/key-art-01/Apple_TV_The_Mosquito_Coast_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c5f3162b00a8145d20643727ad827effa65887703baedf80daaea5cf006b7fbc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-mosquito-coast",
         "title": "蚊子海岸",
@@ -10074,6 +10303,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/causeway/images/thumbnail/key-art-02/Causeway_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a99c026e7e9b57bfcef07eeae71123ae2b4a267e7e9a163f396afa8269280767.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "causeway",
         "title": "桥之彼端",
@@ -10118,6 +10348,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/louis-armstrongs-black-blues/images/thumbnail/key-art-01/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7a165a088e58459032ef9ce595c9ef67bca6c11e65ce3bf452fe8dc03ec22f52.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "louis-armstrongs-black-blues",
         "title": "路易斯阿姆斯壮：黑与蓝",
@@ -10160,6 +10391,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/r/raymond-and-ray/images/thumbnail/key-art-01/Apple_TV_Raymond_Ray_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2943efb5209f5d5461551fda9e0fed4ab50ea9e6f0d235f947938c995e5200d7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "raymond-and-ray",
         "title": "雷蒙与雷",
@@ -10206,6 +10438,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/ghostwriter/images/season-03/thumbnail/key-art-01/ATV_Ghostwriter_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1e2cfb7b8d6b3d4dbac0c478ac2efefb6b563876f8bf275f0b73ee36f4e34630.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "ghostwriter",
         "title": "小鬼与文字幽灵",
@@ -10265,6 +10498,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/shantaram/images/season-01/thumbnail/key-art-01/Apple_TV_Shantaram_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1c9352d11023727c9ae84ba169d212f041993085a70acf4b680258ab7902f1eb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "shantaram",
         "title": "项塔兰",
@@ -10311,6 +10545,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hello-jack-the-kindness-show/images/season-02/thumbnail/key-art-01/ATV_Hello_Jack_The_Kindness_Show_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9095fd0db61da6944ad295b3c0ddca4e595334c7f53745ab8a79a354a1e47737.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -10328,6 +10563,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-greatest-beer-run-ever/images/thumbnail/key-art-01/Apple_TV_The_Greatest_Beer_Run_Ever_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fa0eef6894c728959e56e6c97a64afc76dfd825a1530e863fe593ae2056a69f6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-greatest-beer-run-ever",
         "title": "在前线干杯",
@@ -10374,6 +10610,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/get-rolling-with-otis/images/season-02/thumbnail/key-art-01/ATV_Get_Rolling_with_Otis_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/44bf11a44df54e0c2867a50524d52fe268e67819417d4db7254b7bd45a97fd7b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "get-rolling-with-otis",
         "title": "奥提斯，出动！",
@@ -10418,6 +10655,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wolfboy-and-the-everything-factory/images/season-02/thumbnail/key-art-01/ATV_Wolfboy_and_the_Everything_Factory_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2ff6503cde18889f36a2051821e0441b24b94be800cd69fab3d82606b747e808.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wolfboy-and-the-everything-factory",
         "title": "狼孩儿的万物工厂大冒险",
@@ -10472,6 +10710,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/sidney/images/thumbnail/key-art-01/ATV_Sidney_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5bbf258357bfe2d1ab576a4202ce8f34755597430ec71040d7e4a3664f02f456.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "sidney",
         "title": "一代传奇：薛尼鲍迪",
@@ -10518,6 +10757,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/central-park/images/season-03/thumbnail/key-art-01/Apple_TV_Central_Park_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/82fe24452835b225c9a74436888242762df220ce66a61baa2f8a2d9ef9d155a6.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "central-park",
         "title": "中央公园",
@@ -10576,6 +10816,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/gutsy/images/season-01/thumbnail/key-art-01/Apple_TV_Gutsy_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5c188c2b71133ffba3bf3b2bf9096e695b5e09eb56de0559a2b8f56991d9b372.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "gutsy",
         "title": "勇气的力量",
@@ -10610,6 +10851,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/life-by-ella/images/season-01/thumbnail/key-art-01/Apple_TV_Life_By_Ella_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/452cbebb7651ef58c6d72beed1d399c77dbe31efe37fbb06e191422d1a5bf6b7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "life-by-ella",
         "title": "艾拉的青春日志2.0",
@@ -10659,6 +10901,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/see/images/season-03/thumbnail/key-art-01/Apple_TV_See_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/37a5cc49d437063780b78fb5fa721c72035cf4908f70a487e5473929e5a4e94f.jpg",
       "heroArtwork": "images/7ce5189ced6c67b1855fe21931cd034938319a230fec499c871c0d653b1fdede.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/rV4S9xWc5p3ow4CuIZ5sTg/1280x960sr.jpg",
       "zh": {
         "slug": "see",
         "title": "末日光明",
@@ -10720,6 +10963,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/surfside-girls/images/season-01/thumbnail/key-art-01/ATV_Surfside_Girls_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/eccda252025a39a9db910f83f5a99db6c598ac2b03e1c0ed5414c62df643ddfa.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "surfside-girls",
         "title": "冲浪少女神秘事件簿",
@@ -10760,6 +11004,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lucys-school/images/thumbnail/key-art-01/Apple_TV_Lucys_School_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c3705c09176f99bd183ad682ee555f4c5341b5ae1a249222c3dbb20f1a31dc9a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lucys-school",
         "title": "史努比开心呈献：露西创校去",
@@ -10802,6 +11047,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/five-days-at-memorial/images/season-01/thumbnail/key-art-01/Apple_TV_Five_Days_at_Memorial_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1f9118cd160862b28e0667f317c609f03865ee446660be8fc2ed008c56c74aa3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "five-days-at-memorial",
         "title": "灾后五日",
@@ -10851,6 +11097,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/luck/images/thumbnail/key-art-02/Apple_TV_Luck_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cc914469c1125814a85be3d4ccaf7072ed9208aee5adb729493456b65bcca603.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "luck",
         "title": "开运奇遇记",
@@ -10895,6 +11142,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/amber-brown/images/season-01/thumbnail/ATV_Amber_Brown_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c07d7b802999a0dfb5d9a2d0bd1da4105815d58e7f7543fb7ff7c3268ab2b9be.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": [
         {
@@ -10919,6 +11167,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/best-foot-forward/images/season-01/thumbnail/key-art-01/Apple_TV_Best_Foot_Forward_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/869610246acb8a1d44d24e41d3bdfdefdcbe15a4abd46bea30f9569c7594f539.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "best-foot-forward",
         "title": "大步向前走",
@@ -10965,6 +11214,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/duck-and-goose/images/season-01/thumbnail/key-art-01/Apple_TV_Duck_Goose_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/987b46f1c564a3800c109ad7ddd81c7675989ff688edaf26503fde6eedcacd7c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -10982,6 +11232,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/black-bird/images/season-01/thumbnail/key-art-01/ATV_Black_Bird_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9bc55af4deadf99999d66bf6b587fe4c1cb2e9a844dbc9b9e12236e14275e665.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "black-bird",
         "title": "黑鸟",
@@ -11031,6 +11282,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/cha-cha-real-smooth/images/thumbnail/key-art-01/Apple_Cha_Cha_Real_Smooth_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/fa967c742a2ebd8c4edee63e2bae35f9909b0bb4c26df9df0df02568551cd7fa.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "cha-cha-real-smooth",
         "title": "人生恰恰恰",
@@ -11074,6 +11326,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/home/images/season-02/thumbnail/ATV_Home_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2f0560ccbdace4d03602839852b98e6ea4518a0966baa3abeecf68a312b2c194.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "home",
         "title": "前所未见的独特家园",
@@ -11123,6 +11376,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/n/now-and-then/images/season-01/thumbnail/key-art-01/Apple_TV_Now_And_Then_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/59458b7c81fbb9b0c92fe1b2183cca5cefe261790f949f4933ce8f8fbe9cdee1.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "now-and-then",
         "title": "谎话友没友",
@@ -11164,6 +11418,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/greatness-code/images/season-02/thumbnail/ATV_The_Greatness_Code_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/978518fddce4696080d62c25608bc22d7a8fff71193c357c2ece042f6e9306a0.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "greatness-code",
         "title": "王者之路",
@@ -11204,6 +11459,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-essex-serpent/images/season-01/thumbnail/key-art-01/ATV_The_Essex_Serpent_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6e542b326bb2d38a123426af5162ebd8e4697c0e6b8664e504e07e8e4f539923.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-essex-serpent",
         "title": "艾塞克斯之蛇",
@@ -11253,6 +11509,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/to-mom-and-dad-with-love/images/thumbnail/ATV_To_Mom_and_Dad_with_Love_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6fd192f02330cf836f402e4bcd0bdfb9cc5fa9cd38cddf0d507015731a7103f2.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "to-mom-and-dad-with-love",
         "title": "史努比开心呈献：对爸妈大声说爱吧",
@@ -11295,6 +11552,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-big-conn/images/season-01/thumbnail/key-art-01/ATV_The_Big_Conn_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/4176f376b5e2b64411bd84cafcd0141b677d02b768598b6a62d87e6d6fd52dbe.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-big-conn",
         "title": "诈骗大师",
@@ -11343,6 +11601,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/shining-girls/images/season-01/thumbnail/key-art-01/ATV_Shining_Girls_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0511f7e6ceb4664d59f3290c380ed0994f3a66058e8cda1324e6d3a44b2c1352.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "shining-girls",
         "title": "我会回来找妳",
@@ -11389,6 +11648,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-long-game-bigger-than-basketball/images/season-01/thumbnail/key-art-01/Apple_TV_The_Long_Game_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1af110d6d8536e250327ed74176eca62c457342aa652d501417ad7e0d40fe1ed.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-long-game-bigger-than-basketball",
         "title": "人生赛场：比篮球重要的事",
@@ -11432,6 +11692,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/they-call-me-magic/images/season-01/thumbnail/key-art-01/ATV_They_Call_Me_Magic_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0624ec712d060c0b24b136347654ae6c236857de1cc460c274b48380cb265300.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "they-call-me-magic",
         "title": "魔术强森，是我",
@@ -11475,6 +11736,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/i/its-the-small-things-charlie-brown/images/thumbnail/key-art-01/Apple_TV_Its_The_Small_Things_Charlie_Brown_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/27f0bc88e57ac1c791bde132f7365bc81dd3a9ec3faf8b8dd90715bd5fe2d285.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "its-the-small-things-charlie-brown",
         "title": "史努比开心呈献：环保要从小事做起，查理布朗",
@@ -11517,6 +11779,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/r/roar/images/season-01/thumbnail/key-art-01/ATV_Roar_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2f1236fbc5eefb6cc65c3bcbf026c712fe33d856f47f79cf1485afb82bf70d92.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "roar",
         "title": "她们的怒吼",
@@ -11567,6 +11830,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/doug-unplugs/images/thumbnail/key-art-03/Apple_TV_Doug_Unplugs_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/935d9afad2b1179d34a527353852bae7737250d6dc32ae302ebed9dc61c4877e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "doug-unplugs",
         "title": "道格看世界",
@@ -11606,6 +11870,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wecrashed/images/season-01/thumbnail/key-art-01/Apple_TV_WeCrashed_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/ec712096738660f3c832caa476261c01a3cbd645efa84bd09e806b8f49efac03.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "wecrashed",
         "title": "新创玩家",
@@ -11656,6 +11921,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-last-days-of-ptolemy-grey/images/season-01/thumbnail/key-art-01/Apple_TV_The_Last_Days_of_Ptolemy_Grey_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/31a8d6333d5d6ac4eb2c40689ac06a6bc16dd691cdd3de1422761396192117d1.jpg",
       "heroArtwork": "images/74bdd32d40f331e2e8608ae9ec946776dc543a1ba552920436b65c4fe5d9419b.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/OwLPb31cIRGcNvKbfcBpSg/1280x960sr.jpg",
       "zh": {
         "slug": "the-last-days-of-ptolemy-grey",
         "title": "托勒密的最后时光",
@@ -11704,6 +11970,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dear/images/season-02/thumbnail/key-art-02/Apple_TV_Dear_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/a06643268404c6f76bddef73ff50bc180de80a6c1f7ce1170599c1bdd547fd74.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "dear",
         "title": "我想对你说⋯⋯",
@@ -11752,6 +12019,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/lincolns-dilemma/images/season-01/thumbnail/first-look/Apple_TV_Lincolns_Dilemma_key_art_graphic_header_16_9_show_home.jpg.medium.jpg",
       "artwork": "images/7f12972c9968c536b39b90c297586c7914d54c9666b0ecd2f9f7c6ef346998dc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "lincolns-dilemma",
         "title": "林肯的两难",
@@ -11792,6 +12060,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-sky-is-everywhere/images/thumbnail/key-art-01/Apple_TV_The_Sky_is_Everywhere_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/f79c0ab88b466f23f83dae23835482598304a172b19c8fbbc5b1b3a6fae2b24d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-sky-is-everywhere",
         "title": "处处蓝天",
@@ -11834,6 +12103,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/suspicion/images/season-01/thumbnail/key-art-01/Apple_TV_Suspicion_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cb3c7ab74befe1433a3e7297e3cdca0726b141cae0eec31c5ca6ea1630f379e8.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "suspicion",
         "title": "谁是绑架犯",
@@ -11882,6 +12152,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-tragedy-of-macbeth/images/thumbnail/key-art-02/Apple_TV_The_Tragedy_of_Macbeth_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/697186540cb5d55868fa94c75b207011286f528aefc067a925cb1ce335d93143.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-tragedy-of-macbeth",
         "title": "马克白",
@@ -11927,6 +12198,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/el-deafo/images/season-01/thumbnail/Apple_TV_El_Deafo_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c19c9030e2b2634f1cb778a7b64081d0eaae8330d0deac7f5954149e55ccf9b5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "el-deafo",
         "title": "大耳朵超人",
@@ -11975,6 +12247,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/swan-song/images/thumbnail/key-art-02/Apple_TV_Swan_Song_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d5aad4c0f45bd5a0cf0f20bce69567cd9d145517a32e6cc687770ba38138b21a.jpg",
       "heroArtwork": "images/9c027431da099b532b32abd25f7499842faa322c0bd36ea210fa567ec3d1121c.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/Bd62Ij1xtjiuG4XsuqQg0w/1280x960sr.jpg",
       "zh": {
         "slug": "swan-song",
         "title": "天鹅之歌",
@@ -12020,6 +12293,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-presents-for-auld-lang-syne/images/season-01/thumbnail/key-art-01/Apple_TV_Snoopy_Presents_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e33cad9fff9b4433fa5183b166d93662eebc707a3bc596460da4cde8dd1a90ad.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-presents-for-auld-lang-syne",
         "title": "史努比开心呈献：祝我们友谊长存",
@@ -12062,6 +12336,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mariahs-christmas-the-magic-continues/images/thumbnail/first-look/Apple_TV_Mariahs_Christmas_Magic_Continues_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b7c153b03f030f87c825d80d5eeaa52e597dd921f0a68b9bd9f6022fa18bed9a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mariahs-christmas-the-magic-continues",
         "title": "玛丽亚凯莉续展耶诞魅力",
@@ -12106,6 +12381,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/twas-the-fight-before-christmas/images/thumbnail/key-art-01/Apple_TV_Twas_the_Fight_Before_Christmas_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/687447e5ac875a751eb7baa8a1f3b5b2738a720bcd9fa7e5c3516d747fd30cf9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "twas-the-fight-before-christmas",
         "title": "耶诞讼",
@@ -12145,6 +12421,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-line/images/thumbnail/key-art-02/Apple_TV_The_Line_key_art_header_main_16_9.jpg.medium.jpg",
       "artwork": "images/26ac4027dd0ad64fb05c0fbc9de0596b8579be2d22077c7cc1c5b2449d338daf.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-line",
         "title": "战・线",
@@ -12181,6 +12458,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/s/snoopy-in-space/images/thumbnail/key-art-02/Apple_TV_Snoopy_in_Space_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/1c2aafb95a41c42393947756ade3a5aac25a46b50f44c25fe2446ad4edcab0fa.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "snoopy-in-space",
         "title": "史努比登上太空：探索生命",
@@ -12227,6 +12505,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-shrink-next-door/images/thumbnail/key-art-01/Apple_TV_The_Shrink_Next_Door_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/bcd3b27f48c7eb019623d964b2bc4cded5386ebc755939c1e5e40d1d46802f02.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-shrink-next-door",
         "title": "隔壁的心理医生",
@@ -12270,6 +12549,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/finch/images/thumbnail/key-art-01/Apple_TV_Finch_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d66cc7c100f9f7c1818abb062f61fff2018f99cb0b331b4de133b050fbd3f48f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "finch",
         "title": "芬奇的旅程",
@@ -12311,6 +12591,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dickinson/images/season-03/thumbnail/Apple_TV_Dickinson_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9217742ed649cb63f4d4270113286ed17f517ef057880a7f8b9565fb984d1361.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "dickinson",
         "title": "狄金生",
@@ -12372,6 +12653,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dr-brain/images/season-01/thumbnail/key-art-01/Apple_TV_Dr_Brain_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/dd0fcac8d53bbdd6e701c0c72e4de99f0e1fc3ac9b13914860fb63518f8c2930.jpg",
       "heroArtwork": "images/710874f1e1b1ac17130012050c8698cadf92db7323ef8d225bee799ea4128a30.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/CSwZjVVeufoQ18UxZNFccA/1280x960sr.jpg",
       "zh": {
         "slug": "dr-brain",
         "title": "Dr. Brain",
@@ -12419,6 +12701,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-velvet-underground/images/thumbnail/key-art-02/Apple_TV_The_Velvet_Underground_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b8f5dcb4d886260f35a18e71d56d3a0158ea6a675c3e655aa91b5eb89c1076d9.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-velvet-underground",
         "title": "优雅与残酷之间：The Velvet Underground",
@@ -12459,6 +12742,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/blush/images/thumbnail/key_art_01/Apple_TV_Blush_key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/566e3cbd3d1cc23cecf6fca079197ef67ccfe20d66c63042de5575ccf54f16a0.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "blush",
         "title": "在星际间遇见你",
@@ -12497,6 +12781,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/come-from-away/images/thumbnail/key-art-02/Apple_TV_Come_From_Away_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/305c8d85630a351c73dedefa32f73888cef1e44b0984b15af6b9e3a3ff91a26f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "come-from-away",
         "title": "来自远方",
@@ -12537,6 +12822,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/9/911-inside-the-presidents-war-room/images/thumbnail/key-art-02/Apple_TV_911_Inside_the_Presidents_War_Room_key_art_graphic_header_16_9_show_home.jpg.medium.jpg",
       "artwork": "images/f213c3c43e6079451baf2e1c960db6a555f33333c1744e7186e648c430412f4b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -12554,6 +12840,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/coda/images/thumbnail/key-art-02/Apple_TV_CODA_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/5fcdedebedb968f8fea70d0574c6a48bb019d169a67759dc3943bdcadc104fc5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "coda",
         "title": "乐动心旋律",
@@ -12598,6 +12885,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mr-corman/images/thumbnail/key-art/Apple_TV_Mr_Corman_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6c30f34d48cc88328eede099f8676b2895f8755179b9d375e4b28b401da9098d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mr-corman",
         "title": "柯曼老师",
@@ -12645,6 +12933,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/watch-the-sound-with-mark-ronson/images/thumbnail/Apple_TV_Watch_The_Sound_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9ecfe8ac824f45f096f3ebf9f6ae01761103ec7f03a98ca808a72c5a13f0418c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "watch-the-sound-with-mark-ronson",
         "title": "马克朗森的音乐探照灯",
@@ -12683,6 +12972,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fathom/images/thumbnail/Apple_TV_Fathom_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c56deff75997ee3b4a93a9d0ce9a7b5366d19f4a671e90d4a69f93908becc66a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fathom",
         "title": "探寻鲸之音",
@@ -12722,6 +13012,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/who-are-you-charlie-brown/images/thumbnail/Apple_TV_Who_Are_You_Charlie_Brown_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/29f4a071878faeb5185caa587c28a6c17308756c00c0b9766f668d29bbc0332c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "who-are-you-charlie-brown",
         "title": "查理布朗，你是谁？",
@@ -12764,6 +13055,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/home-before-dark/images/thumbnail/season-2/Apple_TV_Home_Before_Dark_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/467409f7e7ced76c4b75f80687d12baf6822748785da6d3be1fad4624383b3ba.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "home-before-dark",
         "title": "勿闯黑夜",
@@ -12819,6 +13111,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/liseys-story/images/thumbnail/new/Apple_TV_Liseys_Story_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/33004468b3aeec2af6cba2b828dfdf16406af9a4633b5acfc25986e3c3c88766.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "liseys-story",
         "title": "莉西的人生异旅",
@@ -12865,6 +13158,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/1/1971-the-year-that-music-changed-everything/images/thumbnail/Apple_TV_1971_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d4db36ea2c721d9957eb42be47a9c2801954a5fb1ad740172b9258ea9219321c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "1971-the-year-that-music-changed-everything",
         "title": "1971：那一年，音乐改变了世界",
@@ -12908,6 +13202,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-me-you-cant-see/images/thumbnail/Apple_TV_The_Me_You_Cant_See_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/157c1ece9da39d7992003135127af62ce9dc7f2f2541b1d37204a0e3621cbe02.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-me-you-cant-see",
         "title": "你看不见的我",
@@ -12944,6 +13239,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/e/earth-at-night-in-color/images/thumbnail/new/Apple_TV_Earth_At_Night_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/587d31987cea68345559405d75a3750174eb2745baa7046bc18d6237a6f0544c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "earth-at-night-in-color",
         "title": "探索夜色大地",
@@ -12981,6 +13277,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/tiny-world/images/thumbnail/Apple_TV_Tiny_World_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e4581557e67d35d01aa2824153b3dff86aa1603bf1db68dd6c2f3f2c0a231a13.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "tiny-world",
         "title": "你不知道的小小世界",
@@ -13031,6 +13328,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-year-earth-changed/images/thumbnail/Apple_TV_The_Year_Earth_Changed_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b3ad1a6ac8071c873aed6f1973f98328780658c369cbb0002c37d521f2486bd3.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-year-earth-changed",
         "title": "这一年，地球变得不一样",
@@ -13072,6 +13370,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/calls/images/thumbnail/Apple_TV_Calls_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d99b4c53280d94075d110594cf78c01e8ae0f93a203af0bb8f221f32d1e5df18.jpg",
       "heroArtwork": "images/36575d5e5659157e4f2176377d76f2ef5be4281956cf61010eb270a7aa8fc6ad.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/OybXFked3r44YdXiHXXyFw/1280x960sr.jpg",
       "zh": {
         "slug": "calls",
         "title": "骇人来电",
@@ -13120,6 +13419,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/c/cherry/images/thumbnail/new/Apple_TV_Cherry_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0291981a6633be4e361c46d7f849ed69f85bceaa874203e4c171e1025fb69d20.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "cherry",
         "title": "迷途之心",
@@ -13165,6 +13465,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/billie-eilish-the-worlds-a-little-blurry/images/thumbnail/Apple_TV_Billie_Eilish_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/da850df49a488df9606082d6a4763d9b02c49f11a07789b8a45bce86a1e5978d.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "billie-eilish-the-worlds-a-little-blurry",
         "title": "怪奇比莉 Billie Eilish：我眼中的迷蒙世界",
@@ -13208,6 +13509,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/p/palmer/images/thumbnail/Apple_TV_Palmer_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c1ae463a5186a20d592ad89ecf9e59a02fbe1653e539256c4c1d658babbb4768.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "palmer",
         "title": "帕玛",
@@ -13249,6 +13551,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/losing-alice/images/thumbnail/Apple_TV_Losing_Alice_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/c23b86e4f62d38be6751800244d0adaf8ffcf293a61af95a0c23a7a79478cd6f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "losing-alice",
         "title": "迷途爱丽丝",
@@ -13296,6 +13599,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/w/wolfwalkers/images/thumbnail/Apple_TV_Wolfwakers_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/6d04489590935ef4b761a6642b3247a5a6e586acb6a31dc2e6bc039103baf7bc.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -13313,6 +13617,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/m/mariah-careys-magical-christmas-special/images/thumbnail/Apple_TV_Mariah_Carey_Christmas_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cd697f9b7121382bf435d2cad63f7c0ef789427ce6cd9a85cc248e2f1ad838e7.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "mariah-careys-magical-christmas-special",
         "title": "玛丽亚凯莉之奇幻耶诞",
@@ -13360,6 +13665,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fireball-visitors-from-darker-worlds/images/thumbnail/Apple_TV_Fireball_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b3644d5f032ad1a7c9054f4c630d0c73c9dc4799ce36f0eff564a8321bc9e52c.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "fireball-visitors-from-darker-worlds",
         "title": "燃烧的火球：来自星际的谜团",
@@ -13403,6 +13709,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/becoming-you/images/thumbnail/Apple_TV_Becoming_You_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/9f7514eb03e7b472a1a37e0cb82faf7685d12470c75f01962b5f50544e767d5a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "becoming-you",
         "title": "呱呱坠地两千天",
@@ -13451,6 +13758,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/bruce-springsteens-letter-to-you/images/thumbnail/Apple_TV_Bruce_Springsteen_Letter_to_You_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/17a796ec7bdb9cfacd320d8042bd0b29f5f0f35d6c9ad7d25561035091141a51.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "bruce-springsteens-letter-to-you",
         "title": "布鲁斯史普林斯汀：致我们的摇滚岁月",
@@ -13494,6 +13802,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/on-the-rocks/images/thumbnail/Apple_TV_On_The_Rocks_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/d62997c5c51bbc9f1bca97c6069895fde73c32dc84f7c07b0e8a5d11b99db2ec.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "on-the-rocks",
         "title": "人生触礁时",
@@ -13538,6 +13847,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/long-way-up/images/thumbnail/Apple_TV_Long_Way_Up_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/2cd582043e61f064f6a6d55cdd00a0c0dc60b218c358fa15ed52638629e91761.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "long-way-up",
         "title": "长路遥遥",
@@ -13574,6 +13884,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/boys-state/images/thumbnail/Apple_TV_Boys_State_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/b65f71ded95b648a25cb710a864c6565135158310b1f6466fe5eb50a667c9592.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "boys-state",
         "title": "新世代公民",
@@ -13612,6 +13923,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-oprah-conversation/images/thumbnail/Apple_TV_The_Oprah_Conversation_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/51e05fb89993cc1727db978ded40a0233f7cab982f2b9df0f3ec4096356858e5.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -13629,6 +13941,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/g/greyhound/images/thumbnail/Apple_TV_Greyhound_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/0b50e241d9acedf98fe44849f32194afca2bbceccf649770d1e5c12e79462b4f.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -13646,6 +13959,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/l/little-voice/images/thumbnail/Apple_TV_Little_Voice_Key_Art_main_16_9.jpg.medium.jpg",
       "artwork": "images/665ee9029727b09207026ae3d977bbb1862cf77820c95e3738a9ad9cdbf0977b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "little-voice",
         "title": "逐梦之声",
@@ -13694,6 +14008,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/dads/images/thumbnail/Apple_TV_Dads_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/74649115f07f0b325736dc9b155c35377fe84efdf954521133375bdfc43e8384.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "dads",
         "title": "身为人父",
@@ -13732,6 +14047,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/b/beastie-boys-story/images/thumbnail/Apple_TV_Beastie_Boys_Story_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/cb846146cce56bcfeb6744c6391e54b8a61a099db3b7b864e25b3b50a60a7c9b.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "beastie-boys-story",
         "title": "Beastie Boys 的音乐之路",
@@ -13775,6 +14091,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/d/defending-jacob/images/thumbnail/Apple_TV_Defending_Jacob_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/3a4b84b2cddbd3912fa160d4180377bc4b7d4511860c8c8995f11cecc733e503.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "defending-jacob",
         "title": "捍卫雅各",
@@ -13825,6 +14142,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/f/fraggle-rock-rock-on/images/thumbnail/Apple_TV_Fraggle_Rock_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/daa5d9a853e453553d5732706b7ea4f79c1553d923065b579f1515499805b33e.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": null,
       "seasons": []
     },
@@ -13843,6 +14161,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/here-we-are-notes-for-living-on-planet-earth/images/thumbnail/original/Apple_TV_Here_We_Are_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/dfb6f8480a646901b6c35bd09f271b268cae2fefedf08082589b4a250daeb98a.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "here-we-are-notes-for-living-on-planet-earth",
         "title": "Here We Are：欢迎来到这个美丽的星球",
@@ -13888,6 +14207,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/oprah-talks-covid-19/images/thumbnail/Apple_TV_Oprah_Talks_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/7443b79e678233b157a0a627c94852f4ba84db0ba6cd5cee8be29a6c2c8228a0.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "oprah-talks-covid-19",
         "title": "《欧普拉谈新冠肺炎》",
@@ -13924,6 +14244,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-banker/images/thumbnail/Apple_TV_The_Banker_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/66d424386120127a5cd64508f181a1eabba6f673beba66cf218c641019c41c48.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-banker",
         "title": "幕后大亨",
@@ -13963,6 +14284,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/a/amazing-stories/images/thumbnail/Apple_TV_Amazing_Stories_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e22c75b7a4132acceabbf7d6985c6e61fdf951eb56581eefd6d3359aff1c3dbe.jpg",
       "heroArtwork": "images/dfd3f387da790286d322c31a0fd678501d574126cb256b19fe52a04edc6105bf.jpg",
+      "heroSource": "https://is1-ssl.mzstatic.com/image/thumb/1F1WSdSTuD1KuuqBP4ihfA/1280x960sr.jpg",
       "zh": {
         "slug": "amazing-stories",
         "title": "幻异传奇",
@@ -14006,6 +14328,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/v/visible-out-on-television/images/thumbnail/Apple_TV_Visible_Out_on_Television_key_art_orig_16_9.jpg.medium.jpg",
       "artwork": "images/54eec53a1fa480b03bb5718401c546df3e9bf885e3b7df6b1e3cb7ace8517aeb.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "visible-out-on-television",
         "title": "看见骄傲：同志文化电视史",
@@ -14045,6 +14368,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/h/hala/images/thumbnail/Apple_TV_Hala_key_art_main_16_9.jpg.medium.jpg",
       "artwork": "images/e4e2ecacd8d9944c939b6655dc29ef9a74c6886a131b45181f8b6f4c6fe00871.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "hala",
         "title": "荷拉的故事",
@@ -14086,6 +14410,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/t/the-elephant-queen/images/thumbnail/teq_thumbnail_orig_16_9.jpg.medium.jpg",
       "artwork": "images/b66efa673e8b1ad444334ea3bd5fc82a5b2bb00b15608b39ff6053df78732354.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "the-elephant-queen",
         "title": "象群女王",
@@ -14126,6 +14451,7 @@
       "sourceArtwork": "https://www.apple.com/tv-pr/shows-and-films/o/oprah/images/thumbnail/Apple_TV_Oprah_key_art_orig_16_9.jpg.medium.jpg",
       "artwork": "images/7cdf81269c6db5c3a384258e74a43c153270560f1a3b8124a4029dca9dac9531.jpg",
       "heroArtwork": "",
+      "heroSource": "",
       "zh": {
         "slug": "oprah",
         "title": "欧普拉的书友俱乐部",
