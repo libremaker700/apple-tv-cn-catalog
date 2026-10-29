@@ -4,6 +4,7 @@ from datetime import datetime,timedelta,timezone
 from pathlib import Path
 from catalog import ROOT,DOCS,load,publish,validate
 from title_sources import Lookup,chinese,norm
+QUERY_VERSION='zh-cn-v2'
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -24,7 +25,8 @@ def cache_key(ident):return hashlib.sha256(json.dumps(ident,sort_keys=True,ensur
 def record(entry,hint):
     ident=identity(entry,hint)
     # An existing regional name must not prevent verifying a different mainland alias.
-    return {'english_title':entry['en'],'original_title':entry['en'],'kind':'movie' if entry['kind']=='movie' else 'tv','year':ident['year'],'display_name_zh':''}
+    return {'english_title':entry['en'],'original_title':entry['en'],'kind':'movie' if entry['kind']=='movie' else 'tv','year':ident['year'],'display_name_zh':'',
+            'search_name_hint':' '.join(dict.fromkeys([(entry.get('zh') or {}).get('title','')]+hint.get('aliases',[])))[:180]}
 def apply_verified(entry,cached,ident):
     out=copy.deepcopy(entry)
     if cached.get('identity')!=ident or cached.get('status')!='verified':return out
@@ -86,7 +88,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if hint.get('matchedSource') and chinese((e.get('zh') or {}).get('title')):
             report['reused_verified']+=1;output.append(e);continue
         if slugs and e['slug'] not in slugs:output.append(e);continue
-        if not ident['year'] or (old.get('next_retry_at','')>checked) or report['attempted']>=limit:
+        if not ident['year'] or (old.get('query_version')==QUERY_VERSION and old.get('next_retry_at','')>checked) or report['attempted']>=limit:
             output.append(e);continue
         if e.get('releaseDate','')>clock.date().isoformat() and e.get('seasonNumber',1)==1:
             output.append(e);continue
@@ -96,7 +98,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if not patch:patch=client.direct(ref,checked)
         if patch:report['direct_verified']+=1
         elif not client.stopped:patch,evidence=client.search(ref,checked,reserve)
-        entry={'identity':ident,'status':'verified' if patch else 'pending_review','checked_at':checked,'evidence':evidence,
+        entry={'identity':ident,'query_version':QUERY_VERSION,'status':'verified' if patch else 'pending_review','checked_at':checked,'evidence':evidence,
                'next_retry_at':(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds')}
         if patch:
             entry['patch']=patch;e=apply_verified(e,entry,ident)

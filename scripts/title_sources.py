@@ -116,13 +116,15 @@ class Lookup:
     def search(self, record, checked_at):
         title = record.get('english_title') or record.get('original_title')
         hint = {'movie': '电影', 'tv': '电视剧', 'anime': '电视动画'}.get(record.get('kind'), '')
-        query = f'{title} {year(record) or ""} {hint} 中文名 国内译名'.strip()
+        query = f'{title} {year(record) or ""} {hint} {record.get("search_name_hint", "")} 中文名 中国大陆译名'.strip()
         # One basic search, no retry or automatic upgrade; caller reserves budget first.
         self.requests += 1
         try:
             response = self.session.post('https://api.tavily.com/search', headers={'Authorization': 'Bearer ' + self.key},
                 json={'query': query, 'search_depth': 'basic', 'auto_parameters': False, 'max_results': 6,
-                      'include_answer': False, 'include_raw_content': 'text', 'include_images': False, 'include_usage': True},
+                      'include_answer': False, 'include_raw_content': 'text', 'include_images': False, 'include_usage': True,
+                      'country': 'china', 'language': 'zh-cn', 'filter_by_language': True,
+                      'include_domains': ['zh.wikipedia.org','baike.baidu.com','movie.douban.com','tv.apple.com','bgm.tv'], 'include_domains_mode': 'prefer'},
                 timeout=(8, 45), allow_redirects=False)
             if response.status_code != 200:
                 self.stopped = True
@@ -137,6 +139,9 @@ class Lookup:
             if urlsplit(url).scheme != 'https' or urlsplit(url).username or urlsplit(url).password:
                 continue
             results.append({'title': str(item.get('title', ''))[:200], 'url': url, 'score': item.get('score')})
+            if urlsplit(url).hostname in ('baike.baidu.com','movie.douban.com') and item.get('raw_content'):
+                results[-1]['identity_text'] = str(item['raw_content'])[:14000]
+                results[-1]['page_sha256'] = hashlib.sha256(item['raw_content'].encode()).hexdigest()
             if urlsplit(url).hostname == 'zh.wikipedia.org' and item.get('raw_content'):
                 # Only the first defining paragraph, not snippets or a later mention.
                 paragraphs = [p.strip() for p in str(item['raw_content']).split('\n') if p.strip().startswith('《')]
@@ -163,5 +168,42 @@ class Lookup:
                 patch = bangumi_patch(record, subject, checked_at)
                 if patch and patch not in patches:
                     patches.append(patch)
+            elif parts.hostname in ('baike.baidu.com','movie.douban.com'):
+                patch=structured_patch(record,item,checked_at)
+                if patch and patch not in patches:patches.append(patch)
         unique = {norm(p['display_name_zh']) for p in patches}
         return patches[0] if len(unique) == 1 else None
+
+def structured_patch(record,item,checked_at):
+    """Verify fields in a fetched Chinese identity page, never a search headline/snippet."""
+    raw=item.get('identity_text','');parts=urlsplit(item.get('url',''));expected=year(record)
+    english=record.get('english_title') or record.get('original_title') or ''
+    if not raw or not expected or not english:return None
+    name='';aliases=[]
+    if parts.hostname=='movie.douban.com' and re.fullmatch(r'/subject/\d+/?',parts.path):
+        head=next((line.strip(' #*') for line in raw[:1800].splitlines() if mentions_original(english,line) and re.search(r'\(\s*'+str(expected)+r'\s*\)',line)), '')
+        if not head or re.search(r'第[二三四五六七八九十2-9]+季|Season\s*[2-9]',head,re.I):return None
+        # A television subject exposes a first-air field; a movie exposes a release-date field.
+        label=r'首播|首播日期' if record.get('kind') in ('tv','anime') else r'上映日期'
+        if not re.search(label+r'[^\n]{0,20}(?:\n[^\n]{0,40})?'+str(expected),raw):return None
+        match=re.search(r'^(.*?)\s*'+re.escape(english),head,re.I)
+        name=match.group(1).strip('《》:： ') if match else ''
+        alt=re.search(r'又名\s*[:：]\s*([^\n]{1,250})',raw)
+        if alt:aliases=[s.strip() for s in re.split(r'[/、,，;；]',alt.group(1)) if chinese(s)]
+        kind='douban_title_fields'
+    elif parts.hostname=='baike.baidu.com' and parts.path.startswith('/item/'):
+        original=re.search(r'(?:外文名|英文名|原文名)\s*[:：]?\s*(?:\n\s*)?([^\n]{1,120})',raw)
+        if not original or norm(original.group(1).strip(' *'))!=norm(english):return None
+        label=r'首播时间|首播日期' if record.get('kind') in ('tv','anime') else r'上映时间|上映日期'
+        if not re.search(r'(?:'+label+r')\s*[:：]?\s*(?:\n\s*)?'+str(expected),raw):return None
+        if record.get('kind') in ('tv','anime') and not re.search(r'电视剧|電視劇|电视动画|电视系列|影集|剧集',raw[:3000]):return None
+        if record.get('kind')=='movie' and '电影' not in raw[:3000]:return None
+        name=re.sub(r'[_\- ]*(?:百度百科|\(.*?\)|（.*?）).*$', '',item.get('title','')).strip()
+        if re.search(r'第[二三四五六七八九十2-9]+季',name):return None
+        kind='baidu_title_fields'
+    else:return None
+    if not chinese(name) or len(name)>80:return None
+    from opencc import OpenCC
+    cc=OpenCC('t2s');names=list(dict.fromkeys([cc.convert(s) for s in [name]+aliases if chinese(s) and len(s)<80]))
+    return {'display_name_zh':cc.convert(name),'aliases_zh':names,'name_status':'verified_title_sources','name_checked_at':checked_at,
+            'sources':[source(kind,item['url'],checked_at)]}

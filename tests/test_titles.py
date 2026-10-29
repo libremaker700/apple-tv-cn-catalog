@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import catalog,title_lookup as t
-from title_sources import wiki_patch
+from title_sources import wiki_patch,structured_patch
 
 NOW=datetime(2026,10,30,tzinfo=timezone.utc)
 ENTRY={'slug':'manhunt','en':'Manhunt','kind':'series','releaseDate':'2024-03-15','seasonNumber':1,
@@ -38,6 +38,13 @@ class Titles(unittest.TestCase):
         self.assertEqual(result['zh']['summary'],ENTRY['zh']['summary']);self.assertEqual(result['zh']['actors'],ENTRY['zh']['actors'])
         for key in ('slug','en','kind','releaseDate','seasonNumber','artwork','seasons'):self.assertEqual(result[key],ENTRY[key])
         self.assertEqual(t.apply_verified(ENTRY,{'status':'verified','identity':dict(ident,year='2019'),'patch':PATCH},ident),ENTRY)
+    def test_chinese_identity_pages_require_fields(self):
+        ref={'english_title':'Manhunt','kind':'tv','year':'2024'}
+        page={'title':'追捕刺客 (豆瓣)','url':'https://movie.douban.com/subject/12345/','identity_text':'# 追捕刺客 Manhunt (2024)\n类型: 剧情\n首播: 2024-03-15\n又名: 追捕 / 追缉刺客'}
+        result=structured_patch(ref,page,'now');self.assertEqual(result['display_name_zh'],'追捕刺客');self.assertIn('追缉刺客',result['aliases_zh'])
+        for raw in ('# 追捕刺客 Manhunt (2019)\n首播: 2019-01-01', '# 同名电影 Manhunt (2024)\n上映日期: 2024-01-01', '# 追捕刺客 第二季 Manhunt Season 2 (2024)\n首播: 2024-03-15'):
+            self.assertIsNone(structured_patch(ref,dict(page,identity_text=raw),'now'))
+        self.assertIsNone(structured_patch(ref,dict(page,identity_text='',content='搜索摘要声称追捕刺客是Manhunt'),'now'))
     def test_key_fallback_auth_but_not_rate_limit(self):
         session=Session([401,200]);client=t.SearchClient(['a','b'],session);reserved=[]
         client.search({'english_title':'Example','kind':'tv','year':'2024'},'now',lambda:reserved.append(1) or True)
