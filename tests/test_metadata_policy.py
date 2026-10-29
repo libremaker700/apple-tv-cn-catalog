@@ -7,6 +7,14 @@ from title_sources import wiki_patch,Lookup
 import catalog
 
 class Policy(unittest.TestCase):
+    def test_redirect_cannot_reopen_region_endpoint(self):
+        class Reply:
+            status_code=302
+            headers={'Location':'https://tv.apple.com/tw/movie/x/id'}
+            def close(self):pass
+        with patch.object(catalog.requests,'get',return_value=Reply()) as get:
+            with self.assertRaises(ValueError):catalog.get('https://www.apple.com/tv-pr/originals/x/')
+        self.assertEqual(get.call_count,1);self.assertFalse(get.call_args.kwargs['allow_redirects'])
     def test_region_endpoints_are_rejected(self):
         for url in ('https://tv.apple.com/hk/movie/x/id','https://tv.apple.com/tw/show/x/id','https://www.apple.com/hk/tv-pr/x','https://example.tw/title'):
             self.assertFalse(allowed_source(url),url)

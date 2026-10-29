@@ -3,6 +3,7 @@ import argparse, concurrent.futures, copy, hashlib, io, json, os, re, time
 from pathlib import Path
 from datetime import datetime, timezone
 import requests
+from urllib.parse import urljoin
 from PIL import Image
 from metadata_policy import POLICY,allowed_source,clean_entry,clean_zh
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,8 +14,15 @@ def raw_json(value): return json.dumps(value,ensure_ascii=False,sort_keys=True,s
 def digest(raw): return hashlib.sha256(raw).hexdigest()
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
 def get(url):
-    if not allowed_source(url):raise ValueError("Unsupported metadata endpoint")
-    r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35));r.raise_for_status();return r
+    for _ in range(5):
+        if not allowed_source(url):raise ValueError("Unsupported metadata endpoint")
+        r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35),allow_redirects=False)
+        if 300<=r.status_code<400:
+            target=urljoin(url,r.headers.get('Location',''));r.close()
+            if target==url:raise ValueError('Invalid metadata redirect')
+            url=target;continue
+        r.raise_for_status();return r
+    raise ValueError('Too many metadata redirects')
 def save_image(raw):
     if len(raw)>8*1024*1024: raise ValueError('image too large')
     with Image.open(io.BytesIO(raw)) as im:
