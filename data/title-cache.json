@@ -9,24 +9,28 @@
         "year": "2024",
         "official_id": "umc.cmc.2ghd8ombh4fd37rfs27ivfa94"
       },
-      "query_version": "zh-cn-v2",
-      "status": "pending_review",
-      "checked_at": "2026-10-29T18:30:52+00:00",
+      "query_version": "zh-cn-v3-animation",
+      "status": "verified",
+      "checked_at": "2026-10-29T18:34:47+00:00",
       "evidence": {
-        "query": "WondLa 2024 电视剧 云朵拉 中文名 中国大陆译名",
-        "usage": {
-          "credits": 1
-        },
-        "results": [
-          {
-            "title": "欢迎来到麦乐村 - 维基百科",
-            "url": "https://zh.wikipedia.org/zh-cn/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E9%BA%A6%E4%B9%90%E6%9D%91",
-            "score": 0.1196859
-          }
-        ],
-        "status": "pending_review"
+        "status": "direct_source"
       },
-      "next_retry_at": "2026-11-28T18:30:52+00:00"
+      "next_retry_at": "2026-11-28T18:34:47+00:00",
+      "patch": {
+        "display_name_zh": "寻家",
+        "aliases_zh": [
+          "寻家"
+        ],
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-29T18:34:47+00:00",
+        "sources": [
+          {
+            "type": "bangumi_title",
+            "url": "https://bangumi.tv/subject/497641",
+            "retrieved_at": "2026-10-29T18:34:47+00:00"
+          }
+        ]
+      }
     },
     "c092387871b9d7a29bfaf128f691958b1844bcf5ae803afd1efd1e6afbab4bd9": {
       "identity": {
@@ -631,5 +635,5 @@
   "budgets": {
     "2026-10": 14
   },
-  "last_run_at": "2026-10-29T18:30:52+00:00"
+  "last_run_at": "2026-10-29T18:34:47+00:00"
 }
