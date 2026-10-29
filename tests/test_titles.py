@@ -26,6 +26,12 @@ class Session:
     def post(self,url,**kwargs):self.auth.append(kwargs['headers']['Authorization']);return Reply(self.statuses.pop(0))
 
 class Titles(unittest.TestCase):
+    def test_playable_source_does_not_verify_regional_name(self):
+        entry={'en':'Matchbox The Movie','zh':{'title':'Matchbox 电影'}}
+        hint={'matchedSource':True,'aliases':['火柴盒','火柴盒大电影']}
+        self.assertTrue(t.needs_title_review(entry,hint))
+        self.assertFalse(t.needs_title_review(dict(entry,zh={'title':'火柴盒大电影'}),hint))
+        self.assertTrue(t.needs_title_review(dict(entry,zh={'title':'火柴盒大电影'}),dict(hint,matchedSource=False)))
     def test_web_animation_and_exact_season(self):
         ref={'english_title':'WondLa','kind':'anime','year':'2024'}
         subject={'id':497641,'name':'WondLa','name_cn':'寻家','date':'2024-06-28','type':2,'platform':'WEB'}

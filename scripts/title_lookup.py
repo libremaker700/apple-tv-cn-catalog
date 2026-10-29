@@ -28,6 +28,11 @@ def record(entry,hint):
     # An existing regional name must not prevent verifying a different mainland alias.
     return {'english_title':entry['en'],'original_title':entry['en'],'kind':'movie' if entry['kind']=='movie' else ('anime' if animated else 'tv'),'year':ident['year'],'display_name_zh':'',
             'search_name_hint':' '.join(dict.fromkeys([(entry.get('zh') or {}).get('title','')]+hint.get('aliases',[])))[:180]}
+def needs_title_review(entry,hint):
+    title=(entry.get('zh') or {}).get('title','')
+    aliases={norm(name) for name in hint.get('aliases',[]) if chinese(name)}
+    # A playable source ID alone does not verify the regional display name.
+    return not (hint.get('matchedSource') and chinese(title) and norm(title) in aliases)
 def apply_verified(entry,cached,ident):
     out=copy.deepcopy(entry)
     if cached.get('identity')!=ident or cached.get('status')!='verified':return out
@@ -86,7 +91,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if e!=original:report['cache_hits']+=1
         if old.get('status')=='verified' and old.get('identity')==ident:
             report['reused_verified']+=1;output.append(e);continue
-        if hint.get('matchedSource') and chinese((e.get('zh') or {}).get('title')):
+        if not needs_title_review(e,hint):
             report['reused_verified']+=1;output.append(e);continue
         if slugs and e['slug'] not in slugs:output.append(e);continue
         if not ident['year'] or (old.get('query_version')==QUERY_VERSION and old.get('next_retry_at','')>checked) or report['attempted']>=limit:

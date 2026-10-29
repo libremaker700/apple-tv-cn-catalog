@@ -676,6 +676,64 @@
         "status": "pending_review"
       },
       "next_retry_at": "2026-11-28T18:54:32+00:00"
+    },
+    "147851e010f90d3a165bc9708d3027000fe0c232da71d9d923db580e3fe65b26": {
+      "identity": {
+        "slug": "matchbox-the-movie",
+        "english_title": "Matchbox The Movie",
+        "kind": "movie",
+        "year": "2026",
+        "official_id": "umc.cmc.31qa8j1tn2cnpyk3fx43w928d"
+      },
+      "query_version": "zh-cn-v3-animation",
+      "status": "verified",
+      "checked_at": "2026-10-29T19:49:42+00:00",
+      "patch": {
+        "display_name_zh": "火柴盒大电影",
+        "aliases_zh": [
+          "火柴盒",
+          "火柴盒大电影"
+        ],
+        "name_checked_at": "2026-10-29T19:49:42+00:00",
+        "sources": [
+          {
+            "type": "reviewed_plex_title_identity",
+            "url": "https://watch.plex.tv/zh/movie/matchbox-the-movie",
+            "retrieved_at": "2026-10-29T19:49:42+00:00"
+          },
+          {
+            "type": "official_apple_identity",
+            "url": "https://www.apple.com/tv-pr/originals/matchbox-the-movie/",
+            "retrieved_at": "2026-10-29T19:49:42+00:00"
+          }
+        ]
+      },
+      "evidence": {
+        "slug": "matchbox-the-movie",
+        "identity": {
+          "slug": "matchbox-the-movie",
+          "english_title": "Matchbox The Movie",
+          "kind": "movie",
+          "year": "2026",
+          "official_id": "umc.cmc.31qa8j1tn2cnpyk3fx43w928d"
+        },
+        "title": "火柴盒大电影",
+        "aliases": [
+          "火柴盒",
+          "火柴盒大电影"
+        ],
+        "title_page": "https://watch.plex.tv/zh/movie/matchbox-the-movie",
+        "linked_official_watch_url": "https://tv.apple.com/us/movie/matchbox-the-movie/umc.cmc.31qa8j1tn2cnpyk3fx43w928d",
+        "official_identity_page": "https://www.apple.com/tv-pr/originals/matchbox-the-movie/",
+        "year": 2026,
+        "actors": [
+          "John Cena",
+          "Jessica Biel"
+        ],
+        "director": "Sam Hargrave",
+        "checked_at": "2026-10-29T19:49:42+00:00",
+        "review_method": "Chinese title, cast, year and direct Apple title identity cross-check"
+      }
     }
   },
   "budgets": {

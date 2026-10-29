@@ -13,3 +13,5 @@ The Android app downloads calibrated names/aliases with the catalog, then search
 `python scripts/catalog.py --validate` verifies every referenced image and catalog hash. `python scripts/catalog.py --force` performs a real collection.
 
 GitHub Actions dependencies: requests, Pillow, opencc-python-reimplemented.
+
+A matched playback source does not by itself verify a regional display title. The title workflow only retains that shortcut when the display title matches a known Chinese source alias; other regional names remain eligible for calibration. Source-reviewed title evidence is retained under data/title-reviews/ and reapplied from the verified identity cache during collection.
