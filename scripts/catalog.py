@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import requests
 from PIL import Image
-
+from metadata_policy import POLICY,allowed_source,clean_entry,clean_zh
 ROOT=Path(__file__).resolve().parents[1]
 DOCS=ROOT/'docs'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/'
@@ -13,6 +13,7 @@ def raw_json(value): return json.dumps(value,ensure_ascii=False,sort_keys=True,s
 def digest(raw): return hashlib.sha256(raw).hexdigest()
 def load(path): return json.loads(path.read_text(encoding='utf-8'))
 def get(url):
+    if not allowed_source(url):raise ValueError("Unsupported metadata endpoint")
     r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35));r.raise_for_status();return r
 def save_image(raw):
     if len(raw)>8*1024*1024: raise ValueError('image too large')
@@ -23,11 +24,13 @@ def save_image(raw):
     path='images/'+digest(raw)+'.'+ext
     (DOCS/path).parent.mkdir(parents=True,exist_ok=True);(DOCS/path).write_bytes(raw);return path
 def validate(catalog):
+    assert catalog.get('metadataPolicy')==POLICY, 'Unsupported Chinese metadata policy'
     entries=catalog['entries'];assert 50<=len(entries)<=2000
     seen=set()
     for e in entries:
         assert re.fullmatch('[a-z0-9-]{1,150}',e['slug']) and e['slug'] not in seen;seen.add(e['slug'])
         assert e['kind'] in ('movie','series') and e['en']
+        assert not e.get('zh') or clean_zh(e['zh']) is not None, 'Non-mainland metadata rejected'
         assert e['officialUrl']=='https://www.apple.com/tv-pr/originals/'+e['slug']+'/'
         assert not any(k in e for k in ('id','sourceIds','playUrl','token','headers'))
         for field in ('artwork','heroArtwork'):
@@ -45,7 +48,7 @@ def publish(catalog,checked_at,mode):
     value['complete']=True;validate(value)
     raw=raw_json(value);sha=digest(raw);path='releases/'+sha+'/catalog.json'
     (DOCS/path).parent.mkdir(parents=True,exist_ok=True);(DOCS/path).write_bytes(raw)
-    manifest={'schema':1,'version':sha,'catalog_path':path,'catalog_sha256':sha,'item_count':len(value['entries']),
+    manifest={'schema':1,'metadata_policy':POLICY,'version':sha,'catalog_path':path,'catalog_sha256':sha,'item_count':len(value['entries']),
               'image_count':len(images),'images':images,'checked_at':checked_at,'publication_mode':mode}
     # The manifest is written last; only complete data snapshots become active.
     (DOCS/'catalog.json').write_bytes(raw);(DOCS/'version.json').write_bytes(raw_json(manifest))
@@ -53,6 +56,7 @@ def publish(catalog,checked_at,mode):
 def collect(previous):
     rows=get(INDEX).json()['results']['originals'];old={e['slug']:e for e in previous['entries']}
     seeds={e['slug']:e for e in load(ROOT/'data/seed.json')['entries']}
+    mainland=load(ROOT/'data/mainland-catalog.json')['records']
     rows=[r for r in rows if r.get('showTypeKey') in ('films','series')]
     assert len(rows)>=max(50,int(len(old)*0.9)), 'incomplete source inventory'
     def entry(r):
@@ -81,32 +85,12 @@ def collect(previous):
                 from PIL import ImageOps
                 im=ImageOps.fit(im.convert('RGB'),(1280,720));out=io.BytesIO();im.save(out,format='JPEG',quality=88)
             e['heroArtwork']=save_image(out.getvalue());e['heroSource']=hero_source
-        if not e.get('zh') or prior!=e['version']:
-            # Identity is the official UMC id, shared by the US and Chinese storefronts.
-            try:
-                from opencc import OpenCC
-                page=get(e['officialUrl']).text
-                links=re.findall(r'https://tv\.apple\.com/(?:us/)?(?:show|movie)/[^"\s<>]+',page)
-                watch=next(x.replace('&amp;','&') for x in links if '/umc.cmc.' in x)
-                zh=None
-                for region in ('hk','tw'):
-                    try:
-                        url=re.sub(r'https://tv\.apple\.com/(?:us/)?','https://tv.apple.com/'+region+'/',watch)
-                        html=get(url).text
-                        from html import unescape
-                        title=re.search(r'<meta[^>]+property="og:title"[^>]+content="([^"]+)"',html)
-                        desc=re.search(r'<meta[^>]+(?:name="description"|property="og:description")[^>]+content="([^"]+)"',html)
-                        name=unescape(title.group(1)).split(' - Apple TV')[0].strip('《》 ')
-                        if not re.search('[\u4e00-\u9fff]',name):continue
-                        cc=OpenCC('t2s');zh={'slug':slug,'title':cc.convert(name),'summary':cc.convert(unescape(desc.group(1))) if desc else '',
-                              'aliases':list(dict.fromkeys([name,cc.convert(name)])),'sources':[url],'watchUrl':watch,'version':e['version']};break
-                    except Exception:continue
-                if zh:e['zh']=zh
-            except Exception:pass
-        e['chinesePending']=not bool(e.get('zh'))
+        # Localized fields come exclusively from mainland policy data.
+        e=clean_entry(e)
+        if not e.get('zh') and slug in mainland:e['zh']=clean_zh(mainland[slug]);e['chinesePending']=not bool(e['zh'])
         return e
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool: entries=list(pool.map(entry,rows))
-    return {'entries':entries,'complete':True}
+    return {'entries':entries,'complete':True,'metadataPolicy':POLICY}
 def main():
     p=argparse.ArgumentParser();p.add_argument('--seed',action='store_true');p.add_argument('--force',action='store_true');p.add_argument('--validate',action='store_true');a=p.parse_args()
     if a.validate:

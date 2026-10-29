@@ -2,6 +2,7 @@
 import hashlib, re, unicodedata
 from urllib.parse import urlsplit, unquote
 import requests
+from metadata_policy import POLICY,allowed_source
 def norm(value):
     return re.sub(r'[^a-z0-9\u3400-\u9fff]', '', unicodedata.normalize('NFKC', str(value or '')).casefold())
 def chinese(value):
@@ -39,15 +40,11 @@ def wiki_patch(record, page, checked_at):
     # A combined manga article starts by defining a manga; don't pass it as animation.
     if record.get('kind') == 'anime' and re.search(r'漫画|漫畫', lead[:150]) and not re.search(r'电视动画|電視動畫', lead[:150]):
         return None
-    display = title[1]
-    old = record.get('display_name_zh', '')
-    if chinese(old):
-        if norm(old) not in norm(lead):
-            return None  # Different regional name: retain old display until reviewed.
-        display = old
-    return {'display_name_zh': display, 'aliases_zh': [title[1]],
+    display=page.get('mainland_title','')
+    if not chinese(display):return None
+    return {'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY,
             'name_status': 'verified_title_sources', 'name_checked_at': checked_at,
-            'sources': [source('wikipedia_title', url, checked_at)]}
+            'sources': [source('wikipedia_mainland_title', url, checked_at)]}
 
 def bangumi_patch(record, subject, checked_at):
     expected = year(record)
@@ -63,7 +60,7 @@ def bangumi_patch(record, subject, checked_at):
     old = record.get('display_name_zh', '')
     if chinese(old) and norm(old) != norm(display):
         return None
-    return {'display_name_zh': display, 'aliases_zh': [display], 'name_status': 'verified_title_sources',
+    return {'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY, 'name_status': 'verified_title_sources',
             'name_checked_at': checked_at, 'sources': [source('bangumi_title', f"https://bangumi.tv/subject/{int(subject['id'])}", checked_at)]}
 
 class Lookup:
@@ -76,6 +73,7 @@ class Lookup:
         self.stopped = False
 
     def get_json(self, url, **kwargs):
+        if not allowed_source(url):return {}
         try:
             response = self.session.get(url, headers={'User-Agent': 'AppleTVCnCatalog/1.0 (public title verification)'}, timeout=(8, 20), allow_redirects=False, **kwargs)
             if response.status_code == 200:
@@ -88,9 +86,15 @@ class Lookup:
 
     def wiki_page(self, record, title, checked_at):
         payload = self.get_json('https://zh.wikipedia.org/w/api.php', params={
-            'action': 'query', 'prop': 'extracts|info', 'exintro': 1, 'explaintext': 1,
+            'action': 'query', 'prop': 'extracts|info|revisions', 'rvprop':'content', 'rvslots':'main', 'exintro': 1, 'explaintext': 1,
             'inprop': 'url', 'redirects': 1, 'titles': title, 'format': 'json', 'variant': 'zh-hans'})
-        patches = [p for page in payload.get('query', {}).get('pages', {}).values() if (p := wiki_patch(record, page, checked_at))]
+        patches=[]
+        for page in payload.get('query',{}).get('pages',{}).values():
+            revision=(page.get('revisions') or [{}])[0];raw=revision.get('slots',{}).get('main',{}).get('*',revision.get('*',''))
+            field=re.search(r'\|\s*(?:cn_name|中国大陆片名|中國大陸片名|中国大陆|中國大陸)\s*=\s*([^\n|<]{1,80})',raw,re.I)
+            if field:page['mainland_title']=field.group(1).strip(' 《》[]*')
+            patch=wiki_patch(record,page,checked_at)
+            if patch:patches.append(patch)
         return patches[0] if len(patches) == 1 else None
 
     def direct(self, record, checked_at):
@@ -124,7 +128,7 @@ class Lookup:
                 json={'query': query, 'search_depth': 'basic', 'auto_parameters': False, 'max_results': 6,
                       'include_answer': False, 'include_raw_content': 'text', 'include_images': False, 'include_usage': True,
                       'country': 'china', 'language': 'zh-cn', 'filter_by_language': True,
-                      'include_domains': ['zh.wikipedia.org','baike.baidu.com','movie.douban.com','tv.apple.com','bgm.tv'], 'include_domains_mode': 'prefer'},
+                      'include_domains': ['zh.wikipedia.org','baike.baidu.com','movie.douban.com','bgm.tv'], 'include_domains_mode': 'prefer'},
                 timeout=(8, 45), allow_redirects=False)
             if response.status_code != 200:
                 self.stopped = True
@@ -136,7 +140,7 @@ class Lookup:
         results = []
         for item in payload.get('results', [])[:6]:
             url = item.get('url', '')
-            if urlsplit(url).scheme != 'https' or urlsplit(url).username or urlsplit(url).password:
+            if not allowed_source(url):
                 continue
             results.append({'title': str(item.get('title', ''))[:200], 'url': url, 'score': item.get('score')})
             if urlsplit(url).hostname in ('baike.baidu.com','movie.douban.com') and item.get('raw_content'):
@@ -156,6 +160,7 @@ class Lookup:
         patches = []
         for item in results:
             url = item.get('url', '')
+            if not allowed_source(url):continue
             parts = urlsplit(url)
             # Search only locates a page. The page API must independently pass identity gates.
             if parts.hostname == 'zh.wikipedia.org':
@@ -205,5 +210,5 @@ def structured_patch(record,item,checked_at):
     if not chinese(name) or len(name)>80:return None
     from opencc import OpenCC
     cc=OpenCC('t2s');names=list(dict.fromkeys([cc.convert(s) for s in [name]+aliases if chinese(s) and len(s)<80]))
-    return {'display_name_zh':cc.convert(name),'aliases_zh':names,'name_status':'verified_title_sources','name_checked_at':checked_at,
+    return {'display_name_zh':cc.convert(name),'aliases_zh':names,'metadataPolicy':POLICY,'name_status':'verified_title_sources','name_checked_at':checked_at,
             'sources':[source(kind,item['url'],checked_at)]}

@@ -4,7 +4,7 @@
     "the-savant": {
       "sourceMatchPending": false,
       "matchedSource": false,
-      "year": "2025",
+      "year": "",
       "aliases": []
     },
     "silo": {
@@ -25,9 +25,7 @@
       "sourceMatchPending": false,
       "matchedSource": false,
       "year": "2027",
-      "aliases": [
-        "弗利特伍德·麦克：链条"
-      ]
+      "aliases": []
     },
     "neuromancer": {
       "sourceMatchPending": false,
@@ -45,17 +43,13 @@
       "sourceMatchPending": false,
       "matchedSource": false,
       "year": "2027",
-      "aliases": [
-        "史努比大电影"
-      ]
+      "aliases": []
     },
     "fraggle-rock-a-holiday-gift": {
       "sourceMatchPending": false,
       "matchedSource": false,
       "year": "2026",
-      "aliases": [
-        "弗拉格摇滚：节日礼物"
-      ]
+      "aliases": []
     },
     "bad-monkey": {
       "sourceMatchPending": false,
@@ -69,17 +63,13 @@
       "sourceMatchPending": false,
       "matchedSource": false,
       "year": "2026",
-      "aliases": [
-        "勇士少年之路"
-      ]
+      "aliases": []
     },
     "being-heumann": {
       "sourceMatchPending": false,
       "matchedSource": false,
       "year": "2026",
-      "aliases": [
-        "成为休曼"
-      ]
+      "aliases": []
     },
     "12-12-12": {
       "sourceMatchPending": false,
@@ -98,10 +88,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "高杆拍档",
-        "一桿入魂",
-        "一杆入魂",
-        "高桿拍檔"
+        "一杆入魂"
       ]
     },
     "nocturne": {
@@ -113,7 +100,7 @@
     "wheres-wanda": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2026",
       "aliases": [
         "旺达在哪里"
       ]
@@ -123,11 +110,6 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "丹增",
-        "雪山之虎：丹增诺盖",
-        "登峰傳奇：丹增諾蓋",
-        "登峰传奇：丹增诺盖",
-        "雪山之虎：丹增諾蓋",
         "登峰传奇丹增诺盖"
       ]
     },
@@ -136,8 +118,8 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "火柴盒",
-        "火柴盒大电影"
+        "火柴盒大电影",
+        "火柴盒"
       ]
     },
     "small-prophets": {
@@ -151,7 +133,7 @@
     "the-sisters-grimm": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2025",
+      "year": "2026",
       "aliases": []
     },
     "the-last-first-winter-k2": {
@@ -159,11 +141,6 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "最后的首次冬季K2",
-        "万人之上：冬攀乔戈里峰",
-        "冬攀 K2 峰：極限吞噬",
-        "冬攀 K2 峰：极限吞噬",
-        "萬人之上：冬攀喬戈里峰",
         "万人之上冬攀乔戈里峰"
       ]
     },
@@ -172,10 +149,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "厨刀难握：摘星米其林",
-        "刀鋒造極：米芝蓮摘星戰",
-        "刀锋造极：米芝莲摘星战",
-        "廚刀難握：摘星米其林",
         "厨刀难握摘星米其林"
       ]
     },
@@ -184,15 +157,13 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "无间兄弟情",
-        "荷里活好兄弟",
-        "無間兄弟情"
+        "无间兄弟情"
       ]
     },
     "slow-horses": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2022",
+      "year": "2026",
       "aliases": [
         "流人"
       ]
@@ -216,7 +187,7 @@
     "dark-matter": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2026",
       "aliases": [
         "人生复本"
       ]
@@ -224,7 +195,7 @@
     "stillwater": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2020",
+      "year": "2018",
       "aliases": []
     },
     "the-dynasty-uconn-huskies": {
@@ -232,23 +203,19 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "哈士奇王朝：康乃狄克大学女篮",
-        "學界女籃傳奇：UConn Huskies",
-        "学界女篮传奇：UConn Huskies",
-        "哈士奇王朝：康乃狄克大學女籃",
         "哈士奇王朝康涅狄格大学女篮"
       ]
     },
     "women-in-blue-las-azules": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2024",
+      "year": "2026",
       "aliases": []
     },
     "ted-lasso": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2020",
+      "year": "2023",
       "aliases": [
         "足球教练"
       ]
@@ -263,23 +230,20 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2026",
-      "aliases": [
-        "丁克"
-      ]
+      "aliases": []
     },
     "lucky": {
       "sourceMatchPending": false,
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "幸运女神",
-        "幸運女神"
+        "幸运女神"
       ]
     },
     "trying": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2020",
+      "year": "2026",
       "aliases": [
         "尝试"
       ]
@@ -287,7 +251,7 @@
     "camp-snoopy": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2024",
+      "year": "2026",
       "aliases": []
     },
     "sugar": {
@@ -303,9 +267,7 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "恐怖角",
-        "海角驚魂",
-        "海角惊魂"
+        "恐怖角"
       ]
     },
     "star-city": {
@@ -321,7 +283,6 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "螺旋桨单程夜航",
         "单程夜航"
       ]
     },
@@ -336,10 +297,7 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "越界母亲",
-        "母愛無赦",
-        "母爱无赦",
-        "越界母親"
+        "母爱无赦"
       ]
     },
     "widows-bay": {
@@ -355,15 +313,13 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "我哥是牛头人",
-        "半牛男孩洛根",
-        "我哥是牛頭人"
+        "我哥是牛头人"
       ]
     },
     "criminal-record": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2026",
       "aliases": [
         "犯罪记录"
       ]
@@ -378,26 +334,20 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2026",
-      "aliases": [
-        "后果",
-        "结局"
-      ]
+      "aliases": []
     },
     "your-friends-and-neighbors": {
       "sourceMatchPending": false,
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "掩耳盗邻",
-        "富貴鄰住偷",
-        "富贵邻住偷",
-        "掩耳盜鄰"
+        "掩耳盗邻"
       ]
     },
     "for-all-mankind": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2019",
+      "year": "2026",
       "aliases": [
         "为全人类"
       ]
@@ -419,10 +369,7 @@
       "matchedSource": true,
       "year": "2026",
       "aliases": [
-        "变调瑜伽",
-        "暗黑瑜伽學院",
-        "暗黑瑜伽学院",
-        "變調瑜伽"
+        "暗黑瑜伽学院"
       ]
     },
     "the-hunt": {
@@ -452,7 +399,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "永恒",
         "永恒站"
       ]
     },
@@ -489,7 +435,7 @@
     "tehran": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2020",
+      "year": "2022",
       "aliases": [
         "德黑兰"
       ]
@@ -505,7 +451,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "F1：狂飙飞车",
         "F1狂飙飞车"
       ]
     },
@@ -514,10 +459,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "弗拉格摇滚的初雪",
-        "Fraggle Rock：美好初雪",
-        "布偶奇遇記：初雪降臨",
-        "布偶奇遇记：初雪降临",
         "布偶奇遇记美好初雪"
       ]
     },
@@ -525,12 +466,14 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2024",
-      "aliases": []
+      "aliases": [
+        "寻家"
+      ]
     },
     "prehistoric-planet-ice-age": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2022",
+      "year": "2025",
       "aliases": []
     },
     "the-family-plan-2": {
@@ -545,9 +488,7 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2025",
-      "aliases": [
-        "在光明中看见我"
-      ]
+      "aliases": []
     },
     "palm-royale": {
       "sourceMatchPending": false,
@@ -570,10 +511,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "险路同行",
-        "墳場迴路",
-        "坟场回路",
-        "險路同行"
+        "坟场回路"
       ]
     },
     "stiller-meara-nothing-is-lost": {
@@ -581,7 +519,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "斯蒂勒与米拉",
         "斯蒂勒与米拉未曾落幕"
       ]
     },
@@ -604,10 +541,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "冰封边狱",
-        "失序邊緣",
-        "失序边缘",
-        "冰封邊獄"
+        "失序边缘"
       ]
     },
     "the-lost-bus": {
@@ -615,22 +549,14 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "拯救巴士",
-        "失落的巴士",
-        "火烧天堂镇",
-        "火海救援號",
-        "火海救援号",
-        "火燒天堂鎮"
+        "火烧天堂镇"
       ]
     },
     "all-of-you": {
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2025",
-      "aliases": [
-        "你的一切",
-        "全都是你"
-      ]
+      "aliases": []
     },
     "the-reluctant-traveler": {
       "sourceMatchPending": false,
@@ -653,14 +579,13 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "天国与地狱",
-        "高低之间"
+        "天国与地狱"
       ]
     },
     "shape-island": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2023",
+      "year": "2025",
       "aliases": [
         "形状岛"
       ]
@@ -684,7 +609,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "史努比特辑：夏日音乐剧",
         "史努比特辑夏日音乐剧"
       ]
     },
@@ -701,8 +625,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "战酋",
-        "戰酋"
+        "战酋"
       ]
     },
     "acapulco": {
@@ -716,7 +639,7 @@
     "foundation": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2021",
+      "year": "2025",
       "aliases": [
         "基地"
       ]
@@ -748,8 +671,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "回声谷",
-        "回声山谷"
+        "回声谷"
       ]
     },
     "not-a-box": {
@@ -762,29 +684,20 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2025",
-      "aliases": [
-        "波诺：臣服的故事"
-      ]
+      "aliases": []
     },
     "lulu-is-a-rhinoceros": {
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2025",
-      "aliases": [
-        "犀牛露露"
-      ]
+      "aliases": []
     },
     "fountain-of-youth": {
       "sourceMatchPending": false,
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "青春之泉",
-        "永生之泉",
-        "寻秘不老泉",
-        "不老泉說",
-        "不老泉说",
-        "尋秘不老泉"
+        "寻秘不老泉"
       ]
     },
     "deaf-president-now": {
@@ -792,11 +705,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "现在就要聋人校长",
-        "八日学运：还我听障校长！",
-        "還我聽障校長！",
-        "还我听障校长！",
-        "八日學運：還我聽障校長！",
         "八日学运还我听障校长"
       ]
     },
@@ -835,10 +743,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "起司美国梦",
-        "濃情芝家",
-        "浓情芝家",
-        "起司美國夢"
+        "起司美国梦"
       ]
     },
     "number-one-on-the-call-sheet": {
@@ -852,9 +757,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "成王在望：2024 World Series",
-        "投爭榮耀：2024 World Series",
-        "投争荣耀：2024 World Series",
         "投争荣耀2024MLB世界大赛"
       ]
     },
@@ -871,10 +773,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "片厂风云",
-        "鬥戲影業",
-        "斗戏影业",
-        "片廠風雲",
         "制片厂"
       ]
     },
@@ -913,10 +811,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "始于足下：职业足球大联盟",
-        "換個位睇 MLS",
-        "换个位睇 MLS",
-        "始於足下：職業足球大聯盟",
         "始于足下职业足球大联盟"
       ]
     },
@@ -933,8 +827,6 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "大女孩歌蒂",
-        "巨女孩歌迪",
         "大女孩戈尔迪"
       ]
     },
@@ -943,10 +835,7 @@
       "matchedSource": true,
       "year": "2025",
       "aliases": [
-        "死心恋爱",
-        "最後的心動",
-        "最后的心动",
-        "死心戀愛"
+        "死心恋爱"
       ]
     },
     "vietnam-the-war-that-changed-america": {
@@ -978,7 +867,7 @@
     "severance": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2022",
+      "year": "2025",
       "aliases": [
         "人生切割术"
       ]
@@ -994,7 +883,7 @@
     "carpool-karaoke-the-series": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2017",
+      "year": "2024",
       "aliases": []
     },
     "fly-me-to-the-moon": {
@@ -1014,7 +903,7 @@
     "bread-roses": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2023",
       "aliases": [
         "面包与玫瑰"
       ]
@@ -1062,15 +951,13 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "最后的海女",
-        "最后的海洋女人",
         "最后的海洋之女"
       ]
     },
     "curses": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2023",
+      "year": "2024",
       "aliases": [
         "诅咒"
       ]
@@ -1086,7 +973,6 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "双狼",
         "双狼 Wolfs"
       ]
     },
@@ -1095,8 +981,7 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "时尚世家",
-        "時尚世家"
+        "时尚世家"
       ]
     },
     "k-pop-idols": {
@@ -1109,9 +994,7 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2024",
-      "aliases": [
-        "拿破仑：导演剪辑版"
-      ]
+      "aliases": []
     },
     "pachinko": {
       "sourceMatchPending": false,
@@ -1134,7 +1017,6 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "黑金牛仔",
         "反黑牛仔"
       ]
     },
@@ -1143,10 +1025,7 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "时光大盗",
-        "超時空盜寶團",
-        "超时空盗宝团",
-        "時光大盜"
+        "时光大盗"
       ]
     },
     "lady-in-the-lake": {
@@ -1180,7 +1059,7 @@
     "fancy-dance": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2023",
       "aliases": [
         "花式舞蹈"
       ]
@@ -1222,7 +1101,7 @@
     "the-big-door-prize": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2023",
+      "year": "2024",
       "aliases": []
     },
     "argylle": {
@@ -1230,7 +1109,6 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "阿盖尔：神秘特工",
         "阿盖尔神秘特工"
       ]
     },
@@ -1253,7 +1131,7 @@
     "fraggle-rock-back-to-the-rock": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2022",
+      "year": "2024",
       "aliases": []
     },
     "steve-martin-a-documentary-in-two-pieces": {
@@ -1275,14 +1153,13 @@
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "血腥一百",
-        "血腥百人队"
+        "血腥一百"
       ]
     },
     "napoleon": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2023",
       "aliases": [
         "拿破仑"
       ]
@@ -1323,19 +1200,13 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2024",
-      "aliases": [
-        "史努比特辑：欢迎回家，富兰克林"
-      ]
+      "aliases": []
     },
     "the-dynasty-new-england-patriots": {
       "sourceMatchPending": false,
       "matchedSource": true,
       "year": "2024",
       "aliases": [
-        "爱国者王朝：冠军荣耀",
-        "傳奇之師：新英倫愛國者",
-        "传奇之师：新英伦爱国者",
-        "愛國者王朝：冠軍榮耀",
         "传奇之师新英格兰爱国者"
       ]
     },
@@ -1358,7 +1229,7 @@
     "killers-of-the-flower-moon": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2024",
+      "year": "2023",
       "aliases": [
         "花月杀手"
       ]
@@ -1384,7 +1255,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "绒布小兔子",
         "天鹅绒兔子"
       ]
     },
@@ -1393,7 +1263,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "汉娜·沃丁汉姆：回家过圣诞",
         "汉娜·沃丁汉姆回家过圣诞"
       ]
     },
@@ -1410,10 +1279,7 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "恩菲尔德鬼屋",
-        "恩菲爾德靈異事件",
-        "恩菲尔德灵异事件",
-        "恩菲爾德鬼屋"
+        "恩菲尔德灵异事件"
       ]
     },
     "the-pigeon-tunnel": {
@@ -1437,9 +1303,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "梅西降临：美国足球新时代",
-        "美斯・美事",
-        "梅西降臨：美國足球新時代",
         "梅西降临美国足球新时代"
       ]
     },
@@ -1470,8 +1333,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "超模传奇",
-        "超模傳奇",
         "超模们"
       ]
     },
@@ -1492,7 +1353,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "史努比特辑：独树一帜如玛茜",
         "史努比特辑独树一帜如玛茜"
       ]
     },
@@ -1523,7 +1383,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "斯蒂芬·库里：不容小觑",
         "斯蒂芬·库里不容小觑"
       ]
     },
@@ -1538,7 +1397,7 @@
     "swagger": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2023",
       "aliases": []
     },
     "lovely-little-farm": {
@@ -1584,8 +1443,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "迈克尔·J·福克斯：仍旧如故",
-        "我还是我：迈克尔·J·福克斯",
         "我还是我迈克尔·J·福克斯"
       ]
     },
@@ -1600,10 +1457,7 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "超级侦探海莉",
-        "非常小偵探",
-        "非常小侦探",
-        "超級偵探海莉"
+        "超级侦探海莉"
       ]
     },
     "ghosted": {
@@ -1631,7 +1485,7 @@
     "schmigadoon": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2023",
       "aliases": []
     },
     "tetris": {
@@ -1673,7 +1527,7 @@
     "the-problem-with-jon-stewart": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2023",
       "aliases": []
     },
     "liaison": {
@@ -1701,10 +1555,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "与浪争锋",
-        "衝！浪者",
-        "冲！浪者",
-        "與浪爭鋒"
+        "与浪争锋"
       ]
     },
     "hello-tomorrow": {
@@ -1726,7 +1577,7 @@
     "pinecone-and-pony": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2022",
+      "year": "2023",
       "aliases": []
     },
     "truth-be-told": {
@@ -1750,8 +1601,6 @@
       "matchedSource": true,
       "year": "2023",
       "aliases": [
-        "欧洲超级联赛：足坛风暴",
-        "歐洲超級聯賽：足壇風暴",
         "欧洲超级联赛足坛风暴"
       ]
     },
@@ -1788,7 +1637,7 @@
     "puppy-place": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2022",
       "aliases": []
     },
     "echo-3": {
@@ -1810,10 +1659,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "奇想天开",
-        "科幻劇場",
-        "科幻剧场",
-        "奇想天開"
+        "奇想天开"
       ]
     },
     "selena-gomez-my-mind-and-me": {
@@ -1821,7 +1667,6 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "赛琳娜·戈麦斯：我的思想和我",
         "赛琳娜·戈麦斯我的思想和我"
       ]
     },
@@ -1844,8 +1689,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "桥之彼端",
-        "堤道"
+        "桥之彼端"
       ]
     },
     "louis-armstrongs-black-blues": {
@@ -1869,10 +1713,7 @@
       "matchedSource": true,
       "year": "2019",
       "aliases": [
-        "小鬼与文字幽灵",
-        "幽靈寫手",
-        "幽灵写手",
-        "小鬼與文字幽靈"
+        "幽灵写手"
       ]
     },
     "shantaram": {
@@ -1900,7 +1741,7 @@
     "get-rolling-with-otis": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2022",
       "aliases": []
     },
     "wolfboy-and-the-everything-factory": {
@@ -1908,10 +1749,7 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "狼孩儿的万物工厂大冒险",
-        "狼小子的萬物工廠大冒險",
-        "狼小子的万物工厂大冒险",
-        "狼孩兒的萬物工廠大冒險"
+        "狼小子的萬物工廠大冒險"
       ]
     },
     "sidney": {
@@ -1933,7 +1771,7 @@
     "gutsy": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2022",
+      "year": "2011",
       "aliases": []
     },
     "life-by-ella": {
@@ -1941,10 +1779,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "艾拉的青春日志2.0",
-        "艾娜的青蔥新活",
-        "艾娜的青葱新活",
-        "艾拉的青春日誌2.0"
+        "艾拉的青春日志2.0"
       ]
     },
     "see": {
@@ -1998,8 +1833,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "大步向前走",
-        "昂首大踏步"
+        "大步向前走"
       ]
     },
     "duck-and-goose": {
@@ -2029,10 +1863,6 @@
       "matchedSource": true,
       "year": "2020",
       "aliases": [
-        "前所未见的独特家园",
-        "超創意新居",
-        "超创意新居",
-        "前所未見的獨特家園",
         "家园"
       ]
     },
@@ -2045,7 +1875,7 @@
     "greatness-code": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2020",
+      "year": "2022",
       "aliases": []
     },
     "the-essex-serpent": {
@@ -2060,19 +1890,14 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2022",
-      "aliases": [
-        "史努比特辑：致亲爱的妈妈和爸爸"
-      ]
+      "aliases": []
     },
     "the-big-conn": {
       "sourceMatchPending": false,
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "诈骗大师",
-        "詐騙大 C",
-        "诈骗大 C",
-        "詐騙大師"
+        "诈骗大师"
       ]
     },
     "shining-girls": {
@@ -2088,26 +1913,20 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "人生赛场：比篮球重要的事",
-        "比籃球更重要的事",
-        "比篮球更重要的事",
-        "人生賽場：比籃球重要的事",
         "人生赛场比篮球重要的事"
       ]
     },
     "they-call-me-magic": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2022",
+      "year": "2024",
       "aliases": []
     },
     "its-the-small-things-charlie-brown": {
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2022",
-      "aliases": [
-        "史努比特辑：小小事情，查理·布朗"
-      ]
+      "aliases": []
     },
     "roar": {
       "sourceMatchPending": false,
@@ -2120,7 +1939,7 @@
     "doug-unplugs": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2020",
+      "year": "2022",
       "aliases": []
     },
     "wecrashed": {
@@ -2144,9 +1963,6 @@
       "matchedSource": true,
       "year": "2020",
       "aliases": [
-        "我想对你说⋯⋯",
-        "致偶像的信",
-        "我想對你說⋯⋯",
         "亲爱的"
       ]
     },
@@ -2177,7 +1993,7 @@
     "the-tragedy-of-macbeth": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2022",
+      "year": "2021",
       "aliases": [
         "麦克白的悲剧"
       ]
@@ -2187,8 +2003,7 @@
       "matchedSource": true,
       "year": "2022",
       "aliases": [
-        "大耳朵超人",
-        "大耳仔超人"
+        "大耳朵超人"
       ]
     },
     "swan-song": {
@@ -2204,7 +2019,6 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "史努比特辑：友谊地久天长",
         "史努比特辑友谊地久天长"
       ]
     },
@@ -2213,7 +2027,6 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "玛丽亚·凯莉的圣诞节：魔法继续",
         "玛丽亚·凯莉的圣诞节魔法继续"
       ]
     },
@@ -2221,24 +2034,19 @@
       "sourceMatchPending": true,
       "matchedSource": false,
       "year": "2021",
-      "aliases": [
-        "圣诞争宠大会"
-      ]
+      "aliases": []
     },
     "the-line": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2021",
+      "year": "2019",
       "aliases": []
     },
     "snoopy-in-space": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2019",
+      "year": "2021",
       "aliases": [
-        "史努比登上太空：探索生命",
-        "史諾比上太空：探索生命之旅",
-        "史诺比上太空：探索生命之旅",
         "史努比太空历险记"
       ]
     },
@@ -2259,7 +2067,7 @@
     "dickinson": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2019",
+      "year": "2021",
       "aliases": [
         "狄金森"
       ]
@@ -2285,11 +2093,7 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "心动",
-        "在星际间遇见你",
-        "外星結奇緣",
-        "外星结奇缘",
-        "在星際間遇見你"
+        "在星际间遇见你"
       ]
     },
     "come-from-away": {
@@ -2305,7 +2109,6 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "911：总统作战室",
         "911总统作战室"
       ]
     },
@@ -2336,12 +2139,7 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "鲸之谜",
-        "追寻鲸之歌",
-        "探寻鲸之音",
-        "翻尋鯨之音",
-        "翻寻鲸之音",
-        "探尋鯨之音"
+        "探寻鲸之音"
       ]
     },
     "who-are-you-charlie-brown": {
@@ -2349,11 +2147,6 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "你是谁，查理·布朗？",
-        "查理布朗，你是谁？",
-        "你認識查理布朗嗎？",
-        "你认识查理布朗吗？",
-        "查理布朗，你是誰？",
         "查理·布朗你是谁"
       ]
     },
@@ -2390,7 +2183,7 @@
     "earth-at-night-in-color": {
       "sourceMatchPending": true,
       "matchedSource": false,
-      "year": "2020",
+      "year": "2021",
       "aliases": []
     },
     "tiny-world": {
@@ -2430,7 +2223,6 @@
       "matchedSource": true,
       "year": "2021",
       "aliases": [
-        "比莉·艾莉什：世界稍显模糊",
         "碧丽·艾莉许模糊世界"
       ]
     },
@@ -2445,7 +2237,7 @@
     "losing-alice": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2021",
+      "year": "2020",
       "aliases": [
         "迷失爱丽丝"
       ]
@@ -2471,7 +2263,6 @@
       "matchedSource": true,
       "year": "2020",
       "aliases": [
-        "火球：来自黑暗世界的访客",
         "火球来自黑暗世界的访客"
       ]
     },
@@ -2488,7 +2279,6 @@
       "matchedSource": true,
       "year": "2020",
       "aliases": [
-        "布鲁斯·斯普林斯汀：给你的信",
         "布鲁斯·斯普林斯汀给你的信"
       ]
     },
@@ -2539,7 +2329,7 @@
     "dads": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2020",
+      "year": "2019",
       "aliases": [
         "老爸"
       ]
@@ -2571,7 +2361,6 @@
       "matchedSource": true,
       "year": "2020",
       "aliases": [
-        "我们在这里：生活在地球上的注意事项",
         "我们在这里生活在地球上的注意事项"
       ]
     },
@@ -2614,7 +2403,7 @@
     "the-elephant-queen": {
       "sourceMatchPending": false,
       "matchedSource": true,
-      "year": "2019",
+      "year": "2018",
       "aliases": [
         "大象女王"
       ]

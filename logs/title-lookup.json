@@ -1,65 +1,8 @@
 {
-  "checked_at": "2026-10-29T18:54:32+00:00",
-  "api_configured": true,
-  "attempted": 12,
-  "searched": 12,
-  "direct_verified": 0,
-  "cache_hits": 0,
-  "verified_changes": [],
-  "monthly_limit": 100,
-  "pending": 12,
-  "reused_verified": 219,
-  "status": "completed",
-  "monthly_reserved": 26,
-  "remaining_unverified": 325,
-  "api_results": [
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    }
-  ]
+  "metadataPolicy": "mainland-v1",
+  "status": "mainland_policy_migrated",
+  "verified_mainland_titles": 2,
+  "budgets_preserved": {
+    "2026-10": 26
+  }
 }

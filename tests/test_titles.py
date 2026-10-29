@@ -7,10 +7,10 @@ import catalog,title_lookup as t
 from title_sources import wiki_patch,structured_patch,bangumi_patch
 
 NOW=datetime(2026,10,30,tzinfo=timezone.utc)
-ENTRY={'slug':'manhunt','en':'Manhunt','kind':'series','releaseDate':'2024-03-15','seasonNumber':1,
-       'zh':{'title':'追捕','summary':'已有简介','date':'2024-03-15','actors':['演员甲','演员乙'],'aliases':['旧译名'],'watchUrl':'https://tv.apple.com/us/show/manhunt/umc.cmc.abc'},
+ENTRY={'slug':'manhunt','en':'Manhunt','kind':'series','releaseDate':'2024-03-15','seasonNumber':1,'chinesePending':False,
+       'zh':{'metadataPolicy':'mainland-v1','title':'追捕','summary':'已有简介','date':'2024-03-15','actors':['演员甲','演员乙'],'aliases':['旧译名'],'watchUrl':'https://tv.apple.com/us/show/manhunt/umc.cmc.abc'},
        'artwork':'https://example.invalid/poster.jpg','seasons':[{'season':1,'summary':'本季简介'}]}
-PATCH={'display_name_zh':'追捕刺客','aliases_zh':['追捕刺客'],'sources':[{'type':'wikipedia_title','url':'https://zh.wikipedia.org/wiki/追捕刺客'}],'name_checked_at':NOW.isoformat()}
+PATCH={'metadataPolicy':'mainland-v1','display_name_zh':'追捕刺客','aliases_zh':['追捕刺客'],'sources':[{'type':'wikipedia_title','url':'https://zh.wikipedia.org/wiki/追捕刺客'}],'name_checked_at':NOW.isoformat()}
 class Fake:
     def __init__(self,verified=True):self.keys=['secret-one'];self.stopped=False;self.calls=0;self.verified=verified
     def direct(self,*args):return None
@@ -30,7 +30,7 @@ class Titles(unittest.TestCase):
         entry={'en':'Matchbox The Movie','zh':{'title':'Matchbox 电影'}}
         hint={'matchedSource':True,'aliases':['火柴盒','火柴盒大电影']}
         self.assertTrue(t.needs_title_review(entry,hint))
-        self.assertFalse(t.needs_title_review(dict(entry,zh={'title':'火柴盒大电影'}),hint))
+        self.assertFalse(t.needs_title_review(dict(entry,zh={'metadataPolicy':'mainland-v1','title':'火柴盒大电影'}),hint))
         self.assertTrue(t.needs_title_review(dict(entry,zh={'title':'火柴盒大电影'}),dict(hint,matchedSource=False)))
     def test_web_animation_and_exact_season(self):
         ref={'english_title':'WondLa','kind':'anime','year':'2024'}
@@ -41,7 +41,7 @@ class Titles(unittest.TestCase):
         e=dict(ENTRY,genres=['animation','kids & family']);self.assertEqual(t.record(e,{})['kind'],'anime')
     def test_identity_requires_original_year_and_type(self):
         ref={'english_title':'Manhunt','kind':'tv','year':'2024','display_name_zh':''}
-        page={'extract':'《追捕刺客》（Manhunt）是一部2024年美国电视剧。','fullurl':'https://zh.wikipedia.org/wiki/追捕刺客'}
+        page={'extract':'《追捕刺客》（Manhunt）是一部2024年美国电视剧。','mainland_title':'追捕刺客','fullurl':'https://zh.wikipedia.org/wiki/追捕刺客'}
         self.assertIsNotNone(wiki_patch(ref,page,'now'))
         for bad in ('《同名剧》（Manhunt）是一部2019年美国电视剧。','《同名电影》（Manhunt）是一部2024年电影。','《无关作品》（Other Show）是一部2024年电视剧。'):
             self.assertIsNone(wiki_patch(ref,dict(page,extract=bad),'now'))

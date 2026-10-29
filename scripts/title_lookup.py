@@ -4,7 +4,8 @@ from datetime import datetime,timedelta,timezone
 from pathlib import Path
 from catalog import ROOT,DOCS,load,publish,validate
 from title_sources import Lookup,chinese,norm
-QUERY_VERSION='zh-cn-v3-animation'
+from metadata_policy import POLICY,allowed_source,clean_entry
+QUERY_VERSION='zh-cn-v4-mainland'
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -17,9 +18,9 @@ def clean(value,keys):
     for key in keys:raw=raw.replace(key,'[REDACTED]')
     return json.loads(re.sub(r'tvly-[A-Za-z0-9_-]{12,}','[REDACTED]',raw))
 def identity(entry,hint):
-    zh=entry.get('zh') or {};date=zh.get('date') or hint.get('year') or entry.get('releaseDate','')
+    zh=entry.get('zh') or {};official=entry.get('officialIdentity') or {};date=zh.get('_identityYear') or official.get('year') or zh.get('date') or hint.get('year') or entry.get('releaseDate','')
     year=str(date)[:4];year=year if re.fullmatch(r'(19|20)\d{2}',year) else ''
-    umc=re.search(r'umc\.cmc\.[a-z0-9]+',zh.get('watchUrl',''))
+    umc=re.search(r'umc\.cmc\.[a-z0-9]+',official.get('watchUrl') or zh.get('watchUrl',''))
     return {'slug':entry['slug'],'english_title':entry['en'],'kind':entry['kind'],'year':year,'official_id':umc.group() if umc else ''}
 def cache_key(ident):return hashlib.sha256(json.dumps(ident,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 def record(entry,hint):
@@ -32,18 +33,19 @@ def needs_title_review(entry,hint):
     title=(entry.get('zh') or {}).get('title','')
     aliases={norm(name) for name in hint.get('aliases',[]) if chinese(name)}
     # A playable source ID alone does not verify the regional display name.
-    return not (hint.get('matchedSource') and chinese(title) and norm(title) in aliases)
+    return not ((entry.get('zh') or {}).get('metadataPolicy')==POLICY and hint.get('matchedSource') and chinese(title) and norm(title) in aliases)
 def apply_verified(entry,cached,ident):
-    out=copy.deepcopy(entry)
+    out=clean_entry(entry)
     if cached.get('identity')!=ident or cached.get('status')!='verified':return out
     patch=cached.get('patch') or {}
-    if not chinese(patch.get('display_name_zh')) or not patch.get('sources'):return out
+    if patch.get('metadataPolicy')!=POLICY or not chinese(patch.get('display_name_zh')) or not patch.get('sources') or any(not allowed_source(s.get('url','')) for s in patch['sources']):return out
     zh=out.setdefault('zh',{}) or {};out['zh']=zh
     old=zh.get('title','');name=patch['display_name_zh']
     aliases=list(dict.fromkeys([name]+patch.get('aliases_zh',[])+zh.get('aliases',[])+[old]))
-    zh.update(title=name,aliases=[s for s in aliases if s],name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'])
+    zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
+    if not zh.get('watchUrl'):zh['watchUrl']=(out.get('officialIdentity') or {}).get('watchUrl','')
     # Only title fields change. Synopsis/cast/date/season/posters remain tied to existing identities.
-    out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;return out
+    out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;out['chinesePending']=False;return out
 
 class SearchClient:
     def __init__(self,keys,session=None):
@@ -70,7 +72,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
     clock=clock or datetime.now(timezone.utc);checked=clock.isoformat(timespec='seconds');month=clock.strftime('%Y-%m')
     docs=root/'docs';path=root/'data/title-cache.json'
     cache=read(path,{'schema':1,'records':{},'budgets':{}});assert cache.get('schema')==1
-    if not force and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<604800:
+    if not force and cache.get('last_policy')==POLICY and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<604800:
         print('Title lookup not due; keep verified names and cached evidence');return None
     hints=read(root/'data/title-requests.json',{'records':{}})['records']
     current=read(docs/'catalog.json',{});version=read(docs/'version.json',{});entries=copy.deepcopy(current['entries'])
@@ -111,7 +113,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
             report['verified_changes'].append({'slug':e['slug'],'before':(original.get('zh') or {}).get('title',''),'after':e['zh']['title'],'aliases':e['zh']['aliases']})
         else:report['pending']+=1
         cache['records'][key]=clean(entry,client.keys);output.append(e)
-    output.sort(key=lambda e:order[e['slug']]);cache['last_run_at']=checked
+    output.sort(key=lambda e:order[e['slug']]);cache['last_run_at']=checked;cache['last_policy']=POLICY
     report['monthly_reserved']=used;report['remaining_unverified']=sum(e.get('nameStatus')!='verified_title_sources' for e in output)
     report['api_results']=getattr(client,'statuses',[])
     report['status']='degraded' if client.stopped else ('missing_api_key' if not client.keys else 'completed')
