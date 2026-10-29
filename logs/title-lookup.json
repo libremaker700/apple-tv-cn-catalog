@@ -1,21 +1,29 @@
 {
-  "checked_at": "2026-10-29T18:30:52+00:00",
+  "checked_at": "2026-10-29T18:34:47+00:00",
   "api_configured": true,
   "attempted": 1,
-  "searched": 1,
-  "direct_verified": 0,
+  "searched": 0,
+  "direct_verified": 1,
   "cache_hits": 0,
-  "verified_changes": [],
+  "verified_changes": [
+    {
+      "slug": "wondla",
+      "before": "云朵拉",
+      "after": "寻家",
+      "aliases": [
+        "寻家",
+        "雲朵拉傳奇",
+        "云朵拉传奇",
+        "雲朵拉",
+        "云朵拉"
+      ]
+    }
+  ],
   "monthly_limit": 100,
-  "pending": 1,
+  "pending": 0,
   "reused_verified": 218,
   "status": "completed",
   "monthly_reserved": 14,
-  "remaining_unverified": 326,
-  "api_results": [
-    {
-      "key_slot": 1,
-      "http_status": 200
-    }
-  ]
+  "remaining_unverified": 325,
+  "api_results": []
 }
