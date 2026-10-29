@@ -6,6 +6,7 @@ import requests
 from urllib.parse import urljoin
 from PIL import Image
 from metadata_policy import POLICY,allowed_source,clean_entry,clean_zh
+from season_sync import Collector,label_seasons,public_seasons
 ROOT=Path(__file__).resolve().parents[1]
 DOCS=ROOT/'docs'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/'
@@ -41,18 +42,30 @@ def validate(catalog):
         assert not e.get('zh') or clean_zh(e['zh']) is not None, 'Non-mainland metadata rejected'
         assert e['officialUrl']=='https://www.apple.com/tv-pr/originals/'+e['slug']+'/'
         assert not any(k in e for k in ('id','sourceIds','playUrl','token','headers'))
-        for field in ('artwork','heroArtwork'):
-            if not e.get(field): continue
-            path=e[field].removeprefix(BASE);assert re.fullmatch(r'images/[a-f0-9]{64}\.(jpg|png|webp)',path)
+        seasons=e.get('seasons') or [];numbers=set()
+        for season in seasons:
+            number=season.get('season');assert type(number) is int and 1<=number<=100 and number not in numbers,'Invalid or duplicate season';numbers.add(number)
+            assert not any(k in season for k in ('id','sourceIds','playUrl','token','headers','utsk','utscf')),'Private season fields'
+            if season.get('metadataStatus')=='verified':
+                assert re.fullmatch(r'(19|20)\d\d',str(season.get('year',''))) and season.get('artwork'),'Incomplete verified season'
+                assert season.get('officialId','').startswith('umc.cmc.') and season.get('showId')==e.get('officialIdentity',{}).get('watchUrl','').rstrip('/').split('/')[-1],'Season/show identity mismatch'
+        for url in [e.get('artwork'),e.get('heroArtwork')]+[s.get('artwork') for s in seasons]:
+            if not url: continue
+            path=url.removeprefix(BASE);assert re.fullmatch(r'images/[a-f0-9]{64}\.(jpg|png|webp)',path)
             b=(DOCS/path).read_bytes();assert digest(b)==Path(path).stem
             with Image.open(io.BytesIO(b)) as im: im.verify()
 def publish(catalog,checked_at,mode):
     value=copy.deepcopy(catalog)
     images={}
     for e in value['entries']:
-        for key in ('artwork','heroArtwork'):
-            if e.get(key):
-                p=e[key].removeprefix(BASE);b=(DOCS/p).read_bytes();images[p]={'sha256':digest(b),'bytes':len(b)};e[key]=BASE+p
+        e.pop('seasonCheckedAt',None)
+        if e.get('seasons'):e['seasons']=public_seasons(e['seasons'])
+        label_seasons(e)
+        for row,keys in [(e,('artwork','heroArtwork'))]+[(s,('artwork',)) for s in e.get('seasons',[])]:
+            for key in keys:
+                if row.get(key):
+                    p=row[key].removeprefix(BASE);b=(DOCS/p).read_bytes();images[p]={'sha256':digest(b),'bytes':len(b)};row[key]=BASE+p
+    if isinstance(value.get('seasonStats'),dict):value['seasonStats'].pop('checkedAt',None)
     value['complete']=True;validate(value)
     raw=raw_json(value);sha=digest(raw);path='releases/'+sha+'/catalog.json'
     (DOCS/path).parent.mkdir(parents=True,exist_ok=True);(DOCS/path).write_bytes(raw)
@@ -65,6 +78,8 @@ def collect(previous):
     rows=get(INDEX).json()['results']['originals'];old={e['slug']:e for e in previous['entries']}
     seeds={e['slug']:e for e in load(ROOT/'data/seed.json')['entries']}
     mainland=load(ROOT/'data/mainland-catalog.json')['records']
+    cache_file=ROOT/'data/season-cache.json'
+    collector=Collector(get,save_image,lambda p:bool(p) and (DOCS/p.removeprefix(BASE)).is_file(),load(cache_file) if cache_file.exists() else None)
     rows=[r for r in rows if r.get('showTypeKey') in ('films','series')]
     assert len(rows)>=max(50,int(len(old)*0.9)), 'incomplete source inventory'
     def entry(r):
@@ -96,16 +111,20 @@ def collect(previous):
         # Localized fields come exclusively from mainland policy data.
         e=clean_entry(e)
         if not e.get('zh') and slug in mainland:e['zh']=clean_zh(mainland[slug]);e['chinesePending']=not bool(e['zh'])
-        return e
+        return collector.sync(e,seeds.get(slug,{}))
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool: entries=list(pool.map(entry,rows))
-    return {'entries':entries,'complete':True,'metadataPolicy':POLICY}
+    cache_file.write_bytes(raw_json(collector.cache))
+    report={'checkedAt':collector.now,'verified':sum(r['status']=='verified' for r in collector.report),'pending':sum(r['status']=='pending' for r in collector.report),'works':sorted(collector.report,key=lambda r:r['slug'])}
+    (DOCS/'season-sync-report.json').write_bytes(raw_json(report))
+    print(json.dumps({'season_sync':{k:v for k,v in report.items() if k!='works'}}))
+    return {'entries':entries,'complete':True,'metadataPolicy':POLICY,'seasonSchema':1,'seasonStats':{k:v for k,v in report.items() if k not in ('works','checkedAt')}}
 def main():
     p=argparse.ArgumentParser();p.add_argument('--seed',action='store_true');p.add_argument('--force',action='store_true');p.add_argument('--validate',action='store_true');a=p.parse_args()
     if a.validate:
         v=load(DOCS/'version.json');raw=(DOCS/v['catalog_path']).read_bytes();assert digest(raw)==v['catalog_sha256'];validate(json.loads(raw));print('PASS complete catalog and all image hashes');return
     if a.seed: publish(load(ROOT/'data/seed.json'),None,'bundled-reviewed-snapshot');return
     prior=load(DOCS/'catalog.json');manifest=load(DOCS/'version.json');last=manifest.get('checked_at') or 0
-    if not a.force and time.time()-last<604800: print('Not due; retain verified snapshot');return
+    if not a.force and time.time()-last<20*3600: print('Not due; retain verified snapshot');return
     value=collect(prior)
     from title_lookup import reapply_cache
     value=reapply_cache(value);publish(value,int(time.time()),'official-network-collection')

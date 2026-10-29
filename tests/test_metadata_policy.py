@@ -1,4 +1,4 @@
-import copy,sys,unittest
+import copy,sys,unittest,tempfile,json
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
@@ -44,8 +44,11 @@ class Policy(unittest.TestCase):
         def get(url):
             self.assertTrue(url==catalog.INDEX or url.startswith('https://www.apple.com/tv-pr/shows-and-films/'),url)
             return Reply()
-        with patch.object(catalog,'get',get),patch.object(catalog,'save_image',lambda raw:'images/test.jpg'):
-            value=catalog.collect(previous)
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'data').mkdir();(root/'docs').mkdir()
+            (root/'data/seed.json').write_text(json.dumps({'entries':[]}));(root/'data/mainland-catalog.json').write_text(json.dumps({'records':{}}))
+            with patch.object(catalog,'ROOT',root),patch.object(catalog,'DOCS',root/'docs'),patch.object(catalog,'get',get),patch.object(catalog,'save_image',lambda raw:'images/test.jpg'):
+                value=catalog.collect(previous)
         self.assertEqual(value['metadataPolicy'],POLICY);self.assertTrue(all(e['zh'] is None for e in value['entries']))
 
 if __name__=='__main__':unittest.main()

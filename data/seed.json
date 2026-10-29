@@ -16,12 +16,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-savant/umc.cmc.aar44keiny3h54xvaakg260q",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "silo",
@@ -84,26 +79,24 @@
           "season": 1,
           "title": "末日地堡第一季",
           "summary": "该剧基于休·豪伊所著同名畅销科幻系列小说改编，设定在被破坏、有毒的未来，数百层楼深的一个巨大地下筒仓中存在一个 社区，男人和女人生活在一个充满规章制度的社会里，凡是和“出去”有关的一切都成为致命禁忌。 丽贝卡·弗格森饰演独立而勤奋的工程师朱丽叶，她也担任执行制作人。蒂姆·罗宾斯饰演IT主管伯纳德，加入了朱丽叶的队伍。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "末日地堡第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "末日地堡第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/silo/umc.cmc.3yksgc857px0k0rqe5zd4jice/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "prodigies",
@@ -121,12 +114,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/prodigies/umc.cmc.771mea1fm11ta9k7x8oeocbck",
-        "year": "2027"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fleetwood-mac-the-chain",
@@ -145,12 +133,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2027"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "neuromancer",
@@ -168,12 +151,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/neuromancer/umc.cmc.ym2z4w07kwsi1wywwxtyckr",
-        "year": "2027"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-wanted-man",
@@ -191,12 +169,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-wanted-man/umc.cmc.4zu5puz6y7th7shv3kypuzhhm",
-        "year": "2027"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "snoopy-unleashed",
@@ -215,12 +188,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2027"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fraggle-rock-a-holiday-gift",
@@ -239,12 +207,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "bad-monkey",
@@ -307,14 +270,10 @@
           "season": 1,
           "title": "坏猴子第一季",
           "summary": "讲述了安德鲁·扬西（文斯·沃恩饰）的故事，他已被迈阿密警察局开除，如今在基斯群岛当卫生检查员。但在偶然发现一起案件，起初是游客钓上来一只人的手臂之后，他意识到如果能证明是谋杀案，自己就能复职。他只是需要搞定一群佛罗里达的怪人和一只坏猴子。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/bad-monkey/umc.cmc.2qoep59s6qukjonprttysfs8x",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "way-of-the-warrior-kid",
@@ -332,12 +291,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/way-of-the-warrior-kid/umc.cmc.21vzhs44oeejdkoxenkcdmre0",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "being-heumann",
@@ -355,12 +309,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/being-heumann/umc.cmc.5gf63v7zj97yiozkpj26lpy55",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "12-12-12",
@@ -378,12 +327,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/12-12-12/umc.cmc.2xeasogpeiwbaegczytrdg1uh",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "awkwafina-the-unlikely-cook",
@@ -399,12 +343,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/awkwafina-the-unlikely-cook/umc.cmc.1fhnal2vix2077ouh1hjy2eoc",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "stick",
@@ -473,14 +412,10 @@
           "season": 1,
           "title": "一杆入魂",
           "summary": "Pryce Cahill是一位已过壮年的前职业高尔夫球手，他的职业生涯在20年前过早脱轨。在婚姻破裂并被印第安纳州一家体育用品店解雇后，Pryce将赌注和未来完全押在了一位名叫Santi的17岁高尔夫天才身上。 本剧是一部发自内心、令人感觉良好的体育题材喜剧，前所未有地呈现了一个在高尔夫世界中建立起来的家庭和这个家庭成员之间的关系。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/stick/umc.cmc.52w04zy67tiv11p8xvbc57wmc",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "nocturne",
@@ -499,12 +434,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/nocturne/umc.cmc.4cfsq1juke72zutv5xp0pw3rj",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "wheres-wanda",
@@ -545,17 +475,20 @@
       },
       "seasons": [
         {
+          "season": 1,
+          "title": "旺达在哪里",
+          "summary": "为了救回你的孩子，你愿意走多远？对于卡洛塔和德多来说，答案很明确。他们曾经是一个普通的家庭，女儿旺达在几个月前无声无息地消失，但等了几个月都没有等到警方把女儿带回来，他们决定自己动手。精通技术的儿子奥勒帮助他们获得了一些监控设备，他们伪装成电力公司员工，先是窃听了邻居，然后是半个郊区，发现在关起门来的背后，邻居们都不是表面上的样子。",
+          "year": "2024",
+          "artwork": ""
+        },
+        {
           "season": 2,
           "title": "旺达在哪里第二季",
           "summary": "Apple TV+续订第二季。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/wheres-wanda/umc.cmc.k92ure4ft8lmbfhynpk3xpb4",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "tenzing",
@@ -597,12 +530,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/tenzing/umc.cmc.6lic0hhuxkrbem0n29vzjopii",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "matchbox-the-movie",
@@ -665,31 +593,18 @@
         "name_checked_at": "2026-10-29T19:49:42+00:00",
         "name_sources": [
           {
+            "retrieved_at": "2026-10-29T19:49:42+00:00",
             "type": "reviewed_plex_title_identity",
-            "url": "https://watch.plex.tv/zh/movie/matchbox-the-movie",
-            "retrieved_at": "2026-10-29T19:49:42+00:00"
+            "url": "https://watch.plex.tv/zh/movie/matchbox-the-movie"
           },
           {
+            "retrieved_at": "2026-10-29T19:49:42+00:00",
             "type": "official_apple_identity",
-            "url": "https://www.apple.com/tv-pr/originals/matchbox-the-movie/",
-            "retrieved_at": "2026-10-29T19:49:42+00:00"
+            "url": "https://www.apple.com/tv-pr/originals/matchbox-the-movie/"
           }
         ]
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/matchbox-the-movie/umc.cmc.31qa8j1tn2cnpyk3fx43w928d",
-        "year": "2026"
-      },
-      "chinesePending": false,
-      "nameStatus": "verified_title_sources",
-      "titleIdentity": {
-        "slug": "matchbox-the-movie",
-        "english_title": "Matchbox The Movie",
-        "kind": "movie",
-        "year": "2026",
-        "official_id": "umc.cmc.31qa8j1tn2cnpyk3fx43w928d"
-      }
+      "seasons": []
     },
     {
       "slug": "small-prophets",
@@ -734,14 +649,10 @@
           "season": 1,
           "title": "小先知",
           "summary": "A comic tale of eccentric Michael Sleep (Pearce Quigley) who, since his darling Clea disappeared seven years ago, has lived a very ordinary life. He eats Shreddies, works in a DIY store, visits dad Brian (Michael Palin) and hopes for Clea to return. That is just the way it is, until one day dad Brian shares an old recipe involving rainwater, horse manure and more than a little ...",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/small-prophets/umc.cmc.6x0wb0zjilppb9tlwlva08izm",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-sisters-grimm",
@@ -759,12 +670,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-sisters-grimm/umc.cmc.2hc9ggvxaqddv779k4zupmrw",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-last-first-winter-k2",
@@ -802,12 +708,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-last-first-winter-k2/umc.cmc.3qvemsb6f04actuyzdporeelt",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "knife-edge-chasing-michelin-stars",
@@ -848,14 +749,10 @@
           "season": 1,
           "title": "厨刀难握摘星米其林",
           "summary": "带您探索充满挑战的国际高级餐饮世界，在长达一年的米其林指南季中，独家访问米其林指南。该系列纪录片将追踪全球一些最独特、最受推崇的餐厅的精英厨师的命运，以确定他们能否赢得、保持或失去那颗珍贵的米其林星。从努力争取第一颗星，到孜孜不倦地巩固自己的地位，再到努力争取第二颗星或难以企及的第三颗星，每位厨师都面临着深刻的个人挑战。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/knife-edge-chasing-michelin-stars/umc.cmc.2yhce9h11ctctdi23b29k1ek3",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "brothers",
@@ -895,14 +792,10 @@
           "season": 1,
           "title": "无间兄弟情",
           "summary": "伍迪·哈里森的女儿婚礼搞砸后，他带着全家前往奥斯汀，在马修·麦康纳的牧场小住一段时间。然而，原本旨在疗伤的假期却迅速失控，马修的母亲麦克妈妈（霍兰德·泰勒 饰）无意间透露了一个尘封已久的秘密：这两个朋友可能真的是亲兄弟。伍迪为了追寻真相，把牧场翻了个底朝天，而马修则面临着截然不同的身份危机：他可能要竞选德克萨斯州州长。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/brothers/umc.cmc.17g1y5mzqp92sc0ge1c0hdorg",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "slow-horses",
@@ -963,44 +856,45 @@
           "season": 1,
           "title": "流人第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "流人第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "流人第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "流人第四季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 5,
           "title": "流人第五季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 6,
           "title": "流人第六季",
           "summary": "第六季改编自米克·赫隆所著小说系列的第六本《Joe Country》和第七本《Slough House》。 Diana Taverner（克里斯汀·斯科特·托马斯 饰）将“流人”们卷入了一场充满复仇的致命高风险游戏中，这群间谍因此踏上了逃亡之路。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/slow-horses/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o?ctx_brand=tvs.sbd.4000",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "last-seen",
@@ -1040,14 +934,10 @@
           "season": 1,
           "title": "最后目击",
           "summary": "该剧讲述了警探Ian Ridley（帕特里克·布拉莫尔 饰）的故事：11年前，当他年幼的女儿Maggie无影无踪地失踪后，他的生活彻底崩溃。如今他担任警察调度员，唯一支撑他活下去的，是他拒不接受女儿可能永远消失的事实。当他接到一个他确信就是Maggie的少女打来的求救电话时，他将不惜一切代价找到她，让他破碎的家庭重聚——无论付出什么代价。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/last-seen/umc.cmc.4pbw9c936a4pigdvsg23u2bsa",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "mayday",
@@ -1102,12 +992,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/mayday/umc.cmc.shin43vzfoz3h4ggx41z8rf",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "dark-matter",
@@ -1154,20 +1039,17 @@
           "season": 1,
           "title": "人生复本第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "人生复本第二季",
           "summary": "在第二季中，Dessen一家终于在一个看似安全的世界里安顿了下来，过着平静的生活，直到难以想象的变故迫使他们再次逃亡。随着Jason对“盒子”的痴迷日益加深，Daniela心中日渐增长的偏执将她逼至崩溃边缘，一切都威胁着他们本就脆弱的安定。与此同时，Amanda和Ryan联手，竭力寻找回家的办法。面对势必要阻止自己的Blair，Leighton执着地追逐着创造完美世界的宏伟愿景。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dark-matter/umc.cmc.4luj45vtqpmjsvb6sc2675oeg/",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "stillwater",
@@ -1186,12 +1068,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/stillwater/umc.cmc.3czcagetjq31vvbgkkyp1xiao",
-        "year": "2018"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-dynasty-uconn-huskies",
@@ -1233,14 +1110,10 @@
           "season": 1,
           "title": "哈士奇王朝康涅狄格大学女篮",
           "summary": "走近美国大学篮球历史上最强势的赢得12座冠军的球队，而丽贝卡·洛博、黛安娜·陶拉西、佩奇·布克尔斯等揭秘她们如何战胜康涅狄格大学，打造传奇王朝。（華堅馮力士）",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-dynasty-uconn-huskies/umc.cmc.38cvggceyd4sn4sfgl3kus89b",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "women-in-blue-las-azules",
@@ -1258,12 +1131,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "ted-lasso",
@@ -1339,32 +1207,31 @@
           "season": 1,
           "title": "足球教练第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "足球教练第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "足球教练第三季",
           "summary": "AFC Richmond球队在第三季中重返英超联赛，只是外界普遍预测该球队将在积分榜上垫底。与此同时，内特（尼克·穆罕默德 Nick Mohammed 饰）正在与竞争对手西汉姆联队合作。由于Nate缺席AFC Richmond球队，Roy Kent（博特·高登斯汀 Brett Goldstein 饰）与教练Bead（布兰登·亨特 Brendan Hunt 饰）一起成为球队的新助理教练。Ted Lasso（杰森·苏戴奇斯 Jason Sudeikis 饰）本人必须继续管理球队，同时在家中处理自己的个人问题。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "足球教练第四季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
@@ -1382,12 +1249,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/theres-no-place-like-home-snoopy/umc.cmc.52sgmi3vdpedurrbtz6louqqo",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-dink",
@@ -1405,12 +1267,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-dink/umc.cmc.5tugaz9vt498ajn7q64ypaqxn",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "lucky",
@@ -1471,14 +1328,10 @@
           "season": 1,
           "title": "幸运女神",
           "summary": "改编自玛丽莎·斯塔普利的同名畅销小说，讲述专业骗子“幸运儿”露西（安雅·泰勒-乔伊 饰）在一次数百万美元的劫案发生意外后，被迫踏上逃亡之路的故事。她不仅要躲避 FBI 的跨州追捕，还要应对由安妮特·贝宁饰演的冷酷黑帮头目的猎杀，在绝境中寻找一线生机。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/lucky/umc.cmc.5qo7t3nngb2vj0m9dxkwebw1o",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "trying",
@@ -1529,38 +1382,38 @@
           "season": 1,
           "title": "尝试第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "尝试第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "尝试第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "尝试第四季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 5,
           "title": "尝试第五季",
           "summary": "Season five finds Nikki (Esther Smith) and Jason (Rafe Spall) dealing with the consequences of Princess (Scarlett Rayner) and Tyler’s (Cooper Turner) biological mother Kat (Charlotte Riley) turning up at their doorstep, and the whirlwind of chaos she brings into their settled family life.",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/trying/umc.cmc.6muy4la7lj1omu5nci4bt2m66",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "camp-snoopy",
@@ -1579,12 +1432,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/camp-snoopy/umc.cmc.4erhnrmkf9vgeojl3uryxsc0j",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "sugar",
@@ -1648,20 +1496,17 @@
           "season": 1,
           "title": "谜探休格",
           "summary": "设定在洛杉矶，讲述私人侦探约翰·休格（科林·法瑞尔 Colin Farrell 饰）调查好莱坞制片人Jonathan Siegel孙女的失踪案。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "谜探休格第二季",
           "summary": "《谜探休格》以当代视角重新演绎了文学、电影和电视史上最受欢迎且意义重大的题材之一——私家侦探故事。\r\n　　第二季迎来洛杉矶标志性私家侦探兼电影鉴赏家约翰·休格的回归，他踏上了新案件的旅程。休格一边继续寻找失踪的妹妹，一边追踪一位当地新锐拳击手陷入困境的兄长。随着调查逐渐牵扯至涉及整个城市的险恶阴谋，休格必须直面内心，回答一个问题：为了伸张正义，自己究竟会做到什么程度？",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/sugar/umc.cmc.4r6q7tdquewehwvb3rzl0k3dt",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "cape-fear",
@@ -1709,14 +1554,10 @@
           "season": 1,
           "title": "恐怖角",
           "summary": "对于幸福的已婚律师安娜（艾米·亚当斯 饰）和汤姆·鲍登（帕特里克·威尔逊 饰）来说，一场风暴即将到来。他们亲手将臭名昭著的杀手马克斯·卡迪（哈维尔·巴登 饰）送进了监狱，而他却被释放出狱——他想要复仇。 该剧灵感来源于马丁·斯科塞斯执导、史蒂文·斯皮尔伯格监制的1991年翻拍版。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/cape-fear/umc.cmc.377zdzwefgtzkvykexeca9qrc",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "star-city",
@@ -1768,12 +1609,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/star-city/umc.cmc.2l8p785osmtmiyk64bh6tfde1",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "星城",
+          "summary": "本剧为太空竞赛题材剧《为全人类》的衍生剧，是同一设定下的全新篇章。《星城》将我们带回太空竞赛另类历史重述的关键时刻——苏联成为首个实现载人登月的国家。但这次，我们将从铁幕后方探索这个故事，展现苏联航天计划中宇航员、工程师以及潜伏其中的情报人员的生存图景，以及他们为推动人类进步所承担的风险。",
+          "year": "2026",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "propeller-one-way-night-coach",
@@ -1820,12 +1664,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/propeller-one-way-night-coach/umc.cmc.5q6yvnse5dxw6wbb1sxcwij2k",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "maximum-pleasure-guaranteed",
@@ -1844,12 +1683,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/maximum-pleasure-guaranteed/umc.cmc.10k6tes7rmc2ti0ho1ozgwezc",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "unconditional",
@@ -1902,14 +1736,10 @@
           "season": 1,
           "title": "母爱无赦",
           "summary": "当盖莉因持毒被逮捕，这对母女的海外假期便急转直下。她的母亲欧娜拒绝接受指控，不择手段为女儿争取自由，却因此陷入盖莉盘根错节的秘密中。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/unconditional/umc.cmc.12pym1hetoynay361npi90btj",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "widows-bay",
@@ -1967,12 +1797,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/widows-bay/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
-        "year": "2026"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "寡妇湾",
+          "summary": "新英格兰外海40英里处的寡妇湾，终年被迷雾笼罩。这里流传着百年前的海难传说，所有出海的渔民葬身深海，只留下满岛寡妇与一道血色诅咒。新任市长汤姆·洛夫蒂斯决心振兴衰败的小镇，不顾居民的警告，强行开放旅游。没有稳定的网络，只有居民口中荒诞的诅咒传说，他不信邪，努力吸引游客前来。当游客的船驶入海湾，雾中开始浮现陌生的身影，深夜传来深海的哭嚎，居民们接连消失，小镇的平静被彻底打破。",
+          "year": "2026",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "my-brother-the-minotaur",
@@ -2018,14 +1851,10 @@
           "season": 1,
           "title": "我哥是牛头人",
           "summary": "由人类抚养长大的牛头人开始梦见自己神秘的过去，于是在弟弟和朋友们的帮助下，踏上了一段疯狂的冒险旅程，去寻找真正的自己。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/my-brother-the-minotaur/umc.cmc.2xp2k3if93s921ariv5tlhr1p",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "criminal-record",
@@ -2068,20 +1897,17 @@
           "season": 1,
           "title": "犯罪记录第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "犯罪记录第二季",
           "summary": "这是一部强有力的角色驱动型惊悚剧，设定在当代伦敦的中心，探讨了真相悬而未决时的执法困境。第二季中，当一名青年在政治集会上被刺身亡，对立的June Lenker与Daniel Hegarty被迫组成脆弱的联盟。这场始于追捕凶手的行动，逐渐升级为一场卧底行动，旨在挫败极右翼组织在伦敦核心区的炸弹阴谋。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/criminal-record/umc.cmc.1sbjeoma6tvxgda6l0h4bb0x3",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "margos-got-money-troubles",
@@ -2097,12 +1923,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/margos-got-money-troubles/umc.cmc.6wgw0u6vuwydp6obbzzccup3w",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "outcome",
@@ -2121,12 +1942,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/outcome/umc.cmc.3uvjztuy2y8ve2rj6nvgyop89",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "your-friends-and-neighbors",
@@ -2188,20 +2004,17 @@
           "season": 1,
           "title": "掩耳盗邻第一季",
           "summary": "一名金融巨擘(乔恩·哈姆 Jon Hamm 饰)突然痛失婚姻与事业，他开始抢劫富有的邻居来维生。在自己的社交圈中行窃，让他感到莫名的兴奋，但他也逐渐陷入一张错综复杂的致命之网中。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "掩耳盗邻第二季",
           "summary": "一名金融巨擘（乔汉姆饰）突然痛失婚姻与事业，他开始抢劫富有的邻居来维生。在自己的社交圈中行窃，让他感到莫名的兴奋，但他也逐渐陷入一张错综复杂的致命之网中。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/show/your-friends--neighbours/umc.cmc.74o37kzay0yuuub8iumddjsg",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "for-all-mankind",
@@ -2241,38 +2054,38 @@
           "season": 1,
           "title": "为全人类第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "为全人类第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "为全人类第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "为全人类第四季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 5,
           "title": "为全人类第五季",
           "summary": "《为了全人类》第五季的故事发生在金发姑娘小行星劫案之后。快乐谷已发展成为一个繁荣的殖民地，拥有数千居民，并成为执行新任务的基地，这些任务将带领我们更深入地探索太阳系。然而，随着地球各国要求在火星上维护法律和秩序，火星居民与他们昔日家园之间的摩擦持续加剧。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/for-all-mankind/umc.cmc.6wsi780sz5tdbqcf11k76mkp7",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "wonder-pets-in-the-city",
@@ -2290,12 +2103,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "imperfect-women",
@@ -2313,12 +2121,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/imperfect-women/umc.cmc.1w2rmpbqzt24879bt7109zgi6",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "twisted-yoga",
@@ -2358,14 +2161,10 @@
           "season": 1,
           "title": "暗黑瑜伽学院",
           "summary": "几位曾加入密宗瑜伽学校的成员讲述了他们如何从寻求身心健康和归属感，到担心自己加入了邪教，并寻求正义，控诉一位自封的“大师”对他们的虐待和操控。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/twisted-yoga/umc.cmc.5igm85np97uvzrg4cl7wpzz6f/",
-        "year": "2026"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-hunt",
@@ -2383,12 +2182,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-hunt/umc.cmc.4w9agfyrx2fgc5k9rls2cffho",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "monarch-legacy-of-monsters",
@@ -2453,20 +2247,17 @@
           "season": 1,
           "title": "帝王计划怪兽遗产第一季",
           "summary": "故事设定在《哥斯拉2：怪兽之王》里哥斯拉和泰坦巨兽之间的惊天大战夷平了旧金山，以及确认怪兽是真实存在的现状后，凯特再次被一个令人震惊的秘密吓坏了。面对巨大的威胁，她踏上了环球冒险之旅，以了解有关家人和名为“帝王”之神秘组织的真相。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "帝王计划怪兽遗产 第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/monarch-legacy-of-monsters/umc.cmc.62l8x0ixrhyq3yaqa5y8yo7ew/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-last-thing-he-told-me",
@@ -2529,20 +2320,17 @@
           "season": 1,
           "title": "他告诉我的最后一件事",
           "summary": "Julia Roberts主演并监制Apple TV+限定剧《他告诉我的最后一件事 The Last Thing He Told Me》。本剧来自Reese Witherspoon的制片公司Hello Sunshine，改编自Laura Dave的同名小说，由Dave和丈夫Josh Singer (《聚焦》)共同创作。剧版讲述Roberts饰演的女子，在寻找关于自己丈夫为何神秘失踪的真相时，和16岁的继女建立起了意想不到的关系。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "他告诉我的最后一件事第二季",
           "summary": "詹妮弗·加纳、安格瑞·赖斯、尼可拉·科斯特-瓦尔道主演苹果剧集《他告诉我的最后一件事》宣布续订第二季。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-last-thing-he-told-me/umc.cmc.5dkcy23fuhcdhw1zcmqn10rc5/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "eternity",
@@ -2608,12 +2396,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/eternity/umc.cmc.4dlymcfscta2oo4u1whkzaqpl",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "yo-gabba-gabbaland",
@@ -2631,12 +2414,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2026"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "shrinking",
@@ -2697,26 +2475,24 @@
           "season": 1,
           "title": "诊疗中第一季",
           "summary": "本剧讲述一位心理治疗师(席格尔饰)打破常规、将自身想法完全告诉客户的故事，福特则饰演菲尔·罗德斯博士，一位脚踏实地、锋芒毕露的心理医生，这也是他首次在剧集中担任主演。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "诊疗中第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "诊疗中第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/shrinking/umc.cmc.apzybj6eqf6pzccd97kev7bs/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "drops-of-god",
@@ -2776,20 +2552,17 @@
           "season": 1,
           "title": "神之水滴",
           "summary": "世界知名的葡萄酒评家神咲丰多香离世前立下遗嘱，谁能够说出他留下的十二支顶级葡萄酒，以及第十三支梦幻葡萄酒「神之水滴」的名称和出产年份，便能继承他的遗产。为此，丰多香的儿子·神咲雫与年轻有为的葡萄酒评家·远峰一青（山下智久 饰）展开了以酒为中心的比试。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "神之水滴第二季",
           "summary": "改剧改编自同名漫画《神之水滴》，讲述了法国女性Camille（弗蕾尔·格夫里尔 饰）与葡萄酒评论家远峰一青（山下智久 饰）的故事。 在第二季中，Camille和一青将挑战连莱杰都未能解开的深层谜团——“世界最顶级葡萄酒的起源”。始于遗产争夺的二人之旅，将发展为一场跨越大陆与时代、追寻真相的旅程。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/drops-of-god/umc.cmc.497ttx33nudgzywis3i2bnvuk/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "hijack",
@@ -2862,14 +2635,10 @@
           "season": 1,
           "title": "劫机七小时第一季",
           "summary": "KA29航班从杜拜飞往伦敦，在七小时的航程中遭到了劫持，一位有成就的企业谈判代表山姆尼尔森试图利用自己的专业技巧拯救机上的所有人。这种高风险的策略会招来他的毁灭吗？",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/hijack/umc.cmc.1dg08zn0g3zx52hs8npoj5qe3",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "tehran",
@@ -2926,26 +2695,24 @@
           "season": 1,
           "title": "德黑兰第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "德黑兰第二季",
           "summary": "泰玛是以色列情报特务局“莫萨德”的黑客特务，她利用假身份潜入德黑兰协助摧毁伊朗的核反应堆。当任务失败后，她必须策划一个会令她所爱的人身陷危险的行动。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "德黑兰第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/tehran/umc.cmc.337cdk1ou0bmn6frmzxwm7xqd",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "born-to-be-wild",
@@ -2963,12 +2730,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/born-to-be-wild/umc.cmc.5sgng9umkaa6mylh0k5kqsepp",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "f1",
@@ -3037,12 +2799,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/f1-the-movie/umc.cmc.3t6dvnnr87zwd4wmvpdx5came",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-first-snow-of-fraggle-rock",
@@ -3081,12 +2838,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-first-snow-of-fraggle-rock/umc.cmc.53j5hly8hazx7k256whpn1w64",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "wondla",
@@ -3130,26 +2882,13 @@
         "name_checked_at": "2026-10-29T18:34:47+00:00",
         "name_sources": [
           {
+            "retrieved_at": "2026-10-29T18:34:47+00:00",
             "type": "bangumi_title",
-            "url": "https://bangumi.tv/subject/497641",
-            "retrieved_at": "2026-10-29T18:34:47+00:00"
+            "url": "https://bangumi.tv/subject/497641"
           }
         ]
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/wondla/umc.cmc.2ghd8ombh4fd37rfs27ivfa94/",
-        "year": "2024"
-      },
-      "chinesePending": false,
-      "nameStatus": "verified_title_sources",
-      "titleIdentity": {
-        "slug": "wondla",
-        "english_title": "WondLa",
-        "kind": "series",
-        "year": "2024",
-        "official_id": "umc.cmc.2ghd8ombh4fd37rfs27ivfa94"
-      }
+      "seasons": []
     },
     {
       "slug": "prehistoric-planet-ice-age",
@@ -3167,12 +2906,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-family-plan-2",
@@ -3226,12 +2960,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-family-plan-2/umc.cmc.1wj0ab94s7t1wy7sqv5dt6bfy",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "come-see-me-in-the-good-light",
@@ -3249,12 +2978,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/come-see-me-in-the-good-light/umc.cmc.27uh51l7oh3ghql2gxb6xvb1s",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "palm-royale",
@@ -3319,20 +3043,17 @@
           "season": 1,
           "title": "皇家棕榈第一季",
           "summary": "本剧改编自朱丽叶·麦克丹尼尔的小说，设定在1970年代早期，讲述玛克辛·西蒙斯（克里斯汀·韦格 饰）试图在美国最高档的餐桌——棕榈滩上流社会中占据一席之地。当玛克辛试图跨越富人和穷人之间那道不可逾越的界限时，这部剧提出了至今仍然让人困惑的问题：谁能在上流社会占有一席之地？你该如何获得一席之地？为了达到目标，你会牺牲什么？",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "皇家棕榈第二季",
           "summary": "Apple TV+续订《皇家棕榈》第二季。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/palm-royale/umc.cmc.6vwg3ce7ovsexa3a6r7f6qk49",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "pluribus",
@@ -3387,14 +3108,10 @@
           "season": 1,
           "title": "同乐者 第一季",
           "summary": "本剧由《绝命毒师》《风骚律师》主创文斯·吉里根打造，《风骚律师》蕾亚·塞洪主演，是一部打破类型界限的科幻剧集，讲述地球上最痛苦的人必须将世界从「幸福」中拯救出来。蕾亚·塞洪饰演一位情感麻木的历史言情小说畅销作家卡罗尔，她自嘲作品是“无脑的垃圾”。正当她为新书展开巡回宣传之际，一股神秘现象席卷新墨西哥州的宁静小城阿尔伯克基：一种末世病毒（或许并非末世，这取决于你的询问对象）向全世界强行灌输了乐观与满足。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/pluribus/umc.cmc.37axgovs2yozlyh3c2cmwzlza",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "down-cemetery-road",
@@ -3456,14 +3173,10 @@
           "season": 1,
           "title": "坟场回路第一季",
           "summary": "牛津市郊一处房屋发生爆炸，一名女孩在爆炸后失踪，她的邻居莎拉·塔克（露丝·威尔森 Ruth Wilson 饰）一心想找到女孩，并寻求私家侦探佐伊·波姆（艾玛·汤普森 Emma Thompson 饰）的帮助，两人突然发现自己卷入了一场复杂的阴谋。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/down-cemetery-road/umc.cmc.3i55uxosnfpzw7rw1q525iksh",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "stiller-meara-nothing-is-lost",
@@ -3504,12 +3217,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/stiller--meara-nothing-is-lost/umc.cmc.1ercqbwn9nqrnbajqhf1v5kki",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "mr-scorsese",
@@ -3527,12 +3235,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/mr-scorsese/umc.cmc.4a06j5lm5pxny9nx505zo5g0y",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "loot",
@@ -3594,26 +3297,24 @@
           "season": 1,
           "title": "战利品第一季",
           "summary": "Maya Rudolph is Molly Novak, a billionaire ready to save the world. Loot premieres June 24 on Apple TV+.After divorcing her husband of 20 years, Molly Novak must figure out what to do with her $87 billion settlement. She decides to reengage with her charitable foundation and reconnect with the real world—finding herself along the way.In addition to Rudolph, the Loot ensemble ...",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "战利品第二季",
           "summary": "“Loot” returns a year after Molly Wells (Maya Rudolph) settles her very public divorce from tech billionaire John Novak (Adam Scott), and we find her thriving in her role as the head of her philanthropic organization, the Wells Foundation. Focused mainly on her charity work, Molly has sworn off any new relationships with men.",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "战利品第三季",
           "summary": "Apple TV+续订《战利品》第三季。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-last-frontier",
@@ -3675,14 +3376,10 @@
           "season": 1,
           "title": "失序边缘",
           "summary": "一架运送囚犯的监狱运输机在偏远的阿拉斯加荒野坠毁，几十名暴力犯因而逃脱。当地唯一警长必须确保他发誓守护的小镇能安然渡过。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-last-frontier/umc.cmc.6kmzwhcm9cj30piuuiymr4u7m",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-lost-bus",
@@ -3736,12 +3433,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-lost-bus/umc.cmc.4p7gv4trt1rt0kuiwzmitibiv",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "all-of-you",
@@ -3760,12 +3452,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/all-of-you/umc.cmc.3hac5oqhh3gxiu35spyu8fanf",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-reluctant-traveler",
@@ -3803,14 +3490,10 @@
           "season": 1,
           "title": "不情愿的旅行者第一季",
           "summary": "尤金李维踏出舒适圈，造访世上各种迷人的旅游胜地。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-reluctant-traveler-with-eugene-levy/umc.cmc.237ur6qdup9h826huv7jg25yu",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-morning-show",
@@ -3887,32 +3570,31 @@
           "season": 1,
           "title": "早间新闻第一季",
           "summary": "让我们揭开帷幕，聚焦每晨陪伴大众迎接新一天的新闻主播，走近早间新闻节目的台前幕后！ 剧集由詹妮弗·安妮斯顿、瑞茜·威瑟斯彭和史蒂夫·卡瑞尔领衔主演，以大胆直接的拍摄手法透视当代职场百态。",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "早间新闻第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "早间新闻第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "早间新闻第四季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-morning-show/umc.cmc.25tn3v8ku4b39tr6ccgb8nl6m",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "highest-2-lowest",
@@ -3966,12 +3648,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/highest-2-lowest/umc.cmc.3rbg43tt2brl2cp5wwacfrmhx",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "shape-island",
@@ -4004,17 +3681,20 @@
       },
       "seasons": [
         {
+          "season": 1,
+          "title": "形状岛第一季",
+          "summary": "第一季中文简介暂未提供。",
+          "year": "2023",
+          "artwork": "images/21b8671b6fcca863457924b83cc5a9ea6f1ad28e857aa0503ba4e921d6a04897.jpg"
+        },
+        {
           "season": 2,
           "title": "形状岛第二季",
           "summary": "暂无简介",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/shape-island/umc.cmc.40xdlw2jijoj95c3a6y2m3738/",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "kpopped",
@@ -4030,12 +3710,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/kpopped/umc.cmc.1yvpbd5uvcq8txtj1gfnw5iox",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "invasion",
@@ -4105,26 +3780,24 @@
           "season": 1,
           "title": "入侵第一季",
           "summary": "Simon Kinberg与David Weil负责的Apple TV+的外星人题材剧将讲述全球多地被外星人入侵时的情况，会有纽约﹑曼彻斯特﹑摩洛哥及日本四国的剧情。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "入侵第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "入侵第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/invasion/umc.cmc.70b7z97fv7azfzn5baqnj88p6/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "snoopy-presents-a-summer-musical",
@@ -4158,12 +3831,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/a-summer-musical/umc.cmc.xesgxj0bt8yrrkrunae0wke7",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "platonic",
@@ -4226,20 +3894,17 @@
           "season": 1,
           "title": "柏拉图关系第一季",
           "summary": "本剧由夫妻档Nick Stoller和Francesca Delbanco撰写剧本，计划制作成诗选剧，每季聚焦不同的两个人物。故事将探讨柏拉图式友情的内在运作方式。一对年轻时认识的前好友，成年后重新开始联络，试图冰释前嫌。随着两人的友谊变得越来越令人身心俱疲，这段关系动摇了他们的生活，促使他们重新评估自己的选择。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "柏拉图关系第二季",
           "summary": "剧集依然探讨柏拉图式友情的内在运作方式。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/platonic/umc.cmc.y7bc18x7co813l8i2tlsyb4l",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "chief-of-war",
@@ -4296,14 +3961,10 @@
           "season": 1,
           "title": "战酋",
           "summary": "从土著人的角度讲述了夏威夷群岛的统一，这是一个激动人心的、前所未有的故事。一位夏威夷战争首领加入了一场血腥的战役，以团结交战岛屿，使其免受殖民威胁。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/chief-of-war/umc.cmc.6ag0zq020ielwv7m83v8r4dkw",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "acapulco",
@@ -4369,14 +4030,10 @@
           "season": 1,
           "title": "阿卡普高",
           "summary": "Apple TV+预定半小时双语喜剧《阿卡普尔科 Acapulco》。这是一部西班牙语-英语剧集，Eugenio Derbez担任执行制片并出演，灵感来自他主演的电影《如何做一名拉丁情人 How to Be A Latin Lover》。故事讲述一名年轻墨西哥男子梦想成真，在阿卡普尔科最热门的度假胜地找到了一份千载难逢的工作。随着自己所有的信仰和道德观念都开始被颠覆，他很快意识到这份工作比想象中要复杂得多。该剧背景为1984年，Derbez饰演当下时刻的主角，并担任旁白。本剧由《佐伊的超凡歌单》主创Austin Winsberg，和《半血缘兄弟》编剧Eduardo Cisneros、Jason Shuman共同创作。Winsberg担任剧集运作人，《老爸老妈浪漫史》编剧Chris Harris为联合剧集运作人。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/acapulco/umc.cmc.8xrkg9zywke7g6a9ahmvpr3l/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "foundation",
@@ -4442,26 +4099,24 @@
           "season": 1,
           "title": "基地第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "基地第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "基地第三季",
           "summary": "故事设定在第二季事件的152年后。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3/",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-wild-ones",
@@ -4479,12 +4134,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-wild-ones/umc.cmc.4w1tfn11hyb3frc9tp5fpksbb",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "smoke",
@@ -4543,14 +4193,10 @@
           "season": 1,
           "title": "烟火寻凶",
           "summary": "麻烦缠身的警察和神秘的火灾调查员联手追踪两名连环纵火犯。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/smoke/umc.cmc.4lplbt076d3um4tenis7k58e3",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-buccaneers",
@@ -4612,20 +4258,17 @@
           "season": 1,
           "title": "海盗第一季",
           "summary": "本剧灵感来自普利策奖获奖作家伊迪丝·华顿未完成的同名最终作，由全女性创意团队主导。英国喜剧演员Katherine Jakeways为剧集创作者和领头编剧，Susanna White（《安多》《荒凉山庄》《简爱（2006）》）担任领头导演，两人同Beth Willis（《援助》《神秘博士》）均为执行制片。The Forge Entertainment为制片方，所以这应该是一部英剧。有钱的女孩，有权力的男人。新财富，旧秘密。1870年代（19世纪70年代），一群喜爱玩乐的年轻美国女孩闯入满是紧身胸衣的伦敦社交季，掀起了一场英美文化冲突。她们对数百年传统的漠视令人耳目一新，悄然渗透着英国这片感情克制（上嘴唇僵硬/stiff upper lip）的土地。“海盗”们被家族派去寻找丈夫、获取贵族头衔，但她们的心之所向远不止于此，一句“我愿意”只是个开始。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "海盗佳丽第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-buccaneers/umc.cmc.g28hcpusm23xbs9zwvnwn9re",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "echo-valley",
@@ -4677,12 +4320,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/echo-valley/umc.cmc.1al6pi2y17htw3z98tbacgo55",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "not-a-box",
@@ -4700,12 +4338,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "bono-stories-of-surrender",
@@ -4723,12 +4356,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/bono-stories-of-surrender/umc.cmc.oxoxnpaecaatg9tzf6pgfsh2",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "lulu-is-a-rhinoceros",
@@ -4746,12 +4374,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/lulu-is-a-rhinoceros/umc.cmc.3q3rnlgmnlkdh3p5djze6l019",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fountain-of-youth",
@@ -4807,12 +4430,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/fountain-of-youth/umc.cmc.z5xrwbjg3gergiowhrzg61tq",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "deaf-president-now",
@@ -4850,12 +4468,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/deaf-president-now/umc.cmc.4db5r1gvgok0a0dtdmkj44ea4",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "murderbot",
@@ -4903,12 +4516,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/murderbot/umc.cmc.5owrzntj9v1gpg31wshflud03",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "杀戮人机",
+          "summary": "根据玛莎·威尔斯（Martha Wells）畅销的雨果奖和星云奖获奖系列书籍改编，《谋杀机器人》（Murderbot）是一部科幻惊悚/喜剧作品，讲述了一个自我黑客化的安全构造体的故事。它对人类情感感到恐惧，却又被自己脆弱的客户所吸引。在完成一项危险任务的同时，谋杀机器人必须隐藏自己的自由意志，而它真正想做的只是独自一人观看未来主义肥皂剧，并思考自己在宇宙中的位置。",
+          "year": "2025",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "long-way-home",
@@ -4926,12 +4542,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/long-way-home/umc.cmc.26p8x4co2wl0ztetek4gmkf6r",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "careme",
@@ -4990,14 +4601,10 @@
           "season": 1,
           "title": "名厨卡雷姆第一季",
           "summary": "聚焦“法国第一个名厨”Antonin Carême，他在拿破仑时期白手起家，成为蜚声全欧洲的厨师，同时也成为一名间谍，涉及19世纪厨师界和贵族名流圈的故事。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/careme/umc.cmc.4280po7j44ucyyg09iugnldvo",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "jane",
@@ -5042,26 +4649,24 @@
           "season": 1,
           "title": "珍爱地球大冒险第一季",
           "summary": "9岁的珍珍是一个崭露头角的环保主义者。她致力于拯救濒危动物。珍珍运用自己丰富的想象力，带领最好的朋友大卫和黑猩猩灰胡踏上了史诗般的冒险之旅，去保护世界各地的野生动物。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "珍爱地球大冒险第二季",
           "summary": "9岁的珍珍是一个崭露头角的环保主义者。她致力于拯救濒危动物。珍珍运用自己丰富的想象力，带领最好的朋友大卫和黑猩猩灰胡踏上了史诗般的冒险之旅，去保护世界各地的野生动物。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "珍爱地球大冒险第三季",
           "summary": "Jane, David, and Greybeard set off to find out why hippos give birth away from their pods, while trying to reunite a baby hippo with her mom.",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/jane/umc.cmc.2fjnrld5buccid3lqqex95lnw/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "government-cheese",
@@ -5102,14 +4707,10 @@
           "season": 1,
           "title": "起司美国梦",
           "summary": "故事发生在 1969 年的圣费尔南多谷，讲述了钱伯斯一家追求崇高而看似不可能实现的梦想的故事。汉普顿·钱伯斯（奥伊罗沃饰）出狱后，期待已久的家庭团聚并没有按照他的计划进行。在他出狱期间，汉普顿的妻子阿斯托利亚（米西克 饰）和儿子爱因斯坦（埃里森 饰）、哈里森（迪阿洛·温斯顿 饰）组成了一个非传统的家庭单元，汉普顿的回归让他们的世界陷入混乱。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/government-cheese/umc.cmc.1pgdmfreds5kuzmeo3xii0746",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "number-one-on-the-call-sheet",
@@ -5127,12 +4728,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/number-one-on-the-call-sheet/umc.cmc.6p9tke2tbri1vnn2cuaxcj4mi",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fight-for-glory-2024-world-series",
@@ -5176,14 +4772,10 @@
           "season": 1,
           "title": "投争荣耀2024MLB世界大赛",
           "summary": "以前所未有的视角体验洋基队和道奇队重现 2024 年美国职业棒球大联盟（MLB）最具代表性的季后赛两强对决，并近距离深入访谈超级球星、主教练及其家人，见证登上棒球界最高宝座所需的牺牲。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/fight-for-glory-2024-world-series/umc.cmc.6x620ggn8n2yamemiuk7ys8yt",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "side-quest",
@@ -5245,14 +4837,10 @@
           "season": 1,
           "title": "支线任务",
           "summary": "受到电子游戏《Mythic Quest》（2020）影响的员工、玩家和粉丝的生活。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/side-quest/umc.cmc.1pwtcaq7wyb6hdz2ctk1tvtng",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-studio",
@@ -5326,14 +4914,10 @@
           "season": 1,
           "title": "制片厂",
           "summary": "讲述了一位新上任的电影制片公司负责人为了赢得名人的认可，他和大陆影业的执行团队必须在公司利益和创意追求之间寻求平衡。同时还要力图为电影制作注入新的生机和活力，并与时俱进。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-studio/umc.cmc.7518algxc4lsoobtsx30dqb52",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "bearbrick",
@@ -5351,12 +4935,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/berbrick/umc.cmc.18fsq2h43zx0v5h31hyeq1d7w",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "dope-thief",
@@ -5424,14 +5003,10 @@
           "season": 1,
           "title": "毒窃之徒",
           "summary": "故事讲述的是多年好友和不良少年假扮缉毒局探员抢劫一栋乡间别墅，却无意中揭露并揭开了东部沿海最大的毒品隐秘通道。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dope-thief/umc.cmc.2prcvu6fnh4bue7d9iaswpsw7",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "berlin-er",
@@ -5490,14 +5065,10 @@
           "season": 1,
           "title": "柏林急诊室",
           "summary": "一位年轻女医生的私生活陷入困境后，为寻求新的开始，接手柏林最艰难、最混乱医院的急诊室。面对员工的抵触和破旧系统的同时，她必须团结这支特立独行的团队来挽救生命。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/berlin-er/umc.cmc.24ebs6sf9yyg4e5tpdwoywkzt",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "surface",
@@ -5561,20 +5132,17 @@
           "season": 1,
           "title": "浮出水面第一季",
           "summary": "头部受伤让苏菲严重失忆。苏菲在丈夫与朋友的协助下重新拼凑人生片段，同时开始质疑她看似完美生活背后的真相。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "浮出水面第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/show/surface/umc.cmc.dzqzvmbvizbedk91cvrq5pvw",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "onside-major-league-soccer",
@@ -5613,14 +5181,10 @@
           "season": 1,
           "title": "始于足下职业足球大联盟",
           "summary": "不仅关心球场上的表现，更以前所未有的角度，了解推动美国职业足球大联盟的球员和人物。振奋人心的时刻和引人入胜的故事让2024年成为令人难忘的赛季，我们也借此一窥未来的发展。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/onside-major-league-soccer/umc.cmc.3f1lyzz5mshnl8umwl9wipwgj",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-gorge",
@@ -5672,12 +5236,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-gorge/umc.cmc.26o403koqo2klixc0jtqy6tmc",
-        "year": "2025"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "goldie",
@@ -5726,14 +5285,10 @@
           "season": 1,
           "title": "大女孩戈尔迪",
           "summary": "这部剧集时长半小时，共 13 集，讲述了心胸宽广的巨人女孩戈尔迪和她的好朋友在他们心爱的小镇博伊森堡踏上史诗般的冒险之旅。他们一起了解到与众不同是一件值得庆祝的事情，这个世界上每个人都有自己的空间，即使是巨人。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/show/goldie/umc.cmc.2reh3g5q197hlblohp6l3fzk5",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "love-you-to-death",
@@ -5776,14 +5331,10 @@
           "season": 1,
           "title": "死心恋爱",
           "summary": "拉乌的世界逐渐崩解。玛妲意外怀孕。一次丧礼上的邂逅让两人越走越近，并一起在生活的混乱和爱情中跌跌撞撞地前进。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/love-you-to-death/umc.cmc.2zky8t1ps9m3ld18tdjc1g5di/",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "vietnam-the-war-that-changed-america",
@@ -5801,12 +5352,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/vietnam-the-war-that-changed-america/umc.cmc.5louo8zb5eb7zs0dgk06tnk22/",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "mythic-quest",
@@ -5865,14 +5411,10 @@
           "season": 1,
           "title": "神话任务群鸦盛宴第一季",
           "summary": "《神话任务》由Rob McElhenney和Charlie Day执行制作，与Ubisoft共同制作，包括Ubisoft的电视与电影负责人Jason Altman、电视与电影总监Danielle Kreinik，与行销发行副总裁Gérard Guillemot都参与其中，并于去年Ubisoft E3展前记者会首度公开此项合作计划。 这部剧集将以McElhenney饰演的游戏研发工作室创意总监Ian Grimm为中心人物，带来九集幽默的影集内容，看看研发团队在负责一款广受欢迎的多人线上游戏时所面临的众多挑战，在这个忙着打造游戏世界、塑造英雄角色与创造史诗故事的工作场域中，最大的战争并没有发生在游戏，而是出现在办公室中。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/mythic-quest-ravens-banquet/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "eva-the-owlet",
@@ -5890,12 +5432,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "prime-target",
@@ -5913,12 +5450,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/prime-target/umc.cmc.5hje8i3v25dzow2olljxetnus/",
-        "year": "2025"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "severance",
@@ -5992,20 +5524,17 @@
           "season": 1,
           "title": "人生切割术第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "人生切割术 第二季",
           "summary": "故事发生在一家名为卢蒙的超级大公司内，一种名为记忆切割术的全新技术正在公司内部进行实验，接受了手术的员工将进行人格分离手术，形成公司人格和日常人格。这项大胆的“平衡工作与生活”的实验受到了质疑。员工马克发现自己身处一个谜团的中心，迫使他面对工作和自我的本质。 第二季中，马克和他的朋友们了解到切割记忆的可怕后果，使他们走上了更加痛苦的道路。",
-          "year": "2025"
+          "year": "2025",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/severance/umc.cmc.1srk2goyh2q2zdxcx605w8vtx?ctx_brand=tvs.sbd.4000",
-        "year": "2025"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-secret-lives-of-animals",
@@ -6045,14 +5574,10 @@
           "season": 1,
           "title": "动物的秘密生活",
           "summary": "Showcases rare footage of animal behaviors across 77 species in 24 countries, highlighting their intelligence and adaptability through pivotal life moments like birth, raising families, and finding food.",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/show/the-secret-lives-of-animals/umc.cmc.2o8al5w2z01dnm4f9aw11d2w7",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "carpool-karaoke-the-series",
@@ -6070,12 +5595,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/carpool-karaoke-the-series/umc.cmc.2wyy7chw6bmy46fekqlqq1ulb?ctx_brand=tvs.sbd.4000",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fly-me-to-the-moon",
@@ -6130,12 +5650,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "sago-mini-friends",
@@ -6153,12 +5668,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "bread-roses",
@@ -6192,12 +5702,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/bread--roses/umc.cmc.76dp605jvw9didum9xrra5hvc",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "blitz",
@@ -6254,12 +5759,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/blitz/umc.cmc.1ivowfwigmx4dmfii3xekmoaq",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "bad-sisters",
@@ -6330,20 +5830,17 @@
           "season": 1,
           "title": "坏姐妹第一季",
           "summary": "女主遭到富豪丈夫的百般羞辱，她的妹妹们决定让她老公早点归西，事成之后，一对保险公司员工上门，来调查富豪之死的真相。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "坏姐妹第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/bad-sisters/umc.cmc.14kr4vv65unannh7doqgvlh20",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "tu-tambien-lo-harias",
@@ -6361,12 +5858,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/you-would-do-it-too/umc.cmc.7ad5xech8wu5nh2p221ymy9r2",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "before",
@@ -6406,14 +5898,10 @@
           "season": 1,
           "title": "过去的事",
           "summary": "一位最近丧偶的儿童心理学家会见了他的下一位客户，这位客户似乎以某种方式与他的过去有关。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/before/umc.cmc.4uwoba1ftlsr5da94wc98ilsc",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "disclaimer",
@@ -6472,14 +5960,10 @@
           "season": 1,
           "title": "免责声明第一季",
           "summary": "本剧改编自蕾妮·奈特的同名小说。著名记者Catherine Ravenscroft（凯特·布兰切特 Cate Blanchett 饰）因揭露他人的不端行为而声名鹊起。在收到一位不知名作者的小说后，她惊恐地发现自己就是书中的主角，而这个故事揭露了自己最黑暗的秘密。在Catherine争分夺秒揭开作者真实身份的过程中，她不得不直面过去，以免它毁掉自己的生活，毁掉自己与丈夫Robert（萨莎·拜伦·科恩 Sacha Baron Cohen 饰）、儿子Nicholas（柯蒂·斯密特-麦菲 Kodi Smit-McPhee 饰）的关系。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/disclaimer/umc.cmc.1cbgkx1fenkjtrha0n1a6fkc3",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-last-of-the-sea-women",
@@ -6514,12 +5998,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-last-of-the-sea-women/umc.cmc.2ifcc56qkxiso1w9k6qwv8aow",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "curses",
@@ -6564,17 +6043,20 @@
       },
       "seasons": [
         {
+          "season": 1,
+          "title": "诅咒动画版",
+          "summary": "当长达几代人的家族诅咒将亚历克斯・范德豪文变成石头时，他的两个孩子潘多拉和拉斯以及他的妻子斯凯必须将祖先偷走的文物归还给他们合法的家园，最终永远解除诅咒。",
+          "year": "2023",
+          "artwork": ""
+        },
+        {
           "season": 2,
           "title": "诅咒第二季",
           "summary": "潘多拉、拉斯和斯凯·范德胡芬，一个被他们的祖先从世界各地掠夺古代文物所诅咒的家庭，在这个家庭中，父亲亚历克斯被变成了石头。在逆转了一生冒险的诅咒后，第二季中亚历克斯重新加入了这个家庭，他们继续努力消除贪婪的祖先造成的伤害。但是当亚历克斯的某些事情看起来不太对劲时，这个家庭必须团结起来解决他们面临的神秘问题，无论是在路上还是在布莱尔斯通庄园的墙内。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/curses/umc.cmc.4zami3bauzt4rzxhh4tzfmrfl/",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "midnight-family",
@@ -6592,12 +6074,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/midnight-family/umc.cmc.1xkd0bjglgv5x1jxiteog2833",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "wolfs",
@@ -6658,12 +6135,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/wolfs/umc.cmc.c3xhu25rw4jxxxzq4oio6snu",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "la-maison",
@@ -6720,14 +6192,10 @@
           "season": 1,
           "title": "时尚世家第一季",
           "summary": "在一家法国经典高级时装品牌的背后，高端时尚与狗血剧情相互交织。当品牌背后的家族王朝身陷丑闻时，他们必须设法自​​我改造，否则将被竞争对手摧毁。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/la-maison/umc.cmc.gs1b84yx68istiomnshllt1i",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "k-pop-idols",
@@ -6745,12 +6213,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/k-pop-idols/umc.cmc.j0nrrycfzizv3g28dhz2bks",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "napoleon-the-directors-cut",
@@ -6768,12 +6231,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/napoleon-the-directors-cut/umc.cmc.gtk0q9t2mapcjs75d31vvrs2",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "pachinko",
@@ -6846,20 +6304,17 @@
           "season": 1,
           "title": "弹子球游戏第一季",
           "summary": "该剧改编自李敏金的同名畅销小说。讲述了横跨四个世代的韩国移民家庭的故事。故事始于一段禁忌的爱恋，并扩展为跨越韩国、日本与美国三地，关于希望与梦想、和平、爱与失落、胜利与算计的史诗传奇。 从朝鲜到日本，四代移民家庭的恩怨纠葛，大时代的巨光照在每一个小人物的身上，都留下了一道崎 岖的阴影，生生地拖着他们的躯 体前行。从1920年日本殖民时期的韩国渔村，到日本大阪，经历了二战和朝鲜战争，一直到90年代末日本泡沫经济时代的横滨和东京乃至纽约。在这样复杂的历史背景下，全剧着重描绘了几代人在家族与故乡、融入与归属、金钱与信仰等一系列问题上的关系与矛盾。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "弹子球游戏 第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/pachinko/umc.cmc.17vf6g68dy89kk1l1nnb6min4?ctx_brand=tvs.sbd.4000/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-instigators",
@@ -6915,12 +6370,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-instigators/umc.cmc.3ocr6483492qm53io2bsy2o69",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "cowboy-cartel",
@@ -6960,14 +6410,10 @@
           "season": 1,
           "title": "反黑牛仔第一季",
           "summary": "一位联邦调查局的新特工在美国的赛马行业发现了大规模的洗钱行动，冒着生命危险抓捕罪犯：墨西哥最危险的贩毒集团。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/cowboy-cartel/umc.cmc.2vru12c9n7324q0tdk324i0f",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "time-bandits",
@@ -7035,14 +6481,10 @@
           "season": 1,
           "title": "时光大盗",
           "summary": "苹果将把1981年幻想喜剧片《时间劫匪》改编成剧集，塔伊加·维迪提(《雷神3》《追捕野蛮人》)执导并编写首集剧本。电影由特里·吉列姆执导，约翰·克里斯、肖恩·康纳利等主演，讲述英国少年凯文跨越多维度的疯狂故事，他发现自己的衣橱里有一个时间洞，六个小矮人从洞里出来，带着凯文开始了一系列穿越历史的冒险，他们在古希腊、中世纪、拿破仑时代和20世纪初都有过停留，而在到达终极黑暗堡垒之前，他们遇到了邪恶事物。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/time-bandits/umc.cmc.1oenx8mbap78we9b35c52s07s/",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "lady-in-the-lake",
@@ -7105,14 +6547,10 @@
           "season": 1,
           "title": "湖中女人",
           "summary": "该剧改编自劳拉·李普曼的同名畅销小说。1966年感恩节，一名少女的失踪席卷巴尔的摩，两名女性的生活发生了致命的碰撞。Maddie Schwartz（娜塔莉·波特曼 Natalie Portman 饰）是一位犹太裔家庭主妇，她试图摆脱自己的秘密过往，重新成为一名调查记者；Cleo Johnson（摩西·英格拉姆 Moses Ingram 饰）是一位母亲，她在巴尔的摩黑人区政治底层摸爬滚打，同时还要努力养家糊口。起初，她们迥异的生活似乎是平行无交集的，但当Maddie开始专注于Cleo令人费解的死亡时，一条裂缝便打开了，让她们周围的每个人都处于危险之中。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/lady-in-the-lake/umc.cmc.2j4grqjj59olekp9vdrmjtodq",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "omnivore",
@@ -7130,12 +6568,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/omnivore/umc.cmc.3m567dtk8qcawdjwnagsr1jbs",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "me",
@@ -7153,12 +6586,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/me/umc.cmc.3d79cajjwbx5wsylkce31zrcz",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "sunny",
@@ -7207,14 +6635,10 @@
           "season": 1,
           "title": "桑尼",
           "summary": "本剧改编自常住日本爱尔兰作家Colin O’Sullivan的小说《The Dark Manual》。苏西（拉什达·琼斯 Rashida Jones 饰）是一位居住在日本京都的美国女性，当丈夫和儿子在一次神秘的空难中失踪，她的生活从此被颠覆。作为“安慰”，她得到了桑尼，一个由她丈夫的电子公司制造的新型家用机器人。起初，苏西对桑尼试图填补她生活中的空白感到反感，但渐渐地，她们建立了意想不到的友谊。她们一起揭开了苏西一家真实遭遇的黑暗真想，并陷入了一个苏西从不知道的危险世界。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/sunny/umc.cmc.7c5t9dde8dxoaxwyl5rkuw38p",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "fancy-dance",
@@ -7266,12 +6690,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/fancy-dance/umc.cmc.37d0bk971uulosq5inlm3ikb1/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "land-of-women",
@@ -7289,12 +6708,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/land-of-women/umc.cmc.3jchmur9er2whr7zsubfcasrv",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "presumed-innocent",
@@ -7357,20 +6771,17 @@
           "season": 1,
           "title": "无罪的罪人",
           "summary": "该剧改编自斯考特·杜罗所著同名小说，讲述芝加哥检察官办公室发生了一起可怕的谋杀案后，检察官之一拉斯蒂·萨比奇(吉伦哈尔)成了犯罪嫌疑人。在被告为维持家庭和婚姻而奋斗的过程中，探索痴迷、性、政治以及爱情的力量和局限性。内伽饰演拉斯蒂妻子芭芭拉，是名艺术家、画廊老板和母亲，她的生活在丈夫被指控谋杀他的情妇后被颠覆了，她在处理受伤的心和破碎的婚姻时也为家人而战，并与丈夫广为人知的审判作斗争。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "无罪的罪人第二季",
           "summary": "讲述芝加哥检察官办公室发生了一起可怕的谋杀案后，检察官之一拉斯蒂·萨比奇成了犯罪嫌疑人。在被告为维持家庭和婚姻而奋斗的过程中，探索痴迷、性、政治以及爱情的力量和局限性。",
-          "year": "2026"
+          "year": "2026",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/presumed-innocent/umc.cmc.5hnqrhwtzt3esr7rb1wq2ppvn",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "frog-and-toad",
@@ -7388,12 +6799,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-big-cigar",
@@ -7454,14 +6860,10 @@
           "season": 1,
           "title": "大雪茄",
           "summary": "追随著名的黑豹党的领导人【休伊·P·牛顿】的一生。在《逍遥骑士》背后的好莱坞制片人伯特·施奈德（Bert Schneider）以及其他一些名人激进分子的帮助下，他逃到了古巴，以避免因谋杀罪被起诉。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-big-cigar/umc.cmc.5067l9fz7usyhgjfbzy6ib0na",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "hollywood-con-queen",
@@ -7479,12 +6881,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/hollywood-con-queen/umc.cmc.117umbbiymiqrowvu6xsqzju4/",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-big-door-prize",
@@ -7502,12 +6899,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-big-door-prize/umc.cmc.2rjxcljdjz4h47vjdxnytcn23/",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "argylle",
@@ -7567,12 +6959,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/argylle/umc.cmc.3qy6j44hfqtekx6fx3yzh9w8i",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "franklin",
@@ -7632,14 +7019,10 @@
           "season": 1,
           "title": "富兰克林第一季",
           "summary": "In December 1776, Benjamin Franklin is world famous for his electrical experiments. But his passion and power are put to the test when he embarks on a secret mission to France — with the fate of American independence hanging in the balance.",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/franklin/umc.cmc.6etw1ja7p37ygnpdttyy4nryc",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "girls-state",
@@ -7673,12 +7056,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/girls-state/umc.cmc.7fsw9p5hdoagfd4lajhf6a5li",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "fraggle-rock-back-to-the-rock",
@@ -7696,12 +7074,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/fraggle-rock-back-to-the-rock/umc.cmc.2r077021gw7fu0noml0hln2yq?ctx_brand=tvs.sbd.4000",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "steve-martin-a-documentary-in-two-pieces",
@@ -7719,12 +7092,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/steve-martin-a-documentary-in-2-pieces/umc.cmc.7kkgskd7j0lomjoqdo97l80ql",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "manhunt",
@@ -7786,14 +7154,10 @@
           "season": 1,
           "title": "追捕刺客第一季",
           "summary": "Part historical fiction, part conspiracy thriller, “Manhunt” will take audiences into the aftermath of the first American presidential assassination and the fight to preserve and protect the ideals that were the foundation of Lincoln’s Reconstruction plans — issues that reverberate into the present day.",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-bloody-hundredth",
@@ -7828,12 +7192,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-bloody-hundredth/umc.cmc.17tiu47xvxo1p9k0tqfvhf29r",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "napoleon",
@@ -7887,12 +7246,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/napoleon/umc.cmc.25k80oxl3vo69c8rimk8v81s1",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-completely-made-up-adventures-of-dick-turpin",
@@ -7946,14 +7300,10 @@
           "season": 1,
           "title": "迪克·特平完全虚构的冒险第一季",
           "summary": "Noel Fielding stars as Dick Turpin, who always believed he was destined for something bigger than a life chopping meat in his dad's butcher's shop. And he was right. When he inadvertently becomes leader of the Essex Gang, a notorious bunch of outlaws, he realises he's found his calling. Sure, he might be a peace-loving vegan who believes in panache over pistols, but what he lac...",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-completely-made-up-adventures-of-dick-turpin/umc.cmc.37r7vskzmm8hk2pfbzaxlcwzg",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "earthsounds",
@@ -7991,14 +7341,10 @@
           "season": 1,
           "title": "地球之声",
           "summary": "Immersive audio reveals the unexpected, unfamiliar and untold ways in which animals communicate around the world. Narrated by Tom Hiddleston.",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "constellation",
@@ -8059,14 +7405,10 @@
           "season": 1,
           "title": "群星第一季",
           "summary": "一场太空灾难后，Jo（劳米·拉佩斯 Noomi Rapace 饰）返回了地球，但她发现自己生活中的关键部分似乎不见了。而Henry（乔纳森·班克斯 Jonathan Banks 饰），一位荣获诺贝尔奖的物理学家，他的秘密发现的答案由国际空间站上的Jo保密……直到她归来了。这部充满动作戏的太空冒险剧集，是对人类心理黑暗边缘的探索，展现了一位女性不顾一切地寻求揭露太空旅行背后隐藏历史的真相，并找回她失去的一切。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/constellation/umc.cmc.3lvo8a7ezxpysdy3gou3fsns0",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "messis-world-cup-the-rise-of-a-legend",
@@ -8101,12 +7443,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/messis-world-cup-the-rise-of-a-legend/umc.cmc.6hpxli71tx1zy1mwz7tutj94h",
-        "year": "2024"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "梅西的世界杯传奇崛起",
+          "summary": "该剧共4集，包括这名七获金球奖的足球球员的“独家幕后影像”，在巴黎、卡塔尔和阿根廷等地拍摄，回顾梅西的五次世界杯之旅，尤其是制作组全程跟随了的他2022年的捧杯。梅西也将亲口讲述他在阿根廷国家队的经历，“以亲密且前所未有的视角来展现一趟定义传奇的世界杯胜利之旅”，也有与他的队友、教练、对手、球迷、解说员们的采访。",
+          "year": "2024",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "snoopy-presents-welcome-home-franklin",
@@ -8125,12 +7470,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/welcome-home-franklin/umc.cmc.yy12locz1vttqczsnlnwtei3?ctx_brand=tvs.sbd.4000",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-dynasty-new-england-patriots",
@@ -8170,14 +7510,10 @@
           "season": 1,
           "title": "传奇之师新英格兰爱国者",
           "summary": "深入了解美国橄榄球新英格兰爱国者队20年的历程，从独特的相互配合而拿下六次超级碗冠军，到内哄引发的你争我夺。汤姆·布雷迪、比尔·贝利奇克、罗伯特·卡夫与关键球员将揭晓成就伟大的过程与代价。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-dynasty-new-england-patriots/umc.cmc.e399kebej378s053scn8nghf?ctx_brand=tvs.sbd.4000",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-new-look",
@@ -8247,14 +7583,10 @@
           "season": 1,
           "title": "新风貌第一季",
           "summary": "剧名来自迪奥载入史册的女装新款式“新风貌”。故事受真实事件启发，聚焦时装设计师克里斯汀·迪奥和可可·香奈儿的竞争关系。克里斯汀·迪奥在二战期间迅速崛起，其具有创新的标志性风格，使世界重新焕发生机。　　除了二战后统治全球时尚数十年的迪奥，和香奈儿之外，这部交织传 奇故事还将包括其他迪奥同代人和竞争对手的故事：皮埃尔·巴尔曼（Balmain）、克里斯托瓦尔·巴伦西亚加（Balenciaga）、贝尔·德·纪梵希（Givenchy）、皮尔·卡丹（Pierre Cardin）、伊夫·圣罗兰（Yves Saint Laurent）等。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-new-look/umc.cmc.6m0i5dcn60uzl206qq6ibomeh",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "masters-of-the-air",
@@ -8333,14 +7665,10 @@
           "season": 1,
           "title": "空战群英第一季",
           "summary": "该剧是继《兄弟连》和《太平洋战争》之后，史蒂文·斯皮尔伯格和汤姆·汉克斯打造的“二战三部曲”第三部。 聚焦美空军第8航空队在二战期间空炸德国的故事，第100轰炸机大队的空军士兵冒着生命危险出生入死，他们凭着勇气、牺牲和胜利锻造出一段兄弟情谊。",
-          "year": "2024"
+          "year": "2024",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/masters-of-the-air/umc.cmc.7bxcni0vwgll9kmicq738k5q2",
-        "year": "2024"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "killers-of-the-flower-moon",
@@ -8406,12 +7734,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/killers-of-the-flower-moon/umc.cmc.5x1fg9vferlfeutzpq6rra1zf",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-family-plan",
@@ -8477,12 +7800,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "john-lennon-murder-without-a-trial",
@@ -8524,14 +7842,10 @@
           "season": 1,
           "title": "约翰·列侬谋杀案审判疑云",
           "summary": "For the first time, key figures from John Lennon’s life and death — including friends, doctors and investigators — share personal memories and reveal what happened on the night of his killing.",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/john-lennon-murder-without-a-trial/umc.cmc.bbgldczdqayqjyllxp43v6a4/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-velveteen-rabbit",
@@ -8587,12 +7901,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-velveteen-rabbit/umc.cmc.7kjdwwm5m1cnk7t080steajqz/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "hannah-waddingham-home-for-christmas",
@@ -8639,12 +7948,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/hannah-waddingham-home-for-christmas/umc.cmc.1mzq8kys0zfx8kl7fmam7kuku/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "fingernails",
@@ -8698,12 +8002,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/fingernails/umc.cmc.5kr10v39ex4n13rrwxjzm3jy7?ctx_brand=tvs.sbd.4000",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-enfield-poltergeist",
@@ -8743,14 +8042,10 @@
           "season": 1,
           "title": "恩菲尔德灵异事件",
           "summary": "透过各种异象发生时，在屋内录下的原始录音，体验这个毛骨悚然的真实故事，也是世上最知名的骚灵案件。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-enfield-poltergeist/umc.cmc.33t5cskiqmmft1hxp23w9gnbw/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-pigeon-tunnel",
@@ -8799,12 +8094,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-pigeon-tunnel/umc.cmc.633pbtki99m7e8lc9ybbyab3/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "lessons-in-chemistry",
@@ -8870,14 +8160,10 @@
           "season": 1,
           "title": "化学课",
           "summary": "本剧改编自作家、科学编辑兼广告撰稿人邦妮·加默斯的同名小说。故事发生在1950年代早期，当时的社会普遍认为女性属于家庭而非职业领域。Elizabeth Zott（布丽·拉尔森 Brie Larson 饰）渴望在一个由男性主导的世界里成为一名科学家。她就职于一 家实验室，是知名科学家Calvin Evans（刘易斯·普尔曼 Lewis Pullman 饰）的助手，两人之间有着非同寻常的化学反应。然而，随着Elizabeth发现自己怀有身孕、孤身一人，还被实验室开除，她搁置了自己的梦想，同时也被激发出了单身母亲独有的聪明才智。Elizabeth接受了一份在电视烹饪节目当主持人的工作，并开始教导一个国家被忽视的家庭主妇们和那些突然用心倾听的男性很多食谱之外的知识，也一直渴望着回到自己真正喜爱的领域：科学。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/lessons-in-chemistry/umc.cmc.40yycssgxelw4zur8m2ilmvyx?ctx_brand=tvs.sbd.4000/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "messi-meets-america",
@@ -8917,14 +8203,10 @@
           "season": 1,
           "title": "梅西降临美国足球新时代",
           "summary": "与梅西一起开启他历史性的下一个人生章节，席卷北美地区和美国职业足球大联盟，并与迈阿密国际队的队友们一起开创足球运动的新时代。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/messi-meets-america/umc.cmc.es6c1ptzxayqb3njj21diwhm?ctx_brand=tvs.sbd.4000/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "flora-and-son",
@@ -8978,12 +8260,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/flora-and-son/umc.cmc.1ol2idv8q2iftiyjfkuyfki5l",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "interrupting-chicken",
@@ -9030,14 +8307,10 @@
           "season": 1,
           "title": "打断小鸡第一季",
           "summary": "当故事情节需要一点趣味时，派珀和她的想象力就能帮你扭转乾坤。该剧改编自大卫·埃兹拉·斯坦的获奖儿童读物系列，讲述派珀和她的朋友们在《打断鸡》中展开冒险的故事，将于 11 月 18 日在 Apple TV+ 独家首播。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "still-up",
@@ -9055,12 +8328,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/still-up/umc.cmc.4sn9yh0gys8gpb0yei0h443a1/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-super-models",
@@ -9104,14 +8372,10 @@
           "season": 1,
           "title": "超模们",
           "summary": "1980年代，娜奥米·坎贝尔、辛迪·克劳馥、琳达·伊万格丽斯塔和克里斯蒂·特林顿成了时尚指标人物，接着她们联手出击，超越了时尚产业。她们的声望是如此非凡，以至于这四个人能够取代她们展示的品牌，使她们的名字与设计师一样出名。如今，这四位超模通过积极行动、慈善事业和商业才能，依然站在文化的前沿。随着时尚产业不断重新定义自身——以及女性在其中的角色——这是一个关于权力的终极故事，讲述了四位女性如何齐心协力争取权力，为后来者铺平道路。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-super-models/umc.cmc.1jvelve41wn4nv2fl4v2u8rgj/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-changeling",
@@ -9129,12 +8393,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-changeling/umc.cmc.161vwm570k49vsn7xjtzvnwex/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "wanted-the-escape-of-carlos-ghosn",
@@ -9152,12 +8411,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/wanted-the-escape-of-carlos-ghosn/umc.cmc.34nvp6vc5in9logmjc7hezp52?ctx_brand=tvs.sbd.4000",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "snoopy-presents-one-of-a-kind-marcie",
@@ -9194,12 +8448,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/one-of-a-kind-marcie/umc.cmc.1a1h3avg5tx7g68ws3y06ty17/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "strange-planet",
@@ -9215,12 +8464,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/strange-planet/umc.cmc.zbh4nvi65qy3os9ifxm0fpe4",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "physical",
@@ -9278,26 +8522,24 @@
           "season": 1,
           "title": "健身世界第一季",
           "summary": "1980年代南加州的海滩社区，一个遭受折磨的家庭主妇（罗丝·伯恩 饰）寻找到了一条非常规的改变之路——踏入健美操的世界。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "健身世界第二季",
           "summary": "1980年代南加州的海滩社区，一个遭受折磨的家庭主妇（罗丝·伯恩 饰）寻找到了一条非常规的改变之路——踏入健美操的世界。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "健身世界第三季",
           "summary": "Since its global debut on Apple TV+, Physical has drawn acclaim from audiences and critics alike, as well as praise for performances by its ensemble cast led by “perfectly cast” and “masterful” Rose Byrne, and stars Rory Scovel, Dierdre Friel and Paul Sparks.Set in the idyllic but fragile beach paradise of sunny 1980s San Diego, Physical is a half-hour dark comedy following Sh...",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/physical/umc.cmc.6gdc6v4vwyaab7klocftv2s10/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-beanie-bubble",
@@ -9352,12 +8594,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-beanie-bubble/umc.cmc.4byzgw44377yxyjsl85rhn8vq",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "stephen-curry-underrated",
@@ -9392,12 +8629,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/stephen-curry-underrated/umc.cmc.23v0wxaiwz60bjy1w4vg7npun",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-afterparty",
@@ -9475,20 +8707,17 @@
           "season": 1,
           "title": "余兴派对第一季",
           "summary": "“The Afterparty” is a murder-mystery comedy set at a high school reunion afterparty. Each of the eight episodes will feature a retelling of the same night told through a different character’s perspective, each with its own unique visual format and film genre to match the teller’s personality.",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "余兴派对第二季",
           "summary": "Apple TV续订《余兴派对》第二季。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-afterparty/umc.cmc.5wg8cnigwrkfzbdruaufzb6b0?ctx_brand=tvs.sbd.4000/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "swagger",
@@ -9506,12 +8735,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/swagger/umc.cmc.63e208601mwndrxpmguc5stbo/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "lovely-little-farm",
@@ -9529,12 +8753,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-crowded-room",
@@ -9598,14 +8817,10 @@
           "season": 1,
           "title": "拥挤的房间",
           "summary": "Starring and executive produced by Tom Holland, “The Crowded Room” is a gripping, 10-episode limited series that stars Holland as Danny Sullivan, a man who is arrested following his involvement in a shooting in New York City in 1979. A captivating thriller told through a series of interviews with curious interrogator Rya Goodwin (Amanda Seyfried), Danny’s life story unfolds, r...",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-crowded-room/umc.cmc.495pmjg441gg3j70j3x2yufx9/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-snoopy-show",
@@ -9659,14 +8874,10 @@
           "season": 1,
           "title": "史努比秀第一季",
           "summary": "全球最具知名度的狗狗，即将成为镁光灯焦点！现在就和这只喜欢开心跳舞、想飞上蓝天和充满梦想的比格犬，还有它最好的朋友糊涂塌客，以及《花生漫画》的其他伙伴一起展开新的冒险吧！",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-snoopy-show/umc.cmc.5iswprrvjjw6ab020a17x4ca3?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "prehistoric-planet",
@@ -9707,14 +8918,10 @@
           "season": 1,
           "title": "史前星球",
           "summary": "该剧结合了野生动物电影制作技术和最新的古生物学知识，以独一无二的方式揭开古代地球壮观的动物栖息地的面纱。该剧集由 BBC Studios 自然历史部门的知名团队支持下制作。《史前星球》以白垩纪时代的环境为背景，描绘了海岸、沙漠、河流、冰雪世界和森林的场景，展示了鲜为人知且令人惊讶的恐龙生活。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "high-desert",
@@ -9782,14 +8989,10 @@
           "season": 1,
           "title": "高地沙漠",
           "summary": "Peggy, a former addict, who decides to make a new start after the death of her beloved mother with whom she lived in the small desert town of Yucca Valley, California, makes a life-changing decision to become a private investigator.",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/high-desert/umc.cmc.1c4fnxk415p7l3eumcqholxn8/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "still-a-michael-j-fox-movie",
@@ -9838,12 +9041,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/still-a-michael-j-fox-movie/umc.cmc.njewt06q05vqbgp6w42pqb0l/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "city-on-fire",
@@ -9861,12 +9059,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/city-on-fire/umc.cmc.r6vntb5r9wwbjwtt58xmyuz9/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "harriet-the-spy",
@@ -9919,20 +9112,17 @@
           "season": 1,
           "title": "超级侦探海莉",
           "summary": "一个好奇的11岁女孩，为了成为职业作家，她寻求了解一切。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "超级侦探海莉第二季",
           "summary": "11岁女孩海莉个性坦率又拥有无尽好奇心。但如果她未来想成为作家海莉威尔许，就必须无所不知。要无所不知，就代表她得监视…所有人。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/harriet-the-spy/umc.cmc.3gx9h3d2f823gl8pvpippy5p9",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "ghosted",
@@ -9992,12 +9182,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/ghosted/umc.cmc.6nodv9rf3ltfk2ar3pfc8hced/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "big-beasts",
@@ -10037,14 +9222,10 @@
           "season": 1,
           "title": "巨兽",
           "summary": "从冰冻极地到热带雨林，认识自然界最迷人的巨兽，它们证明了庞大体型也会带来巨大挑战。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/big-beasts/umc.cmc.7d9yulmth1rvkwpij477qsqsk?ctx_brand=tvs.sbd.4000/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "boom-boom-the-world-vs-boris-becker",
@@ -10062,12 +9243,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/boom-boom-the-world-vs-boris-becker/umc.cmc.nrpql3y16pqdot7foyan3z52/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "schmigadoon",
@@ -10086,12 +9262,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/schmigadoon/umc.cmc.1tqmf2znhr4oui4vo69ircyui?ctx_brand=tvs.sbd.4000/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "tetris",
@@ -10152,12 +9323,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/tetris/umc.cmc.4evmgcam356pzgxs2l7a18d7b",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "my-kind-of-country",
@@ -10175,12 +9341,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/my-kind-of-country/umc.cmc.k3xdiqrkcoln2fa2ikksndt0",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "extrapolations",
@@ -10256,14 +9417,10 @@
           "season": 1,
           "title": "外推",
           "summary": "Apple TV+预定气候变化题材诗选类剧集《外推》。本剧来自《秘密特工》编剧Scott Z. Burns，他将担任编剧、导演和执行制片。剧集会讲述私人且意料之外的故事，地球面临的变化是如何在个人和人类层面影响着我们的爱、信仰、工作及家庭。通过8集有内在关联的故事呈现，每个故事都将追踪21世纪以来，世界各地为了我们共同生存而进行的斗争。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/extrapolations/umc.cmc.4uoqxmxlnipm9zsc88bkjyjx4",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "monster-factory",
@@ -10309,14 +9466,10 @@
           "season": 1,
           "title": "怪物工厂",
           "summary": "该剧讲聚焦职业摔角培训机构「怪物工厂」，讲五个摔角手努力进入WWE的故事。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/monster-factory/umc.cmc.38kf4x2lvqiqdb0up8kcptnd",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "real-madrid-until-the-end",
@@ -10334,12 +9487,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/real-madrid-until-the-end/umc.cmc.39sq1w84s2idx8xyyrpxrl89a/",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-problem-with-jon-stewart",
@@ -10357,12 +9505,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-problem-with-jon-stewart/umc.cmc.4fcexvzqezr25p9weks6sxpob",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "liaison",
@@ -10380,12 +9523,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/liaison/umc.cmc.62t13xacr3mxnit5a40g8tkla",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "pretzel-and-the-puppies",
@@ -10404,12 +9542,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "sharper",
@@ -10466,12 +9599,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/sharper/umc.cmc.5ud0ivpwgqw2st0u4z73gwpar/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "make-or-break",
@@ -10507,20 +9635,17 @@
           "season": 1,
           "title": "与浪争锋第一季",
           "summary": "进入职业冲浪选手的世界，并跟随顶尖高手征战全世界，争取世界冠军的头衔。本纪录片影集以前所未有的方式近距离跟拍运动员们的比赛生涯，与他们为了登上巅峰所做出的牺牲。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "与浪争锋第二季",
           "summary": "进入职业冲浪选手的世界，并跟随顶尖高手征战全世界，争取世界冠军的头衔。本纪录片影集以前所未有的方式近距离跟拍运动员们的比赛生涯，与他们为了登上巅峰所做出的牺牲。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/make-or-break/umc.cmc.6oubrn858v7d76sut4mx52i3x",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "hello-tomorrow",
@@ -10583,14 +9708,10 @@
           "season": 1,
           "title": "明天你好",
           "summary": "Follows a group of traveling salesmen hawking lunar timeshares.",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/hello-tomorrow/umc.cmc.6lknbhv5dcfx8lfe8ghqmy4ma/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "dear-edward",
@@ -10659,14 +9780,10 @@
           "season": 1,
           "title": "亲爱的爱德华",
           "summary": "由费舍尔·史蒂文斯执导，科林·奥布莱恩、康妮·布里顿、泰勒·席林主演的苹果 Apple TV+ 原创剧，根据美国作家安·纳波利塔诺在2020年发布的同名小说改编。它讲述了一个 12 岁男孩的故事，他是飞机失事的唯一幸存者，飞机失事导致其他 191 名乘客死亡，其中包括主角的家人。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dear-edward/umc.cmc.2rp99884b0rpc42alv86h960b/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "pinecone-and-pony",
@@ -10685,12 +9802,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/pinecone--pony/umc.cmc.2jwlalsi34m25fcfljpvk990r?ctx_brand=tvs.sbd.4000",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "truth-be-told",
@@ -10753,26 +9865,24 @@
           "season": 1,
           "title": "直言真相第一季",
           "summary": "欢迎走进iTunes大热真实罪案播客的台前幕后。19年前关于伯曼入室谋杀案的两篇调查报道，让时任《纽约时报》记者波碧·帕内尔（屋大维娅·斯宾塞 饰）声名大噪。现如今面对受害人女儿证词受人教导的新证据，主持热门真实罪案播客的她良心难泯决定重启调查——当年17岁入狱服刑至今的沃伦·凯夫（亚伦·保罗 饰）到底是否真如其母所说的那样清白无辜蒙冤受过？",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "直言真相第二季",
           "summary": "虽然影评不佳，但Apple TV+的限定剧《#真相大白# Truth Be Told》仍然获宣布续订第二季。在新季中播客主Poppy Parnell（Octavia Spencer饰）将会去调查另一宗案件。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "直言真相第三季",
           "summary": "Apple TV+ announced that the NAACP Image Award-winning mystery anthology series “Truth Be Told,” starring and executive produced by Academy Award winner Octavia Spencer, has been renewed for a third season. Created and executive produced by Nichelle Tramble Spellman, season three of “Truth Be Told” will be helmed by Maisha Closson (“Claws,” “How to Get Away with Murder”), who w...",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/truth-be-told/umc.cmc.6hegr60w8pjyfcblgocjek7oo",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "servant",
@@ -10827,32 +9937,31 @@
           "season": 1,
           "title": "灵异女仆第一季",
           "summary": "讲述一对夫妻因其幼小的孩子死去，十分伤心，婚姻也出现裂痕，妻子把一个假娃娃养在家里，还请了保姆，家中却发生了神秘的事：找来的小保姆也把这个孩子当成活的婴儿一般对待，更多怪事发生……到底该信故事的哪一个版本？",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "灵异女仆第二季",
           "summary": "See why the masters of mystery, critics, and fans alike have embraced Servant. Season 2 arrives January 15 on Apple TV+From M. Night Shyamalan, Servant follows a Philadelphia couple in mourning after an unspeakable tragedy creates a rift in their marriage and opens the door for a mysterious force to enter their home.",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "灵异女仆第三季",
           "summary": "第三季将自上季结尾的三个月后讲起，随着乔瑟芬婶婶去世后，莉安始终摆脱不了阴影，疑神疑鬼的现象也越来越严重。至于已接回男婴的透纳一家则期望过着正常的生活，这个心愿看来遥遥无期。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         },
         {
           "season": 4,
           "title": "灵异女仆第四季",
           "summary": "From M. Night Shyamalan, Servant follows a Philadelphia couple in mourning after an unspeakable tragedy creates a rift in their marriage and opens the door for a mysterious force to enter their home.",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/servant/umc.cmc.4y25wuby7pck9o6vaubbbk7gb",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "super-league-the-war-for-football",
@@ -10892,14 +10001,10 @@
           "season": 1,
           "title": "欧洲超级联赛足坛风暴",
           "summary": "足球的过去、现在和未来因为分离联赛计画的出现而发生了衝撞。这项运动中最有权势的领导人们得捍卫或颠覆这项运动的传统。",
-          "year": "2023"
+          "year": "2023",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/super-league-the-war-for-football/umc.cmc.744k10sqewo1m6taxvt8rcnhy/",
-        "year": "2023"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "helpsters",
@@ -10917,12 +10022,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2023"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-boy-the-mole-the-fox-and-the-horse",
@@ -10961,12 +10061,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-boy-the-mole-the-fox-and-the-horse/umc.cmc.2aenzye90tqkj7iy0131oom9x",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "emancipation",
@@ -11018,12 +10113,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/emancipation/umc.cmc.1j6fdxookwtqml3bd8ivvcbbv",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "little-america",
@@ -11086,14 +10176,10 @@
           "season": 1,
           "title": "小美国",
           "summary": "Apple TV+宣布成长诗选喜剧《小美国 Little America》将于20年1月17日上线，这部剧改编自Epic杂志里的真实故事，讲述美国移民们的幽默﹑浪漫﹑诚挚﹑令人惊讶的故事。主演包括Zachary Quinto﹑Haaz Sleiman﹑Meìlanie Laurent﹑Shaun Toub﹑Conphidance及Sherlilyn Fenn，本剧已续订第二季。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/little-america/umc.cmc.2ice8mlcn1zrtxf81e5ktwg8p",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "puppy-place",
@@ -11111,12 +10197,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/puppy-place/umc.cmc.6u8ovjqp61j46lx5cznidchhx",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "echo-3",
@@ -11134,12 +10215,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/echo-3/umc.cmc.mzqa5sj4m2i80g51cgu04i3j",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "spirited",
@@ -11199,12 +10275,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/spirited/umc.cmc.3lp7wqowerzdbej98tveildi3?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "circuit-breakers",
@@ -11269,14 +10340,10 @@
           "season": 1,
           "title": "奇想天开",
           "summary": "在这部科幻选集中，身处不远未来的学生经历了神秘事件，而他们的好奇心引发了混乱。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/circuit-breakers/umc.cmc.5yhan8dv6gc9ww55ua7z4dq5t",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "selena-gomez-my-mind-and-me",
@@ -11311,12 +10378,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/selena-gomez-my-mind--me/umc.cmc.39yw4dp13gshxq5bt9fsl0o5y/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "slumberkins",
@@ -11334,12 +10396,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-mosquito-coast",
@@ -11406,20 +10463,17 @@
           "season": 1,
           "title": "蚊子海岸第一季",
           "summary": "该剧根据贾斯汀·塞洛克斯的舅舅保罗·塞洛克斯创作的同名小说改编，讲述一名理想主义者（贾斯汀·塞洛克斯 饰）携全家定居在拉丁美洲的蚊子海岸，开辟了自己的乌托邦城市。而一场抢劫让一切毁于一旦。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "蚊子海岸第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-mosquito-coast/umc.cmc.5nghmxp88xe0qxhtlhfiu5r2h?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "causeway",
@@ -11474,12 +10528,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/causeway/umc.cmc.30p2zn6vd14159dorn1vo68el/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "louis-armstrongs-black-blues",
@@ -11537,12 +10586,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/louis-armstrongs-black--blues/umc.cmc.fj66nlndoybhmetv2a0dcarj",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "raymond-and-ray",
@@ -11592,12 +10636,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/raymond--ray/umc.cmc.3mkaxf4ege0ytr5ycan41jzjb?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "ghostwriter",
@@ -11644,26 +10683,24 @@
           "season": 1,
           "title": "幽灵写手第一季",
           "summary": "90年代同名儿童剧的重启作，讲述一个在小型书店的鬼魂把书中的虚构人物释放到现实世界时，四个孩子因此组合起来为鬼魂解决各种未了之事。",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "幽灵写手第二季",
           "summary": "本剧为90年代同名儿童剧的重启作，讲述一个在小型书店的鬼魂把书中的虚构人物释放到现实世界时，四个孩子因此组合起来为鬼魂解决各种未了之事。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "幽灵写手第三季",
           "summary": "一只幽灵在街坊中的书店出没，并开始将书本里的虚构角色释放到现实世界。一群朋友合力解开这刺激的谜团，调查这只幽灵有什么未竟之事。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/ghostwriter/umc.cmc.3z6okqcnxoo6ohte3k2z5vvrp",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "shantaram",
@@ -11729,14 +10766,10 @@
           "season": 1,
           "title": "项塔兰",
           "summary": "该剧改编自格里高利·大卫·罗伯茨2003年的同名畅销小说，讲述银行抢匪Lin Ford（查理·汉纳姆 饰）自澳洲越狱后逃往印度孟买，一场救赎之旅就此开启。Shantaram在印地语代表“和平之人”。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/shantaram/umc.cmc.atxsrive40xli3zh3uxjimut",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "hello-jack-the-kindness-show",
@@ -11754,12 +10787,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-greatest-beer-run-ever",
@@ -11815,12 +10843,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-greatest-beer-run-ever/umc.cmc.54tpvwt1vapino8t6kulcf2d1/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "get-rolling-with-otis",
@@ -11839,12 +10862,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/get-rolling-with-otis/umc.cmc.3tql7vmqfmedyw1ab7efys3z?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "wolfboy-and-the-everything-factory",
@@ -11931,20 +10949,17 @@
           "season": 1,
           "title": "狼小子的萬物工廠大冒險第一季",
           "summary": "威廉·沃尔夫并非普通的人类男孩。在精灵王国“万物工厂”的魔法世界里，他就是狼男孩。和新结识的精灵朋友们一起，他逐渐明白，自己丰富的想象力和无限的创造力拥有改变世界的力量。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "狼小子的萬物工廠大冒險第二季",
           "summary": "动画史诗《狼孩与万物工厂》第二季将卡西安·阿赫塔尔配音的狼孩带入万物工厂地下的全新境界，尼克斯试图引诱他堕入黑暗面。狼孩与精灵伙伴和新盟友一起，踏上了融合创造与毁灭力量的征程，并意识到正是与众不同才让他如此特别——而最终，改变世界的是那些怪人和梦想家。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/wolfboy-and-the-everything-factory/umc.cmc.6f1xxgn2dg52deawakawg20r9",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "sidney",
@@ -11996,12 +11011,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/sidney/umc.cmc.3bz66deer36yb164foftii9pe",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "central-park",
@@ -12076,26 +11086,24 @@
           "season": 1,
           "title": "中央公园第一季",
           "summary": "苹果预订首部动画剧集《中央公园》(Central Park，暂译)。该剧两季，每季13集，洛伦·鲍查德(《开心汉堡店》)联手福斯TV打造，鲍查德、乔什·加德任编剧。故事围绕以中央公园为家并在那里工作的一家人展开。配音卡司包括克里斯汀·贝尔、乔什·加德、斯坦利·图齐、戴维德·迪格斯、小莱斯利·奥多姆、凯瑟琳·哈恩。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "中央公园第二季",
           "summary": "《中央公园》获Apple TV+续订第三季。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "中央公园第三季",
           "summary": "In this animated musical comedy, Owen Tillerman and his family live an unconventional life in New York’s bustling Central Park, which Owen manages. Now, they’ll have to fend off a wealthy hotel heiress who wants to turn the park into condos. The series comes from Emmy® Award-winner Loren Bouchard (Bob’s Burgers) with voice cast including Josh Gad, Leslie Odom Jr., Emmy Raver-La...",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/central-park/umc.cmc.4qe3i11erof30x0vz8nwnjkw3",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "gutsy",
@@ -12113,12 +11121,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/gutsy/umc.cmc.6pt51gvtzprx3h060b7944s3k",
-        "year": "2011"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "life-by-ella",
@@ -12174,14 +11177,10 @@
           "season": 1,
           "title": "艾拉的青春日志2.0第一季",
           "summary": "在一次改变人生的经历后，13岁的艾拉渴望把握住每一天。当她学会珍惜每一刻的同时，她勇敢地面对以往内心的恐惧，并且鼓励他人也破除心里的畏惧。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/life-by-ella/umc.cmc.1suiyueh1ntwjtsstcwldofno",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "see",
@@ -12248,26 +11247,24 @@
           "season": 1,
           "title": "看见第一季",
           "summary": "该剧由《浴血黑帮》编剧斯蒂文·奈特担任制作人，弗朗西斯·劳伦斯([红雀])执导，奈特与劳伦斯共同操刀剧本。剧集讲述在未来的世界，人类失去了视力，社会必须找到新的方式来交流互动、捕猎与生存。一对有视力的双胞胎诞生，所有这一切都受到挑战。莫玛将饰演一个无所畏惧的战士、领导者和守护人。",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "看见第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "看见第三季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/see/umc.cmc.3s4mgg2y7h95fks9gnc4pw13m",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "surfside-girls",
@@ -12285,12 +11282,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/surfside-girls/umc.cmc.4371g2xacdr0wfs071dm3q30x",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "lucys-school",
@@ -12339,12 +11331,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/lucys-school/umc.cmc.45v5b3bbri53qgfjhirzrivp2?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "five-days-at-memorial",
@@ -12404,14 +11391,10 @@
           "season": 1,
           "title": "医院五日",
           "summary": "该剧改编自Sheri Fink的同名纪实文学，讲述新奥尔良一家医院里精疲力竭的护理人员在风暴过后被迫做出令人心碎的决定的故事。在卡特里娜飓风席卷新奥尔良后，当时新奥尔纪念医疗中心遭受洪水泛滥、电力中断、气温急升等问题，而医务人员在这种恶劣环境下被迫作出困扰他们未来多年的选择。医院最终有40名死者，其中有些患者被认为无法活下去，故安排了安乐死。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/five-days-at-memorial/umc.cmc.50agn5zbvuj7z70teq1p0pixn?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "luck",
@@ -12463,12 +11446,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/luck/umc.cmc.5w6fq1u39v7ozsdv3jkx0nrfs?ctx_brand=tvs.sbd.4000/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "amber-brown",
@@ -12522,14 +11500,10 @@
           "season": 1,
           "title": "安珀·布朗第一季",
           "summary": "“Amber Brown” is an unfiltered look at a girl finding her own voice through art and music in the wake of her parents’ divorce. The series will star Carsyn Rose (“The Rookie,” “Cousins for Life”) as Amber Brown, an everykid who is going through what many children experience, and making sense of her new family dynamic through her sketches and video diary. Sarah Drew (“Grey’s Anat...",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "best-foot-forward",
@@ -12573,14 +11547,10 @@
           "season": 1,
           "title": "大步向前走",
           "summary": "改编自残奥选手乔许李森德奎斯特 (Josh Sundquist) 真实故事，新锐童星罗根马米诺 (Logan Mamino) 出演，将其人生故事搬上荧幕的感人成长剧集",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/best-foot-forward/umc.cmc.2jx8ltni2dnxa5rxx7ip1mesm",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "duck-and-goose",
@@ -12598,12 +11568,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "black-bird",
@@ -12670,14 +11635,10 @@
           "season": 1,
           "title": "黑鸟2022",
           "summary": "詹姆斯·基内（塔伦·埃哲顿 饰）出生在芝加哥，是一名警察的儿子。他曾是一名出色的橄榄球球手，并朝着职业道路发展。而他犯的错使他被判10年监禁，无假释机会。检察官给他一个将功补过的机会，但风险很高。有一个叫拉里·霍尔（保罗·沃尔特·豪泽 饰）的人绑架和谋杀了一个15岁女孩，而这个女孩仅仅是他过往杀害的19名女性之一，由于证据不足，霍尔或将被释放，基内的任务就是在狱中让霍尔承认他的谋杀行为。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/black-bird/umc.cmc.30gx1y8nwthydkrvhqu156p3?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "cha-cha-real-smooth",
@@ -12731,12 +11692,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/cha-cha-real-smooth/umc.cmc.6loo9fah7vwj2zpp7ehactlpd?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "home",
@@ -12781,20 +11737,17 @@
           "season": 1,
           "title": "家园第一季",
           "summary": "苹果正式预定了首部纪录片剧集《家园》，共10集，Matthew Weaver（《冒牌家庭》《心碎度蜜月》）、Matt Tynauer（《华伦天奴：末代帝王》）、Corey Reese联合制作，带观众走进世界上最非凡的家庭建筑，揭开那些敢于想象和探索的建筑者们的幕后故事。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "家园第二季",
           "summary": "超创意新居：一部纪录片系列为观众提供了世界上最具创新性的房屋前所未有的外观，并揭示了敢于梦想和建造它们的有远见者的无限想象力。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/home/umc.cmc.5xjrgoblr5l5i1ypamtayuhe9",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "now-and-then",
@@ -12812,12 +11765,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/now-and-then/umc.cmc.1w3e47nmnt4o304oaauh4k2rm/",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "greatness-code",
@@ -12835,12 +11783,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/greatness-code/umc.cmc.4xpk6thd1574yu8hy2xdozyz6",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-essex-serpent",
@@ -12911,14 +11854,10 @@
           "season": 1,
           "title": "埃塞克斯之蛇",
           "summary": "本剧改编自Sarah Perry的同名小说，讲述刚丧偶的Cora Seaborne（Claire Danes 饰），从伦敦搬去了埃塞克斯郡，调查关于一条神秘之蛇的传闻。Cora与村里的牧师Will Ransome（Tom Hiddleston 饰）建立起了意料之外的纽带，但当悲剧来临时，当地人指控她吸引了这种神秘生物。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-essex-serpent/umc.cmc.1vyhx06lta7a21tshl8qitota/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "to-mom-and-dad-with-love",
@@ -12937,12 +11876,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/to-mom-and-dad-with-love/umc.cmc.3flhku7zffp93eqd53bqlzi04",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-big-conn",
@@ -12982,14 +11916,10 @@
           "season": 1,
           "title": "诈骗大师第一季",
           "summary": "深入事件背后，看他如何骗倒美国政府，犯下美国史上最大宗的福利金诈骗案。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-big-conn/umc.cmc.5nidhx69sm3a7gtv2a4k0l0lw",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "shining-girls",
@@ -13059,14 +11989,10 @@
           "season": 1,
           "title": "闪亮女孩",
           "summary": "本剧改编自Lauren Beukes的畅销小说《The Shinning Girls》。故事讲述Kirby Mazrachi（Elisabeth Moss饰），一位芝加哥记者，她从一次残忍的袭击中幸存了下来，但在追寻这个袭击者时，她发现自己的现实发生了巨大的变化。在了解到近期一起凶案跟自己情况相似后，Kirby和麻烦不断的资深记者Dan Velazquez（Wagner Moura饰）组成搭档，一起查明袭击者的身份。两人逐渐发现这些悬案有所关联，但他们的私人创伤和Kirby自己模糊不清的现实，导致袭击者总是抢先一步。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/shining-girls/umc.cmc.22xs4xobsimzy5qqdif0rhmdy?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-long-game-bigger-than-basketball",
@@ -13104,14 +12030,10 @@
           "season": 1,
           "title": "人生赛场比篮球重要的事",
           "summary": "五星高中生马库尔梅克是即将加人NBA选秀的潜力新秀，直到一场意外转折让他进入霍华大学。这出励志的纪录片影集记录马库尔的心路历程与决心，要在家人的协助下改写自己的故事。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-long-game-bigger-than-basketball/umc.cmc.6yrn30c9ab16ndqxwlld0tdi0?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "they-call-me-magic",
@@ -13129,12 +12051,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/they-call-me-magic/umc.cmc.67518fzfnhcjcajidzbpff8i5",
-        "year": "2024"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "its-the-small-things-charlie-brown",
@@ -13153,12 +12070,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/snoopy-presents-its-the-small-things-charlie-brown/umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3/",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "roar",
@@ -13239,14 +12151,10 @@
           "season": 1,
           "title": "咆哮第一季",
           "summary": "本剧基于Cecelia Ahern所著短篇小说，每个故事都从一个独特的女性视角讲述，探索自己生活中与众不同、荒谬的矛盾和问题，涵盖了各种各样的流派，共8集，每集半小时。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/roar/umc.cmc.2os8kmimhw58fqxcu7xcmx8hd/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "doug-unplugs",
@@ -13265,12 +12173,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/doug-unplugs/umc.cmc.3oxevpgaoqomu820s0e70ri75",
-        "year": "2022"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "wecrashed",
@@ -13346,14 +12249,10 @@
           "season": 1,
           "title": "初创玩家第一季",
           "summary": "本剧改编自6集播客《WeCrashed: The Rise and Fall of WeWork》，由Lee Eisenberg和Drew Crevello编剧，讲述共享办公室公司WeWork的崛起以及衰落。在不到十年内，WeWork从一个共享办公空间发展成为一个470亿美元的全球品牌。然后又在短短的一年之内，损失了400亿美元。到底发生了什么事？",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/wecrashed/umc.cmc.6qw605uv2rwbzutk2p2fsgvq9?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-last-days-of-ptolemy-grey",
@@ -13413,14 +12312,10 @@
           "season": 1,
           "title": "托勒密·格雷最后的日子",
           "summary": "一个91岁的男子，被家人和朋友甚至他自己所遗忘，即将深深陷入孤独和痴呆。而在有机会短暂重获记忆时，格雷身上发生了巨大的转变，他要利用自己宝贵的清明时间去揭开侄子的死的谜题，以及接受自己的过去。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-last-days-of-ptolemy-grey/umc.cmc.bj6odozsws1abio4bkiy69g5?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "dear",
@@ -13478,20 +12373,17 @@
           "season": 1,
           "title": "亲爱的第一季",
           "summary": "该剧集利用粉丝写给名人的信件，回顾这些极具影响力的人的生活。出镜的名人包括奥普拉·温弗瑞、格洛丽亚·斯泰纳姆、珍·古道尔、斯派克·李、林-曼努尔·米兰达、斯蒂夫·旺达、亚历山德拉·莱斯曼、雅拉·沙希迪等。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "亲爱的第二季",
           "summary": "Apple续订传记体剧集《亲爱的》第二季，本剧集以粉丝给名人写信的形式，来回顾每位嘉宾的人生际遇，第二季影视界嘉宾将会有简·方达、维奥拉·戴维斯、赛琳娜·戈麦斯、吴珊卓、比利·波特、艾娃·德约列等，共有十集。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dear/umc.cmc.3bcp1uw2craeu8lbc53h7i205",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "lincolns-dilemma",
@@ -13529,12 +12421,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/lincolns-dilemma/umc.cmc.7003fizrrxznfhz1s20vv7ewy?ctx_brand=tvs.sbd.4000/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "林肯的困境",
+          "summary": "Discover a side of Abraham Lincoln you’ve never seen before. Inspired by David S. Reynolds’s book “Abe: Abraham, Lincoln in his Times,” Lincoln’s Dilemma comes to Apple TV+ February 18.In this four-part docuseries, a diverse panel of historians and rare archival materials offer a more nuanced look into Abraham Lincoln's presidency.",
+          "year": "2022",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "the-sky-is-everywhere",
@@ -13582,12 +12477,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-sky-is-everywhere/umc.cmc.22xahad7xeqkok7u24xk0e788?ctx_brand=tvs.sbd.4000/",
-        "year": "2022"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "suspicion",
@@ -13653,14 +12543,10 @@
           "season": 1,
           "title": "怀疑",
           "summary": "乌玛·瑟曼将主演苹果新剧《怀疑》(Suspicion，暂译)。该剧卡司还包括昆瑙·内亚(《生活大爆炸》)、诺亚·艾默里奇(《美国谍梦》)、乔治娜·坎贝尔(《黑镜》)、伊莱耶斯·加贝尔(《天蝎》)、伊丽莎白·亨斯屈奇(《神盾局特工》)、安琪儿·库碧(《梅林传奇》)。剧集改编自以色列剧集《False Flag》，讲述21岁的利奥在纽约的一家大型高端旅馆被绑架，而且被拍成了视频，视频在网上引起了轰动。4名居住在这家酒店的英国人成为了主要被怀疑的对象。乌玛将饰演利奥的母亲，她是一位成功的商人。罗伯·威廉姆斯担任剧集运作人，克里斯·朗(《美国谍梦》)执导。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/suspicion/umc.cmc.64yj71dmrdihhmo96h0lgjmw5?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-tragedy-of-macbeth",
@@ -13718,12 +12604,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-tragedy-of-macbeth/umc.cmc.4wpfk1xmi22h3zyv4a10lj1tw",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "el-deafo",
@@ -13766,14 +12647,10 @@
           "season": 1,
           "title": "大耳朵超人",
           "summary": "短片讲述了在一座兔子小镇上小兔子Cece在小时候患上了一种严重疾病导致她失去了听力。失去听力之后的Cece不得不戴上助听器以及学习读唇语才能够正常的与人交流和进行日常生活。",
-          "year": "2022"
+          "year": "2022",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/el-deafo/umc.cmc.775eomzc9ljfk7bop9shbu7m0?ctx_brand=tvs.sbd.4000",
-        "year": "2022"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "swan-song",
@@ -13826,12 +12703,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/swan-song/umc.cmc.2u5ulzjcxh7e50uhichjjlsv6",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "snoopy-presents-for-auld-lang-syne",
@@ -13903,12 +12775,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/for-auld-lang-syne/umc.cmc.5xuo4simneuqt8ibn2kyskonu",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "mariahs-christmas-the-magic-continues",
@@ -13946,12 +12813,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/mariahs-christmas-the-magic-continues/umc.cmc.227bl4rudf84e4pwouml1lss0",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "twas-the-fight-before-christmas",
@@ -13970,12 +12832,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/twas-the-fight-before-christmas/umc.cmc.lvpflyaolcrevsfje3rt5l6p?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-line",
@@ -13993,12 +12850,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-line/umc.cmc.4u53f7zokr7g40tjj4gs61xbu/",
-        "year": "2019"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "snoopy-in-space",
@@ -14038,17 +12890,20 @@
       },
       "seasons": [
         {
+          "season": 1,
+          "title": "史努比太空历险记第一季",
+          "summary": "这部新动画讲述史努比去了太空总署后梦想当一个字航员，然后这梦想成为了事实，他和糊涂塌客被选中参加一个精英太空任务。",
+          "year": "2019",
+          "artwork": ""
+        },
+        {
           "season": 2,
           "title": "史努比太空历险记第二季普通话",
           "summary": "跟随史努比一起上天，并踏上外太空的全新征程吧！这一次，史努比仍将与查理·布朗、糊涂塌客以及花生大家族的孩子们一道，一起展开星际探索和发现的史诗级大冒险。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/snoopy-in-space/umc.cmc.12l86ri6vfjlimw2m8b8dzszs",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-shrink-next-door",
@@ -14066,12 +12921,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-shrink-next-door/umc.cmc.jov1gljmqnux0i15rbqsoyfk/",
-        "year": "2021"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "finch",
@@ -14111,12 +12961,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/finch/umc.cmc.47dkj9f2ho3h8dwxixflz65q5",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "dickinson",
@@ -14163,26 +13008,24 @@
           "season": 1,
           "title": "狄金森第一季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "狄金森第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         },
         {
           "season": 3,
           "title": "狄金森第三季",
           "summary": "第三季着眼于艾米莉·狄金森作为一名艺术家最富有成效的时期，发生在正在进行的美国内战和一场分裂她自己家庭的激烈战斗之间。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dickinson/umc.cmc.1ogyy5s2agasxa5qztabrlykn",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "dr-brain",
@@ -14230,14 +13073,10 @@
           "season": 1,
           "title": "头脑博士",
           "summary": "李善均将主演Apple TV+首个韩语原创剧集《头脑博士》(Dr. Brain，暂译)。该剧将由金知云([密探])自编自导，故事改编自同名人气网络漫画，讲述一位大脑科学家的故事，他沉迷于开发一种新的技术以探访大脑的意识和记忆。当他的家庭成为一场神秘事故的受害者，他的生活陷入困境。他利用自己的技术从妻子的大脑中获取记忆，拼凑出他的家庭究竟经历了什么，以及这些事情发生的原因。该剧由YG旗下影视公司Studioplex和Bound Entertainment制作，目前已经开拍，计划于今年晚些时候开播。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/dr-brain/umc.cmc.60vbrno9xpmmax8wmdo4ow05u",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-velvet-underground",
@@ -14281,12 +13120,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-velvet-underground/umc.cmc.69ic79cvvy80epfhz5efdgjjd/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "blush",
@@ -14322,12 +13156,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/blush/umc.cmc.5hwonajppobtrqy7f9bs7cf6y?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "come-from-away",
@@ -14373,12 +13202,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/come-from-away/umc.cmc.262n0v53nmotkz7ulzuuco7rq/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "911-inside-the-presidents-war-room",
@@ -14432,12 +13256,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "coda",
@@ -14499,12 +13318,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/coda/umc.cmc.3eh9r5iz32ggdm4ccvw5igiir?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "mr-corman",
@@ -14573,14 +13387,10 @@
           "season": 1,
           "title": "科曼先生",
           "summary": "失意的音乐家乔什·科曼在圣费尔南多谷公立学校教五年级，他的未婚妻梅根离他而去，高中朋友维克多搬来同住，科曼在焦虑、孤独和自我怀疑中成长。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/mr-corman/umc.cmc.2iams7vr2o0i6mtb6wm6r9q1n/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "watch-the-sound-with-mark-ronson",
@@ -14598,12 +13408,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/watch-the-sound-with-mark-ronson/umc.cmc.56ka6i8ccv7tsatj6nd1uo808/",
-        "year": "2021"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "fathom",
@@ -14639,12 +13444,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/fathom/umc.cmc.5dba56sgwst50iuh5h9uqpdsq/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "who-are-you-charlie-brown",
@@ -14686,12 +13486,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/who-are-you-charlie-brown/umc.cmc.7a7wj0y9l9p9z8dwz287j4wx3/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "home-before-dark",
@@ -14756,20 +13551,17 @@
           "season": 1,
           "title": "天黑请回家第一季",
           "summary": "一名小女孩和家人搬回父亲曾居住过的小镇，而她对真相的执着，让一桩陈年悬案重新浮出水面。 本剧取材自九岁小记者希尔迪·凯特·利沙克（Hilde Kate Lysiak）2016年写下的真实报导。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "天黑请回家第二季",
           "summary": "",
-          "year": ""
+          "year": "",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/home-before-dark/umc.cmc.5yqy2wv4w7l0v4x5mn3le8l1y",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "liseys-story",
@@ -14787,12 +13579,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/liseys-story/umc.cmc.34uwnqvp7211b9fl3vb25vled?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "1971-the-year-that-music-changed-everything",
@@ -14843,14 +13630,10 @@
           "season": 1,
           "title": "1971音乐改变世界的一年",
           "summary": "In a tumultuous era, 1971 would be a year of musical innovation and rebirth. Fueled by the political and cultural upheaval of the time, fresh talent exploded onto the scene, stars reached new heights, and boundaries expanded like never before. Watch 1971: The Year That Music Changed Everything, coming to Apple TV+ on May 21.This eight-part docuseries will take you back to the ...",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/1971-the-year-that-music-changed-everything/umc.cmc.6dkxf7hxdcaueu4jhe1wm2k2n?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-me-you-cant-see",
@@ -14893,12 +13676,15 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/the-me-you-cant-see/umc.cmc.4amwght1qtt8ioilwr0mgnf6d?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": [
+        {
+          "season": 1,
+          "title": "你看不见的我",
+          "summary": "奥普拉·温弗瑞、哈里王子联合监制的Apple TV+纪录剧集《你看不见的我》(The Me You Can’t See，暂译)将于5月21日开播。该剧嘉宾包括Lady Gaga、格伦·克洛斯、德玛尔·德罗赞等，奥普拉、哈里王子将与嘉宾们就心理健康问题展开讨论，嘉宾们也将分享自己的故事。",
+          "year": "2021",
+          "artwork": ""
+        }
+      ]
     },
     {
       "slug": "earth-at-night-in-color",
@@ -14916,12 +13702,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/earth-at-night-in-color/umc.cmc.37dvcdop7ub4m8tx9fnczl1a1",
-        "year": "2021"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "tiny-world",
@@ -14962,20 +13743,17 @@
           "season": 1,
           "title": "小小世界第一季",
           "summary": "该纪录影集由保罗·路德[ 蚁人 ]担任解说，以令人叹为观止的摄影技术，带领观众深入大自然，探索各种小型生物坚韧的生命力，见证这些鲜为人知的小英雄背后的故事。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         },
         {
           "season": 2,
           "title": "小小世界第二季",
           "summary": "保罗·路德担任旁白的纪录剧集《小小世界》第二季确定于4月16日登陆Apple TV+！第二季共6集，拍摄了200多个物种和3160个小时的镜头，展现地球上最小的生物的聪明才智和顽强的生命力。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/tiny-world/umc.cmc.1sid6bqjoez4sxonuulq12af7",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "the-year-earth-changed",
@@ -15020,12 +13798,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-year-earth-changed/umc.cmc.3fob3t7nfhehpb3ilgynzxmnu",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "calls",
@@ -15099,14 +13872,10 @@
           "season": 1,
           "title": "骇人来电",
           "summary": "本剧根据法国同名剧集改编，每集将以一连串的电话通话内容交织而成。创新的呈现方式，让观众抽丝剥茧，探索一桩毁灭性的事件，如何让一群陌生人陷入神秘而又令人惊慌失措的情境之中。",
-          "year": "2021"
+          "year": "2021",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/calls/umc.cmc.7hp8sparfsxo0l4f712f3mf2r?ctx_brand=tvs.sbd.4000",
-        "year": "2021"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "cherry",
@@ -15174,12 +13943,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/cherry/umc.cmc.40gvwq6hnbilmnxuutvmejx4r/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "billie-eilish-the-worlds-a-little-blurry",
@@ -15221,12 +13985,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/billie-eilish-the-worlds-a-little-blurry/umc.cmc.5waz3hfo9r1133t8arap8b6nq?ctx_brand=tvs.sbd.4000/",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "palmer",
@@ -15282,12 +14041,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/palmer/umc.cmc.40qrv09i2yfh8iilyi4s8vfi",
-        "year": "2021"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "losing-alice",
@@ -15337,14 +14091,10 @@
           "season": 1,
           "title": "迷失爱丽丝",
           "summary": "通过闪回和闪前，讲述了青春不再的电影导演Alice (Ayelet Zurer)，对年轻编剧Sophie (Lihi Kornowski)日益痴迷。后者黑暗而令人不安的剧本，似乎并不只是虚构故事那么简单。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/losing-alice/umc.cmc.1h3msl5cfif0fz9my2kgvtk36?ctx_brand=tvs.sbd.4000",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "wolfwalkers",
@@ -15397,12 +14147,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "mariah-careys-magical-christmas-special",
@@ -15453,12 +14198,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/mariah-careys-magical-christmas-special/umc.cmc.4dmcdxw4vbu5smkk8f44a1l3h",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "fireball-visitors-from-darker-worlds",
@@ -15497,12 +14237,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/fireball-visitors-from-darker-worlds/umc.cmc.4kxqi7mmx247xjrdfll0lsme1",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "becoming-you",
@@ -15542,14 +14277,10 @@
           "season": 1,
           "title": "成为你",
           "summary": "记录小朋友成长初期的故事",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/becoming-you/umc.cmc.2eln6544k8wo99s3vrdl5amwf",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "bruce-springsteens-letter-to-you",
@@ -15584,12 +14315,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/bruce-springsteens-letter-to-you/umc.cmc.1hij2tkngu40vo4bq3rejym8v",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "on-the-rocks",
@@ -15641,12 +14367,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/on-the-rocks/umc.cmc.1mydlea6wicrm013138speg6m",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "long-way-up",
@@ -15664,12 +14385,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/long-way-up/umc.cmc.1nv0tluok21c2f8549mdjqdnh",
-        "year": "2020"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "boys-state",
@@ -15705,12 +14421,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/boys-state/umc.cmc.1aatz9gwjhnpfqqt8noafagq",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-oprah-conversation",
@@ -15728,12 +14439,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2020"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "greyhound",
@@ -15798,12 +14504,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "little-voice",
@@ -15860,14 +14561,10 @@
           "season": 1,
           "title": "小声音",
           "summary": "该剧是献给纽约多元音乐的情书，围绕寻找自己真实的声音和使用它的勇气展开，讲述才华横溢的歌手贝丝·金在遭遇拒绝、爱情和复杂的家庭问题的同时，努力实现自己的梦想的故事。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/little-voice/umc.cmc.4x932osv992wjjdq7ce12za2r",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "dads",
@@ -15914,12 +14611,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/dads/umc.cmc.5voyewgcndqj0a3i9mp7hbloq",
-        "year": "2019"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "beastie-boys-story",
@@ -15955,12 +14647,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/beastie-boys-story/umc.cmc.6d0mrskjsusw2jd2d228p88c2",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "defending-jacob",
@@ -16022,14 +14709,10 @@
           "season": 1,
           "title": "捍卫雅各布",
           "summary": "波士顿西郊“全美最安全城市”牛顿，劳丽和安迪·巴伯原本平静祥和的家庭生活，因为爱子雅各布被控谋杀同学而从此陷入一片混乱。剧集改编自美国罪案小说家威廉·蓝迪（William Landay）2012年同名畅销作《永远没有的真相（Defending Jacob）》，由《美国队长》克里斯·埃文斯、《唐顿庄园》米歇尔·道克瑞和《小丑回魂》杰登·马泰尔领衔主演。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/defending-jacob/umc.cmc.5h5mr0shyyqqahqdv55ywyilr",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "fraggle-rock-rock-on",
@@ -16047,12 +14730,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "",
-        "year": "2020"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "here-we-are-notes-for-living-on-planet-earth",
@@ -16092,12 +14770,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/here-we-are-notes-for-living-on-planet-earth/umc.cmc.1j55m7c1krge4yhia6x4u5o48",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "oprah-talks-covid-19",
@@ -16115,12 +14788,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/oprah-talks-covid-19/umc.cmc.1xr8rwhaw9pkks7bvzy44dezt",
-        "year": "2020"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "the-banker",
@@ -16176,12 +14844,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-banker/umc.cmc.2f8qhsa039voq5x0iwn1eixj1",
-        "year": "2020"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "amazing-stories",
@@ -16256,14 +14919,10 @@
           "season": 1,
           "title": "惊异传奇",
           "summary": "爱德华·伯恩斯加盟苹果新版剧集《惊异传奇》。该剧由史蒂文·斯皮尔伯格打造，安培林TV、环球TV联合制作，苹果已预订10集。伯恩斯将在新剧一集中饰一名特工，该集导演马克·米罗(《权力的游戏》)，伯恩斯也将担任该集监制。老版《惊异传奇》曾于上世纪80年代中期播出过两季，由一系列具有科幻、恐怖、幽默等元素的故事组成，曾获12项艾美奖提名。",
-          "year": "2020"
+          "year": "2020",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/amazing-stories/umc.cmc.15p55n2osur6c56uam2gxhye3",
-        "year": "2020"
-      },
-      "chinesePending": false
+      ]
     },
     {
       "slug": "visible-out-on-television",
@@ -16281,12 +14940,7 @@
       "heroArtwork": "",
       "heroSource": "",
       "zh": null,
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/visible-out-on-television/umc.cmc.1zkna505r4jre6fh7mjcncio0",
-        "year": "2020"
-      },
-      "chinesePending": true
+      "seasons": []
     },
     {
       "slug": "hala",
@@ -16338,12 +14992,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/hala/umc.cmc.50urrw5kgscwaukyucgeuhyeq",
-        "year": "2019"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "the-elephant-queen",
@@ -16379,12 +15028,7 @@
         "metadataPolicy": "mainland-v1",
         "provenance": "reviewed_mainland_catalog"
       },
-      "seasons": [],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/movie/the-elephant-queen/umc.cmc.1ybrwww83rknjtwiuuemjfbvq",
-        "year": "2018"
-      },
-      "chinesePending": false
+      "seasons": []
     },
     {
       "slug": "oprah",
@@ -16425,14 +15069,10 @@
           "season": 1,
           "title": "奥普拉读书俱乐部",
           "summary": "这是一个贴近当代脉动的读书会，也是一扇通往不同世界的窗口。欢迎与欧普拉一起，和杰出作家真诚交流。每集节目都由欧普拉亲自选书，并与作家访谈，深入探讨书中议题。",
-          "year": "2019"
+          "year": "2019",
+          "artwork": ""
         }
-      ],
-      "officialIdentity": {
-        "watchUrl": "https://tv.apple.com/us/show/oprahs-book-club/umc.cmc.5h8lbz88c6dbjm6suhviylcui",
-        "year": "2019"
-      },
-      "chinesePending": false
+      ]
     }
   ],
   "complete": true,

@@ -28,7 +28,7 @@ jobs:
           python-version: '3.12'
       - run: pip install requests Pillow opencc-python-reimplemented
       - run: python -m unittest discover -s tests -v
-      - name: Collect weekly, manual sync forces a new check
+      - name: Collect daily with verified season discovery
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
         run: python scripts/catalog.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
       - run: python scripts/catalog.py --validate
@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          git add docs
+          git add docs data/season-cache.json
           git diff --cached --quiet || git commit -m 'catalog: update verified metadata and images'
           git push
       - uses: actions/configure-pages@v5
