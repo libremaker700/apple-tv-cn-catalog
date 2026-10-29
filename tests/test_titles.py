@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import catalog,title_lookup as t
-from title_sources import wiki_patch,structured_patch
+from title_sources import wiki_patch,structured_patch,bangumi_patch
 
 NOW=datetime(2026,10,30,tzinfo=timezone.utc)
 ENTRY={'slug':'manhunt','en':'Manhunt','kind':'series','releaseDate':'2024-03-15','seasonNumber':1,
@@ -26,6 +26,13 @@ class Session:
     def post(self,url,**kwargs):self.auth.append(kwargs['headers']['Authorization']);return Reply(self.statuses.pop(0))
 
 class Titles(unittest.TestCase):
+    def test_web_animation_and_exact_season(self):
+        ref={'english_title':'WondLa','kind':'anime','year':'2024'}
+        subject={'id':497641,'name':'WondLa','name_cn':'寻家','date':'2024-06-28','type':2,'platform':'WEB'}
+        self.assertEqual(bangumi_patch(ref,subject,'now')['display_name_zh'],'寻家')
+        self.assertIsNone(bangumi_patch(ref,dict(subject,name='WondLa Season 2',date='2025-04-25'),'now'))
+        self.assertIsNone(bangumi_patch(ref,dict(subject,type=1),'now'))
+        e=dict(ENTRY,genres=['animation','kids & family']);self.assertEqual(t.record(e,{})['kind'],'anime')
     def test_identity_requires_original_year_and_type(self):
         ref={'english_title':'Manhunt','kind':'tv','year':'2024','display_name_zh':''}
         page={'extract':'《追捕刺客》（Manhunt）是一部2024年美国电视剧。','fullurl':'https://zh.wikipedia.org/wiki/追捕刺客'}

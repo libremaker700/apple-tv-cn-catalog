@@ -51,7 +51,7 @@ def wiki_patch(record, page, checked_at):
 
 def bangumi_patch(record, subject, checked_at):
     expected = year(record)
-    if record.get('kind') != 'anime' or not expected or subject.get('type') != 2 or subject.get('platform') != 'TV':
+    if record.get('kind') != 'anime' or not expected or subject.get('type') != 2 or subject.get('platform') not in ('TV','WEB'):
         return None
     if str(subject.get('date', ''))[:4] != str(expected):
         return None
