@@ -61,8 +61,17 @@ def collect(previous):
                  seasonNumber=int(re.search(r'\d+',r.get('seasonDisplay','')).group()) if re.search(r'\d+',r.get('seasonDisplay','')) else 1,
                  version=r.get('releaseDateISOString','')+'|'+r.get('seasonDisplay',''))
         im=r['image'];source='https://www.apple.com'+im['dirpath']+im['name']+'.medium.'+im['type']
-        assert source.startswith('https://www.apple.com/tv-pr/shows-and-films/')
-        e['artwork']=save_image(get(source).content);e['sourceArtwork']=source
+        assert re.match(r'https://www\.apple\.com/(?:[a-z]{2}/)?tv-pr/shows-and-films/',source)
+        candidates=[source]
+        # Apple's regional Napoleon record includes a filename extension in `name`.
+        if im['name'].endswith('.'+im['type']):
+            candidates=[source.rsplit('.'+im['type']+'.medium.',1)[0]+'.medium.'+im['type'],'https://www.apple.com'+im['dirpath']+im['name'],source]
+        error=None
+        for candidate in candidates:
+            try:e['artwork']=save_image(get(candidate).content);source=candidate;error=None;break
+            except Exception as exc:error=exc
+        if error:raise RuntimeError('Official artwork failed: '+slug) from error
+        e['sourceArtwork']=source
         if e.get('heroArtwork') and (prior!=e['version'] or old.get(slug,{}).get('sourceArtwork')!=source):
             e['heroArtwork']=save_image(get(source.replace('.medium.','.large_2x.')).content)
         if not e.get('zh') or prior!=e['version']:
