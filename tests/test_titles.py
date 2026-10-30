@@ -86,6 +86,21 @@ class Titles(unittest.TestCase):
                 r=t.run(root,force=True,monthly_limit=0,clock=NOW,client=client);self.assertEqual(client.calls,0);self.assertEqual(r['searched'],0);pub.assert_not_called()
                 self.assertEqual(r['budget_deferred'],1)
                 self.assertEqual(t.read(root/'data/title-cache.json',{})['records'],{})
+    def test_upcoming_title_can_be_verified_without_enabling_playback(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);upcoming=copy.deepcopy(ENTRY)
+            upcoming.update(releaseDate='2027-03-15',upcoming=True,officialIdentity={'year':'2027','watchUrl':ENTRY['zh']['watchUrl']})
+            upcoming['zh']['date']='2027-03-15'
+            t.dump(root/'docs/catalog.json',{'entries':[upcoming]});t.dump(root/'docs/version.json',{'checked_at':123})
+            client=Fake()
+            with patch.object(t,'publish') as publish:
+                report=t.run(root,force=True,clock=NOW,client=client)
+                self.assertEqual(client.calls,1);self.assertEqual(report['attempted'],1)
+                result=publish.call_args.args[0]['entries'][0]
+                self.assertEqual(result['zh']['title'],PATCH['display_name_zh'])
+                for key in ('upcoming','releaseDate','seasons','artwork','officialIdentity'):
+                    self.assertEqual(result[key],upcoming[key])
+                self.assertEqual(result['zh']['date'],'2027-03-15')
     def test_daily_queue_accepts_new_work_without_retrying_pending_record(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);t.dump(root/'docs/catalog.json',{'entries':[ENTRY]});t.dump(root/'docs/version.json',{'checked_at':123})

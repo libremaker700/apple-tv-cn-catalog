@@ -3145,6 +3145,55 @@
         "status": "pending_review"
       },
       "next_retry_at": "2026-11-29T04:50:48+00:00"
+    },
+    "860dddd9150d991ffda7b9dd81e15c19316616e6b620eb7c2f414e603adaeffe": {
+      "identity": {
+        "slug": "being-heumann",
+        "english_title": "Being Heumann",
+        "kind": "movie",
+        "year": "2026",
+        "official_id": "umc.cmc.5gf63v7zj97yiozkpj26lpy55"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "verified",
+      "checked_at": "2026-10-30T05:59:08+00:00",
+      "evidence": {
+        "status": "manually_reviewed_primary_sources",
+        "review": {
+          "douban_title": "成为休曼",
+          "original_title": "Being Heumann",
+          "festival_year": 2026,
+          "douban_director": "夏安·海德",
+          "official_director": "Siân Heder",
+          "official_release_date": "2026-11-13"
+        },
+        "sources": [
+          "https://movie.douban.com/awards/tiff/51/nominees?k=a",
+          "https://www.apple.com/tv-pr/originals/being-heumann/"
+        ],
+        "subject_detail_read": false
+      },
+      "patch": {
+        "display_name_zh": "成为休曼",
+        "aliases_zh": [
+          "成为休曼"
+        ],
+        "metadataPolicy": "mainland-v1",
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-30T05:59:08+00:00",
+        "sources": [
+          {
+            "type": "douban_awards_title",
+            "url": "https://movie.douban.com/awards/tiff/51/nominees?k=a",
+            "retrieved_at": "2026-10-30T05:59:08+00:00"
+          },
+          {
+            "type": "apple_official_identity",
+            "url": "https://www.apple.com/tv-pr/originals/being-heumann/",
+            "retrieved_at": "2026-10-30T05:59:08+00:00"
+          }
+        ]
+      }
     }
   },
   "budgets": {

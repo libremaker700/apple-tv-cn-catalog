@@ -99,8 +99,8 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if slugs and e['slug'] not in slugs:output.append(e);continue
         if not ident['year'] or (old.get('query_version')==QUERY_VERSION and old.get('next_retry_at','')>checked) or report['attempted']>=limit:
             output.append(e);continue
-        if e.get('releaseDate','')>clock.date().isoformat() and e.get('seasonNumber',1)==1:
-            output.append(e);continue
+        # Mainland names can be verified before release. This queue only changes
+        # title fields; the app's independent release/playback gates stay intact.
         report['attempted']+=1;ref=record(e,hint);patch=None;evidence={'status':'direct_source'}
         if old.get('identity')==ident and old.get('evidence',{}).get('results'):
             patch=client.verify(ref,old['evidence']['results'],checked)
