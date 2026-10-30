@@ -20,6 +20,16 @@ def image(url,w,h):
     import hashlib
     return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.jpg','width':w,'height':h}
 class HomePages(unittest.TestCase):
+    def test_shelf_art_precedes_generic_poster_and_detail_genres_win(self):
+        api=Fake()
+        for row in api.rows:
+            row['images']['shelfItemImage']={'url':'https://is1-ssl.mzstatic.com/image/thumb/shelf/{w}x{h}.{f}','width':1680,'height':3636}
+            row['genres']=[{'name':'Animation'},{'name':'Holiday'}]
+        urls=[]
+        value,_=collect({'entries':[]},api,lambda url,w,h:(urls.append((url,w,h))or image(url,w,h)))
+        self.assertTrue(all(row['artwork']==image('https://is1-ssl.mzstatic.com/image/thumb/shelf/400x600.jpg',400,600)['artwork'] for row in value['shelves'][1]['items']))
+        self.assertEqual(value['works'][0]['genres'],['Animation','Holiday'])
+
     def test_stage_background_is_used_even_when_its_native_ratio_is_four_by_three(self):
         api=Fake();calls=[]
         for row in api.rows:

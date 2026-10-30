@@ -122,6 +122,9 @@ def sync():
     from home_pages import collect as collect_official
     html=fetch(SOURCE).decode('utf-8')
     value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
+    from home_seasons import enrich as enrich_seasons
+    from catalog import get as season_get
+    report['channelSeasons']=enrich_seasons(value,ROOT,season_get,now)
     from home_titles import enrich
     enrich(value,ROOT,now)
     from reviewed_titles import apply_home

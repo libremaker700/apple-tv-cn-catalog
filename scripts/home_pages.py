@@ -29,7 +29,7 @@ def collect(catalog,api,image):
             details[identity]=value
         return details[identity]
     def art(it,w,h):
-        imgs=it.get('images',{});names=('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('posterArt','shelfItemImage','contentImageTall')
+        imgs=it.get('images',{});names=('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('shelfItemImage','posterArt','contentImageTall')
         def choose(images):
             for n in names:
                 x=images.get(n)or{};a=x.get('width',0);b=x.get('height',0)
@@ -54,7 +54,7 @@ def collect(catalog,api,image):
                 if year and year in years:entry=e;entries[identity]=e
         slug=entry['slug']if entry else'home-'+identity[8:]
         if identity not in works:
-            value={'slug':slug,'officialId':identity,'en':entry['en']if entry else en,'kind':kind,'watchUrl':watch_url(it['url'],identity,kind),'genres':[g['name']for g in it.get('genres',[])if g.get('name')]}
+            value={'slug':slug,'officialId':identity,'en':entry['en']if entry else en,'kind':kind,'watchUrl':watch_url(it['url'],identity,kind),'genres':[g['name']for g in (metadata(it).get('genres')or it.get('genres',[]))if g.get('name')]}
             if entry:value['knownCatalog']=True
             else:
                 detail=metadata(it);date=detail.get('releaseDate',it.get('releaseDate'))

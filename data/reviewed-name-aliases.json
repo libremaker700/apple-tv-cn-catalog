@@ -18,6 +18,24 @@
           "url": "https://movie.douban.com/awards/asa/14/nominees"
         }
       ]
+    },
+    {
+      "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
+      "en": "A Charlie Brown Thanksgiving",
+      "kind": "movie",
+      "year": 1973,
+      "title": "查理布朗的感恩节",
+      "aliases": [
+        "查理·布朗的感恩节",
+        "史努比的故事：查理布朗的感恩节",
+        "史努比的故事查理布朗的感恩节"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_display_evidence",
+          "url": "https://movie.douban.com/subject/5300042/"
+        }
+      ]
     }
   ]
 }

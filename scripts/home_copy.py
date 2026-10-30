@@ -6,7 +6,7 @@ from title_lookup import read,dump
 from gemini_titles import GeminiTitles
 
 VERSION='hero-copy-zh-cn-v2'
-GENRES={'Action':'动作','Adventure':'冒险','Animation':'动画','Classics':'经典','Comedy':'喜剧','Crime':'犯罪','Documentary':'纪录片','Drama':'剧情','Family':'家庭','Fantasy':'奇幻','History':'历史','Horror':'恐怖','Kids & Family':'儿童与家庭','Music':'音乐','Mystery':'悬疑','Romance':'爱情','Sci-Fi':'科幻','Sports':'体育','Thriller':'惊悚','War':'战争','Western':'西部'}
+GENRES={'Action':'动作','Adventure':'冒险','Animation':'动画','Classics':'经典','Comedy':'喜剧','Crime':'犯罪','Documentary':'纪录片','Drama':'剧情','Family':'家庭','Fantasy':'奇幻','History':'历史','Horror':'恐怖','Kids & Family':'儿童与家庭','Music':'音乐','Mystery':'悬疑','Romance':'爱情','Sci-Fi':'科幻','Sports':'体育','Thriller':'惊悚','War':'战争','Western':'西部','Holiday':'节日','Biography':'传记','Educational':'教育','Musical':'歌舞','News':'新闻','Reality':'真人秀','Short Films':'短片','Talk Show':'脱口秀','Travel':'旅行','War & Military':'战争与军事','Young Adult':'青少年'}
 RATINGS={'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-13','R','NC-17','NR'}
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()

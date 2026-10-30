@@ -1,0 +1,164 @@
+{
+  "records": {
+    "umc.cmc.iajaormpogjbe142ssfirdys": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.5hw7sbidma9vvaxvep3oo5wpf",
+          "officialEpisodeCount": 7,
+          "year": "2022",
+          "releaseDate": "2022-06-10",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 2,
+          "officialId": "umc.cmc.3is52ai1qalhex7dn4tymq1nk",
+          "officialEpisodeCount": 7,
+          "year": "2023",
+          "releaseDate": "2023-06-16",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.3xi33xb3r3xbxx4lssz8cswdr": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.22ebojm39y09klakkzr8cwof6",
+          "officialEpisodeCount": 6,
+          "year": "2020",
+          "releaseDate": "2020-04-24",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.1kt2wacwwoz0brw6duwve9hje": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.7jzt7toj4702ikjz1s331viz1",
+          "officialEpisodeCount": 13,
+          "year": "1983",
+          "releaseDate": "1983-09-17",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 2,
+          "officialId": "umc.cmc.419yfx68gy1z7d9ssirhwaxyy",
+          "officialEpisodeCount": 5,
+          "year": "1985",
+          "releaseDate": "1985-09-14",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.2m5fntzbjem6fhniurq8a17om": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.6707ed7hefmth0c6zes6tei7q",
+          "officialEpisodeCount": 24,
+          "year": "1983",
+          "releaseDate": "1983-01-10",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 2,
+          "officialId": "umc.cmc.42ccsbjfl0j997cxb6uu88f24",
+          "officialEpisodeCount": 24,
+          "year": "1984",
+          "releaseDate": "1984-01-02",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 3,
+          "officialId": "umc.cmc.5dg2k0n42e5u5oycxj61urmms",
+          "officialEpisodeCount": 24,
+          "year": "1985",
+          "releaseDate": "1985-01-07",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 4,
+          "officialId": "umc.cmc.4iywcv4jfar2bthx3apjk2aig",
+          "officialEpisodeCount": 24,
+          "year": "1986",
+          "releaseDate": "1986-01-20",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.3glsixv3225ngtbm57lq72oam": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.3rlmew9i6e5pv8tu9ufxqqefv",
+          "officialEpisodeCount": 6,
+          "year": "1988",
+          "releaseDate": "1988-10-28",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.ns4q9hpoj4b1749wbl7crwbl": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.x8vy3tnuw04v64ypyrczesvi",
+          "officialEpisodeCount": 19,
+          "year": "2006",
+          "releaseDate": "2006-03-03",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 2,
+          "officialId": "umc.cmc.48o2ztkow2j75ga29kl5sfrid",
+          "officialEpisodeCount": 20,
+          "year": "2007",
+          "releaseDate": "2007-10-23",
+          "metadataStatus": "verified"
+        },
+        {
+          "season": 3,
+          "officialId": "umc.cmc.6let0e03pxeky0uv4pljbm74o",
+          "officialEpisodeCount": 22,
+          "year": "2009",
+          "releaseDate": "2009-05-18",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.13c4zk3hpybm6u0cfk1x0vyi": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.4urlbe8bgp7rojw6l15ryzkzp",
+          "officialEpisodeCount": 10,
+          "year": "2004",
+          "releaseDate": "2004-10-18",
+          "metadataStatus": "verified"
+        }
+      ]
+    },
+    "umc.cmc.cal17ey3zhv2lx3xkzjqjstb": {
+      "checkedAt": 1793395757,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.3g65kl59lhyh4hucrl4fa5sqy",
+          "officialEpisodeCount": 10,
+          "year": "2007",
+          "releaseDate": "2007-10-28",
+          "metadataStatus": "verified"
+        }
+      ]
+    }
+  }
+}

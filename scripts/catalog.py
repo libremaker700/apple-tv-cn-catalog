@@ -134,7 +134,7 @@ def main():
         v=load(DOCS/'version.json');raw=(DOCS/v['catalog_path']).read_bytes();assert digest(raw)==v['catalog_sha256'];validate(json.loads(raw));print('PASS complete catalog and all image hashes');return
     if a.seed: publish(load(ROOT/'data/seed.json'),None,'bundled-reviewed-snapshot');return
     prior=load(DOCS/'catalog.json');manifest=load(DOCS/'version.json');last=manifest.get('checked_at') or 0
-    if not a.force and time.time()-last<20*3600: print('Not due; retain verified snapshot');return
+    if not a.force and time.time()-last<6*3600: print('Not due; retain verified snapshot');return
     value=collect(prior)
     from title_lookup import reapply_cache
     value=reapply_cache(value);publish(value,int(time.time()),'official-network-collection')
