@@ -1,37 +1,12 @@
 {
   "works": 377,
-  "translated": 7,
-  "cacheHits": 365,
-  "existingChinese": 5,
+  "translated": 0,
+  "cacheHits": 377,
+  "existingChinese": 0,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 2,
-  "usage": [
-    {
-      "promptTokenCount": 531,
-      "candidatesTokenCount": 564,
-      "totalTokenCount": 1095,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 531
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 274,
-      "candidatesTokenCount": 264,
-      "totalTokenCount": 538,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 274
-        }
-      ],
-      "serviceTier": "standard"
-    }
-  ],
+  "apiCalls": 0,
+  "usage": [],
   "errors": [],
   "ready": 377,
   "pending": 0
