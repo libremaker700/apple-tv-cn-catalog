@@ -20,6 +20,17 @@ def image(url,w,h):
     import hashlib
     return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.jpg','width':w,'height':h}
 class HomePages(unittest.TestCase):
+    def test_stage_background_is_used_even_when_its_native_ratio_is_four_by_three(self):
+        api=Fake();calls=[]
+        for row in api.rows:
+            row['images']['shelfImageBackground']['width']=4320
+            row['images']['shelfImageBackground']['height']=3240
+            row['images']['contentImage16X9']={'url':'https://is1-ssl.mzstatic.com/image/thumb/generic/{w}x{h}.{f}','width':1920,'height':1080}
+        def capture(url,w,h):
+            calls.append((url,w,h));return image(url,w,h)
+        collect({'entries':[]},api,capture)
+        self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/w0/1920x1080.jpg',1920,1080),calls)
+        self.assertNotIn(('https://is1-ssl.mzstatic.com/image/thumb/generic/1920x1080.jpg',1920,1080),calls)
     def value(self):return collect({'entries':[]},Fake(),image)[0]
     def test_seven_sections_and_complete_destination_counts(self):
         v=self.value();validate_pages(v)

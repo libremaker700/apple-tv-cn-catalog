@@ -33,7 +33,9 @@ def collect(catalog,api,image):
         def choose(images):
             for n in names:
                 x=images.get(n)or{};a=x.get('width',0);b=x.get('height',0)
-                if a and b and ((w>h and 1.6<a/b<1.9)or(w<h and .4<a/b<.8)):return x.get('url')
+                # Stage artwork may be 4:3; prefer it over generic title cards.
+                stage_background=w==1920 and h==1080 and n=='shelfImageBackground' and a and b and a>b
+                if stage_background or (a and b and ((w>h and 1.6<a/b<1.9)or(w<h and .4<a/b<.8))):return x.get('url')
         url=choose(imgs)
         if not url and it.get('type')in('Movie','Show'):url=choose(metadata(it).get('images',{}))
         if not url:raise ValueError('Missing native artwork '+str(it.get('title')))
