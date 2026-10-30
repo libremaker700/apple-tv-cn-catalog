@@ -58,6 +58,8 @@ def publish(catalog,checked_at,mode):
     value=copy.deepcopy(catalog)
     from reviewed_titles import apply_catalog
     value=apply_catalog(value,ROOT)
+    from work_summaries import apply_main
+    value=apply_main(value,ROOT)
     images={}
     for e in value['entries']:
         e.pop('seasonCheckedAt',None)

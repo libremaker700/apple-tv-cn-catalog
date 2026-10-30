@@ -87,7 +87,7 @@ class Translator:
             result[r['id']]=r['text'].strip()
         return result
 
-def enrich(home,raw,cache,translator,now):
+def enrich(home,raw,cache,translator,now,shared=None):
     out=copy.deepcopy(home);records=cache.setdefault('records',{});pending={};keys={};report={'requested':0,'cacheHits':0,'translated':0,'pending':0,'apiHttp':0,'retainedCopy':0,'sourceMissing':0}
     for row in out['hero']:
         if row['officialId']not in raw:
@@ -97,7 +97,7 @@ def enrich(home,raw,cache,translator,now):
             continue
         identity=row['officialId'];source=raw[identity];text=source['descriptionEn'];key=digest([VERSION,identity,text]);keys[identity]=key
         old=records.get(key,{})
-        if text and not valid_zh(old.get('text'))and now>=old.get('nextRetry',0):pending[identity]={'id':identity,'text':text}
+        if text and identity not in (shared or {}) and not valid_zh(old.get('text'))and now>=old.get('nextRetry',0):pending[identity]={'id':identity,'text':text}
         elif valid_zh(old.get('text')):report['cacheHits']+=1
     if pending:
         rows=list(pending.values())[:12];report['requested']=len(rows)
@@ -124,7 +124,8 @@ def process(home,root,html,now):
         identity=record['officialId'];source=raw.get(identity)
         if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
             cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
-    value,report=enrich(home,raw,cache,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now)
+    shared=read(root/'data/work-summary-cache.json',{}).get('works',{})
+    value,report=enrich(home,raw,cache,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now,shared)
     dump(path,cache);report.update(checkedAt=now,copyVersion=VERSION);dump(root/'logs/home-copy.json',report)
     return value,report
 

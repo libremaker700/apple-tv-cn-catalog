@@ -40,7 +40,7 @@ def validate_pages(value):
         assert not w.get('year')or re.fullmatch(r'(19|20)\d{2}',str(w['year']))
         if w.get('landscapeArtwork'):assert re.fullmatch(re.escape(BASE)+r'images/[a-f0-9]{64}\.jpg',w['landscapeArtwork'])
         if w.get('zh'):
-            zh=w['zh'];assert zh.get('metadataPolicy')==POLICY and zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])
+            zh=w['zh'];assert zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
     def rows(rows,w,h,topics=False):
         seen=set()
         for r in rows:

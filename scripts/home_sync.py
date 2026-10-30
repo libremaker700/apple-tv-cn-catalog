@@ -126,6 +126,8 @@ def sync():
     enrich(value,ROOT,now)
     from reviewed_titles import apply_home
     value=apply_home(value,ROOT)
+    from work_summaries import apply_home as apply_summaries
+    value=apply_summaries(value,ROOT)
     from home_copy import process
     value,copy_report=process(value,ROOT,html,now)
     report['copy']=copy_report
