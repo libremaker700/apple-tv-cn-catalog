@@ -4,7 +4,9 @@
   "translated": 0,
   "pending": 0,
   "apiHttp": 0,
-  "checkedAt": 1793382234,
+  "retainedCopy": 0,
+  "sourceMissing": 0,
+  "checkedAt": 1793385340,
   "copyVersion": "hero-copy-zh-cn-v2",
-  "version": "16ac234b540545bca48078571496a3f5db7b61e9caef7f8dda7381b495f2b123"
+  "version": "8f0fb1b7caa80238317568a495e3e1455fae17433c92c3cc654061133a5a7d2c"
 }
