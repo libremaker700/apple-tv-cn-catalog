@@ -339,10 +339,445 @@
           }
         ]
       }
+    },
+    "87f61ac2f85fc2aec9be0cc99ef0581a8e387724b2dd38ae25db83853eabf78b": {
+      "identity": {
+        "slug": "all-of-you",
+        "english_title": "All of You",
+        "kind": "movie",
+        "year": "2025",
+        "official_id": "umc.cmc.3hac5oqhh3gxiu35spyu8fanf"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "All of You 2025 电影  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "痴迷 (电影) - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E6%84%9B%E4%BD%A0%E8%87%B4%E6%AD%BB%E4%B8%8D%E6%B8%9D",
+            "score": 0.42176673,
+            "definition": "《痴迷》（英语：Obsession，香港、马来西亚、台湾译《爱你致死不渝》）是一部2025年美国超自然恐怖片，由库里·巴克编剧、执导兼剪辑，迈克尔·约翰斯顿与印达·纳瓦雷特主演，库柏·汤姆林森（英语：Cooper Tomlinson）、梅根·劳利斯（英语：Megan Lawless）及安迪·里克特出演配角。电影讲述唱片行店员贝尔（Bear，约翰斯顿饰演）透过一件超自然小物，实现了让青梅竹马妮基（Nikki，纳瓦雷特饰演）爱上自己的愿望，却引发一连串恐怖事件。",
+            "page_sha256": "fa85762f548bd7850791f703b3033352051c6015a6eb55eb76d9ca9fcfb24884"
+          },
+          {
+            "title": "愛你 (電視劇) - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E7%88%B1%E4%BD%A0_(%E7%94%B5%E8%A7%86%E5%89%A7)",
+            "score": 0.20098113,
+            "definition": "《愛你》（英語：The Best Thing，原名《愛你，是我做過最好的事》）是一部2025年播出的中國大陸都市愛情劇，改編自中國大陸作家笙離的小說《愛你，是我做過最好的事》，由愛奇藝出品、酷鯨影視聯合出品，張凌赫與徐若晗領銜主演。2025年2月25日起在愛奇藝戀戀劇場全網獨播，江蘇衛視獨家電視首播。",
+            "page_sha256": "651891c38bfd6a5393b95db80717035457edfcf8aa6822314e0b145ca3fd8ef9"
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-CN&sl=en&tl=zh-CN&text=",
+            "score": 0.079560205
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "308ea3832a310c17c57564df1b12cb4e23dbeb277ec52016486d98983c90424b": {
+      "identity": {
+        "slug": "bono-stories-of-surrender",
+        "english_title": "Bono: Stories of Surrender",
+        "kind": "movie",
+        "year": "2025",
+        "official_id": "umc.cmc.oxoxnpaecaatg9tzf6pgfsh2"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Bono: Stories of Surrender 2025 电影  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "博诺：关于投降的故事",
+            "url": "https://baike.baidu.com/item/%E5%8D%9A%E8%AF%BA%EF%BC%9A%E5%85%B3%E4%BA%8E%E6%8A%95%E9%99%8D%E7%9A%84%E6%95%85%E4%BA%8B/65576962",
+            "score": 0.6260562
+          },
+          {
+            "title": "波诺：救赎之路- 电影",
+            "url": "https://m.douban.com/movie/subject/37252237",
+            "score": 0.37724295
+          },
+          {
+            "title": "废柴天使(2025年电影) - 维基百科",
+            "url": "https://zh.wikipedia.org/zh-cn/%E6%8D%8D%E8%A1%9B%E5%A4%A9%E4%BD%BF_(2025%E5%B9%B4%E9%9B%BB%E5%BD%B1)",
+            "score": 0.10558828
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "828929aa78c1d1d8d2a7538b9594d6129c78ce4e97247b6735bb1fea3928541b": {
+      "identity": {
+        "slug": "boom-boom-the-world-vs-boris-becker",
+        "english_title": "Boom! Boom! The World vs. Boris Becker",
+        "kind": "series",
+        "year": "2023",
+        "official_id": "umc.cmc.nrpql3y16pqdot7foyan3z52"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Boom! Boom! The World vs. Boris Becker 2023 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "027848045e1bc7e81ae95246611dd9e32a083dde6a814c48b0c4a4c399fbd5d2": {
+      "identity": {
+        "slug": "born-to-be-wild",
+        "english_title": "Born to be Wild",
+        "kind": "series",
+        "year": "2025",
+        "official_id": "umc.cmc.5sgng9umkaa6mylh0k5kqsepp"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Born to be Wild 2025 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "天生狂野- 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E5%A4%A9%E7%94%9F%E7%8B%82%E9%87%8E",
+            "score": 0.2967108
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-CN&sl=en&tl=zh-CN&text=",
+            "score": 0.08103136
+          },
+          {
+            "title": "Lady Gaga - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/Lady_Gaga",
+            "score": 0.05771075,
+            "definition": "《超人气 \"超人气 (专辑)\")》The Fame（2008年；2009年再版为《超人气女魔头》The Fame Monster）",
+            "page_sha256": "1c50110095fdae391e76ce196bc62c414556577e81419d13d277cd360fbf4823"
+          },
+          {
+            "title": "浪漫匿名者- 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E6%B5%AA%E6%BC%AB%E5%8C%BF%E5%90%8D%E8%80%85",
+            "score": 0.054424554
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "14c83c572431c1bdaa7bd2c799cb3c7f921cd71de8b90094d5e1f4ec6fe007da": {
+      "identity": {
+        "slug": "camp-snoopy",
+        "english_title": "Camp Snoopy",
+        "kind": "series",
+        "year": "2024",
+        "official_id": "umc.cmc.4erhnrmkf9vgeojl3uryxsc0j"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "verified",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "status": "direct_source"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00",
+      "patch": {
+        "display_name_zh": "史努比露营大冒险",
+        "aliases_zh": [
+          "史努比露营大冒险"
+        ],
+        "metadataPolicy": "mainland-v1",
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-30T04:27:06+00:00",
+        "sources": [
+          {
+            "type": "bangumi_title",
+            "url": "https://bangumi.tv/subject/497403",
+            "retrieved_at": "2026-10-30T04:27:06+00:00"
+          }
+        ]
+      }
+    },
+    "d667f339b7eaba589975ba9dd1ca4249be52511482531b162222a38cbfd76941": {
+      "identity": {
+        "slug": "carpool-karaoke-the-series",
+        "english_title": "Carpool Karaoke: The Series",
+        "kind": "series",
+        "year": "2017",
+        "official_id": "umc.cmc.2wyy7chw6bmy46fekqlqq1ulb"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Carpool Karaoke: The Series 2017 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "拼车卡拉秀",
+            "url": "https://baike.baidu.com/item/%E6%8B%BC%E8%BD%A6%E5%8D%A1%E6%8B%89%E7%A7%80/19727279",
+            "score": 0.25938028
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "560fb3e4b9d9a1adef29677f3e37db27b49eeff73a4b3fa52fb785610c459831": {
+      "identity": {
+        "slug": "city-on-fire",
+        "english_title": "City on Fire",
+        "kind": "series",
+        "year": "2023",
+        "official_id": "umc.cmc.r6vntb5r9wwbjwtt58xmyuz9"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "City on Fire 2023 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "焰火之城",
+            "url": "https://baike.baidu.com/item/%E7%84%B0%E7%81%AB%E4%B9%8B%E5%9F%8E/62989961",
+            "score": 0.39936703
+          },
+          {
+            "title": "去有风的地方 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/wiki/%E5%8E%BB%E6%9C%89%E9%A3%8E%E7%9A%84%E5%9C%B0%E6%96%B9",
+            "score": 0.34224224,
+            "definition": "《去有风的地方》（英語：Meet Yourself），是一部2023年中国大陆电视剧。该剧由丁梓光执导，刘亦菲、李现主演，于2023年1月3日在湖南卫视首播，綜合收視為0.45，芒果TV同步網播。 台灣OTT由MyVideo、LINE TV、LiTV 線上影視於2023年1月3日起，同步跟播上架。",
+            "page_sha256": "06592a0e1f72ef2290546287160507016c950bd76f48a02f3678bcab0cc09758"
+          },
+          {
+            "title": "末日地堡 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E6%9C%AB%E6%97%A5%E5%9C%B0%E5%A0%A1",
+            "score": 0.22015837,
+            "definition": "《末日地堡》（英语：Silo），是一部美国后末日科幻电视剧，改编自休·豪伊的同名小说系列，第一季剧情改编自该系列的首部小说《羊毛记》，故事设定在一个反乌托邦未来，讲述一些人类在末日中幸存并住进筒仓型地堡重新建立文明的故事。该剧由葛瑞汉·尤斯特（英语：Graham Yost）主创，丽贝卡·弗格森主演兼出任执行制作人，其他主演包括拉什达·琼斯、大卫·奥伊罗、凡夫俗子、蒂姆·罗宾斯、哈里特·沃特（英语：Harriet Walter）、艾维·纳许、里克·戈麦斯和齐纳查·乌切（英语：Chinaza Uche）。",
+            "page_sha256": "151917ce79d1c09650820e34fa509283df49aeaa1bafffa711be5e319168b736"
+          },
+          {
+            "title": "他從火光中走來",
+            "url": "https://zh.wikipedia.org/zh-tw/%E4%BB%96%E5%BE%9E%E7%81%AB%E5%85%89%E4%B8%AD%E8%B5%B0%E4%BE%86",
+            "score": 0.15699492
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-cn&langpair=zh%7Cen",
+            "score": 0.068046756
+          },
+          {
+            "title": "紐約 - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E7%BA%BD%E7%BA%A6",
+            "score": 0.039449755
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "8f2afc974fa553149b006929bc73a082486be9586c512f27c4c6370a6be19312": {
+      "identity": {
+        "slug": "come-see-me-in-the-good-light",
+        "english_title": "Come See Me in the Good Light",
+        "kind": "movie",
+        "year": "2025",
+        "official_id": "umc.cmc.27uh51l7oh3ghql2gxb6xvb1s"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Come See Me in the Good Light 2025 电影  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "向光而行（纪录片）",
+            "url": "https://baike.baidu.com/item/%E5%90%91%E5%85%89%E8%80%8C%E8%A1%8C/67273334",
+            "score": 0.7997713
+          },
+          {
+            "title": "馮允謙 - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E9%A6%AE%E5%85%81%E8%AC%99",
+            "score": 0.29419518
+          },
+          {
+            "title": "國家影片登記表 - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E5%9C%8B%E5%AE%B6%E5%BD%B1%E7%89%87%E7%99%BB%E8%A8%98%E8%A1%A8",
+            "score": 0.21757884
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "8a48b201ce2ce2f279014d097935f2ab77250c469289b9072cf3b911a72c0b4c": {
+      "identity": {
+        "slug": "doug-unplugs",
+        "english_title": "Doug Unplugs",
+        "kind": "series",
+        "year": "2020",
+        "official_id": "umc.cmc.3oxevpgaoqomu820s0e70ri75"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Doug Unplugs 2020 电视动画  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "5219c3ea9cf6604337befa899cc8b9ab0af8e46682ffe66ee1fde67a074a8abb": {
+      "identity": {
+        "slug": "duck-and-goose",
+        "english_title": "Duck & Goose",
+        "kind": "series",
+        "year": "2022",
+        "official_id": "umc.cmc.qayvbuimq7lxab6y2cs9tbcj"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Duck & Goose 2022 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "妈妈咪鸭 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E5%A6%88%E5%A6%88%E5%92%AA%E9%B8%AD",
+            "score": 0.39452806,
+            "definition": "《妈妈咪鸭》（英语：Duck Duck Goose，台湾译《妈妈咪鸭》）是由克里斯·詹金斯 执导的2018年计算机动画喜剧电影，由吉姆·加菲根，赞达亚和卡尔·雷纳担任主角。",
+            "page_sha256": "5d7c7de324217f1bb9b0e6d64d39d25beadfaa1d54301d214009c6559cb0f826"
+          },
+          {
+            "title": "顧詠雪- 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E9%A1%A7%E8%A9%A0%E9%9B%AA",
+            "score": 0.050410144
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "6ef61e3cbb38bafc753d28b4d7df275e1c7194276cdd3611d2c1de0f5c689de8": {
+      "identity": {
+        "slug": "earth-at-night-in-color",
+        "english_title": "Earth At Night In Color",
+        "kind": "series",
+        "year": "2020",
+        "official_id": "umc.cmc.37dvcdop7ub4m8tx9fnczl1a1"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Earth At Night In Color 2020 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "金·凯瑞- 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E5%8D%A0%C2%B7%E5%9F%BA%E5%88%A9",
+            "score": 0.16020063
+          },
+          {
+            "title": "夜色中的地球第一季- 电视剧",
+            "url": "https://m.douban.com/movie/subject/35225593",
+            "score": 0.14578325
+          },
+          {
+            "title": "夜色中的地球第二季",
+            "url": "https://baike.baidu.com/item/%E5%A4%9C%E8%89%B2%E4%B8%AD%E7%9A%84%E5%9C%B0%E7%90%83%E7%AC%AC%E4%BA%8C%E5%AD%A3/59424987",
+            "score": 0.111715406
+          },
+          {
+            "title": "紐約 - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E7%BA%BD%E7%BA%A6",
+            "score": 0.05217782
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
+    },
+    "723f44514faf4cef176d5ba0ea331db1bbf09cabc461f3a04c3930b7f6ca6eeb": {
+      "identity": {
+        "slug": "echo-3",
+        "english_title": "Echo 3",
+        "kind": "series",
+        "year": "2022",
+        "official_id": "umc.cmc.mzqa5sj4m2i80g51cgu04i3j"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:27:06+00:00",
+      "evidence": {
+        "query": "Echo 3 2022 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "回声三号",
+            "url": "https://baike.baidu.com/item/%E5%9B%9E%E5%A3%B0%E4%B8%89%E5%8F%B7/62377430",
+            "score": 0.5843666
+          },
+          {
+            "title": "回声(电视剧) - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E8%BF%B4%E8%81%B2_(%E9%9B%BB%E8%A6%96%E5%8A%87)",
+            "score": 0.41805586
+          },
+          {
+            "title": "回聲女(電視劇) - 維基百科，自由的百科全書",
+            "url": "https://zh.wikipedia.org/zh-tw/%E8%BF%B4%E8%81%B2_(%E9%9B%BB%E8%A6%96%E5%8A%87)",
+            "score": 0.33921495
+          },
+          {
+            "title": "獅子山下的故事",
+            "url": "https://zh.wikipedia.org/zh-tw/%E7%8B%AE%E5%AD%90%E5%B1%B1%E4%B8%8B%E7%9A%84%E6%95%85%E4%BA%8B",
+            "score": 0.11021253
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:27:06+00:00"
     }
   },
   "budgets": {
-    "2026-10": 26
+    "2026-10": 37
   },
-  "last_run_at": "2026-10-29T18:54:32+00:00"
+  "last_run_at": "2026-10-30T04:27:06+00:00",
+  "last_policy": "mainland-v1"
 }
