@@ -730,16 +730,24 @@
       "model": "gemini-3.5-flash-lite"
     },
     "306c2887df628d2bb32755928c66add9b208d85b2e0808f6775bd9613971cf90": {
-      "nextRetry": 0
+      "text": "达斯蒂·“铁锤”·博伊德是一名过气的网球职业选手，非常需要一场胜利。为了拯救一家经营困难乡村俱乐部并赢得父亲的尊重，达斯蒂打破了神圣的誓言，做了一件不可思议的事：他去打匹克球了。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     },
     "e0ee7a7522aaffa80dbf82069e1065509f1f7794aa26bfd63a387c87bd1f5276": {
-      "nextRetry": 0
+      "text": "尼基和杰森梦寐以求的就是一个孩子——偏偏这是他们无法拥有的。于是他们决定领养。面对他们那不靠谱的朋友、戏剧化的亲戚和混乱的生活，这对夫妇能成功建立他们梦想中的家庭吗？",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     },
     "21f160375da76e3eff43e7695bf8632a73d9f8d9110ee1d0edbfdc5c237e2d3f": {
-      "nextRetry": 0
+      "text": "在发现自己的队伍面临解散的危险后，史努比和小猎犬侦察队出发前往广袤的户外去赢取徽章。与此同时，查理·布朗和朋友们在斯普林湖营地享受他们的夏天。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     },
     "00bd814af37e608af390cb2eba6e5215c1de32de1ee70461354b61b26698da2d": {
-      "nextRetry": 0
+      "text": "一位刚离婚的妈妈陷入了由勒索、谋杀和青少年足球交织而成的危险深渊。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     },
     "196f2c68a882e949a3eeade13ecf1dd4b42481146754ac5edb636329a93a6b98": {
       "text": "一次母女海外度假发生了毁灭性的转折，Gali因涉嫌藏毒被捕。她的母亲Orna拒绝接受这些指控，为寻求自由押上了一切——却反而陷入了Gali的秘密网络之中。",
@@ -1322,16 +1330,21 @@
       "model": "gemini-3.5-flash-lite"
     },
     "742503dc804de2ccd1223f0876b801b029035a075e3d675d63978f6b761d5510": {
-      "nextRetry": 0
+      "text": "安娜怀疑自己与伴侣的感情可能并不像想象中那么真实，为了改善关系，她开始在一家神秘的研究所工作，这里专门负责挑拨或测试那些怨偶间是否真的存在过浪漫的爱情。",
+      "method": "existing_chinese"
     },
     "0bb6dbbf99f9c0fa2b2cdb374f43e3db37c679b25608445b04f3b21fac0737f6": {
-      "nextRetry": 0
+      "text": "在一级方程式赛车迎来第 75 个年头之际，新秀们奋起直追，一支曾夺得冠军的车队陷入混乱，一场三方争夺世界冠军的较量正紧紧锁住整个发车区。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     },
     "89c1647c0452a66ded1560f6700e09c5296ea5e9ad9ee96b95a6819be57f6ebc": {
-      "nextRetry": 0
+      "text": "苹果宣布，它已获得令人敬畏的纪录片《Fathom》的全球版权，该片将于6月25日在Apple TV+上独家首映。 由德鲁·Xanthopoulos（“敏感人”）执导和拍摄，《Fathom》跟随Dr.艾伦·加兰和博士米歇尔·富内特，两位科学家专注于座头鲸歌曲和社交交流的研究。当他们在世界对立面开始平行的研究之旅时，他们寻求更好地了解鲸鱼文化和交流。这部纪录片独特地揭示了对科学pxrocess的深刻承诺和敬畏，以及人类寻求我们周围世界的答案的普遍需求。从假设到该领域的突破性经验，“法通”展示了领先科学家做出科学发现所需的激情、好奇心、合作、毅力和工作。",
+      "method": "existing_chinese"
     },
     "6567c2e4495d80eceecb6e8677c4395b43cf3c93c06301bc3311c8166cdc23e5": {
-      "nextRetry": 0
+      "text": "迈克尔·J·福克斯，一个来自加拿大的小子，成为了1980年代国际流行文化的宠儿。他的人生轨迹因惊人的诊断而改变。当无法治愈的乐观主义者面对无法治愈的疾病（帕金森氏症）时会发生什么事？",
+      "method": "existing_chinese"
     },
     "8e4e57666dd8e54002e27cf3f83e12d80ba46de4e56f6bf0dee8abf9b117b0fe": {
       "text": "奥斯卡金像奖®获得者埃罗尔·莫里斯（Errol Morris）揭开了大卫·康威尔（David Cornwell）传奇一生的神秘面纱。他曾是一名间谍，在文学界则以约翰·勒卡雷（John le Carré）之名广为人知。",
@@ -1575,6 +1588,62 @@
     },
     "9f44877298a843d5db0647962b963daebc4367cd2b901a88d07817955ea2f26c": {
       "text": "重温圣迭戈激动人心的官宣时刻，美国职业足球大联盟迎来其第三十家俱乐部。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "01b2314b4b9c8156897baf9d763c9b49e1e27c80c12dde9589ed8e82051f07aa": {
+      "text": "该剧结合了野生动物电影制作技术和最新的古生物学知识，以独一无二的方式揭开古代地球壮观的动物栖息地的面纱。该剧集由 BBC Studios 自然历史部门的知名团队支持下制作。《史前星球》以白垩纪时代的环境为背景，描绘了海岸、沙漠、河流、冰雪世界和森林的场景，展示了鲜为人知且令人惊讶的恐龙生活。",
+      "method": "existing_chinese"
+    },
+    "167d7ddd3a26494ab81018f5b147120a1acb6b3d1ce21d4b21b452dcf7827f71": {
+      "text": "查理·布朗热爱露营，决心让自己的最后一年过得特别。但第一次参加露营的莎莉却对这个陌生的新地方感到紧张和疑虑。就在大家安顿好营地时，史努比和伍德斯托克发现了一张藏宝图，这张地图指引他们踏上附近的野外探险之旅。",
+      "method": "existing_chinese"
+    },
+    "6eb5c954b97259d221a1a3572d63e417fd5e21c0ae7eb8c316f2caae4c9607d0": {
+      "text": "安静、善良、内向的Marcie有很多出色的想法来帮助她的朋友实现目标和解决问题。但当全世界都注意到她，聚光灯落在她身上时，分享这些想法就成了一项挑战。",
+      "method": "existing_chinese"
+    },
+    "344e17a522ed314b5a1224cdd7c66b2c8d7f5020b8632a342eae1fb48623630a": {
+      "text": "跟随史努比一起上天，并踏上外太空的全新征程吧！这一次，史努比仍将与查理·布朗、糊涂塌客以及花生大家族的孩子们一道，一起展开星际探索和发现的史诗级大冒险。",
+      "method": "existing_chinese"
+    },
+    "ac59c907ca582e960a3560eadea479e51417ce438798d2a43a49da1d15509823": {
+      "text": "在20世纪70年代的墨西哥，四名女性打破极保守的规范，加入了第一支女子警察部队——却发现这只是一场用于转移公众对连环杀手视线的噱头。随着尸体数量不断增加，她们誓言将凶手绳之以法。灵感源自真实事件。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "191bcbdc4e61d1024de93bbd494b469b05e65d3a25bcb3358ba74a911a4bf898": {
+      "text": "史努比心爱的狗屋失踪了，他试图将它找回，并懂得了是什么让一所房子有了家的感觉。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "b8dcbb1058dbec069e44ccd2c11c357a4ff94bec9865f6bda31b25450d732178": {
+      "text": "当打猎途中的朋友们与其它猎人发生致命冲突时，他们发誓保守秘密。但随着多疑情绪的滋生——以及一个冷酷无情的帮派寻求报复——朋友们必须面对他们的道德、家庭和野蛮本能。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "5c7075e9dcb48c2c3a3a117113d453d4db1aabbfa194f06a56235a6b41310c86": {
+      "text": "劳尔的世界正在瓦解。玛尔塔意外怀孕了。在一次葬礼上浪漫邂逅将他们聚在一起后，他们在生活和爱情的混乱中跌跌撞撞前行。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "d257be047ac95d919fd962bbfbc2155cb2fb19871bffcfa158cbda2612a3e810": {
+      "text": "一辆公共汽车被三名劫匪劫持，但他们在逃脱之前就丧命了。每位乘客的说法都一样：一个戴连帽衫的男人拯救了大家。随着案件的展开，英雄与罪犯之间的界限开始模糊。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "bf0c26ecf1c3a97c734c75739b49249b1eab944ec8219cf961d8d4aa310f27ce": {
+      "text": "富兰克林刚来到镇上，希望能交到朋友，但他惯用的伎俩在花生帮身上不管用。当肥皂盒车大赛到来时，他确信这是一个给新伙伴留下深刻印象的机会，于是与另一个落单的孩子查理·布朗组成了搭档。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "542ccf3ecc5a2b3de710e283622c952dd38e3ccc8b019e836b19f5b40164756c": {
+      "text": "在大学毕业前夕，六个最好的朋友踏上了一个史诗般的周末来庆祝，却发生了致命的转折。将近 20 年后，幸存者们因为一条威胁要揭露那个命运之夜真相的勒索短信而不情愿地重聚。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "f02bf17ced7989f7ebedcc5a7ad6dad0f17b05ef9fcea86d07c9d3153dbd5e4d": {
+      "text": "查理·布朗决心赢得这场重要的棒球比赛。但在比赛开始前不久，事情却成了一场惨剧：萨莉与投手丘上的一朵小花结下了不解之缘，并誓死保护它。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
     }
@@ -4167,6 +4236,159 @@
       "original": "Take a deeply personal look at extraordinary teenager Billie Eilish. Award-winning filmmaker R.J. Cutler follows her journey on the road, onstage, and at home with her family as the writing and recording of her debut album changes her life.",
       "hash": "9a8aa1c419b4882496330e87f2ec082a79e173aa82a745be48db02af2ed8fb73",
       "source": "https://tv.apple.com/us/movie/billie-eilish-the-worlds-a-little-blurry/umc.cmc.5waz3hfo9r1133t8arap8b6nq"
+    },
+    "umc.cmc.73wmdmkfpta5ul1vbwckmme39": {
+      "text": "在20世纪70年代的墨西哥，四名女性打破极保守的规范，加入了第一支女子警察部队——却发现这只是一场用于转移公众对连环杀手视线的噱头。随着尸体数量不断增加，她们誓言将凶手绳之以法。灵感源自真实事件。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In 1970s Mexico, four women defy ultraconservative norms and join the first female police force—only to discover it’s a publicity stunt to distract from a serial killer. As the body count grows, they vow to bring the killer to justice. Inspired by true events.",
+      "hash": "ac59c907ca582e960a3560eadea479e51417ce438798d2a43a49da1d15509823",
+      "source": "https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39"
+    },
+    "umc.cmc.52sgmi3vdpedurrbtz6louqqo": {
+      "text": "史努比心爱的狗屋失踪了，他试图将它找回，并懂得了是什么让一所房子有了家的感觉。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "When Snoopy’s beloved doghouse goes missing, he tries to track it down, and learns what makes a house feel like home.",
+      "hash": "191bcbdc4e61d1024de93bbd494b469b05e65d3a25bcb3358ba74a911a4bf898",
+      "source": "https://tv.apple.com/us/movie/theres-no-place-like-home-snoopy/umc.cmc.52sgmi3vdpedurrbtz6louqqo"
+    },
+    "umc.cmc.5tugaz9vt498ajn7q64ypaqxn": {
+      "text": "达斯蒂·“铁锤”·博伊德是一名过气的网球职业选手，非常需要一场胜利。为了拯救一家经营困难乡村俱乐部并赢得父亲的尊重，达斯蒂打破了神圣的誓言，做了一件不可思议的事：他去打匹克球了。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Dusty “The Hammer” Boyd, a washed-up tennis pro, could really use a win. On a quest to save a struggling country club and earn his father’s respect, Dusty breaks a sacred vow and does the unthinkable: He plays pickleball.",
+      "hash": "306c2887df628d2bb32755928c66add9b208d85b2e0808f6775bd9613971cf90",
+      "source": "https://tv.apple.com/us/movie/the-dink/umc.cmc.5tugaz9vt498ajn7q64ypaqxn"
+    },
+    "umc.cmc.6muy4la7lj1omu5nci4bt2m66": {
+      "text": "尼基和杰森梦寐以求的就是一个孩子——偏偏这是他们无法拥有的。于是他们决定领养。面对他们那不靠谱的朋友、戏剧化的亲戚和混乱的生活，这对夫妇能成功建立他们梦想中的家庭吗？",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "All Nikki and Jason want is a baby—the one thing they can’t have. So they decide to adopt. With their dysfunctional friends, dramatic relatives, and chaotic lives, will the couple succeed in building the family of their dreams?",
+      "hash": "e0ee7a7522aaffa80dbf82069e1065509f1f7794aa26bfd63a387c87bd1f5276",
+      "source": "https://tv.apple.com/us/show/trying/umc.cmc.6muy4la7lj1omu5nci4bt2m66"
+    },
+    "umc.cmc.4erhnrmkf9vgeojl3uryxsc0j": {
+      "text": "在发现自己的队伍面临解散的危险后，史努比和小猎犬侦察队出发前往广袤的户外去赢取徽章。与此同时，查理·布朗和朋友们在斯普林湖营地享受他们的夏天。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "After discovering their troop is in danger of disbanding, Snoopy and the Beagle Scouts set off to the great outdoors to earn their badges. Meanwhile, Charlie Brown and friends enjoy their summer at Camp Spring Lake.",
+      "hash": "21f160375da76e3eff43e7695bf8632a73d9f8d9110ee1d0edbfdc5c237e2d3f",
+      "source": "https://tv.apple.com/us/show/camp-snoopy/umc.cmc.4erhnrmkf9vgeojl3uryxsc0j"
+    },
+    "umc.cmc.10k6tes7rmc2ti0ho1ozgwezc": {
+      "text": "一位刚离婚的妈妈陷入了由勒索、谋杀和青少年足球交织而成的危险深渊。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "A newly divorced mom falls down a dangerous rabbit hole of blackmail, murder, and youth soccer.",
+      "hash": "00bd814af37e608af390cb2eba6e5215c1de32de1ee70461354b61b26698da2d",
+      "source": "https://tv.apple.com/us/show/maximum-pleasure-guaranteed/umc.cmc.10k6tes7rmc2ti0ho1ozgwezc"
+    },
+    "umc.cmc.4w9agfyrx2fgc5k9rls2cffho": {
+      "text": "当打猎途中的朋友们与其它猎人发生致命冲突时，他们发誓保守秘密。但随着多疑情绪的滋生——以及一个冷酷无情的帮派寻求报复——朋友们必须面对他们的道德、家庭和野蛮本能。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "When friends on a hunting trip get into a deadly clash with other hunters, they vow to keep it a secret. But as paranoia sets in—and a ruthless gang seeks revenge—the friends must confront their morality, families, and savage instincts.",
+      "hash": "b8dcbb1058dbec069e44ccd2c11c357a4ff94bec9865f6bda31b25450d732178",
+      "source": "https://tv.apple.com/us/show/the-hunt/umc.cmc.4w9agfyrx2fgc5k9rls2cffho"
+    },
+    "umc.cmc.4lh4bmztauvkooqz400akxav": {
+      "text": "该剧结合了野生动物电影制作技术和最新的古生物学知识，以独一无二的方式揭开古代地球壮观的动物栖息地的面纱。该剧集由 BBC Studios 自然历史部门的知名团队支持下制作。《史前星球》以白垩纪时代的环境为背景，描绘了海岸、沙漠、河流、冰雪世界和森林的场景，展示了鲜为人知且令人惊讶的恐龙生活。",
+      "method": "existing_chinese",
+      "original": "Experience the wonders of our world like never before in this epic series from Jon Favreau and the producers of Planet Earth. Travel back to a time when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.",
+      "hash": "01b2314b4b9c8156897baf9d763c9b49e1e27c80c12dde9589ed8e82051f07aa",
+      "source": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav"
+    },
+    "umc.cmc.xesgxj0bt8yrrkrunae0wke7": {
+      "text": "查理·布朗热爱露营，决心让自己的最后一年过得特别。但第一次参加露营的莎莉却对这个陌生的新地方感到紧张和疑虑。就在大家安顿好营地时，史努比和伍德斯托克发现了一张藏宝图，这张地图指引他们踏上附近的野外探险之旅。",
+      "method": "existing_chinese",
+      "original": "Music and glee fill the air as Charlie Brown and the gang head off to summer camp. First-timer Sally doesn’t get what all the hype is about. But when the camp may be forced to close, they team up to save it so more kids can make their own special memories.",
+      "hash": "167d7ddd3a26494ab81018f5b147120a1acb6b3d1ce21d4b21b452dcf7827f71",
+      "source": "https://tv.apple.com/us/movie/a-summer-musical/umc.cmc.xesgxj0bt8yrrkrunae0wke7"
+    },
+    "umc.cmc.2zky8t1ps9m3ld18tdjc1g5di": {
+      "text": "劳尔的世界正在瓦解。玛尔塔意外怀孕了。在一次葬礼上浪漫邂逅将他们聚在一起后，他们在生活和爱情的混乱中跌跌撞撞前行。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Raúl’s world is unraveling. Marta’s unexpectedly pregnant. After a funeral meet-cute brings them together, they stumble through the chaos of life and love.",
+      "hash": "5c7075e9dcb48c2c3a3a117113d453d4db1aabbfa194f06a56235a6b41310c86",
+      "source": "https://tv.apple.com/us/show/love-you-to-death/umc.cmc.2zky8t1ps9m3ld18tdjc1g5di"
+    },
+    "umc.cmc.7ad5xech8wu5nh2p221ymy9r2": {
+      "text": "一辆公共汽车被三名劫匪劫持，但他们在逃脱之前就丧命了。每位乘客的说法都一样：一个戴连帽衫的男人拯救了大家。随着案件的展开，英雄与罪犯之间的界限开始模糊。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "A bus is hijacked by three robbers—who end up dead before they can get away. Every passenger’s story is the same: a hooded man saved the day. As the case unfolds, the line between hero and criminal begins to blur.",
+      "hash": "d257be047ac95d919fd962bbfbc2155cb2fb19871bffcfa158cbda2612a3e810",
+      "source": "https://tv.apple.com/us/show/you-would-do-it-too/umc.cmc.7ad5xech8wu5nh2p221ymy9r2"
+    },
+    "umc.cmc.yy12locz1vttqczsnlnwtei3": {
+      "text": "富兰克林刚来到镇上，希望能交到朋友，但他惯用的伎俩在花生帮身上不管用。当肥皂盒车大赛到来时，他确信这是一个给新伙伴留下深刻印象的机会，于是与另一个落单的孩子查理·布朗组成了搭档。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Franklin is new to town and hoping to make friends, but his usual tactics don’t work on the Peanuts gang. When the Soap Box Derby arrives, he’s sure it’s a chance to impress new pals and teams up with the only other unpartnered kid: Charlie Brown.",
+      "hash": "bf0c26ecf1c3a97c734c75739b49249b1eab944ec8219cf961d8d4aa310f27ce",
+      "source": "https://tv.apple.com/us/movie/welcome-home-franklin/umc.cmc.yy12locz1vttqczsnlnwtei3"
+    },
+    "umc.cmc.5kr10v39ex4n13rrwxjzm3jy7": {
+      "text": "安娜怀疑自己与伴侣的感情可能并不像想象中那么真实，为了改善关系，她开始在一家神秘的研究所工作，这里专门负责挑拨或测试那些怨偶间是否真的存在过浪漫的爱情。",
+      "method": "existing_chinese",
+      "original": "Anna and Ryan have found true love together. It’s been proven by a controversial test. There’s just one problem: Anna still isn’t sure. Then she meets Amir.",
+      "hash": "742503dc804de2ccd1223f0876b801b029035a075e3d675d63978f6b761d5510",
+      "source": "https://tv.apple.com/us/movie/fingernails/umc.cmc.5kr10v39ex4n13rrwxjzm3jy7"
+    },
+    "umc.cmc.1a1h3avg5tx7g68ws3y06ty17": {
+      "text": "安静、善良、内向的Marcie有很多出色的想法来帮助她的朋友实现目标和解决问题。但当全世界都注意到她，聚光灯落在她身上时，分享这些想法就成了一项挑战。",
+      "method": "existing_chinese",
+      "original": "Quiet, kindhearted introvert Marcie has lots of brilliant ideas to help her friends achieve goals and solve problems. But when the world takes notice and the spotlight lands on her, sharing those ideas becomes a challenge.",
+      "hash": "6eb5c954b97259d221a1a3572d63e417fd5e21c0ae7eb8c316f2caae4c9607d0",
+      "source": "https://tv.apple.com/us/movie/one-of-a-kind-marcie/umc.cmc.1a1h3avg5tx7g68ws3y06ty17"
+    },
+    "umc.cmc.njewt06q05vqbgp6w42pqb0l": {
+      "text": "迈克尔·J·福克斯，一个来自加拿大的小子，成为了1980年代国际流行文化的宠儿。他的人生轨迹因惊人的诊断而改变。当无法治愈的乐观主义者面对无法治愈的疾病（帕金森氏症）时会发生什么事？",
+      "method": "existing_chinese",
+      "original": "A short kid from a Canadian army base becomes the international pop culture darling of the 1980s—only to find the course of his life altered by a stunning diagnosis. What happens when an incurable optimist confronts an incurable disease?",
+      "hash": "6567c2e4495d80eceecb6e8677c4395b43cf3c93c06301bc3311c8166cdc23e5",
+      "source": "https://tv.apple.com/us/movie/still-a-michael-j-fox-movie/umc.cmc.njewt06q05vqbgp6w42pqb0l"
+    },
+    "umc.cmc.1w3e47nmnt4o304oaauh4k2rm": {
+      "text": "在大学毕业前夕，六个最好的朋友踏上了一个史诗般的周末来庆祝，却发生了致命的转折。将近 20 年后，幸存者们因为一条威胁要揭露那个命运之夜真相的勒索短信而不情愿地重聚。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "On the eve of college graduation, six best friends embark on an epic weekend to celebrate—but it takes a fatal turn. Nearly 20 years later, the survivors are reluctantly reunited by a blackmail text threatening to expose the truth about that fateful night.",
+      "hash": "542ccf3ecc5a2b3de710e283622c952dd38e3ccc8b019e836b19f5b40164756c",
+      "source": "https://tv.apple.com/us/show/now-and-then/umc.cmc.1w3e47nmnt4o304oaauh4k2rm"
+    },
+    "umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3": {
+      "text": "查理·布朗决心赢得这场重要的棒球比赛。但在比赛开始前不久，事情却成了一场惨剧：萨莉与投手丘上的一朵小花结下了不解之缘，并誓死保护它。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Charlie Brown is determined to win the big baseball game. But things turn into a fiasco right before the matchup, when Sally bonds with a little flower on the pitcher’s mound and vows to protect it at all costs.",
+      "hash": "f02bf17ced7989f7ebedcc5a7ad6dad0f17b05ef9fcea86d07c9d3153dbd5e4d",
+      "source": "https://tv.apple.com/us/movie/its-the-small-things-charlie-brown/umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3"
+    },
+    "umc.cmc.12l86ri6vfjlimw2m8b8dzszs": {
+      "text": "跟随史努比一起上天，并踏上外太空的全新征程吧！这一次，史努比仍将与查理·布朗、糊涂塌客以及花生大家族的孩子们一道，一起展开星际探索和发现的史诗级大冒险。",
+      "method": "existing_chinese",
+      "original": "Blast off with Snoopy as he takes on a new frontier: space! Joined by Charlie Brown, Woodstock, and the rest of the Peanuts gang, Snoopy embarks on epic adventures of interstellar exploration and discovery.",
+      "hash": "344e17a522ed314b5a1224cdd7c66b2c8d7f5020b8632a342eae1fb48623630a",
+      "source": "https://tv.apple.com/us/show/snoopy-in-space-the-search-for-life/umc.cmc.12l86ri6vfjlimw2m8b8dzszs"
+    },
+    "umc.cmc.5dba56sgwst50iuh5h9uqpdsq": {
+      "text": "苹果宣布，它已获得令人敬畏的纪录片《Fathom》的全球版权，该片将于6月25日在Apple TV+上独家首映。 由德鲁·Xanthopoulos（“敏感人”）执导和拍摄，《Fathom》跟随Dr.艾伦·加兰和博士米歇尔·富内特，两位科学家专注于座头鲸歌曲和社交交流的研究。当他们在世界对立面开始平行的研究之旅时，他们寻求更好地了解鲸鱼文化和交流。这部纪录片独特地揭示了对科学pxrocess的深刻承诺和敬畏，以及人类寻求我们周围世界的答案的普遍需求。从假设到该领域的突破性经验，“法通”展示了领先科学家做出科学发现所需的激情、好奇心、合作、毅力和工作。",
+      "method": "existing_chinese",
+      "original": "Two biologists set out on an undertaking as colossal as their subjects—deciphering the complex communication of whales. Dr. Michelle Fournet and Dr. Ellen Garland journey to opposite hemispheres to uncover a culture eons older than our own.",
+      "hash": "89c1647c0452a66ded1560f6700e09c5296ea5e9ad9ee96b95a6819be57f6ebc",
+      "source": "https://tv.apple.com/us/movie/fathom/umc.cmc.5dba56sgwst50iuh5h9uqpdsq"
+    },
+    "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0": {
+      "text": "在一级方程式赛车迎来第 75 个年头之际，新秀们奋起直追，一支曾夺得冠军的车队陷入混乱，一场三方争夺世界冠军的较量正紧紧锁住整个发车区。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In Formula 1's 75th year, rookies surge forward and a title-winning team faces turmoil as a three-way contest for the world championship grips the grid.",
+      "hash": "0bb6dbbf99f9c0fa2b2cdb374f43e3db37c679b25608445b04f3b21fac0737f6",
+      "source": "https://tv.apple.com/us/show/formula-1-drive-to-survive/umc.cmc.4ym1omzf14f4jwcmb7lnu91o0"
     }
   }
 }

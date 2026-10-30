@@ -1,154 +1,62 @@
 {
-  "works": 374,
-  "translated": 8,
-  "cacheHits": 337,
-  "existingChinese": 0,
+  "works": 365,
+  "translated": 13,
+  "cacheHits": 345,
+  "existingChinese": 7,
   "missingOriginal": 0,
-  "sourceErrors": 21,
+  "sourceErrors": 0,
   "apiCalls": 4,
   "usage": [
     {
-      "promptTokenCount": 414,
-      "candidatesTokenCount": 397,
-      "totalTokenCount": 811,
+      "promptTokenCount": 392,
+      "candidatesTokenCount": 388,
+      "totalTokenCount": 780,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 414
+          "tokenCount": 392
         }
       ],
       "serviceTier": "standard"
     },
     {
-      "promptTokenCount": 386,
-      "candidatesTokenCount": 451,
-      "totalTokenCount": 837,
+      "promptTokenCount": 353,
+      "candidatesTokenCount": 350,
+      "totalTokenCount": 703,
       "promptTokensDetails": [
         {
           "modality": "TEXT",
-          "tokenCount": 386
+          "tokenCount": 353
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 412,
+      "candidatesTokenCount": 403,
+      "totalTokenCount": 815,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 412
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 148,
+      "candidatesTokenCount": 99,
+      "totalTokenCount": 247,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 148
         }
       ],
       "serviceTier": "standard"
     }
   ],
-  "errors": [
-    {
-      "id": "umc.cmc.73wmdmkfpta5ul1vbwckmme39",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.52sgmi3vdpedurrbtz6louqqo",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.4w9agfyrx2fgc5k9rls2cffho",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.4lh4bmztauvkooqz400akxav",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.xesgxj0bt8yrrkrunae0wke7",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.2zky8t1ps9m3ld18tdjc1g5di",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.7ad5xech8wu5nh2p221ymy9r2",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.yy12locz1vttqczsnlnwtei3?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.5kr10v39ex4n13rrwxjzm3jy7?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.3lp7wqowerzdbej98tveildi3?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.3mkaxf4ege0ytr5ycan41jzjb?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.45v5b3bbri53qgfjhirzrivp2?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.6loo9fah7vwj2zpp7ehactlpd?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.1w3e47nmnt4o304oaauh4k2rm",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.lvpflyaolcrevsfje3rt5l6p?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.12l86ri6vfjlimw2m8b8dzszs",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.5hwonajppobtrqy7f9bs7cf6y?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.3eh9r5iz32ggdm4ccvw5igiir?ctx_brand=tvs.sbd.4000",
-      "stage": "source",
-      "error": "AssertionError"
-    },
-    {
-      "id": "umc.cmc.yy12locz1vttqczsnlnwtei3",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.1a1h3avg5tx7g68ws3y06ty17",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "id": "umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3",
-      "stage": "source",
-      "error": "ValueError"
-    },
-    {
-      "stage": "translation",
-      "error": "ValueError",
-      "http": 200
-    },
-    {
-      "stage": "translation",
-      "error": "ValueError",
-      "http": 200
-    }
-  ],
-  "ready": 345,
-  "pending": 29
+  "errors": [],
+  "ready": 365,
+  "pending": 0
 }
