@@ -124,7 +124,8 @@ def process(home,root,html,now):
         identity=record['officialId'];source=raw.get(identity)
         if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
             cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
-    shared=read(root/'data/work-summary-cache.json',{}).get('works',{})
+    # Synopsis API calls belong exclusively to work_summaries, including brand-new heroes.
+    shared={row['officialId']:True for row in home['hero']}
     value,report=enrich(home,raw,cache,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now,shared)
     dump(path,cache);report.update(checkedAt=now,copyVersion=VERSION);dump(root/'logs/home-copy.json',report)
     return value,report

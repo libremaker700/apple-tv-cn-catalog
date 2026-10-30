@@ -52,3 +52,9 @@ class CopyTests(unittest.TestCase):
         c=extract(html(),self.home)['umc.cmc.test'];self.assertEqual(c['contentRating'],'G');self.assertEqual(c['genresZh'],['动画','经典'])
         item['ratingBadges'][0]['fallbackText']='invented';self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')
         item.pop('ratingBadges');self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')
+
+class SharedCopyTests(unittest.TestCase):
+    def test_new_hero_never_duplicates_shared_translation(self):
+        t=Translator();home={'hero':[{'officialId':'umc.cmc.new'}]};raw={'umc.cmc.new':{'descriptionEn':'New English copy.','badgeEn':'New','noteEn':'','genresZh':['犯罪'],'contentRating':'TV-MA'}}
+        result,report=enrich(home,raw,{'records':{}},t,100,{'umc.cmc.new':True})
+        self.assertEqual(t.calls,0);self.assertEqual(report['requested'],0);self.assertEqual(result['hero'][0]['copy']['contentRating'],'TV-MA')
