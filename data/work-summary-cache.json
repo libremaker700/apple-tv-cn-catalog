@@ -1701,6 +1701,11 @@
       "text": "改编自保拉·丹齐格（Paula Danziger）的畅销书系列（印刷量已超过 1000 万册），“Amber Brown”真实展现了一个女孩在父母离异后通过艺术和音乐寻找自我声音的过程。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
+    },
+    "ac21aca10840bfb3a747d646277557768c4bda72fb87cbe05b94f7d615530ed8": {
+      "text": "《神奇宠物！》的主演豚鼠林尼、小鸭明明和乌龟塔克是教室里的宠物。每天最后一个孩子离开后，它们会接听来自世界某处陷入困境的幼小动物的易拉罐求救电话。它们会立刻飞奔或爬行，乘着由散落的玩具做成的飞船前往救援。主角们通过真实的儿童歌声进行交流。曾获奖的作曲家为每场历险的起伏以及探索区域的文化创作了相应的音乐伴奏。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     }
   },
   "works": {
@@ -4535,6 +4540,14 @@
       "original": "Tom Hanks stars as a longtime Navy veteran who, as a first-time captain, is tasked with protecting a convoy of 37 ships carrying thousands of soldiers and much-needed supplies across the treacherous waters of the Atlantic during World War II. For five days with no air cover, the captain and his small force of three escort ships must make their way through an area of the ocean known as “the Black Pit,” battling Nazi U-boats while protecting their invaluable ships and soldiers. “Greyhound\" is inspired by events during the Battle of the Atlantic, which took place in the earliest months of America’s alliance with Great Britain and the Allied Forces. Stephen Graham, Rob Morgan and Elisabeth Shue star alongside Hanks. “Greyhound\" was written by Tom Hanks, directed by Aaron Schneider and produced by Gary Goetzman. \"Greyhound” is a Playtone Production from Sony Pictures Entertainment/Stage 6 Films, in association with Bron Creative, Zhengfu Pictures, Sycamore Pictures and FilmNation Entertainment.",
       "hash": "78d487e4637d472fad98a3ce42b7b31765bf79910f8217f064412894a743c87c",
       "source": "https://www.apple.com/tv-pr/originals/greyhound/"
+    },
+    "umc.cmc.ns4q9hpoj4b1749wbl7crwbl": {
+      "text": "《神奇宠物！》的主演豚鼠林尼、小鸭明明和乌龟塔克是教室里的宠物。每天最后一个孩子离开后，它们会接听来自世界某处陷入困境的幼小动物的易拉罐求救电话。它们会立刻飞奔或爬行，乘着由散落的玩具做成的飞船前往救援。主角们通过真实的儿童歌声进行交流。曾获奖的作曲家为每场历险的起伏以及探索区域的文化创作了相应的音乐伴奏。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Stars of The Wonder Pets! Linny the guinea pig, Ming-Ming the duckling, and Tuck the turtle are classroom pets who, after the last child has left for the day, answer a tin-can call from a baby animal in distress somewhere in the world. They instantly fly, hop, or crawl into action by flying off to the rescue in their Flyboat (made from scattered playroom toys). The main characters communicate via song, using real children's voices. Award-winning composers have developed musical accompaniments that match the ups and downs of each adventure and the culture of the area explored.",
+      "hash": "ac21aca10840bfb3a747d646277557768c4bda72fb87cbe05b94f7d615530ed8",
+      "source": "https://tv.apple.com/us/show/wonder-pets/umc.cmc.ns4q9hpoj4b1749wbl7crwbl"
     }
   }
 }

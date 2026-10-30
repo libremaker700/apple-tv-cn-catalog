@@ -1,13 +1,26 @@
 {
-  "works": 377,
-  "translated": 0,
+  "works": 378,
+  "translated": 1,
   "cacheHits": 377,
   "existingChinese": 0,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 0,
-  "usage": [],
+  "apiCalls": 1,
+  "usage": [
+    {
+      "promptTokenCount": 233,
+      "candidatesTokenCount": 160,
+      "totalTokenCount": 393,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 233
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  ],
   "errors": [],
-  "ready": 377,
+  "ready": 378,
   "pending": 0
 }
