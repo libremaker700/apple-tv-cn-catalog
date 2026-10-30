@@ -1,0 +1,1398 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-30T18:20:48+00:00",
+  "sourceWorkbookSHA256": "b7dc4641562ac9e9bd51aa46dfc0e04a12634a4930bf380367984a9cac25c8a8",
+  "records": [
+    {
+      "slug": "home-6o1742rqdwxl2dxav5trdajut",
+      "en": "28 Days Later",
+      "officialId": "umc.cmc.6o1742rqdwxl2dxav5trdajut",
+      "watchUrl": "https://tv.apple.com/us/movie/28-days-later/umc.cmc.6o1742rqdwxl2dxav5trdajut",
+      "kind": "movie",
+      "title": "惊变28天",
+      "year": 2002,
+      "workbookRow": 8,
+      "subject": {
+        "id": "1306421",
+        "title": "惊变28天",
+        "original_title": "28 Days Later...",
+        "year": "2002",
+        "type": "movie",
+        "aka": [
+          "28天毁灭倒数(台)",
+          "28日后(港)"
+        ]
+      }
+    },
+    {
+      "slug": "home-2iqk0c0jh9ocfk2jtv2yda0k1",
+      "en": "A Beautiful Mind",
+      "officialId": "umc.cmc.2iqk0c0jh9ocfk2jtv2yda0k1",
+      "watchUrl": "https://tv.apple.com/us/movie/a-beautiful-mind/umc.cmc.2iqk0c0jh9ocfk2jtv2yda0k1",
+      "kind": "movie",
+      "title": "美丽心灵",
+      "year": 2001,
+      "workbookRow": 9,
+      "subject": {
+        "id": "1306029",
+        "title": "美丽心灵",
+        "original_title": "A Beautiful Mind",
+        "year": "2001",
+        "type": "movie",
+        "aka": [
+          "有你终生美丽(港)",
+          "美丽境界(台)",
+          "完美大脑",
+          "美丽心灵"
+        ]
+      }
+    },
+    {
+      "slug": "home-mbxalimrwrtq72wj4h601pyf",
+      "en": "A Charlie Brown Christmas",
+      "officialId": "umc.cmc.mbxalimrwrtq72wj4h601pyf",
+      "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-christmas/umc.cmc.mbxalimrwrtq72wj4h601pyf",
+      "kind": "movie",
+      "title": "查理·布朗的圣诞节",
+      "year": 1965,
+      "workbookRow": 11,
+      "subject": {
+        "id": "1439773",
+        "title": "查理布朗的圣诞节",
+        "original_title": "A Charlie Brown Christmas",
+        "year": "1965",
+        "type": "movie",
+        "aka": [
+          "花生精选之查理布朗的圣诞节"
+        ]
+      }
+    },
+    {
+      "slug": "home-7grdgbjdq3tiy37f4dc3yeyms",
+      "en": "A Charlie Brown Thanksgiving",
+      "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
+      "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
+      "kind": "movie",
+      "title": "查理·布朗的感恩节",
+      "year": 1973,
+      "workbookRow": 12,
+      "subject": {
+        "id": "5300042",
+        "title": "查理布朗的感恩节",
+        "original_title": "A Charlie Brown Thanksgiving",
+        "year": "1973",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-30cyxu8by31op677sm0djtm72",
+      "en": "A Charlie Brown Valentine",
+      "officialId": "umc.cmc.30cyxu8by31op677sm0djtm72",
+      "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-valentine/umc.cmc.30cyxu8by31op677sm0djtm72",
+      "kind": "movie",
+      "title": "查理·布朗的情人节",
+      "year": 2002,
+      "workbookRow": 13,
+      "subject": {
+        "id": "5134758",
+        "title": "查理·布朗的情人节",
+        "original_title": "A Charlie Brown Valentine",
+        "year": "2002",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-2ep1vwlxkikhdettd106s2qhc",
+      "en": "A League of Their Own",
+      "officialId": "umc.cmc.2ep1vwlxkikhdettd106s2qhc",
+      "watchUrl": "https://tv.apple.com/us/movie/a-league-of-their-own/umc.cmc.2ep1vwlxkikhdettd106s2qhc",
+      "kind": "movie",
+      "title": "红粉联盟",
+      "year": 1992,
+      "workbookRow": 14,
+      "subject": {
+        "id": "1294721",
+        "title": "红粉联盟",
+        "original_title": "A League of Their Own",
+        "year": "1992",
+        "type": "movie",
+        "aka": [
+          "女子棒球队",
+          "红粉本垒打",
+          "骄阳岁月",
+          "她们自己的联盟"
+        ]
+      }
+    },
+    {
+      "slug": "all-of-you",
+      "en": "All of You",
+      "officialId": "umc.cmc.3hac5oqhh3gxiu35spyu8fanf",
+      "watchUrl": "https://tv.apple.com/us/movie/all-of-you/umc.cmc.3hac5oqhh3gxiu35spyu8fanf",
+      "kind": "movie",
+      "title": "你的全部",
+      "year": 2024,
+      "workbookRow": 15,
+      "subject": {
+        "id": "36973970",
+        "title": "你的全部",
+        "original_title": "All of You",
+        "year": "2024",
+        "type": "movie",
+        "aka": [
+          "你的所有",
+          "一生",
+          "你未曾给我的",
+          "For Life"
+        ]
+      }
+    },
+    {
+      "slug": "home-38xvbpqapyw5yrpq36aq49ox6",
+      "en": "American Gangster",
+      "officialId": "umc.cmc.38xvbpqapyw5yrpq36aq49ox6",
+      "watchUrl": "https://tv.apple.com/us/movie/american-gangster/umc.cmc.38xvbpqapyw5yrpq36aq49ox6",
+      "kind": "movie",
+      "title": "美国黑帮",
+      "year": 2007,
+      "workbookRow": 16,
+      "subject": {
+        "id": "1578503",
+        "title": "美国黑帮",
+        "original_title": "American Gangster",
+        "year": "2007",
+        "type": "movie",
+        "aka": [
+          "犯罪帝国(港)",
+          "美国土匪"
+        ]
+      }
+    },
+    {
+      "slug": "home-749in83y74eb4w3e0jvy5dlnh",
+      "en": "Be My Valentine, Charlie Brown",
+      "officialId": "umc.cmc.749in83y74eb4w3e0jvy5dlnh",
+      "watchUrl": "https://tv.apple.com/us/movie/be-my-valentine-charlie-brown/umc.cmc.749in83y74eb4w3e0jvy5dlnh",
+      "kind": "movie",
+      "title": "做我的情人吧，查理·布朗",
+      "year": 1975,
+      "workbookRow": 18,
+      "subject": {
+        "id": "2972559",
+        "title": "做我的情人吧，查理·布朗",
+        "original_title": "Be My Valentine, Charlie Brown",
+        "year": "1975",
+        "type": "movie",
+        "aka": [
+          "花生精选史奴比之做我的情人吧查理布朗"
+        ]
+      }
+    },
+    {
+      "slug": "home-54i1kouogtrem4mgqc068agfk",
+      "en": "Black Hawk Down",
+      "officialId": "umc.cmc.54i1kouogtrem4mgqc068agfk",
+      "watchUrl": "https://tv.apple.com/us/movie/black-hawk-down/umc.cmc.54i1kouogtrem4mgqc068agfk",
+      "kind": "movie",
+      "title": "黑鹰坠落",
+      "year": 2001,
+      "workbookRow": 20,
+      "subject": {
+        "id": "1291824",
+        "title": "黑鹰坠落",
+        "original_title": "Black Hawk Down",
+        "year": "2001",
+        "type": "movie",
+        "aka": [
+          "黑鹰15小时(港)",
+          "黑鹰计划(台)",
+          "黑鹰降落",
+          "黑鹰坠落"
+        ]
+      }
+    },
+    {
+      "slug": "bono-stories-of-surrender",
+      "en": "Bono: Stories of Surrender",
+      "officialId": "umc.cmc.oxoxnpaecaatg9tzf6pgfsh2",
+      "watchUrl": "https://tv.apple.com/us/movie/bono-stories-of-surrender/umc.cmc.oxoxnpaecaatg9tzf6pgfsh2",
+      "kind": "movie",
+      "title": "波诺：救赎之路",
+      "year": 2025,
+      "workbookRow": 22,
+      "subject": {
+        "id": "37252237",
+        "title": "波诺：救赎之路",
+        "original_title": "Bono: Stories of Surrender",
+        "year": "2025",
+        "type": "movie",
+        "aka": [
+          "波诺：关于投降的故事"
+        ]
+      }
+    },
+    {
+      "slug": "boom-boom-the-world-vs-boris-becker",
+      "en": "Boom! Boom! The World vs. Boris Becker",
+      "officialId": "umc.cmc.nrpql3y16pqdot7foyan3z52",
+      "watchUrl": "https://tv.apple.com/us/show/boom-boom-the-world-vs-boris-becker/umc.cmc.nrpql3y16pqdot7foyan3z52",
+      "kind": "series",
+      "title": "砰！砰！世界对战鲍里斯·贝克尔",
+      "year": 2023,
+      "workbookRow": 23,
+      "subject": {
+        "id": "33446443",
+        "title": "砰！砰！世界对战鲍里斯·贝克尔",
+        "original_title": "Boom! Boom! The World vs. Boris Becker",
+        "year": "2023",
+        "type": "tv",
+        "aka": [
+          "贝克尔",
+          "Becker"
+        ]
+      }
+    },
+    {
+      "slug": "born-to-be-wild",
+      "en": "Born to be Wild",
+      "officialId": "umc.cmc.5sgng9umkaa6mylh0k5kqsepp",
+      "watchUrl": "https://tv.apple.com/us/show/born-to-be-wild/umc.cmc.5sgng9umkaa6mylh0k5kqsepp",
+      "kind": "series",
+      "title": "生而狂野",
+      "year": 2025,
+      "workbookRow": 24,
+      "subject": {
+        "id": "36486517",
+        "title": "生而狂野",
+        "original_title": "Born To Be Wild",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "天生狂野 重启"
+        ]
+      }
+    },
+    {
+      "slug": "home-3kzb220yzo1iz1oy11kpu498x",
+      "en": "Charlie Brown’s Christmas Tales",
+      "officialId": "umc.cmc.3kzb220yzo1iz1oy11kpu498x",
+      "watchUrl": "https://tv.apple.com/us/movie/charlie-browns-christmas-tales/umc.cmc.3kzb220yzo1iz1oy11kpu498x",
+      "kind": "movie",
+      "title": "查理·布朗的圣诞故事",
+      "year": 2002,
+      "workbookRow": 26,
+      "subject": {
+        "id": "5233865",
+        "title": "查理·布朗的圣诞故事",
+        "original_title": "Charlie Brown's Christmas Tales",
+        "year": "2002",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "city-on-fire",
+      "en": "City on Fire",
+      "officialId": "umc.cmc.r6vntb5r9wwbjwtt58xmyuz9",
+      "watchUrl": "https://tv.apple.com/us/show/city-on-fire/umc.cmc.r6vntb5r9wwbjwtt58xmyuz9",
+      "kind": "series",
+      "title": "焰火之城",
+      "year": 2023,
+      "workbookRow": 27,
+      "subject": {
+        "id": "35576359",
+        "title": "焰火之城",
+        "original_title": "City on Fire",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "come-see-me-in-the-good-light",
+      "en": "Come See Me in the Good Light",
+      "officialId": "umc.cmc.27uh51l7oh3ghql2gxb6xvb1s",
+      "watchUrl": "https://tv.apple.com/us/movie/come-see-me-in-the-good-light/umc.cmc.27uh51l7oh3ghql2gxb6xvb1s",
+      "kind": "movie",
+      "title": "向光而行",
+      "year": 2025,
+      "workbookRow": 28,
+      "subject": {
+        "id": "37153813",
+        "title": "向光而行",
+        "original_title": "Come See Me in the Good Light",
+        "year": "2025",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-3ich7f8sravd24iswc9hqq54o",
+      "en": "Definitely, Maybe",
+      "officialId": "umc.cmc.3ich7f8sravd24iswc9hqq54o",
+      "watchUrl": "https://tv.apple.com/us/movie/definitely-maybe/umc.cmc.3ich7f8sravd24iswc9hqq54o",
+      "kind": "movie",
+      "title": "爱情三选一",
+      "year": 2008,
+      "workbookRow": 29,
+      "subject": {
+        "id": "1922152",
+        "title": "爱情三选一",
+        "original_title": "Definitely, Maybe",
+        "year": "2008",
+        "type": "movie",
+        "aka": [
+          "确定的可能",
+          "情迷3颗心",
+          "绝对，也许"
+        ]
+      }
+    },
+    {
+      "slug": "duck-and-goose",
+      "en": "Duck & Goose",
+      "officialId": "umc.cmc.qayvbuimq7lxab6y2cs9tbcj",
+      "watchUrl": "https://tv.apple.com/us/show/duck--goose/umc.cmc.qayvbuimq7lxab6y2cs9tbcj",
+      "kind": "series",
+      "title": "小鸭与小鹅",
+      "year": 2022,
+      "workbookRow": 31,
+      "subject": {
+        "id": "33413655",
+        "title": "小鸭与小鹅",
+        "original_title": "Duck & Goose",
+        "year": "2022",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "earth-at-night-in-color",
+      "en": "Earth At Night In Color",
+      "officialId": "umc.cmc.37dvcdop7ub4m8tx9fnczl1a1",
+      "watchUrl": "https://tv.apple.com/us/show/earth-at-night-in-color/umc.cmc.37dvcdop7ub4m8tx9fnczl1a1",
+      "kind": "series",
+      "title": "夜色中的地球",
+      "year": 2020,
+      "workbookRow": 32,
+      "subject": {
+        "id": "35225593",
+        "title": "夜色中的地球 第一季",
+        "original_title": "Earth at Night in Color Season 1",
+        "year": "2020",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "echo-3",
+      "en": "Echo 3",
+      "officialId": "umc.cmc.mzqa5sj4m2i80g51cgu04i3j",
+      "watchUrl": "https://tv.apple.com/us/show/echo-3/umc.cmc.mzqa5sj4m2i80g51cgu04i3j",
+      "kind": "series",
+      "title": "回声三号",
+      "year": 2022,
+      "workbookRow": 33,
+      "subject": {
+        "id": "35237616",
+        "title": "回声三号",
+        "original_title": "Echo 3",
+        "year": "2022",
+        "type": "tv",
+        "aka": [
+          "Echo 3：救援任务(台)",
+          "Echo 3 特种部队(港)",
+          "回声3",
+          "第三次回声"
+        ]
+      }
+    },
+    {
+      "slug": "eva-the-owlet",
+      "en": "Eva the Owlet",
+      "officialId": "umc.cmc.49ts9z2smhboe9tweoygj8gv2",
+      "watchUrl": "https://tv.apple.com/us/show/eva-the-owlet/umc.cmc.49ts9z2smhboe9tweoygj8gv2",
+      "kind": "series",
+      "title": "猫头鹰伊娃",
+      "year": 2023,
+      "workbookRow": 34,
+      "subject": {
+        "id": "36289228",
+        "title": "猫头鹰伊娃 第一季",
+        "original_title": "Eva the Owlet Season 1",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-gks6zztq8kxlbjnrhjhjj26z",
+      "en": "Fallen",
+      "officialId": "umc.cmc.gks6zztq8kxlbjnrhjhjj26z",
+      "watchUrl": "https://tv.apple.com/us/movie/fallen/umc.cmc.gks6zztq8kxlbjnrhjhjj26z",
+      "kind": "movie",
+      "title": "夺命感应",
+      "year": 1998,
+      "workbookRow": 35,
+      "subject": {
+        "id": "1298695",
+        "title": "夺命感应",
+        "original_title": "Fallen",
+        "year": "1998",
+        "type": "movie",
+        "aka": [
+          "跌落",
+          "暂时停止接触",
+          "夺命感应"
+        ]
+      }
+    },
+    {
+      "slug": "home-2m5fntzbjem6fhniurq8a17om",
+      "en": "Fraggle Rock",
+      "officialId": "umc.cmc.2m5fntzbjem6fhniurq8a17om",
+      "watchUrl": "https://tv.apple.com/us/show/fraggle-rock/umc.cmc.2m5fntzbjem6fhniurq8a17om",
+      "kind": "series",
+      "title": "布偶奇遇记",
+      "year": 1983,
+      "workbookRow": 38,
+      "subject": {
+        "id": "2153532",
+        "title": "布偶奇遇记 第一季",
+        "original_title": "Fraggle Rock Season 1",
+        "year": "1983",
+        "type": "tv",
+        "aka": [
+          "Jim Henson's Fraggle Rock",
+          "Fraggle Rock with Jim Henson's Muppets",
+          "布偶也摇滚"
+        ]
+      }
+    },
+    {
+      "slug": "fraggle-rock-back-to-the-rock",
+      "en": "Fraggle Rock: Back to the Rock",
+      "officialId": "umc.cmc.2r077021gw7fu0noml0hln2yq",
+      "watchUrl": "https://tv.apple.com/us/show/fraggle-rock-back-to-the-rock/umc.cmc.2r077021gw7fu0noml0hln2yq",
+      "kind": "series",
+      "title": "布偶也摇滚",
+      "year": 2022,
+      "workbookRow": 40,
+      "subject": {
+        "id": "35715946",
+        "title": "布偶也摇滚 第一季",
+        "original_title": "Fraggle Rock: Back to the Rock Season 1",
+        "year": "2022",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "fraggle-rock-rock-on",
+      "en": "Fraggle Rock: Rock On!",
+      "officialId": "umc.cmc.6d0biwqzy6ykvxf36eb9wm3gl",
+      "watchUrl": "https://tv.apple.com/us/show/fraggle-rock-rock-on/umc.cmc.6d0biwqzy6ykvxf36eb9wm3gl",
+      "kind": "series",
+      "title": "布偶奇遇记：继续前进",
+      "year": 2020,
+      "workbookRow": 41,
+      "subject": {
+        "id": "35042885",
+        "title": "布偶奇遇记：继续前进",
+        "original_title": "Fraggle Rock: Rock On!",
+        "year": "2020",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "frog-and-toad",
+      "en": "Frog and Toad",
+      "officialId": "umc.cmc.xvcgt6ied9s3atejpk92tv1h",
+      "watchUrl": "https://tv.apple.com/us/show/frog-and-toad/umc.cmc.xvcgt6ied9s3atejpk92tv1h",
+      "kind": "series",
+      "title": "青蛙与蟾蜍",
+      "year": 2023,
+      "workbookRow": 42,
+      "subject": {
+        "id": "36331437",
+        "title": "青蛙与蟾蜍 第一季",
+        "original_title": "Frog and Toad Season 1",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-4wfs3tno6kih50j21qgn1n0m3",
+      "en": "Fury",
+      "officialId": "umc.cmc.4wfs3tno6kih50j21qgn1n0m3",
+      "watchUrl": "https://tv.apple.com/us/movie/fury/umc.cmc.4wfs3tno6kih50j21qgn1n0m3",
+      "kind": "movie",
+      "title": "狂怒",
+      "year": 2014,
+      "workbookRow": 43,
+      "subject": {
+        "id": "23331914",
+        "title": "狂怒",
+        "original_title": "Fury",
+        "year": "2014",
+        "type": "movie",
+        "aka": [
+          "战逆豪情(港)",
+          "怒火特攻队(台)",
+          "暴怒"
+        ]
+      }
+    },
+    {
+      "slug": "home-4fps2u7wpcpuv5uenubediwct",
+      "en": "Going the Distance",
+      "officialId": "umc.cmc.4fps2u7wpcpuv5uenubediwct",
+      "watchUrl": "https://tv.apple.com/us/movie/going-the-distance/umc.cmc.4fps2u7wpcpuv5uenubediwct",
+      "kind": "movie",
+      "title": "远距离爱情",
+      "year": 2010,
+      "workbookRow": 45,
+      "subject": {
+        "id": "3284396",
+        "title": "远距离爱情",
+        "original_title": "Going the Distance",
+        "year": "2010",
+        "type": "movie",
+        "aka": [
+          "爱情远着陆(港)",
+          "真爱零距离(台)",
+          "横跨美国的恋爱",
+          "远距离的恋爱",
+          "千里传情",
+          "远距离爱情"
+        ]
+      }
+    },
+    {
+      "slug": "home-ljmzio5szpnhca4ydns8f99q",
+      "en": "Good Will Hunting",
+      "officialId": "umc.cmc.ljmzio5szpnhca4ydns8f99q",
+      "watchUrl": "https://tv.apple.com/us/movie/good-will-hunting/umc.cmc.ljmzio5szpnhca4ydns8f99q",
+      "kind": "movie",
+      "title": "心灵捕手",
+      "year": 1997,
+      "workbookRow": 46,
+      "subject": {
+        "id": "1292656",
+        "title": "心灵捕手",
+        "original_title": "Good Will Hunting",
+        "year": "1997",
+        "type": "movie",
+        "aka": [
+          "骄阳似我(港)",
+          "心灵捕手"
+        ]
+      }
+    },
+    {
+      "slug": "gutsy",
+      "en": "Gutsy",
+      "officialId": "umc.cmc.6pt51gvtzprx3h060b7944s3k",
+      "watchUrl": "https://tv.apple.com/us/show/gutsy/umc.cmc.6pt51gvtzprx3h060b7944s3k",
+      "kind": "series",
+      "title": "勇敢",
+      "year": 2022,
+      "workbookRow": 48,
+      "subject": {
+        "id": "35995915",
+        "title": "勇敢",
+        "original_title": "Gutsy",
+        "year": "2022",
+        "type": "tv",
+        "aka": [
+          "Gutsy Women"
+        ]
+      }
+    },
+    {
+      "slug": "home-72bog44gdxl0cafwane0z8r32",
+      "en": "Happy New Year, Charlie Brown!",
+      "officialId": "umc.cmc.72bog44gdxl0cafwane0z8r32",
+      "watchUrl": "https://tv.apple.com/us/movie/happy-new-year-charlie-brown/umc.cmc.72bog44gdxl0cafwane0z8r32",
+      "kind": "movie",
+      "title": "新年快乐，查理布朗",
+      "year": 1986,
+      "workbookRow": 49,
+      "subject": {
+        "id": "3005809",
+        "title": "新年快乐，查理布朗",
+        "original_title": "Happy New Year, Charlie Brown!",
+        "year": "1986",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "hollywood-con-queen",
+      "en": "Hollywood Con Queen",
+      "officialId": "umc.cmc.117umbbiymiqrowvu6xsqzju4",
+      "watchUrl": "https://tv.apple.com/us/show/hollywood-con-queen/umc.cmc.117umbbiymiqrowvu6xsqzju4",
+      "kind": "series",
+      "title": "好莱坞诈骗女王",
+      "year": 2024,
+      "workbookRow": 53,
+      "subject": {
+        "id": "36855917",
+        "title": "好莱坞诈骗女王",
+        "original_title": "Hollywood Con Queen",
+        "year": "2024",
+        "type": "tv",
+        "aka": [
+          "好莱坞诈骗女王"
+        ]
+      }
+    },
+    {
+      "slug": "home-39d349kfxr4sevo0fkv1uurhj",
+      "en": "I Want A Dog For Christmas, Charlie Brown",
+      "officialId": "umc.cmc.39d349kfxr4sevo0fkv1uurhj",
+      "watchUrl": "https://tv.apple.com/us/movie/i-want-a-dog-for-christmas-charlie-brown/umc.cmc.39d349kfxr4sevo0fkv1uurhj",
+      "kind": "movie",
+      "title": "查理布朗的圣诞礼物",
+      "year": 2003,
+      "workbookRow": 54,
+      "subject": {
+        "id": "5232762",
+        "title": "查理布朗的圣诞礼物",
+        "original_title": "I Want a Dog for Christmas, Charlie Brown",
+        "year": "2003",
+        "type": "movie",
+        "aka": []
+      }
+    },
+    {
+      "slug": "imperfect-women",
+      "en": "Imperfect Women",
+      "officialId": "umc.cmc.1w2rmpbqzt24879bt7109zgi6",
+      "watchUrl": "https://tv.apple.com/us/show/imperfect-women/umc.cmc.1w2rmpbqzt24879bt7109zgi6",
+      "kind": "series",
+      "title": "不完美女人",
+      "year": 2026,
+      "workbookRow": 56,
+      "subject": {
+        "id": "36832087",
+        "title": "不完美女人 第一季",
+        "original_title": "Imperfect Women Season 1",
+        "year": "2026",
+        "type": "tv",
+        "aka": [
+          "不完美的女人"
+        ]
+      }
+    },
+    {
+      "slug": "land-of-women",
+      "en": "Land of Women",
+      "officialId": "umc.cmc.3jchmur9er2whr7zsubfcasrv",
+      "watchUrl": "https://tv.apple.com/us/show/land-of-women/umc.cmc.3jchmur9er2whr7zsubfcasrv",
+      "kind": "series",
+      "title": "女人领地",
+      "year": 2024,
+      "workbookRow": 64,
+      "subject": {
+        "id": "36135788",
+        "title": "女人领地",
+        "original_title": "La tierra de las mujeres",
+        "year": "2024",
+        "type": "tv",
+        "aka": [
+          "Land of Women",
+          "酒乡心天地(台)",
+          "心之酒乡(港)"
+        ]
+      }
+    },
+    {
+      "slug": "liaison",
+      "en": "Liaison",
+      "officialId": "umc.cmc.62t13xacr3mxnit5a40g8tkla",
+      "watchUrl": "https://tv.apple.com/us/show/liaison/umc.cmc.62t13xacr3mxnit5a40g8tkla",
+      "kind": "series",
+      "title": "非常关系",
+      "year": 2023,
+      "workbookRow": 65,
+      "subject": {
+        "id": "35507171",
+        "title": "非常关系",
+        "original_title": "Liaison",
+        "year": "2023",
+        "type": "tv",
+        "aka": [
+          "危险关系",
+          "联络",
+          "纽带"
+        ]
+      }
+    },
+    {
+      "slug": "long-way-home",
+      "en": "Long Way Home",
+      "officialId": "umc.cmc.26p8x4co2wl0ztetek4gmkf6r",
+      "watchUrl": "https://tv.apple.com/us/show/long-way-home/umc.cmc.26p8x4co2wl0ztetek4gmkf6r",
+      "kind": "series",
+      "title": "长路归家",
+      "year": 2025,
+      "workbookRow": 68,
+      "subject": {
+        "id": "37006378",
+        "title": "长路归家",
+        "original_title": "Long Way Home",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "長路綿綿(台)"
+        ]
+      }
+    },
+    {
+      "slug": "home-13c4zk3hpybm6u0cfk1x0vyi",
+      "en": "Long Way Round",
+      "officialId": "umc.cmc.13c4zk3hpybm6u0cfk1x0vyi",
+      "watchUrl": "https://tv.apple.com/us/show/long-way-round/umc.cmc.13c4zk3hpybm6u0cfk1x0vyi",
+      "kind": "series",
+      "title": "漫漫长路",
+      "year": 2004,
+      "workbookRow": 69,
+      "subject": {
+        "id": "1494797",
+        "title": "漫漫长路",
+        "original_title": "Long Way Round",
+        "year": "2004",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-iajaormpogjbe142ssfirdys",
+      "en": "Lovely Little Farm",
+      "officialId": "umc.cmc.iajaormpogjbe142ssfirdys",
+      "watchUrl": "https://tv.apple.com/us/show/lovely-little-farm/umc.cmc.iajaormpogjbe142ssfirdys",
+      "kind": "series",
+      "title": "可爱的小农场",
+      "year": 2022,
+      "workbookRow": 72,
+      "subject": {
+        "id": "35898683",
+        "title": "可爱的小农场 第一季",
+        "original_title": "Lovely Little Farm Season 1",
+        "year": "2022",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "me",
+      "en": "Me",
+      "officialId": "umc.cmc.3d79cajjwbx5wsylkce31zrcz",
+      "watchUrl": "https://tv.apple.com/us/show/me/umc.cmc.3d79cajjwbx5wsylkce31zrcz",
+      "kind": "series",
+      "title": "我",
+      "year": 2024,
+      "workbookRow": 75,
+      "subject": {
+        "id": "36929575",
+        "title": "我",
+        "original_title": "Me",
+        "year": "2024",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "midnight-family",
+      "en": "Midnight Family",
+      "officialId": "umc.cmc.1xkd0bjglgv5x1jxiteog2833",
+      "watchUrl": "https://tv.apple.com/us/show/midnight-family/umc.cmc.1xkd0bjglgv5x1jxiteog2833",
+      "kind": "series",
+      "title": "午夜之家",
+      "year": 2024,
+      "workbookRow": 77,
+      "subject": {
+        "id": "36217557",
+        "title": "午夜之家",
+        "original_title": "Midnight Family",
+        "year": "2024",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "mr-scorsese",
+      "en": "Mr. Scorsese",
+      "officialId": "umc.cmc.4a06j5lm5pxny9nx505zo5g0y",
+      "watchUrl": "https://tv.apple.com/us/show/mr-scorsese/umc.cmc.4a06j5lm5pxny9nx505zo5g0y",
+      "kind": "series",
+      "title": "斯科塞斯先生",
+      "year": 2025,
+      "workbookRow": 79,
+      "subject": {
+        "id": "37361690",
+        "title": "斯科塞斯先生",
+        "original_title": "Mr. Scorsese",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "马丁·斯科塞斯"
+        ]
+      }
+    },
+    {
+      "slug": "my-kind-of-country",
+      "en": "My Kind of Country",
+      "officialId": "umc.cmc.k3xdiqrkcoln2fa2ikksndt0",
+      "watchUrl": "https://tv.apple.com/us/show/my-kind-of-country/umc.cmc.k3xdiqrkcoln2fa2ikksndt0",
+      "kind": "series",
+      "title": "我的乡村音乐",
+      "year": 2023,
+      "workbookRow": 80,
+      "subject": {
+        "id": "35239909",
+        "title": "我的乡村音乐",
+        "original_title": "My Kind of Country",
+        "year": "2023",
+        "type": "tv",
+        "aka": [
+          "我的鄉村style(台)"
+        ]
+      }
+    },
+    {
+      "slug": "neuromancer",
+      "en": "Neuromancer",
+      "officialId": "umc.cmc.ym2z4w07kwsi1wywwxtyckr",
+      "watchUrl": "https://tv.apple.com/us/show/neuromancer/umc.cmc.ym2z4w07kwsi1wywwxtyckr",
+      "kind": "series",
+      "title": "神经漫游者",
+      "year": 2027,
+      "workbookRow": 82,
+      "subject": {
+        "id": "36788144",
+        "title": "神经漫游者",
+        "original_title": "Neuromancer",
+        "year": "2027",
+        "type": "tv",
+        "aka": [
+          "神经漫游者(剧版)"
+        ]
+      }
+    },
+    {
+      "slug": "omnivore",
+      "en": "Omnivore",
+      "officialId": "umc.cmc.3m567dtk8qcawdjwnagsr1jbs",
+      "watchUrl": "https://tv.apple.com/us/show/omnivore/umc.cmc.3m567dtk8qcawdjwnagsr1jbs",
+      "kind": "series",
+      "title": "杂食动物",
+      "year": 2024,
+      "workbookRow": 86,
+      "subject": {
+        "id": "36919698",
+        "title": "杂食动物",
+        "original_title": "Omnivore",
+        "year": "2024",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "oprah-talks-covid-19",
+      "en": "Oprah Talks Covid-19",
+      "officialId": "umc.cmc.1xr8rwhaw9pkks7bvzy44dezt",
+      "watchUrl": "https://tv.apple.com/us/show/oprah-talks-covid-19/umc.cmc.1xr8rwhaw9pkks7bvzy44dezt",
+      "kind": "series",
+      "title": "奥普拉谈新冠",
+      "year": 2020,
+      "workbookRow": 87,
+      "subject": {
+        "id": "35014084",
+        "title": "奥普拉谈新冠",
+        "original_title": "Oprah Talks COVID-19",
+        "year": "2020",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "pinecone-and-pony",
+      "en": "Pinecone & Pony",
+      "officialId": "umc.cmc.2jwlalsi34m25fcfljpvk990r",
+      "watchUrl": "https://tv.apple.com/us/show/pinecone--pony/umc.cmc.2jwlalsi34m25fcfljpvk990r",
+      "kind": "series",
+      "title": "松果与小马",
+      "year": 2022,
+      "workbookRow": 90,
+      "subject": {
+        "id": "35806859",
+        "title": "松果与小马",
+        "original_title": "Pinecone & Pony",
+        "year": "2022",
+        "type": "tv",
+        "aka": [
+          "果果与小马历险记",
+          "松松小宝历险记"
+        ]
+      }
+    },
+    {
+      "slug": "prime-target",
+      "en": "Prime Target",
+      "officialId": "umc.cmc.5hje8i3v25dzow2olljxetnus",
+      "watchUrl": "https://tv.apple.com/us/show/prime-target/umc.cmc.5hje8i3v25dzow2olljxetnus",
+      "kind": "series",
+      "title": "主要目标",
+      "year": 2025,
+      "workbookRow": 93,
+      "subject": {
+        "id": "36776617",
+        "title": "主要目标",
+        "original_title": "Prime Target",
+        "year": "2025",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "puppy-place",
+      "en": "Puppy Place",
+      "officialId": "umc.cmc.6u8ovjqp61j46lx5cznidchhx",
+      "watchUrl": "https://tv.apple.com/us/show/puppy-place/umc.cmc.6u8ovjqp61j46lx5cznidchhx",
+      "kind": "series",
+      "title": "狗狗天地",
+      "year": 2021,
+      "workbookRow": 94,
+      "subject": {
+        "id": "35599358",
+        "title": "狗狗天地 第一季",
+        "original_title": "Puppy Place Season 1",
+        "year": "2021",
+        "type": "tv",
+        "aka": [
+          "小狗之家"
+        ]
+      }
+    },
+    {
+      "slug": "real-madrid-until-the-end",
+      "en": "Real Madrid: Until The End",
+      "officialId": "umc.cmc.39sq1w84s2idx8xyyrpxrl89a",
+      "watchUrl": "https://tv.apple.com/us/show/real-madrid-until-the-end/umc.cmc.39sq1w84s2idx8xyyrpxrl89a",
+      "kind": "series",
+      "title": "皇家马德里：直到终点",
+      "year": 2023,
+      "workbookRow": 95,
+      "subject": {
+        "id": "36288473",
+        "title": "皇家马德里：直到终点",
+        "original_title": "Real Madrid: Until The End",
+        "year": "2023",
+        "type": "tv",
+        "aka": [
+          "皇家马德里欧冠第十四冠纪录片",
+          "皇家馬德里：直到最後（台）",
+          "皇家馬德里：搏到盡頭（港）"
+        ]
+      }
+    },
+    {
+      "slug": "schmigadoon",
+      "en": "Schmigadoon!",
+      "officialId": "umc.cmc.1tqmf2znhr4oui4vo69ircyui",
+      "watchUrl": "https://tv.apple.com/us/show/schmigadoon/umc.cmc.1tqmf2znhr4oui4vo69ircyui",
+      "kind": "series",
+      "title": "音乐魔法镇！",
+      "year": 2021,
+      "workbookRow": 97,
+      "subject": {
+        "id": "35211653",
+        "title": "音乐魔法镇！ 第一季",
+        "original_title": "Schmigadoon! Season 1",
+        "year": "2021",
+        "type": "tv",
+        "aka": [
+          "神奇小镇舒密加顿",
+          "欢迎来到施米加多！"
+        ]
+      }
+    },
+    {
+      "slug": "steve-martin-a-documentary-in-two-pieces",
+      "en": "STEVE! (martin) a documentary in 2 pieces",
+      "officialId": "umc.cmc.7kkgskd7j0lomjoqdo97l80ql",
+      "watchUrl": "https://tv.apple.com/us/show/steve-martin-a-documentary-in-2-pieces/umc.cmc.7kkgskd7j0lomjoqdo97l80ql",
+      "kind": "series",
+      "title": "史蒂夫",
+      "year": 2024,
+      "workbookRow": 103,
+      "subject": {
+        "id": "36764261",
+        "title": "史蒂夫",
+        "original_title": "Steve! (Martin): A Documentary in 2 Pieces",
+        "year": "2024",
+        "type": "tv",
+        "aka": [
+          "史蒂夫·马丁",
+          "Steve!‎"
+        ]
+      }
+    },
+    {
+      "slug": "still-up",
+      "en": "Still Up",
+      "officialId": "umc.cmc.4sn9yh0gys8gpb0yei0h443a1",
+      "watchUrl": "https://tv.apple.com/us/show/still-up/umc.cmc.4sn9yh0gys8gpb0yei0h443a1",
+      "kind": "series",
+      "title": "无人入眠",
+      "year": 2023,
+      "workbookRow": 104,
+      "subject": {
+        "id": "36135960",
+        "title": "无人入眠",
+        "original_title": "Still Up",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "stillwater",
+      "en": "Stillwater",
+      "officialId": "umc.cmc.3czcagetjq31vvbgkkyp1xiao",
+      "watchUrl": "https://tv.apple.com/us/show/stillwater/umc.cmc.3czcagetjq31vvbgkkyp1xiao",
+      "kind": "series",
+      "title": "静水",
+      "year": 2020,
+      "workbookRow": 105,
+      "subject": {
+        "id": "35253671",
+        "title": "静水 第一季",
+        "original_title": "Stillwater Season 1",
+        "year": "2020",
+        "type": "tv",
+        "aka": [
+          "熊猫静水"
+        ]
+      }
+    },
+    {
+      "slug": "strange-planet",
+      "en": "Strange Planet",
+      "officialId": "umc.cmc.zbh4nvi65qy3os9ifxm0fpe4",
+      "watchUrl": "https://tv.apple.com/us/show/strange-planet/umc.cmc.zbh4nvi65qy3os9ifxm0fpe4",
+      "kind": "series",
+      "title": "奇异星球",
+      "year": 2023,
+      "workbookRow": 106,
+      "subject": {
+        "id": "35524197",
+        "title": "奇异星球",
+        "original_title": "Strange Planet",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "surfside-girls",
+      "en": "Surfside Girls",
+      "officialId": "umc.cmc.4371g2xacdr0wfs071dm3q30x",
+      "watchUrl": "https://tv.apple.com/us/show/surfside-girls/umc.cmc.4371g2xacdr0wfs071dm3q30x",
+      "kind": "series",
+      "title": "苏夫塞德女孩",
+      "year": 2022,
+      "workbookRow": 107,
+      "subject": {
+        "id": "35745492",
+        "title": "苏夫塞德女孩",
+        "original_title": "Surfside Girls",
+        "year": "2022",
+        "type": "tv",
+        "aka": [
+          "海边女孩",
+          "冲浪女孩"
+        ]
+      }
+    },
+    {
+      "slug": "swagger",
+      "en": "Swagger",
+      "officialId": "umc.cmc.63e208601mwndrxpmguc5stbo",
+      "watchUrl": "https://tv.apple.com/us/show/swagger/umc.cmc.63e208601mwndrxpmguc5stbo",
+      "kind": "series",
+      "title": "昂首阔步",
+      "year": 2021,
+      "workbookRow": 108,
+      "subject": {
+        "id": "30395554",
+        "title": "昂首阔步 第一季",
+        "original_title": "Swagger Season 1",
+        "year": "2021",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "the-big-door-prize",
+      "en": "The Big Door Prize",
+      "officialId": "umc.cmc.2rjxcljdjz4h47vjdxnytcn23",
+      "watchUrl": "https://tv.apple.com/us/show/the-big-door-prize/umc.cmc.2rjxcljdjz4h47vjdxnytcn23",
+      "kind": "series",
+      "title": "大门奖",
+      "year": 2023,
+      "workbookRow": 110,
+      "subject": {
+        "id": "36043562",
+        "title": "大门奖 第一季",
+        "original_title": "The Big Door Prize Season 1",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "the-changeling",
+      "en": "The Changeling",
+      "officialId": "umc.cmc.161vwm570k49vsn7xjtzvnwex",
+      "watchUrl": "https://tv.apple.com/us/show/the-changeling/umc.cmc.161vwm570k49vsn7xjtzvnwex",
+      "kind": "series",
+      "title": "叛徒",
+      "year": 2023,
+      "workbookRow": 111,
+      "subject": {
+        "id": "27113509",
+        "title": "叛徒",
+        "original_title": "The Changeling",
+        "year": "2023",
+        "type": "tv",
+        "aka": [
+          "紐約失嬰記(台)"
+        ]
+      }
+    },
+    {
+      "slug": "home-1kt2wacwwoz0brw6duwve9hje",
+      "en": "The Charlie Brown and Snoopy Show",
+      "officialId": "umc.cmc.1kt2wacwwoz0brw6duwve9hje",
+      "watchUrl": "https://tv.apple.com/us/show/the-charlie-brown-and-snoopy-show/umc.cmc.1kt2wacwwoz0brw6duwve9hje",
+      "kind": "series",
+      "title": "查理·布朗和史努比秀",
+      "year": 1983,
+      "workbookRow": 112,
+      "subject": {
+        "id": "1830126",
+        "title": "查理·布朗和史努比秀 第一季",
+        "original_title": "The Charlie Brown and Snoopy Show Season 1",
+        "year": "1983",
+        "type": "tv",
+        "aka": [
+          "史努比"
+        ]
+      }
+    },
+    {
+      "slug": "the-shrink-next-door",
+      "en": "The Shrink Next Door",
+      "officialId": "umc.cmc.jov1gljmqnux0i15rbqsoyfk",
+      "watchUrl": "https://tv.apple.com/us/show/the-shrink-next-door/umc.cmc.jov1gljmqnux0i15rbqsoyfk",
+      "kind": "series",
+      "title": "邻家心理医生",
+      "year": 2021,
+      "workbookRow": 121,
+      "subject": {
+        "id": "34969836",
+        "title": "邻家心理医生",
+        "original_title": "The Shrink Next Door",
+        "year": "2021",
+        "type": "tv",
+        "aka": [
+          "隔壁的心理医生"
+        ]
+      }
+    },
+    {
+      "slug": "the-sisters-grimm",
+      "en": "The Sisters Grimm",
+      "officialId": "umc.cmc.2hc9ggvxaqddv779k4zupmrw",
+      "watchUrl": "https://tv.apple.com/us/show/the-sisters-grimm/umc.cmc.2hc9ggvxaqddv779k4zupmrw",
+      "kind": "series",
+      "title": "格林姐妹大冒险",
+      "year": 2025,
+      "workbookRow": 122,
+      "subject": {
+        "id": "37509035",
+        "title": "格林姐妹大冒险",
+        "original_title": "The Sisters Grimm",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "格林姐妹"
+        ]
+      }
+    },
+    {
+      "slug": "the-wild-ones",
+      "en": "The Wild Ones",
+      "officialId": "umc.cmc.4w1tfn11hyb3frc9tp5fpksbb",
+      "watchUrl": "https://tv.apple.com/us/show/the-wild-ones/umc.cmc.4w1tfn11hyb3frc9tp5fpksbb",
+      "kind": "series",
+      "title": "野性生灵",
+      "year": 2025,
+      "workbookRow": 125,
+      "subject": {
+        "id": "36486516",
+        "title": "野性生灵",
+        "original_title": "The Wild Ones",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "Endangered Planet"
+        ]
+      }
+    },
+    {
+      "slug": "they-call-me-magic",
+      "en": "They Call Me Magic",
+      "officialId": "umc.cmc.67518fzfnhcjcajidzbpff8i5",
+      "watchUrl": "https://tv.apple.com/us/show/they-call-me-magic/umc.cmc.67518fzfnhcjcajidzbpff8i5",
+      "kind": "series",
+      "title": "魔术师传奇",
+      "year": 2022,
+      "workbookRow": 126,
+      "subject": {
+        "id": "35760558",
+        "title": "魔术师传奇",
+        "original_title": "They Call Me Magic",
+        "year": "2022",
+        "type": "tv",
+        "aka": [
+          "他们叫我魔术师"
+        ]
+      }
+    },
+    {
+      "slug": "home-3glsixv3225ngtbm57lq72oam",
+      "en": "This is America, Charlie Brown",
+      "officialId": "umc.cmc.3glsixv3225ngtbm57lq72oam",
+      "watchUrl": "https://tv.apple.com/us/show/this-is-america-charlie-brown/umc.cmc.3glsixv3225ngtbm57lq72oam",
+      "kind": "series",
+      "title": "这就是美国，查理布朗",
+      "year": 1988,
+      "workbookRow": 127,
+      "subject": {
+        "id": "1930721",
+        "title": "这就是美国，查理布朗",
+        "original_title": "This Is America, Charlie Brown",
+        "year": "1988",
+        "type": "tv",
+        "aka": [
+          "The NASA Space Station",
+          "The Mayflower Voyagers"
+        ]
+      }
+    },
+    {
+      "slug": "vietnam-the-war-that-changed-america",
+      "en": "Vietnam: The War That Changed America",
+      "officialId": "umc.cmc.5louo8zb5eb7zs0dgk06tnk22",
+      "watchUrl": "https://tv.apple.com/us/show/vietnam-the-war-that-changed-america/umc.cmc.5louo8zb5eb7zs0dgk06tnk22",
+      "kind": "series",
+      "title": "越南：改变美国的战争",
+      "year": 2025,
+      "workbookRow": 131,
+      "subject": {
+        "id": "36948390",
+        "title": "越南：改变美国的战争",
+        "original_title": "Vietnam: The War That Changed America",
+        "year": "2025",
+        "type": "tv",
+        "aka": [
+          "越战记忆：美国巨变之役(港)"
+        ]
+      }
+    },
+    {
+      "slug": "visible-out-on-television",
+      "en": "Visible: Out on Television",
+      "officialId": "umc.cmc.1zkna505r4jre6fh7mjcncio0",
+      "watchUrl": "https://tv.apple.com/us/show/visible-out-on-television/umc.cmc.1zkna505r4jre6fh7mjcncio0",
+      "kind": "series",
+      "title": "从暗到明：电视与彩虹史",
+      "year": 2020,
+      "workbookRow": 132,
+      "subject": {
+        "id": "34950039",
+        "title": "从暗到明：电视与彩虹史",
+        "original_title": "Visible: Out on Television",
+        "year": "2020",
+        "type": "tv",
+        "aka": [
+          "Visible: Out On"
+        ]
+      }
+    },
+    {
+      "slug": "wanted-the-escape-of-carlos-ghosn",
+      "en": "Wanted: The Escape of Carlos Ghosn",
+      "officialId": "umc.cmc.34nvp6vc5in9logmjc7hezp52",
+      "watchUrl": "https://tv.apple.com/us/show/wanted-the-escape-of-carlos-ghosn/umc.cmc.34nvp6vc5in9logmjc7hezp52",
+      "kind": "series",
+      "title": "追缉汽车大亨：卡洛斯·戈恩",
+      "year": 2023,
+      "workbookRow": 133,
+      "subject": {
+        "id": "35734428",
+        "title": "追缉汽车大亨：卡洛斯·戈恩",
+        "original_title": "Wanted: The Escape of Carlos Ghosn",
+        "year": "2023",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "watch-the-sound-with-mark-ronson",
+      "en": "Watch the Sound with Mark Ronson",
+      "officialId": "umc.cmc.56ka6i8ccv7tsatj6nd1uo808",
+      "watchUrl": "https://tv.apple.com/us/show/watch-the-sound-with-mark-ronson/umc.cmc.56ka6i8ccv7tsatj6nd1uo808",
+      "kind": "series",
+      "title": "与马克·容森探索声音奥秘",
+      "year": 2021,
+      "workbookRow": 134,
+      "subject": {
+        "id": "35437723",
+        "title": "与马克·容森探索声音奥秘",
+        "original_title": "Watch the Sound with Mark Ronson",
+        "year": "2021",
+        "type": "tv",
+        "aka": []
+      }
+    },
+    {
+      "slug": "home-2wsvpzg4a3atiedlysr6zrfrv",
+      "en": "Yo Gabba Gabba!",
+      "officialId": "umc.cmc.2wsvpzg4a3atiedlysr6zrfrv",
+      "watchUrl": "https://tv.apple.com/us/show/yo-gabba-gabba/umc.cmc.2wsvpzg4a3atiedlysr6zrfrv",
+      "kind": "series",
+      "title": "嘎巴宝宝",
+      "year": 2007,
+      "workbookRow": 138,
+      "subject": {
+        "id": "3097781",
+        "title": "嘎巴宝宝",
+        "original_title": "Yo Gabba Gabba",
+        "year": "2007",
+        "type": "tv",
+        "aka": [
+          "Yo Gabba Gabba!"
+        ]
+      }
+    }
+  ]
+}

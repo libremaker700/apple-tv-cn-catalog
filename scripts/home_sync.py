@@ -124,6 +124,8 @@ def sync():
     value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
     from home_titles import enrich
     enrich(value,ROOT,now)
+    from reviewed_titles import apply_home
+    value=apply_home(value,ROOT)
     from home_copy import process
     value,copy_report=process(value,ROOT,html,now)
     report['copy']=copy_report

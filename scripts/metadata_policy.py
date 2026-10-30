@@ -15,6 +15,7 @@ def allowed_source(url):
 
 def clean_zh(value):
     if not isinstance(value,dict) or value.get('metadataPolicy')!=POLICY:return None
+    if 'searchYear'in value and (type(value['searchYear'])is not int or not 1900<=value['searchYear']<=2099 or value.get('name_status')!='verified_title_sources'):return None
     for link in value.get('sources',[]):
         if not allowed_source(link):return None
     for item in value.get('name_sources',[])+value.get('summary_sources',[]):

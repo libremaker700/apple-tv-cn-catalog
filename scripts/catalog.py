@@ -56,6 +56,8 @@ def validate(catalog):
             with Image.open(io.BytesIO(b)) as im: im.verify()
 def publish(catalog,checked_at,mode):
     value=copy.deepcopy(catalog)
+    from reviewed_titles import apply_catalog
+    value=apply_catalog(value,ROOT)
     images={}
     for e in value['entries']:
         e.pop('seasonCheckedAt',None)
