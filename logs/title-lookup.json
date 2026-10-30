@@ -1,27 +1,63 @@
 {
-  "checked_at": "2026-10-30T04:27:06+00:00",
+  "checked_at": "2026-10-30T04:37:42+00:00",
   "api_configured": true,
-  "attempted": 12,
-  "searched": 11,
-  "direct_verified": 1,
+  "attempted": 20,
+  "searched": 20,
+  "direct_verified": 0,
   "cache_hits": 0,
   "verified_changes": [
     {
-      "slug": "camp-snoopy",
+      "slug": "margos-got-money-troubles",
       "before": "",
-      "after": "史努比露营大冒险",
+      "after": "玛戈没钱了",
       "aliases": [
-        "史努比露营大冒险"
+        "玛戈没钱了"
       ]
     }
   ],
   "monthly_limit": 100,
-  "pending": 11,
-  "reused_verified": 229,
+  "pending": 19,
+  "reused_verified": 230,
   "status": "completed",
-  "monthly_reserved": 37,
-  "remaining_unverified": 323,
+  "monthly_reserved": 57,
+  "remaining_unverified": 322,
   "api_results": [
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
+    {
+      "key_slot": 1,
+      "http_status": 200
+    },
     {
       "key_slot": 1,
       "http_status": 200
