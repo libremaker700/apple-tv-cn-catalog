@@ -1,5 +1,5 @@
 """Publish the US channel's film/series recommendations and native wide artwork separately from the library."""
-import copy,hashlib,io,json,re,time,concurrent.futures
+import copy,hashlib,io,json,re,time,concurrent.futures,threading
 from pathlib import Path
 from urllib.parse import urlsplit
 import requests
@@ -8,10 +8,11 @@ from catalog import ROOT,DOCS,load,raw_json
 
 SOURCE='https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
+ROOM='https://tv.apple.com/us/room/sci-fi-on-appletv/edt.item.650b3154-accd-4b87-9f89-6bde117cee31'
 LABELS={'uts.col.tv-plus-newest-releases':'最新上线','uts.col.ChartsShows.tvs.sbd.4000':'热门剧集','uts.col.ChartsMovies.tvs.sbd.4000':'热门电影','uts.col.free-premieres-on-tv-plus':'首集精选','uts.col.tv-plus-great-movies':'精选电影'}
 def fetch(url):
     u=urlsplit(url)
-    if not (url==SOURCE or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
+    if not (url in (SOURCE,ROOM) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
         raise ValueError('Unsupported homepage endpoint')
     r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35),allow_redirects=False)
     r.raise_for_status()
@@ -71,6 +72,9 @@ def collect(catalog,html,image):
     return value,{'heroCount':len(hero),'shelfCount':len(shelves),'unmappedChannelWorks':list({x['officialId']:x for x in skipped}.values())}
 
 def validate(value,entries=None):
+    if value.get('schema')==2:
+        from home_validation import validate_home
+        return validate_home(value)
     assert value.get('schema')==1 and value.get('source')==SOURCE
     assert 3<=len(value['hero'])<=12 and 2<=len(value['shelves'])<=12
     for rows in [value['hero']]+[s['items'] for s in value['shelves']]:
@@ -87,27 +91,45 @@ def validate(value,entries=None):
 def sync():
     folder=DOCS/'home';(folder/'images').mkdir(parents=True,exist_ok=True)
     cache_file=ROOT/'data/home-image-cache.json';cache=load(cache_file) if cache_file.exists() else {};now=int(time.time())
-    def image(url):
+    cache_lock=threading.Lock()
+    def image(url,width=1920,height=1080):
         previous=cache.get(url);path=folder/previous['path'] if previous else None
         if previous and now-previous.get('checkedAt',0)<6*3600 and path.is_file():
             raw=path.read_bytes()
-            if hashlib.sha256(raw).hexdigest()==path.stem:return {'artwork':BASE+previous['path'],'width':1920,'height':1080}
+            if hashlib.sha256(raw).hexdigest()==path.stem:return {'artwork':BASE+previous['path'],'width':width,'height':height}
         raw=fetch(url)
         with Image.open(io.BytesIO(raw)) as im:
-            assert im.size==(1920,1080) and im.format=='JPEG';im.verify()
+            assert im.size==(width,height) and im.format=='JPEG';im.verify()
         ref='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(folder/ref).write_bytes(raw)
-        cache[url]={'path':ref,'checkedAt':now}
+        with cache_lock:
+            cache[url]={'path':ref,'checkedAt':now}
+            from title_lookup import dump
+            dump(cache_file,cache)
         print(json.dumps({'homeImageReady':ref,'bytes':len(raw)}),flush=True)
-        return {'artwork':BASE+ref,'width':1920,'height':1080}
-    value,report=collect(load(DOCS/'catalog.json'),fetch(SOURCE).decode('utf-8'),image)
+        return {'artwork':BASE+ref,'width':width,'height':height}
+    details_path=ROOT/'data/home-work-cache.json';details=load(details_path) if details_path.exists() else {}
+    def detail(work):
+        from home_sources import detail_work
+        previous=details.get(work['officialId'])
+        if previous and previous.get('en')==work['en'] and previous.get('kind')==work['kind'] and now-previous.get('checkedAt',0)<7*86400:return previous
+        found=detail_work(work,fetch(work['watchUrl']).decode('utf8'));found['checkedAt']=now;details[work['officialId']]=found
+        from title_lookup import dump
+        dump(details_path,details);return found
+    from home_sources import collect as collect_official
+    value,report=collect_official(load(DOCS/'catalog.json'),fetch(SOURCE).decode('utf-8'),fetch(ROOM).decode('utf-8'),image,detail)
+    from home_titles import enrich
+    enrich(value,ROOT,now)
+    validate(value)
     raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images={}
-    for row in value['hero']:
-        ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes();images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob)}
+    rows=value['hero']+[row for s in value['shelves']for row in s['items']if row.get('artwork')]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in value.get('works',[])if w.get('landscapeArtwork')]
+    for row in rows:
+        ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes();images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
     assert sum(x['bytes'] for x in images.values())<=24*1024*1024
     path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
     manifest={'schema':1,'version':sha,'path':path,'images':images,'checkedAt':now}
     (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))
     cache_file.write_bytes(raw_json(cache));(folder/'sync-report.json').write_bytes(raw_json(dict(report,checkedAt=now,version=sha)))
+    details_path.write_bytes(raw_json(details))
     print(json.dumps(dict(report,version=sha,imageBytes=sum(x['bytes'] for x in images.values()))),flush=True)
     return value,manifest
 
@@ -116,10 +138,11 @@ def validate_publication():
     assert hashlib.sha256(raw).hexdigest()==manifest['version']
     value=json.loads(raw);validate(value)
     refs=set()
-    for row in value['hero']:
+    rows=value['hero']+[row for s in value['shelves']for row in s['items']if row.get('artwork')]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in value.get('works',[])if w.get('landscapeArtwork')]
+    for row in rows:
         ref=row['artwork'].removeprefix(BASE);refs.add(ref);blob=(folder/ref).read_bytes();meta=manifest['images'][ref]
         assert hashlib.sha256(blob).hexdigest()==meta['sha256']==Path(ref).stem and len(blob)==meta['bytes']
-        with Image.open(io.BytesIO(blob)) as im:assert im.size==(1920,1080);im.verify()
+        with Image.open(io.BytesIO(blob)) as im:assert im.size==(row['width'],row['height']);im.verify()
     assert refs==set(manifest['images']) and sum(x['bytes']for x in manifest['images'].values())<=24*1024*1024
     print('PASS home identities, manifest hash and full HD image files')
 
