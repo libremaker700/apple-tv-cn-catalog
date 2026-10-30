@@ -1646,6 +1646,61 @@
       "text": "查理·布朗决心赢得这场重要的棒球比赛。但在比赛开始前不久，事情却成了一场惨剧：萨莉与投手丘上的一朵小花结下了不解之缘，并誓死保护它。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
+    },
+    "a04b9f2ca94c8a100e068b05d1fcba438949301982fbb5feccc749f91a08c426": {
+      "text": "举世闻名的阿波罗计划究竟是壮举还是骗局？为完成人类首次登月任务，发射中心负责人柯尔（查宁·塔图姆 Channing Tatum 饰）带领团队不断处理登月火箭出现的各种问题。担心无法登月的政客们，为确保最终能在太空竞赛中占据优势，暗中找到广告狂人凯莉（斯嘉丽·约翰逊 Scarlett Johansson 饰），要求她秘密拍摄一段登月视频作为Plan B。柯尔和凯莉将擦出怎样的火花？政治阴谋之下，这对欢喜冤家又该如何实现最终的登月目标？",
+      "method": "existing_chinese"
+    },
+    "d7ff5dcfa8cd667982f8b3740b3e7f1717660bdd9d27def5ccb730dc0e85a251": {
+      "text": "讲述一个住在郊区的父亲（马克·沃尔伯格 饰）在他隐藏的过往即将揭秘时、如何带领家人逃亡的故事。",
+      "method": "existing_chinese"
+    },
+    "4432bb0972344266a97dd759036aa2bbd969754dc83f77c7b9f3dcf6e6e6a1a1": {
+      "text": "Apple TV+和BBC联合出品，以“911”事件发生后12小时的故事为主线，记录了布什政府在袭击当天的行动轨迹，并公布了一些从未被披露过的细节。",
+      "method": "existing_chinese"
+    },
+    "460afff4ced224f631af164e4449d79ec6613b49a345a7e5ccbdf3a7f3aca437": {
+      "text": "讲述了11岁女孩萝宾的神奇经历。萝宾作为一个年轻的学徒猎人，她和父亲一起来到爱尔兰，准备消灭最后一批在那里的狼，但是改变她的事情来了，她发现了狼行者，此后一连串的古怪故事就发生了……",
+      "method": "existing_chinese"
+    },
+    "78d487e4637d472fad98a3ce42b7b31765bf79910f8217f064412894a743c87c": {
+      "text": "影片讲述二战初期，由37支盟军船只组成的护航舰队在欧内斯特·克劳斯（汤姆·汉克斯饰）舰长率领的一艘美国驱逐舰指挥下，穿越险恶的北大西洋，同时还要与德国U型潜艇狼群的周旋。",
+      "method": "existing_chinese"
+    },
+    "de51650eff5f9e08ecbd57c52a56c1d0b50af04cb8503c4e8d0750771399eac9": {
+      "text": "在 1974 年的一次机缘巧合相遇后，Mick Fleetwood、John McVie、Christine McVie、Lindsey Buckingham 和 Stevie Nicks 回顾了他们历时五十多年、毫不妥协的历史，从打破纪录的唱片和巡演（包括从未公开的镜头和独家新采访）一直到今天。这部电影探讨了乐队的艰难险阻、个人韧性和音乐技巧如何结合在一起，创作出经受住时间考验并成为不朽杰作的歌曲。它带领粉丝们领略他们辉煌职业生涯的高潮与低谷，阐明了每位成员为乐队罕见的化学反应带来的非凡要素——这一音乐组合在全球售出了超过 2.2 亿张唱片。这部纪录片探讨了是什么让这群艺术家能够一次又一次地创作出独一无二的音乐作品，以及当来自乐队内外的各种可能压力威胁要将他们分崩离析时，是什么将他们重新拉回并维系在一起。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "f891fe3d556458d93844fe84d025740c80e9f42cc051dbb36b335fdc3f6f4388": {
+      "text": "当史努比离家出走时，查理·布朗和花生帮踏上了一段充满情感与奇妙的旅程，前往充满生机的大城市寻找史努比，一路上结识了令人兴奋的新朋友，并发现真正的友谊意味着彼此相爱，正如对方本来的样子。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "42e325d891127e270d9a396e7c8af25e22859b8012e0224b587c82c4cbadbaaa": {
+      "text": "在这部 Fraggle Rock 节日特辑中，Wembley 被任命为精神队长，并着手在整个 Rock 传播欢乐。但是，当 Fraggles 无意中从 Doc 的工作室拿走了一个珍贵的雪球时，节日的气氛开始消散。Wembley 必须鼓起勇气把它还回去，并懂得善良、给予和帮助需要帮助的人才是节日真正的礼物。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "c866575d2fa81cc2d96387999ca3b7b1197198cc6cd820973eb8a2770b41d120": {
+      "text": "根据作家 James L. Swanson 荣获埃德加奖并登上《纽约时报》畅销榜的非小说类书籍改编，“Manhunt”是一部关于历史上最知名却最少被理解的罪行之一的阴谋惊悚片，讲述了亚伯拉罕·林肯遇刺后搜捕约翰·威尔克斯·布思的惊人故事。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "5e6deab179da8af8460745fa6ebb74fb7bea65021521969b6608183af826fe7c": {
+      "text": "身临其境的音频揭示了世界各地动物交流的意想不到、陌生且鲜为人知的方式。由汤姆·希德勒斯顿（Tom Hiddleston）担任旁白。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "189a4250c9670e08d29525cbe56057598778cc114bbbc49aa24317e1185ce4f3": {
+      "text": "“Lovely Little Farm”讲述了姐妹俩吉尔和杰姬在薰衣草田环绕的农场里关爱和抚养所有动物的故事。当一名年轻的农夫并不容易，但每一天都给这对姐妹带来冒险和成长的机会。这部真人与动画结合的作品采用了最新的电脑生成技术，并与工业光魔公司（Industrial Light and Magic）合作，将该剧集生动呈现。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "c9afc5032e33ffb549d2c587bd4ece7b0ef159fed28feba9543125d3137f9a8f": {
+      "text": "改编自保拉·丹齐格（Paula Danziger）的畅销书系列（印刷量已超过 1000 万册），“Amber Brown”真实展现了一个女孩在父母离异后通过艺术和音乐寻找自我声音的过程。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     }
   },
   "works": {
@@ -4389,6 +4444,97 @@
       "original": "In Formula 1's 75th year, rookies surge forward and a title-winning team faces turmoil as a three-way contest for the world championship grips the grid.",
       "hash": "0bb6dbbf99f9c0fa2b2cdb374f43e3db37c679b25608445b04f3b21fac0737f6",
       "source": "https://tv.apple.com/us/show/formula-1-drive-to-survive/umc.cmc.4ym1omzf14f4jwcmb7lnu91o0"
+    },
+    "pr:fleetwood-mac-the-chain": {
+      "text": "在 1974 年的一次机缘巧合相遇后，Mick Fleetwood、John McVie、Christine McVie、Lindsey Buckingham 和 Stevie Nicks 回顾了他们历时五十多年、毫不妥协的历史，从打破纪录的唱片和巡演（包括从未公开的镜头和独家新采访）一直到今天。这部电影探讨了乐队的艰难险阻、个人韧性和音乐技巧如何结合在一起，创作出经受住时间考验并成为不朽杰作的歌曲。它带领粉丝们领略他们辉煌职业生涯的高潮与低谷，阐明了每位成员为乐队罕见的化学反应带来的非凡要素——这一音乐组合在全球售出了超过 2.2 亿张唱片。这部纪录片探讨了是什么让这群艺术家能够一次又一次地创作出独一无二的音乐作品，以及当来自乐队内外的各种可能压力威胁要将他们分崩离析时，是什么将他们重新拉回并维系在一起。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Following their fortuitous meeting in 1974, Mick Fleetwood, John McVie, Christine McVie, Lindsey Buckingham and Stevie Nicks reflect on their uncompromising 50-plus-year history, from their record-breaking recordings and tours — including never-before-seen footage and exclusive new interviews — through to today. The film explores how the band’s trials and tribulations, personal resilience and musical dexterity combined to create songs that have stood the test of time and are enduring masterpieces. It takes fans through the highs and lows of their brilliant career, illuminating the exceptional ingredients each member brought to the band’s uncommon alchemy — a musical union that sold more than 220 million records worldwide. The documentary explores what allowed this combination of artists to create singular musical work again and again, and what drew them back together and held them there when every possible pressure, both outside and inside the band, threatened to blow them apart.",
+      "hash": "de51650eff5f9e08ecbd57c52a56c1d0b50af04cb8503c4e8d0750771399eac9",
+      "source": "https://www.apple.com/tv-pr/originals/fleetwood-mac-the-chain/"
+    },
+    "pr:snoopy-unleashed": {
+      "text": "当史努比离家出走时，查理·布朗和花生帮踏上了一段充满情感与奇妙的旅程，前往充满生机的大城市寻找史努比，一路上结识了令人兴奋的新朋友，并发现真正的友谊意味着彼此相爱，正如对方本来的样子。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "When Snoopy runs away from home, Charlie Brown and the Peanuts gang go on an emotional and wondrous journey to the vibrant Big City as they search for Snoopy, meet exciting new friends along the way, and discover that real friendship means loving each other just as they are.",
+      "hash": "f891fe3d556458d93844fe84d025740c80e9f42cc051dbb36b335fdc3f6f4388",
+      "source": "https://www.apple.com/tv-pr/originals/snoopy-unleashed/"
+    },
+    "pr:fraggle-rock-a-holiday-gift": {
+      "text": "在这部 Fraggle Rock 节日特辑中，Wembley 被任命为精神队长，并着手在整个 Rock 传播欢乐。但是，当 Fraggles 无意中从 Doc 的工作室拿走了一个珍贵的雪球时，节日的气氛开始消散。Wembley 必须鼓起勇气把它还回去，并懂得善良、给予和帮助需要帮助的人才是节日真正的礼物。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In this Fraggle Rock holiday special, Wembley is named Spirit Captain and sets out to spread cheer throughout the Rock. But when the Fraggles unknowingly take a cherished snow globe from Doc’s workshop, the holiday spirit begins to fade. Wembley must find the courage to return it, learning that kindness, giving and helping someone in need are the true gifts of the holidays.",
+      "hash": "42e325d891127e270d9a396e7c8af25e22859b8012e0224b587c82c4cbadbaaa",
+      "source": "https://www.apple.com/tv-pr/originals/fraggle-rock-a-holiday-gift/"
+    },
+    "pr:fly-me-to-the-moon": {
+      "text": "举世闻名的阿波罗计划究竟是壮举还是骗局？为完成人类首次登月任务，发射中心负责人柯尔（查宁·塔图姆 Channing Tatum 饰）带领团队不断处理登月火箭出现的各种问题。担心无法登月的政客们，为确保最终能在太空竞赛中占据优势，暗中找到广告狂人凯莉（斯嘉丽·约翰逊 Scarlett Johansson 饰），要求她秘密拍摄一段登月视频作为Plan B。柯尔和凯莉将擦出怎样的火花？政治阴谋之下，这对欢喜冤家又该如何实现最终的登月目标？",
+      "method": "existing_chinese",
+      "original": "Starring Scarlett Johansson and Channing Tatum, “Fly Me to the Moon” is a sharp, stylish comedy-drama set against the high-stakes backdrop of NASA’s historic Apollo 11 moon landing. Sparks fly in all directions as marketing maven Kelly Jones (Johansson), brought in to fix NASA’s public image, wreaks havoc on launch director Cole Davis’ (Tatum) already difficult task. When the White House deems the mission too important to fail, Jones is directed to stage a fake moon landing as backup, and the countdown truly begins.",
+      "hash": "a04b9f2ca94c8a100e068b05d1fcba438949301982fbb5feccc749f91a08c426",
+      "source": "https://www.apple.com/tv-pr/originals/fly-me-to-the-moon/"
+    },
+    "pr:manhunt": {
+      "text": "根据作家 James L. Swanson 荣获埃德加奖并登上《纽约时报》畅销榜的非小说类书籍改编，“Manhunt”是一部关于历史上最知名却最少被理解的罪行之一的阴谋惊悚片，讲述了亚伯拉罕·林肯遇刺后搜捕约翰·威尔克斯·布思的惊人故事。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Based on the New York Times bestselling and Edgar Award-winning nonfiction book from author James L. Swanson, “Manhunt” is a conspiracy thriller about one of the best known but least understood crimes in history, the astonishing story of the hunt for John Wilkes Booth in the aftermath of Abraham Lincoln’s assassination.",
+      "hash": "c866575d2fa81cc2d96387999ca3b7b1197198cc6cd820973eb8a2770b41d120",
+      "source": "https://www.apple.com/tv-pr/originals/manhunt/"
+    },
+    "pr:earthsounds": {
+      "text": "身临其境的音频揭示了世界各地动物交流的意想不到、陌生且鲜为人知的方式。由汤姆·希德勒斯顿（Tom Hiddleston）担任旁白。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Immersive audio reveals the unexpected, unfamiliar and untold ways in which animals communicate around the world. Narrated by Tom Hiddleston.",
+      "hash": "5e6deab179da8af8460745fa6ebb74fb7bea65021521969b6608183af826fe7c",
+      "source": "https://www.apple.com/tv-pr/originals/earthsounds/"
+    },
+    "pr:the-family-plan": {
+      "text": "讲述一个住在郊区的父亲（马克·沃尔伯格 饰）在他隐藏的过往即将揭秘时、如何带领家人逃亡的故事。",
+      "method": "existing_chinese",
+      "original": "Dan Morgan (Mark Wahlberg) loves his quiet suburban life as a devoted husband, father of three and successful car salesman. But that’s only half the story. Decades earlier, he was an elite government assassin tasked with eliminating the world’s deadliest threats. When enemies from his past track him down, Dan packs his unsuspecting wife (Michelle Monaghan), angsty teen daughter, pro-gamer teen son and adorable 10-month-old baby into their minivan and takes off on an impromptu cross-country road trip to Las Vegas. Determined to protect his family — while treating them to the vacation of a lifetime — Dan must put his long-dormant skills into action, without revealing his true identity.",
+      "hash": "d7ff5dcfa8cd667982f8b3740b3e7f1717660bdd9d27def5ccb730dc0e85a251",
+      "source": "https://www.apple.com/tv-pr/originals/the-family-plan/"
+    },
+    "pr:lovely-little-farm": {
+      "text": "“Lovely Little Farm”讲述了姐妹俩吉尔和杰姬在薰衣草田环绕的农场里关爱和抚养所有动物的故事。当一名年轻的农夫并不容易，但每一天都给这对姐妹带来冒险和成长的机会。这部真人与动画结合的作品采用了最新的电脑生成技术，并与工业光魔公司（Industrial Light and Magic）合作，将该剧集生动呈现。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "“Lovely Little Farm” follows sisters Jill and Jacky as they love and nurture all the animals on their farm nestled in lavender fields. Being a young farmer isn’t easy, but every day brings these sisters adventure and a chance to grow. The live-action animated hybrid uses the latest computer-generated technology, working with Industrial Light and Magic, to bring the series to life.",
+      "hash": "189a4250c9670e08d29525cbe56057598778cc114bbbc49aa24317e1185ce4f3",
+      "source": "https://www.apple.com/tv-pr/originals/lovely-little-farm/"
+    },
+    "pr:amber-brown": {
+      "text": "改编自保拉·丹齐格（Paula Danziger）的畅销书系列（印刷量已超过 1000 万册），“Amber Brown”真实展现了一个女孩在父母离异后通过艺术和音乐寻找自我声音的过程。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Based on the bestselling book series by Paula Danziger, with over 10 million copies in print, “Amber Brown” is an unfiltered look at a girl finding her voice through art and music in the wake of her parents’ divorce.",
+      "hash": "c9afc5032e33ffb549d2c587bd4ece7b0ef159fed28feba9543125d3137f9a8f",
+      "source": "https://www.apple.com/tv-pr/originals/amber-brown/"
+    },
+    "pr:911-inside-the-presidents-war-room": {
+      "text": "Apple TV+和BBC联合出品，以“911”事件发生后12小时的故事为主线，记录了布什政府在袭击当天的行动轨迹，并公布了一些从未被披露过的细节。",
+      "method": "existing_chinese",
+      "original": "Experience the events of September 11, 2001 through the eyes of President Bush and his closest advisors as they personally detail the crucial hours and key decisions from that historic day.",
+      "hash": "4432bb0972344266a97dd759036aa2bbd969754dc83f77c7b9f3dcf6e6e6a1a1",
+      "source": "https://www.apple.com/tv-pr/originals/911-inside-the-presidents-war-room/"
+    },
+    "pr:wolfwalkers": {
+      "text": "讲述了11岁女孩萝宾的神奇经历。萝宾作为一个年轻的学徒猎人，她和父亲一起来到爱尔兰，准备消灭最后一批在那里的狼，但是改变她的事情来了，她发现了狼行者，此后一连串的古怪故事就发生了……",
+      "method": "existing_chinese",
+      "original": "In a time of superstition and magic, a young apprentice hunter, Robyn Goodfellowe, journeys to Ireland with her father to wipe out the last wolf pack. While exploring the forbidden lands outside the city walls, Robyn befriends a free-spirited girl, Mebh, a member of a mysterious tribe rumored to have the ability to transform into wolves by night. As they search for Mebh’s missing mother, Robyn uncovers a secret that draws her further into the enchanted world of the Wolfwalkers and risks turning into the very thing her father is tasked to destroy.",
+      "hash": "460afff4ced224f631af164e4449d79ec6613b49a345a7e5ccbdf3a7f3aca437",
+      "source": "https://www.apple.com/tv-pr/originals/wolfwalkers/"
+    },
+    "pr:greyhound": {
+      "text": "影片讲述二战初期，由37支盟军船只组成的护航舰队在欧内斯特·克劳斯（汤姆·汉克斯饰）舰长率领的一艘美国驱逐舰指挥下，穿越险恶的北大西洋，同时还要与德国U型潜艇狼群的周旋。",
+      "method": "existing_chinese",
+      "original": "Tom Hanks stars as a longtime Navy veteran who, as a first-time captain, is tasked with protecting a convoy of 37 ships carrying thousands of soldiers and much-needed supplies across the treacherous waters of the Atlantic during World War II. For five days with no air cover, the captain and his small force of three escort ships must make their way through an area of the ocean known as “the Black Pit,” battling Nazi U-boats while protecting their invaluable ships and soldiers. “Greyhound\" is inspired by events during the Battle of the Atlantic, which took place in the earliest months of America’s alliance with Great Britain and the Allied Forces. Stephen Graham, Rob Morgan and Elisabeth Shue star alongside Hanks. “Greyhound\" was written by Tom Hanks, directed by Aaron Schneider and produced by Gary Goetzman. \"Greyhound” is a Playtone Production from Sony Pictures Entertainment/Stage 6 Films, in association with Bron Creative, Zhengfu Pictures, Sycamore Pictures and FilmNation Entertainment.",
+      "hash": "78d487e4637d472fad98a3ce42b7b31765bf79910f8217f064412894a743c87c",
+      "source": "https://www.apple.com/tv-pr/originals/greyhound/"
     }
   }
 }
