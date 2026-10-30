@@ -37,7 +37,21 @@ class Seasons(unittest.TestCase):
         raise AssertionError('Unexpected or regional request')
     def save(self,raw):
         path='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';self.files.add(path);return path
-    def collector(self,cache=None,now=NOW):return Collector(self.get,self.save,lambda p:p in self.files,cache,now)
+    def collector(self,cache=None,now=NOW,preferences=None):return Collector(self.get,self.save,lambda p:p in self.files,cache,now,preferences)
+    def test_hd_preference_only_upgrades_requested_season_and_reuses_bytes(self):
+        base=self.collector();old=base.sync(copy.deepcopy(self.entry),{});self.calls=[]
+        preferences={'example':{'2':'1080p'}}
+        hd=self.collector(base.cache,NOW+3600,preferences);out=hd.sync(copy.deepcopy(old),{})
+        self.assertEqual(out['seasons'][0]['artwork'],old['seasons'][0]['artwork'])
+        self.assertNotEqual(out['seasons'][1]['artwork'],old['seasons'][1]['artwork'])
+        self.assertTrue(out['seasons'][1]['sourceArtwork'].endswith('/1920x1080.jpg'))
+        self.assertEqual(out['heroArtwork'],out['seasons'][1]['artwork'])
+        self.assertEqual([u for u in self.calls if u.startswith('https://is1-ssl.mzstatic.com/')],['https://is1-ssl.mzstatic.com/image/season2/1920x1080.jpg'])
+        self.calls=[];again=self.collector(hd.cache,NOW+7200,preferences).sync(out,{})
+        self.assertEqual(again,out);self.assertEqual(len(self.calls),1)
+        self.calls=[];later=self.collector(hd.cache,NOW+8*86400,preferences).sync(out,{})
+        self.assertTrue(later['seasons'][1]['sourceArtwork'].endswith('/1920x1080.jpg'))
+        self.assertFalse(any('season2/960x540.jpg' in u for u in self.calls))
     def test_complete_seasons_and_no_private_browser_parameters(self):
         c=self.collector();out=c.sync(copy.deepcopy(self.entry),{})
         self.assertEqual(out['seasonStatus'],'verified');self.assertEqual([s['season'] for s in out['seasons']],[1,2])

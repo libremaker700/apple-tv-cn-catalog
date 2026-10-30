@@ -70,9 +70,10 @@ def parse_show(text,show_id):
     return sorted(clean,key=lambda s:s['season']),params,year_date(series.get('datePublished'))
 
 class Collector:
-    def __init__(self,get,save_image,image_exists,cache=None,now=None):
+    def __init__(self,get,save_image,image_exists,cache=None,now=None,artwork_preferences=None):
         self.get=get;self.save_image=save_image;self.image_exists=image_exists;self.now=int(now or time.time())
         self.cache=copy.deepcopy(cache) if cache and cache.get('schema')==SCHEMA else {'schema':SCHEMA,'shows':{}}
+        self.artwork_preferences=artwork_preferences or {}
         self.report=[]
     def watch_url(self,entry,seed):
         for candidate in ((entry.get('officialIdentity') or {}).get('watchUrl'),(entry.get('zh') or {}).get('watchUrl'),(seed.get('officialIdentity') or {}).get('watchUrl')):
@@ -81,9 +82,10 @@ class Collector:
         text=self.get(entry['officialUrl']).text
         if not (m:=re.search(r'https://tv\.apple\.com/(?:us/)?show/[^/"\s]+/(umc\.cmc\.[a-z0-9]+)',text)):raise SeasonError('official_show_link_missing')
         return 'https://tv.apple.com/us/show/'+entry['slug']+'/'+m[1],m[1]
-    def season(self,row,show_id,params,trusted,cached,latest,fallback=None):
+    def season(self,row,show_id,params,trusted,cached,latest,fallback=None,size=('960','540')):
         number=row['season'];sid=row['officialId'];ttl=20*3600 if number==latest else 7*86400
-        if cached and cached.get('officialId')==sid and self.now-cached.get('checkedAt',0)<ttl and self.image_exists(cached.get('artwork','')):
+        quality_ok=size==('960','540') or bool(cached and cached.get('sourceArtwork','').endswith('/'+'x'.join(size)+'.jpg'))
+        if cached and quality_ok and cached.get('officialId')==sid and self.now-cached.get('checkedAt',0)<ttl and self.image_exists(cached.get('artwork','')):
             out=copy.deepcopy(cached)
         else:
             url='https://uts-api.itunes.apple.com/uts/v3/seasons/'+sid+'/metadata?'+urlencode(params)
@@ -97,7 +99,9 @@ class Collector:
                 # PR inventory explicitly names this season, independently of the UTS image field.
                 image=fallback['sourceArtwork'];art=fallback['artwork'];image_checked=self.now
             elif not re.match(r'https://is\d+-ssl\.mzstatic\.com/image/',image):raise SeasonError('season_artwork_missing')
-            image=image.replace('{w}','960').replace('{h}','540').replace('{f}','jpg')
+            image=image.replace('{w}',size[0]).replace('{h}',size[1]).replace('{f}','jpg')
+            if size!=('960','540') and re.match(r'https://is\d+-ssl\.mzstatic\.com/image/',image):
+                image=re.sub(r'/\d+x\d+\.jpg$', '/'+'x'.join(size)+'.jpg',image)
             if '{' in image or '}' in image:raise SeasonError('unknown_artwork_template')
             if fallback and image==fallback.get('sourceArtwork'):
                 pass
@@ -127,7 +131,10 @@ class Collector:
             artwork_match=re.search(r'/season-(\d+)/',entry.get('sourceArtwork',''))
             artwork_number=int(artwork_match[1]) if artwork_match else int(entry.get('seasonNumber') or 1)
             fallback={'season':artwork_number,'year':year_date(entry.get('releaseDate'))[:4],'artwork':entry.get('artwork',''),'sourceArtwork':entry.get('sourceArtwork','')}
-            rows=[self.season(s,show_id,params,trusted,old.get(s['season']),options[-1]['season'],fallback) for s in options]
+            preferred=self.artwork_preferences.get(slug,{})
+            if any(value!='1080p' for value in preferred.values()):raise SeasonError('unsupported_artwork_preference')
+            rows=[self.season(s,show_id,params,trusted,old.get(s['season']),options[-1]['season'],fallback,
+                              ('1920','1080') if preferred.get(str(s['season']))=='1080p' else ('960','540')) for s in options]
             self.cache['shows'][slug]={'showId':show_id,'watchUrl':watch,'checkedAt':self.now,'seasons':copy.deepcopy(rows)}
             entry['seasons']=public_seasons(rows);entry['seasonStatus']='verified';entry.pop('seasonError',None)
             entry['officialIdentity']={'watchUrl':watch,'year':rows[0]['year']}

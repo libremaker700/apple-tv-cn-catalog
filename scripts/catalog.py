@@ -79,7 +79,11 @@ def collect(previous):
     seeds={e['slug']:e for e in load(ROOT/'data/seed.json')['entries']}
     mainland=load(ROOT/'data/mainland-catalog.json')['records']
     cache_file=ROOT/'data/season-cache.json'
-    collector=Collector(get,save_image,lambda p:bool(p) and (DOCS/p.removeprefix(BASE)).is_file(),load(cache_file) if cache_file.exists() else None)
+    preferences_file=ROOT/'data/artwork-preferences.json'
+    preferences=load(preferences_file) if preferences_file.exists() else {'schema':1,'seasons':{}}
+    assert preferences.get('schema')==1, 'Unsupported artwork preferences'
+    collector=Collector(get,save_image,lambda p:bool(p) and (DOCS/p.removeprefix(BASE)).is_file(),load(cache_file) if cache_file.exists() else None,
+                        artwork_preferences=preferences['seasons'])
     rows=[r for r in rows if r.get('showTypeKey') in ('films','series')]
     assert len(rows)>=max(50,int(len(old)*0.9)), 'incomplete source inventory'
     def entry(r):
