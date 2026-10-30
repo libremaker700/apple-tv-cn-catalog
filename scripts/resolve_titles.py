@@ -110,6 +110,8 @@ def run(root=ROOT,*,slugs=None,limit=3,force=False,credential_path=None,agent=No
             row['confidence']='VERIFIED';row['sources']=saved['patch'].get('sources',[])
         else:
             saved.setdefault('status','pending_review');row['confidence']=row.get('agent_verification','UNVERIFIED')
+            if saved['status']=='verified':
+                row['refresh_confidence']=row['confidence'];row['confidence']='VERIFIED';row['sources']=saved['patch'].get('sources',[])
         saved['resolver_evidence']=row;cache['records'][w['key']]=saved
         state['records'][w['key']]={'checked_at':checked,'next_retry_at':saved['next_retry_at'],'confidence':row['confidence']}
         report['records'].append(row)
