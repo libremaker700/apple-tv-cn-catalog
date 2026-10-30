@@ -27,9 +27,9 @@ def export_map(root,catalog,checked):
             'synopsis_available':has_summary(zh.get('summary','')),'provider_status':'NATIVE_CHECK_ON_OPEN'})
     dump(root/'docs/title-map.json',{'schema':1,'checked_at':checked,'records':rows})
     fields=['english_title','chinese_title','douban_url','douban_id','type','year','rating','rating_count','confidence','sources']
-    out=io.StringIO(newline='');writer=csv.DictWriter(out,fieldnames=fields);writer.writeheader()
+    out=io.StringIO(newline='');writer=csv.DictWriter(out,fieldnames=fields,lineterminator='\n');writer.writeheader()
     for row in rows:writer.writerow({k:json.dumps(row[k],ensure_ascii=False) if isinstance(row[k],list) else row[k] for k in fields})
-    path=root/'docs/title-map.csv';tmp=path.with_suffix('.tmp');tmp.write_text(out.getvalue(),encoding='utf-8-sig');tmp.replace(path)
+    path=root/'docs/title-map.csv';tmp=path.with_suffix('.tmp');tmp.write_bytes(out.getvalue().encode('utf-8-sig'));tmp.replace(path)
     return rows
 
 def run(root=ROOT,*,slugs=None,limit=3,force=False,credential_path=None,agent=None,lookup=None,search=None,clock=None,publish_changes=True):

@@ -80,6 +80,7 @@ class ResolverTests(unittest.TestCase):
                 self.assertEqual(agent.calls,1);publish.assert_not_called()
                 data=json.loads((root/'docs/title-map.json').read_text(encoding='utf8'))['records'][0]
                 self.assertEqual(data['provider_status'],'NATIVE_CHECK_ON_OPEN');self.assertEqual(data['rating_count'],1234)
+                self.assertNotIn(b'\r\r\n',(root/'docs/title-map.csv').read_bytes())
     def test_auth_failure_reserves_once_and_never_replaces_existing_catalog(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);self.fixture(root);agent=Agent(error='HTTP_401')
