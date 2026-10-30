@@ -2,11 +2,11 @@
   "requested": 0,
   "cacheHits": 8,
   "translated": 0,
-  "pending": 1,
+  "pending": 0,
   "apiHttp": 0,
-  "retainedCopy": 0,
-  "sourceMissing": 0,
-  "checkedAt": 1793396331,
+  "retainedCopy": 1,
+  "sourceMissing": 1,
+  "checkedAt": 1793396792,
   "copyVersion": "hero-copy-zh-cn-v2",
-  "version": "8154dffac2345d3905a3446d218d1f40fb1e3109fe5f695d0d55c97699542bc3"
+  "version": "6a1b6ebaaa0d2ae1fdf88a332afab483f118d44c55056b3bd6ad691d339b6d2d"
 }
