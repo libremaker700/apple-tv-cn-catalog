@@ -1,25 +1,16 @@
 {
-  "checked_at": "2026-10-30T04:42:35+00:00",
+  "checked_at": "2026-10-30T04:47:11+00:00",
   "api_configured": true,
   "attempted": 20,
   "searched": 20,
   "direct_verified": 0,
   "cache_hits": 0,
-  "verified_changes": [
-    {
-      "slug": "maximum-pleasure-guaranteed",
-      "before": "",
-      "after": "最大欢愉保障",
-      "aliases": [
-        "最大欢愉保障"
-      ]
-    }
-  ],
+  "verified_changes": [],
   "monthly_limit": 100,
-  "pending": 19,
-  "reused_verified": 231,
+  "pending": 20,
+  "reused_verified": 232,
   "status": "completed",
-  "monthly_reserved": 77,
+  "monthly_reserved": 97,
   "remaining_unverified": 321,
   "api_results": [
     {
