@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "records": {
+    "being-heumann": {
+      "identity": {
+        "slug": "being-heumann",
+        "english_title": "Being Heumann",
+        "kind": "movie",
+        "year": "2026",
+        "official_id": "umc.cmc.5gf63v7zj97yiozkpj26lpy55"
+      },
+      "status": "verified",
+      "review_method": "reviewed_translation",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "summary_zh": "影片根据朱迪·休曼的回忆录改编，讲述她争取残障人士平等权利的真实经历。1977年，她与一群行动者占领政府办公楼，要求落实反歧视保护，在漫长的抗争中推动改变数百万人的生活。",
+        "summary_checked_at": "2026-10-30T06:23:51+00:00",
+        "summary_sources": [
+          {
+            "type": "wikipedia_reviewed_translation",
+            "url": "https://en.wikipedia.org/wiki/Being_Heumann"
+          },
+          {
+            "type": "apple_official_synopsis",
+            "url": "https://www.apple.com/tv-pr/originals/being-heumann/"
+          }
+        ]
+      }
+    },
+    "nocturne": {
+      "identity": {
+        "slug": "nocturne",
+        "english_title": "Nocturne",
+        "kind": "series",
+        "year": "2026",
+        "official_id": "umc.cmc.4cfsq1juke72zutv5xp0pw3rj"
+      },
+      "status": "verified",
+      "review_method": "reviewed_translation",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "summary_zh": "退役军人、前凶杀案警探乔纳·林恩搬到宾夕法尼亚州小镇，希望与家人过平静生活。狡诈的连环杀手尤雷克·沃尔特却让小镇陷入危险；为寻找最后一名失踪受害者，他不得不让视如女儿的FBI探员萨加·鲍尔卷入调查。",
+        "summary_checked_at": "2026-10-30T06:23:51+00:00",
+        "summary_sources": [
+          {
+            "type": "wikipedia_reviewed_translation",
+            "url": "https://en.wikipedia.org/wiki/Nocturne_(TV_series)"
+          },
+          {
+            "type": "apple_official_synopsis",
+            "url": "https://www.apple.com/tv-pr/originals/nocturne/"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -5,7 +5,8 @@ from pathlib import Path
 from catalog import ROOT,DOCS,load,publish,validate
 from title_sources import Lookup,chinese,norm
 from metadata_policy import POLICY,allowed_source,clean_entry
-QUERY_VERSION='zh-cn-v4-mainland'
+from summary_cache import apply_summary,reapply_summaries
+QUERY_VERSION='zh-cn-v5-mainland-summary'
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -45,7 +46,8 @@ def apply_verified(entry,cached,ident):
     zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
     if not zh.get('watchUrl'):zh['watchUrl']=(out.get('officialIdentity') or {}).get('watchUrl','')
     # Only title fields change. Synopsis/cast/date/season/posters remain tied to existing identities.
-    out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;out['chinesePending']=False;return out
+    out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;out['chinesePending']=False
+    return apply_summary(out,cached,ident)
 
 class SearchClient:
     def __init__(self,keys,session=None):
@@ -76,7 +78,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
     if not force and cache.get('last_policy')==POLICY and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<6*3600:
         print('Title lookup not due; keep verified names and cached evidence');return None
     hints=read(root/'data/title-requests.json',{'records':{}})['records']
-    current=read(docs/'catalog.json',{});version=read(docs/'version.json',{});entries=copy.deepcopy(current['entries'])
+    current=read(docs/'catalog.json',{});version=read(docs/'version.json',{});entries=reapply_summaries(copy.deepcopy(current),root,identity)['entries']
     client=client or SearchClient(keys_from_env());limit=max(0,min(int(limit),20));monthly_limit=max(0,min(int(monthly_limit),200))
     used=int(cache.setdefault('budgets',{}).get(month,0))
     report={'checked_at':checked,'api_configured':bool(client.keys),'attempted':0,'searched':0,'direct_verified':0,'cache_hits':0,'verified_changes':[],
@@ -92,19 +94,24 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         hint=hints.get(e['slug'],{});ident=identity(e,hint);key=cache_key(ident);old=cache['records'].get(key,{})
         original=copy.deepcopy(e);e=apply_verified(e,old,ident)
         if e!=original:report['cache_hits']+=1
-        if old.get('status')=='verified' and old.get('identity')==ident:
+        title_verified=old.get('status')=='verified' and old.get('identity')==ident
+        summary_needed=not chinese((e.get('zh') or {}).get('summary',''))
+        if title_verified and not summary_needed:
             report['reused_verified']+=1;output.append(e);continue
-        if not needs_title_review(e,hint):
+        if not needs_title_review(e,hint) and not summary_needed:
             report['reused_verified']+=1;output.append(e);continue
         if slugs and e['slug'] not in slugs:output.append(e);continue
-        if not ident['year'] or (old.get('query_version')==QUERY_VERSION and old.get('next_retry_at','')>checked) or report['attempted']>=limit:
+        retry_field='summary_next_retry_at' if title_verified else 'next_retry_at'
+        if not ident['year'] or (old.get('query_version')==QUERY_VERSION and old.get(retry_field,'')>checked) or report['attempted']>=limit:
             output.append(e);continue
-        # Mainland names can be verified before release. This queue only changes
-        # title fields; the app's independent release/playback gates stay intact.
+        # Mainland presentation metadata can be verified before release;
+        # the app's independent release/playback gates stay intact.
         report['attempted']+=1;ref=record(e,hint);patch=None;evidence={'status':'direct_source'}
         if old.get('identity')==ident and old.get('evidence',{}).get('results'):
             patch=client.verify(ref,old['evidence']['results'],checked)
+        if patch and title_verified and summary_needed and not patch.get('summary_zh'):patch=None
         if not patch:patch=client.direct(ref,checked)
+        if patch and title_verified and summary_needed and not patch.get('summary_zh'):patch=None
         if patch:report['direct_verified']+=1
         elif not client.stopped:patch,evidence=client.search(ref,checked,reserve)
         if not patch and evidence.get('status')=='monthly_budget_exhausted':
@@ -112,8 +119,17 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
             report['budget_deferred']=report.get('budget_deferred',0)+1;output.append(e);continue
         entry={'identity':ident,'query_version':QUERY_VERSION,'status':'verified' if patch else 'pending_review','checked_at':checked,'evidence':evidence,
                'next_retry_at':(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds')}
+        if title_verified:
+            entry=copy.deepcopy(old);entry.update(query_version=QUERY_VERSION,summary_evidence=evidence,summary_checked_at=checked,
+                summary_next_retry_at=(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds'))
+            # Missing synopsis must not erase a previously verified name or its evidence.
+            if patch and patch.get('summary_zh'):
+                entry['patch'].update({k:patch[k] for k in ('summary_zh','summary_sources','summary_checked_at') if k in patch})
+            else:patch=None
         if patch:
-            entry['patch']=patch;e=apply_verified(e,entry,ident)
+            if not title_verified:entry['patch']=patch
+            e=apply_verified(e,entry,ident)
+            if not patch.get('summary_zh'):entry['summary_next_retry_at']=(clock+timedelta(days=30)).isoformat(timespec='seconds')
             report['verified_changes'].append({'slug':e['slug'],'before':(original.get('zh') or {}).get('title',''),'after':e['zh']['title'],'aliases':e['zh']['aliases']})
         else:report['pending']+=1
         cache['records'][key]=clean(entry,client.keys);output.append(e)
@@ -131,7 +147,7 @@ def reapply_cache(catalog,root=ROOT):
     cached=read(root/'data/title-cache.json',{'records':{}})['records'];hints=read(root/'data/title-requests.json',{'records':{}})['records']
     for i,e in enumerate(catalog['entries']):
         ident=identity(e,hints.get(e['slug'],{}));catalog['entries'][i]=apply_verified(e,cached.get(cache_key(ident),{}),ident)
-    return catalog
+    return reapply_summaries(catalog,root,identity)
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--force',action='store_true');parser.add_argument('--slug',action='append');args=parser.parse_args()
     try:run(force=args.force,limit=os.getenv('TITLE_LOOKUP_LIMIT','12'),monthly_limit=os.getenv('TITLE_LOOKUP_MONTHLY_LIMIT','100'),slugs=args.slug)

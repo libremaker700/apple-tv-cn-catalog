@@ -3,6 +3,18 @@ import hashlib, re, unicodedata
 from urllib.parse import urlsplit, unquote
 import requests
 from metadata_policy import POLICY,allowed_source
+from summary_cache import valid_summary
+
+def synopsis_patch(patch,text,url,checked_at):
+    """Only attach a Chinese synopsis after the containing page passed identity gates."""
+    text=re.sub(r'\[\d+\]|<[^>]*>','',str(text or ''))
+    text=re.sub(r'\s+',' ',text).strip()[:600]
+    if valid_summary(text):patch.update(summary_zh=text,summary_sources=[source('verified_page_synopsis',url,checked_at)],summary_checked_at=checked_at)
+    return patch
+
+def plot_section(raw):
+    match=re.search(r'(?:^|\n)[ \t]*(?:#{1,4}[ \t]*)?(?:[^\n]{1,80}的)?(?:剧情简介|剧情梗概|剧情|故事梗概)[ \t·:：]*\n+([\s\S]*?)(?=\n[ \t]*(?:#{1,4}\s+|演职员|演员表|角色介绍|短评|获奖|参考资料|播出信息|分集剧情)|\Z)',raw)
+    return match.group(1).strip()[:600] if match else ''
 def norm(value):
     return re.sub(r'[^a-z0-9\u3400-\u9fff]', '', unicodedata.normalize('NFKC', str(value or '')).casefold())
 def chinese(value):
@@ -42,9 +54,9 @@ def wiki_patch(record, page, checked_at):
         return None
     display=page.get('mainland_title','')
     if not chinese(display):return None
-    return {'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY,
+    return synopsis_patch({'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY,
             'name_status': 'verified_title_sources', 'name_checked_at': checked_at,
-            'sources': [source('wikipedia_mainland_title', url, checked_at)]}
+            'sources': [source('wikipedia_mainland_title', url, checked_at)]},plot_section(page.get('extract','')) or lead,url,checked_at)
 
 def bangumi_patch(record, subject, checked_at):
     expected = year(record)
@@ -60,8 +72,9 @@ def bangumi_patch(record, subject, checked_at):
     old = record.get('display_name_zh', '')
     if chinese(old) and norm(old) != norm(display):
         return None
-    return {'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY, 'name_status': 'verified_title_sources',
-            'name_checked_at': checked_at, 'sources': [source('bangumi_title', f"https://bangumi.tv/subject/{int(subject['id'])}", checked_at)]}
+    url=f"https://bangumi.tv/subject/{int(subject['id'])}"
+    return synopsis_patch({'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY, 'name_status': 'verified_title_sources',
+            'name_checked_at': checked_at, 'sources': [source('bangumi_title',url,checked_at)]},subject.get('summary',''),url,checked_at)
 
 class Lookup:
     def __init__(self, key='', session=None):
@@ -120,7 +133,7 @@ class Lookup:
     def search(self, record, checked_at):
         title = record.get('english_title') or record.get('original_title')
         hint = {'movie': '电影', 'tv': '电视剧', 'anime': '电视动画'}.get(record.get('kind'), '')
-        query = f'{title} {year(record) or ""} {hint} {record.get("search_name_hint", "")} 中文名 中国大陆译名'.strip()
+        query = f'{title} {year(record) or ""} {hint} {record.get("search_name_hint", "")} 中文名 中国大陆译名 剧情简介'.strip()
         # One basic search, no retry or automatic upgrade; caller reserves budget first.
         self.requests += 1
         try:
@@ -177,7 +190,9 @@ class Lookup:
                 patch=structured_patch(record,item,checked_at)
                 if patch and patch not in patches:patches.append(patch)
         unique = {norm(p['display_name_zh']) for p in patches}
-        return patches[0] if len(unique) == 1 else None
+        if len(unique)!=1:return None
+        # Keep matching names consistent; prefer the verified page with a usable synopsis.
+        return next((p for p in patches if p.get('summary_zh')),patches[0])
 
 def structured_patch(record,item,checked_at):
     """Verify fields in a fetched Chinese identity page, never a search headline/snippet."""
@@ -210,5 +225,5 @@ def structured_patch(record,item,checked_at):
     if not chinese(name) or len(name)>80:return None
     from opencc import OpenCC
     cc=OpenCC('t2s');names=list(dict.fromkeys([cc.convert(s) for s in [name]+aliases if chinese(s) and len(s)<80]))
-    return {'display_name_zh':cc.convert(name),'aliases_zh':names,'metadataPolicy':POLICY,'name_status':'verified_title_sources','name_checked_at':checked_at,
-            'sources':[source(kind,item['url'],checked_at)]}
+    return synopsis_patch({'display_name_zh':cc.convert(name),'aliases_zh':names,'metadataPolicy':POLICY,'name_status':'verified_title_sources','name_checked_at':checked_at,
+            'sources':[source(kind,item['url'],checked_at)]},cc.convert(plot_section(raw)),item['url'],checked_at)

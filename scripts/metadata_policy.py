@@ -17,7 +17,7 @@ def clean_zh(value):
     if not isinstance(value,dict) or value.get('metadataPolicy')!=POLICY:return None
     for link in value.get('sources',[]):
         if not allowed_source(link):return None
-    for item in value.get('name_sources',[]):
+    for item in value.get('name_sources',[])+value.get('summary_sources',[]):
         if not allowed_source(item.get('url','')):return None
     if value.get('watchUrl') and not allowed_source(value['watchUrl']):return None
     return copy.deepcopy(value)
