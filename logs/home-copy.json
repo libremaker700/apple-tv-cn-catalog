@@ -1,0 +1,13 @@
+{
+  "requested": 9,
+  "cacheHits": 0,
+  "translated": 0,
+  "pending": 9,
+  "apiHttp": 404,
+  "failure": "translation_unavailable",
+  "model": "gemini-2.5-flash-lite",
+  "usage": {},
+  "checkedAt": 1793380653,
+  "copyVersion": "hero-copy-zh-cn-v1",
+  "version": "6a3c251b52b45caac96166584ee33dff6fe84068e2155c91261e3604d33f1d85"
+}
