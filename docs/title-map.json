@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checked_at": "2026-10-30T10:09:45+00:00",
+  "checked_at": "2026-10-30T10:18:52+00:00",
   "records": [
     {
       "slug": "the-savant",
@@ -73,9 +73,9 @@
       "name_confidence": "VERIFIED",
       "sources": [
         {
+          "retrieved_at": "2026-10-30T10:09:45+00:00",
           "type": "douban_mobile_identity",
-          "url": "https://movie.douban.com/subject/37326083/",
-          "retrieved_at": "2026-10-30T10:09:45+00:00"
+          "url": "https://movie.douban.com/subject/37326083/"
         }
       ],
       "synopsis_available": true,
@@ -304,9 +304,9 @@
       "name_confidence": "VERIFIED",
       "sources": [
         {
+          "retrieved_at": "2026-10-30T10:09:45+00:00",
           "type": "douban_mobile_identity",
-          "url": "https://movie.douban.com/subject/36229588/",
-          "retrieved_at": "2026-10-30T10:09:45+00:00"
+          "url": "https://movie.douban.com/subject/36229588/"
         }
       ],
       "synopsis_available": true,
