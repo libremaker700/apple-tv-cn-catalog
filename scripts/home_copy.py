@@ -11,7 +11,7 @@ RATINGS={'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-1
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 def clean(value):return re.sub(r'\s+',' ',str(value or '')).strip()
-def valid_zh(text):return isinstance(text,str)and 0<len(text)<=500 and bool(re.search(r'[\u3400-\u9fff]',text))and not re.search(r'<|>|https?://|AIza|tvly-',text)
+def valid_zh(text,max_length=500):return isinstance(text,str)and 0<len(text)<=max_length and bool(re.search(r'[\u3400-\u9fff]',text))and not re.search(r'<|>|https?://|AIza|tvly-',text)
 
 def fixed(text):
     text=clean(text)
@@ -57,7 +57,7 @@ def extract(html,home,allow_partial=False):
     return result
 
 class Translator:
-    def __init__(self,key,model=None):self.key=key;self.model=model;self.usage={};self.http=0;self.models=[];self.api_error=''
+    def __init__(self,key,model=None,max_length=500):self.max_length=max_length;self.key=key;self.model=model;self.usage={};self.http=0;self.models=[];self.api_error=''
     def translate(self,rows):
         if not self.key:raise ValueError('missing_api_key')
         if not self.model:
@@ -83,7 +83,7 @@ class Translator:
         if not isinstance(output,list)or len(output)!=len(wanted):raise ValueError('invalid_translation_count')
         result={}
         for r in output:
-            if set(r)!={'id','text'}or r['id']not in wanted or r['id']in result or not valid_zh(r['text']):raise ValueError('invalid_translation_identity_or_text')
+            if set(r)!={'id','text'}or r['id']not in wanted or r['id']in result or not valid_zh(r['text'],self.max_length):raise ValueError('invalid_translation_identity_or_text')
             result[r['id']]=r['text'].strip()
         return result
 

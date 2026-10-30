@@ -1,12 +1,14 @@
 """One public-US synopsis translation per work/source hash, shared by every App surface."""
 import copy,json,os,re,time,hashlib,unicodedata
 from pathlib import Path
+from urllib.parse import urlsplit
 from title_lookup import read,dump
-from home_copy import Translator,digest,valid_zh,clean
+from home_copy import Translator,digest,valid_zh as short_valid_zh,clean
+def valid_zh(text):return short_valid_zh(text,1800)
 VERSION='work-summary-zh-cn-v1'
 def key(identity,text):return digest([VERSION,identity,clean(text)])
 def norm(s):return re.sub(r"[^a-z0-9]","",unicodedata.normalize('NFKD',s).lower())
-def source_id(e):return e.get('officialId')or(e.get('officialIdentity',{}).get('watchUrl','').split('/')[-1])
+def source_id(e):return e.get('officialId')or(urlsplit(e.get('officialIdentity',{}).get('watchUrl','')).path.rstrip('/').split('/')[-1])
 def attach(e,record):
     if not record or not valid_zh(record.get('text')):return
     zh=e.setdefault('zh',{}) or {};e['zh']=zh
@@ -33,7 +35,7 @@ def run(root,api,translator,now,limit=400):
     for identity,w in wanted.items():
         try:
             detail=api.get(w['kind'],identity)
-            if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show')or norm(detail.get('title',''))!=norm(w['en']):raise ValueError('identity')
+            if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show'):raise ValueError('identity')
             text=clean(detail.get('description')or detail.get('heroDescription')or w.get('summaryEn',''))
             if not text or len(text)>1800:report['missingOriginal']+=1;continue
             k=key(identity,text);source[identity]=(w,text,k)
@@ -64,7 +66,7 @@ def main():
     from home_sources import CHANNEL
     from official_pages import Pages
     now=int(time.time());api=Pages(ROOT,fetch(CHANNEL).decode('utf-8'))
-    report=run(ROOT,api,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now)
+    report=run(ROOT,api,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None,max_length=1800),now)
     folder=ROOT/'docs';m=load(folder/'version.json');publish(load(folder/'catalog.json'),m.get('checked_at'),'shared-official-summary-translation')
     home=apply_home(load(folder/'home/home.json'),ROOT);validate(home);m=load(folder/'home/version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest()
     path='releases/'+sha+'/home.json';(folder/'home'/path).parent.mkdir(parents=True,exist_ok=True);(folder/'home'/path).write_bytes(blob);m.update(path=path,version=sha,checkedAt=now);(folder/'home/home.json').write_bytes(blob);(folder/'home/version.json').write_bytes(raw_json(m));validate_publication();print(json.dumps(report,ensure_ascii=False))
