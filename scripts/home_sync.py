@@ -72,6 +72,9 @@ def collect(catalog,html,image):
     return value,{'heroCount':len(hero),'shelfCount':len(shelves),'unmappedChannelWorks':list({x['officialId']:x for x in skipped}.values())}
 
 def validate(value,entries=None):
+    if value.get('schema')==3:
+        from home_validation import validate_pages
+        return validate_pages(value)
     if value.get('schema')==2:
         from home_validation import validate_home
         return validate_home(value)
@@ -115,16 +118,18 @@ def sync():
         found=detail_work(work,fetch(work['watchUrl']).decode('utf8'));found['checkedAt']=now;details[work['officialId']]=found
         from title_lookup import dump
         dump(details_path,details);return found
-    from home_sources import collect as collect_official
-    value,report=collect_official(load(DOCS/'catalog.json'),fetch(SOURCE).decode('utf-8'),fetch(ROOM).decode('utf-8'),image,detail)
+    from official_pages import Pages
+    from home_pages import collect as collect_official
+    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,fetch(SOURCE).decode('utf-8')),image)
     from home_titles import enrich
     enrich(value,ROOT,now)
     validate(value)
     raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images={}
-    rows=value['hero']+[row for s in value['shelves']for row in s['items']if row.get('artwork')]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in value.get('works',[])if w.get('landscapeArtwork')]
+    from home_pages import image_rows
+    rows=image_rows(value)
     for row in rows:
         ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes();images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
-    assert sum(x['bytes'] for x in images.values())<=24*1024*1024
+    assert sum(x['bytes'] for x in images.values())<=96*1024*1024
     path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
     manifest={'schema':1,'version':sha,'path':path,'images':images,'checkedAt':now}
     (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))
@@ -138,12 +143,13 @@ def validate_publication():
     assert hashlib.sha256(raw).hexdigest()==manifest['version']
     value=json.loads(raw);validate(value)
     refs=set()
-    rows=value['hero']+[row for s in value['shelves']for row in s['items']if row.get('artwork')]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in value.get('works',[])if w.get('landscapeArtwork')]
+    from home_pages import image_rows
+    rows=image_rows(value)
     for row in rows:
         ref=row['artwork'].removeprefix(BASE);refs.add(ref);blob=(folder/ref).read_bytes();meta=manifest['images'][ref]
         assert hashlib.sha256(blob).hexdigest()==meta['sha256']==Path(ref).stem and len(blob)==meta['bytes']
         with Image.open(io.BytesIO(blob)) as im:assert im.size==(row['width'],row['height']);im.verify()
-    assert refs==set(manifest['images']) and sum(x['bytes']for x in manifest['images'].values())<=24*1024*1024
+    assert refs==set(manifest['images']) and sum(x['bytes']for x in manifest['images'].values())<=96*1024*1024
     print('PASS home identities, manifest hash and full HD image files')
 
 if __name__=='__main__':

@@ -1,0 +1,48 @@
+import sys,copy,unittest,tempfile,json
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+from home_pages import collect
+from home_validation import validate_pages
+from official_pages import slim_item,Pages
+
+def item(n):
+    return {'id':'umc.cmc.work'+str(n),'type':'Movie','title':'Work '+str(n),'url':'https://tv.apple.com/us/movie/work/umc.cmc.work'+str(n),'releaseDate':1704067200000,'images':{'posterArt':{'url':'https://is1-ssl.mzstatic.com/image/thumb/p'+str(n)+'/{w}x{h}.{f}','width':2000,'height':3000},'shelfImageBackground':{'url':'https://is1-ssl.mzstatic.com/image/thumb/w'+str(n)+'/{w}x{h}.{f}','width':3840,'height':2160}}}
+def shelf(name,items,kind='lockup'):return {'id':'shelf-'+str(len(name))+'-'+name.replace(' ','-'),'header':{'title':name},'items':items,'displayType':kind,'url':'https://tv.apple.com/us/shelf/works/uts.col.test'}
+class Fake:
+    def __init__(self):self.rows=[item(n)for n in range(25)]
+    def canvas(self,kind,identity):
+        if kind=='room':return {'shelves':[shelf('All Movies',self.rows)]}
+        topic=lambda n,t:{'id':'uts.room.'+n,'type':'Room','title':t,'url':'https://tv.apple.com/us/room/'+n+'/uts.room.'+n,'images':item(0)['images']}
+        return {'shelves':[shelf('Featured',self.rows[:3],'epicStageWithUpsell'),shelf('Top 10 TV Shows',self.rows[:10]),shelf('Top 10 Movies',self.rows[:10]),shelf('Watch Premieres for Free',self.rows[:4]),shelf('New Releases',self.rows),shelf('Dark Destinations',self.rows[:5],'epicShowcase'),dict(shelf('Browse All Apple Originals',[topic('coming','Coming to Apple TV'),topic('kids','Kids & Family')]),id='uts.col.tv-plus-browse-by-category'),shelf('Must-See Hits',self.rows)]}
+    def shelf(self,s):return s
+    def get(self,kind,identity):return next(x for x in self.rows if x['id']==identity)
+def image(url,w,h):
+    import hashlib
+    return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.jpg','width':w,'height':h}
+class HomePages(unittest.TestCase):
+    def value(self):return collect({'entries':[]},Fake(),image)[0]
+    def test_seven_sections_and_complete_destination_counts(self):
+        v=self.value();validate_pages(v)
+        self.assertEqual([s['title']for s in v['shelves']],['Top 10 电视剧','Top 10 电影','最新上线','暗黑秘境','浏览全部 Apple 原创作品','必看热门影视','即将上线'])
+        self.assertEqual(len(v['shelves'][5]['items']),25);self.assertEqual(len(v['shelves'][4]['items']),1)
+        self.assertEqual(v['shelves'][3]['layout'],'landscape');self.assertTrue(v['pages']);self.assertEqual(len(v['works']),25)
+    def test_rejects_dangling_topic_region_and_playback_injection(self):
+        v=self.value()
+        for change in [lambda x:x['shelves'][4]['items'][0].update(pageId='missing'),lambda x:x['pages'][0].update(source='https://tv.apple.com/tw/room/x/y'),lambda x:x['works'][0].update(id='123')]:
+            b=copy.deepcopy(v);change(b)
+            with self.assertRaises((AssertionError,ValueError)):validate_pages(b)
+    def test_only_display_metadata_is_retained(self):
+        raw=dict(item(1),videos={'hlsUrl':'private'},playables=['temporary'],token='secret')
+        self.assertEqual(set(slim_item(raw))-set(item(1)),set())
+    def test_exact_name_type_and_year_reuses_original_without_replacing_known_identity(self):
+        e={'slug':'known-one','en':'Work 1','kind':'movie','releaseDate':'2024-01-01','officialIdentity':{'watchUrl':''}}
+        v,_=collect({'entries':[e]},Fake(),image);self.assertEqual(next(w for w in v['works']if w['officialId']=='umc.cmc.work1')['slug'],'known-one')
+        e['releaseDate']='2023-01-01';v,_=collect({'entries':[e]},Fake(),image);self.assertFalse(next(w for w in v['works']if w['officialId']=='umc.cmc.work1').get('knownCatalog'))
+        e['releaseDate']='2024-01-01';e['officialIdentity']['watchUrl']='https://tv.apple.com/us/movie/other/umc.cmc.other';v,_=collect({'entries':[e]},Fake(),image);self.assertFalse(next(w for w in v['works']if w['officialId']=='umc.cmc.work1').get('knownCatalog'))
+    def test_pagination_follows_until_end_and_detects_cycles(self):
+        api=object.__new__(Pages);calls=[]
+        def get(kind,identity,token=None):calls.append(token);return {'id':'canvas','source':'https://tv.apple.com/us/room/a/uts.room.a','shelves':[{'id':str(token)}],'nextToken':'10'if token is None else None}
+        api.get=get;self.assertEqual(len(api.canvas('room','uts.room.a')['shelves']),2);self.assertEqual(calls,[None,'10'])
+        api.get=lambda *a,**k:{'id':'canvas','shelves':[],'nextToken':'10'}
+        with self.assertRaises(ValueError):api.canvas('room','uts.room.a')
+if __name__=='__main__':unittest.main()
