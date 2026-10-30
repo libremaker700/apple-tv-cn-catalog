@@ -35,16 +35,26 @@ class GeminiTitles:
     def __init__(self,key,model=DEFAULT_MODEL,session=None):
         self.key=key.strip();self.model=model;self.session=session or requests.Session()
         if not re.fullmatch(r'gemini-[a-zA-Z0-9.-]{1,80}',model):raise ValueError('Invalid model name')
-    def search(self,ref):
+    def models(self):
+        report={'api_http':0,'models':[]}
+        if not self.key:return dict(report,status='missing_api_key')
+        try:
+            response=self.session.get('https://generativelanguage.googleapis.com/v1beta/models',headers={'x-goog-api-key':self.key},params={'pageSize':100},timeout=(10,30),allow_redirects=False)
+            report['api_http']=response.status_code;data=response.json()
+            report['models']=[{'name':row.get('name','').removeprefix('models/'),'methods':row.get('supportedGenerationMethods',[])} for row in data.get('models',[]) if row.get('name','').startswith('models/gemini-')]
+            report['status']='ok' if response.status_code==200 else (data.get('error') or {}).get('status','api_error')
+        except (requests.RequestException,ValueError):report['status']='transport_or_json_error'
+        return redact(report,[self.key])
+    def search(self,ref,grounded=True):
         report={'status':'missing_api_key','model':self.model,'api_http':0,'grounded':False,'candidate_titles':[],'sources':[]}
         if not self.key:return report
-        prompt=(f"请实际使用 Google Search 联网检索，核对这部作品在中国大陆的常用中文片名。英文原名：{ref['english_title']}；"
+        prompt=(("请实际使用 Google Search 联网检索，" if grounded else '请根据已有知识回答，若不确定就明确说明。')+f"核对这部作品在中国大陆的常用中文片名。英文原名：{ref['english_title']}；"
                 f"作品类型：{'电影' if ref['kind']=='movie' else '电视剧'}；年份：{ref['year']}；苹果官网：{ref.get('official_url','')}。"
                 "不要把同名书籍、其他年份电影或其他季混为一谈。大陆译名优先，不采用仅供香港、台湾使用的译名。"
                 "首行只写：大陆片名：《片名》。之后用两句话说明原名、年份和身份核对依据并引用网页来源。"
                 "若没有可靠中文片名，首行写：大陆片名：未核实。不要猜测，也不要推荐其他电影。")
-        body={'contents':[{'parts':[{'text':prompt}]}],'tools':[{'google_search':{}}],
-              'generationConfig':{'temperature':0.1,'maxOutputTokens':1024}}
+        body={'contents':[{'parts':[{'text':prompt}]}],'generationConfig':{'temperature':0.1,'maxOutputTokens':1024}}
+        if grounded:body['tools']=[{'google_search':{}}]
         try:
             response=self.session.post(f'https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent',
                 headers={'x-goog-api-key':self.key,'Content-Type':'application/json'},json=body,timeout=(10,75),allow_redirects=False)
@@ -62,6 +72,7 @@ class GeminiTitles:
             if allowed_source(url):sources.append({'title':str(web.get('title',''))[:200],'url':url[:2500]})
         report.update(grounded=bool(queries and sources),answer=text[:4000],sources=sources[:8],search_queries=queries[:6],
                       finish_reason=candidate.get('finishReason'),usage=data.get('usageMetadata',{}),model_version=data.get('modelVersion',''))
-        report['candidate_titles']=extract_titles(text) if report['grounded'] else []
-        report['status']='ok' if report['candidate_titles'] else ('no_mainland_title' if report['grounded'] else 'no_grounding_evidence')
+        report['candidate_titles']=extract_titles(text) if report['grounded'] or not grounded else []
+        report['status']='ok' if report['candidate_titles'] else ('no_mainland_title' if report['grounded'] or not grounded else 'no_grounding_evidence')
+        if not grounded:report['ordinary_response']=True
         return redact(report,[self.key])
