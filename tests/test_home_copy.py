@@ -41,3 +41,9 @@ class CopyTests(unittest.TestCase):
         html='<script id="serialized-server-data">'+json.dumps(data)+'</script>'
         result=extract(html,self.home);self.assertNotIn('private',json.dumps(result))
         with self.assertRaises(ValueError):extract(html.replace('MoviePageIntent','ShowPageIntent'),self.home)
+    def test_official_rating_and_primary_genres_not_inferred(self):
+        item={'primaryMetadata':['Movie','Animation','Classics'],'ratingBadges':[{'$type':'rating','fallbackText':'G'}],'segue':{'destination':{'id':'umc.cmc.test','storefront':'us','$kind':'MoviePageIntent'}}}
+        def html():return '<script id="serialized-server-data">'+json.dumps({'data':[{'intent':{'$kind':'ChannelPageIntent','id':'tvs.sbd.4000','storefront':'us'},'data':{'shelves':[{'id':'uts.col.tv-plus-epic-stage','items':[item]}]}}]})+'</script>'
+        c=extract(html(),self.home)['umc.cmc.test'];self.assertEqual(c['contentRating'],'G');self.assertEqual(c['genresZh'],['动画','经典'])
+        item['ratingBadges'][0]['fallbackText']='invented';self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')
+        item.pop('ratingBadges');self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')

@@ -7,6 +7,7 @@ from gemini_titles import GeminiTitles
 
 VERSION='hero-copy-zh-cn-v2'
 GENRES={'Action':'动作','Adventure':'冒险','Animation':'动画','Classics':'经典','Comedy':'喜剧','Crime':'犯罪','Documentary':'纪录片','Drama':'剧情','Family':'家庭','Fantasy':'奇幻','History':'历史','Horror':'恐怖','Kids & Family':'儿童与家庭','Music':'音乐','Mystery':'悬疑','Romance':'爱情','Sci-Fi':'科幻','Sports':'体育','Thriller':'惊悚','War':'战争','Western':'西部'}
+RATINGS={'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-13','R','NC-17','NR'}
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 def clean(value):return re.sub(r'\s+',' ',str(value or '')).strip()
@@ -25,11 +26,14 @@ def fixed(text):
     return m[1]+'年艾美奖获奖作品'if m else ''
 
 def validate_copy(identity,c):
-    assert set(c)=={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
+    required={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
+    assert required<=set(c)<=required|{'contentRating'}
+    assert c.get('contentRating','')in RATINGS|{''}
     assert c['source']==CHANNEL
     for k,n in [('descriptionEn',1800),('badgeEn',200),('noteEn',200),('descriptionZh',500),('badgeZh',200),('noteZh',200)]:assert isinstance(c[k],str)and len(c[k])<=n and not re.search(r'<|>|https?://|AIza|tvly-',c[k])
     assert isinstance(c['genresZh'],list)and len(c['genresZh'])<=8 and all(g in GENRES.values()for g in c['genresZh'])
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
+    if 'contentRating'in c:source['contentRating']=c['contentRating']
     assert c['sourceHash']==digest([identity,source])and c['noteZh']==fixed(c['noteEn'])and c['badgeZh']==fixed(c['badgeEn'])
     assert not c['descriptionZh']or valid_zh(c['descriptionZh'])
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
@@ -45,7 +49,9 @@ def extract(html,home):
         w=works[identity]
         if dest.get('storefront')!='us' or dest.get('$kind')!=('MoviePageIntent'if w['kind']=='movie'else'ShowPageIntent'):raise ValueError('Copy identity mismatch')
         # Only these public display strings survive; offers, sessions and video URLs never do.
-        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in w.get('genres',[])if g in GENRES][:2]}
+        metadata=item.get('primaryMetadata');genres=metadata[1:]if isinstance(metadata,list)and metadata else w.get('genres',[])
+        rating=next((b.get('fallbackText')for b in item.get('ratingBadges',[])if isinstance(b,dict)and b.get('$type')=='rating'and b.get('fallbackText')in RATINGS),'')
+        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2],'contentRating':rating}
     if not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
     return result
 
