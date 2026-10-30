@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '37 3 * * *'
+    - cron: '37 */6 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -32,11 +32,15 @@ jobs:
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
         run: python scripts/catalog.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
       - run: python scripts/catalog.py --validate
+      - name: Update US channel recommendations and full HD home artwork
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
+        run: python scripts/home_sync.py
+      - run: python scripts/home_sync.py --validate
       - name: Commit validated data and image files
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          git add docs data/season-cache.json
+          git add docs data/season-cache.json data/home-image-cache.json
           git diff --cached --quiet || git commit -m 'catalog: update verified metadata and images'
           git push
       - uses: actions/configure-pages@v5
