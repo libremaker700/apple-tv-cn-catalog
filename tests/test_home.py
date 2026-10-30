@@ -24,6 +24,9 @@ class Home(unittest.TestCase):
             with patch.object(h,'ROOT',root),patch.object(h,'DOCS',root/'docs'),patch.object(h,'fetch',fetch),patch.object(h.time,'time',return_value=1000000):
                 _,first=h.sync();self.assertEqual(len(calls),3)
                 _,second=h.sync();self.assertEqual(len(calls),3);self.assertEqual(first['version'],second['version'])
+                changed=io.BytesIO();Image.new('RGB',(1920,1080),'red').save(changed,format='JPEG');blob=changed.getvalue()
+                with patch.object(h.time,'time',return_value=1000000+6*3600+1):
+                    _,third=h.sync();self.assertEqual(len(calls),6);self.assertNotEqual(second['version'],third['version'])
                 prior=(root/'docs/home/version.json').read_bytes()
                 with patch.object(h,'fetch',side_effect=ValueError('unavailable')):
                     with self.assertRaises(ValueError):h.sync()

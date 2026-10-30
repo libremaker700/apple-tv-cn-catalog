@@ -89,7 +89,7 @@ def sync():
     cache_file=ROOT/'data/home-image-cache.json';cache=load(cache_file) if cache_file.exists() else {};now=int(time.time())
     def image(url):
         previous=cache.get(url);path=folder/previous['path'] if previous else None
-        if previous and now-previous.get('checkedAt',0)<7*86400 and path.is_file():
+        if previous and now-previous.get('checkedAt',0)<6*3600 and path.is_file():
             raw=path.read_bytes()
             if hashlib.sha256(raw).hexdigest()==path.stem:return {'artwork':BASE+previous['path'],'width':1920,'height':1080}
         raw=fetch(url)
