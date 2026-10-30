@@ -1,86 +1,18 @@
 {
-  "checked_at": "2026-10-30T04:47:11+00:00",
+  "checked_at": "2026-10-30T04:50:48+00:00",
   "api_configured": true,
-  "attempted": 20,
-  "searched": 20,
+  "attempted": 3,
+  "searched": 3,
   "direct_verified": 0,
   "cache_hits": 0,
   "verified_changes": [],
   "monthly_limit": 100,
-  "pending": 20,
+  "pending": 3,
   "reused_verified": 232,
   "status": "completed",
-  "monthly_reserved": 97,
+  "monthly_reserved": 100,
   "remaining_unverified": 321,
   "api_results": [
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
-    {
-      "key_slot": 1,
-      "http_status": 200
-    },
     {
       "key_slot": 1,
       "http_status": 200
