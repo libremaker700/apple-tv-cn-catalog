@@ -1,23 +1,10 @@
 {
-  "requested": 9,
-  "cacheHits": 0,
-  "translated": 9,
+  "requested": 0,
+  "cacheHits": 9,
+  "translated": 0,
   "pending": 0,
-  "apiHttp": 200,
-  "model": "gemini-3.5-flash-lite",
-  "usage": {
-    "promptTokenCount": 548,
-    "candidatesTokenCount": 613,
-    "totalTokenCount": 1161,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 548
-      }
-    ],
-    "serviceTier": "standard"
-  },
-  "checkedAt": 1793381088,
+  "apiHttp": 0,
+  "checkedAt": 1793381382,
   "copyVersion": "hero-copy-zh-cn-v2",
-  "version": "fc92e3b9e1a6a47f417a65fab92dc37deff9b0ef5028493d97102ad1fc110cdc"
+  "version": "3264edb3a2614afb8cc732974572b12d75c044692ef02195434f05be52157a5c"
 }

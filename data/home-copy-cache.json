@@ -53,9 +53,9 @@
       "createdAt": 1793381088
     },
     "d4e65b17223b1ea2b56824fca0c4369eec2954d1f205c40fbf8f757a17e95e55": {
-      "text": "当一个冷酷无情的暗杀小队将目标对准“臭名昭远”过去和现在的成员时，加里·奥德曼（Gary Oldman）手下军情五处弃子的处境变得万分危急。",
-      "model": "gemini-3.5-flash-lite",
-      "createdAt": 1793381088
+      "text": "一支冷酷无情的暗杀小队盯上了“流人”小组的新老成员，加里·奥德曼饰演的角色和这群军情五处弃将面临的危机骤然升级。",
+      "method": "reviewed",
+      "model": "human-review"
     },
     "2daf29045637bd781eeac5d3bbe79e1e7026f64f96e8298e7315b8d2f1d480dc": {
       "text": "好莱坞两位最大的明星发现他们的友谊可能是一脉相承的。",

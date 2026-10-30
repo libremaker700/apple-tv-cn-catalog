@@ -20,7 +20,9 @@ def fixed(text):
     if m:return 'Apple TV '+('电影'if m[2]=='Movie'else'电视剧')+'榜第'+m[1]+'名'
     days={'Monday':'周一','Tuesday':'周二','Wednesday':'周三','Thursday':'周四','Friday':'周五','Saturday':'周六','Sunday':'周日'}
     m=re.fullmatch(r'New Episode Every ('+'|'.join(days)+')',text)
-    return '每'+days[m[1]]+'更新'if m else ''
+    if m:return '每'+days[m[1]]+'更新'
+    m=re.fullmatch(r'((?:19|20)\d{2}) Emmy® Winner',text)
+    return m[1]+'年艾美奖获奖作品'if m else ''
 
 def validate_copy(identity,c):
     assert set(c)=={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
@@ -31,7 +33,7 @@ def validate_copy(identity,c):
     assert c['sourceHash']==digest([identity,source])and c['noteZh']==fixed(c['noteEn'])and c['badgeZh']==fixed(c['badgeEn'])
     assert not c['descriptionZh']or valid_zh(c['descriptionZh'])
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
-    assert c['translationMethod']==('machine'if c['descriptionZh']else'pending')
+    assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))
 
 def extract(html,home):
     data=data_page(html,'ChannelPageIntent','tvs.sbd.4000')
@@ -43,7 +45,7 @@ def extract(html,home):
         w=works[identity]
         if dest.get('storefront')!='us' or dest.get('$kind')!=('MoviePageIntent'if w['kind']=='movie'else'ShowPageIntent'):raise ValueError('Copy identity mismatch')
         # Only these public display strings survive; offers, sessions and video URLs never do.
-        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in w.get('genres',[])if g in GENRES]}
+        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in w.get('genres',[])if g in GENRES][:2]}
     if not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
     return result
 
@@ -98,13 +100,17 @@ def enrich(home,raw,cache,translator,now):
         if getattr(translator,'api_error',''):report['apiError']=translator.api_error
     for row in out['hero']:
         identity=row['officialId'];source=raw[identity];record=records.get(keys[identity],{});translated=record.get('text','')
-        c=dict(source,source=CHANNEL,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod='machine'if translated else'pending')
+        c=dict(source,source=CHANNEL,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
         if c['status']=='pending':report['pending']+=1
         row['copy']=c
     return out,report
 
 def process(home,root,html,now):
     raw=extract(html,home);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
+    for record in read(root/'data/home-copy-reviewed.json',[]):
+        identity=record['officialId'];source=raw.get(identity)
+        if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
+            cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
     value,report=enrich(home,raw,cache,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now)
     dump(path,cache);report.update(checkedAt=now,copyVersion=VERSION);dump(root/'logs/home-copy.json',report)
     return value,report
