@@ -1,4 +1,6 @@
-import copy,json,sys,unittest
+import copy,json,sys,unittest,tempfile,io
+from unittest.mock import patch
+from PIL import Image
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import home_sync as h
@@ -11,6 +13,21 @@ def page(items,storefront='us'):
 def image(url):return {'artwork':h.BASE+'images/'+'a'*64+'.jpg','width':1920,'height':1080}
 
 class Home(unittest.TestCase):
+    def test_repeated_check_reuses_bytes_and_failed_fetch_keeps_manifest(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);(root/'data').mkdir();(root/'docs').mkdir()
+            (root/'docs/catalog.json').write_text(json.dumps({'entries':[entry(n)for n in range(3)]}),encoding='utf8')
+            buffer=io.BytesIO();Image.new('RGB',(1920,1080)).save(buffer,format='JPEG');blob=buffer.getvalue();calls=[]
+            def fetch(url):
+                if url==h.SOURCE:return page([item(n)for n in range(3)]).encode()
+                calls.append(url);return blob
+            with patch.object(h,'ROOT',root),patch.object(h,'DOCS',root/'docs'),patch.object(h,'fetch',fetch),patch.object(h.time,'time',return_value=1000000):
+                _,first=h.sync();self.assertEqual(len(calls),3)
+                _,second=h.sync();self.assertEqual(len(calls),3);self.assertEqual(first['version'],second['version'])
+                prior=(root/'docs/home/version.json').read_bytes()
+                with patch.object(h,'fetch',side_effect=ValueError('unavailable')):
+                    with self.assertRaises(ValueError):h.sync()
+                self.assertEqual((root/'docs/home/version.json').read_bytes(),prior)
     def test_current_order_and_native_wide_images_only(self):
         queries=[];catalog={'entries':[entry(n) for n in range(3)]}
         value,_=h.collect(catalog,page([item(n)for n in range(3)]),lambda url:queries.append(url) or image(url))
