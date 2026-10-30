@@ -20,6 +20,11 @@ class CopyTests(unittest.TestCase):
         first,r=enrich(self.home,self.raw,cache,t,100);second,s=enrich(self.home,self.raw,cache,t,200)
         self.assertEqual(t.calls,1);self.assertEqual(first,second);self.assertEqual(self.home,original);self.assertEqual(s['cacheHits'],1)
         validate_copy('umc.cmc.test',first['hero'][0]['copy']);self.assertNotIn('zh',first['works'][0])
+    def test_missing_variant_preserves_only_the_existing_identity_copy(self):
+        cache={};t=Translator();first,_=enrich(self.home,self.raw,cache,t,100)
+        second,report=enrich(first,{},cache,t,200)
+        self.assertEqual(first,second);self.assertEqual(report['retainedCopy'],1);self.assertEqual(t.calls,1)
+        second,report=enrich(self.home,{},cache,t,300);self.assertNotIn('copy',second['hero'][0]);self.assertEqual(report['pending'],1)
     def test_source_change_invalidates_only_changed_description(self):
         cache={};t=Translator();enrich(self.home,self.raw,cache,t,100)
         self.raw['umc.cmc.test']['noteEn']='#2 Movie on Apple TV';v,_=enrich(self.home,self.raw,cache,t,200)

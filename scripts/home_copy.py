@@ -39,7 +39,7 @@ def validate_copy(identity,c):
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
     assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))
 
-def extract(html,home):
+def extract(html,home,allow_partial=False):
     data=data_page(html,'ChannelPageIntent','tvs.sbd.4000')
     stage=next(s for s in data['shelves']if s.get('id')=='uts.col.tv-plus-epic-stage')
     works={w['officialId']:w for w in home['works']};result={}
@@ -52,7 +52,8 @@ def extract(html,home):
         metadata=item.get('primaryMetadata');genres=metadata[1:]if isinstance(metadata,list)and metadata else w.get('genres',[])
         rating=next((b.get('fallbackText')for b in item.get('ratingBadges',[])if isinstance(b,dict)and b.get('$type')=='rating'and b.get('fallbackText')in RATINGS),'')
         result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2],'contentRating':rating}
-    if not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
+    if not allow_partial and not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
+    if not result:raise ValueError('Official hero copy unavailable')
     return result
 
 class Translator:
@@ -87,8 +88,13 @@ class Translator:
         return result
 
 def enrich(home,raw,cache,translator,now):
-    out=copy.deepcopy(home);records=cache.setdefault('records',{});pending={};keys={};report={'requested':0,'cacheHits':0,'translated':0,'pending':0,'apiHttp':0}
+    out=copy.deepcopy(home);records=cache.setdefault('records',{});pending={};keys={};report={'requested':0,'cacheHits':0,'translated':0,'pending':0,'apiHttp':0,'retainedCopy':0,'sourceMissing':0}
     for row in out['hero']:
+        if row['officialId']not in raw:
+            report['sourceMissing']+=1
+            if 'copy'in row:validate_copy(row['officialId'],row['copy']);report['retainedCopy']+=1
+            else:report['pending']+=1
+            continue
         identity=row['officialId'];source=raw[identity];text=source['descriptionEn'];key=digest([VERSION,identity,text]);keys[identity]=key
         old=records.get(key,{})
         if text and not valid_zh(old.get('text'))and now>=old.get('nextRetry',0):pending[identity]={'id':identity,'text':text}
@@ -105,6 +111,7 @@ def enrich(home,raw,cache,translator,now):
         report.update(apiHttp=translator.http,model=translator.model or '',usage=translator.usage)
         if getattr(translator,'api_error',''):report['apiError']=translator.api_error
     for row in out['hero']:
+        if row['officialId']not in raw:continue
         identity=row['officialId'];source=raw[identity];record=records.get(keys[identity],{});translated=record.get('text','')
         c=dict(source,source=CHANNEL,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
         if c['status']=='pending':report['pending']+=1
@@ -112,7 +119,7 @@ def enrich(home,raw,cache,translator,now):
     return out,report
 
 def process(home,root,html,now):
-    raw=extract(html,home);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
+    raw=extract(html,home,allow_partial=True);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
     for record in read(root/'data/home-copy-reviewed.json',[]):
         identity=record['officialId'];source=raw.get(identity)
         if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
