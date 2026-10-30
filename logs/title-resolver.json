@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "checked_at": "2026-10-30T10:09:45+00:00",
+  "order": [
+    "verified_cache",
+    "douban_mobile",
+    "wikipedia",
+    "minimax_candidate_and_independent_fetch",
+    "tavily"
+  ],
+  "agent": {
+    "status": "missing_credentials"
+  },
+  "records": [
+    {
+      "slug": "neuromancer",
+      "english_title": "Neuromancer",
+      "confidence": "UNVERIFIED",
+      "stages": [
+        {
+          "source": "douban",
+          "name": false,
+          "synopsis": false
+        },
+        {
+          "source": "wikipedia",
+          "name": false,
+          "synopsis": false
+        }
+      ],
+      "public_reads": [
+        {
+          "host": "movie.douban.com",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "host": "m.douban.com",
+          "status": 404,
+          "cached": false
+        },
+        {
+          "host": "zh.wikipedia.org",
+          "status": 429,
+          "cooldown": true
+        }
+      ],
+      "tavily_status": "missing_api_key",
+      "tavily_usage": null
+    },
+    {
+      "slug": "nocturne",
+      "english_title": "Nocturne",
+      "confidence": "VERIFIED",
+      "stages": [
+        {
+          "source": "douban",
+          "name": true,
+          "synopsis": true
+        }
+      ],
+      "public_reads": [
+        {
+          "host": "movie.douban.com",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "host": "m.douban.com",
+          "status": 200,
+          "cached": false
+        }
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/36229588/",
+          "retrieved_at": "2026-10-30T10:09:45+00:00"
+        }
+      ]
+    },
+    {
+      "slug": "prodigies",
+      "english_title": "Prodigies",
+      "confidence": "VERIFIED",
+      "stages": [
+        {
+          "source": "douban",
+          "name": true,
+          "synopsis": true
+        }
+      ],
+      "public_reads": [
+        {
+          "host": "movie.douban.com",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "host": "m.douban.com",
+          "status": 200,
+          "cached": false
+        }
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/37326083/",
+          "retrieved_at": "2026-10-30T10:09:45+00:00"
+        }
+      ]
+    }
+  ],
+  "changed": [
+    {
+      "slug": "nocturne",
+      "title": "夜曲",
+      "synopsis": true
+    },
+    {
+      "slug": "prodigies",
+      "title": "后神童人生",
+      "synopsis": true
+    }
+  ],
+  "status": "degraded",
+  "tavily_reserved": 100,
+  "agent_batches_reserved": 0
+}

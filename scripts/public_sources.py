@@ -3,7 +3,7 @@ import hashlib,html,json,re,time
 from pathlib import Path
 from urllib.parse import urlencode,urlsplit
 import requests
-HOSTS={'movie.douban.com','zh.wikipedia.org','en.wikipedia.org','baike.baidu.com','api.bgm.tv'}
+HOSTS={'movie.douban.com','m.douban.com','zh.wikipedia.org','en.wikipedia.org','baike.baidu.com','api.bgm.tv'}
 
 def plain_html(raw):
     raw=re.sub(r'(?is)<(script|style|head|nav|footer)\b[^>]*>.*?</\1>','',raw)
@@ -15,6 +15,7 @@ class PublicPages:
     def __init__(self,session=None,path=None,clock=None):
         self.session=session or requests.Session();self.path=Path(path) if path else None;self.clock=clock or time.time;self.events=[];self.bodies={}
         self.data={'schema':1,'pages':{},'hosts':{}}
+        self.last_douban_request=0
         if self.path and self.path.exists():
             try:
                 value=json.loads(self.path.read_text(encoding='utf8'))
@@ -39,7 +40,14 @@ class PublicPages:
             self.events.append({'host':host,'status':blocked['status'],'cooldown':True});return None
         status=0;body=None
         try:
-            response=self.session.get(url,params=params,headers={'User-Agent':'AppleTVCnCatalog/1.0 (public metadata verification)'},timeout=(6,15),allow_redirects=False)
+            headers={'User-Agent':'AppleTVCnCatalog/1.0 (public metadata verification)'}
+            if host.endswith('douban.com'):
+                delay=1.8-(time.monotonic()-self.last_douban_request)
+                if delay>0:time.sleep(delay)
+                self.last_douban_request=time.monotonic()
+                headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36','Referer':'https://m.douban.com/movie/' if host=='m.douban.com' else 'https://movie.douban.com/','Accept-Language':'zh-CN,zh;q=0.9','Accept':'application/json'})
+                if parts.path=='/j/subject_suggest':headers['X-Requested-With']='XMLHttpRequest'
+            response=self.session.get(url,params=params,headers=headers,timeout=(6,15),allow_redirects=False)
             status=response.status_code
             if status==200 and len(response.content)<=512_000:body=response.text
         except requests.RequestException:pass

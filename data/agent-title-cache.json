@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "budgets": {},
+  "records": {
+    "d2fc7430f92778399e2a30e74f9aa6cd5c4ae944ef780882d451503d09ed07cf": {
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "confidence": "UNVERIFIED"
+    },
+    "5139c7021c0c3750d06d0d5fa0836c4ce9970918a45e19b0728df933d13d2f21": {
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "confidence": "VERIFIED"
+    },
+    "49eaf7afc8fce7368a33fec4a96a7f3b84db632eff8047ce27fa997273430f32": {
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "confidence": "VERIFIED"
+    }
+  }
+}

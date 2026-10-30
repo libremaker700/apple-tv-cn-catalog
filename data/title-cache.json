@@ -3246,6 +3246,202 @@
         ],
         "release_year": 2027
       }
+    },
+    "d2fc7430f92778399e2a30e74f9aa6cd5c4ae944ef780882d451503d09ed07cf": {
+      "identity": {
+        "slug": "neuromancer",
+        "english_title": "Neuromancer",
+        "kind": "series",
+        "year": "2027",
+        "official_id": "umc.cmc.ym2z4w07kwsi1wywwxtyckr"
+      },
+      "query_version": "zh-cn-v7-mobile-identity",
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "status": "pending_review",
+      "resolver_evidence": {
+        "slug": "neuromancer",
+        "english_title": "Neuromancer",
+        "confidence": "UNVERIFIED",
+        "stages": [
+          {
+            "source": "douban",
+            "name": false,
+            "synopsis": false
+          },
+          {
+            "source": "wikipedia",
+            "name": false,
+            "synopsis": false
+          }
+        ],
+        "public_reads": [
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "zh.wikipedia.org",
+            "status": 429,
+            "cooldown": true
+          }
+        ],
+        "tavily_status": "missing_api_key",
+        "tavily_usage": null
+      }
+    },
+    "5139c7021c0c3750d06d0d5fa0836c4ce9970918a45e19b0728df933d13d2f21": {
+      "identity": {
+        "slug": "nocturne",
+        "english_title": "Nocturne",
+        "kind": "series",
+        "year": "2026",
+        "official_id": "umc.cmc.4cfsq1juke72zutv5xp0pw3rj"
+      },
+      "query_version": "zh-cn-v7-mobile-identity",
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "display_name_zh": "夜曲",
+        "aliases_zh": [
+          "夜曲",
+          "夜行杀机",
+          "拉撒路"
+        ],
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-30T10:09:45+00:00",
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/36229588/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ],
+        "douban_id": "36229588",
+        "douban_url": "https://movie.douban.com/subject/36229588/",
+        "rating_status": "NO_RATING",
+        "summary_zh": "厌倦了费城街头残酷生活的退役军人兼警探Jonah Lynn（列维·施瑞博尔 饰），搬到宾夕法尼亚州西部的小镇寻求平静生活。然而，当臭名昭著且本应被关押的连环杀手Jurek Walter（斯蒂芬·格拉汉姆 饰）再次对他的家庭和当地小镇发动袭击时，Jonah必须保护挚爱的人，并被迫将FBI探员Saga Bauer（莎姬·贝兹 饰）推向风口浪尖，与杀手展开生死较量。 该剧改编自Lars Kepler的小说《拉撒路》和《睡魔》。",
+        "summary_sources": [
+          {
+            "type": "verified_page_synopsis",
+            "url": "https://movie.douban.com/subject/36229588/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ],
+        "summary_checked_at": "2026-10-30T10:09:45+00:00"
+      },
+      "status": "verified",
+      "resolver_evidence": {
+        "slug": "nocturne",
+        "english_title": "Nocturne",
+        "confidence": "VERIFIED",
+        "stages": [
+          {
+            "source": "douban",
+            "name": true,
+            "synopsis": true
+          }
+        ],
+        "public_reads": [
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/36229588/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ]
+      }
+    },
+    "49eaf7afc8fce7368a33fec4a96a7f3b84db632eff8047ce27fa997273430f32": {
+      "identity": {
+        "slug": "prodigies",
+        "english_title": "Prodigies",
+        "kind": "series",
+        "year": "2027",
+        "official_id": "umc.cmc.771mea1fm11ta9k7x8oeocbck"
+      },
+      "query_version": "zh-cn-v7-mobile-identity",
+      "checked_at": "2026-10-30T10:09:45+00:00",
+      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "display_name_zh": "后神童人生",
+        "aliases_zh": [
+          "后神童人生",
+          "神童们"
+        ],
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-30T10:09:45+00:00",
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/37326083/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ],
+        "douban_id": "37326083",
+        "douban_url": "https://movie.douban.com/subject/37326083/",
+        "rating_status": "NO_RATING",
+        "summary_zh": "Didi和Ren，曾经被誉为天才儿童的两人如今已年过三十，他们开始重新审视自九岁起便维系着的这段关系。从伦敦到东京，途经弗吉尼亚，这部风格独特的浪漫喜剧探讨了潜力、抱负以及长期关系中普遍存在的复杂性。他们开始质疑自己平淡无奇的生活是否兑现了童年的非凡承诺，却发现自己陷入了一种崭新又令人恐惧的混乱之中。",
+        "summary_sources": [
+          {
+            "type": "verified_page_synopsis",
+            "url": "https://movie.douban.com/subject/37326083/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ],
+        "summary_checked_at": "2026-10-30T10:09:45+00:00"
+      },
+      "status": "verified",
+      "resolver_evidence": {
+        "slug": "prodigies",
+        "english_title": "Prodigies",
+        "confidence": "VERIFIED",
+        "stages": [
+          {
+            "source": "douban",
+            "name": true,
+            "synopsis": true
+          }
+        ],
+        "public_reads": [
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/37326083/",
+            "retrieved_at": "2026-10-30T10:09:45+00:00"
+          }
+        ]
+      }
     }
   },
   "budgets": {

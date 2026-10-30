@@ -1,13 +1,13 @@
-name: Calibrate Chinese titles with search API
+name: Verify mainland titles and synopses
 on:
   schedule:
     - cron: '47 3 * * *'
   workflow_dispatch:
     inputs:
       limit:
-        description: Maximum unresolved works to examine (0-20)
+        description: Maximum unresolved works to examine (0-5)
         type: string
-        default: '12'
+        default: '3'
       slug:
         description: Optional one official Apple slug for a targeted check
         type: string
@@ -28,23 +28,29 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
       - run: pip install requests Pillow opencc-python-reimplemented
       - run: python -m unittest discover -s tests -v
-      - name: Reuse verified names and search unresolved works within one shared budget
+      - name: Verify sources before publishing mainland titles and synopses
         id: lookup
         env:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           TAVILY_API_KEY_1: ${{ secrets.TAVILY_API_KEY_1 }}
           TAVILY_API_KEY_2: ${{ secrets.TAVILY_API_KEY_2 }}
-          TITLE_LOOKUP_LIMIT: ${{ inputs.limit || vars.TITLE_LOOKUP_LIMIT || '12' }}
+          MINIMAX_CREDENTIALS_JSON: ${{ secrets.MINIMAX_CREDENTIALS_JSON }}
+          TITLE_LOOKUP_LIMIT: ${{ inputs.limit || vars.TITLE_LOOKUP_LIMIT || '3' }}
           TITLE_LOOKUP_MONTHLY_LIMIT: ${{ vars.TITLE_LOOKUP_MONTHLY_LIMIT || '100' }}
+          MINIMAX_MONTHLY_BATCH_LIMIT: '20'
           MANUAL_RUN: ${{ github.event_name == 'workflow_dispatch' }}
           TARGET_SLUG: ${{ inputs.slug }}
         run: |
-          ARGS=()
+          ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
           if [ "$MANUAL_RUN" = 'true' ]; then ARGS+=(--force); fi
           if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG"); fi
-          python scripts/title_lookup.py "${ARGS[@]}"
+          python scripts/resolve_titles.py "${ARGS[@]}"
       - name: Preserve search reservations even if a later operation fails
         if: always() && steps.lookup.outcome != 'skipped'
         run: |
@@ -52,6 +58,7 @@ jobs:
             git config user.name catalog-bot
             git config user.email catalog-bot@users.noreply.github.com
             git add data/title-cache.json data/source-cache.json
+            if [ -f data/agent-title-cache.json ]; then git add data/agent-title-cache.json; fi
             git diff --cached --quiet || git commit -m 'catalog: preserve title search cache and shared budget'
             git push
           fi
@@ -60,7 +67,7 @@ jobs:
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          git add data/title-cache.json data/source-cache.json logs/title-lookup.json docs
+          git add data/title-cache.json data/source-cache.json data/agent-title-cache.json logs/title-resolver.json docs
           git diff --cached --quiet || git commit -m 'catalog: publish source-verified Chinese titles and aliases'
           git push
       - uses: actions/configure-pages@v5

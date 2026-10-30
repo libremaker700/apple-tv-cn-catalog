@@ -6,7 +6,7 @@ from catalog import ROOT,DOCS,load,publish,validate
 from title_sources import Lookup,chinese,norm,complete_patch,merge_patches
 from metadata_policy import POLICY,allowed_source,clean_entry
 from summary_cache import apply_summary,reapply_summaries,has_summary
-QUERY_VERSION='zh-cn-v6-ordered-sources'
+QUERY_VERSION='zh-cn-v7-mobile-identity'
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -47,6 +47,10 @@ def apply_verified(entry,cached,ident):
     old=zh.get('title','');name=patch['display_name_zh']
     aliases=list(dict.fromkeys([name]+patch.get('aliases_zh',[])+zh.get('aliases',[])+[old]))
     zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
+    for field in ('douban_id','douban_url','rating_status','douban_rating','douban_rating_count','rating_checked_at'):
+        if field in patch:zh[field]=patch[field]
+    if patch.get('rating_status')=='NO_RATING':
+        for field in ('douban_rating','douban_rating_count','rating_checked_at'):zh.pop(field,None)
     if re.fullmatch(r'(19|20)\d{2}',str(patch.get('release_year',''))):zh['releaseYear']=int(patch['release_year'])
     if not zh.get('watchUrl'):zh['watchUrl']=(out.get('officialIdentity') or {}).get('watchUrl','')
     # Cast/date/seasons/posters keep their identities; a separately verified synopsis may fill a gap.

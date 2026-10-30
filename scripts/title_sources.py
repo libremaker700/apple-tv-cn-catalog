@@ -14,6 +14,9 @@ def merge_patches(first,second):
     if not second:return first
     # Each patch has independently passed the original-title, type and identity gates.
     out=dict(first)
+    if norm(first.get('display_name_zh')) in {norm(n) for n in [second.get('display_name_zh','')]+second.get('aliases_zh',[])}:
+        for key in ('douban_id','douban_url','rating_status','douban_rating','douban_rating_count','rating_checked_at'):
+            if key in second:out[key]=second[key]
     if not valid_summary(out.get('summary_zh')) and valid_summary(second.get('summary_zh')):
         out.update({k:second[k] for k in ('summary_zh','summary_sources','summary_checked_at') if k in second})
     return out
@@ -105,21 +108,10 @@ class Lookup:
         return self.pages.json(url,**kwargs) if allowed_source(url) else {}
 
     def douban(self,record,checked_at):
-        title=record.get('english_title') or record.get('original_title')
-        payload=self.get_json('https://movie.douban.com/j/subject_suggest',params={'q':title})
-        patches=[]
-        for row in (payload if isinstance(payload,list) else [])[:3]:
-            url=row.get('url','')
-            if not re.fullmatch(r'https://movie\.douban\.com/subject/\d+/?',url):continue
-            raw=self.pages.get(url)
-            if not raw:continue
-            # Keep the defining heading before navigation text for identity parsing.
-            heading=re.search(r'(?is)<h1\b[^>]*>(.*?)</h1>',raw)
-            item={'url':url,'title':row.get('title',''),'identity_text':('# '+plain_html(heading[1])+'\n' if heading else '')+plain_html(raw)}
-            patch=structured_patch(record,item,checked_at)
-            if patch:patches.append(patch)
-        names={norm(p['display_name_zh']) for p in patches}
-        return patches[0] if len(names)==1 else None
+        from douban_mobile import DoubanMobile
+        lookup=DoubanMobile(self.pages);patch=lookup.lookup(record,checked_at)
+        self.diagnostics.extend(lookup.diagnostics)
+        return patch
 
     def wiki_page(self, record, title, checked_at):
         payload = self.get_json('https://zh.wikipedia.org/w/api.php', params={
