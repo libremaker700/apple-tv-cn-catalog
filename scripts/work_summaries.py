@@ -28,7 +28,7 @@ def run(root,api,translator,now,limit=400):
         identity=source_id(e)
         if identity.startswith('umc.cmc.'):wanted[identity]={'officialId':identity,'en':e['en'],'kind':e['kind'],'watchUrl':e['officialIdentity']['watchUrl'],'zh':e.get('zh')}
     for w in home['works']:wanted[w['officialId']]=dict(w,zh=w.get('zh')or wanted.get(w['officialId'],{}).get('zh'))
-    report={'works':len(wanted),'translated':0,'cacheHits':0,'existingChinese':0,'missingOriginal':0,'sourceErrors':0,'apiCalls':0,'usage':[]};pending=[];source={}
+    report={'works':len(wanted),'translated':0,'cacheHits':0,'existingChinese':0,'missingOriginal':0,'sourceErrors':0,'apiCalls':0,'usage':[],'errors':[]};pending=[];source={}
     # Fetch only display metadata through Apple's US API; identity/type are checked before use.
     for identity,w in wanted.items():
         try:
@@ -41,13 +41,14 @@ def run(root,api,translator,now,limit=400):
             elif (w.get('zh')or{}).get('summary_status')!='translated_official' and valid_zh((w.get('zh')or{}).get('summary')):
                 records[k]={'text':w['zh']['summary'],'method':'existing_chinese'};report['existingChinese']+=1
             elif now>=records.get(k,{}).get('nextRetry',0):pending.append({'id':identity,'text':text})
-        except Exception:report['sourceErrors']+=1
-    for offset in range(0,min(limit,len(pending)),8):
-        batch=pending[offset:offset+8]
+        except Exception as error:report['sourceErrors']+=1;report['errors'].append({'id':identity,'stage':'source','error':type(error).__name__})
+    for offset in range(0,min(limit,len(pending)),4):
+        batch=pending[offset:offset+4]
         try:
             result=translator.translate(batch);report['apiCalls']+=1;report['usage'].append(translator.usage)
             for r in batch:records[source[r['id']][2]]={'text':result[r['id']],'method':'machine','model':translator.model};report['translated']+=1
-        except Exception:
+        except Exception as error:
+            report['errors'].append({'stage':'translation','error':type(error).__name__,'http':translator.http})
             report['apiCalls']+=1
             for r in batch:records[source[r['id']][2]]={'nextRetry':now+6*3600}
         dump(root/'data/work-summary-cache.json',cache)
