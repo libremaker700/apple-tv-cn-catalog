@@ -1,0 +1,2864 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "animation": false,
+      "en": "A Carpool Karaoke Christmas",
+      "genres": [
+        "节日",
+        "喜剧",
+        "音乐"
+      ],
+      "key": "home-umc.cmc.750u3qv5wz0d41pn1v2rvn7oe",
+      "kind": "movie",
+      "releaseDate": "2024-12-15",
+      "season": 0,
+      "sharedId": "",
+      "title": "A Carpool Karaoke Christmas",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "A Carpool Karaoke Christmas",
+        "en": "A Carpool Karaoke Christmas",
+        "aliases": [],
+        "year": "2024",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/a-carpool-karaoke-christmas/umc.cmc.750u3qv5wz0d41pn1v2rvn7oe"
+    },
+    {
+      "animation": false,
+      "en": "Blood Diamond",
+      "genres": [
+        "惊悚",
+        "冒险",
+        "动作"
+      ],
+      "key": "home-umc.cmc.j1bslw4gxyqw5h0gmiz853ec",
+      "kind": "movie",
+      "releaseDate": "2006-12-08",
+      "season": 0,
+      "sharedId": "",
+      "title": "Blood Diamond",
+      "upcoming": false,
+      "year": "2006",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Blood Diamond",
+        "en": "Blood Diamond",
+        "aliases": [],
+        "year": "2006",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2006",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/blood-diamond/umc.cmc.j1bslw4gxyqw5h0gmiz853ec"
+    },
+    {
+      "animation": false,
+      "en": "Carpool Karaoke: The Series",
+      "genres": [
+        "喜剧",
+        "音乐"
+      ],
+      "key": "item-120",
+      "kind": "series",
+      "releaseDate": "2024-12-16",
+      "season": 1,
+      "sharedId": "",
+      "title": "Carpool Karaoke: The Series",
+      "upcoming": false,
+      "year": "2017",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Carpool Karaoke: The Series",
+        "en": "Carpool Karaoke: The Series",
+        "aliases": [],
+        "year": "2017",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2017",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/carpool-karaoke-the-series/umc.cmc.2wyy7chw6bmy46fekqlqq1ulb"
+    },
+    {
+      "animation": false,
+      "en": "Formula 1: Drive to Survive",
+      "genres": [
+        "纪录片",
+        "运动"
+      ],
+      "key": "home-umc.cmc.4ym1omzf14f4jwcmb7lnu91o0",
+      "kind": "series",
+      "releaseDate": "2026-02-27",
+      "season": 1,
+      "sharedId": "",
+      "title": "Formula 1: Drive to Survive",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Formula 1: Drive to Survive",
+        "en": "Formula 1: Drive to Survive",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/formula-1-drive-to-survive/umc.cmc.4ym1omzf14f4jwcmb7lnu91o0"
+    },
+    {
+      "animation": false,
+      "en": "Fraggle Rock",
+      "genres": [
+        "儿童",
+        "经典",
+        "喜剧"
+      ],
+      "key": "home-umc.cmc.2m5fntzbjem6fhniurq8a17om",
+      "kind": "series",
+      "releaseDate": "1983-01-10",
+      "season": 1,
+      "sharedId": "",
+      "title": "布偶奇遇记",
+      "upcoming": false,
+      "year": "1983",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "布偶奇遇记",
+        "Fraggle Rock"
+      ],
+      "reference": {
+        "title": "布偶奇遇记",
+        "en": "Fraggle Rock",
+        "aliases": [
+          "布偶奇遇记",
+          "Fraggle Rock"
+        ],
+        "year": "1983",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "1983",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/fraggle-rock/umc.cmc.2m5fntzbjem6fhniurq8a17om"
+    },
+    {
+      "animation": false,
+      "en": "Fraggle Rock: Rock On!",
+      "genres": [
+        "儿童",
+        "喜剧"
+      ],
+      "key": "item-317",
+      "kind": "series",
+      "releaseDate": "2020-04-21",
+      "season": 1,
+      "sharedId": "",
+      "title": "布偶奇遇记：继续前进",
+      "upcoming": false,
+      "year": "2020",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "布偶奇遇记：继续前进",
+        "Fraggle Rock: Rock On!"
+      ],
+      "reference": {
+        "title": "布偶奇遇记：继续前进",
+        "en": "Fraggle Rock: Rock On!",
+        "aliases": [
+          "布偶奇遇记：继续前进",
+          "Fraggle Rock: Rock On!"
+        ],
+        "year": "2020",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/fraggle-rock-rock-on/umc.cmc.6d0biwqzy6ykvxf36eb9wm3gl"
+    },
+    {
+      "animation": false,
+      "en": "Greatness Code",
+      "genres": [
+        "纪录片",
+        "运动"
+      ],
+      "key": "item-254",
+      "kind": "series",
+      "releaseDate": "2022-05-13",
+      "season": 2,
+      "sharedId": "",
+      "title": "Greatness Code",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Greatness Code",
+        "en": "Greatness Code",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/greatness-code/umc.cmc.4xpk6thd1574yu8hy2xdozyz6"
+    },
+    {
+      "animation": false,
+      "en": "Hello, Jack! The Kindness Show",
+      "genres": [
+        "儿童",
+        "教育",
+        "音乐"
+      ],
+      "key": "item-234",
+      "kind": "series",
+      "releaseDate": "2022-10-07",
+      "season": 2,
+      "sharedId": "",
+      "title": "Hello, Jack! The Kindness Show",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Hello, Jack! The Kindness Show",
+        "en": "Hello, Jack! The Kindness Show",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/hello-jack-the-kindness-show/umc.cmc.67f7csjyodc41iybksdv6s0pt"
+    },
+    {
+      "animation": false,
+      "en": "Helpsters",
+      "genres": [
+        "儿童",
+        "教育",
+        "歌舞"
+      ],
+      "key": "item-218",
+      "kind": "series",
+      "releaseDate": "2023-01-06",
+      "season": 3,
+      "sharedId": "",
+      "title": "Helpsters",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Helpsters",
+        "en": "Helpsters",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 3
+      },
+      "originalYear": "2019",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/helpsters/umc.cmc.kfh7cellb1a3dmiehxhvq8gl"
+    },
+    {
+      "animation": false,
+      "en": "Helpsters Help You",
+      "genres": [
+        "儿童",
+        "喜剧",
+        "教育"
+      ],
+      "key": "home-umc.cmc.3xi33xb3r3xbxx4lssz8cswdr",
+      "kind": "series",
+      "releaseDate": "2020-04-23",
+      "season": 1,
+      "sharedId": "",
+      "title": "Helpsters Help You",
+      "upcoming": false,
+      "year": "2020",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Helpsters Help You",
+        "en": "Helpsters Help You",
+        "aliases": [],
+        "year": "2020",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/helpsters-help-you/umc.cmc.3xi33xb3r3xbxx4lssz8cswdr"
+    },
+    {
+      "animation": false,
+      "en": "Hijack",
+      "genres": [
+        "惊悚",
+        "剧情",
+        "犯罪"
+      ],
+      "key": "item-59",
+      "kind": "series",
+      "releaseDate": "2026-01-14",
+      "season": 2,
+      "sharedId": "",
+      "title": "劫机七小时",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "劫机七小时"
+      ],
+      "reference": {
+        "title": "劫机七小时",
+        "en": "Hijack",
+        "aliases": [
+          "劫机七小时"
+        ],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/hijack/umc.cmc.1dg08zn0g3zx52hs8npoj5qe3"
+    },
+    {
+      "animation": false,
+      "en": "I, Robot",
+      "genres": [
+        "科幻",
+        "动作",
+        "犯罪"
+      ],
+      "key": "home-umc.cmc.5mffp3n83az89t42qnhew9vn5",
+      "kind": "movie",
+      "releaseDate": "2004-07-15",
+      "season": 0,
+      "sharedId": "",
+      "title": "I, Robot",
+      "upcoming": false,
+      "year": "2004",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "I, Robot",
+        "en": "I, Robot",
+        "aliases": [],
+        "year": "2004",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2004",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/i-robot/umc.cmc.5mffp3n83az89t42qnhew9vn5"
+    },
+    {
+      "animation": false,
+      "en": "Imperfect Women",
+      "genres": [
+        "惊悚",
+        "悬疑",
+        "犯罪"
+      ],
+      "key": "item-50",
+      "kind": "series",
+      "releaseDate": "2026-03-18",
+      "season": 1,
+      "sharedId": "",
+      "title": "不完美女人",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "不完美女人",
+        "Imperfect Women"
+      ],
+      "reference": {
+        "title": "不完美女人",
+        "en": "Imperfect Women",
+        "aliases": [
+          "不完美女人",
+          "Imperfect Women"
+        ],
+        "year": "2026",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/imperfect-women/umc.cmc.1w2rmpbqzt24879bt7109zgi6"
+    },
+    {
+      "animation": false,
+      "en": "Insomnia",
+      "genres": [
+        "惊悚",
+        "犯罪",
+        "悬疑"
+      ],
+      "key": "home-umc.cmc.3sr644gks0beiq8og6ax314ww",
+      "kind": "movie",
+      "releaseDate": "2002-05-24",
+      "season": 0,
+      "sharedId": "",
+      "title": "Insomnia",
+      "upcoming": false,
+      "year": "2002",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Insomnia",
+        "en": "Insomnia",
+        "aliases": [],
+        "year": "2002",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2002",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/insomnia/umc.cmc.3sr644gks0beiq8og6ax314ww"
+    },
+    {
+      "animation": false,
+      "en": "Jurassic World",
+      "genres": [
+        "科幻",
+        "惊悚",
+        "动作"
+      ],
+      "key": "home-umc.cmc.6x263wzi05ds2h4oen54w8881",
+      "kind": "movie",
+      "releaseDate": "2015-06-12",
+      "season": 0,
+      "sharedId": "",
+      "title": "Jurassic World",
+      "upcoming": false,
+      "year": "2015",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Jurassic World",
+        "en": "Jurassic World",
+        "aliases": [],
+        "year": "2015",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2015",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/jurassic-world/umc.cmc.6x263wzi05ds2h4oen54w8881"
+    },
+    {
+      "animation": false,
+      "en": "K-Pop Idols",
+      "genres": [
+        "纪录片",
+        "音乐"
+      ],
+      "key": "item-134",
+      "kind": "series",
+      "releaseDate": "2024-08-30",
+      "season": 1,
+      "sharedId": "",
+      "title": "K-Pop Idols",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "K-Pop Idols",
+        "en": "K-Pop Idols",
+        "aliases": [],
+        "year": "2024",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/k-pop-idols/umc.cmc.j0nrrycfzizv3g28dhz2bks"
+    },
+    {
+      "animation": false,
+      "en": "Lisey’s Story",
+      "genres": [
+        "剧情",
+        "恐怖",
+        "悬疑"
+      ],
+      "key": "item-292",
+      "kind": "series",
+      "releaseDate": "2021-06-04",
+      "season": 1,
+      "sharedId": "",
+      "title": "Lisey’s Story",
+      "upcoming": false,
+      "year": "2021",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Lisey’s Story",
+        "en": "Lisey’s Story",
+        "aliases": [],
+        "year": "2021",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/liseys-story/umc.cmc.34uwnqvp7211b9fl3vb25vled"
+    },
+    {
+      "animation": false,
+      "en": "Long Way Down",
+      "genres": [
+        "纪录片",
+        "旅行"
+      ],
+      "key": "home-umc.cmc.cal17ey3zhv2lx3xkzjqjstb",
+      "kind": "series",
+      "releaseDate": "2007-10-28",
+      "season": 1,
+      "sharedId": "",
+      "title": "Long Way Down",
+      "upcoming": false,
+      "year": "2007",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Long Way Down",
+        "en": "Long Way Down",
+        "aliases": [],
+        "year": "2007",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2007",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/long-way-down/umc.cmc.cal17ey3zhv2lx3xkzjqjstb"
+    },
+    {
+      "animation": false,
+      "en": "Long Way Round",
+      "genres": [
+        "纪录片",
+        "旅行"
+      ],
+      "key": "home-umc.cmc.13c4zk3hpybm6u0cfk1x0vyi",
+      "kind": "series",
+      "releaseDate": "2004-10-28",
+      "season": 1,
+      "sharedId": "",
+      "title": "漫漫长路",
+      "upcoming": false,
+      "year": "2004",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [
+        "漫漫长路",
+        "Long Way Round"
+      ],
+      "reference": {
+        "title": "漫漫长路",
+        "en": "Long Way Round",
+        "aliases": [
+          "漫漫长路",
+          "Long Way Round"
+        ],
+        "year": "2004",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2004",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/long-way-round/umc.cmc.13c4zk3hpybm6u0cfk1x0vyi"
+    },
+    {
+      "animation": false,
+      "en": "Long Way Up",
+      "genres": [
+        "纪录片",
+        "旅行"
+      ],
+      "key": "item-309",
+      "kind": "series",
+      "releaseDate": "2020-09-18",
+      "season": 1,
+      "sharedId": "",
+      "title": "Long Way Up",
+      "upcoming": false,
+      "year": "2020",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Long Way Up",
+        "en": "Long Way Up",
+        "aliases": [],
+        "year": "2020",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/long-way-up/umc.cmc.1nv0tluok21c2f8549mdjqdnh"
+    },
+    {
+      "animation": false,
+      "en": "Master and Commander: The Far Side of the World",
+      "genres": [
+        "冒险",
+        "剧情",
+        "战争与军事"
+      ],
+      "key": "home-umc.cmc.2nmvx85jvka8bkq435m65obfz",
+      "kind": "movie",
+      "releaseDate": "2003-11-14",
+      "season": 0,
+      "sharedId": "",
+      "title": "Master and Commander: The Far Side of the World",
+      "upcoming": false,
+      "year": "2003",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Master and Commander: The Far Side of the World",
+        "en": "Master and Commander: The Far Side of the World",
+        "aliases": [],
+        "year": "2003",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2003",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/master-and-commander-the-far-side-of-the-world/umc.cmc.2nmvx85jvka8bkq435m65obfz"
+    },
+    {
+      "animation": false,
+      "en": "Messi Mania",
+      "genres": [
+        "运动",
+        "纪录片"
+      ],
+      "key": "home-umc.cmc.58su2j1i0etuvq64m6nxfm11y",
+      "kind": "movie",
+      "releaseDate": "2023-09-14",
+      "season": 0,
+      "sharedId": "",
+      "title": "Messi Mania",
+      "upcoming": false,
+      "year": "2023",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Messi Mania",
+        "en": "Messi Mania",
+        "aliases": [],
+        "year": "2023",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/messi-mania/umc.cmc.58su2j1i0etuvq64m6nxfm11y"
+    },
+    {
+      "animation": false,
+      "en": "MLS Awards Expansion Team to San Diego",
+      "genres": [
+        "运动",
+        "纪录片"
+      ],
+      "key": "home-umc.cmc.13tm01bb2zcat3s04rxgju0zh",
+      "kind": "movie",
+      "releaseDate": "2023-05-18",
+      "season": 0,
+      "sharedId": "",
+      "title": "MLS Awards Expansion Team to San Diego",
+      "upcoming": false,
+      "year": "2023",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "MLS Awards Expansion Team to San Diego",
+        "en": "MLS Awards Expansion Team to San Diego",
+        "aliases": [],
+        "year": "2023",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/mls-awards-expansion-team-to-san-diego/umc.cmc.13tm01bb2zcat3s04rxgju0zh"
+    },
+    {
+      "animation": false,
+      "en": "Mythic Quest",
+      "genres": [
+        "喜剧"
+      ],
+      "key": "item-115",
+      "kind": "series",
+      "releaseDate": "2025-01-29",
+      "season": 4,
+      "sharedId": "",
+      "title": "神话任务群鸦盛宴",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "神话任务群鸦盛宴"
+      ],
+      "reference": {
+        "title": "神话任务群鸦盛宴",
+        "en": "Mythic Quest",
+        "aliases": [
+          "神话任务群鸦盛宴"
+        ],
+        "year": "2025",
+        "kind": "series",
+        "season": 4
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/mythic-quest/umc.cmc.1nfdfd5zlk05fo1bwwetzldy3"
+    },
+    {
+      "animation": false,
+      "en": "Napoleon: The Director’s Cut",
+      "genres": [
+        "剧情",
+        "动作",
+        "历史"
+      ],
+      "key": "item-135",
+      "kind": "movie",
+      "releaseDate": "2024-08-29",
+      "season": 0,
+      "sharedId": "",
+      "title": "Napoleon: The Director’s Cut",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Napoleon: The Director’s Cut",
+        "en": "Napoleon: The Director’s Cut",
+        "aliases": [],
+        "year": "2024",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/napoleon-the-directors-cut/umc.cmc.gtk0q9t2mapcjs75d31vvrs2"
+    },
+    {
+      "animation": false,
+      "en": "Now & Then",
+      "genres": [
+        "剧情",
+        "悬疑",
+        "惊悚"
+      ],
+      "key": "item-253",
+      "kind": "series",
+      "releaseDate": "2022-05-20",
+      "season": 1,
+      "sharedId": "",
+      "title": "Now & Then",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Now & Then",
+        "en": "Now & Then",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/now-and-then/umc.cmc.1w3e47nmnt4o304oaauh4k2rm"
+    },
+    {
+      "animation": false,
+      "en": "Number One on the Call Sheet",
+      "genres": [
+        "纪录片"
+      ],
+      "key": "item-102",
+      "kind": "series",
+      "releaseDate": "2025-03-28",
+      "season": 1,
+      "sharedId": "",
+      "title": "Number One on the Call Sheet",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Number One on the Call Sheet",
+        "en": "Number One on the Call Sheet",
+        "aliases": [],
+        "year": "2025",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2025",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/number-one-on-the-call-sheet/umc.cmc.6p9tke2tbri1vnn2cuaxcj4mi"
+    },
+    {
+      "animation": false,
+      "en": "Omnivore",
+      "genres": [
+        "纪录片"
+      ],
+      "key": "item-141",
+      "kind": "series",
+      "releaseDate": "2024-07-19",
+      "season": 1,
+      "sharedId": "",
+      "title": "杂食动物",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "杂食动物",
+        "Omnivore"
+      ],
+      "reference": {
+        "title": "杂食动物",
+        "en": "Omnivore",
+        "aliases": [
+          "杂食动物",
+          "Omnivore"
+        ],
+        "year": "2024",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/omnivore/umc.cmc.3m567dtk8qcawdjwnagsr1jbs"
+    },
+    {
+      "animation": false,
+      "en": "Oprah Talks Covid-19",
+      "genres": [
+        "新闻",
+        "访谈"
+      ],
+      "key": "item-319",
+      "kind": "series",
+      "releaseDate": "2020-03-21",
+      "season": 1,
+      "sharedId": "",
+      "title": "奥普拉谈新冠",
+      "upcoming": false,
+      "year": "2020",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "奥普拉谈新冠",
+        "Oprah Talks Covid-19"
+      ],
+      "reference": {
+        "title": "奥普拉谈新冠",
+        "en": "Oprah Talks Covid-19",
+        "aliases": [
+          "奥普拉谈新冠",
+          "Oprah Talks Covid-19"
+        ],
+        "year": "2020",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/oprah-talks-covid-19/umc.cmc.1xr8rwhaw9pkks7bvzy44dezt"
+    },
+    {
+      "animation": false,
+      "en": "Outcome",
+      "genres": [
+        "喜剧"
+      ],
+      "key": "item-46",
+      "kind": "movie",
+      "releaseDate": "2026-04-10",
+      "season": 0,
+      "sharedId": "",
+      "title": "Outcome",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Outcome",
+        "en": "Outcome",
+        "aliases": [],
+        "year": "2026",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/outcome/umc.cmc.3uvjztuy2y8ve2rj6nvgyop89"
+    },
+    {
+      "animation": false,
+      "en": "Prehistoric Planet: Ice Age",
+      "genres": [
+        "纪录片",
+        "历史"
+      ],
+      "key": "item-65",
+      "kind": "series",
+      "releaseDate": "2025-11-26",
+      "season": 1,
+      "sharedId": "",
+      "title": "Prehistoric Planet: Ice Age",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Prehistoric Planet: Ice Age",
+        "en": "Prehistoric Planet: Ice Age",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav"
+    },
+    {
+      "animation": false,
+      "en": "Puppy Place",
+      "genres": [
+        "儿童"
+      ],
+      "key": "item-222",
+      "kind": "series",
+      "releaseDate": "2022-12-09",
+      "season": 2,
+      "sharedId": "",
+      "title": "狗狗天地",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "狗狗天地",
+        "Puppy Place"
+      ],
+      "reference": {
+        "title": "狗狗天地",
+        "en": "Puppy Place",
+        "aliases": [
+          "狗狗天地",
+          "Puppy Place"
+        ],
+        "year": "2022",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/puppy-place/umc.cmc.6u8ovjqp61j46lx5cznidchhx"
+    },
+    {
+      "animation": false,
+      "en": "Slumberkins",
+      "genres": [
+        "儿童",
+        "教育",
+        "歌舞"
+      ],
+      "key": "item-227",
+      "kind": "series",
+      "releaseDate": "2022-11-04",
+      "season": 1,
+      "sharedId": "",
+      "title": "Slumberkins",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Slumberkins",
+        "en": "Slumberkins",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/slumberkins/umc.cmc.4r9fjly8gp831gqkfe8ft1xrb"
+    },
+    {
+      "animation": false,
+      "en": "Stick",
+      "genres": [
+        "喜剧",
+        "运动"
+      ],
+      "key": "item-13",
+      "kind": "series",
+      "releaseDate": "2026-11-04",
+      "season": 2,
+      "sharedId": "",
+      "title": "一杆入魂",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "一杆入魂"
+      ],
+      "reference": {
+        "title": "一杆入魂",
+        "en": "Stick",
+        "aliases": [
+          "一杆入魂"
+        ],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2025",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/stick/umc.cmc.52w04zy67tiv11p8xvbc57wmc"
+    },
+    {
+      "animation": false,
+      "en": "Taxi Driver",
+      "genres": [
+        "犯罪",
+        "剧情",
+        "惊悚"
+      ],
+      "key": "home-umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r",
+      "kind": "movie",
+      "releaseDate": "1976-02-08",
+      "season": 0,
+      "sharedId": "",
+      "title": "Taxi Driver",
+      "upcoming": false,
+      "year": "1976",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Taxi Driver",
+        "en": "Taxi Driver",
+        "aliases": [],
+        "year": "1976",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "1976",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/taxi-driver/umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r"
+    },
+    {
+      "animation": false,
+      "en": "The Dink",
+      "genres": [
+        "喜剧",
+        "运动"
+      ],
+      "key": "item-32",
+      "kind": "movie",
+      "releaseDate": "2026-07-24",
+      "season": 0,
+      "sharedId": "",
+      "title": "The Dink",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Dink",
+        "en": "The Dink",
+        "aliases": [],
+        "year": "2026",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/the-dink/umc.cmc.5tugaz9vt498ajn7q64ypaqxn"
+    },
+    {
+      "animation": false,
+      "en": "The Girl With the Dragon Tattoo",
+      "genres": [
+        "惊悚",
+        "动作",
+        "犯罪"
+      ],
+      "key": "home-umc.cmc.3xurji5y3xzb0sjj3xwc6s868",
+      "kind": "movie",
+      "releaseDate": "2011-12-20",
+      "season": 0,
+      "sharedId": "",
+      "title": "The Girl With the Dragon Tattoo",
+      "upcoming": false,
+      "year": "2011",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "The Girl With the Dragon Tattoo",
+        "en": "The Girl With the Dragon Tattoo",
+        "aliases": [],
+        "year": "2011",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2011",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/the-girl-with-the-dragon-tattoo/umc.cmc.3xurji5y3xzb0sjj3xwc6s868"
+    },
+    {
+      "animation": false,
+      "en": "The Hunt (Traqués)",
+      "genres": [
+        "惊悚",
+        "悬疑",
+        "剧情"
+      ],
+      "key": "item-52",
+      "kind": "series",
+      "releaseDate": "2026-03-04",
+      "season": 1,
+      "sharedId": "",
+      "title": "The Hunt (Traqués)",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Hunt (Traqués)",
+        "en": "The Hunt (Traqués)",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-hunt/umc.cmc.4w9agfyrx2fgc5k9rls2cffho"
+    },
+    {
+      "animation": false,
+      "en": "The Line",
+      "genres": [
+        "纪录片"
+      ],
+      "key": "item-276",
+      "kind": "series",
+      "releaseDate": "2021-11-19",
+      "season": 1,
+      "sharedId": "",
+      "title": "The Line",
+      "upcoming": false,
+      "year": "2021",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Line",
+        "en": "The Line",
+        "aliases": [],
+        "year": "2021",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-line/umc.cmc.4u53f7zokr7g40tjj4gs61xbu"
+    },
+    {
+      "animation": false,
+      "en": "The Oprah Conversation",
+      "genres": [
+        "脱口秀",
+        "访谈"
+      ],
+      "key": "item-311",
+      "kind": "series",
+      "releaseDate": "2020-07-30",
+      "season": 1,
+      "sharedId": "",
+      "title": "The Oprah Conversation",
+      "upcoming": false,
+      "year": "2020",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Oprah Conversation",
+        "en": "The Oprah Conversation",
+        "aliases": [],
+        "year": "2020",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-oprah-conversation/umc.cmc.49yt85r7ow6904u0177r694qy"
+    },
+    {
+      "animation": false,
+      "en": "The Problem With Jon Stewart",
+      "genres": [
+        "喜剧",
+        "新闻",
+        "脱口秀"
+      ],
+      "key": "item-207",
+      "kind": "series",
+      "releaseDate": "2023-03-03",
+      "season": 2,
+      "sharedId": "",
+      "title": "The Problem With Jon Stewart",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Problem With Jon Stewart",
+        "en": "The Problem With Jon Stewart",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-problem-with-jon-stewart/umc.cmc.4fcexvzqezr25p9weks6sxpob"
+    },
+    {
+      "animation": false,
+      "en": "The Reluctant Traveler With Eugene Levy",
+      "genres": [
+        "旅行",
+        "纪录片",
+        "喜剧"
+      ],
+      "key": "item-77",
+      "kind": "series",
+      "releaseDate": "2025-09-19",
+      "season": 3,
+      "sharedId": "",
+      "title": "不情愿的旅行者",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "不情愿的旅行者"
+      ],
+      "reference": {
+        "title": "不情愿的旅行者",
+        "en": "The Reluctant Traveler With Eugene Levy",
+        "aliases": [
+          "不情愿的旅行者"
+        ],
+        "year": "2025",
+        "kind": "series",
+        "season": 3
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-reluctant-traveler-with-eugene-levy/umc.cmc.237ur6qdup9h826huv7jg25yu"
+    },
+    {
+      "animation": false,
+      "en": "The Rookie",
+      "genres": [
+        "剧情",
+        "运动"
+      ],
+      "key": "home-umc.cmc.59i5501mld9dk1cle3fo8zy4d",
+      "kind": "movie",
+      "releaseDate": "2002-03-29",
+      "season": 0,
+      "sharedId": "",
+      "title": "The Rookie",
+      "upcoming": false,
+      "year": "2002",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "The Rookie",
+        "en": "The Rookie",
+        "aliases": [],
+        "year": "2002",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2002",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/the-rookie/umc.cmc.59i5501mld9dk1cle3fo8zy4d"
+    },
+    {
+      "animation": false,
+      "en": "The Sixth Sense",
+      "genres": [
+        "剧情",
+        "惊悚",
+        "恐怖"
+      ],
+      "key": "home-umc.cmc.2j3fje2s0rh78ius1k1kil5tr",
+      "kind": "movie",
+      "releaseDate": "1999-08-06",
+      "season": 0,
+      "sharedId": "",
+      "title": "The Sixth Sense",
+      "upcoming": false,
+      "year": "1999",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "The Sixth Sense",
+        "en": "The Sixth Sense",
+        "aliases": [],
+        "year": "1999",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "1999",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/the-sixth-sense/umc.cmc.2j3fje2s0rh78ius1k1kil5tr"
+    },
+    {
+      "animation": false,
+      "en": "Tropic Thunder",
+      "genres": [
+        "喜剧",
+        "动作",
+        "冒险"
+      ],
+      "key": "home-umc.cmc.5iudnxk9tyxo63gewawi330mw",
+      "kind": "movie",
+      "releaseDate": "2008-08-13",
+      "season": 0,
+      "sharedId": "",
+      "title": "Tropic Thunder",
+      "upcoming": false,
+      "year": "2008",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [],
+      "reference": {
+        "title": "Tropic Thunder",
+        "en": "Tropic Thunder",
+        "aliases": [],
+        "year": "2008",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2008",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/tropic-thunder/umc.cmc.5iudnxk9tyxo63gewawi330mw"
+    },
+    {
+      "animation": false,
+      "en": "Twas the Fight Before Christmas",
+      "genres": [
+        "纪录片",
+        "节日"
+      ],
+      "key": "item-275",
+      "kind": "movie",
+      "releaseDate": "2021-11-26",
+      "season": 0,
+      "sharedId": "",
+      "title": "Twas the Fight Before Christmas",
+      "upcoming": false,
+      "year": "2021",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Twas the Fight Before Christmas",
+        "en": "Twas the Fight Before Christmas",
+        "aliases": [],
+        "year": "2021",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/twas-the-fight-before-christmas/umc.cmc.lvpflyaolcrevsfje3rt5l6p"
+    },
+    {
+      "animation": false,
+      "en": "Women in Blue (Las Azules)",
+      "genres": [
+        "犯罪",
+        "惊悚",
+        "剧情"
+      ],
+      "key": "item-29",
+      "kind": "series",
+      "releaseDate": "2026-08-12",
+      "season": 2,
+      "sharedId": "",
+      "title": "Women in Blue (Las Azules)",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Women in Blue (Las Azules)",
+        "en": "Women in Blue (Las Azules)",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/women-in-blue/umc.cmc.73wmdmkfpta5ul1vbwckmme39"
+    },
+    {
+      "animation": false,
+      "en": "Yo Gabba Gabba!",
+      "genres": [
+        "儿童",
+        "歌舞",
+        "教育"
+      ],
+      "key": "home-umc.cmc.2wsvpzg4a3atiedlysr6zrfrv",
+      "kind": "series",
+      "releaseDate": "2007-08-20",
+      "season": 1,
+      "sharedId": "",
+      "title": "嘎巴宝宝",
+      "upcoming": false,
+      "year": "2007",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "嘎巴宝宝",
+        "Yo Gabba Gabba!"
+      ],
+      "reference": {
+        "title": "嘎巴宝宝",
+        "en": "Yo Gabba Gabba!",
+        "aliases": [
+          "嘎巴宝宝",
+          "Yo Gabba Gabba!"
+        ],
+        "year": "2007",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2007",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/yo-gabba-gabba/umc.cmc.2wsvpzg4a3atiedlysr6zrfrv"
+    },
+    {
+      "animation": false,
+      "en": "Yo Gabba GabbaLand!",
+      "genres": [
+        "儿童",
+        "歌舞",
+        "教育"
+      ],
+      "key": "item-56",
+      "kind": "series",
+      "releaseDate": "2026-01-30",
+      "season": 2,
+      "sharedId": "",
+      "title": "Yo Gabba GabbaLand!",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Yo Gabba GabbaLand!",
+        "en": "Yo Gabba GabbaLand!",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/yo-gabba-gabbaland/umc.cmc.6a8qdw6e76cba2l0rkgzfbocl"
+    },
+    {
+      "animation": false,
+      "en": "You Would Do It Too (Tú También lo Harías)",
+      "genres": [
+        "惊悚",
+        "剧情",
+        "悬疑"
+      ],
+      "key": "item-126",
+      "kind": "series",
+      "releaseDate": "2024-10-30",
+      "season": 1,
+      "sharedId": "",
+      "title": "You Would Do It Too (Tú También lo Harías)",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "You Would Do It Too (Tú También lo Harías)",
+        "en": "You Would Do It Too (Tú También lo Harías)",
+        "aliases": [],
+        "year": "2024",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/you-would-do-it-too/umc.cmc.7ad5xech8wu5nh2p221ymy9r2"
+    },
+    {
+      "animation": true,
+      "en": "A Charlie Brown Valentine",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.30cyxu8by31op677sm0djtm72",
+      "kind": "movie",
+      "releaseDate": "2022-02-14",
+      "season": 0,
+      "sharedId": "",
+      "title": "查理·布朗的情人节",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [
+        "查理·布朗的情人节",
+        "A Charlie Brown Valentine"
+      ],
+      "reference": {
+        "title": "查理·布朗的情人节",
+        "en": "A Charlie Brown Valentine",
+        "aliases": [
+          "查理·布朗的情人节",
+          "A Charlie Brown Valentine"
+        ],
+        "year": 2002,
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/a-charlie-brown-valentine/umc.cmc.30cyxu8by31op677sm0djtm72"
+    },
+    {
+      "animation": true,
+      "en": "Be My Valentine, Charlie Brown",
+      "genres": [
+        "儿童",
+        "动画",
+        "经典"
+      ],
+      "key": "home-umc.cmc.749in83y74eb4w3e0jvy5dlnh",
+      "kind": "movie",
+      "releaseDate": "",
+      "season": 0,
+      "sharedId": "",
+      "title": "做我的情人吧，查理·布朗",
+      "upcoming": false,
+      "year": "",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "unavailableProviders": [
+        "红牛",
+        "优质1080",
+        "神话蓝光",
+        "B蓝光"
+      ],
+      "noMatchProviders": 14,
+      "coverageStatus": "PARTIAL_PROVIDER_FAILURE",
+      "aliases": [
+        "做我的情人吧，查理·布朗",
+        "Be My Valentine, Charlie Brown"
+      ],
+      "reference": {
+        "title": "做我的情人吧，查理·布朗",
+        "en": "Be My Valentine, Charlie Brown",
+        "aliases": [
+          "做我的情人吧，查理·布朗",
+          "Be My Valentine, Charlie Brown"
+        ],
+        "year": 1975,
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/be-my-valentine-charlie-brown/umc.cmc.749in83y74eb4w3e0jvy5dlnh"
+    },
+    {
+      "animation": true,
+      "en": "BE@RBRICK",
+      "genres": [
+        "儿童",
+        "动画",
+        "音乐"
+      ],
+      "key": "item-106",
+      "kind": "series",
+      "releaseDate": "2025-03-21",
+      "season": 1,
+      "sharedId": "",
+      "title": "BE@RBRICK",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "BE@RBRICK",
+        "en": "BE@RBRICK",
+        "aliases": [],
+        "year": "2025",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2025",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/berbrick/umc.cmc.18fsq2h43zx0v5h31hyeq1d7w"
+    },
+    {
+      "animation": true,
+      "en": "Camp Snoopy",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "item-35",
+      "kind": "series",
+      "releaseDate": "2026-06-26",
+      "season": 2,
+      "sharedId": "",
+      "title": "史努比露营大冒险",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "史努比露营大冒险"
+      ],
+      "reference": {
+        "title": "史努比露营大冒险",
+        "en": "Camp Snoopy",
+        "aliases": [
+          "史努比露营大冒险"
+        ],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/camp-snoopy/umc.cmc.4erhnrmkf9vgeojl3uryxsc0j"
+    },
+    {
+      "animation": true,
+      "en": "Charlie Brown’s Christmas Tales",
+      "genres": [
+        "节日",
+        "动画",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.3kzb220yzo1iz1oy11kpu498x",
+      "kind": "movie",
+      "releaseDate": "2002-12-08",
+      "season": 0,
+      "sharedId": "",
+      "title": "查理·布朗的圣诞故事",
+      "upcoming": false,
+      "year": "2002",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "查理·布朗的圣诞故事",
+        "Charlie Brown’s Christmas Tales"
+      ],
+      "reference": {
+        "title": "查理·布朗的圣诞故事",
+        "en": "Charlie Brown’s Christmas Tales",
+        "aliases": [
+          "查理·布朗的圣诞故事",
+          "Charlie Brown’s Christmas Tales"
+        ],
+        "year": 2002,
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2002",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/charlie-browns-christmas-tales/umc.cmc.3kzb220yzo1iz1oy11kpu498x"
+    },
+    {
+      "animation": true,
+      "en": "Doug Unplugs",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-263",
+      "kind": "series",
+      "releaseDate": "2022-04-01",
+      "season": 2,
+      "sharedId": "",
+      "title": "Doug Unplugs",
+      "upcoming": false,
+      "year": "2021",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Doug Unplugs",
+        "en": "Doug Unplugs",
+        "aliases": [],
+        "year": "2021",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/doug-unplugs/umc.cmc.3oxevpgaoqomu820s0e70ri75"
+    },
+    {
+      "animation": true,
+      "en": "Duck & Goose",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-249",
+      "kind": "series",
+      "releaseDate": "2022-07-08",
+      "season": 1,
+      "sharedId": "",
+      "title": "小鸭与小鹅",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "小鸭与小鹅",
+        "Duck & Goose"
+      ],
+      "reference": {
+        "title": "小鸭与小鹅",
+        "en": "Duck & Goose",
+        "aliases": [
+          "小鸭与小鹅",
+          "Duck & Goose"
+        ],
+        "year": "2022",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/duck--goose/umc.cmc.qayvbuimq7lxab6y2cs9tbcj"
+    },
+    {
+      "animation": true,
+      "en": "Eva the Owlet",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-116",
+      "kind": "series",
+      "releaseDate": "2025-01-24",
+      "season": 2,
+      "sharedId": "",
+      "title": "猫头鹰伊娃",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "猫头鹰伊娃",
+        "Eva the Owlet"
+      ],
+      "reference": {
+        "title": "猫头鹰伊娃",
+        "en": "Eva the Owlet",
+        "aliases": [
+          "猫头鹰伊娃",
+          "Eva the Owlet"
+        ],
+        "year": "2025",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/eva-the-owlet/umc.cmc.49ts9z2smhboe9tweoygj8gv2"
+    },
+    {
+      "animation": true,
+      "en": "Frog and Toad",
+      "genres": [
+        "儿童",
+        "动画",
+        "教育"
+      ],
+      "key": "item-147",
+      "kind": "series",
+      "releaseDate": "2024-05-31",
+      "season": 2,
+      "sharedId": "",
+      "title": "青蛙与蟾蜍",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "青蛙与蟾蜍",
+        "Frog and Toad"
+      ],
+      "reference": {
+        "title": "青蛙与蟾蜍",
+        "en": "Frog and Toad",
+        "aliases": [
+          "青蛙与蟾蜍",
+          "Frog and Toad"
+        ],
+        "year": "2024",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2023",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/frog-and-toad/umc.cmc.xvcgt6ied9s3atejpk92tv1h"
+    },
+    {
+      "animation": true,
+      "en": "Get Rolling With Otis",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-236",
+      "kind": "series",
+      "releaseDate": "2022-09-30",
+      "season": 2,
+      "sharedId": "",
+      "title": "Get Rolling With Otis",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Get Rolling With Otis",
+        "en": "Get Rolling With Otis",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/get-rolling-with-otis/umc.cmc.3tql7vmqfmedyw1ab7efys3z"
+    },
+    {
+      "animation": true,
+      "en": "Happy New Year, Charlie Brown!",
+      "genres": [
+        "节日",
+        "动画",
+        "经典"
+      ],
+      "key": "home-umc.cmc.72bog44gdxl0cafwane0z8r32",
+      "kind": "movie",
+      "releaseDate": "1986-01-01",
+      "season": 0,
+      "sharedId": "",
+      "title": "新年快乐，查理布朗",
+      "upcoming": false,
+      "year": "1986",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "新年快乐，查理布朗",
+        "Happy New Year, Charlie Brown!"
+      ],
+      "reference": {
+        "title": "新年快乐，查理布朗",
+        "en": "Happy New Year, Charlie Brown!",
+        "aliases": [
+          "新年快乐，查理布朗",
+          "Happy New Year, Charlie Brown!"
+        ],
+        "year": 1986,
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "1986",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/happy-new-year-charlie-brown/umc.cmc.72bog44gdxl0cafwane0z8r32"
+    },
+    {
+      "animation": true,
+      "en": "It's Christmastime Again, Charlie Brown",
+      "genres": [
+        "节日",
+        "动画",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.4k47h7cte42k5kzw8ltnks1f7",
+      "kind": "movie",
+      "releaseDate": "1992-11-27",
+      "season": 0,
+      "sharedId": "",
+      "title": "It's Christmastime Again, Charlie Brown",
+      "upcoming": false,
+      "year": "1992",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "It's Christmastime Again, Charlie Brown",
+        "en": "It's Christmastime Again, Charlie Brown",
+        "aliases": [],
+        "year": "1992",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "1992",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/its-christmastime-again-charlie-brown/umc.cmc.4k47h7cte42k5kzw8ltnks1f7"
+    },
+    {
+      "animation": true,
+      "en": "It's the Easter Beagle, Charlie Brown!",
+      "genres": [
+        "动画",
+        "经典",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.17y48i5ko6gft5ieh148nzqzn",
+      "kind": "movie",
+      "releaseDate": "1974-04-08",
+      "season": 0,
+      "sharedId": "",
+      "title": "It's the Easter Beagle, Charlie Brown!",
+      "upcoming": false,
+      "year": "1974",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "It's the Easter Beagle, Charlie Brown!",
+        "en": "It's the Easter Beagle, Charlie Brown!",
+        "aliases": [],
+        "year": "1974",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "1974",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/its-the-easter-beagle-charlie-brown/umc.cmc.17y48i5ko6gft5ieh148nzqzn"
+    },
+    {
+      "animation": true,
+      "en": "Lulu Is a Rhinoceros",
+      "genres": [
+        "儿童",
+        "动画",
+        "音乐"
+      ],
+      "key": "item-94",
+      "kind": "movie",
+      "releaseDate": "2025-05-30",
+      "season": 0,
+      "sharedId": "",
+      "title": "Lulu Is a Rhinoceros",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Lulu Is a Rhinoceros",
+        "en": "Lulu Is a Rhinoceros",
+        "aliases": [],
+        "year": "2025",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2025",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/lulu-is-a-rhinoceros/umc.cmc.3q3rnlgmnlkdh3p5djze6l019"
+    },
+    {
+      "animation": true,
+      "en": "Not a Box",
+      "genres": [
+        "儿童",
+        "动画",
+        "教育"
+      ],
+      "key": "item-92",
+      "kind": "series",
+      "releaseDate": "2025-06-13",
+      "season": 1,
+      "sharedId": "",
+      "title": "Not a Box",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Not a Box",
+        "en": "Not a Box",
+        "aliases": [],
+        "year": "2025",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2025",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/not-a-box/umc.cmc.5v5f721a2mlxcurdhh0wm56if"
+    },
+    {
+      "animation": true,
+      "en": "Peanuts in Space: Secrets of Apollo 10",
+      "genres": [
+        "儿童",
+        "动画",
+        "纪录片"
+      ],
+      "key": "home-umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa",
+      "kind": "movie",
+      "releaseDate": "2021-06-22",
+      "season": 0,
+      "sharedId": "",
+      "title": "Peanuts in Space: Secrets of Apollo 10",
+      "upcoming": false,
+      "year": "2021",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Peanuts in Space: Secrets of Apollo 10",
+        "en": "Peanuts in Space: Secrets of Apollo 10",
+        "aliases": [],
+        "year": "2021",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2021",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/peanuts-in-space-secrets-of-apollo-10/umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa"
+    },
+    {
+      "animation": true,
+      "en": "Pinecone & Pony",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-214",
+      "kind": "series",
+      "releaseDate": "2023-02-03",
+      "season": 2,
+      "sharedId": "",
+      "title": "松果与小马",
+      "upcoming": false,
+      "year": "2023",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "松果与小马",
+        "Pinecone & Pony"
+      ],
+      "reference": {
+        "title": "松果与小马",
+        "en": "Pinecone & Pony",
+        "aliases": [
+          "松果与小马",
+          "Pinecone & Pony"
+        ],
+        "year": "2023",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/pinecone--pony/umc.cmc.2jwlalsi34m25fcfljpvk990r"
+    },
+    {
+      "animation": true,
+      "en": "Pretzel and the Puppies",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-209",
+      "kind": "series",
+      "releaseDate": "2023-02-24",
+      "season": 1,
+      "sharedId": "",
+      "title": "Pretzel and the Puppies",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Pretzel and the Puppies",
+        "en": "Pretzel and the Puppies",
+        "aliases": [],
+        "year": "2022",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/pretzel-and-the-puppies/umc.cmc.kpgzlz0lejug1vhtakgizdlh"
+    },
+    {
+      "animation": true,
+      "en": "Sago Mini Friends",
+      "genres": [
+        "儿童",
+        "动画"
+      ],
+      "key": "item-122",
+      "kind": "series",
+      "releaseDate": "2024-11-22",
+      "season": 3,
+      "sharedId": "",
+      "title": "Sago Mini Friends",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Sago Mini Friends",
+        "en": "Sago Mini Friends",
+        "aliases": [],
+        "year": "2024",
+        "kind": "series",
+        "season": 3
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/sago-mini-friends/umc.cmc.4ckulbycyeuavnlen3du06vvy"
+    },
+    {
+      "animation": true,
+      "en": "Snoopy Presents: It’s the Small Things, Charlie Brown",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "item-261",
+      "kind": "movie",
+      "releaseDate": "2022-04-15",
+      "season": 0,
+      "sharedId": "",
+      "title": "Snoopy Presents: It’s the Small Things, Charlie Brown",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Snoopy Presents: It’s the Small Things, Charlie Brown",
+        "en": "Snoopy Presents: It’s the Small Things, Charlie Brown",
+        "aliases": [],
+        "year": "2022",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/its-the-small-things-charlie-brown/umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3"
+    },
+    {
+      "animation": true,
+      "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "item-31",
+      "kind": "series",
+      "releaseDate": "2026-07-31",
+      "season": 1,
+      "sharedId": "",
+      "title": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+        "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2026",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/theres-no-place-like-home-snoopy/umc.cmc.52sgmi3vdpedurrbtz6louqqo"
+    },
+    {
+      "animation": true,
+      "en": "Snoopy Presents: Welcome Home, Franklin",
+      "genres": [
+        "儿童",
+        "动画",
+        "喜剧"
+      ],
+      "key": "item-163",
+      "kind": "movie",
+      "releaseDate": "2024-02-16",
+      "season": 0,
+      "sharedId": "",
+      "title": "Snoopy Presents: Welcome Home, Franklin",
+      "upcoming": false,
+      "year": "2024",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Snoopy Presents: Welcome Home, Franklin",
+        "en": "Snoopy Presents: Welcome Home, Franklin",
+        "aliases": [],
+        "year": "2024",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/welcome-home-franklin/umc.cmc.yy12locz1vttqczsnlnwtei3"
+    },
+    {
+      "animation": true,
+      "en": "Stillwater",
+      "genres": [
+        "儿童",
+        "动画",
+        "教育"
+      ],
+      "key": "item-27",
+      "kind": "series",
+      "releaseDate": "2026-08-21",
+      "season": 5,
+      "sharedId": "",
+      "title": "静水",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "静水",
+        "Stillwater"
+      ],
+      "reference": {
+        "title": "静水",
+        "en": "Stillwater",
+        "aliases": [
+          "静水",
+          "Stillwater"
+        ],
+        "year": "2026",
+        "kind": "series",
+        "season": 5
+      },
+      "originalYear": "2020",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/stillwater/umc.cmc.3czcagetjq31vvbgkkyp1xiao"
+    },
+    {
+      "animation": true,
+      "en": "The Charlie Brown and Snoopy Show",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.1kt2wacwwoz0brw6duwve9hje",
+      "kind": "series",
+      "releaseDate": "1983-09-17",
+      "season": 1,
+      "sharedId": "",
+      "title": "查理·布朗和史努比秀",
+      "upcoming": false,
+      "year": "1983",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "查理·布朗和史努比秀",
+        "The Charlie Brown and Snoopy Show"
+      ],
+      "reference": {
+        "title": "查理·布朗和史努比秀",
+        "en": "The Charlie Brown and Snoopy Show",
+        "aliases": [
+          "查理·布朗和史努比秀",
+          "The Charlie Brown and Snoopy Show"
+        ],
+        "year": "1983",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "1983",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-charlie-brown-and-snoopy-show/umc.cmc.1kt2wacwwoz0brw6duwve9hje"
+    },
+    {
+      "animation": true,
+      "en": "This is America, Charlie Brown",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "home-umc.cmc.3glsixv3225ngtbm57lq72oam",
+      "kind": "series",
+      "releaseDate": "1988-10-21",
+      "season": 1,
+      "sharedId": "",
+      "title": "这就是美国，查理布朗",
+      "upcoming": false,
+      "year": "1988",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "这就是美国，查理布朗",
+        "This is America, Charlie Brown"
+      ],
+      "reference": {
+        "title": "这就是美国，查理布朗",
+        "en": "This is America, Charlie Brown",
+        "aliases": [
+          "这就是美国，查理布朗",
+          "This is America, Charlie Brown"
+        ],
+        "year": "1988",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "1988",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/this-is-america-charlie-brown/umc.cmc.3glsixv3225ngtbm57lq72oam"
+    },
+    {
+      "animation": true,
+      "en": "To Mom (And Dad), With Love",
+      "genres": [
+        "动画",
+        "喜剧",
+        "儿童"
+      ],
+      "key": "item-256",
+      "kind": "movie",
+      "releaseDate": "2022-05-06",
+      "season": 0,
+      "sharedId": "",
+      "title": "To Mom (And Dad), With Love",
+      "upcoming": false,
+      "year": "2022",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "To Mom (And Dad), With Love",
+        "en": "To Mom (And Dad), With Love",
+        "aliases": [],
+        "year": "2022",
+        "kind": "movie",
+        "season": 1
+      },
+      "originalYear": "2022",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/movie/to-mom-and-dad-with-love/umc.cmc.3flhku7zffp93eqd53bqlzi04"
+    },
+    {
+      "animation": true,
+      "en": "Wonder Pets",
+      "genres": [
+        "儿童",
+        "动画",
+        "冒险"
+      ],
+      "key": "home-umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "kind": "series",
+      "releaseDate": "2006-03-03",
+      "season": 1,
+      "sharedId": "",
+      "title": "Wonder Pets",
+      "upcoming": false,
+      "year": "2006",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Wonder Pets",
+        "en": "Wonder Pets",
+        "aliases": [],
+        "year": "2006",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "2006",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/wonder-pets/umc.cmc.ns4q9hpoj4b1749wbl7crwbl"
+    },
+    {
+      "animation": true,
+      "en": "Wonder Pets: In the City",
+      "genres": [
+        "儿童",
+        "动画",
+        "歌舞"
+      ],
+      "key": "item-49",
+      "kind": "series",
+      "releaseDate": "2026-03-20",
+      "season": 2,
+      "sharedId": "",
+      "title": "Wonder Pets: In the City",
+      "upcoming": false,
+      "year": "2026",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "Wonder Pets: In the City",
+        "en": "Wonder Pets: In the City",
+        "aliases": [],
+        "year": "2026",
+        "kind": "series",
+        "season": 2
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/wonder-pets-in-the-city/umc.cmc.dsa24wciry96i1e8dcq0b9sm"
+    },
+    {
+      "animation": true,
+      "en": "WondLa",
+      "genres": [
+        "动画",
+        "奇幻",
+        "冒险"
+      ],
+      "key": "item-64",
+      "kind": "series",
+      "releaseDate": "2025-11-26",
+      "season": 3,
+      "sharedId": "",
+      "title": "寻家",
+      "upcoming": false,
+      "year": "2025",
+      "checkedProviders": 18,
+      "complete": true,
+      "status": "NO_CONFIRMED_MATCH",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [
+        "寻家"
+      ],
+      "reference": {
+        "title": "寻家",
+        "en": "WondLa",
+        "aliases": [
+          "寻家"
+        ],
+        "year": "2025",
+        "kind": "series",
+        "season": 3
+      },
+      "originalYear": "2024",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/wondla/umc.cmc.2ghd8ombh4fd37rfs27ivfa94"
+    },
+    {
+      "animation": true,
+      "en": "The Peanuts Classics",
+      "genres": [
+        "儿童",
+        "动画",
+        "喜剧"
+      ],
+      "key": "home-umc.cmc.63led2pm5a1w4wvabyn4xxxjp",
+      "kind": "series",
+      "releaseDate": "",
+      "season": 1,
+      "sharedId": "",
+      "title": "The Peanuts Classics",
+      "upcoming": false,
+      "year": "",
+      "status": "IDENTITY_YEAR_MISSING",
+      "coverageStatus": "NO_SESSION_EVIDENCE",
+      "aliases": [],
+      "reference": {
+        "title": "The Peanuts Classics",
+        "en": "The Peanuts Classics",
+        "aliases": [],
+        "year": "",
+        "kind": "series",
+        "season": 1
+      },
+      "originalYear": "",
+      "doubanId": "",
+      "officialUrl": "https://tv.apple.com/us/show/the-peanuts-classics/umc.cmc.63led2pm5a1w4wvabyn4xxxjp"
+    }
+  ]
+}
