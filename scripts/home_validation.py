@@ -48,6 +48,10 @@ def validate_pages(value):
             assert identity in page_ids if topics else r['officialId']==works[identity]['officialId']
             assert (r['width'],r['height'])==(w,h)and re.fullmatch(re.escape(BASE)+r'images/[a-f0-9]{64}\.jpg',r['artwork'])
             assert not any(k in r for k in ('id','sourceIds','headers','token','playUrl'))
+            if 'copy'in r:
+                from home_copy import validate_copy
+                assert not topics and (w,h)==(1920,1080)
+                validate_copy(r['officialId'],r['copy'])
     for page in [value]+value['pages']:
         if page is not value:assert re.fullmatch(r'[a-z0-9-]{1,100}',page['id'])and page['title']and page_url(page['source'])==page['source']
         assert len(page['hero'])<=12 and 1<=len(page['shelves'])<=80

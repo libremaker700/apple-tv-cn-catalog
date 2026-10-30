@@ -120,9 +120,13 @@ def sync():
         dump(details_path,details);return found
     from official_pages import Pages
     from home_pages import collect as collect_official
-    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,fetch(SOURCE).decode('utf-8')),image)
+    html=fetch(SOURCE).decode('utf-8')
+    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
     from home_titles import enrich
     enrich(value,ROOT,now)
+    from home_copy import process
+    value,copy_report=process(value,ROOT,html,now)
+    report['copy']=copy_report
     validate(value)
     raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images={}
     from home_pages import image_rows
