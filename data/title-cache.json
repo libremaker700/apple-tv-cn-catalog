@@ -3057,11 +3057,99 @@
         "status": "pending_review"
       },
       "next_retry_at": "2026-11-29T04:47:11+00:00"
+    },
+    "c396943eb5e378e5337e78258861d4060933d055f8c3e3b3dffdecc36eebebe5": {
+      "identity": {
+        "slug": "to-mom-and-dad-with-love",
+        "english_title": "To Mom (And Dad), With Love",
+        "kind": "movie",
+        "year": "2022",
+        "official_id": "umc.cmc.3flhku7zffp93eqd53bqlzi04"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:50:48+00:00",
+      "evidence": {
+        "query": "To Mom (And Dad), With Love 2022 电影  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [
+          {
+            "title": "尼古拉斯·凯奇 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E5%B0%BC%E5%8F%A4%E6%8B%89%E6%96%AF%C2%B7%E5%87%AF%E5%A5%87",
+            "score": 0.20601448
+          },
+          {
+            "title": "罗伯特·德尼罗 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7%E5%BE%B7%E5%B0%BC%E7%BD%97",
+            "score": 0.14303228,
+            "definition": "《教父2》、《出租车司机》",
+            "page_sha256": "8aefb58055540d64e8c7bd3c8e41ff5114b2fe519b7606cec76366205e7b02e2"
+          },
+          {
+            "title": "Google 翻译",
+            "url": "https://translate.google.com?hl=zh-CN&sl=en&tl=zh-CN&text=",
+            "score": 0.10720379
+          },
+          {
+            "title": "Lady Gaga - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/zh-cn/Lady_Gaga",
+            "score": 0.07964606,
+            "definition": "《超人气 \"超人气 (专辑)\")》The Fame（2008年；2009年再版为《超人气女魔头》The Fame Monster）",
+            "page_sha256": "1c50110095fdae391e76ce196bc62c414556577e81419d13d277cd360fbf4823"
+          }
+        ],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:50:48+00:00"
+    },
+    "2bb49940e2f92cea866ad8dd2b449647f9a47023a0ce83c8889f5ba37308a031": {
+      "identity": {
+        "slug": "tu-tambien-lo-harias",
+        "english_title": "You Would Do It Too (Tú También lo Harías)",
+        "kind": "series",
+        "year": "2024",
+        "official_id": "umc.cmc.7ad5xech8wu5nh2p221ymy9r2"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:50:48+00:00",
+      "evidence": {
+        "query": "You Would Do It Too (Tú También lo Harías) 2024 电视剧  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:50:48+00:00"
+    },
+    "f152a2fd9de8d6a4254255d9477dd49a44d9cab5257c5cb2540c9dc78f95a302": {
+      "identity": {
+        "slug": "twas-the-fight-before-christmas",
+        "english_title": "Twas the Fight Before Christmas",
+        "kind": "movie",
+        "year": "2021",
+        "official_id": "umc.cmc.lvpflyaolcrevsfje3rt5l6p"
+      },
+      "query_version": "zh-cn-v4-mainland",
+      "status": "pending_review",
+      "checked_at": "2026-10-30T04:50:48+00:00",
+      "evidence": {
+        "query": "Twas the Fight Before Christmas 2021 电影  中文名 中国大陆译名",
+        "usage": {
+          "credits": 1
+        },
+        "results": [],
+        "status": "pending_review"
+      },
+      "next_retry_at": "2026-11-29T04:50:48+00:00"
     }
   },
   "budgets": {
-    "2026-10": 97
+    "2026-10": 100
   },
-  "last_run_at": "2026-10-30T04:47:11+00:00",
+  "last_run_at": "2026-10-30T04:50:48+00:00",
   "last_policy": "mainland-v1"
 }
