@@ -1,0 +1,38 @@
+name: Test Gemini grounded mainland title lookup
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: One official Apple work slug
+        type: string
+        default: being-heumann
+      model:
+        description: Gemini model supporting Google Search
+        type: string
+        default: gemini-2.5-flash
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests Pillow opencc-python-reimplemented
+      - run: python -m unittest discover -s tests -v
+      - name: One grounded title request
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROBE_SLUG: ${{ inputs.slug }}
+          GEMINI_MODEL: ${{ inputs.model }}
+        run: python scripts/gemini_probe.py --slug "$PROBE_SLUG" --model "$GEMINI_MODEL"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gemini-title-probe
+          path: logs/gemini-probe.json
+          if-no-files-found: warn
+          retention-days: 7
