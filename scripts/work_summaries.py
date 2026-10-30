@@ -32,14 +32,13 @@ def run(root,api,translator,now,limit=400):
     # Fetch only display metadata through Apple's US API; identity/type are checked before use.
     for identity,w in wanted.items():
         try:
-            cached=api.cache.get(w['kind']+':'+identity+':',{}).get('value',{})
-            detail=cached or api.get(w['kind'],identity)
+            detail=api.get(w['kind'],identity)
             if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show')or norm(detail.get('title',''))!=norm(w['en']):raise ValueError('identity')
             text=clean(detail.get('description')or detail.get('heroDescription')or w.get('summaryEn',''))
             if not text or len(text)>1800:report['missingOriginal']+=1;continue
             k=key(identity,text);source[identity]=(w,text,k)
             if valid_zh(records.get(k,{}).get('text')):report['cacheHits']+=1
-            elif valid_zh((w.get('zh')or{}).get('summary')):
+            elif (w.get('zh')or{}).get('summary_status')!='translated_official' and valid_zh((w.get('zh')or{}).get('summary')):
                 records[k]={'text':w['zh']['summary'],'method':'existing_chinese'};report['existingChinese']+=1
             elif now>=records.get(k,{}).get('nextRetry',0):pending.append({'id':identity,'text':text})
         except Exception:report['sourceErrors']+=1
