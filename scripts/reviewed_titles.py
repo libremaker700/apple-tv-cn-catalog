@@ -52,7 +52,10 @@ def apply_home(home,root):
     for w in out['works']:
         r=index.get(w['officialId'])
         if not r:continue
-        if w['slug']!=r['slug']or norm(w['en'])!=norm(r['en'])or w['kind']!=r['kind']:raise ValueError('Reviewed home identity changed')
+        canonical=[]
+        if w.get('knownCatalog') and (root/'docs/catalog.json').exists():canonical=json.loads((root/'docs/catalog.json').read_text(encoding='utf-8')).get('entries',[])
+        same_slug=w['slug']==r['slug'] or any(e['slug']==w['slug'] and norm(e['en'])==norm(r['en']) and e['kind']==r['kind'] for e in canonical)
+        if not same_slug or norm(w['en'])!=norm(r['en'])or w['kind']!=r['kind']:raise ValueError('Reviewed home identity changed')
         w['zh']=localized(w.get('zh'),r,checked)
     return out
 

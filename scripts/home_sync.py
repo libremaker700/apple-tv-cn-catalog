@@ -122,7 +122,7 @@ def sync():
     from home_pages import collect as collect_official
     html=fetch(SOURCE).decode('utf-8')
     value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
-    from home_seasons import enrich as enrich_seasons
+    from home_seasons import enrich as enrich_seasons,reconcile as reconcile_seasons
     from catalog import get as season_get
     report['channelSeasons']=enrich_seasons(value,ROOT,season_get,now)
     from home_titles import enrich
@@ -133,6 +133,7 @@ def sync():
     value=apply_names(value,ROOT,home=True)
     from work_summaries import apply_home as apply_summaries
     value=apply_summaries(value,ROOT)
+    report['reconciledShows']=reconcile_seasons(value,load(DOCS/'catalog.json'))
     from home_copy import process
     value,copy_report=process(value,ROOT,html,now)
     report['copy']=copy_report

@@ -39,3 +39,28 @@ def enrich(home, root, get, now=None):
         report.append({'officialId': identity, 'status': status, 'seasons': [r['season'] for r in rows]})
     dump(path, cache)
     return report
+
+
+def reconcile(home, catalog):
+    """Unify a PR show's latest-season year with the same show's first-season identity."""
+    from home_pages import name_key
+    replacements = {}
+    for work in home.get('works', []):
+        if work.get('knownCatalog') or not work.get('seasons'):
+            continue
+        years = {str(s['year']) for s in work['seasons']}
+        candidates = [e for e in catalog['entries'] if e['kind'] == work['kind']
+                      and name_key(e['en']) == name_key(work['en'])
+                      and str(e.get('releaseDate', ''))[:4] in years
+                      and not (e.get('officialIdentity') or {}).get('watchUrl', '').startswith('https://tv.apple.com/')]
+        if len(candidates) != 1:
+            continue
+        entry = candidates[0]
+        replacements[work['slug']] = entry['slug']
+        work['slug'] = entry['slug']
+        work['knownCatalog'] = True
+    for page in [home] + home.get('pages', []):
+        for row in page['hero'] + [r for shelf in page['shelves'] for r in shelf['items']]:
+            if row.get('slug') in replacements:
+                row['slug'] = replacements[row['slug']]
+    return replacements
