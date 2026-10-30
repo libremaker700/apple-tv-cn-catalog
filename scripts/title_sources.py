@@ -217,7 +217,7 @@ def structured_patch(record,item,checked_at):
     raw=item.get('identity_text','');parts=urlsplit(item.get('url',''));expected=year(record)
     english=record.get('english_title') or record.get('original_title') or ''
     if not raw or not expected or not english:return None
-    name='';aliases=[]
+    name='';aliases=[];source_year=str(expected)
     if parts.hostname=='movie.douban.com' and re.fullmatch(r'/subject/\d+/?',parts.path):
         head=next((line.strip(' #*') for line in raw[:1800].splitlines() if mentions_original(english,line) and re.search(r'\(\s*(?:19|20)\d{2}\s*\)',line)), '')
         if not head or re.search(r'第[二三四五六七八九十2-9]+季|Season\s*[2-9]',head,re.I):return None
@@ -246,5 +246,7 @@ def structured_patch(record,item,checked_at):
     if not chinese(name) or len(name)>80:return None
     from opencc import OpenCC
     cc=OpenCC('t2s');names=list(dict.fromkeys([cc.convert(s) for s in [name]+aliases if chinese(s) and len(s)<80]))
-    return synopsis_patch({'display_name_zh':cc.convert(name),'aliases_zh':names,'metadataPolicy':POLICY,'name_status':'verified_title_sources','name_checked_at':checked_at,
+    patch=synopsis_patch({'display_name_zh':cc.convert(name),'aliases_zh':names,'metadataPolicy':POLICY,'name_status':'verified_title_sources','name_checked_at':checked_at,
             'sources':[source(kind,item['url'],checked_at)]},cc.convert(plot_section(raw)),item['url'],checked_at)
+    if source_year!=str(expected):patch['release_year']=int(source_year)
+    return patch

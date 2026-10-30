@@ -47,6 +47,7 @@ def apply_verified(entry,cached,ident):
     old=zh.get('title','');name=patch['display_name_zh']
     aliases=list(dict.fromkeys([name]+patch.get('aliases_zh',[])+zh.get('aliases',[])+[old]))
     zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
+    if re.fullmatch(r'(19|20)\d{2}',str(patch.get('release_year',''))):zh['releaseYear']=int(patch['release_year'])
     if not zh.get('watchUrl'):zh['watchUrl']=(out.get('officialIdentity') or {}).get('watchUrl','')
     # Cast/date/seasons/posters keep their identities; a separately verified synopsis may fill a gap.
     out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;out['chinesePending']=False

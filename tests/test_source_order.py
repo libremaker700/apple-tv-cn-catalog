@@ -46,7 +46,7 @@ class SourceOrder(unittest.TestCase):
         raw='# 反仇专家 The Savant (2027)\n首播: 2027(美国)\n又名: 灭仇专员(港) / 慧眼 / 达人 / 行家\nIMDb: tt27304258\n## 剧情简介\n'+SUMMARY
         ref={'english_title':'The Savant','kind':'tv','year':'2025'};item={'url':'https://movie.douban.com/subject/123456/','identity_text':raw}
         self.assertIsNone(structured_patch(ref,item,'now'))
-        result=structured_patch(dict(ref,imdb_id='tt27304258'),item,'now');self.assertEqual(result['display_name_zh'],'反仇专家');self.assertEqual(result['aliases_zh'],['反仇专家','慧眼','达人','行家'])
+        result=structured_patch(dict(ref,imdb_id='tt27304258'),item,'now');self.assertEqual(result['display_name_zh'],'反仇专家');self.assertEqual(result['aliases_zh'],['反仇专家','慧眼','达人','行家']);self.assertEqual(result['release_year'],2027)
         self.assertIsNone(structured_patch(dict(ref,imdb_id='tt99999999'),item,'now'))
     def test_json_challenge_page_does_not_repeat_requests_for_other_works(self):
         session=Session([Response(200,'<html>verification required</html>')]);reader=PublicPages(session)
