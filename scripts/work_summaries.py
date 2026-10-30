@@ -76,6 +76,6 @@ def main():
     now=int(time.time());api=Pages(ROOT,fetch(CHANNEL).decode('utf-8'))
     report=run(ROOT,api,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None,max_length=1800),now)
     folder=ROOT/'docs';m=load(folder/'version.json');publish(load(folder/'catalog.json'),m.get('checked_at'),'shared-official-summary-translation')
-    home=apply_home(load(folder/'home/home.json'),ROOT);validate(home);m=load(folder/'home/version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest()
+    home=apply_home(load(folder/'home/home.json'),ROOT);from reviewed_names import apply as apply_names;home=apply_names(home,ROOT,home=True);validate(home);m=load(folder/'home/version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest()
     path='releases/'+sha+'/home.json';(folder/'home'/path).parent.mkdir(parents=True,exist_ok=True);(folder/'home'/path).write_bytes(blob);m.update(path=path,version=sha,checkedAt=now);(folder/'home/home.json').write_bytes(blob);(folder/'home/version.json').write_bytes(raw_json(m));validate_publication();print(json.dumps(report,ensure_ascii=False))
 if __name__=='__main__':main()

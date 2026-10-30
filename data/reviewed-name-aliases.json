@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "officialId": "umc.cmc.1c5nvp802hos5t3u0umlukkwh",
+      "en": "It’s the Great Pumpkin, Charlie Brown",
+      "kind": "movie",
+      "year": 1966,
+      "title": "这是南瓜大王哦！查理·布朗！",
+      "aliases": [
+        "这是南瓜大王哦查理·布朗",
+        "这是个大南瓜哦！查理·布朗！",
+        "史努比卡通：万圣节南瓜头"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_display_evidence",
+          "url": "https://movie.douban.com/awards/asa/14/nominees"
+        }
+      ]
+    }
+  ]
+}
