@@ -72,7 +72,8 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
     clock=clock or datetime.now(timezone.utc);checked=clock.isoformat(timespec='seconds');month=clock.strftime('%Y-%m')
     docs=root/'docs';path=root/'data/title-cache.json'
     cache=read(path,{'schema':1,'records':{},'budgets':{}});assert cache.get('schema')==1
-    if not force and cache.get('last_policy')==POLICY and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<604800:
+    # Each record already has its own retry time. A week-wide gate stalled newly added works too.
+    if not force and cache.get('last_policy')==POLICY and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<6*3600:
         print('Title lookup not due; keep verified names and cached evidence');return None
     hints=read(root/'data/title-requests.json',{'records':{}})['records']
     current=read(docs/'catalog.json',{});version=read(docs/'version.json',{});entries=copy.deepcopy(current['entries'])

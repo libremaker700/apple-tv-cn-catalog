@@ -1,6 +1,6 @@
 import copy,json,tempfile,unittest,sys
 from pathlib import Path
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import catalog,title_lookup as t
@@ -84,4 +84,16 @@ class Titles(unittest.TestCase):
             client=Fake(False)
             with patch.object(t,'publish') as pub:
                 r=t.run(root,force=True,monthly_limit=0,clock=NOW,client=client);self.assertEqual(client.calls,0);self.assertEqual(r['searched'],0);pub.assert_not_called()
+    def test_daily_queue_accepts_new_work_without_retrying_pending_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);t.dump(root/'docs/catalog.json',{'entries':[ENTRY]});t.dump(root/'docs/version.json',{'checked_at':123})
+            client=Fake(False)
+            with patch.object(t,'publish'):
+                t.run(root,force=True,clock=NOW,client=client)
+                fresh=copy.deepcopy(ENTRY);fresh['slug']='new-work';fresh['en']='New Work'
+                t.dump(root/'docs/catalog.json',{'entries':[ENTRY,fresh]})
+                report=t.run(root,clock=NOW+timedelta(days=1),client=client)
+                self.assertEqual(report['attempted'],1)
+                self.assertEqual(client.calls,2)
+                self.assertIsNone(t.run(root,clock=NOW+timedelta(days=1,minutes=1),client=client))
 if __name__=='__main__':unittest.main()
