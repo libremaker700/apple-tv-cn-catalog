@@ -13,7 +13,7 @@ def synopsis_patch(patch,text,url,checked_at):
     return patch
 
 def plot_section(raw):
-    match=re.search(r'(?:^|\n)[ \t]*(?:#{1,4}[ \t]*)?(?:[^\n]{1,80}的)?(?:剧情简介|剧情梗概|剧情|故事梗概)[ \t·:：]*\n+([\s\S]*?)(?=\n[ \t]*(?:#{1,4}\s+|演职员|演员表|角色介绍|短评|获奖|参考资料|播出信息|分集剧情)|\Z)',raw)
+    match=re.search(r'(?:^|\n)[ \t]*(?:[#=]{1,4}[ \t]*)?(?:[^\n]{1,80}的)?(?:剧情简介|剧情梗概|剧情|故事梗概)[ \t·:：=]*\n+([\s\S]*?)(?=\n[ \t]*(?:[#=]{1,4}\s+|演职员|演员表|角色介绍|短评|获奖|参考资料|播出信息|分集剧情)|\Z)',raw)
     return match.group(1).strip()[:600] if match else ''
 def norm(value):
     return re.sub(r'[^a-z0-9\u3400-\u9fff]', '', unicodedata.normalize('NFKC', str(value or '')).casefold())
@@ -99,7 +99,7 @@ class Lookup:
 
     def wiki_page(self, record, title, checked_at):
         payload = self.get_json('https://zh.wikipedia.org/w/api.php', params={
-            'action': 'query', 'prop': 'extracts|info|revisions', 'rvprop':'content', 'rvslots':'main', 'exintro': 1, 'explaintext': 1,
+            'action': 'query', 'prop': 'extracts|info|revisions', 'rvprop':'content', 'rvslots':'main', 'exchars': 5000, 'explaintext': 1,
             'inprop': 'url', 'redirects': 1, 'titles': title, 'format': 'json', 'variant': 'zh-hans'})
         patches=[]
         for page in payload.get('query',{}).get('pages',{}).values():

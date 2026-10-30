@@ -4,7 +4,7 @@ from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import title_lookup as t
 from summary_cache import apply_summary
-from title_sources import structured_patch
+from title_sources import structured_patch,wiki_patch
 from test_titles import ENTRY,PATCH,NOW,Fake
 
 SUMMARY='一位警探为了保护家人搬到小镇生活，却发现小镇居民正遭受威胁。他与伙伴展开调查，并在调查过程中逐步揭开事件背后的秘密。'
@@ -33,14 +33,20 @@ class Summaries(unittest.TestCase):
         for found in (True,False):
             with tempfile.TemporaryDirectory() as tmp:
                 root=Path(tmp);entry=copy.deepcopy(ENTRY);entry['zh']['summary']='';ident=t.identity(entry,{})
-                cached={'identity':ident,'query_version':t.QUERY_VERSION,'status':'verified','checked_at':NOW.isoformat(),'patch':PATCH}
+                cached={'identity':ident,'query_version':t.QUERY_VERSION,'status':'verified','checked_at':NOW.isoformat(),'patch':PATCH,'evidence':{'results':[{'title':'cached name-only source'}]}}
                 t.dump(root/'data/title-cache.json',{'schema':1,'records':{t.cache_key(ident):cached},'budgets':{}})
                 t.dump(root/'docs/catalog.json',{'entries':[entry]});t.dump(root/'docs/version.json',{'checked_at':123})
                 client=Fake(False)
+                client.verify=lambda *args:PATCH
                 if found:client.direct=lambda *args:dict(PATCH,summary_zh=SUMMARY,summary_sources=[{'url':'https://zh.wikipedia.org/wiki/追捕刺客'}])
                 with patch.object(t,'publish') as publish:t.run(root,force=True,clock=NOW,client=client)
                 saved=t.read(root/'data/title-cache.json',{})['records'][t.cache_key(ident)]
                 self.assertEqual(saved['status'],'verified');self.assertEqual(saved['patch']['display_name_zh'],PATCH['display_name_zh'])
                 if found:self.assertEqual(publish.call_args.args[0]['entries'][0]['zh']['summary'],SUMMARY)
                 else:self.assertIn('summary_next_retry_at',saved)
+    def test_wikipedia_plot_section_does_not_include_cast_or_other_subject(self):
+        page={'extract':'《追捕刺客》（Manhunt）是一部2024年美国电视剧。\n\n== 剧情 ==\n'+SUMMARY+'\n\n== 演员 ==\n无关演员介绍','mainland_title':'追捕刺客','fullurl':'https://zh.wikipedia.org/wiki/追捕刺客'}
+        ref={'english_title':'Manhunt','kind':'tv','year':'2024'}
+        self.assertEqual(wiki_patch(ref,page,'now')['summary_zh'],SUMMARY)
+        self.assertIsNone(wiki_patch(dict(ref,year='2019'),page,'now'))
 if __name__=='__main__':unittest.main()

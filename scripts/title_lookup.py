@@ -45,7 +45,7 @@ def apply_verified(entry,cached,ident):
     aliases=list(dict.fromkeys([name]+patch.get('aliases_zh',[])+zh.get('aliases',[])+[old]))
     zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
     if not zh.get('watchUrl'):zh['watchUrl']=(out.get('officialIdentity') or {}).get('watchUrl','')
-    # Only title fields change. Synopsis/cast/date/season/posters remain tied to existing identities.
+    # Cast/date/seasons/posters keep their identities; a separately verified synopsis may fill a gap.
     out['nameStatus']='verified_title_sources';out['titleIdentity']=ident;out['chinesePending']=False
     return apply_summary(out,cached,ident)
 
