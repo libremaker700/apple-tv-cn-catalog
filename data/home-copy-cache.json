@@ -26,6 +26,51 @@
     },
     "67688a5b3473b144824a83c41f3e94ec3d06d2fae9a6e371af728a52177fc388": {
       "nextRetry": 1793402253
+    },
+    "c6fdc55d4aef66f192674194c0b1768e0da5ca548f01ea96a72c485722ec94b2": {
+      "text": "拯救反派失踪受害者的唯一方法，就是离得足够近，直到自己也可能成为其中之一。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "e40cb76f76aea876f72e6332d1ae888f383b50cfc9e54bb38c99707edb5e2097": {
+      "text": "与史努比和伙伴们一起庆祝万圣节，度过一个毛骨悚然的美好时光。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "5a7bd5fb78f2d0968b5f53fb3ac7434498c7c788234c4c547ad01ac2e688b810": {
+      "text": "在一个拥有无限现实的宇宙中，没有任何世界比得上家。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "13228e7f06fff1cf4d3b27e5ac5cfd8079ad8dc604ebf3551413e2f4d5711395": {
+      "text": "约翰·塞纳（John Cena）与童年好友的重聚急转直下，变成了一场环游世界的拯救世界冒险。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "86fdf840e0d2f4a8dd3bc9e3e20d251769626e8ef45fb146e14b7eca9780a03d": {
+      "text": "Ted 回归并准备好一口气刷完。第 4 季的所有剧集都在这里。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "d4e65b17223b1ea2b56824fca0c4369eec2954d1f205c40fbf8f757a17e95e55": {
+      "text": "当一个冷酷无情的暗杀小队将目标对准“臭名昭远”过去和现在的成员时，加里·奥德曼（Gary Oldman）手下军情五处弃子的处境变得万分危急。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "2daf29045637bd781eeac5d3bbe79e1e7026f64f96e8298e7315b8d2f1d480dc": {
+      "text": "好莱坞两位最大的明星发现他们的友谊可能是一脉相承的。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "00c8f6a5239df4fa12e0aed67708d4a79a07b5072b8b6255fe86bd58870ddceb": {
+      "text": "在一个地下社会中，一名叛军为寻求答案而战，而真相终将大白于天下。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
+    },
+    "9528c7042dbb5fb52cc1d709a4e0ac6f58e8c6564edc07b9086bf7e9e956f6be": {
+      "text": "欢迎来到这个岛屿，请享受您的逗留。只是别问太多问题。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793381088
     }
   }
 }
