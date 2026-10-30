@@ -32,3 +32,8 @@ class Summaries(unittest.TestCase):
    self.assertEqual(translator.calls,1);self.assertEqual(b['cacheHits'],1)
    self.assertEqual(apply_main(main,root)['entries'][0]['zh']['summary'],apply_home(home,root)['works'][0]['zh']['summary'])
    api.text='Changed English synopsis';run(root,api,translator,102);self.assertEqual(translator.calls,2)
+
+ def test_canonical_id_and_pr_fallback(self):
+  from work_summaries import source_id
+  self.assertEqual(source_id({'officialIdentity':{'watchUrl':'https://tv.apple.com/us/movie/fury/umc.cmc.test?ctx_brand=foo'}}),'umc.cmc.test')
+  self.assertEqual(source_id({'slug':'test','officialUrl':'https://www.apple.com/tv-pr/originals/test/'}),'pr:test')

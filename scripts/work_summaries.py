@@ -1,5 +1,5 @@
 """One public-US synopsis translation per work/source hash, shared by every App surface."""
-import copy,json,os,re,time,hashlib,unicodedata
+import copy,json,os,re,time,hashlib,unicodedata,html
 from pathlib import Path
 from urllib.parse import urlsplit
 from title_lookup import read,dump
@@ -8,7 +8,7 @@ def valid_zh(text):return short_valid_zh(text,1800)
 VERSION='work-summary-zh-cn-v1'
 def key(identity,text):return digest([VERSION,identity,clean(text)])
 def norm(s):return re.sub(r"[^a-z0-9]","",unicodedata.normalize('NFKD',s).lower())
-def source_id(e):return e.get('officialId')or(urlsplit(e.get('officialIdentity',{}).get('watchUrl','')).path.rstrip('/').split('/')[-1])
+def source_id(e):return e.get('officialId')or(urlsplit(e.get('officialIdentity',{}).get('watchUrl','')).path.rstrip('/').split('/')[-1])or('pr:'+e['slug']if e.get('officialUrl')=='https://www.apple.com/tv-pr/originals/'+e.get('slug','')+'/'else'')
 def attach(e,record):
     if not record or not valid_zh(record.get('text')):return
     zh=e.setdefault('zh',{}) or {};e['zh']=zh
@@ -28,13 +28,21 @@ def run(root,api,translator,now,limit=400):
     cache=read(root/'data/work-summary-cache.json',{'schema':1,'records':{},'works':{}});records=cache['records'];works=cache['works'];wanted={}
     for e in main['entries']:
         identity=source_id(e)
-        if identity.startswith('umc.cmc.'):wanted[identity]={'officialId':identity,'en':e['en'],'kind':e['kind'],'watchUrl':e['officialIdentity']['watchUrl'],'zh':e.get('zh')}
+        if identity:wanted[identity]={'officialId':identity,'en':e['en'],'kind':e['kind'],'watchUrl':e.get('officialIdentity',{}).get('watchUrl')or e['officialUrl'],'zh':e.get('zh')}
     for w in home['works']:wanted[w['officialId']]=dict(w,zh=w.get('zh')or wanted.get(w['officialId'],{}).get('zh'))
     report={'works':len(wanted),'translated':0,'cacheHits':0,'existingChinese':0,'missingOriginal':0,'sourceErrors':0,'apiCalls':0,'usage':[],'errors':[]};pending=[];source={}
     # Fetch only display metadata through Apple's US API; identity/type are checked before use.
     for identity,w in wanted.items():
         try:
-            detail=api.get(w['kind'],identity)
+            if identity.startswith('pr:'):
+                originals=read(root/'data/work-original-cache.json',{});old=originals.get(identity,{})
+                if now-old.get('checkedAt',0)<6*3600:detail=old['value']
+                else:
+                    from catalog import get
+                    page=get(w['watchUrl']).content.decode('utf-8');match=re.search(r'<div[^>]+id="description-copy"[^>]*>(.*?)</div>',page,re.S)
+                    text=clean(html.unescape(re.sub('<[^>]+>',' ',match[1])))if match else''
+                    detail={'id':identity,'type':'Movie'if w['kind']=='movie'else'Show','title':w['en'],'description':text};originals[identity]={'checkedAt':now,'value':detail};dump(root/'data/work-original-cache.json',originals)
+            else:detail=api.get(w['kind'],identity)
             if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show'):raise ValueError('identity')
             text=clean(detail.get('description')or detail.get('heroDescription')or w.get('summaryEn',''))
             if not text or len(text)>1800:report['missingOriginal']+=1;continue
