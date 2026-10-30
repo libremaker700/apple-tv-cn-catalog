@@ -3305,8 +3305,8 @@
         "official_id": "umc.cmc.4cfsq1juke72zutv5xp0pw3rj"
       },
       "query_version": "zh-cn-v7-mobile-identity",
-      "checked_at": "2026-10-30T10:09:45+00:00",
-      "next_retry_at": "2026-10-31T10:09:45+00:00",
+      "checked_at": "2026-10-30T10:18:52+00:00",
+      "next_retry_at": "2026-10-31T10:18:52+00:00",
       "patch": {
         "metadataPolicy": "mainland-v1",
         "display_name_zh": "夜曲",
