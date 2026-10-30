@@ -1,61 +1,12 @@
 {
   "works": 365,
-  "translated": 13,
-  "cacheHits": 345,
-  "existingChinese": 7,
+  "translated": 0,
+  "cacheHits": 365,
+  "existingChinese": 0,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 4,
-  "usage": [
-    {
-      "promptTokenCount": 392,
-      "candidatesTokenCount": 388,
-      "totalTokenCount": 780,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 392
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 353,
-      "candidatesTokenCount": 350,
-      "totalTokenCount": 703,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 353
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 412,
-      "candidatesTokenCount": 403,
-      "totalTokenCount": 815,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 412
-        }
-      ],
-      "serviceTier": "standard"
-    },
-    {
-      "promptTokenCount": 148,
-      "candidatesTokenCount": 99,
-      "totalTokenCount": 247,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 148
-        }
-      ],
-      "serviceTier": "standard"
-    }
-  ],
+  "apiCalls": 0,
+  "usage": [],
   "errors": [],
   "ready": 365,
   "pending": 0
