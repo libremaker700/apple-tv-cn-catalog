@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T04:37:42+00:00",
+  "checked_at": "2026-10-30T04:42:35+00:00",
   "api_configured": true,
   "attempted": 20,
   "searched": 20,
@@ -7,20 +7,20 @@
   "cache_hits": 0,
   "verified_changes": [
     {
-      "slug": "margos-got-money-troubles",
+      "slug": "maximum-pleasure-guaranteed",
       "before": "",
-      "after": "玛戈没钱了",
+      "after": "最大欢愉保障",
       "aliases": [
-        "玛戈没钱了"
+        "最大欢愉保障"
       ]
     }
   ],
   "monthly_limit": 100,
   "pending": 19,
-  "reused_verified": 230,
+  "reused_verified": 231,
   "status": "completed",
-  "monthly_reserved": 57,
-  "remaining_unverified": 322,
+  "monthly_reserved": 77,
+  "remaining_unverified": 321,
   "api_results": [
     {
       "key_slot": 1,
