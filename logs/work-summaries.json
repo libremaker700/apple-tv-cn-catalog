@@ -1,0 +1,265 @@
+{
+  "works": 374,
+  "translated": 165,
+  "cacheHits": 0,
+  "existingChinese": 172,
+  "missingOriginal": 0,
+  "sourceErrors": 21,
+  "apiCalls": 23,
+  "usage": [
+    {
+      "promptTokenCount": 683,
+      "candidatesTokenCount": 724,
+      "totalTokenCount": 1407,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 683
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 660,
+      "candidatesTokenCount": 699,
+      "totalTokenCount": 1359,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 660
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 686,
+      "candidatesTokenCount": 748,
+      "totalTokenCount": 1434,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 686
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 682,
+      "candidatesTokenCount": 743,
+      "totalTokenCount": 1425,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 682
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 727,
+      "candidatesTokenCount": 765,
+      "totalTokenCount": 1492,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 727
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 692,
+      "candidatesTokenCount": 752,
+      "totalTokenCount": 1444,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 692
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 683,
+      "candidatesTokenCount": 772,
+      "totalTokenCount": 1455,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 683
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 646,
+      "candidatesTokenCount": 747,
+      "totalTokenCount": 1393,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 646
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 698,
+      "candidatesTokenCount": 787,
+      "totalTokenCount": 1485,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 698
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 727,
+      "candidatesTokenCount": 808,
+      "totalTokenCount": 1535,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 727
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 749,
+      "candidatesTokenCount": 850,
+      "totalTokenCount": 1599,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 749
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 720,
+      "candidatesTokenCount": 785,
+      "totalTokenCount": 1505,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 720
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 708,
+      "candidatesTokenCount": 785,
+      "totalTokenCount": 1493,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 708
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 694,
+      "candidatesTokenCount": 726,
+      "totalTokenCount": 1420,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 694
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 741,
+      "candidatesTokenCount": 861,
+      "totalTokenCount": 1602,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 741
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 742,
+      "candidatesTokenCount": 838,
+      "totalTokenCount": 1580,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 742
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 859,
+      "candidatesTokenCount": 951,
+      "totalTokenCount": 1810,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 859
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 1219,
+      "candidatesTokenCount": 1454,
+      "totalTokenCount": 2673,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1219
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 1234,
+      "candidatesTokenCount": 1439,
+      "totalTokenCount": 2673,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1234
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 754,
+      "candidatesTokenCount": 846,
+      "totalTokenCount": 1600,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 754
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 419,
+      "candidatesTokenCount": 446,
+      "totalTokenCount": 865,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 419
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  ],
+  "ready": 337,
+  "pending": 37
+}
