@@ -4,6 +4,19 @@ from urllib.parse import urlsplit, unquote
 import requests
 from metadata_policy import POLICY,allowed_source
 from summary_cache import valid_summary
+from public_sources import PublicPages,plain_html
+
+def complete_patch(patch,record):
+    return bool(patch and (record.get('name_verified') or chinese(patch.get('display_name_zh'))) and (not record.get('want_summary') or valid_summary(patch.get('summary_zh'))))
+
+def merge_patches(first,second):
+    if not first:return second
+    if not second:return first
+    # Each patch has independently passed the original-title, type and identity gates.
+    out=dict(first)
+    if not valid_summary(out.get('summary_zh')) and valid_summary(second.get('summary_zh')):
+        out.update({k:second[k] for k in ('summary_zh','summary_sources','summary_checked_at') if k in second})
+    return out
 
 def synopsis_patch(patch,text,url,checked_at):
     """Only attach a Chinese synopsis after the containing page passed identity gates."""
@@ -53,6 +66,7 @@ def wiki_patch(record, page, checked_at):
     if record.get('kind') == 'anime' and re.search(r'漫画|漫畫', lead[:150]) and not re.search(r'电视动画|電視動畫', lead[:150]):
         return None
     display=page.get('mainland_title','')
+    if not chinese(display) and record.get('name_verified'):display=record.get('display_name_zh','')
     if not chinese(display):return None
     return synopsis_patch({'display_name_zh': display, 'aliases_zh': [display], 'metadataPolicy':POLICY,
             'name_status': 'verified_title_sources', 'name_checked_at': checked_at,
@@ -77,25 +91,35 @@ def bangumi_patch(record, subject, checked_at):
             'name_checked_at': checked_at, 'sources': [source('bangumi_title',url,checked_at)]},subject.get('summary',''),url,checked_at)
 
 class Lookup:
-    def __init__(self, key='', session=None):
+    def __init__(self, key='', session=None, cache_path=None):
         self.key = key
         self.session = session or requests.Session()
         self.requests = 0
         self.network_errors = 0
         self.diagnostics = []
         self.stopped = False
+        self.pages=PublicPages(self.session,cache_path)
+        self.stages=[]
 
     def get_json(self, url, **kwargs):
-        if not allowed_source(url):return {}
-        try:
-            response = self.session.get(url, headers={'User-Agent': 'AppleTVCnCatalog/1.0 (public title verification)'}, timeout=(8, 20), allow_redirects=False, **kwargs)
-            if response.status_code == 200:
-                return response.json()
-            self.diagnostics.append({'host': urlsplit(url).hostname, 'http_status': response.status_code})
-        except (requests.RequestException, ValueError):
-            pass
-        self.network_errors += 1
-        return {}
+        return self.pages.json(url,**kwargs) if allowed_source(url) else {}
+
+    def douban(self,record,checked_at):
+        title=record.get('english_title') or record.get('original_title')
+        payload=self.get_json('https://movie.douban.com/j/subject_suggest',params={'q':title})
+        patches=[]
+        for row in (payload if isinstance(payload,list) else [])[:3]:
+            url=row.get('url','')
+            if not re.fullmatch(r'https://movie\.douban\.com/subject/\d+/?',url):continue
+            raw=self.pages.get(url)
+            if not raw:continue
+            # Keep the defining heading before navigation text for identity parsing.
+            heading=re.search(r'(?is)<h1\b[^>]*>(.*?)</h1>',raw)
+            item={'url':url,'title':row.get('title',''),'identity_text':('# '+plain_html(heading[1])+'\n' if heading else '')+plain_html(raw)}
+            patch=structured_patch(record,item,checked_at)
+            if patch:patches.append(patch)
+        names={norm(p['display_name_zh']) for p in patches}
+        return patches[0] if len(names)==1 else None
 
     def wiki_page(self, record, title, checked_at):
         payload = self.get_json('https://zh.wikipedia.org/w/api.php', params={
@@ -110,25 +134,19 @@ class Lookup:
             if patch:patches.append(patch)
         return patches[0] if len(patches) == 1 else None
 
-    def direct(self, record, checked_at):
+    def wikipedia(self, record, checked_at):
         title = record.get('english_title') or record.get('original_title')
         hint = {'movie': '电影', 'tv': '电视剧', 'anime': '电视动画'}.get(record.get('kind'), '')
-        if record.get('kind') == 'anime':
-            original = record.get('original_title') or title
-            payload = self.get_json('https://api.bgm.tv/search/subject/' + requests.utils.quote(original, safe=''), params={'type': 2, 'responseGroup': 'small', 'max_results': 5})
-            patches = []
-            for candidate in payload.get('list', [])[:5]:
-                if not str(candidate.get('id', '')).isdigit():
-                    continue
-                subject = self.get_json(f"https://api.bgm.tv/v0/subjects/{int(candidate['id'])}")
-                patch = bangumi_patch(record, subject, checked_at)
-                if patch:
-                    patches.append(patch)
-            if len(patches) == 1:
-                return patches[0]
         payload = self.get_json('https://zh.wikipedia.org/w/api.php', params={'action': 'query', 'list': 'search', 'srsearch': f'{title} {hint}', 'srlimit': 2, 'format': 'json'})
         patches = [p for hit in payload.get('query', {}).get('search', []) if (p := self.wiki_page(record, hit['title'], checked_at))]
         return patches[0] if len(patches) == 1 else None
+
+    def direct(self,record,checked_at):
+        self.stages=[]
+        patch=self.douban(record,checked_at);self.stages.append({'source':'douban','name':bool(patch),'synopsis':bool(patch and patch.get('summary_zh'))})
+        if complete_patch(patch,record):return patch
+        wiki=self.wikipedia(record,checked_at);self.stages.append({'source':'wikipedia','name':bool(wiki),'synopsis':bool(wiki and wiki.get('summary_zh'))})
+        return merge_patches(patch,wiki)
 
     def search(self, record, checked_at):
         title = record.get('english_title') or record.get('original_title')
@@ -201,15 +219,18 @@ def structured_patch(record,item,checked_at):
     if not raw or not expected or not english:return None
     name='';aliases=[]
     if parts.hostname=='movie.douban.com' and re.fullmatch(r'/subject/\d+/?',parts.path):
-        head=next((line.strip(' #*') for line in raw[:1800].splitlines() if mentions_original(english,line) and re.search(r'\(\s*'+str(expected)+r'\s*\)',line)), '')
+        head=next((line.strip(' #*') for line in raw[:1800].splitlines() if mentions_original(english,line) and re.search(r'\(\s*(?:19|20)\d{2}\s*\)',line)), '')
         if not head or re.search(r'第[二三四五六七八九十2-9]+季|Season\s*[2-9]',head,re.I):return None
+        source_year=re.search(r'\(\s*((?:19|20)\d{2})\s*\)',head)[1]
+        # Release postponements can change years; an independently known exact IMDb ID is required.
+        if source_year!=str(expected) and (not re.fullmatch(r'tt\d{7,10}',record.get('imdb_id','')) or not re.search(r'(?i)IMDb\s*[:：]?\s*'+re.escape(record['imdb_id'])+r'\b',raw)):return None
         # A television subject exposes a first-air field; a movie exposes a release-date field.
         label=r'首播|首播日期' if record.get('kind') in ('tv','anime') else r'上映日期'
-        if not re.search(label+r'[^\n]{0,20}(?:\n[^\n]{0,40})?'+str(expected),raw):return None
+        if not re.search(label+r'[^\n]{0,20}(?:\n[^\n]{0,40})?'+source_year,raw):return None
         match=re.search(r'^(.*?)\s*'+re.escape(english),head,re.I)
         name=match.group(1).strip('《》:： ') if match else ''
         alt=re.search(r'又名\s*[:：]\s*([^\n]{1,250})',raw)
-        if alt:aliases=[s.strip() for s in re.split(r'[/、,，;；]',alt.group(1)) if chinese(s)]
+        if alt:aliases=[s.strip() for s in re.split(r'[/、,，;；]',alt.group(1)) if chinese(s) and not re.search(r'[（(](?:港|台|香港|台湾|臺灣)[）)]',s)]
         kind='douban_title_fields'
     elif parts.hostname=='baike.baidu.com' and parts.path.startswith('/item/'):
         original=re.search(r'(?:外文名|英文名|原文名)\s*[:：]?\s*(?:\n\s*)?([^\n]{1,120})',raw)

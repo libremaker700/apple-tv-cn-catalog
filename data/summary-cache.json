@@ -52,6 +52,32 @@
           }
         ]
       }
+    },
+    "the-savant": {
+      "identity": {
+        "slug": "the-savant",
+        "english_title": "The Savant",
+        "kind": "series",
+        "year": "2025",
+        "official_id": "umc.cmc.aar44keiny3h54xvaakg260q"
+      },
+      "status": "verified",
+      "review_method": "reviewed_translation",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "summary_zh": "杰西卡·查斯坦饰演一位绰号“反仇专家”的卧底调查员。她潜入网络仇恨组织，追踪潜在的暴力威胁，试图在美国本土极端分子付诸行动前阻止袭击。",
+        "summary_checked_at": "2026-10-30T06:55:14+00:00",
+        "summary_sources": [
+          {
+            "type": "apple_official_synopsis",
+            "url": "https://www.apple.com/tv-pr/originals/the-savant/"
+          },
+          {
+            "type": "wikipedia_reviewed_translation",
+            "url": "https://en.wikipedia.org/wiki/The_Savant"
+          }
+        ]
+      }
     }
   }
 }

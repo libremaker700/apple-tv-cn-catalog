@@ -3,12 +3,16 @@ from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import title_lookup as t
-from summary_cache import apply_summary
+from summary_cache import apply_summary,has_summary
 from title_sources import structured_patch,wiki_patch
 from test_titles import ENTRY,PATCH,NOW,Fake
 
 SUMMARY='一位警探为了保护家人搬到小镇生活，却发现小镇居民正遭受威胁。他与伙伴展开调查，并在调查过程中逐步揭开事件背后的秘密。'
 class Summaries(unittest.TestCase):
+    def test_placeholders_are_missing_metadata_and_real_short_synopsis_is_retained(self):
+        for value in ('中文简介待补充，可进入详情查看播放信息。','简介暂未提供','暂无简介','敬请期待','English synopsis'):
+            self.assertFalse(has_summary(value),value)
+        self.assertTrue(has_summary('一名侦探调查失踪案。'))
     def test_identity_bound_summary_only_patch_preserves_title_and_playback_fields(self):
         entry=copy.deepcopy(ENTRY);entry['zh']=None;ident=t.identity(entry,{})
         record={'identity':ident,'status':'verified','patch':{'metadataPolicy':'mainland-v1','summary_zh':SUMMARY,'summary_sources':[{'url':'https://en.wikipedia.org/wiki/Manhunt_(2024_TV_series)'}]}}

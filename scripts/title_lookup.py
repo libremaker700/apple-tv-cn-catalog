@@ -3,10 +3,10 @@ import argparse, copy, hashlib, json, os, re
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 from catalog import ROOT,DOCS,load,publish,validate
-from title_sources import Lookup,chinese,norm
+from title_sources import Lookup,chinese,norm,complete_patch,merge_patches
 from metadata_policy import POLICY,allowed_source,clean_entry
-from summary_cache import apply_summary,reapply_summaries
-QUERY_VERSION='zh-cn-v5-mainland-summary'
+from summary_cache import apply_summary,reapply_summaries,has_summary
+QUERY_VERSION='zh-cn-v6-ordered-sources'
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -28,7 +28,10 @@ def record(entry,hint):
     ident=identity(entry,hint)
     animated=entry['kind']=='series' and any(str(g).casefold() in ('animation','动画','動畫') for g in entry.get('genres',[]))
     # An existing regional name must not prevent verifying a different mainland alias.
-    return {'english_title':entry['en'],'original_title':entry['en'],'kind':'movie' if entry['kind']=='movie' else ('anime' if animated else 'tv'),'year':ident['year'],'display_name_zh':'',
+    verified=(entry.get('zh') or {}).get('name_status')=='verified_title_sources'
+    return {'english_title':entry['en'],'original_title':entry['en'],'kind':'movie' if entry['kind']=='movie' else ('anime' if animated else 'tv'),'year':ident['year'],
+            'display_name_zh':(entry.get('zh') or {}).get('title','') if verified else '', 'name_verified':verified,'want_summary':not has_summary((entry.get('zh') or {}).get('summary','')),
+            'imdb_id':hint.get('imdb_id',''),
             'search_name_hint':' '.join(dict.fromkeys([(entry.get('zh') or {}).get('title','')]+hint.get('aliases',[])))[:180]}
 def needs_title_review(entry,hint):
     title=(entry.get('zh') or {}).get('title','')
@@ -50,9 +53,9 @@ def apply_verified(entry,cached,ident):
     return apply_summary(out,cached,ident)
 
 class SearchClient:
-    def __init__(self,keys,session=None):
+    def __init__(self,keys,session=None,source_cache=None):
         self.keys=keys;self.session=session;self.index=0;self.stopped=False;self.requests=0;self.statuses=[]
-        self.direct_client=Lookup('',session=session)
+        self.direct_client=Lookup('',session=session,cache_path=source_cache)
     def direct(self,reference,checked_at):return self.direct_client.direct(reference,checked_at)
     def verify(self,reference,results,checked_at):return self.direct_client.verify_results(reference,results,checked_at)
     def search(self,reference,checked_at,reserve):
@@ -78,10 +81,11 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
     if not force and cache.get('last_policy')==POLICY and cache.get('last_run_at') and 0<=(clock-datetime.fromisoformat(cache['last_run_at'])).total_seconds()<6*3600:
         print('Title lookup not due; keep verified names and cached evidence');return None
     hints=read(root/'data/title-requests.json',{'records':{}})['records']
+    for slug,links in read(root/'data/identity-links.json',{'records':{}})['records'].items():hints.setdefault(slug,{}).update(links)
     current=read(docs/'catalog.json',{});version=read(docs/'version.json',{});entries=reapply_summaries(copy.deepcopy(current),root,identity)['entries']
-    client=client or SearchClient(keys_from_env());limit=max(0,min(int(limit),20));monthly_limit=max(0,min(int(monthly_limit),200))
+    client=client or SearchClient(keys_from_env(),source_cache=root/'data/source-cache.json');limit=max(0,min(int(limit),20));monthly_limit=max(0,min(int(monthly_limit),200))
     used=int(cache.setdefault('budgets',{}).get(month,0))
-    report={'checked_at':checked,'api_configured':bool(client.keys),'attempted':0,'searched':0,'direct_verified':0,'cache_hits':0,'verified_changes':[],
+    report={'checked_at':checked,'lookup_order':['verified_cache','douban','wikipedia','tavily'],'api_configured':bool(client.keys),'attempted':0,'searched':0,'direct_verified':0,'cache_hits':0,'verified_changes':[],
             'monthly_limit':monthly_limit,'pending':0,'reused_verified':0,'status':'completed'}
     def reserve():
         nonlocal used
@@ -95,7 +99,7 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         original=copy.deepcopy(e);e=apply_verified(e,old,ident)
         if e!=original:report['cache_hits']+=1
         title_verified=old.get('status')=='verified' and old.get('identity')==ident
-        summary_needed=not chinese((e.get('zh') or {}).get('summary',''))
+        summary_needed=not has_summary((e.get('zh') or {}).get('summary',''))
         if title_verified and not summary_needed:
             report['reused_verified']+=1;output.append(e);continue
         if not needs_title_review(e,hint) and not summary_needed:
@@ -107,21 +111,25 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         # Mainland presentation metadata can be verified before release;
         # the app's independent release/playback gates stay intact.
         report['attempted']+=1;ref=record(e,hint);patch=None;evidence={'status':'direct_source'}
+        reads_start=0
+        if hasattr(client,'direct_client'):client.direct_client.stages=[];reads_start=len(client.direct_client.pages.events)
         if old.get('identity')==ident and old.get('evidence',{}).get('results'):
             patch=client.verify(ref,old['evidence']['results'],checked)
-        if patch and title_verified and summary_needed and not patch.get('summary_zh'):patch=None
-        if not patch:patch=client.direct(ref,checked)
-        if patch and title_verified and summary_needed and not patch.get('summary_zh'):patch=None
-        if patch:report['direct_verified']+=1
-        elif not client.stopped:patch,evidence=client.search(ref,checked,reserve)
+        if not complete_patch(patch,ref):patch=merge_patches(patch,client.direct(ref,checked))
+        if complete_patch(patch,ref):report['direct_verified']+=1
+        elif not client.stopped:
+            searched,evidence=client.search(ref,checked,reserve);patch=merge_patches(patch,searched)
+        if hasattr(client,'direct_client'):
+            evidence['stages']=client.direct_client.stages
+            evidence['public_reads']=client.direct_client.pages.events[reads_start:]
         if not patch and evidence.get('status')=='monthly_budget_exhausted':
             # No search happened: leave it in the queue instead of imposing a 30-day failed-search retry.
             report['budget_deferred']=report.get('budget_deferred',0)+1;output.append(e);continue
         entry={'identity':ident,'query_version':QUERY_VERSION,'status':'verified' if patch else 'pending_review','checked_at':checked,'evidence':evidence,
-               'next_retry_at':(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds')}
+               'next_retry_at':(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 7)).isoformat(timespec='seconds')}
         if title_verified:
             entry=copy.deepcopy(old);entry.update(query_version=QUERY_VERSION,summary_evidence=evidence,summary_checked_at=checked,
-                summary_next_retry_at=(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds'))
+                summary_next_retry_at=(clock+timedelta(days=1)).isoformat(timespec='seconds'))
             # Missing synopsis must not erase a previously verified name or its evidence.
             if patch and patch.get('summary_zh'):
                 entry['patch'].update({k:patch[k] for k in ('summary_zh','summary_sources','summary_checked_at') if k in patch})
@@ -129,12 +137,13 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if patch:
             if not title_verified:entry['patch']=patch
             e=apply_verified(e,entry,ident)
-            if not patch.get('summary_zh'):entry['summary_next_retry_at']=(clock+timedelta(days=30)).isoformat(timespec='seconds')
+            if not patch.get('summary_zh'):entry['summary_next_retry_at']=(clock+timedelta(hours=6 if evidence.get('status')=='monthly_budget_exhausted' else 24)).isoformat(timespec='seconds')
             report['verified_changes'].append({'slug':e['slug'],'before':(original.get('zh') or {}).get('title',''),'after':e['zh']['title'],'aliases':e['zh']['aliases']})
         else:report['pending']+=1
         cache['records'][key]=clean(entry,client.keys);output.append(e)
     output.sort(key=lambda e:order[e['slug']]);cache['last_run_at']=checked;cache['last_policy']=POLICY
     report['monthly_reserved']=used;report['remaining_unverified']=sum(e.get('nameStatus')!='verified_title_sources' for e in output)
+    report['remaining_missing_synopses']=sum(not has_summary((e.get('zh') or {}).get('summary','')) for e in output)
     report['api_results']=getattr(client,'statuses',[])
     report['status']='degraded' if client.stopped else ('missing_api_key' if not client.keys else 'completed')
     dump(path,clean(cache,client.keys));dump(root/'logs/title-lookup.json',clean(report,client.keys))

@@ -3194,6 +3194,57 @@
           }
         ]
       }
+    },
+    "5d3775f682529512cd5ef4622125ab2f537c2f56dc5e6e1b7581b1dfae0e09bd": {
+      "identity": {
+        "slug": "the-savant",
+        "english_title": "The Savant",
+        "kind": "series",
+        "year": "2025",
+        "official_id": "umc.cmc.aar44keiny3h54xvaakg260q"
+      },
+      "query_version": "zh-cn-v6-ordered-sources",
+      "status": "verified",
+      "checked_at": "2026-10-30T06:55:14+00:00",
+      "evidence": {
+        "status": "reviewed_user_supplied_primary_capture",
+        "subject_detail_fetched": false,
+        "subject_year": 2027,
+        "original_official_year": 2025,
+        "imdb_id": "tt27304258",
+        "director": "Matthew Heineman",
+        "lead_actor": "Jessica Chastain",
+        "source_capture": {
+          "type": "user_supplied_douban_screenshot",
+          "url": "https://movie.douban.com/",
+          "sha256": "f624419ad2f24b2056bba824fd0ae87a0f6447a951d35b462c342f87f870a15e",
+          "retrieved_at": "2026-10-30T06:55:14+00:00"
+        }
+      },
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "display_name_zh": "反仇专家",
+        "aliases_zh": [
+          "反仇专家",
+          "慧眼",
+          "达人",
+          "行家"
+        ],
+        "name_checked_at": "2026-10-30T06:55:14+00:00",
+        "sources": [
+          {
+            "type": "user_supplied_douban_screenshot",
+            "url": "https://movie.douban.com/",
+            "sha256": "f624419ad2f24b2056bba824fd0ae87a0f6447a951d35b462c342f87f870a15e",
+            "retrieved_at": "2026-10-30T06:55:14+00:00"
+          },
+          {
+            "type": "apple_identity",
+            "url": "https://www.apple.com/tv-pr/originals/the-savant/",
+            "retrieved_at": "2026-10-30T06:55:14+00:00"
+          }
+        ]
+      }
     }
   },
   "budgets": {

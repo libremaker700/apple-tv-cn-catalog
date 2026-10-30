@@ -2,14 +2,17 @@
 import copy,json,re
 from metadata_policy import POLICY,allowed_source
 
+def has_summary(value):
+    return isinstance(value,str) and bool(re.search(r'[\u3400-\u9fff]',value)) and not re.search(r'^(?:中文)?(?:简介|资料).{0,12}(?:待补|待完善|暂未|暂无|缺失)|^(?:暂无简介|暂无资料|敬请期待)[。！!\s]*$',value.strip())
+
 def valid_summary(value):
-    return isinstance(value,str) and 35<=len(value)<=600 and len(re.findall(r'[\u3400-\u9fff]',value))>=20 and not re.search(r'https?://|<[^>]+>',value)
+    return has_summary(value) and 35<=len(value)<=600 and len(re.findall(r'[\u3400-\u9fff]',value))>=20 and not re.search(r'https?://|<[^>]+>',value)
 
 def apply_summary(entry,cached,ident):
     if cached.get('identity')!=ident or cached.get('status')!='verified':return entry
     patch=cached.get('patch') or {};sources=patch.get('summary_sources') or []
     if patch.get('metadataPolicy')!=POLICY or not valid_summary(patch.get('summary_zh')) or not sources or any(not allowed_source(s.get('url','')) for s in sources):return entry
-    if re.search(r'[\u3400-\u9fff]',(entry.get('zh') or {}).get('summary','')):return entry
+    if has_summary((entry.get('zh') or {}).get('summary','')):return entry
     out=copy.deepcopy(entry);zh=out.get('zh') or {};out['zh']=zh
     out['summaryIdentity']=ident
     zh.update(metadataPolicy=POLICY,summary=patch['summary_zh'],summary_status='verified_summary_sources',summary_sources=sources,summary_checked_at=patch.get('summary_checked_at'))

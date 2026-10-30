@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "records": {
+    "the-savant": {
+      "imdb_id": "tt27304258",
+      "evidence": "User supplied Douban subject screenshot; English original, lead cast and Apple series identity corroborated",
+      "sources": ["https://en.wikipedia.org/wiki/The_Savant", "https://www.apple.com/tv-pr/originals/the-savant/"]
+    }
+  }
+}
