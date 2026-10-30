@@ -84,6 +84,8 @@ class Titles(unittest.TestCase):
             client=Fake(False)
             with patch.object(t,'publish') as pub:
                 r=t.run(root,force=True,monthly_limit=0,clock=NOW,client=client);self.assertEqual(client.calls,0);self.assertEqual(r['searched'],0);pub.assert_not_called()
+                self.assertEqual(r['budget_deferred'],1)
+                self.assertEqual(t.read(root/'data/title-cache.json',{})['records'],{})
     def test_daily_queue_accepts_new_work_without_retrying_pending_record(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);t.dump(root/'docs/catalog.json',{'entries':[ENTRY]});t.dump(root/'docs/version.json',{'checked_at':123})

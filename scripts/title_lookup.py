@@ -107,6 +107,9 @@ def run(root=ROOT,*,force=False,limit=12,monthly_limit=100,clock=None,client=Non
         if not patch:patch=client.direct(ref,checked)
         if patch:report['direct_verified']+=1
         elif not client.stopped:patch,evidence=client.search(ref,checked,reserve)
+        if not patch and evidence.get('status')=='monthly_budget_exhausted':
+            # No search happened: leave it in the queue instead of imposing a 30-day failed-search retry.
+            report['budget_deferred']=report.get('budget_deferred',0)+1;output.append(e);continue
         entry={'identity':ident,'query_version':QUERY_VERSION,'status':'verified' if patch else 'pending_review','checked_at':checked,'evidence':evidence,
                'next_retry_at':(clock+timedelta(days=1 if evidence.get('status')=='missing_api_key' else 30)).isoformat(timespec='seconds')}
         if patch:
