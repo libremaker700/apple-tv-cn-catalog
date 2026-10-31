@@ -19,6 +19,8 @@ def fixed(text):
     if text in known:return known[text]
     m=re.fullmatch(r'#(\d{1,3}) (Movie|Show) on Apple TV',text)
     if m:return 'Apple TV '+('电影'if m[2]=='Movie'else'电视剧')+'榜第'+m[1]+'名'
+    m=re.fullmatch(r'#(\d{1,3}) in (Sci-Fi|Crime|Kids & Family) on Apple TV',text)
+    if m:return 'Apple TV '+{'Sci-Fi':'科幻','Crime':'犯罪','Kids & Family':'儿童与家庭'}[m[2]]+'榜第'+m[1]+'名'
     days={'Monday':'周一','Tuesday':'周二','Wednesday':'周三','Thursday':'周四','Friday':'周五','Saturday':'周六','Sunday':'周日'}
     m=re.fullmatch(r'New Episode Every ('+'|'.join(days)+')',text)
     if m:return '每'+days[m[1]]+'更新'
@@ -29,7 +31,8 @@ def validate_copy(identity,c):
     required={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
     assert required<=set(c)<=required|{'contentRating'}
     assert c.get('contentRating','')in RATINGS|{''}
-    assert c['source']==CHANNEL
+    from home_pages import page_url
+    assert page_url(c['source'])==c['source'] and ('/us/room/'in c['source']or c['source']==CHANNEL)
     for k,n in [('descriptionEn',1800),('badgeEn',200),('noteEn',200),('descriptionZh',500),('badgeZh',200),('noteZh',200)]:assert isinstance(c[k],str)and len(c[k])<=n and not re.search(r'<|>|https?://|AIza|tvly-',c[k])
     assert isinstance(c['genresZh'],list)and len(c['genresZh'])<=8 and all(g in GENRES.values()for g in c['genresZh'])
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
@@ -39,9 +42,11 @@ def validate_copy(identity,c):
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
     assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))
 
-def extract(html,home,allow_partial=False):
-    data=data_page(html,'ChannelPageIntent','tvs.sbd.4000')
-    stage=next(s for s in data['shelves']if s.get('id')=='uts.col.tv-plus-epic-stage')
+def extract(html,home,allow_partial=False,source_url=CHANNEL):
+    from home_pages import page_url
+    source_url=page_url(source_url);is_room='/us/room/'in source_url
+    data=data_page(html,'RoomPageIntent'if is_room else'ChannelPageIntent',source_url.rsplit('/',1)[-1])
+    stage=next(s for s in data['shelves']if s.get('id')=='uts.col.tv-plus-epic-stage' or s.get('displayType')in ('epicStage','epicStageWithUpsell') or ((s.get('presentation')or{}).get('layout')or{}).get('kind')=='epicStage')
     works={w['officialId']:w for w in home['works']};result={}
     for item in stage.get('items',[]):
         dest=(item.get('segue')or{}).get('destination')or{};identity=dest.get('id','')
@@ -101,7 +106,7 @@ class Translator:
             result[r['id']]=r['text'].strip()
         return result
 
-def enrich(home,raw,cache,translator,now,shared=None):
+def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL):
     out=copy.deepcopy(home);records=cache.setdefault('records',{});pending={};keys={};report={'requested':0,'cacheHits':0,'translated':0,'pending':0,'apiHttp':0,'retainedCopy':0,'sourceMissing':0}
     for row in out['hero']:
         if row['officialId']not in raw:
@@ -127,21 +132,40 @@ def enrich(home,raw,cache,translator,now,shared=None):
     for row in out['hero']:
         if row['officialId']not in raw:continue
         identity=row['officialId'];source=raw[identity];record=records.get(keys[identity],{});translated=record.get('text','')
-        c=dict(source,source=CHANNEL,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
+        c=dict(source,source=source_url,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
         if c['status']=='pending':report['pending']+=1
         row['copy']=c
     return out,report
 
-def process(home,root,html,now):
-    raw=extract(html,home,allow_partial=True);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
-    for record in read(root/'data/home-copy-reviewed.json',[]):
-        identity=record['officialId'];source=raw.get(identity)
-        if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
-            cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
-    # Synopsis API calls belong exclusively to work_summaries, including brand-new heroes.
-    shared={row['officialId']:True for row in home['hero']}
-    value,report=enrich(home,raw,cache,Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None),now,shared)
-    dump(path,cache);report.update(checkedAt=now,copyVersion=VERSION);dump(root/'logs/home-copy.json',report)
+def process(home,root,html,now,fetcher=None):
+    from home_sync import fetch
+    fetcher=fetcher or fetch
+    value=copy.deepcopy(home);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
+    summaries=read(root/'data/work-summary-cache.json',{}).get('works',{})
+    reviewed=read(root/'data/home-copy-reviewed.json',[]);pages=[]
+    translator=Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None)
+    for target in [value]+value.get('pages',[]):
+        for shelf in target.get('shelves',[]):
+            if shelf.get('officialTitle')=='Sci-Fi Mysteries':shelf['title']='动作科幻片'
+        if not target.get('hero'):continue
+        url=target.get('source',CHANNEL)
+        try:
+            body=html if target is value else fetcher(url).decode('utf-8')
+            raw=extract(body,dict(target,works=value['works']),allow_partial=True,source_url=url)
+        except (ValueError,StopIteration,requests.RequestException):
+            pages.append({'source':url,'failure':'official_copy_unavailable','retainedCopy':sum('copy'in row for row in target['hero'])});continue
+        for identity,source in raw.items():
+            shared=summaries.get(identity,{})
+            if clean(shared.get('original'))==source['descriptionEn']and valid_zh(shared.get('text')):
+                cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':shared['text'],'method':'reviewed'if shared.get('method')=='reviewed'else'machine','model':shared.get('model','shared-work-summary')}
+        for record in reviewed:
+            identity=record['officialId'];source=raw.get(identity)
+            if source and source['descriptionEn']==record['descriptionEn']and valid_zh(record['descriptionZh']):
+                cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
+        enriched,report=enrich(dict(target,works=value['works']),raw,cache,translator,now,source_url=url)
+        target['hero']=enriched['hero'];pages.append(dict(report,source=url));dump(path,cache)
+    report={'checkedAt':now,'copyVersion':VERSION,'pages':pages,'translated':sum(p.get('translated',0)for p in pages),'pending':sum(p.get('pending',0)for p in pages)}
+    dump(path,cache);dump(root/'logs/home-copy.json',report)
     return value,report
 
 def main():
