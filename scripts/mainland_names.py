@@ -13,6 +13,13 @@ from title_sources import Lookup,norm,chinese
 from douban_mobile import DoubanMobile
 from public_sources import plain_html
 
+def source_deferred(work,now=None):
+    # Official release metadata takes priority over stale source bindings.
+    today=time.strftime('%Y-%m-%d',time.gmtime(time.time() if now is None else now))
+    date=str(work.get('releaseDate')or'')
+    if re.fullmatch(r'(19|20)\d{2}-\d{2}-\d{2}',date):return date>today
+    return bool(work.get('upcoming')or work.get('metadataStatus')=='announced')
+
 def source_count(row):
     return sum(any(re.match(r'https?://',e.split('$',1)[-1].split('|',1)[0])for e in group.split('#'))for group in str(row.get('vod_play_url','')).split('$$$')[:20])
 def season(title):
@@ -87,7 +94,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if used>=budget:return False
         used+=1;cache['budgets'][month]=used;dump(cache_path,cache);return True
     client=client or SearchAccounts(reserve=reserve);lookup=lookup or Lookup(cache_path=root/'data/source-cache.json');providers=read(root/'data/public-source-providers.json',[])
-    selected=[];seen=set()
+    selected=[];seen=set();release_by_slug={e['slug']:e for e in main['entries']}
     for work in home['works']:
         if work.get('knownCatalog'):continue
         selected.append((work,True))
@@ -98,17 +105,26 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if slugs and key not in slugs:continue
         if key in seen:continue
         seen.add(key)
-        if zh.get('name_status')=='verified_title_sources'and not force:continue
-        if now<old.get('nextRetry',0)and not force:continue
+        release_work=release_by_slug.get(key,work);deferred_now=source_deferred(release_work,now)
+        released_after_name_only=old.get('result',{}).get('sourcePolicy')=='deferred_until_release'and not deferred_now
+        if zh.get('name_status')=='verified_title_sources'and not force and not released_after_name_only:continue
+        if now<old.get('nextRetry',0)and not force and not released_after_name_only:continue
         year=str(zh.get('_identityYear')or(work.get('year')if is_home else identity(work,{})['year'])or'')
         if not re.fullmatch(r'(19|20)\d{2}',year):continue
         if len(report['records'])>=max(0,min(5,int(limit))):break
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':year,'want_summary':False}
-        hits,status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
-        patch=independent_name(ref,hits,lookup,now);record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
+        if released_after_name_only and zh.get('name_sources'):
+            status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
+        else:
+            hits,status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
+            patch=independent_name(ref,hits,lookup,now)
+        record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
         if patch:
             names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])));n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1);rows=work.get('seasons',[]);current=next((s for s in rows if s.get('season')==n),{})
-            source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']};best,events=(probe or public_sources)(source_ref,names,providers)
+            source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
+            deferred=source_deferred(release_by_slug.get(key,work),now)
+            best,events=(None,[])if deferred else(probe or public_sources)(source_ref,names,providers)
+            record['sourcePolicy']='deferred_until_release'if deferred else'eligible'
             animated=any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[]))
             title=patch['display_name_zh']if animated or not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any('douban'in s['url']for s in patch['sources'])else zh.get('douban_title',''))
