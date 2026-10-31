@@ -1,3 +1,12 @@
 {
-  "labels": {}
+  "labels": {
+    "special": "特别节目",
+    "drama series": "剧情剧集",
+    "documentary series": "纪录剧集",
+    "docuseries": "纪录剧集",
+    "comedy series": "喜剧剧集",
+    "action comedy": "动作喜剧",
+    "limited series": "限定剧",
+    "anthology series": "选集剧"
+  }
 }
