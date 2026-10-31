@@ -149,6 +149,66 @@
       "year": "2022",
       "patch": null,
       "nextRetry": 1793460564
+    },
+    "umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa": {
+      "en": "Peanuts in Space: Secrets of Apollo 10",
+      "year": "2021",
+      "patch": null,
+      "nextRetry": 1793497073
+    },
+    "umc.cmc.ns4q9hpoj4b1749wbl7crwbl": {
+      "en": "Wonder Pets",
+      "year": "2006",
+      "patch": null,
+      "nextRetry": 1793497073
+    },
+    "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0": {
+      "en": "Formula 1: Drive to Survive",
+      "year": "2026",
+      "patch": null,
+      "nextRetry": 1793497073
+    },
+    "umc.cmc.13c4zk3hpybm6u0cfk1x0vyi": {
+      "en": "Long Way Round",
+      "year": "2004",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "display_name_zh": "漫漫长路",
+        "aliases_zh": [
+          "漫漫长路"
+        ],
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-10-31T01:37:53+00:00",
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1494797/",
+            "retrieved_at": "2026-10-31T01:37:53+00:00"
+          }
+        ],
+        "douban_id": "1494797",
+        "douban_url": "https://movie.douban.com/subject/1494797/",
+        "rating_status": "AVAILABLE",
+        "douban_rating": 9.2,
+        "douban_rating_count": 1782,
+        "rating_checked_at": "2026-10-31T01:37:53+00:00",
+        "summary_zh": "曾主演电影《星际大战》、《红磨坊》的英国男艺人伊旺麦奎格（Ewan Mcgregor）和他的好友 查理布尔曼Charley Boorman 骑着BMW重型机车完成环游世界的壮举，他们从伦敦出发，穿越欧洲、俄罗斯、西伯利亚、哈萨克、蒙古、阿拉斯加，最后回到终点纽约，这趟全程达32000公里的重机长征，共费时115天。",
+        "summary_sources": [
+          {
+            "type": "verified_page_synopsis",
+            "url": "https://movie.douban.com/subject/1494797/",
+            "retrieved_at": "2026-10-31T01:37:53+00:00"
+          }
+        ],
+        "summary_checked_at": "2026-10-31T01:37:53+00:00"
+      },
+      "nextRetry": 1793497073
+    },
+    "umc.cmc.cal17ey3zhv2lx3xkzjqjstb": {
+      "en": "Long Way Down",
+      "year": "2007",
+      "patch": null,
+      "nextRetry": 1793497073
     }
   }
 }
