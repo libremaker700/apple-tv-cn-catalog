@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "records": {
+    "women-in-blue-las-azules": {
+      "checkedAt": 1793444887,
+      "nextRetry": 1794049687,
+      "fingerprint": "3c855fd7c4544e8705ff5145373cd04a2e8e9dfa631eb72644527f9d6febaa45",
+      "check": {
+        "schema": 1,
+        "en": "Women in Blue (Las Azules)",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 2,
+        "checkedAt": 1793444887
+      }
+    }
+  }
+}

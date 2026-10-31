@@ -64,6 +64,8 @@ def publish(catalog,checked_at,mode):
     value=apply_main(value,ROOT)
     images={}
     for e in value['entries']:
+        from source_availability import apply_cached
+        apply_cached(e,ROOT)
         e.pop('seasonCheckedAt',None)
         if e.get('seasons'):e['seasons']=public_seasons(e['seasons'])
         label_seasons(e)

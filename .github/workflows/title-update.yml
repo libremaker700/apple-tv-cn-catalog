@@ -55,12 +55,19 @@ jobs:
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
           if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
           python scripts/mainland_names.py "${ARGS[@]}"
+      - name: Verify pending playback availability in GitHub
+        env:
+          TARGET_SLUG: ${{ inputs.slug }}
+        run: |
+          ARGS=(--limit 3)
+          if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG"); fi
+          python scripts/source_availability.py "${ARGS[@]}"
       - name: Preserve completed requests and budget reservations
         if: always() && steps.lookup.outcome != 'skipped'
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          for FILE in data/mainland-name-cache.json data/source-cache.json logs/mainland-name-sync.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
+          for FILE in data/mainland-name-cache.json data/source-cache.json logs/mainland-name-sync.json data/cloud-source-cache.json logs/cloud-source-checks.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
           git diff --cached --quiet || git commit -m 'catalog: preserve independent title-search reservations'
           git push
       - run: python scripts/catalog.py --validate

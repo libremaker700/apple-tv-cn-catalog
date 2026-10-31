@@ -133,6 +133,8 @@ def sync():
     value=apply_names(value,ROOT,home=True)
     from work_summaries import apply_home as apply_summaries
     value=apply_summaries(value,ROOT)
+    from source_availability import apply_cached
+    for work in value.get('works',[]):apply_cached(work,ROOT)
     report['reconciledShows']=reconcile_seasons(value,load(DOCS/'catalog.json'))
     from home_copy import process
     value,copy_report=process(value,ROOT,html,now)

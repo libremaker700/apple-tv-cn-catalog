@@ -36,10 +36,11 @@ def candidate_matches(ref,row,names):
     if norm(base(title))not in {norm(base(n))for n in names}or year!=str(ref['year']):return False
     if ref['kind']=='series':return season(title)==ref['season']and not re.search(r'恐怖片|动作片|爱情片|剧情片|喜剧片',kind)
     return not re.search(r'电视剧|连续剧|综艺',kind)
-def public_sources(ref,names,providers,session=None):
+def public_sources(ref,names,providers,session=None,deadline=None):
     client=session or requests.Session();best=None;observed=0;events=[];seen=set()
     for provider in providers:
         for name in names[:4]:
+            if deadline is not None and time.monotonic()>=deadline:return best,events
             try:
                 response=client.get(provider['url'],params={'ac':'detail','wd':name},timeout=(5,9),allow_redirects=False)
                 if response.status_code!=200:events.append({'provider':provider['id'],'http':response.status_code});break
@@ -146,6 +147,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             animated=any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[]))
             title=patch['display_name_zh']if animated or not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any('douban'in s['url']for s in patch['sources'])else zh.get('douban_title',''))
+            if not deferred and (probed or best):
+                from source_availability import make_check
+                zh['sourceCheck']=make_check(work,source_ref,best,now)
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
         cache['records'][key]={'checkedAt':now,'nextRetry':now+86400,'result':record};report['records'].append(record);dump(cache_path,cache)
     report['accounts']=client.events;report['reservedThisMonth']=used;dump(root/'logs/mainland-name-sync.json',report)

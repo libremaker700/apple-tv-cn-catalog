@@ -16,6 +16,12 @@ def allowed_source(url):
 def clean_zh(value):
     if not isinstance(value,dict) or value.get('metadataPolicy')!=POLICY:return None
     if 'searchYear'in value and (type(value['searchYear'])is not int or not 1900<=value['searchYear']<=2099 or value.get('name_status')!='verified_title_sources'):return None
+    check=value.get('sourceCheck')
+    if check is not None:
+        if not isinstance(check,dict)or set(check)!=set(('schema','en','kind','season','year','found','routes','checkedAt')):return None
+        if check.get('schema')!=1 or not isinstance(check.get('en'),str)or not check['en']or check.get('kind')not in ('movie','series'):return None
+        if type(check.get('season'))is not int or not (check['season']==0 if check['kind']=='movie'else 1<=check['season']<=100):return None
+        if not re.fullmatch(r'(19|20)\d{2}',str(check.get('year','')))or type(check.get('found'))is not bool or type(check.get('routes'))is not int or not 0<=check['routes']<=1000 or check['found']!=(check['routes']>0)or type(check.get('checkedAt'))is not int or check['checkedAt']<=0:return None
     for link in value.get('sources',[]):
         if not allowed_source(link):return None
     for item in value.get('name_sources',[])+value.get('summary_sources',[]):
