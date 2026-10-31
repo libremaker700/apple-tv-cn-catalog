@@ -37,7 +37,8 @@ def validate_copy(identity,c):
     assert isinstance(c['genresZh'],list)and len(c['genresZh'])<=8 and all(g in GENRES.values()for g in c['genresZh'])
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
     if 'contentRating'in c:source['contentRating']=c['contentRating']
-    assert c['sourceHash']==digest([identity,source])and c['noteZh']==fixed(c['noteEn'])and c['badgeZh']==fixed(c['badgeEn'])
+    legacy_empty_note=c['noteZh']==''and bool(re.fullmatch(r'#\d{1,3} in (Sci-Fi|Crime|Kids & Family) on Apple TV',c['noteEn']))
+    assert c['sourceHash']==digest([identity,source])and (c['noteZh']==fixed(c['noteEn'])or legacy_empty_note)and c['badgeZh']==fixed(c['badgeEn'])
     assert not c['descriptionZh']or valid_zh(c['descriptionZh'])
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
     assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))

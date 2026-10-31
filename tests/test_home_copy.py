@@ -82,3 +82,11 @@ class TopicCopyTests(unittest.TestCase):
         h={'hero':[{'officialId':'umc.cmc.test'}]};raw={'umc.cmc.test':{'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':[]}}
         result,_=enrich(h,raw,{},Translator(),1,source_url='https://tv.apple.com/hk/room/test/id')
         with self.assertRaises(ValueError):validate_copy('umc.cmc.test',result['hero'][0]['copy'])
+
+class LegacyTopicNotes(unittest.TestCase):
+    def test_preexisting_empty_rank_note_is_readable_but_wrong_rank_is_rejected(self):
+        home={'hero':[{'officialId':'umc.cmc.test'}]};raw={'umc.cmc.test':{'descriptionEn':'','badgeEn':'','noteEn':'#1 in Sci-Fi on Apple TV','genresZh':['科幻']}}
+        value,_=enrich(home,raw,{},Translator(),1);c=value['hero'][0]['copy'];self.assertEqual(c['noteZh'],'Apple TV 科幻榜第1名')
+        c['noteZh']='';validate_copy('umc.cmc.test',c)
+        c['noteZh']='Apple TV 科幻榜第2名'
+        with self.assertRaises(AssertionError):validate_copy('umc.cmc.test',c)
