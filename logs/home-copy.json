@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793415878,
+  "checkedAt": 1793428564,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -104,12 +104,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 9,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 1,
+      "sourceMissing": 1,
       "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
     },
     {
@@ -125,5 +125,5 @@
   ],
   "translated": 0,
   "pending": 0,
-  "version": "4ceea19418409d38ed923658834ce9908a091d7c39aa19e5109df053fb8203ae"
+  "version": "3dddfcb1f953c6146bdf988dbb98cb90cf3118dcfb36637c005fa3369629f489"
 }
