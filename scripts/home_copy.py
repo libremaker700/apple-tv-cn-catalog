@@ -156,7 +156,10 @@ def fetch_topic(url):
 
 def process(home,root,html,now,fetcher=None):
     fetcher=fetcher or fetch_topic
-    value=copy.deepcopy(home);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
+    value=copy.deepcopy(home)
+    from home_pages import excluded_home_shelf
+    value['shelves']=[s for s in value.get('shelves',[])if not excluded_home_shelf(s)]
+    path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
     summaries=read(root/'data/work-summary-cache.json',{}).get('works',{})
     reviewed=read(root/'data/home-copy-reviewed.json',[]);pages=[]
     translator=Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None)
@@ -192,7 +195,10 @@ def main():
     blob=raw_json(value);sha=hashlib.sha256(blob).hexdigest()
     if sha!=manifest['version']:
         path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob)
-        # Existing image inventory is unchanged. Publish the version only after immutable data exists.
+        # Keep only active image references after applying user shelf exclusions.
+        from home_pages import image_rows
+        refs={r['artwork'].removeprefix('https://libremaker700.github.io/apple-tv-cn-catalog/home/')for r in image_rows(value)}
+        manifest['images']={k:v for k,v in manifest['images'].items()if k in refs}
         manifest.update(version=sha,path=path,checkedAt=now);(folder/'home.json').write_bytes(blob);(folder/'version.json').write_bytes(raw_json(manifest))
     report.update(version=sha,checkedAt=now,copyVersion=VERSION)
     dump(ROOT/'logs/home-copy.json',report);validate_publication();print(json.dumps(report,ensure_ascii=False))

@@ -55,14 +55,19 @@ class HomePages(unittest.TestCase):
                 shelves=value['shelves'];tv=next(x for x in shelves if x['header']['title']=='Top 10 TV Shows');movies=next(x for x in shelves if x['header']['title']=='Top 10 Movies')
                 shelves.remove(tv);shelves.remove(movies)
                 shelves.insert(1,movies);shelves.insert(4,tv)
-                shelves.insert(1,shelf('Great Movies Now on Apple TV',list(reversed(api.rows[:7]))))
+                shelves.insert(1,shelf('Curated Films',list(reversed(api.rows[:7]))))
+                shelves.insert(1,shelf('Great Movies Now on Apple TV',api.rows[:5]))
                 shelves.insert(2,shelf('Sporting Event',[dict(item(1),type='SportingEvent')]))
             return value
-        api.canvas=canvas;value,report=collect({'entries':[]},api,image);validate_pages(value)
+        api.canvas=canvas
+        def checked_shelf(row):
+            self.assertNotEqual(row['header']['title'],'Great Movies Now on Apple TV','Excluded shelf must not be paginated or collected')
+            return row
+        api.shelf=checked_shelf;value,report=collect({'entries':[]},api,image);validate_pages(value)
         actual=[s['officialTitle']for s in value['shelves']]
-        self.assertEqual(actual[:2],['Great Movies Now on Apple TV','Top 10 Movies'])
+        self.assertEqual(actual[:2],['Curated Films','Top 10 Movies'])
         self.assertGreater(actual.index('Top 10 TV Shows'),actual.index('New Releases'))
-        self.assertNotIn('Sporting Event',actual);self.assertNotIn('Watch Premieres for Free',actual)
+        self.assertNotIn('Great Movies Now on Apple TV',actual);self.assertNotIn('Sporting Event',actual);self.assertNotIn('Watch Premieres for Free',actual)
         self.assertEqual(len(actual),8);self.assertEqual(actual[-1],'Coming to Apple TV')
         self.assertEqual([r['officialId']for r in value['shelves'][0]['items']],[x['id']for x in reversed(api.rows[:7])])
 
