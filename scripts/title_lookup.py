@@ -13,7 +13,7 @@ def dump(path,value):
     tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf8');tmp.replace(path)
 def read(path,default):return load(path) if path.exists() else copy.deepcopy(default)
 def keys_from_env():
-    return list(dict.fromkeys(v for name in ('TAVILY_API_KEY_1','TAVILY_API_KEY_2','TAVILY_API_KEY') if (v:=os.getenv(name,'').strip())))
+    return list(dict.fromkeys(v for name in ('TAVILY_API_KEY_1','TAVILY_API_KEY_2','TAVILY_API_KEY_3','TAVILY_API_KEY_4','TAVILY_API_KEY') if (v:=os.getenv(name,'').strip())))
 def clean(value,keys):
     raw=json.dumps(value,ensure_ascii=False)
     for key in keys:raw=raw.replace(key,'[REDACTED]')

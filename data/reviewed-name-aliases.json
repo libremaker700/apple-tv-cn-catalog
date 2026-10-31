@@ -36,6 +36,305 @@
           "url": "https://movie.douban.com/subject/5300042/"
         }
       ]
+    },
+    {
+      "officialId": "umc.cmc.j1bslw4gxyqw5h0gmiz853ec",
+      "slug": "home-j1bslw4gxyqw5h0gmiz853ec",
+      "watchUrl": "https://tv.apple.com/us/movie/blood-diamond/umc.cmc.j1bslw4gxyqw5h0gmiz853ec",
+      "en": "Blood Diamond",
+      "kind": "movie",
+      "year": 2006,
+      "title": "血钻",
+      "aliases": [
+        "血钻",
+        "血腥钻石",
+        "滴血钻石",
+        "Blood Diamond"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/1428175/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.1dg08zn0g3zx52hs8npoj5qe3",
+      "slug": "hijack",
+      "watchUrl": "https://tv.apple.com/us/show/hijack/umc.cmc.1dg08zn0g3zx52hs8npoj5qe3",
+      "en": "Hijack",
+      "kind": "series",
+      "year": 2023,
+      "title": "历劫惊途",
+      "aliases": [
+        "历劫惊途",
+        "劫机七小时"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/36137261/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.3sr644gks0beiq8og6ax314ww",
+      "slug": "home-3sr644gks0beiq8og6ax314ww",
+      "watchUrl": "https://tv.apple.com/us/movie/insomnia/umc.cmc.3sr644gks0beiq8og6ax314ww",
+      "en": "Insomnia",
+      "kind": "movie",
+      "year": 2002,
+      "title": "失眠症",
+      "aliases": [
+        "失眠症",
+        "致命对抗",
+        "Insomnia"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/1307210/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.j0nrrycfzizv3g28dhz2bks",
+      "slug": "k-pop-idols",
+      "watchUrl": "https://tv.apple.com/us/show/k-pop-idols/umc.cmc.j0nrrycfzizv3g28dhz2bks",
+      "en": "K-Pop Idols",
+      "kind": "series",
+      "year": 2024,
+      "title": "韩国流行音乐偶像",
+      "aliases": [
+        "韩国流行音乐偶像",
+        "K-Pop Idols"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_identity",
+          "url": "https://movie.douban.com/subject/36978461/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.34uwnqvp7211b9fl3vb25vled",
+      "slug": "liseys-story",
+      "watchUrl": "https://tv.apple.com/us/show/liseys-story/umc.cmc.34uwnqvp7211b9fl3vb25vled",
+      "en": "Lisey’s Story",
+      "kind": "series",
+      "year": 2021,
+      "title": "莉西的故事",
+      "aliases": [
+        "莉西的故事",
+        "丽赛的故事",
+        "莉西的人生异旅",
+        "Lisey’s Story"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/25799328/?from=tag_all"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.1nv0tluok21c2f8549mdjqdnh",
+      "slug": "long-way-up",
+      "watchUrl": "https://tv.apple.com/us/show/long-way-up/umc.cmc.1nv0tluok21c2f8549mdjqdnh",
+      "en": "Long Way Up",
+      "kind": "series",
+      "year": 2020,
+      "title": "一路北上",
+      "aliases": [
+        "一路北上",
+        "长路再续",
+        "长路遥遥",
+        "Long Way Up"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/35165400/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.2nmvx85jvka8bkq435m65obfz",
+      "slug": "home-2nmvx85jvka8bkq435m65obfz",
+      "watchUrl": "https://tv.apple.com/us/movie/master-and-commander-the-far-side-of-the-world/umc.cmc.2nmvx85jvka8bkq435m65obfz",
+      "en": "Master and Commander: The Far Side of the World",
+      "kind": "movie",
+      "year": 2003,
+      "title": "怒海争锋",
+      "aliases": [
+        "怒海争锋",
+        "怒海争锋：极地远征",
+        "Master and Commander: The Far Side of the World"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/1307749/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.3m567dtk8qcawdjwnagsr1jbs",
+      "slug": "omnivore",
+      "watchUrl": "https://tv.apple.com/us/show/omnivore/umc.cmc.3m567dtk8qcawdjwnagsr1jbs",
+      "en": "Omnivore",
+      "kind": "series",
+      "year": 2024,
+      "title": "舌尖上的世界",
+      "aliases": [
+        "舌尖上的世界",
+        "杂食动物"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_identity",
+          "url": "https://movie.douban.com/subject/36919698/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.6u8ovjqp61j46lx5cznidchhx",
+      "slug": "puppy-place",
+      "watchUrl": "https://tv.apple.com/us/show/puppy-place/umc.cmc.6u8ovjqp61j46lx5cznidchhx",
+      "en": "Puppy Place",
+      "kind": "series",
+      "year": 2021,
+      "title": "狗狗天地",
+      "aliases": [
+        "狗狗天地",
+        "小狗之家"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/35599358/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r",
+      "slug": "home-3dnsidxjodrqqk4eqg8i5wg8r",
+      "watchUrl": "https://tv.apple.com/us/movie/taxi-driver/umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r",
+      "en": "Taxi Driver",
+      "kind": "movie",
+      "year": 1976,
+      "title": "出租车司机",
+      "aliases": [
+        "出租车司机",
+        "出租汽车司机",
+        "出租车司机冒险记",
+        "Taxi Driver"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/1292222/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.3xurji5y3xzb0sjj3xwc6s868",
+      "slug": "home-3xurji5y3xzb0sjj3xwc6s868",
+      "watchUrl": "https://tv.apple.com/us/movie/the-girl-with-the-dragon-tattoo/umc.cmc.3xurji5y3xzb0sjj3xwc6s868",
+      "en": "The Girl With the Dragon Tattoo",
+      "kind": "movie",
+      "year": 2011,
+      "title": "龙纹身的女孩",
+      "aliases": [
+        "龙纹身的女孩",
+        "龙纹身女孩",
+        "The Girl With the Dragon Tattoo"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/4206357/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.237ur6qdup9h826huv7jg25yu",
+      "slug": "the-reluctant-traveler",
+      "watchUrl": "https://tv.apple.com/us/show/the-reluctant-traveler-with-eugene-levy/umc.cmc.237ur6qdup9h826huv7jg25yu",
+      "en": "The Reluctant Traveler With Eugene Levy",
+      "kind": "series",
+      "year": 2023,
+      "title": "尤金·列维的宅老爹旅行",
+      "aliases": [
+        "尤金·列维的宅老爹旅行",
+        "尤金李维的宅老爹旅行",
+        "不情愿的旅行者"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/35745803/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.59i5501mld9dk1cle3fo8zy4d",
+      "slug": "home-59i5501mld9dk1cle3fo8zy4d",
+      "watchUrl": "https://tv.apple.com/us/movie/the-rookie/umc.cmc.59i5501mld9dk1cle3fo8zy4d",
+      "en": "The Rookie",
+      "kind": "movie",
+      "year": 2002,
+      "title": "心灵投手",
+      "aliases": [
+        "心灵投手",
+        "棒球新秀",
+        "新手",
+        "The Rookie"
+      ],
+      "sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/1306952/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3",
+      "slug": "its-the-small-things-charlie-brown",
+      "watchUrl": "https://tv.apple.com/us/movie/its-the-small-things-charlie-brown/umc.cmc.gr1rsr9lp2tzfwb0w6zhq9y3",
+      "en": "Snoopy Presents: It’s the Small Things, Charlie Brown",
+      "kind": "movie",
+      "year": 2022,
+      "title": "好事一小朵，查理·布朗",
+      "aliases": [
+        "好事一小朵，查理·布朗",
+        "Snoopy Presents: It’s the Small Things, Charlie Brown"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_identity",
+          "url": "https://movie.douban.com/subject/35856757/"
+        }
+      ]
+    },
+    {
+      "officialId": "umc.cmc.yy12locz1vttqczsnlnwtei3",
+      "slug": "snoopy-presents-welcome-home-franklin",
+      "watchUrl": "https://tv.apple.com/us/movie/welcome-home-franklin/umc.cmc.yy12locz1vttqczsnlnwtei3",
+      "en": "Snoopy Presents: Welcome Home, Franklin",
+      "kind": "movie",
+      "year": 2024,
+      "title": "史努比特辑：欢迎回家，富兰克林",
+      "aliases": [
+        "史努比特辑：欢迎回家，富兰克林",
+        "Snoopy Presents: Welcome Home, Franklin"
+      ],
+      "sources": [
+        {
+          "type": "reviewed_douban_identity",
+          "url": "https://movie.douban.com/subject/36742908/"
+        }
+      ]
     }
   ]
 }

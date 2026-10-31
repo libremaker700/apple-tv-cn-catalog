@@ -34,41 +34,41 @@ jobs:
           java-version: '17'
       - run: pip install requests Pillow opencc-python-reimplemented
       - run: python -m unittest discover -s tests -v
-      - name: Verify sources before publishing mainland titles and synopses
+      - name: You.com names, independent page identity, then source comparison
         id: lookup
         env:
-          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          YDC_API_KEYI_1: ${{ secrets.YDC_API_KEYI_1 }}
+          YDC_API_KEYI_2: ${{ secrets.YDC_API_KEYI_2 }}
+          YDC_API_KEY_1: ${{ secrets.YDC_API_KEY_1 }}
+          YDC_API_KEY_2: ${{ secrets.YDC_API_KEY_2 }}
+          YDC_API_KEY_3: ${{ secrets.YDC_API_KEY_3 }}
+          YDC_API_KEY_4: ${{ secrets.YDC_API_KEY_4 }}
           TAVILY_API_KEY_1: ${{ secrets.TAVILY_API_KEY_1 }}
           TAVILY_API_KEY_2: ${{ secrets.TAVILY_API_KEY_2 }}
-          MINIMAX_CREDENTIALS_JSON: ${{ secrets.MINIMAX_CREDENTIALS_JSON }}
+          TAVILY_API_KEY_3: ${{ secrets.TAVILY_API_KEY_3 }}
+          TAVILY_API_KEY_4: ${{ secrets.TAVILY_API_KEY_4 }}
           TITLE_LOOKUP_LIMIT: ${{ inputs.limit || vars.TITLE_LOOKUP_LIMIT || '3' }}
-          TITLE_LOOKUP_MONTHLY_LIMIT: ${{ vars.TITLE_LOOKUP_MONTHLY_LIMIT || '100' }}
-          MINIMAX_MONTHLY_BATCH_LIMIT: '20'
-          MANUAL_RUN: ${{ github.event_name == 'workflow_dispatch' }}
           TARGET_SLUG: ${{ inputs.slug }}
         run: |
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
-          if [ "$MANUAL_RUN" = 'true' ]; then ARGS+=(--force); fi
-          if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG"); fi
-          python scripts/resolve_titles.py "${ARGS[@]}"
-      - name: Preserve search reservations even if a later operation fails
+          if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
+          python scripts/mainland_names.py "${ARGS[@]}"
+      - name: Preserve completed requests and budget reservations
         if: always() && steps.lookup.outcome != 'skipped'
-        run: |
-          if [ -f data/title-cache.json ]; then
-            git config user.name catalog-bot
-            git config user.email catalog-bot@users.noreply.github.com
-            git add data/title-cache.json data/source-cache.json
-            if [ -f data/agent-title-cache.json ]; then git add data/agent-title-cache.json; fi
-            git diff --cached --quiet || git commit -m 'catalog: preserve title search cache and shared budget'
-            git push
-          fi
-      - run: python scripts/catalog.py --validate
-      - name: Persist verified aliases and public search diagnostics
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          git add data/title-cache.json data/source-cache.json data/agent-title-cache.json logs/title-resolver.json docs
-          git diff --cached --quiet || git commit -m 'catalog: publish source-verified Chinese titles and aliases'
+          for FILE in data/mainland-name-cache.json data/source-cache.json logs/mainland-name-sync.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
+          git diff --cached --quiet || git commit -m 'catalog: preserve independent title-search reservations'
+          git push
+      - run: python scripts/catalog.py --validate
+      - run: python scripts/home_sync.py --validate
+      - name: Persist verified metadata and account diagnostics
+        run: |
+          git config user.name catalog-bot
+          git config user.email catalog-bot@users.noreply.github.com
+          git add docs data/mainland-name-cache.json data/source-cache.json logs/mainland-name-sync.json
+          git diff --cached --quiet || git commit -m 'catalog: publish independently verified mainland names'
           git push
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

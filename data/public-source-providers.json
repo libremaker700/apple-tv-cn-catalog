@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ff",
+    "url": "https://cj.ffzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "hn",
+    "url": "https://www.hongniuzy2.com/api.php/provide/vod"
+  },
+  {
+    "id": "lz",
+    "url": "https://cj.lziapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "jy",
+    "url": "https://jyzyapi.com/provide/vod"
+  },
+  {
+    "id": "gs",
+    "url": "https://api.guangsuapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "bd",
+    "url": "https://api.apibdzy.com/api.php/provide/vod"
+  },
+  {
+    "id": "dytt",
+    "url": "http://caiji.dyttzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "bf",
+    "url": "https://bfzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "js",
+    "url": "https://jszyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "hh",
+    "url": "https://hhzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "sb",
+    "url": "https://subocj.com/api.php/provide/vod"
+  },
+  {
+    "id": "xl",
+    "url": "https://api.xinlangapi.com/xinlangapi.php/provide/vod"
+  },
+  {
+    "id": "yy",
+    "url": "https://api.yyzy-tv.vip/inc/apijson.php"
+  },
+  {
+    "id": "zy360",
+    "url": "https://360zyzz.com/api.php/provide/vod"
+  },
+  {
+    "id": "huya",
+    "url": "https://www.huyaapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "xigua",
+    "url": "https://caiji.xgzyapi.com/api.php/provide/vod"
+  }
+]
