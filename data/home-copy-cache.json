@@ -401,6 +401,11 @@
       "text": "这是一部拥有影史最标志性剧情反转之一的超自然惊悚片。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793415837
+    },
+    "5ab2fa223a34a79eca9b20939fdf830680628cdc66932daa5b6cc342158a3069": {
+      "text": "汤姆·赫兰德与阿曼达·塞弗里德联袂主演了一部20世纪70年代背景的心理悬疑片，大放异彩。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793431919
     }
   }
 }
