@@ -159,6 +159,19 @@
           "metadataStatus": "verified"
         }
       ]
+    },
+    "umc.cmc.63led2pm5a1w4wvabyn4xxxjp": {
+      "checkedAt": 1793410673,
+      "seasons": [
+        {
+          "season": 1,
+          "officialId": "umc.cmc.5soab9j93ntsigs76rqb1rj8k",
+          "officialEpisodeCount": 29,
+          "year": "1966",
+          "releaseDate": "1966-06-08",
+          "metadataStatus": "verified"
+        }
+      ]
     }
   }
 }
