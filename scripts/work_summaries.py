@@ -10,9 +10,13 @@ def key(identity,text):return digest([VERSION,identity,clean(text)])
 def norm(s):return re.sub(r"[^a-z0-9]","",unicodedata.normalize('NFKD',s).lower())
 def source_id(e):return e.get('officialId')or(urlsplit(e.get('officialIdentity',{}).get('watchUrl','')).path.rstrip('/').split('/')[-1])or('pr:'+e['slug']if e.get('officialUrl')=='https://www.apple.com/tv-pr/originals/'+e.get('slug','')+'/'else'')
 def attach(e,record):
-    if not record or not valid_zh(record.get('text')):return
+    if not record:return
     zh=e.setdefault('zh',{}) or {};e['zh']=zh
-    zh.update(metadataPolicy='mainland-v1',summary=record['text'],summary_status='translated_official',summary_sources=[{'type':'apple_us_translation','url':record['source']}],summary_source_hash=record['hash'],summary_original=record['original'])
+    zh.update(metadataPolicy='mainland-v1')
+    for field in ('contentRating','officialReleaseYear'):
+        if field in record:zh[field]=record[field]
+    if not valid_zh(record.get('text')):return
+    zh.update(summary=record['text'],summary_status='legacy_chinese'if record.get('method')=='existing_chinese'else'translated_official',summary_sources=[{'type':'apple_us_translation','url':record['source']}],summary_source_hash=record['hash'],summary_original=record['original'])
     if not zh.get('watchUrl'):zh['watchUrl']=record['source']
 def apply_main(value,root):
     out=copy.deepcopy(value);records=read(root/'data/work-summary-cache.json',{}).get('works',{})
@@ -30,7 +34,7 @@ def run(root,api,translator,now,limit=400):
         identity=source_id(e)
         if identity:wanted[identity]={'officialId':identity,'en':e['en'],'kind':e['kind'],'watchUrl':e.get('officialIdentity',{}).get('watchUrl')or e['officialUrl'],'zh':e.get('zh')}
     for w in home['works']:wanted[w['officialId']]=dict(w,zh=w.get('zh')or wanted.get(w['officialId'],{}).get('zh'))
-    report={'works':len(wanted),'translated':0,'cacheHits':0,'existingChinese':0,'missingOriginal':0,'sourceErrors':0,'apiCalls':0,'usage':[],'errors':[]};pending=[];source={}
+    report={'works':len(wanted),'translated':0,'cacheHits':0,'existingChinese':0,'missingOriginal':0,'sourceErrors':0,'apiCalls':0,'usage':[],'errors':[]};pending=[];source={};metadata={}
     # Fetch only display metadata through Apple's US API; identity/type are checked before use.
     for identity,w in wanted.items():
         try:
@@ -44,12 +48,12 @@ def run(root,api,translator,now,limit=400):
                     detail={'id':identity,'type':'Movie'if w['kind']=='movie'else'Show','title':w['en'],'description':text};originals[identity]={'checkedAt':now,'value':detail};dump(root/'data/work-original-cache.json',originals)
             else:detail=api.get(w['kind'],identity)
             if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show'):raise ValueError('identity')
+            from datetime import datetime,timezone
+            date=detail.get('releaseDate');metadata[identity]={'contentRating':detail.get('contentRating',''),'officialReleaseYear':datetime.fromtimestamp(date/1000,timezone.utc).year if isinstance(date,(int,float))and date>0 else None,'source':w['watchUrl']}
             text=clean(detail.get('description')or detail.get('heroDescription')or w.get('summaryEn',''))
             if not text or len(text)>1800:report['missingOriginal']+=1;continue
             k=key(identity,text);source[identity]=(w,text,k)
-            if valid_zh(records.get(k,{}).get('text')):report['cacheHits']+=1
-            elif (w.get('zh')or{}).get('summary_status')!='translated_official' and valid_zh((w.get('zh')or{}).get('summary')):
-                records[k]={'text':w['zh']['summary'],'method':'existing_chinese'};report['existingChinese']+=1
+            if valid_zh(records.get(k,{}).get('text'))and records[k].get('method')!='existing_chinese':report['cacheHits']+=1
             elif now>=records.get(k,{}).get('nextRetry',0):pending.append({'id':identity,'text':text})
         except Exception as error:report['sourceErrors']+=1;report['errors'].append({'id':identity,'stage':'source','error':type(error).__name__})
     for offset in range(0,min(limit,len(pending)),4):
@@ -65,7 +69,9 @@ def run(root,api,translator,now,limit=400):
     for identity,(w,text,k)in source.items():
         record=records.get(k,{})
         if valid_zh(record.get('text')):works[identity]=dict(record,original=text,hash=k,source=w['watchUrl'])
-    report['ready']=len(works);report['pending']=sum(i not in works for i in wanted);dump(root/'data/work-summary-cache.json',cache);dump(root/'logs/work-summaries.json',report)
+    for identity,info in metadata.items():
+        works.setdefault(identity,{}).update(info)
+    report['ready']=sum(valid_zh(w.get('text'))for w in works.values());report['pending']=sum(i not in works for i in wanted);dump(root/'data/work-summary-cache.json',cache);dump(root/'logs/work-summaries.json',report)
     return report
 
 def main():

@@ -11,6 +11,8 @@ from home_sources import CHANNEL
 
 def slim_item(x):
     out={k:x[k] for k in ('id','type','title','url','releaseDate','description','heroDescription','genres') if k in x}
+    rating=x.get('rating');rating=rating.get('displayName','')if isinstance(rating,dict)else''
+    if rating in {'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-13','R','NC-17','NR'}:out['contentRating']=rating
     out['images']={k:{f:v[f] for f in ('url','width','height') if f in v} for k,v in x.get('images',{}).items() if isinstance(v,dict)}
     return out
 
@@ -30,7 +32,7 @@ class Pages:
             if not re.fullmatch(r'[a-zA-Z0-9:_\-]{1,100}',str(token)):raise ValueError('Invalid pagination token')
             params['nextToken']=token
         key=route+':'+identity+':'+str(token or '');old=self.cache.get(key);now=int(time.time())
-        if old and route not in ('channel','room','shelf') and now-old['checkedAt']<6*3600:return copy.deepcopy(old['value'])
+        if old and old.get('metadataVersion')==2 and route not in ('channel','room','shelf') and now-old['checkedAt']<6*3600:return copy.deepcopy(old['value'])
         name,kind={'channel':('getCanvasBinding','channels'),'room':('getCanvasBinding','rooms'),'shelf':('getCollectionById',None),'movie':('getMovieDetailById',None),'series':('getShowDetailById',None)}[route]
         url=self.routes[name]['url']
         for k,v in {'canvasType':kind,'entityId':identity,'collectionId':identity,'movieId':identity,'showId':identity}.items():url=url.replace('{'+k+'}',v or '')
@@ -43,7 +45,7 @@ class Pages:
             c=data['canvas'];value={'id':c['id'],'source':c['url'],'nextToken':c.get('nextToken'),'shelves':[slim_shelf(s)for s in c.get('shelves',[])]}
         elif route=='shelf':value=slim_shelf(data['shelf'])
         else:value=slim_item(data['content'])
-        self.cache[key]={'checkedAt':now,'value':value};dump(self.path,self.cache);return copy.deepcopy(value)
+        self.cache[key]={'checkedAt':now,'metadataVersion':2,'value':value};dump(self.path,self.cache);return copy.deepcopy(value)
     def canvas(self,kind,identity):
         page=self.get(kind,identity);out=copy.deepcopy(page);seen=set();token=page.get('nextToken')
         while token:

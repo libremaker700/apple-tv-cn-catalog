@@ -37,3 +37,21 @@ class Summaries(unittest.TestCase):
   from work_summaries import source_id
   self.assertEqual(source_id({'officialIdentity':{'watchUrl':'https://tv.apple.com/us/movie/fury/umc.cmc.test?ctx_brand=foo'}}),'umc.cmc.test')
   self.assertEqual(source_id({'slug':'test','officialUrl':'https://www.apple.com/tv-pr/originals/test/'}),'pr:test')
+
+ def test_legacy_chinese_is_retranslated_and_official_rating_year_are_shared(self):
+  from title_lookup import dump,read
+  from work_summaries import run,apply_main
+  class API:
+   def get(self,kind,identity):return {'id':identity,'type':'Movie','title':'Exact','description':'Official about description','contentRating':'TV-MA','releaseDate':1648771200000}
+  class Translator:
+   usage={};model='test';calls=0
+   def translate(self,rows):self.calls+=1;return {r['id']:'严格依据官网原文的中文简介。'for r in rows}
+  with tempfile.TemporaryDirectory()as t:
+   root=Path(t);identity='umc.cmc.test';url='https://tv.apple.com/us/movie/exact/'+identity;main={'entries':[{'slug':'exact','en':'Exact','kind':'movie','officialIdentity':{'watchUrl':url},'zh':{'summary':'不对应当前官网的旧中文简介'}}]}
+   dump(root/'docs/catalog.json',main);dump(root/'docs/home/home.json',{'works':[]});k=key(identity,'Official about description');dump(root/'data/work-summary-cache.json',{'records':{k:{'text':'不对应的旧中文简介','method':'existing_chinese'}},'works':{}})
+   translator=Translator();run(root,API(),translator,100);run(root,API(),translator,101)
+   self.assertEqual(translator.calls,1);zh=apply_main(main,root)['entries'][0]['zh'];self.assertEqual(zh['summary'],'严格依据官网原文的中文简介。');self.assertEqual(zh['contentRating'],'TV-MA');self.assertEqual(zh['officialReleaseYear'],2022)
+ def test_only_official_display_rating_survives(self):
+  from official_pages import slim_item
+  self.assertEqual(slim_item({'rating':{'displayName':'TV-MA','value':600}})['contentRating'],'TV-MA')
+  self.assertNotIn('contentRating',slim_item({'rating':{'displayName':'invented'}}));self.assertNotIn('contentRating',slim_item({'rating':'8.5'}))
