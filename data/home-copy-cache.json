@@ -396,6 +396,11 @@
       "text": "在这部感人的爱情故事中，两位诗人生动地面对着充满希望、力量和意外欢笑的不确定未来。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793414711
+    },
+    "0cc33e3571378af9a50f618cf1e6660a0b668a6dc2008a4c311aebd2bb0619ea": {
+      "text": "这是一部拥有影史最标志性剧情反转之一的超自然惊悚片。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793415837
     }
   }
 }
