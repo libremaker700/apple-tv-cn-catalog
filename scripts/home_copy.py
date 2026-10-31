@@ -138,9 +138,24 @@ def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL):
         row['copy']=c
     return out,report
 
+def fetch_topic(url):
+    from home_pages import page_url
+    from urllib.parse import urljoin
+    original=page_url(url);identity=original.rsplit('/',1)[-1]
+    if '/us/room/'not in original:raise ValueError('Unsupported topic copy source')
+    for _ in range(3):
+        response=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35),allow_redirects=False)
+        if response.status_code in (301,302,307,308):
+            url=page_url(urljoin(url,response.headers.get('Location','')))
+            if '/us/room/'not in url or url.rsplit('/',1)[-1]!=identity:raise ValueError('Topic redirect identity changed')
+            continue
+        response.raise_for_status()
+        if response.status_code!=200:raise ValueError('Unexpected topic response')
+        return response.content
+    raise ValueError('Too many topic redirects')
+
 def process(home,root,html,now,fetcher=None):
-    from home_sync import fetch
-    fetcher=fetcher or fetch
+    fetcher=fetcher or fetch_topic
     value=copy.deepcopy(home);path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
     summaries=read(root/'data/work-summary-cache.json',{}).get('works',{})
     reviewed=read(root/'data/home-copy-reviewed.json',[]);pages=[]
