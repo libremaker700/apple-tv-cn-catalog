@@ -47,6 +47,25 @@ class HomePages(unittest.TestCase):
         self.assertEqual([s['title']for s in v['shelves']],['Top 10 电视剧','Top 10 电影','最新上线','暗黑秘境','浏览全部 Apple 原创作品','必看热门影视','即将上线'])
         self.assertEqual(len(v['shelves'][5]['items']),25);self.assertEqual(len(v['shelves'][4]['items']),1)
         self.assertEqual(v['shelves'][3]['layout'],'landscape');self.assertTrue(v['pages']);self.assertEqual(len(v['works']),25)
+    def test_home_follows_changed_canvas_order_and_includes_new_film_shelf(self):
+        api=Fake();original=api.canvas
+        def canvas(kind,identity):
+            value=original(kind,identity)
+            if kind=='channel':
+                shelves=value['shelves'];tv=next(x for x in shelves if x['header']['title']=='Top 10 TV Shows');movies=next(x for x in shelves if x['header']['title']=='Top 10 Movies')
+                shelves.remove(tv);shelves.remove(movies)
+                shelves.insert(1,movies);shelves.insert(4,tv)
+                shelves.insert(1,shelf('Great Movies Now on Apple TV',list(reversed(api.rows[:7]))))
+                shelves.insert(2,shelf('Sporting Event',[dict(item(1),type='SportingEvent')]))
+            return value
+        api.canvas=canvas;value,report=collect({'entries':[]},api,image);validate_pages(value)
+        actual=[s['officialTitle']for s in value['shelves']]
+        self.assertEqual(actual[:2],['Great Movies Now on Apple TV','Top 10 Movies'])
+        self.assertGreater(actual.index('Top 10 TV Shows'),actual.index('New Releases'))
+        self.assertNotIn('Sporting Event',actual);self.assertNotIn('Watch Premieres for Free',actual)
+        self.assertEqual(len(actual),8);self.assertEqual(actual[-1],'Coming to Apple TV')
+        self.assertEqual([r['officialId']for r in value['shelves'][0]['items']],[x['id']for x in reversed(api.rows[:7])])
+
     def test_rejects_dangling_topic_region_and_playback_injection(self):
         v=self.value()
         for change in [lambda x:x['shelves'][4]['items'][0].update(pageId='missing'),lambda x:x['pages'][0].update(source='https://tv.apple.com/tw/room/x/y'),lambda x:x['works'][0].update(id='123')]:

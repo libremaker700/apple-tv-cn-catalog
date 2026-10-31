@@ -30,7 +30,7 @@ class Pages:
             if not re.fullmatch(r'[a-zA-Z0-9:_\-]{1,100}',str(token)):raise ValueError('Invalid pagination token')
             params['nextToken']=token
         key=route+':'+identity+':'+str(token or '');old=self.cache.get(key);now=int(time.time())
-        if old and now-old['checkedAt']<6*3600:return copy.deepcopy(old['value'])
+        if old and route not in ('channel','room','shelf') and now-old['checkedAt']<6*3600:return copy.deepcopy(old['value'])
         name,kind={'channel':('getCanvasBinding','channels'),'room':('getCanvasBinding','rooms'),'shelf':('getCollectionById',None),'movie':('getMovieDetailById',None),'series':('getShowDetailById',None)}[route]
         url=self.routes[name]['url']
         for k,v in {'canvasType':kind,'entityId':identity,'collectionId':identity,'movieId':identity,'showId':identity}.items():url=url.replace('{'+k+'}',v or '')

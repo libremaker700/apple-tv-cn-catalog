@@ -8,7 +8,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [sync, publish]
+        options: [sync, home, publish]
         default: sync
 permissions:
   contents: write
@@ -33,7 +33,7 @@ jobs:
         run: python scripts/catalog.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
       - run: python scripts/catalog.py --validate
       - name: Update official homepage and topic pages with verified images
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.mode == 'sync' || inputs.mode == 'home'))
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_1 || secrets.GEMINI_API_KEY }}
@@ -54,7 +54,6 @@ jobs:
         run: python scripts/work_summaries.py
       - name: Translate changed official homepage copy
         continue-on-error: true
-        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'publish')
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_1 || secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}

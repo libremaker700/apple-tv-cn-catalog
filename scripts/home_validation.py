@@ -36,7 +36,7 @@ def validate_home(value):
 def validate_pages(value):
     from home_pages import page_url
     assert value.get('schema')==3 and value.get('source')==CHANNEL and 3<=len(value['hero'])<=12
-    assert 3<=len(value['works'])<=1000 and 1<=len(value['pages'])<=40 and len(value['shelves'])==7
+    assert 3<=len(value['works'])<=1000 and 1<=len(value['pages'])<=40 and 1<=len(value['shelves'])<=80
     works={};page_ids={p['id']for p in value['pages']};assert len(page_ids)==len(value['pages'])
     for w in value['works']:
         assert re.fullmatch(r'[a-z0-9-]{1,150}',w['slug'])and w['slug']not in works
@@ -72,5 +72,6 @@ def validate_pages(value):
             assert shelf['title']and shelf['officialTitle']and page_url(shelf['source'])==shelf['source']and shelf['layout']in('portrait','landscape')and 0<len(shelf['items'])<=600
             if shelf.get('morePageId'):assert shelf['morePageId']in page_ids
             rows(shelf['items'],*((640,360)if shelf['layout']=='landscape'else(400,600)),shelf.get('kind')=='topics')
-    assert value['shelves'][0]['title']=='Top 10 电视剧'and value['shelves'][1]['title']=='Top 10 电影'and value['shelves'][-1]['title']=='即将上线'
+    assert value['shelves'][-1]['title']=='即将上线'
+    assert len({s['id']for s in value['shelves']})==len(value['shelves'])
     assert all(s['officialTitle']!='Watch Premieres for Free'for p in [value]+value['pages']for s in p['shelves'])

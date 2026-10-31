@@ -94,12 +94,15 @@ def collect(catalog,api,image):
         pages.append(page)
         if title=='Coming to Apple TV':coming=page
         else:topic_rows.append(dict(pageId=pid,officialId=it['id'],title=name,**art(it,400,600)))
-    wanted=['Top 10 TV Shows','Top 10 Movies','New Releases','Dark Destinations','Browse All Apple Originals','Must-See Hits']
-    for title in wanted:
-        sh=next(s for s in root_shelves if clean((s.get('header')or{}).get('title'))==title)
+    # Traverse Apple's canvas order. Only skip non-film/show offers/sports and the
+    # explicitly hidden free-premiere shelf; the upcoming destination stays last.
+    for sh in root_shelves:
+        title=clean((sh.get('header')or{}).get('title'))
+        if not title or title=='Watch Premieres for Free' or sh.get('displayType')in ('epicStage','epicStageWithUpsell','channelUpsell','upNextLockup','sportsCardLockup'):continue
+        if title!='Browse All Apple Originals' and not any(i.get('type')in ('Movie','Show')for i in sh.get('items',[])):continue
         if title=='Browse All Apple Originals':row={'id':sh['id'],'title':LABELS[title],'officialTitle':title,'source':CHANNEL,'layout':'portrait','kind':'topics','items':topic_rows,'count':len(topic_rows)}
         else:row=shelf(sh,CHANNEL,'landscape'if title=='Dark Destinations'else'portrait')
-        if not row:raise ValueError('Empty required home section '+title)
+        if not row:continue
         if title=='Must-See Hits':
             pid='must-see-hits';row['morePageId']=pid;pages.append({'id':pid,'title':LABELS[title],'source':page_url((sh.get('header')or{}).get('url')or sh['url']),'hero':[],'shelves':[dict(row)]})
         home['shelves'].append(row)
@@ -119,7 +122,7 @@ def collect(catalog,api,image):
     for value in works.values():
         if value.get('landscapeSource'):value['landscapeArtwork']=rendered[value.pop('landscapeSource')]['artwork']
     out={'schema':3,'source':CHANNEL,'sources':list(dict.fromkeys([CHANNEL]+[p['source']for p in pages])),'hero':home['hero'],'shelves':home['shelves'],'pages':pages,'works':list(works.values())}
-    return out,{'heroCount':len(out['hero']),'shelfCount':len(out['shelves']),'topicPages':len(pages),'workCount':len(works),'additionalWorks':sum(not w.get('knownCatalog')for w in works.values()),'officialShelves':[{'title':s['title'],'count':len(s['items'])}for s in out['shelves']]}
+    return out,{'heroCount':len(out['hero']),'shelfCount':len(out['shelves']),'topicPages':len(pages),'workCount':len(works),'additionalWorks':sum(not w.get('knownCatalog')for w in works.values()),'orderPolicy':'official-canvas-with-user-exclusions','officialCanvasOrder':[{'id':s['id'],'title':clean((s.get('header')or{}).get('title'))}for s in root_shelves],'officialShelves':[{'title':s['title'],'count':len(s['items'])}for s in out['shelves']]}
 
 def image_rows(home):
     return [r for p in [home]+home.get('pages',[])for r in p['hero']+[r for s in p['shelves']for r in s['items']if r.get('artwork')]]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in home.get('works',[])if w.get('landscapeArtwork')]
