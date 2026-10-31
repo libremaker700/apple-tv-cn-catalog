@@ -1,7 +1,38 @@
 import sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from mainland_names import candidate_matches,source_count,independent_name
+from mainland_names import candidate_matches,source_count,independent_name,source_queries,public_sources,season
+class SeasonQueries(unittest.TestCase):
+    def test_selected_season_comes_first_and_aliases_are_deduplicated(self):
+        ref={'kind':'series','year':'2005','season':1}
+        self.assertEqual(source_queries(ref,['邪恶力量','邪恶力量第一季','邪恶力量 第1季']),['邪恶力量第一季','邪恶力量第1季','邪恶力量'])
+        ref['season']=2
+        self.assertEqual(source_queries(ref,['邪恶力量第一季']),['邪恶力量第二季','邪恶力量第2季','邪恶力量'])
+    def test_source_requiring_season_suffix_is_found(self):
+        from unittest.mock import Mock
+        for required in ('邪恶力量第一季','邪恶力量第1季'):
+            with self.subTest(required=required):
+                session=Mock();queries=[]
+                def get(url,params,**kwargs):
+                    queries.append(params['wd']);rows=[{'vod_id':'123','vod_name':required,'vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]if params['wd']==required else []
+                    return Mock(status_code=200,json=lambda:{'list':rows})
+                session.get.side_effect=get
+                found,_=public_sources({'kind':'series','year':'2005','season':1},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
+                self.assertEqual(queries[0],'邪恶力量第一季');self.assertEqual(found['routes'],1);self.assertEqual(found['title'],required)
+    def test_movies_are_not_given_seasons_and_english_names_use_season(self):
+        self.assertEqual(source_queries({'kind':'movie'},['电影名']),['电影名'])
+        self.assertEqual(source_queries({'kind':'series','season':2},['Example Season 1']),['Example Season 2','Example'])
+        for number in (1,9,10,11,20,21,99,100):
+            title=source_queries({'kind':'series','season':number},['剧名'])[0];self.assertEqual(season(title),number)
+    def test_query_specific_not_found_still_tries_base_name(self):
+        from unittest.mock import Mock
+        session=Mock()
+        def get(url,params,**kwargs):
+            if params['wd']!='邪恶力量':return Mock(status_code=404)
+            return Mock(status_code=200,json=lambda:{'list':[{'vod_id':'123','vod_name':'邪恶力量第一季','vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]})
+        session.get.side_effect=get
+        found,_=public_sources({'kind':'series','year':'2005','season':1},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
+        self.assertEqual(found['routes'],1);self.assertEqual(session.get.call_count,3)
 class Identity(unittest.TestCase):
     def test_year_season_medium_and_full_name_are_kept(self):
         ref={'kind':'series','year':'2026','season':2};row={'vod_name':'正确剧名第二季','vod_year':'2026','type_name':'欧美剧'}

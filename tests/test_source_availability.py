@@ -32,3 +32,11 @@ class CloudChecks(unittest.TestCase):
             root=Path(folder);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir();work=self.work(releaseDate='2027-01-01',seasons=[{'season':2,'year':'2027','releaseDate':'2027-01-01'}])
             for file,data in [('docs/catalog.json',{'entries':[work]}),('docs/home/home.json',{'works':[]}),('docs/version.json',{})]:(root/file).write_text(json.dumps(data),encoding='utf8')
             probe=Mock();run(root,probe=probe,now=1793440000);probe.assert_not_called()
+    def test_old_negative_check_is_retried_with_season_query_policy(self):
+        with tempfile.TemporaryDirectory()as folder:
+            root=Path(folder);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir();work=self.work();now=1793440000
+            work['zh']['sourceCheck']=make_check(work,reference(work),None,now-10)
+            for file,data in [('docs/catalog.json',{'entries':[work]}),('docs/home/home.json',{'works':[]}),('docs/version.json',{}),('data/cloud-source-cache.json',{'records':{'example':{'checkedAt':now-10,'nextRetry':now+86400,'check':work['zh']['sourceCheck'],'fingerprint':'legacy'}}})]:(root/file).write_text(json.dumps(data),encoding='utf8')
+            probe=Mock(return_value=({'title':'豆瓣名称第二季','routes':2},[]))
+            with patch('source_availability.publish'),patch('mainland_names.republish_home'):run(root,probe=probe,now=now)
+            probe.assert_called_once()

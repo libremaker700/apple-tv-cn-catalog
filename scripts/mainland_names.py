@@ -23,13 +23,32 @@ def source_deferred(work,now=None):
 def source_count(row):
     return sum(any(re.match(r'https?://',e.split('$',1)[-1].split('|',1)[0])for e in group.split('#'))for group in str(row.get('vod_play_url','')).split('$$$')[:20])
 def season(title):
-    found=re.search(r'第([0-9一二三四五六七八九十]+)季|season\s*(\d+)',title,re.I)
+    found=re.search(r'第([0-9一二三四五六七八九十百]+)季|season\s*(\d+)',title,re.I)
     if not found:return 1
     word=found[1]or found[2]
     if word.isdigit():return int(word)
+    if word=='一百':return 100
     digits='零一二三四五六七八九';pos=word.find('十')
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
-def base(text):return re.sub(r'\s*第[0-9一二三四五六七八九十]+季\s*$','',text).strip()
+def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
+
+SOURCE_QUERY_POLICY='season-suffix-v1'
+def source_queries(ref,names):
+    """Try the selected season explicitly before the unsuffixed title, per verified alias."""
+    try:number=int(ref.get('season',1))
+    except (TypeError,ValueError):number=0
+    output=[];seen=set()
+    for name in names[:4]:
+        if not isinstance(name,str)or not name.strip():continue
+        variants=[name.strip()]
+        if ref.get('kind')=='series'and 1<=number<=100:
+            root=base(name);digits='零一二三四五六七八九'
+            chinese=digits[number]if number<10 else ('一百'if number==100 else ('十'if number<20 else digits[number//10]+'十')+(digits[number%10]if number%10 else ''))
+            variants=[root+'第'+chinese+'季',root+'第'+str(number)+'季',root]if re.search(r'[\u3400-\u9fff]',root)else[root+' Season '+str(number),root]
+        for query in variants:
+            key=re.sub(r'\s+',' ',query).casefold()
+            if key not in seen:output.append(query);seen.add(key)
+    return output
 def candidate_matches(ref,row,names):
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))
     if re.search(r'解说|预告|短剧|伦理',kind):return False
@@ -38,12 +57,16 @@ def candidate_matches(ref,row,names):
     return not re.search(r'电视剧|连续剧|综艺',kind)
 def public_sources(ref,names,providers,session=None,deadline=None):
     client=session or requests.Session();best=None;observed=0;events=[];seen=set()
+    if deadline is None:deadline=time.monotonic()+90
     for provider in providers:
-        for name in names[:4]:
+        for name in source_queries(ref,names):
             if deadline is not None and time.monotonic()>=deadline:return best,events
             try:
                 response=client.get(provider['url'],params={'ac':'detail','wd':name},timeout=(5,9),allow_redirects=False)
-                if response.status_code!=200:events.append({'provider':provider['id'],'http':response.status_code});break
+                if response.status_code!=200:
+                    events.append({'provider':provider['id'],'http':response.status_code})
+                    if response.status_code in (400,404,422):continue
+                    break
                 rows=response.json().get('list',[])
                 for row in rows[:30]:
                     record=(provider['id'],str(row.get('vod_id','')))

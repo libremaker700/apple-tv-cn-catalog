@@ -29,7 +29,7 @@ def apply_cached(work,root=ROOT):
     return work
 
 def run(root=ROOT,limit=3,probe=None,now=None,slugs=None):
-    from mainland_names import public_sources,source_deferred,republish_home,base
+    from mainland_names import public_sources,source_deferred,republish_home,base,SOURCE_QUERY_POLICY
     now=int(time.time()if now is None else now);deadline=time.monotonic()+180
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');path=root/'data/cloud-source-cache.json'
     cache=read(path,{'schema':1,'records':{}});providers=read(root/'data/public-source-providers.json',[])
@@ -42,10 +42,10 @@ def run(root=ROOT,limit=3,probe=None,now=None,slugs=None):
         seen.add(slug);ref=reference(work);current=next((s for s in work.get('seasons',[])if s.get('season')==ref['season']),{})
         if source_deferred(current or work,now)or zh.get('name_status')!='verified_title_sources'or not re.fullmatch(r'(19|20)\d{2}',ref['year']):continue
         names=list(dict.fromkeys(base(n)for n in [zh['title']]+zh.get('aliases',[])if re.search(r'[\u3400-\u9fff]',n)))[:4]
-        fingerprint=hashlib.sha256(json.dumps([ref,names],sort_keys=True,ensure_ascii=False).encode()).hexdigest();old=cache['records'].get(slug,{})
+        fingerprint=hashlib.sha256(json.dumps([SOURCE_QUERY_POLICY,ref,names],sort_keys=True,ensure_ascii=False).encode()).hexdigest();old=cache['records'].get(slug,{})
         inline=zh.get('sourceCheck')or{}
-        if applies(inline,work)and now<inline['checkedAt']+(7*86400 if inline['found']else 86400)and inline['checkedAt']>=old.get('checkedAt',0):
-            cache['records'][slug]={'checkedAt':inline['checkedAt'],'nextRetry':inline['checkedAt']+(7*86400 if inline['found']else 86400),'fingerprint':fingerprint,'check':copy.deepcopy(inline)}
+        if applies(inline,work)and (inline['found']or old.get('queryPolicy')==SOURCE_QUERY_POLICY)and now<inline['checkedAt']+(7*86400 if inline['found']else 86400)and inline['checkedAt']>=old.get('checkedAt',0):
+            cache['records'][slug]={'checkedAt':inline['checkedAt'],'nextRetry':inline['checkedAt']+(7*86400 if inline['found']else 86400),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':copy.deepcopy(inline)}
             dump(path,cache);continue
         if old.get('fingerprint')==fingerprint and now<old.get('nextRetry',0)and applies(old.get('check'),work):
             if zh.get('sourceCheck')!=old['check']:zh['sourceCheck']=copy.deepcopy(old['check']);report['changed'].append(slug)
@@ -57,7 +57,7 @@ def run(root=ROOT,limit=3,probe=None,now=None,slugs=None):
         # Display name follows the strongest source, except animation keeps the verified Douban name.
         if best and not any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[])):
             selected=base(best['title']);zh['aliases']=list(dict.fromkeys([selected,zh['title']]+zh.get('aliases',[])));zh['title']=selected
-        cache['records'][slug]={'checkedAt':now,'nextRetry':now+(7*86400 if check['found']else 86400),'fingerprint':fingerprint,'check':check}
+        cache['records'][slug]={'checkedAt':now,'nextRetry':now+(7*86400 if check['found']else 86400),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':check}
         report['records'].append({'slug':slug,'check':check,'events':events});report['changed'].append(slug);dump(path,cache)
     by_slug={e['slug']:e for e in main['entries']}
     for work in home['works']:
