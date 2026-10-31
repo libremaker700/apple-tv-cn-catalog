@@ -6,30 +6,8 @@
     "douban_or_ikanbot_identity",
     "public_source_match"
   ],
-  "records": [
-    {
-      "slug": "women-in-blue-las-azules",
-      "en": "Women in Blue (Las Azules)",
-      "searchStatus": "douban_direct",
-      "confidence": "VERIFIED",
-      "sourcePolicy": "eligible",
-      "title": "女警出更",
-      "sourceMatch": {
-        "title": "女警出更第二季",
-        "routes": 2,
-        "provider": "hn"
-      },
-      "sourceEvents": [
-        {
-          "provider": "ff",
-          "http": 403
-        }
-      ]
-    }
-  ],
-  "changed": [
-    "women-in-blue-las-azules"
-  ],
+  "records": [],
+  "changed": [],
   "geminiUsed": false,
   "accounts": [],
   "reservedThisMonth": 4

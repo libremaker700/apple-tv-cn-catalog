@@ -1,27 +1,5 @@
 {
-  "records": [
-    {
-      "slug": "women-in-blue-las-azules",
-      "check": {
-        "schema": 1,
-        "en": "Women in Blue (Las Azules)",
-        "kind": "series",
-        "season": 2,
-        "year": "2026",
-        "found": true,
-        "routes": 2,
-        "checkedAt": 1793444887
-      },
-      "events": [
-        {
-          "provider": "ff",
-          "http": 403
-        }
-      ]
-    }
-  ],
-  "changed": [
-    "women-in-blue-las-azules"
-  ],
-  "checkedAt": 1793444887
+  "records": [],
+  "changed": [],
+  "checkedAt": 1793445103
 }
