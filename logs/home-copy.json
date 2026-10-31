@@ -1,87 +1,272 @@
 {
-  "checkedAt": 1793414510,
+  "checkedAt": 1793414711,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
-      "requested": 1,
-      "cacheHits": 8,
-      "translated": 1,
+      "requested": 0,
+      "cacheHits": 9,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
+    },
+    {
+      "requested": 6,
+      "cacheHits": 0,
+      "translated": 6,
       "pending": 0,
       "apiHttp": 200,
       "retainedCopy": 0,
       "sourceMissing": 0,
       "model": "gemini-3.5-flash-lite",
       "usage": {
-        "promptTokenCount": 141,
-        "candidatesTokenCount": 68,
-        "totalTokenCount": 209,
+        "promptTokenCount": 416,
+        "candidatesTokenCount": 407,
+        "totalTokenCount": 823,
         "promptTokensDetails": [
           {
             "modality": "TEXT",
-            "tokenCount": 141
+            "tokenCount": 416
           }
         ],
         "serviceTier": "standard"
       },
-      "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
+      "source": "https://tv.apple.com/us/room/coming-to-appletv/edt.item.62e4314e-8707-4e17-9b77-cdb29787ba94"
     },
     {
-      "source": "https://tv.apple.com/us/room/coming-to-appletv/edt.item.62e4314e-8707-4e17-9b77-cdb29787ba94",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 9,
+      "cacheHits": 1,
+      "translated": 9,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 521,
+        "candidatesTokenCount": 577,
+        "totalTokenCount": 1098,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 521
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus"
     },
     {
-      "source": "https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 7,
+      "cacheHits": 3,
+      "translated": 7,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 449,
+        "candidatesTokenCount": 463,
+        "totalTokenCount": 912,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 449
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/sci-fi/edt.item.650b3154-accd-4b87-9f89-6bde117cee31"
     },
     {
-      "source": "https://tv.apple.com/us/room/sci-fi/edt.item.650b3154-accd-4b87-9f89-6bde117cee31",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 10,
+      "cacheHits": 0,
+      "translated": 10,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 569,
+        "candidatesTokenCount": 594,
+        "totalTokenCount": 1163,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 569
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/nonfiction/edt.item.645ac94d-2a19-439b-8a72-c8588eb16067"
     },
     {
-      "source": "https://tv.apple.com/us/room/nonfiction/edt.item.645ac94d-2a19-439b-8a72-c8588eb16067",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 3,
+      "cacheHits": 7,
+      "translated": 3,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 233,
+        "candidatesTokenCount": 189,
+        "totalTokenCount": 422,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 233
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
     },
     {
-      "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 2,
+      "cacheHits": 8,
+      "translated": 2,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 179,
+        "candidatesTokenCount": 137,
+        "totalTokenCount": 316,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 179
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/tv-shows/edt.item.690d376a-3d01-4c9f-825e-79e3f8ba78ea"
     },
     {
-      "source": "https://tv.apple.com/us/room/tv-shows/edt.item.690d376a-3d01-4c9f-825e-79e3f8ba78ea",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 3,
+      "cacheHits": 7,
+      "translated": 3,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 231,
+        "candidatesTokenCount": 193,
+        "totalTokenCount": 424,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 231
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/dramas/edt.item.6452b08d-74b7-469c-8398-16932e421e67"
     },
     {
-      "source": "https://tv.apple.com/us/room/dramas/edt.item.6452b08d-74b7-469c-8398-16932e421e67",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 8,
+      "cacheHits": 2,
+      "translated": 8,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 470,
+        "candidatesTokenCount": 517,
+        "totalTokenCount": 987,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 470
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/comedies/edt.item.6452ad5e-06aa-4fcf-9411-ea551f0bf88a"
     },
     {
-      "source": "https://tv.apple.com/us/room/comedies/edt.item.6452ad5e-06aa-4fcf-9411-ea551f0bf88a",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 4,
+      "cacheHits": 5,
+      "translated": 4,
+      "pending": 1,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 1,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 277,
+        "candidatesTokenCount": 268,
+        "totalTokenCount": 545,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 277
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f"
     },
     {
-      "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 6,
+      "cacheHits": 4,
+      "translated": 6,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 391,
+        "candidatesTokenCount": 411,
+        "totalTokenCount": 802,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 391
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
     },
     {
-      "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
-    },
-    {
-      "source": "https://tv.apple.com/us/room/movies/uts.room.movies-on-apple-tv",
-      "failure": "official_copy_unavailable",
-      "retainedCopy": 0
+      "requested": 5,
+      "cacheHits": 4,
+      "translated": 5,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 335,
+        "candidatesTokenCount": 319,
+        "totalTokenCount": 654,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 335
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "source": "https://tv.apple.com/us/room/movies/uts.room.movies-on-apple-tv"
     }
   ],
-  "translated": 1,
-  "pending": 0,
-  "version": "f6d26dac845c4629b454780141496d8a3bc610c1aab272ee3a3493b809f59bbd"
+  "translated": 63,
+  "pending": 1,
+  "version": "d17949cb9e1b8744a95edb7537bd8d0d7f50f12fc662bd1d4a6a2d286a8c7502"
 }
