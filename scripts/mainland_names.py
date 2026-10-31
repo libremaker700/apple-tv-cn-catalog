@@ -1,4 +1,4 @@
-"""You.com first -> independent Douban/ikanbot identity -> bounded public source comparison.
+"""Direct Douban title -> bounded sources -> search-account fallback with page verification.
 
 Only verified page fields may become titles. Gemini is never called here.
 """
@@ -88,7 +88,7 @@ def republish_home(home,root):
 
 def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');cache_path=root/'data/mainland-name-cache.json';cache=read(cache_path,{'records':{},'budgets':{}});now=int(time.time());month=time.strftime('%Y-%m',time.gmtime(now));budget=200
-    report={'order':['you.com','douban_or_ikanbot_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False};used=int(cache['budgets'].get(month,0))
+    report={'order':['douban_direct','public_source_match','you.com_fallback','douban_or_ikanbot_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False};used=int(cache['budgets'].get(month,0))
     def reserve():
         nonlocal used
         if used>=budget:return False
@@ -105,7 +105,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if slugs and key not in slugs:continue
         if key in seen:continue
         seen.add(key)
-        release_work=release_by_slug.get(key,work);deferred_now=source_deferred(release_work,now)
+        release_work=release_by_slug.get(key,work)
+        n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1)
+        current=next((s for s in work.get('seasons',[])if s.get('season')==n),{})
+        deferred_now=source_deferred(current or release_work,now)
         released_after_name_only=old.get('result',{}).get('sourcePolicy')=='deferred_until_release'and not deferred_now
         if zh.get('name_status')=='verified_title_sources'and not force and not released_after_name_only:continue
         if now<old.get('nextRetry',0)and not force and not released_after_name_only:continue
@@ -113,17 +116,29 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if not re.fullmatch(r'(19|20)\d{2}',year):continue
         if len(report['records'])>=max(0,min(5,int(limit))):break
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':year,'want_summary':False}
+        source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
+        deferred=deferred_now;best=None;events=[];probed=False
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
         else:
-            hits,status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
-            patch=independent_name(ref,hits,lookup,now)
+            patch=DoubanMobile(lookup.pages).lookup(ref,str(now));status='douban_direct'
+            if patch and not deferred:
+                direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
+                best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True
+            if not patch or not deferred and not best:
+                hits,fallback_status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
+                fallback=independent_name(ref,hits,lookup,now)
+                status='douban_direct_then_'+fallback_status if patch else fallback_status
+                if fallback:
+                    if patch:
+                        fallback['aliases_zh']=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])+[fallback['display_name_zh']]+fallback.get('aliases_zh',[])))
+                        fallback['sources']=patch['sources']+fallback.get('sources',[])
+                        fallback['display_name_zh']=patch['display_name_zh']
+                    patch=fallback;probed=False
         record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
         if patch:
-            names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])));n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1);rows=work.get('seasons',[]);current=next((s for s in rows if s.get('season')==n),{})
-            source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
-            deferred=source_deferred(release_by_slug.get(key,work),now)
-            best,events=(None,[])if deferred else(probe or public_sources)(source_ref,names,providers)
+            names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
+            if not deferred and not probed:best,events=(probe or public_sources)(source_ref,names,providers)
             record['sourcePolicy']='deferred_until_release'if deferred else'eligible'
             animated=any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[]))
             title=patch['display_name_zh']if animated or not best else base(best['title'])
@@ -132,7 +147,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         cache['records'][key]={'checkedAt':now,'nextRetry':now+86400,'result':record};report['records'].append(record);dump(cache_path,cache)
     report['accounts']=client.events;report['reservedThisMonth']=used;dump(root/'logs/mainland-name-sync.json',report)
     if report['changed']:
-        publish(main,load(root/'docs/version.json').get('checked_at'),'youcom-verified-mainland-names')
+        publish(main,load(root/'docs/version.json').get('checked_at'),'douban-first-verified-mainland-names')
         published=load(root/'docs/catalog.json');by_slug={e['slug']:e for e in published['entries']}
         for work in home['works']:
             if work.get('knownCatalog')and work['slug']in report['changed']:work['zh']=copy.deepcopy(by_slug[work['slug']].get('zh'))

@@ -6,6 +6,11 @@ CC=OpenCC('t2s')
 
 def norm(s):return re.sub(r'[^a-z0-9\u3400-\u9fff]','',str(s or '').casefold())
 def base_title(s):return re.sub(r'\s*(?:第\s*[一1]\s*季|season\s*1)\s*$','',str(s or ''),flags=re.I).strip()
+
+def title_queries(title):
+    title=str(title or '').strip()
+    short=re.sub(r'\s*\([^()]{1,100}\)\s*$','',title).strip()
+    return list(dict.fromkeys(t for t in (title,short) if t))
 def mainland_name(s):return isinstance(s,str) and bool(re.search(r'[\u3400-\u9fff]',s)) and not re.search(r'[（(](?:港|台|香港|台湾|臺灣)[）)]',s)
 def imdb(data):
     extra=(data.get('attrs') or {}).get('imdb',[])
@@ -21,10 +26,10 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     wanted='movie' if ref.get('kind')=='movie' else 'tv'
     if endpoint!=wanted or data.get('type') not in (wanted,None,''):return None
     if re.search(r'第\s*(?:[2-9]|[1-9]\d|[二三四五六七八九十百]+)\s*季|season\s*(?:[2-9]|[1-9]\d)',str(data['title'])+' '+str(data.get('original_title','')),re.I):return None
-    expected=norm(base_title(ref.get('english_title') or ref.get('original_title')))
+    expected={norm(base_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
     aka=data.get('aka') if isinstance(data.get('aka'),list) else []
     originals=[data.get('original_title','')]+aka
-    if not expected or expected not in {norm(base_title(s)) for s in originals}:return None
+    if not expected or not expected.intersection(norm(base_title(s)) for s in originals):return None
     expected_year=str(ref.get('year',''));source_year=str(data.get('year',''))
     if ref.get('imdb_id') and imdb(data) and imdb(data)!=ref['imdb_id']:return None
     if not re.fullmatch(r'(19|20)\d{2}',source_year) or not re.fullmatch(r'(19|20)\d{2}',expected_year):return None
@@ -52,15 +57,19 @@ class DoubanMobile:
         self.diagnostics.append({'stage':'subject','subject_id':str(subject_id),'status':'VERIFIED' if patch else 'UNVERIFIED'})
         return patch
     def lookup(self,ref,checked_at):
-        title=ref.get('english_title') or ref.get('original_title');rows=self.pages.json('https://movie.douban.com/j/subject_suggest',params={'q':title})
-        if not isinstance(rows,list):self.diagnostics.append({'stage':'suggest','status':'UNAVAILABLE'});return None
-        if not rows:self.diagnostics.append({'stage':'suggest','status':'EMPTY_RESPONSE'});return None
-        patches=[]
-        for row in rows[:3]:
-            if not isinstance(row,dict):continue
-            sid=str(row.get('id',''))
-            if not re.fullmatch(r'\d{1,12}',sid):continue
-            patch=self.subject(ref,sid,checked_at)
-            if patch:patches.append(patch)
-        names={norm(p['display_name_zh']) for p in patches}
-        return patches[0] if len(names)==1 else None
+        seen=set()
+        for title in title_queries(ref.get('english_title') or ref.get('original_title')):
+            rows=self.pages.json('https://movie.douban.com/j/subject_suggest',params={'q':title})
+            if not isinstance(rows,list):self.diagnostics.append({'stage':'suggest','status':'UNAVAILABLE'});return None
+            if not rows:self.diagnostics.append({'stage':'suggest','status':'EMPTY_RESPONSE'});continue
+            patches=[]
+            for row in rows[:3]:
+                if not isinstance(row,dict):continue
+                sid=str(row.get('id',''))
+                if not re.fullmatch(r'\d{1,12}',sid) or sid in seen:continue
+                seen.add(sid);patch=self.subject(ref,sid,checked_at)
+                if patch:patches.append(patch)
+            names={norm(p['display_name_zh']) for p in patches}
+            if len(names)==1:return patches[0]
+            if len(names)>1:return None
+        return None

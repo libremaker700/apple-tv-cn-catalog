@@ -12,6 +12,22 @@ class Identity(unittest.TestCase):
         self.assertIsNone(independent_name({'english_title':'Now & Then','year':'2022'},[{'title':'过去如今之后','url':'https://movie.douban.com/subject/123/reviews'}],Fake(),0))
 
 class UpcomingPolicy(unittest.TestCase):
+    def test_direct_verified_name_and_source_skip_paid_search(self):
+        import tempfile,json
+        from unittest.mock import patch,Mock
+        from mainland_names import run
+        with tempfile.TemporaryDirectory()as directory:
+            root=Path(directory);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir()
+            entry={'slug':'women-in-blue-las-azules','en':'Women in Blue (Las Azules)','kind':'series','releaseDate':'2026-08-12','artworkSeasonNumber':2,'seasons':[{'season':2,'year':'2026','releaseDate':'2026-08-12'}],'zh':{'_identityYear':2024}}
+            for path,value in [('docs/catalog.json',{'entries':[entry]}),('docs/home/home.json',{'works':[]}),('docs/version.json',{})]:(root/path).write_text(json.dumps(value),encoding='utf8')
+            client=Mock(events=[]);probe=Mock(return_value=({'title':'女警出更第二季','routes':2,'provider':'hn'},[]))
+            verified={'display_name_zh':'女警出更','aliases_zh':[],'sources':[{'url':'https://movie.douban.com/subject/35912846/'}]}
+            with patch('mainland_names.DoubanMobile') as mobile,patch('mainland_names.publish'),patch('mainland_names.republish_home'):
+                mobile.return_value.lookup.return_value=verified
+                result=run(root,client=client,lookup=Mock(),probe=probe)
+            client.search.assert_not_called();self.assertEqual(result['reservedThisMonth'],0)
+            self.assertEqual(result['records'][0]['title'],'女警出更')
+            self.assertEqual(probe.call_args.args[0],{'year':'2026','season':2,'kind':'series'})
     def test_future_and_unknown_announced_dates_defer_but_release_day_is_eligible(self):
         from mainland_names import source_deferred
         import calendar

@@ -36,7 +36,7 @@ jobs:
           java-version: '17'
       - run: pip install requests Pillow opencc-python-reimplemented
       - run: python -m unittest discover -s tests -v
-      - name: You.com names, independent page identity, then source comparison
+      - name: Direct Douban names and sources, then verified search fallback
         id: lookup
         env:
           YDC_API_KEYI_1: ${{ secrets.YDC_API_KEYI_1 }}

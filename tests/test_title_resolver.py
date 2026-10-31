@@ -31,6 +31,19 @@ class NoSearch:
     stopped=False
     def search(self,*a):return None,{'status':'monthly_budget_exhausted'}
 class ResolverTests(unittest.TestCase):
+    def test_direct_english_query_without_parenthetical_alias_still_verifies_subject(self):
+        class AliasPages:
+            def __init__(self):self.queries=[]
+            def json(self,url,**kw):
+                if 'subject_suggest' in url:
+                    q=kw['params']['q'];self.queries.append(q)
+                    return [{'id':'35912846','type':'movie'}] if q=='Women in Blue' else []
+                return {'id':'35912846','title':'女警出更 第1季','original_title':'Las Azules Temporada 1','aka':['Women in Blue'],'type':'tv','year':'2024'}
+        pages=AliasPages();ref={'english_title':'Women in Blue (Las Azules)','kind':'tv','year':'2024'}
+        result=DoubanMobile(pages).lookup(ref,'now')
+        self.assertEqual(result['display_name_zh'],'女警出更')
+        self.assertEqual(pages.queries,['Women in Blue (Las Azules)','Women in Blue'])
+        self.assertIsNone(DoubanMobile(AliasPages()).lookup(dict(ref,year='2026'),'now'))
     def test_mobile_ignores_suggest_type_and_checks_original_year_kind(self):
         pages=Pages(SUBJECT);result=DoubanMobile(pages).lookup(REF,'now')
         self.assertEqual(result['display_name_zh'],'追捕刺客');self.assertTrue(pages.urls[-1].endswith('/tv/12345'))
