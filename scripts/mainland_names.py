@@ -117,14 +117,14 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if len(report['records'])>=max(0,min(5,int(limit))):break
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':year,'want_summary':False}
         source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
-        deferred=deferred_now;best=None;events=[];probed=False
+        deferred=deferred_now;best=None;events=[];probed=False;probed_names=set()
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
         else:
             patch=DoubanMobile(lookup.pages).lookup(ref,str(now));status='douban_direct'
             if patch and not deferred:
                 direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
-                best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True
+                best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True;probed_names.update(direct_names)
             if not patch or not deferred and not best:
                 hits,fallback_status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
                 fallback=independent_name(ref,hits,lookup,now)
@@ -138,7 +138,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
         if patch:
             names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
-            if not deferred and not probed:best,events=(probe or public_sources)(source_ref,names,providers)
+            if not deferred and not probed:
+                remaining=[name for name in names if name not in probed_names]
+                if remaining:
+                    best,new_events=(probe or public_sources)(source_ref,remaining,providers);events+=new_events
             record['sourcePolicy']='deferred_until_release'if deferred else'eligible'
             animated=any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[]))
             title=patch['display_name_zh']if animated or not best else base(best['title'])
