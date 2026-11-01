@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-01T23:04:07+00:00",
+  "checkedAt": "2026-11-01T23:20:23+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -14,22 +14,20 @@
       "result": {
         "slug": "to-mom-and-dad-with-love",
         "en": "To Mom (And Dad), With Love",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 0,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 0,
-            "cached": false
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35883780",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "史努比特辑：将爱献给父母",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "status": "network_incomplete"
+      "status": "verified"
     },
     {
       "slug": "home-6ippzjfc3jg0l4b8x8cslmhfa",
@@ -40,17 +38,21 @@
       "result": {
         "slug": "home-6ippzjfc3jg0l4b8x8cslmhfa",
         "en": "Peanuts in Space: Secrets of Apollo 10",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 0,
-            "cooldown": true
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35239017",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "花生在太空：阿波罗十号的秘密",
+        "sourceMatch": null,
+        "sourceEvents": [],
+        "originalReleaseYear": 2019
       },
-      "status": "network_incomplete"
+      "status": "verified"
     },
     {
       "slug": "12-12-12",
@@ -74,12 +76,22 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
-            "cooldown": true
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cached": false
           }
         ]
       },
-      "status": "network_incomplete"
+      "status": "unverified"
     },
     {
       "slug": "awkwafina-the-unlikely-cook",
@@ -103,7 +115,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -124,7 +146,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -145,12 +172,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -179,27 +211,32 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -228,7 +265,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -249,7 +291,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -270,7 +317,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -291,7 +343,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -312,7 +369,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -333,12 +395,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -359,12 +426,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -385,7 +457,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -406,12 +488,22 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -432,7 +524,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -453,27 +555,37 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -494,17 +606,22 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -525,12 +642,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -551,7 +673,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -572,7 +699,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -593,7 +725,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -614,7 +751,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -635,7 +777,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -656,12 +803,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -682,7 +834,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -703,7 +860,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -724,12 +886,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -750,7 +917,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -771,7 +943,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -800,7 +977,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -821,7 +1003,22 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -842,37 +1039,42 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -893,7 +1095,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -922,7 +1129,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -943,22 +1155,27 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -987,12 +1204,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1013,12 +1235,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1047,12 +1274,17 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           },
           {
             "host": "m.douban.com",
-            "status": 0,
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1073,7 +1305,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1094,7 +1331,12 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1115,7 +1357,22 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 0,
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 301,
             "cooldown": true
           }
         ]
@@ -1126,6 +1383,8 @@
   "summary": {
     "future_release": 7,
     "missing_identity": 1,
-    "network_incomplete": 43
+    "network_incomplete": 40,
+    "unverified": 1,
+    "verified": 2
   }
 }

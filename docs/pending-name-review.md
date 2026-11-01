@@ -2,14 +2,14 @@
 
 本报告仅复核中文名，不查播放源，不使用 Gemini。搜索提示不能直接成为中文名；通过作品身份核验后才发布。
 
-检查时间（UTC）：2026-11-01T23:04:07+00:00
+检查时间（UTC）：2026-11-01T23:20:23+00:00
 
 | 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |
 |---|---|---|---|
-| To Mom (And Dad), With Love | 网络未完成，待重试 |  | 2022 / 0 |
-| Peanuts in Space: Secrets of Apollo 10 | 网络未完成，待重试 |  | 2021 / 0 |
+| To Mom (And Dad), With Love | 已确认中文名 | 史努比特辑：将爱献给父母 | 2022 / 0 |
+| Peanuts in Space: Secrets of Apollo 10 | 已确认中文名 | 花生在太空：阿波罗十号的秘密 | 2021 / 0 |
 | 12 12 12 | 尚未上线，本轮跳过 |  | 2026 / 1 |
-| A Carpool Karaoke Christmas | 网络未完成，待重试 |  | 2024 / 0 |
+| A Carpool Karaoke Christmas | 身份未核实 |  | 2024 / 0 |
 | Awkwafina: The Unlikely Cook | 尚未上线，本轮跳过 |  | 2026 / 1 |
 | BE@RBRICK | 网络未完成，待重试 |  | 2025 / 1 |
 | Carpool Karaoke: The Series | 网络未完成，待重试 |  | 2017 / 1 |
