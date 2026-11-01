@@ -62,5 +62,53 @@
   {
     "id": "xigua",
     "url": "https://caiji.xgzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "modu",
+    "url": "https://www.mdzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "zzoc",
+    "url": "https://www.zzoc.cc/api.php/provide/vod"
+  },
+  {
+    "id": "5o5k",
+    "url": "https://5o5k.com/api.php/provide/vod"
+  },
+  {
+    "id": "iqy",
+    "url": "https://iqiyizyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "wujin",
+    "url": "https://api.wujinapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "zuida",
+    "url": "https://api.zuidapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "piaoling",
+    "url": "https://p2100.net/api.php/provide/vod"
+  },
+  {
+    "id": "maoyan",
+    "url": "https://api.maoyanapi.top/api.php/provide/vod"
+  },
+  {
+    "id": "jiji",
+    "url": "https://caiji.jjzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "uku",
+    "url": "https://api.ukuapi88.com/api.php/provide/vod"
+  },
+  {
+    "id": "ruyi",
+    "url": "https://cj.rycjapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "ikun",
+    "url": "https://ikunzyapi.com/api.php/provide/vod"
   }
 ]

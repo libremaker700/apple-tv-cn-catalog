@@ -21,7 +21,15 @@ def source_deferred(work,now=None):
     return bool(work.get('upcoming')or work.get('metadataStatus')=='announced')
 
 def source_count(row):
-    return sum(any(re.match(r'https?://',e.split('$',1)[-1].split('|',1)[0])for e in group.split('#'))for group in str(row.get('vod_play_url','')).split('$$$')[:20])
+    from source_votes import usable_groups
+    return usable_groups(row)
+def verified_subject(info):
+    value=str(info.get('douban_id')or'')
+    if re.fullmatch(r'[1-9][0-9]{4,9}',value):return value
+    for source in info.get('sources',info.get('name_sources',[])):
+        match=re.search(r'^https://(?:movie|m)\.douban\.com/(?:movie/)?subject/(\d+)',source.get('url',''))
+        if match:return match[1]
+    return None
 def season(title):
     found=re.search(r'第([0-9一二三四五六七八九十百]+)季|season\s*(\d+)',title,re.I)
     if not found:return 1
@@ -32,7 +40,7 @@ def season(title):
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
 def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
 
-SOURCE_QUERY_POLICY='season-suffix-v1'
+SOURCE_QUERY_POLICY='season-suffix-library-votes-v2'
 def source_queries(ref,names):
     """Try the selected season explicitly before the unsuffixed title, per verified alias."""
     try:number=int(ref.get('season',1))
@@ -41,6 +49,9 @@ def source_queries(ref,names):
     for name in names[:4]:
         if not isinstance(name,str)or not name.strip():continue
         variants=[name.strip()]
+        if ref.get('kind')=='movie':
+            short=re.sub(r'[哦啊呀啦吧]+$','',re.split(r'[！!，,:：]',name,1)[0]).strip()
+            if 4<=len(short)<=24 and norm(short)!=norm(name):variants.append(short)
         if ref.get('kind')=='series'and 1<=number<=100:
             root=base(name);digits='零一二三四五六七八九'
             chinese=digits[number]if number<10 else ('一百'if number==100 else ('十'if number<20 else digits[number//10]+'十')+(digits[number%10]if number%10 else ''))
@@ -51,34 +62,19 @@ def source_queries(ref,names):
     return output
 def candidate_matches(ref,row,names):
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))
-    if re.search(r'解说|预告|短剧|伦理',kind):return False
-    if norm(base(title))not in {norm(base(n))for n in names}or year!=str(ref['year']):return False
-    if ref['kind']=='series':return season(title)==ref['season']and not re.search(r'恐怖片|动作片|爱情片|剧情片|喜剧片',kind)
-    return not re.search(r'电视剧|连续剧|综艺',kind)
+    if not kind or re.search(r'解说|预告|花絮|短剧|伦理',kind+' '+title):return False
+    expected=str(ref.get('douban_id')or'');actual=str(row.get('vod_douban_id')or'');valid=lambda s:bool(re.fullmatch(r'[1-9][0-9]{4,9}',s))
+    if valid(expected)and valid(actual)and expected!=actual:return False
+    same_id=valid(expected)and expected==actual
+    if not same_id:
+        people=lambda text:{norm(n)for n in re.split(r'[,，/、;；|]+',str(text or''))if norm(n)and norm(n)not in ('未知','不详','unknown')}
+        if not(people(ref.get('directors'))&people(row.get('vod_director')))or len(people(ref.get('actors'))&people(row.get('vod_actor')))<2:return False
+    if (norm(base(title))not in {norm(base(n))for n in names}and not same_id)or year!=str(ref['year']):return False
+    if ref['kind']=='series':return season(title)==ref['season']and bool(re.search(r'剧|劇|动漫|动画|综艺',kind))and not re.search(r'片|电影',kind)
+    return (bool(re.search(r'电影|電影|片',kind))or same_id and bool(re.search(r'动漫|动画',kind))and not re.search(r'第.+季|season\s*\d+',title,re.I))and not re.search(r'电视剧|连续剧|欧美剧|剧集|日剧|韩剧|综艺',kind)
 def public_sources(ref,names,providers,session=None,deadline=None):
-    client=session or requests.Session();best=None;observed=0;events=[];seen=set()
-    if deadline is None:deadline=time.monotonic()+90
-    for provider in providers:
-        for name in source_queries(ref,names):
-            if deadline is not None and time.monotonic()>=deadline:return best,events
-            try:
-                response=client.get(provider['url'],params={'ac':'detail','wd':name},timeout=(5,9),allow_redirects=False)
-                if response.status_code!=200:
-                    events.append({'provider':provider['id'],'http':response.status_code})
-                    if response.status_code in (400,404,422):continue
-                    break
-                rows=response.json().get('list',[])
-                for row in rows[:30]:
-                    record=(provider['id'],str(row.get('vod_id','')))
-                    if not candidate_matches(ref,row,names)or record in seen:continue
-                    seen.add(record)
-                    count=source_count(row)
-                    if count and(best is None or count>best['routes']):best={'title':row['vod_name'],'routes':count,'provider':provider['id']}
-                    observed+=count
-                if observed>=10:return best,events
-            except (requests.RequestException,ValueError,TypeError):events.append({'provider':provider['id'],'http':0});break
-        if best:break  # One useful provider is enough for scheduled background name calibration.
-    return best,events
+    from source_votes import collect
+    return collect(ref,names,providers,session,time.monotonic()+90 if deadline is None else deadline,candidate_matches,source_queries,base,norm)
 
 def independent_name(ref,hits,lookup,now,http=None):
     for item in hits[:6]:
@@ -141,12 +137,17 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if len(report['records'])>=max(0,min(5,int(limit))):break
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':year,'want_summary':False}
         source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
+        if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set()
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
         else:
-            patch=DoubanMobile(lookup.pages).lookup(ref,str(now));status='douban_direct'
+            mobile=DoubanMobile(lookup.pages);subject=verified_subject(zh)
+            patch=mobile.subject(ref,subject,str(now))if subject else None
+            if not patch:patch=mobile.lookup(ref,str(now))
+            status='douban_direct'
             if patch and not deferred:
+                if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
                 direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
                 best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True;probed_names.update(direct_names)
             if not patch or not deferred and not best:
@@ -167,12 +168,13 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 if remaining:
                     best,new_events=(probe or public_sources)(source_ref,remaining,providers);events+=new_events
             record['sourcePolicy']='deferred_until_release'if deferred else'eligible'
-            animated=any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[]))
-            title=patch['display_name_zh']if animated or not best else base(best['title'])
+            title=patch['display_name_zh']if not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any('douban'in s['url']for s in patch['sources'])else zh.get('douban_title',''))
+            if verified_subject(patch):zh['douban_id']=verified_subject(patch)
             if not deferred and (probed or best):
                 from source_availability import make_check
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
+                if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
         cache['records'][key]={'checkedAt':now,'nextRetry':now+86400,'result':record};report['records'].append(record);dump(cache_path,cache)
     report['accounts']=client.events;report['reservedThisMonth']=used;dump(root/'logs/mainland-name-sync.json',report)

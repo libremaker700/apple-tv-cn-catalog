@@ -18,6 +18,9 @@ def applies(check,work):
     ref=reference(work)
     return isinstance(check,dict)and check.get('schema')==1 and all(check.get(k)==v for k,v in ref.items())and type(check.get('found'))is bool and type(check.get('routes'))is int and 0<=check['routes']<=1000 and check['found']==(check['routes']>0)and type(check.get('checkedAt'))is int and check['checkedAt']>0 and re.fullmatch(r'(19|20)\d{2}',ref['year'])is not None
 
+def retry_interval(check,selection):
+    return 3600 if check['found']and selection.get('complete')is False else 7*86400 if check['found']else 86400
+
 def apply_cached(work,root=ROOT):
     from mainland_names import source_deferred
     ref=reference(work);current=next((s for s in work.get('seasons',[])if s.get('season')==ref['season']),{})
@@ -25,7 +28,10 @@ def apply_cached(work,root=ROOT):
     record=read(root/'data/cloud-source-cache.json',{'records':{}})['records'].get(work['slug'],{})
     check=record.get('check');zh=work.get('zh')or{}
     existing=zh.get('sourceCheck')or{}
-    if zh.get('name_status')=='verified_title_sources'and applies(check,work)and existing.get('checkedAt',0)<=check['checkedAt']:zh['sourceCheck']=copy.deepcopy(check);work['zh']=zh
+    if zh.get('name_status')=='verified_title_sources'and applies(check,work)and existing.get('checkedAt',0)<=check['checkedAt']:
+        zh['sourceCheck']=copy.deepcopy(check);work['zh']=zh
+        from source_votes import apply_selection
+        apply_selection(work,copy.deepcopy(record.get('selection')))
     return work
 
 def run(root=ROOT,limit=3,probe=None,now=None,slugs=None):
@@ -44,20 +50,26 @@ def run(root=ROOT,limit=3,probe=None,now=None,slugs=None):
         names=list(dict.fromkeys(base(n)for n in [zh['title']]+zh.get('aliases',[])if re.search(r'[\u3400-\u9fff]',n)))[:4]
         fingerprint=hashlib.sha256(json.dumps([SOURCE_QUERY_POLICY,ref,names],sort_keys=True,ensure_ascii=False).encode()).hexdigest();old=cache['records'].get(slug,{})
         inline=zh.get('sourceCheck')or{}
-        if applies(inline,work)and (inline['found']or old.get('queryPolicy')==SOURCE_QUERY_POLICY)and now<inline['checkedAt']+(7*86400 if inline['found']else 86400)and inline['checkedAt']>=old.get('checkedAt',0):
-            cache['records'][slug]={'checkedAt':inline['checkedAt'],'nextRetry':inline['checkedAt']+(7*86400 if inline['found']else 86400),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':copy.deepcopy(inline)}
+        selection=zh.get('nameSelection')or old.get('selection')or{}
+        policy_ready=old.get('queryPolicy')==SOURCE_QUERY_POLICY or inline.get('found')and selection.get('policy')=='library-votes-v1'
+        if applies(inline,work)and policy_ready and now<inline['checkedAt']+retry_interval(inline,selection)and inline['checkedAt']>=old.get('checkedAt',0):
+            cache['records'][slug]={'checkedAt':inline['checkedAt'],'nextRetry':inline['checkedAt']+retry_interval(inline,selection),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':copy.deepcopy(inline),'selection':selection or None}
             dump(path,cache);continue
         if old.get('fingerprint')==fingerprint and now<old.get('nextRetry',0)and applies(old.get('check'),work):
             if zh.get('sourceCheck')!=old['check']:zh['sourceCheck']=copy.deepcopy(old['check']);report['changed'].append(slug)
             continue
         if len(report['records'])>=max(0,min(10,int(limit)))or time.monotonic()>=deadline:continue
         query={'kind':ref['kind'],'year':ref['year'],'season':ref['season']or 1}
+        subject=zh.get('douban_id')or next((re.search(r'/subject/(\d+)',s.get('url',''))[1]for s in zh.get('name_sources',[])if re.search(r'/subject/(\d+)',s.get('url',''))),None)
+        if subject:query['douban_id']=str(subject)
         best,events=probe(query,names,providers)if probe else public_sources(query,names,providers,deadline=deadline)
+        if not best and any(event.get('http',0)not in (200,400,404,422)for event in events):
+            report['records'].append({'slug':slug,'status':'incomplete','events':events});continue
         check=make_check(work,query,best,now);zh['sourceCheck']=check;work['zh']=zh
-        # Display name follows the strongest source, except animation keeps the verified Douban name.
-        if best and not any(str(g).casefold()in ('animation','动画')for g in work.get('genres',[])):
+        if best:
             selected=base(best['title']);zh['aliases']=list(dict.fromkeys([selected,zh['title']]+zh.get('aliases',[])));zh['title']=selected
-        cache['records'][slug]={'checkedAt':now,'nextRetry':now+(7*86400 if check['found']else 86400),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':check}
+            if best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
+        cache['records'][slug]={'checkedAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
         report['records'].append({'slug':slug,'check':check,'events':events});report['changed'].append(slug);dump(path,cache)
     by_slug={e['slug']:e for e in main['entries']}
     for work in home['works']:

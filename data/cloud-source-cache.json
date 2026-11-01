@@ -15,6 +15,36 @@
         "season": 2,
         "year": "2026"
       }
+    },
+    "home-1c5nvp802hos5t3u0umlukkwh": {
+      "checkedAt": 1793495628,
+      "nextRetry": 1793499228,
+      "fingerprint": "20be6e6218d1cca87fd24f5b50207746090a3522486f0ba60836d4ec394b0f8e",
+      "queryPolicy": "season-suffix-library-votes-v2",
+      "check": {
+        "schema": 1,
+        "en": "It’s the Great Pumpkin, Charlie Brown",
+        "kind": "movie",
+        "season": 0,
+        "year": "1966",
+        "found": true,
+        "routes": 2,
+        "checkedAt": 1793495628
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "这是南瓜大王哦！ 查理·布朗！",
+        "libraries": 2,
+        "checkedLibraries": 28,
+        "requestedLibraries": 28,
+        "complete": false,
+        "options": [
+          {
+            "title": "这是南瓜大王哦！ 查理·布朗！",
+            "libraries": 2
+          }
+        ]
+      }
     }
   }
 }

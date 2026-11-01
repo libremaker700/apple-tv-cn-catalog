@@ -15,7 +15,7 @@ class CloudChecks(unittest.TestCase):
         for kwargs in ({'en':'Other'},{'kind':'movie'},{'artworkSeasonNumber':3},{'artworkSeasonYear':'2025'}):self.assertFalse(applies(check,self.work(**kwargs)))
     def test_unknown_later_season_year_is_not_guessed_from_first_season(self):
         work=self.work(seasons=[],seasonNumber=3,releaseDate='2027-01-01');self.assertEqual(reference(work)['year'],'')
-    def test_scheduled_checks_reuse_results_and_keep_animation_douban_name(self):
+    def test_scheduled_checks_reuse_results_and_use_cloud_selected_name(self):
         for animated in (True,False):
             with self.subTest(animated=animated),tempfile.TemporaryDirectory()as folder:
                 root=Path(folder);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir();work=self.work(genres=['Animation']if animated else [])
@@ -23,7 +23,7 @@ class CloudChecks(unittest.TestCase):
                 probe=Mock(return_value=({'title':'片源名称第二季','routes':2,'provider':'hn'},[]))
                 with patch('source_availability.publish')as publish,patch('mainland_names.republish_home'):
                     result=run(root,probe=probe,now=1793440000);saved=publish.call_args.args[0]['entries'][0]
-                    self.assertEqual(saved['zh']['title'],'豆瓣名称'if animated else'片源名称');self.assertTrue(saved['zh']['sourceCheck']['found']);self.assertEqual(saved['zh']['sourceCheck']['season'],2)
+                    self.assertEqual(saved['zh']['title'],'片源名称');self.assertTrue(saved['zh']['sourceCheck']['found']);self.assertEqual(saved['zh']['sourceCheck']['season'],2)
                     public=json.dumps(saved['zh']['sourceCheck']);self.assertNotIn('hn',public);self.assertNotIn('playUrl',public)
                     # Replay the resulting publication: no second source query on the next scheduled run.
                     (root/'docs/catalog.json').write_text(json.dumps({'entries':[saved]}),encoding='utf8');run(root,probe=probe,now=1793440100);self.assertEqual(probe.call_count,1)

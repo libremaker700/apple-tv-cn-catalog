@@ -14,10 +14,10 @@ class SeasonQueries(unittest.TestCase):
             with self.subTest(required=required):
                 session=Mock();queries=[]
                 def get(url,params,**kwargs):
-                    queries.append(params['wd']);rows=[{'vod_id':'123','vod_name':required,'vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]if params['wd']==required else []
+                    queries.append(params['wd']);rows=[{'vod_id':'123','vod_douban_id':'12345678','vod_name':required,'vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]if params['wd']==required else []
                     return Mock(status_code=200,json=lambda:{'list':rows})
                 session.get.side_effect=get
-                found,_=public_sources({'kind':'series','year':'2005','season':1},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
+                found,_=public_sources({'kind':'series','year':'2005','season':1,'douban_id':'12345678'},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
                 self.assertEqual(queries[0],'邪恶力量第一季');self.assertEqual(found['routes'],1);self.assertEqual(found['title'],required)
     def test_movies_are_not_given_seasons_and_english_names_use_season(self):
         self.assertEqual(source_queries({'kind':'movie'},['电影名']),['电影名'])
@@ -29,13 +29,13 @@ class SeasonQueries(unittest.TestCase):
         session=Mock()
         def get(url,params,**kwargs):
             if params['wd']!='邪恶力量':return Mock(status_code=404)
-            return Mock(status_code=200,json=lambda:{'list':[{'vod_id':'123','vod_name':'邪恶力量第一季','vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]})
+            return Mock(status_code=200,json=lambda:{'list':[{'vod_id':'123','vod_douban_id':'12345678','vod_name':'邪恶力量第一季','vod_year':'2005','type_name':'欧美剧','vod_play_url':'第01集$https://example.invalid/one.m3u8'}]})
         session.get.side_effect=get
-        found,_=public_sources({'kind':'series','year':'2005','season':1},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
+        found,_=public_sources({'kind':'series','year':'2005','season':1,'douban_id':'12345678'},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
         self.assertEqual(found['routes'],1);self.assertEqual(session.get.call_count,3)
 class Identity(unittest.TestCase):
     def test_year_season_medium_and_full_name_are_kept(self):
-        ref={'kind':'series','year':'2026','season':2};row={'vod_name':'正确剧名第二季','vod_year':'2026','type_name':'欧美剧'}
+        ref={'kind':'series','year':'2026','season':2,'douban_id':'12345678'};row={'vod_douban_id':'12345678','vod_name':'正确剧名第二季','vod_year':'2026','type_name':'欧美剧'}
         self.assertTrue(candidate_matches(ref,row,['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_name='正确剧名第三季'),['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_year='2025'),['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_name='正确剧名的另一部'),['正确剧名']))
     def test_only_nonempty_web_media_groups_count(self):self.assertEqual(source_count({'vod_play_url':'正片$https://example.invalid/a.m3u8$$$正片$javascript:evil$$$'}),1)
     def test_review_links_and_search_headlines_are_not_identity_proof(self):
@@ -58,7 +58,7 @@ class UpcomingPolicy(unittest.TestCase):
                 result=run(root,client=client,lookup=Mock(),probe=probe)
             client.search.assert_not_called();self.assertEqual(result['reservedThisMonth'],0)
             self.assertEqual(result['records'][0]['title'],'女警出更')
-            self.assertEqual(probe.call_args.args[0],{'year':'2026','season':2,'kind':'series'})
+            self.assertEqual(probe.call_args.args[0],{'year':'2026','season':2,'kind':'series','douban_id':'35912846'})
     def test_future_and_unknown_announced_dates_defer_but_release_day_is_eligible(self):
         from mainland_names import source_deferred
         import calendar
