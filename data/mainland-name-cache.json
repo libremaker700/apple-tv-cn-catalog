@@ -154,10 +154,391 @@
         "searchStatus": "ok",
         "confidence": "UNVERIFIED"
       }
+    },
+    "not-a-box": {
+      "checkedAt": 1793544253,
+      "nextRetry": 1793630653,
+      "result": {
+        "slug": "not-a-box",
+        "en": "Not a Box",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "discoveryEvents": [
+          {
+            "account": "GEMINI_API_KEY_1",
+            "http": 404,
+            "status": "api_error"
+          },
+          {
+            "account": "GEMINI_API_KEY_2",
+            "http": 404,
+            "status": "api_error"
+          },
+          {
+            "account": "GEMINI_API_KEY_3",
+            "http": 404,
+            "status": "api_error"
+          },
+          {
+            "account": "GEMINI_API_KEY_4",
+            "http": 404,
+            "status": "api_error"
+          },
+          {
+            "provider": "ff",
+            "reason": "http"
+          },
+          {
+            "provider": "lz",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "bd",
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "reason": "http"
+          },
+          {
+            "provider": "bf",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xigua",
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "reason": "http"
+          },
+          {
+            "provider": "ruyi",
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "shared",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "ikanbot",
+            "reason": "identity_pending"
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "37374251",
+        "year": "2025",
+        "season": 1,
+        "actors": [
+          "伊恩·詹姆斯·柯莱特",
+          "伊莎贝尔·伯奇"
+        ],
+        "directors": [],
+        "url": "https://movie.douban.com/subject/37374251/"
+      },
+      "discovery": {
+        "_hints": [],
+        "ff": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "hn": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "lz": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 4,
+          "offset": 0,
+          "done": false
+        },
+        "jy": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "gs": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "bd": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "dytt": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "bf": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 4,
+          "offset": 0,
+          "done": false
+        },
+        "js": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "hh": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "sb": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "xl": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "yy": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "zy360": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "huya": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "xigua": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "modu": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "zzoc": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "5o5k": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "iqy": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "wujin": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "zuida": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "piaoling": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "maoyan": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "jiji": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "uku": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "ruyi": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 0
+        },
+        "ikun": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "changzhang": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "shared": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 7
+        },
+        "ikanbot": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 0,
+          "page": 1,
+          "offset": 1
+        },
+        "shenhua": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        },
+        "bblue": {
+          "queries": [
+            "Not a Box"
+          ],
+          "q": 1,
+          "page": 1,
+          "offset": 0,
+          "done": true
+        }
+      }
     }
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 8
+    "2026-11": 9
   }
 }
