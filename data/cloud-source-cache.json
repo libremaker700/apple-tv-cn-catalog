@@ -48,39 +48,38 @@
     },
     "nocturne": {
       "checkedAt": 1793518175,
-      "lastAttemptAt": 1793518175,
       "nextRetry": 1793521775,
       "fingerprint": "38a3e5ac3f4432022eee96314a9cecf38d124293e9cf55c8fb76ae5165bd1948",
       "queryPolicy": "all-app-adapters-library-votes-v3",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793518175,
         "en": "Nocturne",
-        "kind": "series",
-        "season": 1,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 26,
-        "checkedAt": 1793518175
+        "schema": 1,
+        "season": 1,
+        "year": "2026"
       },
       "selection": {
-        "policy": "library-votes-v1",
-        "title": "夜曲",
-        "libraries": 14,
-        "checkedLibraries": 15,
         "attemptedLibraries": 33,
-        "requestedLibraries": 33,
+        "checkedLibraries": 15,
         "complete": false,
+        "libraries": 14,
         "options": [
           {
-            "title": "夜曲",
-            "libraries": 14
+            "libraries": 14,
+            "title": "夜曲"
           },
           {
-            "title": "夜曲2026",
-            "libraries": 12
+            "libraries": 12,
+            "title": "夜曲2026"
           }
-        ]
+        ],
+        "policy": "library-votes-v1",
+        "requestedLibraries": 33,
+        "title": "夜曲"
       }
     },
     "silo": {
@@ -93,33 +92,328 @@
     },
     "slow-horses": {
       "checkedAt": 1793518175,
-      "lastAttemptAt": 1793518175,
       "nextRetry": 1793521775,
       "fingerprint": "478bf3aceffb9c88a63f31b18870d5a667e8ab4273177e1d62a9a808bfc0ab58",
       "queryPolicy": "all-app-adapters-library-votes-v3",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793518175,
         "en": "Slow Horses",
+        "found": true,
         "kind": "series",
+        "routes": 40,
+        "schema": 1,
         "season": 6,
+        "year": "2026"
+      },
+      "selection": {
+        "attemptedLibraries": 33,
+        "checkedLibraries": 18,
+        "complete": false,
+        "libraries": 25,
+        "options": [
+          {
+            "libraries": 25,
+            "title": "流人"
+          }
+        ],
+        "policy": "library-votes-v1",
+        "requestedLibraries": 33,
+        "title": "流人"
+      }
+    },
+    "the-savant": {
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "02b40d437d76d1c18489c08c6068ab75d81583602793e6ce43bb5ab454958217",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "wheres-wanda": {
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "7e24a6dd2af1ab1a258fa7f85639dd58a9a86d89fffdd1990da46d95080700f3",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "tenzing": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "464c3469faceac74940e5dadf2554fc5308dacf4b67f7ec0d34cac25036e08ab",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Tenzing",
+        "kind": "movie",
+        "season": 0,
         "year": "2026",
         "found": true,
-        "routes": 40,
-        "checkedAt": 1793518175
+        "routes": 14,
+        "checkedAt": 1793518945
       },
       "selection": {
         "policy": "library-votes-v1",
-        "title": "流人",
-        "libraries": 25,
-        "checkedLibraries": 18,
+        "title": "登峰传奇丹增诺盖",
+        "libraries": 5,
+        "checkedLibraries": 23,
         "attemptedLibraries": 33,
         "requestedLibraries": 33,
         "complete": false,
         "options": [
           {
-            "title": "流人",
-            "libraries": 25
+            "title": "登峰传奇丹增诺盖",
+            "libraries": 5
+          }
+        ]
+      }
+    },
+    "matchbox-the-movie": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "bf61d8e092a5922c0706f8d2752dde8adcc1f636feeb6fc0e92849483d330f8d",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Matchbox The Movie",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "火柴盒大电影",
+        "libraries": 23,
+        "checkedLibraries": 24,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "火柴盒大电影",
+            "libraries": 23
+          }
+        ]
+      }
+    },
+    "small-prophets": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "7f4207337bb8a1545b40fd958a1956019744066fcb0680fa83f4dd5175aa2eba",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Small Prophets",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 49,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "小先知",
+        "libraries": 23,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "小先知",
+            "libraries": 23
+          }
+        ]
+      }
+    },
+    "the-sisters-grimm": {
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "6150f6b703e0d3985b42373bbadbfdf1893ce8e3069c8b2128fe91fcc9a7e1a8",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "the-last-first-winter-k2": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "ed1ee1a1211b5d6cc6960b6f4b0181b1a91bb8ce6b96c972c959a88ea2383d8d",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Last First: Winter K2",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 2,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "万人之上：冬攀乔戈里峰",
+        "libraries": 2,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "万人之上：冬攀乔戈里峰",
+            "libraries": 2
+          }
+        ]
+      }
+    },
+    "knife-edge-chasing-michelin-stars": {
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "efbdd228a2023832485f77dfd63ef779bab830049b0d45b22b1608c08d8438da",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "brothers": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "13efee8ef864de12c78fb535aeb17b997ea441a20a0b5e9116b2c69c0d01f996",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Brothers",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "无间兄弟情",
+        "libraries": 21,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "无间兄弟情",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "last-seen": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "d2bfe2a6270b44e562cbe125aaaf1c1175ce6b97f837ab9f53156b36412fa05d",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Last Seen",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "最后目击",
+        "libraries": 22,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "最后目击",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "mayday": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "59a69f4b68143ac919d2c3790142956b8cde3ec35f81eb1ccfa859a553b533d8",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Mayday",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 36,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "求救信号",
+        "libraries": 24,
+        "checkedLibraries": 4,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "求救信号",
+            "libraries": 24
+          }
+        ]
+      }
+    },
+    "dark-matter": {
+      "checkedAt": 1793518945,
+      "lastAttemptAt": 1793518945,
+      "nextRetry": 1793522545,
+      "fingerprint": "8481965bb64ba54467f9bbf8aed026ef7536a898b8f790ac7afcfeea647397d7",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Dark Matter",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 30,
+        "checkedAt": 1793518945
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "人生复本",
+        "libraries": 21,
+        "checkedLibraries": 2,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "人生复本",
+            "libraries": 21
           }
         ]
       }
