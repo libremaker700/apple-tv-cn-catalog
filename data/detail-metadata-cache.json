@@ -103,6 +103,27 @@
           "rating": 6.6
         }
       ]
+    },
+    "umc.cmc.5louo8zb5eb7zs0dgk06tnk22": {
+      "en": "Vietnam: The War That Changed America",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36948390",
+          "sourceUrl": "https://movie.douban.com/subject/36948390/",
+          "title": "越南：改变美国的战争",
+          "summary": "以原始、亲切的视角审视越战对美国的影响。在西贡沦陷 50 周年即将到来之际，该系列节目通过个人故事，探讨了这场冲突的深远影响以及对社会的持久影响。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2025,
+          "checkedAt": "2026-11-01T10:04:13+00:00",
+          "originalTitle": "Vietnam: The War That Changed America",
+          "rating": 7.7
+        }
+      ]
     }
   }
 }
