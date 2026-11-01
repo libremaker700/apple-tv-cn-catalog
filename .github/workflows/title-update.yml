@@ -34,11 +34,13 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - run: pip install requests Pillow opencc-python-reimplemented
+      - run: pip install requests Pillow opencc-python-reimplemented cryptography
       - run: python -m unittest discover -s tests -v
       - name: Direct Douban names and sources, then verified search fallback
         id: lookup
         env:
+          APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
+          APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
           YDC_API_KEYI_1: ${{ secrets.YDC_API_KEYI_1 }}
           YDC_API_KEYI_2: ${{ secrets.YDC_API_KEYI_2 }}
           YDC_API_KEY_1: ${{ secrets.YDC_API_KEY_1 }}
@@ -57,6 +59,8 @@ jobs:
           python scripts/mainland_names.py "${ARGS[@]}"
       - name: Verify pending playback availability in GitHub
         env:
+          APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
+          APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
           TARGET_SLUG: ${{ inputs.slug }}
         run: |
           ARGS=(--limit 3)

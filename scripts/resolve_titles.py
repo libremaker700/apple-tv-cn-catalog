@@ -21,12 +21,11 @@ def export_map(root,catalog,checked):
             'aliases':zh.get('aliases',[]),'douban_url':zh.get('douban_url',''),'douban_id':zh.get('douban_id',''),
             'type':entry['kind'],'year':identity(entry,{})['year'],
             'rating':zh.get('douban_rating') if zh.get('rating_status')=='AVAILABLE' else None,
-            'rating_count':zh.get('douban_rating_count') if zh.get('rating_status')=='AVAILABLE' else None,
             'confidence':('NO_RATING' if zh.get('rating_status')=='NO_RATING' else 'VERIFIED') if verified else 'UNVERIFIED',
             'name_confidence':'VERIFIED' if verified else 'UNVERIFIED','sources':zh.get('name_sources',[]),
             'synopsis_available':has_summary(zh.get('summary','')),'provider_status':'NATIVE_CHECK_ON_OPEN'})
     dump(root/'docs/title-map.json',{'schema':1,'checked_at':checked,'records':rows})
-    fields=['english_title','chinese_title','douban_url','douban_id','type','year','rating','rating_count','confidence','sources']
+    fields=['english_title','chinese_title','douban_url','douban_id','type','year','rating','confidence','sources']
     out=io.StringIO(newline='');writer=csv.DictWriter(out,fieldnames=fields,lineterminator='\n');writer.writeheader()
     for row in rows:writer.writerow({k:json.dumps(row[k],ensure_ascii=False) if isinstance(row[k],list) else row[k] for k in fields})
     path=root/'docs/title-map.csv';tmp=path.with_suffix('.tmp');tmp.write_bytes(out.getvalue().encode('utf-8-sig'));tmp.replace(path)

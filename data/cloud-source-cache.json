@@ -47,10 +47,12 @@
       }
     },
     "nocturne": {
-      "checkedAt": 1793507545,
-      "nextRetry": 1793511145,
-      "fingerprint": "448cd2b9e4baf27e9fa7bc0e271b7903ac990b66095448b83fae063422301601",
-      "queryPolicy": "season-suffix-library-votes-v2",
+      "checkedAt": 1793518175,
+      "lastAttemptAt": 1793518175,
+      "nextRetry": 1793521775,
+      "fingerprint": "38a3e5ac3f4432022eee96314a9cecf38d124293e9cf55c8fb76ae5165bd1948",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
         "schema": 1,
         "en": "Nocturne",
@@ -58,24 +60,66 @@
         "season": 1,
         "year": "2026",
         "found": true,
-        "routes": 10,
-        "checkedAt": 1793507545
+        "routes": 26,
+        "checkedAt": 1793518175
       },
       "selection": {
         "policy": "library-votes-v1",
-        "title": "夜曲2026",
-        "libraries": 10,
-        "checkedLibraries": 29,
-        "requestedLibraries": 29,
+        "title": "夜曲",
+        "libraries": 14,
+        "checkedLibraries": 15,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
         "complete": false,
         "options": [
           {
-            "title": "夜曲2026",
-            "libraries": 10
+            "title": "夜曲",
+            "libraries": 14
           },
           {
-            "title": "夜曲",
-            "libraries": 7
+            "title": "夜曲2026",
+            "libraries": 12
+          }
+        ]
+      }
+    },
+    "silo": {
+      "lastAttemptAt": 1793518175,
+      "nextRetry": 1793521775,
+      "fingerprint": "79f8c714a3eb184138f89ead248bd299aef483dd4eed5b222822eccaba7b0249",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "slow-horses": {
+      "checkedAt": 1793518175,
+      "lastAttemptAt": 1793518175,
+      "nextRetry": 1793521775,
+      "fingerprint": "478bf3aceffb9c88a63f31b18870d5a667e8ab4273177e1d62a9a808bfc0ab58",
+      "queryPolicy": "all-app-adapters-library-votes-v3",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Slow Horses",
+        "kind": "series",
+        "season": 6,
+        "year": "2026",
+        "found": true,
+        "routes": 40,
+        "checkedAt": 1793518175
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "流人",
+        "libraries": 25,
+        "checkedLibraries": 18,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "流人",
+            "libraries": 25
           }
         ]
       }

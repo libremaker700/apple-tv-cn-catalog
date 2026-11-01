@@ -20,9 +20,9 @@ def valid(packet,kind=None):
         if len(summary)<35 or len(re.findall(r'[\u3400-\u9fff]',summary))<20:return False
     elif status!='PENDING' or summary:return False
     if packet.get('ratingStatus')=='AVAILABLE':
-        value=packet.get('rating');count=packet.get('ratingCount')
-        if type(value)not in(int,float)or not math.isfinite(value)or not 0<value<=10 or type(count)is not int or count<=0:return False
-    elif packet.get('ratingStatus')!='NO_RATING' or 'rating'in packet or 'ratingCount'in packet:return False
+        value=packet.get('rating')
+        if type(value)not in(int,float)or not math.isfinite(value)or not 0<value<=10:return False
+    elif packet.get('ratingStatus')!='NO_RATING' or 'rating'in packet:return False
     return True
 
 def from_patch(patch,ref):
@@ -40,11 +40,12 @@ def from_patch(patch,ref):
         'title':patch.get('display_name_zh',''),'summary':summary,'summaryStatus':'AVAILABLE'if summary else'PENDING',
         'ratingStatus':patch.get('rating_status','NO_RATING'),'season':number,'year':int(patch.get('release_year')or ref['year']),
         'checkedAt':checked,'originalTitle':ref.get('english_title')or ref.get('original_title','')}
-    if packet['ratingStatus']=='AVAILABLE':packet.update(rating=patch.get('douban_rating'),ratingCount=patch.get('douban_rating_count'))
+    if packet['ratingStatus']=='AVAILABLE':packet.update(rating=patch.get('douban_rating'))
     return packet if valid(packet,'movie'if ref.get('kind')=='movie'else'series')else None
 
 def attach(work,packet):
     if not valid(packet,work['kind']):return False
+    packet=copy.deepcopy(packet);packet.pop('ratingCount',None)
     expected=next((s.get('year')for s in work.get('seasons',[])if s.get('season')==packet['season']),None)
     if expected and str(expected)!=str(packet['year']):return False
     zh=work.setdefault('zh',{})or{};work['zh']=zh
@@ -60,6 +61,7 @@ def work_id(work):
     return work.get('officialId')or urlsplit((work.get('officialIdentity')or{}).get('watchUrl','')).path.rstrip('/').split('/')[-1]or'pr:'+work['slug']
 
 def remember(work,packet,root):
+    packet=copy.deepcopy(packet);packet.pop('ratingCount',None)
     if not attach(work,packet):return False
     path=root/'data/detail-metadata-cache.json';cache=json.loads(path.read_text(encoding='utf8'))if path.exists()else{'schema':1,'works':{}}
     identity=work_id(work);old=cache['works'].get(identity,{})

@@ -1,0 +1,59 @@
+name: Verify released works across all App sources
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Released works per run (1-24)
+        type: string
+        default: '12'
+      slug:
+        description: Optional one official slug for a forced check
+        type: string
+        default: ''
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: apple-catalog
+  cancel-in-progress: false
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests Pillow opencc-python-reimplemented cryptography
+      - run: python -m unittest discover -s tests -v
+      - name: Check all 33 libraries with dedicated adapters and private configuration
+        env:
+          APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
+          APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
+          SOURCE_LIMIT: ${{ inputs.limit || '12' }}
+          TARGET_SLUG: ${{ inputs.slug }}
+        run: |
+          ARGS=(--limit "$SOURCE_LIMIT")
+          if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
+          python scripts/source_availability.py "${ARGS[@]}"
+      - run: python scripts/catalog.py --validate
+      - run: python scripts/home_sync.py --validate
+      - name: Preserve verified results and incomplete retry state
+        run: |
+          git config user.name catalog-bot
+          git config user.email catalog-bot@users.noreply.github.com
+          git add docs data/cloud-source-cache.json logs/cloud-source-checks.json
+          for FILE in data/detail-metadata-cache.json data/source-cache.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
+          git diff --cached --quiet || git commit -m 'catalog: refresh released-work source coverage'
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4

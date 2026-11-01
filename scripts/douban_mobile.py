@@ -55,9 +55,15 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     aliases=list(dict.fromkeys(CC.convert(work_title(s)) for s in [name]+aka if mainland_name(s) and len(s)<80))
     url='https://movie.douban.com/subject/'+subject_id+'/'
     patch={'metadataPolicy':POLICY,'display_name_zh':name,'aliases_zh':aliases,'name_status':'verified_title_sources','name_checked_at':checked_at,'sources':[{'type':'douban_mobile_identity','url':url,'retrieved_at':checked_at}],'douban_id':subject_id,'douban_url':url,'rating_status':'NO_RATING'}
-    rating=data.get('rating') or {};value=rating.get('value');count=rating.get('count')
-    if isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value) and 0<value<=10 and isinstance(count,int) and not isinstance(count,bool) and count>0:
-        patch.update(rating_status='AVAILABLE',douban_rating=value,douban_rating_count=count,rating_checked_at=checked_at)
+    rating=data.get('rating') or {};value=rating.get('value')
+    if isinstance(value,(int,float)) and not isinstance(value,bool) and math.isfinite(value) and 0<value<=10:
+        patch.update(rating_status='AVAILABLE',douban_rating=value,rating_checked_at=checked_at)
+    def people(key):
+        rows=data.get(key)or[]
+        if not isinstance(rows,list):return []
+        values=[CC.convert(str(row.get('name')or''))if isinstance(row,dict)else CC.convert(row)for row in rows if isinstance(row,(str,dict))]
+        return list(dict.fromkeys(value.strip()for value in values if value.strip()))[:30]
+    patch['actors']=people('actors');patch['directors']=people('directors')
     if source_year!=expected_year:patch['release_year']=int(source_year)
     # Imported late to avoid a source-lookup import cycle.
     from title_sources import synopsis_patch

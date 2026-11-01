@@ -114,5 +114,28 @@
   {
     "id": "changzhang",
     "url": "https://api.changzhang.tv/api.php/provide/vod"
+  },
+  {
+    "id": "shared",
+    "name": "共享片库",
+    "type": "shared"
+  },
+  {
+    "id": "ikanbot",
+    "name": "爱看机器人",
+    "type": "ikanbot",
+    "url": "https://www2.ikanbot.com"
+  },
+  {
+    "id": "shenhua",
+    "name": "神话蓝光",
+    "type": "juzi",
+    "line": "qsvip"
+  },
+  {
+    "id": "bblue",
+    "name": "B蓝光",
+    "type": "juzi",
+    "line": "bfzym3u8"
   }
 ]

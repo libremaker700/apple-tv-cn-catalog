@@ -14,7 +14,9 @@ class AtomicDetails(unittest.TestCase):
     def packet(self):return verify_payload(REF,SUBJECT,'37234567','tv',NOW)['detailMetadata']
     def test_one_subject_response_produces_title_summary_rating_packet(self):
         packet=self.packet();self.assertTrue(valid(packet,'series'))
-        self.assertEqual((packet['title'],packet['summary'],packet['rating'],packet['ratingCount']),('流人',SUMMARY,9.1,1234))
+        self.assertEqual((packet['title'],packet['summary'],packet['rating']),('流人',SUMMARY,9.1));self.assertNotIn('ratingCount',packet)
+        without_count=copy.deepcopy(SUBJECT);without_count['rating'].pop('count')
+        self.assertEqual(verify_payload(REF,without_count,'37234567','tv',NOW)['detailMetadata']['rating'],9.1)
         self.assertEqual((packet['season'],packet['year']),(6,2026))
     def test_season_identity_conflicts_and_unnumbered_series_are_rejected(self):
         for payload in [dict(SUBJECT,title='流人 第五季'),dict(SUBJECT,original_title='Slow Horses Season 1'),dict(SUBJECT,title='流人',original_title='Slow Horses')]:

@@ -47,7 +47,7 @@ class ResolverTests(unittest.TestCase):
     def test_mobile_ignores_suggest_type_and_checks_original_year_kind(self):
         pages=Pages(SUBJECT);result=DoubanMobile(pages).lookup(REF,'now')
         self.assertEqual(result['display_name_zh'],'追捕刺客');self.assertTrue(pages.urls[-1].endswith('/tv/12345'))
-        self.assertEqual(result['douban_rating_count'],1234);self.assertNotIn('追缉刺客(港)',result['aliases_zh'])
+        self.assertNotIn('douban_rating_count',result);self.assertNotIn('追缉刺客(港)',result['aliases_zh'])
         for changed in ({'original_title':'Other film','aka':[]},{'year':'2019'},{'type':'movie'},{'id':'98765'},{'title':'追捕刺客 第二季'}):
             self.assertIsNone(verify_payload(REF,dict(SUBJECT,**changed),'12345','tv','now'))
     def test_delayed_year_only_with_known_matching_imdb(self):
@@ -55,7 +55,7 @@ class ResolverTests(unittest.TestCase):
         self.assertIsNone(verify_payload(REF,changed,'12345','tv','now'))
         self.assertEqual(verify_payload(dict(REF,imdb_id='tt27304258'),changed,'12345','tv','now')['release_year'],2027)
     def test_rating_absence_never_fabricates_rating_or_blocks_verified_title(self):
-        for rating in ({},{'value':8,'count':0},{'value':float('nan'),'count':10}):
+        for rating in ({},{'value':0,'count':0},{'value':float('nan'),'count':10}):
             patch=verify_payload(REF,dict(SUBJECT,rating=rating),'12345','tv','now')
             self.assertEqual(patch['rating_status'],'NO_RATING');self.assertNotIn('douban_rating',patch)
     def test_model_cannot_verify_itself_or_change_name(self):
@@ -92,7 +92,7 @@ class ResolverTests(unittest.TestCase):
                 resolver.run(root,agent=agent,lookup=Lookup(),search=NoSearch(),clock=NOW)
                 self.assertEqual(agent.calls,1);publish.assert_not_called()
                 data=json.loads((root/'docs/title-map.json').read_text(encoding='utf8'))['records'][0]
-                self.assertEqual(data['provider_status'],'NATIVE_CHECK_ON_OPEN');self.assertEqual(data['rating_count'],1234)
+                self.assertEqual(data['provider_status'],'NATIVE_CHECK_ON_OPEN');self.assertNotIn('rating_count',data)
                 self.assertNotIn(b'\r\r\n',(root/'docs/title-map.csv').read_bytes())
     def test_auth_failure_reserves_once_and_never_replaces_existing_catalog(self):
         with tempfile.TemporaryDirectory() as tmp:

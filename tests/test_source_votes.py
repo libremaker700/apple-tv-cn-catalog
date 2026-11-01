@@ -28,3 +28,10 @@ class Votes(unittest.TestCase):
         self.assertEqual(work['zh']['title'],'片库常用名称');self.assertIn('豆瓣旧名称',work['zh']['aliases']);self.assertNotIn('provider',str(work['zh']['nameSelection']))
     def test_animation_movie_needs_verified_subject_when_source_type_is_ambiguous(self):
         row=self.row('动画别名',type_name='欧美动漫');ref={'kind':'movie','year':'2020','douban_id':'12345678'};self.assertTrue(candidate_matches(ref,row,['豆瓣名称']));self.assertFalse(candidate_matches(dict(ref,douban_id='87654321'),row,['动画别名']))
+    def test_year_suffix_needs_real_identity_and_same_season(self):
+        ref={'kind':'series','year':'2026','season':1,'directors':'导演甲','actors':'演员甲,演员乙'}
+        row=self.row('夜曲2026',vod_year='2026',vod_douban_id='',type_name='欧美剧',vod_director='导演甲',vod_actor='演员甲,演员乙')
+        self.assertTrue(candidate_matches(ref,row,['夜曲']));self.assertFalse(candidate_matches(dict(ref,actors='演员甲'),row,['夜曲']));self.assertFalse(candidate_matches(dict(ref,season=2),row,['夜曲']))
+    def test_movie_same_number_can_cross_one_release_year_but_conflicts_cannot(self):
+        ref={'kind':'movie','year':'2018','douban_id':'27060077'};row=self.row('绿皮书',vod_year='2019',vod_douban_id='27060077')
+        self.assertTrue(candidate_matches(ref,row,['绿皮书']));self.assertFalse(candidate_matches(ref,dict(row,vod_douban_id='27060078'),['绿皮书']));self.assertFalse(candidate_matches(ref,dict(row,vod_year='2021'),['绿皮书']))

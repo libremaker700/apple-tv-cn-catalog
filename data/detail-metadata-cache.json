@@ -16,7 +16,7 @@
           "ratingStatus": "NO_RATING",
           "season": 1,
           "year": 2026,
-          "checkedAt": "2026-10-30T10:09:45+00:00",
+          "checkedAt": "2026-11-01T07:19:25+00:00",
           "originalTitle": "Nocturne"
         }
       ]
@@ -58,8 +58,7 @@
           "year": 2004,
           "checkedAt": "2026-10-31T01:37:53+00:00",
           "originalTitle": "Long Way Round",
-          "rating": 9.2,
-          "ratingCount": 1782
+          "rating": 9.2
         }
       ]
     },
@@ -80,8 +79,7 @@
           "year": 2026,
           "checkedAt": "2026-11-01T02:15:28+00:00",
           "originalTitle": "Slow Horses",
-          "rating": 7.2,
-          "ratingCount": 18493
+          "rating": 7.2
         }
       ]
     }

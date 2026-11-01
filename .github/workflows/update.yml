@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install requests Pillow opencc-python-reimplemented
+      - run: pip install requests Pillow opencc-python-reimplemented cryptography
       - run: python -m unittest discover -s tests -v
       - name: Collect originals with verified season discovery
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'sync')
