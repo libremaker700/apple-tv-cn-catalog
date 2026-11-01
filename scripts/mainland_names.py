@@ -41,9 +41,10 @@ def season(title):
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
 def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
 
-SOURCE_QUERY_POLICY='verified-alias-punctuation-recall-v6'
+SOURCE_QUERY_POLICY='verified-alias-punctuation-scoped-season-v7'
 
 def source_people(ref,patch):
+    if patch.get('sourceSeason'):ref['sourceSeason']=copy.deepcopy(patch['sourceSeason'])
     for key in ('directors','actors'):
         value=patch.get(key)or[]
         if isinstance(value,list):value=','.join(str(person)for person in value if isinstance(person,str))
@@ -77,6 +78,13 @@ def source_queries(ref,names):
             if variant and variant.casefold()not in seen:
                 expanded.append(variant);seen.add(variant.casefold())
     return expanded[:12]
+def matched_season(ref,title):
+    if re.search(r'第\s*[0-9一二三四五六七八九十百]+\s*季|season\s*\d+',title,re.I):return season(title)
+    scope=ref.get('sourceSeason')or{}
+    if scope.get('policy')=='verified-subseries-v1'and scope.get('season')==ref.get('season')and str(scope.get('year'))==str(ref.get('year'))and scope.get('subjectId')==str(ref.get('douban_id')or'')and norm(title)in {norm(t)for t in scope.get('titles',[])if isinstance(t,str)}:
+        return scope['season']
+    return season(title)
+
 def recall_matches(ref,row,names,strong=False):
     """Recall an existing verified alias; this alone never authorizes renaming."""
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))
@@ -89,7 +97,7 @@ def recall_matches(ref,row,names,strong=False):
     # A year suffix or an unknown alias needs stronger identity evidence.
     compared=canonical_name(ref,title,names,base,norm)if strong else title
     if (norm(base(compared))not in {norm(base(n))for n in names}and not same_id)or not year_matches:return False
-    if ref['kind']=='series':return season(title)==ref['season']and bool(re.search(r'剧|劇|动漫|动画|综艺|纪录片|紀錄片',kind))and not re.search(r'电影|電影|剧情片|喜剧片|动作片|恐怖片',kind)
+    if ref['kind']=='series':return matched_season(ref,title)==ref['season']and bool(re.search(r'剧|劇|动漫|动画|综艺|纪录片|紀錄片',kind))and not re.search(r'电影|電影|剧情片|喜剧片|动作片|恐怖片',kind)
     return (bool(re.search(r'电影|電影|片',kind))or same_id and bool(re.search(r'动漫|动画',kind))and not re.search(r'第.+季|season\s*\d+',title,re.I))and not re.search(r'电视剧|连续剧|欧美剧|剧集|日剧|韩剧|综艺',kind)
 def candidate_matches(ref,row,names):
     expected=str(ref.get('douban_id')or'');actual=str(row.get('vod_douban_id')or'')

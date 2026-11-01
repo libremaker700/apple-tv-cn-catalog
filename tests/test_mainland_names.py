@@ -3,6 +3,15 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from mainland_names import candidate_matches,source_count,independent_name,source_queries,public_sources,season
 class SeasonQueries(unittest.TestCase):
+    def test_only_verified_scoped_unnumbered_titles_can_mean_season_three(self):
+        from mainland_names import recall_matches
+        ref={'kind':'series','year':'2025','season':3,'douban_id':'37457350','sourceSeason':{'policy':'verified-subseries-v1','year':'2025','season':3,'subjectId':'37457350','titles':['史前星球：冰川时代','史前星球：冰河时代']}}
+        row={'vod_name':'史前星球冰川时代','vod_year':'2025','type_name':'纪录片'}
+        self.assertTrue(recall_matches(ref,row,['史前星球：冰川时代']))
+        for changes in [{'vod_name':'史前星球第一季'},{'vod_name':'史前星球冰川时代第二季'},{'vod_name':'史前星球冰川时代第一季'},{'vod_douban_id':'12345678'},{'vod_year':'2022'},{'type_name':'纪录片解说'}]:
+            self.assertFalse(recall_matches(ref,dict(row,**changes),['史前星球：冰川时代','史前星球']))
+        for field in ['sourceSeason','douban_id']:
+            bad=dict(ref);bad.pop(field);self.assertFalse(recall_matches(bad,row,['史前星球：冰川时代']))
     def test_selected_season_comes_first_and_aliases_are_deduplicated(self):
         ref={'kind':'series','year':'2005','season':1}
         self.assertEqual(source_queries(ref,['邪恶力量','邪恶力量第一季','邪恶力量 第1季']),['邪恶力量第一季','邪恶力量第1季','邪恶力量'])

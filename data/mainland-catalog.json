@@ -7698,41 +7698,30 @@
     },
     "prehistoric-planet-ice-age": {
       "_identityYear": 2025,
-      "contentRating": "TV-PG",
-      "metadataPolicy": "mainland-v1",
-      "officialReleaseYear": 2025,
-      "summary": "在这部由乔恩·费儒和《地球脉动》制作人联手打造的史诗级系列片中，以全新视角体验我们世界的奇观。回到雄伟的恐龙和非凡的生物漫游于陆地、海洋和天空的时代。",
-      "summary_original": "Experience the wonders of our world like never before in this epic series from Jon Favreau and the producers of Planet Earth. Travel back to a time when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.",
-      "summary_source_hash": "01b2314b4b9c8156897baf9d763c9b49e1e27c80c12dde9589ed8e82051f07aa",
-      "summary_sources": [
-        {
-          "type": "apple_us_translation",
-          "url": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav"
-        }
+      "actors": [
+        "汤姆·希德勒斯顿"
       ],
-      "summary_status": "translated_official",
-      "watchUrl": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav",
-      "douban_id": "37457350",
-      "title": "史前星球：冰川时代",
       "aliases": [
         "史前星球：冰川时代",
         "史前星球：冰河时代",
         "史前星球"
       ],
-      "provenance": "verified_mainland_title",
-      "name_status": "verified_title_sources",
-      "name_checked_at": "2026-11-01T22:19:44+00:00",
-      "name_sources": [
-        {
-          "type": "douban_mobile_identity",
-          "url": "https://movie.douban.com/subject/37457350/",
-          "retrieved_at": "2026-11-01T22:19:44+00:00"
-        }
-      ],
-      "douban_url": "https://movie.douban.com/subject/37457350/",
-      "rating_status": "AVAILABLE",
-      "douban_rating": 8.6,
-      "rating_checked_at": "2026-11-01T22:19:44+00:00",
+      "contentRating": "TV-PG",
+      "detailMetadata": {
+        "schema": 1,
+        "source": "douban",
+        "subjectId": "37457350",
+        "sourceUrl": "https://movie.douban.com/subject/37457350/",
+        "title": "史前星球：冰川时代",
+        "summary": "这部五集纪录片带领观众进入恐龙灭绝后数百万年的史前新时代——冰川时代。",
+        "summaryStatus": "AVAILABLE",
+        "ratingStatus": "AVAILABLE",
+        "season": 3,
+        "year": 2025,
+        "checkedAt": "2026-11-01T22:30:34+00:00",
+        "originalTitle": "Prehistoric Planet: Ice Age",
+        "rating": 8.6
+      },
       "detailSeasons": [
         {
           "schema": 1,
@@ -7745,30 +7734,51 @@
           "ratingStatus": "AVAILABLE",
           "season": 3,
           "year": 2025,
-          "checkedAt": "2026-11-01T22:19:44+00:00",
+          "checkedAt": "2026-11-01T22:30:34+00:00",
           "originalTitle": "Prehistoric Planet: Ice Age",
           "rating": 8.6
         }
       ],
-      "detailMetadata": {
-        "schema": 1,
-        "source": "douban",
-        "subjectId": "37457350",
-        "sourceUrl": "https://movie.douban.com/subject/37457350/",
-        "title": "史前星球：冰川时代",
-        "summary": "这部五集纪录片带领观众进入恐龙灭绝后数百万年的史前新时代——冰川时代。",
-        "summaryStatus": "AVAILABLE",
-        "ratingStatus": "AVAILABLE",
-        "season": 3,
-        "year": 2025,
-        "checkedAt": "2026-11-01T22:19:44+00:00",
-        "originalTitle": "Prehistoric Planet: Ice Age",
-        "rating": 8.6
-      },
-      "actors": [
-        "汤姆·希德勒斯顿"
+      "directors": [],
+      "douban_id": "37457350",
+      "douban_rating": 8.6,
+      "douban_url": "https://movie.douban.com/subject/37457350/",
+      "metadataPolicy": "mainland-v1",
+      "name_checked_at": "2026-11-01T22:30:34+00:00",
+      "name_sources": [
+        {
+          "type": "douban_mobile_identity",
+          "url": "https://movie.douban.com/subject/37457350/",
+          "retrieved_at": "2026-11-01T22:30:34+00:00"
+        }
       ],
-      "directors": []
+      "name_status": "verified_title_sources",
+      "officialReleaseYear": 2025,
+      "provenance": "verified_mainland_title",
+      "rating_checked_at": "2026-11-01T22:30:34+00:00",
+      "rating_status": "AVAILABLE",
+      "summary": "在这部由乔恩·费儒和《地球脉动》制作人联手打造的史诗级系列片中，以全新视角体验我们世界的奇观。回到雄伟的恐龙和非凡的生物漫游于陆地、海洋和天空的时代。",
+      "summary_original": "Experience the wonders of our world like never before in this epic series from Jon Favreau and the producers of Planet Earth. Travel back to a time when majestic dinosaurs and extraordinary creatures roamed the lands, seas, and skies.",
+      "summary_source_hash": "01b2314b4b9c8156897baf9d763c9b49e1e27c80c12dde9589ed8e82051f07aa",
+      "summary_sources": [
+        {
+          "type": "apple_us_translation",
+          "url": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav"
+        }
+      ],
+      "summary_status": "translated_official",
+      "title": "史前星球：冰川时代",
+      "watchUrl": "https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav",
+      "sourceSeason": {
+        "policy": "verified-subseries-v1",
+        "season": 3,
+        "year": "2025",
+        "subjectId": "37457350",
+        "titles": [
+          "史前星球：冰川时代",
+          "史前星球：冰河时代"
+        ]
+      }
     }
   }
 }

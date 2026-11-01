@@ -18,10 +18,11 @@ def apply(entry,root):
     # identify this as season 3. Keep the real numbering and earlier seasons
     # under the original parent catalog entry rather than relabeling them.
     entry['seasons']=[row]
-    entry.update(seasonNumber=rule['season'],artworkSeasonNumber=rule['season'],heroSeasonNumber=rule['season'],artworkSeasonYear=rule['year'],releaseDate=rule['releaseDate'],heroArtwork=row['artwork'])
+    entry.update(seasonNumber=rule['season'],artworkSeasonNumber=rule['season'],heroSeasonNumber=rule['season'],artworkSeasonYear=rule['year'],releaseDate=rule['releaseDate'],artwork=row['artwork'],heroArtwork=row['artwork'])
     entry['officialIdentity']['year']=rule['year']
     zh=entry.setdefault('zh',{})or{};entry['zh']=zh
     zh.update(_identityYear=int(rule['year']),officialReleaseYear=int(rule['year']),douban_id=rule['subjectId'])
+    zh['sourceSeason']={'policy':'verified-subseries-v1','season':rule['season'],'year':rule['year'],'subjectId':rule['subjectId'],'titles':rule['unnumberedTitles']}
     check=zh.get('sourceCheck')
     if check and (check.get('season')!=rule['season']or str(check.get('year'))!=rule['year']):zh.pop('sourceCheck',None)
     return entry

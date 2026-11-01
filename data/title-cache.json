@@ -3453,7 +3453,7 @@
       },
       "query_version": "zh-cn-v7-mobile-identity",
       "status": "verified",
-      "checked_at": "2026-11-01T22:19:44+00:00",
+      "checked_at": "2026-11-01T22:30:34+00:00",
       "patch": {
         "metadataPolicy": "mainland-v1",
         "display_name_zh": "史前星球：冰川时代",
@@ -3463,19 +3463,19 @@
           "史前星球"
         ],
         "name_status": "verified_title_sources",
-        "name_checked_at": "2026-11-01T22:19:44+00:00",
+        "name_checked_at": "2026-11-01T22:30:34+00:00",
         "sources": [
           {
             "type": "douban_mobile_identity",
             "url": "https://movie.douban.com/subject/37457350/",
-            "retrieved_at": "2026-11-01T22:19:44+00:00"
+            "retrieved_at": "2026-11-01T22:30:34+00:00"
           }
         ],
         "douban_id": "37457350",
         "douban_url": "https://movie.douban.com/subject/37457350/",
         "rating_status": "AVAILABLE",
         "douban_rating": 8.6,
-        "rating_checked_at": "2026-11-01T22:19:44+00:00",
+        "rating_checked_at": "2026-11-01T22:30:34+00:00",
         "actors": [
           "汤姆·希德勒斯顿"
         ],
@@ -3485,10 +3485,10 @@
           {
             "type": "verified_page_synopsis",
             "url": "https://movie.douban.com/subject/37457350/",
-            "retrieved_at": "2026-11-01T22:19:44+00:00"
+            "retrieved_at": "2026-11-01T22:30:34+00:00"
           }
         ],
-        "summary_checked_at": "2026-11-01T22:19:44+00:00",
+        "summary_checked_at": "2026-11-01T22:30:34+00:00",
         "detailMetadata": {
           "schema": 1,
           "source": "douban",
@@ -3500,7 +3500,7 @@
           "ratingStatus": "AVAILABLE",
           "season": 3,
           "year": 2025,
-          "checkedAt": "2026-11-01T22:19:44+00:00",
+          "checkedAt": "2026-11-01T22:30:34+00:00",
           "originalTitle": "Prehistoric Planet: Ice Age",
           "rating": 8.6
         }
@@ -3510,7 +3510,7 @@
         "source": "https://movie.douban.com/subject/37457350/",
         "season": 3
       },
-      "next_retry_at": "2026-11-01T22:19:44+00:00"
+      "next_retry_at": "2026-11-01T22:30:34+00:00"
     }
   },
   "budgets": {
