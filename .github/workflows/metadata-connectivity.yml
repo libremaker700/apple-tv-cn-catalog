@@ -25,7 +25,7 @@ jobs:
                   r=requests.get(url,headers=headers,timeout=(6,15),allow_redirects=False)
                   print(json.dumps({'stage':'requests','host':host,'status':r.status_code,'bytes':len(r.content)}),flush=True)
               except Exception as e:
-                  print(json.dumps({'stage':'requests','host':host,'error':type(e).__name__,'cause':type(e.__cause__).__name__,'argsTypes':[type(a).__name__for a in e.args]}),flush=True)
+                  print(json.dumps({'stage':'requests','host':host,'error':type(e).__name__,'cause':type(e.__cause__).__name__,'argsTypes':[type(a).__name__ for a in e.args]}),flush=True)
               try:
                   with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=15)as r:print(json.dumps({'stage':'urllib','host':host,'status':r.status,'bytes':len(r.read(512001))}),flush=True)
               except urllib.error.HTTPError as e:print(json.dumps({'stage':'urllib','host':host,'status':e.code}),flush=True)
