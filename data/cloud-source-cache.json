@@ -436,36 +436,679 @@
     },
     "ted-lasso": {
       "checkedAt": 1793526665,
-      "lastAttemptAt": 1793526665,
       "nextRetry": 1793530265,
       "fingerprint": "132de97819ed144b62d23ae2c7694b7e50a3d96fc15350982587162fa4dc7955",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526665,
         "en": "Ted Lasso",
+        "found": true,
         "kind": "series",
+        "routes": 35,
+        "schema": 1,
         "season": 4,
+        "year": "2026"
+      },
+      "selection": {
+        "attemptedLibraries": 33,
+        "checkedLibraries": 2,
+        "complete": false,
+        "libraries": 24,
+        "options": [
+          {
+            "libraries": 24,
+            "title": "足球教练"
+          }
+        ],
+        "policy": "library-votes-v1",
+        "requestedLibraries": 33,
+        "title": "足球教练"
+      }
+    },
+    "lucky": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "b05d64785b3834e92a97a020d32bdbcf92e89427343d28d733d8d3dc23f1ef06",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Lucky",
+        "kind": "series",
+        "season": 1,
         "year": "2026",
         "found": true,
-        "routes": 35,
-        "checkedAt": 1793526665
+        "routes": 29,
+        "checkedAt": 1793526773
       },
       "selection": {
         "policy": "library-votes-v1",
-        "title": "足球教练",
-        "libraries": 24,
+        "title": "幸运女神",
+        "libraries": 17,
+        "checkedLibraries": 3,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "幸运女神",
+            "libraries": 17
+          }
+        ]
+      }
+    },
+    "trying": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "a9f07db5d775238310187cb458fe9a545fdad23d4b62d29b7168f5231c8b4c88",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Trying",
+        "kind": "series",
+        "season": 5,
+        "year": "2026",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "尝试",
+        "libraries": 21,
         "checkedLibraries": 2,
         "attemptedLibraries": 33,
         "requestedLibraries": 33,
         "complete": false,
         "options": [
           {
-            "title": "足球教练",
-            "libraries": 24
+            "title": "尝试",
+            "libraries": 21
           }
         ]
       }
+    },
+    "camp-snoopy": {
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "2eb47b53adf94c2b58ce32e40bdc76a9eaecbdc52304ab4d3183d43dddfa2255",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "sugar": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "4d1b476ee8b0244b978b6bdc756695e4ae7f270451518c4db278dadf93d472b9",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Sugar",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 33,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "cape-fear": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "5a7dd9ed5f483431780c34f537aaa854ce5305f82105980915b421d245ee37da",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Cape Fear",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "恐怖角",
+        "libraries": 20,
+        "checkedLibraries": 3,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "恐怖角",
+            "libraries": 20
+          }
+        ]
+      }
+    },
+    "star-city": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "54534fcb84bccc272d4431626081f65c24ce747f9b5f15b27f19268935596be0",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Star City",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 57,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "星城",
+        "libraries": 21,
+        "checkedLibraries": 20,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "星城",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "propeller-one-way-night-coach": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "7b54431dbe0b6774ad7016f6db7335467ef571c8bd3b96eedbf74ff7663a6d20",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Propeller One-Way Night Coach",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 23,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "单程夜航",
+        "libraries": 11,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "单程夜航",
+            "libraries": 11
+          }
+        ]
+      }
+    },
+    "maximum-pleasure-guaranteed": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "64782aeb3359c4e91ee159ad3a6091cce2b9b67e954efee7d5fc34ae1e20c79f",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Maximum Pleasure Guaranteed",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 12,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "unconditional": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "52793dddd1c77d07af0429240d34834f9b1bc793a1677f959296920093abe326",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Unconditional",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 48,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "母爱无赦",
+        "libraries": 4,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "母爱无赦",
+            "libraries": 4
+          }
+        ]
+      }
+    },
+    "widows-bay": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "194bd6e5075644a275e04aab12120a043ce8282ac46061e67d45bc09aeb68799",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Widow’s Bay",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 15,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "寡妇湾",
+        "libraries": 6,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "寡妇湾",
+            "libraries": 6
+          }
+        ]
+      }
+    },
+    "my-brother-the-minotaur": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "bb865afd7a3d23d65ae1dc279737912cf630cfe8735d9bd9f8d8b6456301d989",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "My Brother the Minotaur",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 11,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "criminal-record": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "ba1e805b41d2bf40246f4cc8530433e125261a167213f4cf1fbfc885fec2ea33",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Criminal Record",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 33,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "犯罪记录",
+        "libraries": 22,
+        "checkedLibraries": 4,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "犯罪记录",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "margos-got-money-troubles": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "281d578f91810808d22be28eec8f8d4628f414928e12c029b0c1da3d28451723",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Margo’s Got Money Troubles",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "your-friends-and-neighbors": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "9c190c0b10380e479965f0a8adca857efd4583fd008f9f7e6c8df97b8121e15e",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Your Friends & Neighbors",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "掩耳盗邻",
+        "libraries": 21,
+        "checkedLibraries": 1,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "掩耳盗邻",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "for-all-mankind": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "f52056d339ffd44a12bdc968d780238204a2b591cd8626d05006d357e5b0027b",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "For All Mankind",
+        "kind": "series",
+        "season": 5,
+        "year": "2026",
+        "found": true,
+        "routes": 33,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "imperfect-women": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "56fad606df64741a8149a6e96e523b974eb9d35ebf4423df30a89f1f2cf3df16",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Imperfect Women",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 3,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "不完美的女人",
+        "libraries": 3,
+        "checkedLibraries": 25,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "不完美的女人",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "twisted-yoga": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "3bd9f5299ca6a2f61cef27cf2b53784cabdfc6d5621419e7cc5e96d5b509da6b",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Twisted Yoga",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 30,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "monarch-legacy-of-monsters": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "aa81afd402f6a8a89a8f6364b2f04af6dfc771a0de153818cdd921bab911ed9b",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Monarch: Legacy of Monsters",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "帝王计划怪兽遗产",
+        "libraries": 1,
+        "checkedLibraries": 18,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "帝王计划怪兽遗产",
+            "libraries": 1
+          }
+        ]
+      }
+    },
+    "the-last-thing-he-told-me": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "9a3881799634223bc0ba9ec34b1acc66e9667fa72e488c4ecb300e0a3a33ad2f",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Last Thing He Told Me",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 51,
+        "checkedAt": 1793526773
+      },
+      "selection": null
+    },
+    "eternity": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "7bbdb91ef1aceb8b785f75f89a4c3bc0b8203277635af242860f16f5f444b434",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Eternity",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 30,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "永恒站",
+        "libraries": 21,
+        "checkedLibraries": 20,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "永恒站",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "shrinking": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "2eae13cc4f8b2032f0a77fa29824fdb84fe1f31c19e6a5c0412385e2d35725ae",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Shrinking",
+        "kind": "series",
+        "season": 3,
+        "year": "2026",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "诊疗中",
+        "libraries": 1,
+        "checkedLibraries": 2,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "诊疗中",
+            "libraries": 1
+          }
+        ]
+      }
+    },
+    "drops-of-god": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "4a1c144be6286e1e39295bd874d35371ce1d6c6d97a06113be6790f5c021b835",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Drops of God",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "神之水滴",
+        "libraries": 21,
+        "checkedLibraries": 0,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "神之水滴",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "hijack": {
+      "checkedAt": 1793526773,
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "60ca75a63fc9320d4b3d1c086db883c5e9fb0a69f8410a740928e4d0df36b8af",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Hijack",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 14,
+        "checkedAt": 1793526773
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "历劫惊途",
+        "libraries": 3,
+        "checkedLibraries": 15,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "历劫惊途",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "tehran": {
+      "lastAttemptAt": 1793526773,
+      "nextRetry": 1793530373,
+      "fingerprint": "a49a570a174b3020b1a2fef7277a9c67fc24073eefe2b8cc94753f81428073e4",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
     }
   }
 }

@@ -82,6 +82,27 @@
           "rating": 7.2
         }
       ]
+    },
+    "umc.cmc.1w2rmpbqzt24879bt7109zgi6": {
+      "en": "Imperfect Women",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36832087",
+          "sourceUrl": "https://movie.douban.com/subject/36832087/",
+          "title": "不完美女人",
+          "summary": "故事改编自Araminta Hall的2021年小说，聚焦Nancy Hennessy的死，外人看来她的生活是完美的，漂亮、富有、深得相识的人的尊敬和喜爱。而她被谋杀后，留下两个最好的朋友、深爱她的丈夫和女儿，以及一个她至死都未说出身份的秘密恋人。随着对其死亡的调查陷入困难，两个好友Eleanor和Mary也深陷悲痛，黑暗的细节慢慢浮现，让她们发觉自己对好友、对彼此甚至对自己其实都知之甚少。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2026,
+          "checkedAt": "2026-11-01T09:52:53+00:00",
+          "originalTitle": "Imperfect Women",
+          "rating": 6.6
+        }
+      ]
     }
   }
 }
