@@ -6,9 +6,44 @@
     "douban_or_ikanbot_identity",
     "public_source_match"
   ],
-  "records": [],
+  "records": [
+    {
+      "slug": "bearbrick",
+      "en": "BE@RBRICK",
+      "searchStatus": "ok",
+      "confidence": "UNVERIFIED"
+    },
+    {
+      "slug": "carpool-karaoke-the-series",
+      "en": "Carpool Karaoke: The Series",
+      "searchStatus": "ok",
+      "confidence": "UNVERIFIED"
+    },
+    {
+      "slug": "doug-unplugs",
+      "en": "Doug Unplugs",
+      "searchStatus": "ok",
+      "confidence": "UNVERIFIED"
+    }
+  ],
   "changed": [],
   "geminiUsed": false,
-  "accounts": [],
-  "reservedThisMonth": 4
+  "accounts": [
+    {
+      "service": "ydc",
+      "account": "YDC_API_KEYI_1",
+      "http": 200
+    },
+    {
+      "service": "ydc",
+      "account": "YDC_API_KEYI_1",
+      "http": 200
+    },
+    {
+      "service": "ydc",
+      "account": "YDC_API_KEYI_1",
+      "http": 200
+    }
+  ],
+  "reservedThisMonth": 3
 }

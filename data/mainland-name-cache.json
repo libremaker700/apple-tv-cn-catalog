@@ -74,9 +74,40 @@
           }
         ]
       }
+    },
+    "bearbrick": {
+      "checkedAt": 1793507536,
+      "nextRetry": 1793593936,
+      "result": {
+        "slug": "bearbrick",
+        "en": "BE@RBRICK",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "carpool-karaoke-the-series": {
+      "checkedAt": 1793507536,
+      "nextRetry": 1793593936,
+      "result": {
+        "slug": "carpool-karaoke-the-series",
+        "en": "Carpool Karaoke: The Series",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "doug-unplugs": {
+      "checkedAt": 1793507536,
+      "nextRetry": 1793593936,
+      "result": {
+        "slug": "doug-unplugs",
+        "en": "Doug Unplugs",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
     }
   },
   "budgets": {
-    "2026-10": 4
+    "2026-10": 4,
+    "2026-11": 3
   }
 }
