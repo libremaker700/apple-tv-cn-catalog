@@ -1,15 +1,15 @@
 {
-  "checkedAt": 1793496781,
+  "checkedAt": 1793497567,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
       "requested": 0,
-      "cacheHits": 7,
+      "cacheHits": 9,
       "translated": 0,
-      "pending": 1,
+      "pending": 0,
       "apiHttp": 0,
       "retainedCopy": 0,
-      "sourceMissing": 1,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 9,
+      "cacheHits": 10,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
     },
     {
@@ -124,6 +124,6 @@
     }
   ],
   "translated": 0,
-  "pending": 1,
-  "version": "31e1ccff3d24dc7e6591ca32198dc4742dc45633efe6e4823d0966f992c6052d"
+  "pending": 0,
+  "version": "63021591078eabc79acb0a9585be52d97c36a7eefe4ab7155b3410a9950c23d1"
 }
