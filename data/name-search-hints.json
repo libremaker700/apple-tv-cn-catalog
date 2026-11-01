@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "works": {
+    "to-mom-and-dad-with-love": {
+      "englishTitle": "To Mom (And Dad), With Love",
+      "chineseHint": "史努比特辑：将爱献给父母",
+      "imdbId": "tt19866966",
+      "policy": "search_hint_only_not_title_approval"
+    }
+  }
+}

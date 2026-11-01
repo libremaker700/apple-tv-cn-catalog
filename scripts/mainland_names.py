@@ -143,9 +143,10 @@ def republish_home(home,root):
     (folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob);(folder/'home.json').write_bytes(blob)
     manifest.update(version=sha,path=path,checkedAt=int(time.time()));(folder/'version.json').write_bytes(raw_json(manifest))
 
-def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None):
+def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None,names_only=False):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');cache_path=root/'data/mainland-name-cache.json';cache=read(cache_path,{'records':{},'budgets':{}});now=int(time.time());month=time.strftime('%Y-%m',time.gmtime(now));budget=200
-    report={'order':['douban_direct','public_source_match','you.com_fallback','douban_or_ikanbot_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False};used=int(cache['budgets'].get(month,0))
+    report={'order':['douban_direct','verified_search_fallback']if names_only else['douban_direct','public_source_match','you.com_fallback','douban_or_ikanbot_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False,'namesOnly':names_only};used=int(cache['budgets'].get(month,0))
+    search_hints_by_slug=read(root/'data/name-search-hints.json',{'works':{}}).get('works',{})
     def reserve():
         nonlocal used
         if used>=budget:return False
@@ -180,6 +181,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if len(report['records'])>=max(0,min(5,int(limit))):break
         detail_year=str(current.get('year')or year)
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':detail_year,'season':0 if work['kind']=='movie'else n,'want_summary':True,'display_name_zh':zh.get('title','')}
+        hint=search_hints_by_slug.get(key,{})
+        if hint.get('englishTitle')==work['en']:
+            if not ref['display_name_zh']:ref['display_name_zh']=hint.get('chineseHint','')
+            if re.fullmatch(r'tt\d{7,10}',hint.get('imdbId','')):ref['imdb_id']=hint['imdbId']
         source_ref=source_people({'year':str(current.get('year')or year),'season':n,'kind':work['kind']},zh)
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=old.get('identity');discovery_events=[];hits=[]
@@ -193,13 +198,13 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if len(identities)==1:identity_record=identities[0]
             elif len(identities)>1:identity_record=None
             status='douban_direct'
-            if patch and not deferred:
+            if patch and not deferred and not names_only:
                 source_people(source_ref,patch)
                 if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
                 direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
                 best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True;probed_names.update(direct_names)
-            if not patch or not deferred and not best:
-                hits,fallback_status=client.search('"'+work['en']+'" '+year+' 中国大陆 中文片名 豆瓣')
+            if not patch or not deferred and not best and not names_only:
+                hits,fallback_status=client.search('"'+work['en']+'" '+detail_year+' '+ref.get('display_name_zh','')+' 中国大陆 中文片名 豆瓣')
                 fallback=independent_name(ref,hits,lookup,now)
                 status='douban_direct_then_'+fallback_status if patch else fallback_status
                 if fallback:
@@ -211,7 +216,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                         for field in ('detailMetadata','douban_id','douban_url','rating_status','douban_rating','rating_checked_at','summary_zh','summary_sources','summary_checked_at','actors','directors'):
                             if field in patch:fallback[field]=copy.deepcopy(patch[field])
                     patch=fallback;probed=False
-            if (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
+            if not names_only and (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
                 from alias_discovery import discover,search_hints
                 if discovery.get('_hintPolicy')!='ydc-tavily-v1':discovery.pop('_hints',None)
                 discovery['_hintPolicy']='ydc-tavily-v1'
@@ -232,11 +237,11 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             source_people(source_ref,patch)
             if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
             names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
-            if not deferred and not probed:
+            if not deferred and not probed and not names_only:
                 remaining=[name for name in names if name not in probed_names]
                 if remaining:
                     best,new_events=(probe or public_sources)(source_ref,remaining,providers);events+=new_events
-            record['sourcePolicy']='deferred_until_release'if deferred else'eligible'
+            record['sourcePolicy']='not_checked_name_review'if names_only else'deferred_until_release'if deferred else'eligible'
             title=patch['display_name_zh']if not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any(s.get('type')=='douban_mobile_identity'for s in patch['sources'])else zh.get('douban_title',''))
             if verified_subject(patch):zh['douban_id']=verified_subject(patch)
@@ -249,11 +254,14 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 work['zh']=zh
                 if remember(work,packet,root):record['detailMetadata']={'season':packet['season'],'subjectId':packet['subjectId'],'summaryStatus':packet['summaryStatus'],'ratingStatus':packet['ratingStatus']}
             from source_votes import incomplete
-            if not deferred and (best or probed and not incomplete(events)):
+            if not names_only and not deferred and (best or probed and not incomplete(events)):
                 from source_availability import make_check
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
                 if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
+        if not patch:
+            pages=getattr(lookup,'pages',None)
+            record['verificationEvents']=getattr(pages,'events',[])[-12:]if pages is not None else[]
         cache['records'][key]={'checkedAt':now,'nextRetry':now+86400,'result':record,'identity':identity_record,'discovery':discovery};report['records'].append(record);dump(cache_path,cache)
     report['accounts']=client.events;report['reservedThisMonth']=used;dump(root/'logs/mainland-name-sync.json',report)
     if report['changed']:

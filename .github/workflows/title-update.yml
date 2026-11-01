@@ -12,6 +12,10 @@ on:
         description: Optional one official Apple slug for a targeted check
         type: string
         default: ''
+      pending_only:
+        description: Recheck missing Chinese names only; no playback source probing
+        type: boolean
+        default: false
 permissions:
   contents: write
   pages: write
@@ -76,11 +80,17 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           TITLE_LOOKUP_LIMIT: ${{ inputs.limit || vars.TITLE_LOOKUP_LIMIT || '3' }}
           TARGET_SLUG: ${{ inputs.slug }}
+          PENDING_ONLY: ${{ inputs.pending_only }}
         run: |
+          if [ "$PENDING_ONLY" = "true" ]; then
+            python scripts/pending_name_review.py --limit 64
+            exit 0
+          fi
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
           if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
           python scripts/mainland_names.py "${ARGS[@]}"
       - name: Verify pending playback availability in GitHub
+        if: inputs.pending_only != true
         env:
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
