@@ -104,10 +104,60 @@
         "searchStatus": "ok",
         "confidence": "UNVERIFIED"
       }
+    },
+    "home-4ym1omzf14f4jwcmb7lnu91o0": {
+      "checkedAt": 1793526647,
+      "nextRetry": 1793613047,
+      "result": {
+        "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+        "en": "Formula 1: Drive to Survive",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "get-rolling-with-otis": {
+      "checkedAt": 1793526647,
+      "nextRetry": 1793613047,
+      "result": {
+        "slug": "get-rolling-with-otis",
+        "en": "Get Rolling With Otis",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "greatness-code": {
+      "checkedAt": 1793526647,
+      "nextRetry": 1793613047,
+      "result": {
+        "slug": "greatness-code",
+        "en": "Greatness Code",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "hello-jack-the-kindness-show": {
+      "checkedAt": 1793526647,
+      "nextRetry": 1793613047,
+      "result": {
+        "slug": "hello-jack-the-kindness-show",
+        "en": "Hello, Jack! The Kindness Show",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
+    },
+    "helpsters": {
+      "checkedAt": 1793526647,
+      "nextRetry": 1793613047,
+      "result": {
+        "slug": "helpsters",
+        "en": "Helpsters",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED"
+      }
     }
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 3
+    "2026-11": 8
   }
 }

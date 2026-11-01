@@ -417,6 +417,55 @@
           }
         ]
       }
+    },
+    "stillwater": {
+      "lastAttemptAt": 1793526665,
+      "nextRetry": 1793530265,
+      "fingerprint": "a6414cc7f53535d2c38e66718efc53a873dc87d7b85de60a1ee65ee6d2155817",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "the-dynasty-uconn-huskies": {
+      "lastAttemptAt": 1793526665,
+      "nextRetry": 1793530265,
+      "fingerprint": "3409c870cbcf6aa153b5377dd904d1005e18f56b6785b8ed2b520acdb8c45244",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "ted-lasso": {
+      "checkedAt": 1793526665,
+      "lastAttemptAt": 1793526665,
+      "nextRetry": 1793530265,
+      "fingerprint": "132de97819ed144b62d23ae2c7694b7e50a3d96fc15350982587162fa4dc7955",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Ted Lasso",
+        "kind": "series",
+        "season": 4,
+        "year": "2026",
+        "found": true,
+        "routes": 35,
+        "checkedAt": 1793526665
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "足球教练",
+        "libraries": 24,
+        "checkedLibraries": 2,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "足球教练",
+            "libraries": 24
+          }
+        ]
+      }
     }
   }
 }
