@@ -41,7 +41,7 @@ def season(title):
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
 def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
 
-SOURCE_QUERY_POLICY='verified-alias-recall-strong-name-votes-v5'
+SOURCE_QUERY_POLICY='verified-alias-punctuation-recall-v6'
 
 def source_people(ref,patch):
     for key in ('directors','actors'):
@@ -67,7 +67,16 @@ def source_queries(ref,names):
         for query in variants:
             key=re.sub(r'\s+',' ',query).casefold()
             if key not in seen:output.append(query);seen.add(key)
-    return output
+    # Matching after a response cannot help a punctuation-sensitive upstream
+    # that returns no rows. Preserve exact queries first, then bounded stripped
+    # variants; do not use norm() for dedupe here or it would discard them.
+    expanded=[];seen=set()
+    for query in output:
+        stripped=re.sub(r'[^a-zA-Z0-9\u3400-\u9fff]','',query)
+        for variant in (query,stripped):
+            if variant and variant.casefold()not in seen:
+                expanded.append(variant);seen.add(variant.casefold())
+    return expanded[:12]
 def recall_matches(ref,row,names,strong=False):
     """Recall an existing verified alias; this alone never authorizes renaming."""
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))

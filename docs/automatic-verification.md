@@ -9,3 +9,7 @@
 搜索账户支持 YDC 与 Tavily 多账户。明确的余额/额度耗尽（包括账户返回的额度错误）停用该账户到本轮结束，并切换下一账户，随后可切换另一搜索服务。鉴权、限流及网络故障分别记录，不冒充余额耗尽；空结果不切换账户。Gemini 只用于独立的海报官方内容翻译。只使用 Actions Secrets，报告仅包含账户变量名与状态，不记录密钥或上游错误正文。应用的总请求预算仍然有效，所有搜索账户都不可用时保留缓存等待后续周期。
 
 详情中文名、简介、评分仍来自同一个已核验豆瓣作品响应；没有中文标题的条目不能与 CMS 简介或评分拼成豆瓣详情包。顶部官方轮播翻译流程独立保留。API 返回媒体入口、清单/分片可访问和播放器出画面分别验证。
+
+2026-11-02 correction: PR subseries pages can restart artwork folders at season-01 while the Apple show continues an existing series. `data/season-scopes.json` binds a reviewed PR entry to its exact official show/season ID, year and release date. Publication and collection reject changed identities; the original parent entry keeps earlier seasons. Prehistoric Planet: Ice Age is scoped to season 3 (2025), Douban 37457350, not the 2022 first season. A same-response Douban title/synopsis/score packet is retained without rating counts.
+
+Source query policy v6 keeps exact names and adds bounded punctuation/whitespace-stripped variants before response identity checks. This is retrieval only: season, year, medium, commentary exclusions and conflicting IDs remain enforced. Up to 12 queries per provider remain subject to the existing provider/work deadlines and cancellation. Old negative source-cache results are invalidated by the new query policy.

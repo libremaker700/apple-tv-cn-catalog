@@ -21,7 +21,22 @@ class SeasonQueries(unittest.TestCase):
                 self.assertEqual(queries[0],'邪恶力量第一季');self.assertEqual(found['routes'],1);self.assertEqual(found['title'],required)
     def test_movies_are_not_given_seasons_and_english_names_use_season(self):
         self.assertEqual(source_queries({'kind':'movie'},['电影名']),['电影名'])
-        self.assertEqual(source_queries({'kind':'series','season':2},['Example Season 1']),['Example Season 2','Example'])
+        self.assertEqual(source_queries({'kind':'series','season':2},['Example Season 1']),['Example Season 2','ExampleSeason2','Example'])
+    def test_punctuation_sensitive_upstream_is_queried_and_identity_stays_strict(self):
+        from unittest.mock import Mock
+        ref={'kind':'series','year':'2025','season':3,'douban_id':'37457350'}
+        names=['史前星球：冰川时代']
+        queries=source_queries(ref,names)
+        self.assertIn('史前星球冰川时代',queries)
+        self.assertIn('史前星球：冰川时代第三季',queries)
+        self.assertLessEqual(len(source_queries(ref,names*10)),12)
+        session=Mock()
+        row={'vod_id':'123','vod_name':'史前星球冰川时代第三季','vod_douban_id':'37457350','vod_year':'2025','type_name':'纪录片','vod_play_url':'第01集$https://example.invalid/one.m3u8'}
+        session.get.side_effect=lambda url,params,**kwargs:Mock(status_code=200,json=lambda:{'list':[row]if params.get('wd')=='史前星球冰川时代'else[]})
+        found,_=public_sources(ref,names,[{'id':'test','url':'https://example.invalid/api'}],session=session)
+        self.assertEqual(found['routes'],1)
+        for field,value in [('vod_douban_id','12345678'),('vod_name','史前星球冰川时代第二季'),('type_name','电影解说')]:
+            bad=dict(row,**{field:value});self.assertFalse(candidate_matches(ref,bad,names))
         for number in (1,9,10,11,20,21,99,100):
             title=source_queries({'kind':'series','season':number},['剧名'])[0];self.assertEqual(season(title),number)
     def test_query_specific_not_found_still_tries_base_name(self):

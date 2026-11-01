@@ -70,6 +70,8 @@ def publish(catalog,checked_at,mode):
     value=apply_details(value,ROOT)
     from list_artwork import apply_cached as apply_list_artwork
     value=apply_list_artwork(value,ROOT)
+    from season_scope import apply as apply_season_scope
+    for entry in value['entries']:apply_season_scope(entry,ROOT)
     images={}
     for e in value['entries']:
         from source_availability import apply_cached
@@ -131,7 +133,8 @@ def collect(previous):
         # Localized fields come exclusively from mainland policy data.
         e=clean_entry(e)
         if not e.get('zh') and slug in mainland:e['zh']=clean_zh(mainland[slug]);e['chinesePending']=not bool(e['zh'])
-        return collector.sync(e,seeds.get(slug,{}))
+        from season_scope import apply as apply_season_scope
+        return apply_season_scope(collector.sync(e,seeds.get(slug,{})),ROOT)
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool: entries=list(pool.map(entry,rows))
     cache_file.write_bytes(raw_json(collector.cache))
     report={'checkedAt':collector.now,'verified':sum(r['status']=='verified' for r in collector.report),'pending':sum(r['status']=='pending' for r in collector.report),'works':sorted(collector.report,key=lambda r:r['slug'])}

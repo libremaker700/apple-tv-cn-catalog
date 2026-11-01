@@ -208,6 +208,27 @@
           "rating": 7.2
         }
       ]
+    },
+    "umc.cmc.4lh4bmztauvkooqz400akxav": {
+      "en": "Prehistoric Planet: Ice Age",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37457350",
+          "sourceUrl": "https://movie.douban.com/subject/37457350/",
+          "title": "史前星球：冰川时代",
+          "summary": "这部五集纪录片带领观众进入恐龙灭绝后数百万年的史前新时代——冰川时代。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 3,
+          "year": 2025,
+          "checkedAt": "2026-11-01T22:19:44+00:00",
+          "originalTitle": "Prehistoric Planet: Ice Age",
+          "rating": 8.6
+        }
+      ]
     }
   }
 }

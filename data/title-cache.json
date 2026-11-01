@@ -3442,6 +3442,75 @@
           }
         ]
       }
+    },
+    "0e233c81a71ab8d9991d2839159bb4ee3fe9239e6e29bed7f95a7fb3d89a5c91": {
+      "identity": {
+        "slug": "prehistoric-planet-ice-age",
+        "english_title": "Prehistoric Planet: Ice Age",
+        "kind": "series",
+        "year": "2025",
+        "official_id": "umc.cmc.4lh4bmztauvkooqz400akxav"
+      },
+      "query_version": "zh-cn-v7-mobile-identity",
+      "status": "verified",
+      "checked_at": "2026-11-01T22:19:44+00:00",
+      "patch": {
+        "metadataPolicy": "mainland-v1",
+        "display_name_zh": "史前星球：冰川时代",
+        "aliases_zh": [
+          "史前星球：冰川时代",
+          "史前星球：冰河时代",
+          "史前星球"
+        ],
+        "name_status": "verified_title_sources",
+        "name_checked_at": "2026-11-01T22:19:44+00:00",
+        "sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/37457350/",
+            "retrieved_at": "2026-11-01T22:19:44+00:00"
+          }
+        ],
+        "douban_id": "37457350",
+        "douban_url": "https://movie.douban.com/subject/37457350/",
+        "rating_status": "AVAILABLE",
+        "douban_rating": 8.6,
+        "rating_checked_at": "2026-11-01T22:19:44+00:00",
+        "actors": [
+          "汤姆·希德勒斯顿"
+        ],
+        "directors": [],
+        "summary_zh": "这部五集纪录片带领观众进入恐龙灭绝后数百万年的史前新时代——冰川时代。",
+        "summary_sources": [
+          {
+            "type": "verified_page_synopsis",
+            "url": "https://movie.douban.com/subject/37457350/",
+            "retrieved_at": "2026-11-01T22:19:44+00:00"
+          }
+        ],
+        "summary_checked_at": "2026-11-01T22:19:44+00:00",
+        "detailMetadata": {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37457350",
+          "sourceUrl": "https://movie.douban.com/subject/37457350/",
+          "title": "史前星球：冰川时代",
+          "summary": "这部五集纪录片带领观众进入恐龙灭绝后数百万年的史前新时代——冰川时代。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 3,
+          "year": 2025,
+          "checkedAt": "2026-11-01T22:19:44+00:00",
+          "originalTitle": "Prehistoric Planet: Ice Age",
+          "rating": 8.6
+        }
+      },
+      "evidence": {
+        "status": "verified",
+        "source": "https://movie.douban.com/subject/37457350/",
+        "season": 3
+      },
+      "next_retry_at": "2026-11-01T22:19:44+00:00"
     }
   },
   "budgets": {
