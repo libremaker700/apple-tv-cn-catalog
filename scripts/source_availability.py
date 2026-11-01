@@ -121,8 +121,8 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
         check=make_check(work,query,best,now);zh['sourceCheck']=check;work['zh']=zh
         if best:
             selected=base(best['title']);zh['aliases']=list(dict.fromkeys([selected,zh['title']]+zh.get('aliases',[])));zh['title']=selected
+            zh['name_status']='verified_title_sources'
             if subject:
-                zh['name_status']='verified_title_sources'
                 if not zh.get('name_sources'):zh['name_sources']=[{'type':'douban_mobile_identity','url':'https://movie.douban.com/subject/'+str(subject)+'/','retrieved_at':str(now)}]
             if best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
         cache['records'][slug]={'checkedAt':now,'lastAttemptAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
