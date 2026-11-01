@@ -1512,12 +1512,37 @@
       "selection": null
     },
     "prehistoric-planet-ice-age": {
-      "lastAttemptAt": 1793571863,
-      "nextRetry": 1793575463,
-      "fingerprint": "96bfe33c0cd7747e3e31119b15b6e85a84ccd173284b87fd566afe9885fe884c",
-      "queryPolicy": "verified-alias-punctuation-recall-v6",
+      "checkedAt": 1793572405,
+      "lastAttemptAt": 1793572405,
+      "nextRetry": 1793576005,
+      "fingerprint": "35b51ef964ead3c446e42ff59a05c1435bdc103297b6145a744e4f447f0c3762",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
-      "pending": true
+      "check": {
+        "schema": 1,
+        "en": "Prehistoric Planet: Ice Age",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 8,
+        "checkedAt": 1793572405
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "史前星球：冰川时代",
+        "libraries": 7,
+        "checkedLibraries": 18,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "史前星球：冰川时代",
+            "libraries": 7
+          }
+        ]
+      }
     }
   }
 }

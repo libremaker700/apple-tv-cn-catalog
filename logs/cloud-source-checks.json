@@ -2,7 +2,19 @@
   "records": [
     {
       "slug": "prehistoric-planet-ice-age",
-      "status": "incomplete",
+      "check": {
+        "schema": 1,
+        "en": "Prehistoric Planet: Ice Age",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 8,
+        "checkedAt": 1793572405
+      },
+      "recallOnly": false,
+      "libraries": 8,
+      "complete": false,
       "events": [
         {
           "provider": "ff",
@@ -18,20 +30,12 @@
           "routes": 0
         },
         {
-          "provider": "jy",
-          "http": 200,
-          "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
           "provider": "hn",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "bd",
@@ -55,6 +59,14 @@
           "provider": "dytt",
           "http": 200,
           "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -87,9 +99,9 @@
           "provider": "bf",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "hh",
@@ -116,9 +128,9 @@
           "provider": "xl",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "xigua",
@@ -134,7 +146,7 @@
           "routes": 0
         },
         {
-          "provider": "sb",
+          "provider": "huya",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -153,6 +165,14 @@
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "5o5k",
@@ -176,20 +196,12 @@
           "routes": 0
         },
         {
-          "provider": "huya",
-          "http": 200,
-          "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
           "provider": "zy360",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "piaoling",
@@ -205,16 +217,12 @@
           "routes": 0
         },
         {
-          "provider": "iqy",
-          "http": 0
-        },
-        {
-          "provider": "iqy",
+          "provider": "wujin",
           "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "maoyan",
@@ -225,21 +233,16 @@
           "routes": 0
         },
         {
-          "provider": "wujin",
+          "provider": "iqy",
           "http": 0
         },
         {
-          "provider": "wujin",
+          "provider": "iqy",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
-        },
-        {
-          "provider": "zuida",
-          "http": 200,
-          "reason": "identity_pending"
         },
         {
           "provider": "zuida",
@@ -249,9 +252,9 @@
           "provider": "zuida",
           "http": 200,
           "reason": "partial_results",
-          "matchedRecords": 0,
+          "matchedRecords": 1,
           "identityRecords": 0,
-          "routes": 0
+          "routes": 1
         },
         {
           "provider": "ruyi",
@@ -275,37 +278,9 @@
           "routes": 0
         },
         {
-          "provider": "jiji",
-          "http": 0
-        },
-        {
-          "provider": "jiji",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "uku",
-          "http": 0
-        },
-        {
           "provider": "uku",
           "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "changzhang",
-          "http": 0
-        },
-        {
-          "provider": "changzhang",
-          "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -324,27 +299,11 @@
           "routes": 0
         },
         {
-          "provider": "bblue",
-          "http": 200,
-          "reason": "identity_pending"
+          "provider": "jiji",
+          "http": 0
         },
         {
-          "provider": "bblue",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "bblue",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "bblue",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "bblue",
+          "provider": "jiji",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -352,52 +311,32 @@
           "routes": 0
         },
         {
-          "provider": "shenhua",
+          "provider": "bblue",
           "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shenhua",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shenhua",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shenhua",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shenhua",
-          "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
         },
         {
-          "provider": "shared",
+          "provider": "shenhua",
           "http": 200,
-          "reason": "identity_pending"
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
         },
         {
-          "provider": "shared",
-          "http": 200,
-          "reason": "identity_pending"
+          "provider": "changzhang",
+          "http": 0
         },
         {
-          "provider": "shared",
+          "provider": "changzhang",
           "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shared",
-          "http": 200,
-          "reason": "identity_pending"
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "shared",
@@ -418,7 +357,7 @@
   "changed": [
     "prehistoric-planet-ice-age"
   ],
-  "checkedAt": 1793571863,
+  "checkedAt": 1793572405,
   "requestedLibraries": 33,
   "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
   "eligible": 1,
