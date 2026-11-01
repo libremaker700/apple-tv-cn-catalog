@@ -187,6 +187,27 @@
           "rating": 8.6
         }
       ]
+    },
+    "umc.cmc.10k6tes7rmc2ti0ho1ozgwezc": {
+      "en": "Maximum Pleasure Guaranteed",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37258103",
+          "sourceUrl": "https://movie.douban.com/subject/37258103/",
+          "title": "极致欢愉保障",
+          "summary": "刚离婚、带着娃的女子Paula陷入了勒索、谋杀和青少年足球的“兔子洞”，她确信自己见证了一场犯罪，同时挣扎于争夺孩子的监护权和身份危机。为此，Paula开始自行调查案件，可能会揭露一场更大的阴谋，也是她重建自己的家庭和自我的关键。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2026,
+          "checkedAt": "2026-11-01T14:46:36+00:00",
+          "originalTitle": "Maximum Pleasure Guaranteed",
+          "rating": 7.2
+        }
+      ]
     }
   }
 }

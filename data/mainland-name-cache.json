@@ -535,6 +535,410 @@
           "done": true
         }
       }
+    },
+    "maximum-pleasure-guaranteed": {
+      "checkedAt": 1793544396,
+      "nextRetry": 1793630796,
+      "result": {
+        "slug": "maximum-pleasure-guaranteed",
+        "en": "Maximum Pleasure Guaranteed",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "eligible",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "37258103",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "极致欢愉保障",
+        "sourceMatch": {
+          "title": "极致欢愉保障",
+          "routes": 38,
+          "libraries": 19,
+          "complete": false,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "极致欢愉保障",
+            "libraries": 19,
+            "checkedLibraries": 20,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "极致欢愉保障",
+                "libraries": 19
+              },
+              {
+                "title": "最大欢愉保障",
+                "libraries": 1
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "network"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 2,
+            "identityRecords": 2,
+            "routes": 20
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "network"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "37258103",
+        "year": "2026",
+        "season": 1,
+        "actors": [
+          "塔提阿娜·玛斯拉尼",
+          "杰克·约翰逊",
+          "查理·霍尔",
+          "乔恩·迈克尔·希尔",
+          "杰西·霍奇斯",
+          "詹娜·普拉顿",
+          "诺拉·华莱士",
+          "基亚拉·哈马加米·戈德堡",
+          "吉娜·普拉顿",
+          "詹妮弗·费林",
+          "塔拉·萨莫斯",
+          "雷米·奥贝尔若努瓦",
+          "卡米拉·洛克哈特",
+          "大卫·加雷利克",
+          "莫瑞·金斯堡",
+          "布鲁克林·索贝尔",
+          "多莉·德莱昂",
+          "阿尼·巴兰",
+          "丹尼尔·戴尔",
+          "珍妮瓦·梅雷迪斯"
+        ],
+        "directors": [
+          "大卫·戈登·格林"
+        ],
+        "url": "https://movie.douban.com/subject/37258103/"
+      },
+      "discovery": {}
     }
   },
   "budgets": {

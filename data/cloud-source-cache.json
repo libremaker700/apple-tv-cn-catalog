@@ -658,22 +658,40 @@
       }
     },
     "maximum-pleasure-guaranteed": {
-      "checkedAt": 1793526773,
-      "nextRetry": 1794131573,
-      "fingerprint": "64782aeb3359c4e91ee159ad3a6091cce2b9b67e954efee7d5fc34ae1e20c79f",
+      "checkedAt": 1793544396,
+      "nextRetry": 1793547996,
+      "fingerprint": "d89f49cd9922cce47f8661209592b6399842e29725a783afef507f622c139787",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "checkedAt": 1793526773,
+        "checkedAt": 1793544396,
         "en": "Maximum Pleasure Guaranteed",
         "found": true,
         "kind": "series",
-        "routes": 12,
+        "routes": 38,
         "schema": 1,
         "season": 1,
         "year": "2026"
       },
-      "selection": null
+      "selection": {
+        "attemptedLibraries": 33,
+        "checkedLibraries": 20,
+        "complete": false,
+        "libraries": 19,
+        "options": [
+          {
+            "libraries": 19,
+            "title": "极致欢愉保障"
+          },
+          {
+            "libraries": 1,
+            "title": "最大欢愉保障"
+          }
+        ],
+        "policy": "library-votes-v1",
+        "requestedLibraries": 33,
+        "title": "极致欢愉保障"
+      }
     },
     "unconditional": {
       "checkedAt": 1793526773,
