@@ -25,7 +25,8 @@ def apply_main(value,root):
 def apply_home(value,root):
     out=copy.deepcopy(value);records=read(root/'data/work-summary-cache.json',{}).get('works',{})
     for w in out.get('works',[]):attach(w,records.get(w['officialId']))
-    return out
+    from detail_metadata import apply_cached
+    return apply_cached(out,root,home=True)
 
 def run(root,api,translator,now,limit=400):
     main=read(root/'docs/catalog.json',{});home=read(root/'docs/home/home.json',{})

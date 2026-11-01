@@ -6,6 +6,21 @@ CC=OpenCC('t2s')
 
 def norm(s):return re.sub(r'[^a-z0-9\u3400-\u9fff]','',str(s or '').casefold())
 def base_title(s):return re.sub(r'\s*(?:第\s*[一1]\s*季|season\s*1)\s*$','',str(s or ''),flags=re.I).strip()
+def subject_season(text):
+    """An unnumbered TV subject is season one; explicit later seasons must match."""
+    found=re.findall(r'第\s*([0-9一二三四五六七八九十百]+)\s*季|season\s*(\d+)',str(text or''),re.I)
+    if not found:return 1
+    def number(pair):
+        word=pair[0]or pair[1]
+        if word.isdigit():return int(word)
+        digits='零一二三四五六七八九';pos=word.find('十')
+        if word=='一百':return 100
+        if pos>=0:return(1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)
+        return digits.index(word)
+    try:values={number(pair)for pair in found}
+    except ValueError:return None
+    return next(iter(values))if len(values)==1 else None
+def work_title(text):return re.sub(r'\s*(?:第\s*[0-9一二三四五六七八九十百]+\s*季|season\s*\d+)\s*$','',str(text or''),flags=re.I).strip()
 
 def title_queries(title):
     title=str(title or '').strip()
@@ -25,18 +40,19 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     if data.get('id') and str(data['id'])!=subject_id:return None
     wanted='movie' if ref.get('kind')=='movie' else 'tv'
     if endpoint!=wanted or data.get('type') not in (wanted,None,''):return None
-    if re.search(r'第\s*(?:[2-9]|[1-9]\d|[二三四五六七八九十百]+)\s*季|season\s*(?:[2-9]|[1-9]\d)',str(data['title'])+' '+str(data.get('original_title','')),re.I):return None
-    expected={norm(base_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
+    season=0 if wanted=='movie'else int(ref.get('season')or 1)
+    if wanted=='tv'and subject_season(str(data['title'])+' '+str(data.get('original_title','')))!=season:return None
+    expected={norm(work_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
     aka=data.get('aka') if isinstance(data.get('aka'),list) else []
     originals=[data.get('original_title','')]+aka
-    if not expected or not expected.intersection(norm(base_title(s)) for s in originals):return None
+    if not expected or not expected.intersection(norm(work_title(s)) for s in originals):return None
     expected_year=str(ref.get('year',''));source_year=str(data.get('year',''))
     if ref.get('imdb_id') and imdb(data) and imdb(data)!=ref['imdb_id']:return None
     if not re.fullmatch(r'(19|20)\d{2}',source_year) or not re.fullmatch(r'(19|20)\d{2}',expected_year):return None
     if source_year!=expected_year and not (ref.get('imdb_id') and imdb(data)==ref['imdb_id']):return None
-    name=CC.convert(base_title(data['title']))
+    name=CC.convert(work_title(data['title']))
     if not mainland_name(name) or len(name)>80:return None
-    aliases=list(dict.fromkeys(CC.convert(base_title(s)) for s in [name]+aka if mainland_name(s) and len(s)<80))
+    aliases=list(dict.fromkeys(CC.convert(work_title(s)) for s in [name]+aka if mainland_name(s) and len(s)<80))
     url='https://movie.douban.com/subject/'+subject_id+'/'
     patch={'metadataPolicy':POLICY,'display_name_zh':name,'aliases_zh':aliases,'name_status':'verified_title_sources','name_checked_at':checked_at,'sources':[{'type':'douban_mobile_identity','url':url,'retrieved_at':checked_at}],'douban_id':subject_id,'douban_url':url,'rating_status':'NO_RATING'}
     rating=data.get('rating') or {};value=rating.get('value');count=rating.get('count')
@@ -45,7 +61,11 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     if source_year!=expected_year:patch['release_year']=int(source_year)
     # Imported late to avoid a source-lookup import cycle.
     from title_sources import synopsis_patch
-    return synopsis_patch(patch,CC.convert(str(data.get('intro',''))),url,checked_at)
+    patch=synopsis_patch(patch,CC.convert(str(data.get('intro',''))),url,checked_at)
+    from detail_metadata import from_patch
+    packet=from_patch(patch,dict(ref,season=season))
+    if packet:patch['detailMetadata']=packet
+    return patch
 
 class DoubanMobile:
     def __init__(self,pages):self.pages=pages;self.diagnostics=[]
@@ -58,7 +78,16 @@ class DoubanMobile:
         return patch
     def lookup(self,ref,checked_at):
         seen=set()
-        for title in title_queries(ref.get('english_title') or ref.get('original_title')):
+        queries=title_queries(ref.get('english_title') or ref.get('original_title'))
+        if ref.get('kind')!='movie'and int(ref.get('season')or 1)>1:
+            queries=[title+' Season '+str(ref['season'])for title in queries]
+        hint=work_title(ref.get('display_name_zh',''))
+        if mainland_name(hint):
+            n=int(ref.get('season')or 1);digits='零一二三四五六七八九'
+            word=digits[n]if n<10 else('一百'if n==100 else('十'if n<20 else digits[n//10]+'十')+(digits[n%10]if n%10 else''))
+            localized=hint+(' 第'+word+'季'if ref.get('kind')!='movie'else'')
+            queries=queries[:1]+[localized]+queries[1:]
+        for title in queries[:2]:
             rows=self.pages.json('https://movie.douban.com/j/subject_suggest',params={'q':title})
             if not isinstance(rows,list):self.diagnostics.append({'stage':'suggest','status':'UNAVAILABLE'});return None
             if not rows:self.diagnostics.append({'stage':'suggest','status':'EMPTY_RESPONSE'});continue

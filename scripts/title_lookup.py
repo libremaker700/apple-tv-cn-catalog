@@ -49,6 +49,9 @@ def apply_verified(entry,cached,ident):
     zh.update(title=name,aliases=[s for s in aliases if s],metadataPolicy=POLICY,provenance='verified_mainland_title',name_status='verified_title_sources',name_checked_at=patch.get('name_checked_at'),name_sources=patch['sources'],_identityYear=int(ident['year']))
     for field in ('douban_id','douban_url','rating_status','douban_rating','douban_rating_count','rating_checked_at'):
         if field in patch:zh[field]=patch[field]
+    if patch.get('detailMetadata'):
+        from detail_metadata import attach
+        attach(out,patch['detailMetadata'])
     if patch.get('rating_status')=='NO_RATING':
         for field in ('douban_rating','douban_rating_count','rating_checked_at'):zh.pop(field,None)
     if re.fullmatch(r'(19|20)\d{2}',str(patch.get('release_year',''))):zh['releaseYear']=int(patch['release_year'])

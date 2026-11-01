@@ -15,6 +15,14 @@ def allowed_source(url):
 
 def clean_zh(value):
     if not isinstance(value,dict) or value.get('metadataPolicy')!=POLICY:return None
+    from detail_metadata import valid as valid_detail
+    if 'detailMetadata'in value and not valid_detail(value['detailMetadata']):return None
+    if 'detailSeasons'in value:
+        rows=value['detailSeasons']
+        if not isinstance(rows,list)or len(rows)>101 or any(not valid_detail(row)for row in rows):return None
+        if len({row['season']for row in rows})!=len(rows)or len({row['subjectId']for row in rows})!=len(rows):return None
+        packet=value.get('detailMetadata')
+        if packet and any(row['season']==packet['season']and row!=packet or row['season']!=packet['season']and row['subjectId']==packet['subjectId']for row in rows):return None
     if 'searchYear'in value and (type(value['searchYear'])is not int or not 1900<=value['searchYear']<=2099 or value.get('name_status')!='verified_title_sources'):return None
     check=value.get('sourceCheck')
     if check is not None:

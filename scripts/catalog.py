@@ -40,6 +40,10 @@ def validate(catalog):
         assert re.fullmatch('[a-z0-9-]{1,150}',e['slug']) and e['slug'] not in seen;seen.add(e['slug'])
         assert e['kind'] in ('movie','series') and e['en']
         assert not e.get('zh') or clean_zh(e['zh']) is not None, 'Non-mainland metadata rejected'
+        from detail_metadata import valid as valid_detail
+        zh=e.get('zh')or{}
+        assert all(valid_detail(packet,e['kind'])for packet in zh.get('detailSeasons',[])), 'Detail medium/season mismatch'
+        assert not zh.get('detailMetadata')or valid_detail(zh['detailMetadata'],e['kind']), 'Detail medium mismatch'
         assert e['officialUrl']=='https://www.apple.com/tv-pr/originals/'+e['slug']+'/'
         assert not any(k in e for k in ('id','sourceIds','playUrl','token','headers'))
         seasons=e.get('seasons') or [];numbers=set()
@@ -62,6 +66,8 @@ def publish(catalog,checked_at,mode):
     value=apply_names(value,ROOT)
     from work_summaries import apply_main
     value=apply_main(value,ROOT)
+    from detail_metadata import apply_cached as apply_details
+    value=apply_details(value,ROOT)
     images={}
     for e in value['entries']:
         from source_availability import apply_cached

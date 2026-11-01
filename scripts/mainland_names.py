@@ -3,6 +3,7 @@
 Only verified page fields may become titles. Gemini is never called here.
 """
 import argparse,copy,hashlib,json,re,time
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlsplit
 import requests
@@ -102,6 +103,8 @@ def independent_name(ref,hits,lookup,now,http=None):
 
 def republish_home(home,root):
     from home_sync import validate
+    from detail_metadata import apply_cached
+    home=apply_cached(home,root,home=True)
     validate(home);folder=root/'docs/home';manifest=load(folder/'version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest();path='releases/'+sha+'/home.json'
     (folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob);(folder/'home.json').write_bytes(blob)
     manifest.update(version=sha,path=path,checkedAt=int(time.time()));(folder/'version.json').write_bytes(raw_json(manifest))
@@ -130,12 +133,15 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         current=next((s for s in work.get('seasons',[])if s.get('season')==n),{})
         deferred_now=source_deferred(current or release_work,now)
         released_after_name_only=old.get('result',{}).get('sourcePolicy')=='deferred_until_release'and not deferred_now
-        if zh.get('name_status')=='verified_title_sources'and not force and not released_after_name_only:continue
+        from detail_metadata import valid as valid_detail
+        has_detail=any(valid_detail(p,work['kind'])and p['season']==(0 if work['kind']=='movie'else n)and p['summaryStatus']=='AVAILABLE'and 0<=now-datetime.fromisoformat(p['checkedAt']).timestamp()<7*86400 for p in zh.get('detailSeasons',[]))
+        if zh.get('name_status')=='verified_title_sources'and has_detail and not force and not released_after_name_only:continue
         if now<old.get('nextRetry',0)and not force and not released_after_name_only:continue
         year=str(zh.get('_identityYear')or(work.get('year')if is_home else identity(work,{})['year'])or'')
         if not re.fullmatch(r'(19|20)\d{2}',year):continue
         if len(report['records'])>=max(0,min(5,int(limit))):break
-        ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':year,'want_summary':False}
+        detail_year=str(current.get('year')or year)
+        ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':detail_year,'season':0 if work['kind']=='movie'else n,'want_summary':True,'display_name_zh':zh.get('title','')}
         source_ref={'year':str(current.get('year')or year),'season':n,'kind':work['kind']}
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set()
@@ -159,6 +165,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                         fallback['aliases_zh']=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])+[fallback['display_name_zh']]+fallback.get('aliases_zh',[])))
                         fallback['sources']=patch['sources']+fallback.get('sources',[])
                         fallback['display_name_zh']=patch['display_name_zh']
+                        # Keep the single Douban response's synopsis and rating packet intact.
+                        for field in ('detailMetadata','douban_id','douban_url','rating_status','douban_rating','douban_rating_count','rating_checked_at','summary_zh','summary_sources','summary_checked_at'):
+                            if field in patch:fallback[field]=copy.deepcopy(patch[field])
                     patch=fallback;probed=False
         record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
         if patch:
@@ -171,6 +180,11 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             title=patch['display_name_zh']if not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any('douban'in s['url']for s in patch['sources'])else zh.get('douban_title',''))
             if verified_subject(patch):zh['douban_id']=verified_subject(patch)
+            packet=patch.get('detailMetadata')
+            if packet:
+                from detail_metadata import remember
+                work['zh']=zh
+                if remember(work,packet,root):record['detailMetadata']={'season':packet['season'],'subjectId':packet['subjectId'],'summaryStatus':packet['summaryStatus'],'ratingStatus':packet['ratingStatus']}
             if not deferred and (probed or best):
                 from source_availability import make_check
                 zh['sourceCheck']=make_check(work,source_ref,best,now)

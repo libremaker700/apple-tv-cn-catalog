@@ -52,7 +52,10 @@ def validate_pages(value):
                 assert type(season['season'])is int and 1<=season['season']<=100 and re.fullmatch(r'umc\.cmc\.[a-z0-9]+',season['officialId']) and re.fullmatch(r'(19|20)\d{2}',str(season['year']))
                 assert not any(k in season for k in ('id','sourceIds','headers','token','playUrl','utsk','utscf'))
         if w.get('zh'):
-            zh=w['zh'];assert zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
+            from metadata_policy import clean_zh
+            from detail_metadata import valid as valid_detail
+            zh=w['zh'];assert clean_zh(zh)is not None and zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
+            assert all(valid_detail(packet,w['kind'])for packet in zh.get('detailSeasons',[]))and(not zh.get('detailMetadata')or valid_detail(zh['detailMetadata'],w['kind']))
     def rows(rows,w,h,topics=False):
         seen=set()
         for r in rows:

@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "works": {
+    "umc.cmc.4cfsq1juke72zutv5xp0pw3rj": {
+      "en": "Nocturne",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36229588",
+          "sourceUrl": "https://movie.douban.com/subject/36229588/",
+          "title": "夜曲",
+          "summary": "厌倦了费城街头残酷生活的退役军人兼警探Jonah Lynn（列维·施瑞博尔 饰），搬到宾夕法尼亚州西部的小镇寻求平静生活。然而，当臭名昭著且本应被关押的连环杀手Jurek Walter（斯蒂芬·格拉汉姆 饰）再次对他的家庭和当地小镇发动袭击时，Jonah必须保护挚爱的人，并被迫将FBI探员Saga Bauer（莎姬·贝兹 饰）推向风口浪尖，与杀手展开生死较量。 该剧改编自Lars Kepler的小说《拉撒路》和《睡魔》。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING",
+          "season": 1,
+          "year": 2026,
+          "checkedAt": "2026-10-30T10:09:45+00:00",
+          "originalTitle": "Nocturne"
+        }
+      ]
+    },
+    "umc.cmc.771mea1fm11ta9k7x8oeocbck": {
+      "en": "Prodigies",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37326083",
+          "sourceUrl": "https://movie.douban.com/subject/37326083/",
+          "title": "后神童人生",
+          "summary": "Didi和Ren，曾经被誉为天才儿童的两人如今已年过三十，他们开始重新审视自九岁起便维系着的这段关系。从伦敦到东京，途经弗吉尼亚，这部风格独特的浪漫喜剧探讨了潜力、抱负以及长期关系中普遍存在的复杂性。他们开始质疑自己平淡无奇的生活是否兑现了童年的非凡承诺，却发现自己陷入了一种崭新又令人恐惧的混乱之中。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING",
+          "season": 1,
+          "year": 2027,
+          "checkedAt": "2026-10-30T10:09:45+00:00",
+          "originalTitle": "Prodigies"
+        }
+      ]
+    },
+    "umc.cmc.13c4zk3hpybm6u0cfk1x0vyi": {
+      "en": "Long Way Round",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "1494797",
+          "sourceUrl": "https://movie.douban.com/subject/1494797/",
+          "title": "漫漫长路",
+          "summary": "曾主演电影《星际大战》、《红磨坊》的英国男艺人伊旺麦奎格（Ewan Mcgregor）和他的好友 查理布尔曼Charley Boorman 骑着BMW重型机车完成环游世界的壮举，他们从伦敦出发，穿越欧洲、俄罗斯、西伯利亚、哈萨克、蒙古、阿拉斯加，最后回到终点纽约，这趟全程达32000公里的重机长征，共费时115天。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2004,
+          "checkedAt": "2026-10-31T01:37:53+00:00",
+          "originalTitle": "Long Way Round",
+          "rating": 9.2,
+          "ratingCount": 1782
+        }
+      ]
+    },
+    "umc.cmc.2szz3fdt71tl1ulnbp8utgq5o": {
+      "en": "Slow Horses",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36689816",
+          "sourceUrl": "https://movie.douban.com/subject/36689816/",
+          "title": "流人",
+          "summary": "第六季改编自米克·赫隆所著小说系列的第六本《Joe Country》和第七本《Slough House》。 Diana Taverner（克里斯汀·斯科特·托马斯 饰）将“流人”们卷入了一场充满复仇的致命高风险游戏中，这群间谍因此踏上了逃亡之路。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 6,
+          "year": 2026,
+          "checkedAt": "2026-11-01T02:15:28+00:00",
+          "originalTitle": "Slow Horses",
+          "rating": 7.2,
+          "ratingCount": 18493
+        }
+      ]
+    }
+  }
+}
