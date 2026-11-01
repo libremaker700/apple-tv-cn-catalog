@@ -156,8 +156,8 @@
       }
     },
     "not-a-box": {
-      "checkedAt": 1793544625,
-      "nextRetry": 1793631025,
+      "checkedAt": 1793545155,
+      "nextRetry": 1793631555,
       "result": {
         "slug": "not-a-box",
         "en": "Not a Box",
@@ -165,28 +165,9 @@
         "confidence": "UNVERIFIED",
         "discoveryEvents": [
           {
-            "account": "GEMINI_API_KEY_1",
-            "model": "gemini-3.5-flash-lite",
-            "http": 429,
-            "status": "api_error"
-          },
-          {
-            "account": "GEMINI_API_KEY_2",
-            "model": "gemini-3.5-flash-lite",
-            "http": 429,
-            "status": "api_error"
-          },
-          {
-            "account": "GEMINI_API_KEY_3",
-            "model": "gemini-3.5-flash-lite",
-            "http": 429,
-            "status": "api_error"
-          },
-          {
-            "account": "GEMINI_API_KEY_4",
-            "model": "gemini-3.5-flash-lite",
-            "http": 429,
-            "status": "api_error"
+            "service": "ydc_tavily",
+            "stage": "candidate_names",
+            "status": "ok"
           },
           {
             "provider": "ff",
@@ -250,7 +231,6 @@
         "url": "https://movie.douban.com/subject/37374251/"
       },
       "discovery": {
-        "_hints": [],
         "ff": {
           "queries": [
             "Not a Box"
@@ -273,7 +253,7 @@
             "Not a Box"
           ],
           "q": 0,
-          "page": 7,
+          "page": 10,
           "offset": 0,
           "done": false
         },
@@ -316,7 +296,7 @@
             "Not a Box"
           ],
           "q": 0,
-          "page": 7,
+          "page": 10,
           "offset": 0,
           "done": false
         },
@@ -510,7 +490,7 @@
           ],
           "q": 0,
           "page": 1,
-          "offset": 12
+          "offset": 17
         },
         "ikanbot": {
           "queries": [
@@ -537,7 +517,9 @@
           "page": 1,
           "offset": 0,
           "done": true
-        }
+        },
+        "_hintPolicy": "ydc-tavily-v1",
+        "_hints": []
       }
     },
     "maximum-pleasure-guaranteed": {
@@ -947,6 +929,6 @@
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 10
+    "2026-11": 12
   }
 }
