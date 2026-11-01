@@ -19,12 +19,31 @@ def keywords(original,hints):
 def model_hints(ref):
     from api_accounts import accounts
     from gemini_titles import GeminiTitles
-    events=[]
+    events=[];deadline=time.monotonic()+45
+    class BoundedSession(requests.Session):
+        def request(self,*args,**kwargs):
+            left=deadline-time.monotonic()
+            if left<=0:raise requests.Timeout()
+            kwargs['timeout']=(min(5,left/3),min(20,left*2/3))
+            return super().request(*args,**kwargs)
     for name,key in accounts('GEMINI'):
-        result=GeminiTitles(key).search(ref)
-        events.append({'account':name,'http':result.get('api_http',0),'status':result['status']})
-        if result['status']=='ok':return result['candidate_titles'][:3],events
-        if result.get('api_http')==200:break
+        if time.monotonic()>=deadline:break
+        with BoundedSession()as session:
+            client=GeminiTitles(key,session=session);available=client.models()
+            models=[row['name']for row in available['models']if 'generateContent'in row['methods']and'flash'in row['name']and not re.search('image|audio|tts|live|robot',row['name'])]
+            preferred=['gemini-3.5-flash-lite','gemini-3.1-flash-lite','gemini-2.5-flash-lite','gemini-2.5-flash']
+            models=sorted(models,key=lambda model:(preferred.index(model)if model in preferred else len(preferred),model))[:2]
+            if not models:events.append({'account':name,'http':available['api_http'],'status':'no_available_model'});continue
+            for model in models:
+                client.model=model;result=client.search(ref)
+                events.append({'account':name,'model':model,'http':result.get('api_http',0),'status':result['status']})
+                if result['status']=='ok':return result['candidate_titles'][:3],events
+                if result.get('api_http')==200:
+                    result=client.search(ref,grounded=False)
+                    events.append({'account':name,'model':model,'http':result.get('api_http',0),'status':result['status'],'untrustedHints':True})
+                    if result['status']=='ok':return result['candidate_titles'][:3],events
+                    break
+                if result.get('api_http')not in(400,404):break
     return [],events
 
 def discover(identity,ref,providers,hints=(),deadline=None,state=None):

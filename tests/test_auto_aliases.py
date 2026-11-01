@@ -32,6 +32,13 @@ class AutomaticAliases(unittest.TestCase):
         self.assertEqual(pool.search('name')[1],'ok');self.assertEqual(pool.events[0]['reason'],'quota_exhausted');self.assertEqual(len(session.post.call_args_list),2);self.assertNotIn('PRIVATE',json.dumps(pool.events))
     def test_keyword_cap(self):
         words=keywords('Not a Box',['不是一个盒子','其他名字','另一个名字']);self.assertLessEqual(len(words),4);self.assertIn('盒子',words)
+    def test_model_discovery_avoids_retired_default_and_switches_accounts(self):
+        from alias_discovery import model_hints
+        first=Mock();first.models.return_value={'api_http':402,'models':[]}
+        second=Mock();second.models.return_value={'api_http':200,'models':[{'name':'gemini-3.1-flash-lite','methods':['generateContent']}]};second.search.return_value={'status':'ok','api_http':200,'candidate_titles':['不是一个盒子']}
+        with patch('api_accounts.accounts',return_value=[('one','private1'),('two','private2')]),patch('gemini_titles.GeminiTitles',side_effect=[first,second]):
+            hints,events=model_hints({'english_title':'Not a Box'})
+        self.assertEqual(hints,['不是一个盒子']);self.assertEqual(second.model,'gemini-3.1-flash-lite');self.assertEqual(len(events),2);self.assertNotIn('private2',json.dumps(events))
     def test_automatic_alias_is_saved_and_reused_for_source_checks(self):
         import tempfile
         from mainland_names import run
