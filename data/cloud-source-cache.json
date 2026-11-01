@@ -542,20 +542,19 @@
     },
     "sugar": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "4d1b476ee8b0244b978b6bdc756695e4ae7f270451518c4db278dadf93d472b9",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "Sugar",
-        "kind": "series",
-        "season": 2,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 33,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 2,
+        "year": "2026"
       },
       "selection": null
     },
@@ -660,20 +659,19 @@
     },
     "maximum-pleasure-guaranteed": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "64782aeb3359c4e91ee159ad3a6091cce2b9b67e954efee7d5fc34ae1e20c79f",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "Maximum Pleasure Guaranteed",
-        "kind": "series",
-        "season": 1,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 12,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 1,
+        "year": "2026"
       },
       "selection": null
     },
@@ -745,20 +743,19 @@
     },
     "my-brother-the-minotaur": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "bb865afd7a3d23d65ae1dc279737912cf630cfe8735d9bd9f8d8b6456301d989",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "My Brother the Minotaur",
-        "kind": "series",
-        "season": 1,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 11,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 1,
+        "year": "2026"
       },
       "selection": null
     },
@@ -797,20 +794,19 @@
     },
     "margos-got-money-troubles": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "281d578f91810808d22be28eec8f8d4628f414928e12c029b0c1da3d28451723",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "Margo’s Got Money Troubles",
-        "kind": "series",
-        "season": 1,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 32,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 1,
+        "year": "2026"
       },
       "selection": null
     },
@@ -849,20 +845,19 @@
     },
     "for-all-mankind": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "f52056d339ffd44a12bdc968d780238204a2b591cd8626d05006d357e5b0027b",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "For All Mankind",
-        "kind": "series",
-        "season": 5,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 33,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 5,
+        "year": "2026"
       },
       "selection": null
     },
@@ -901,20 +896,19 @@
     },
     "twisted-yoga": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "3bd9f5299ca6a2f61cef27cf2b53784cabdfc6d5621419e7cc5e96d5b509da6b",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "Twisted Yoga",
-        "kind": "series",
-        "season": 1,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 30,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 1,
+        "year": "2026"
       },
       "selection": null
     },
@@ -953,20 +947,19 @@
     },
     "the-last-thing-he-told-me": {
       "checkedAt": 1793526773,
-      "lastAttemptAt": 1793526773,
-      "nextRetry": 1793530373,
+      "nextRetry": 1794131573,
       "fingerprint": "9a3881799634223bc0ba9ec34b1acc66e9667fa72e488c4ecb300e0a3a33ad2f",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793526773,
         "en": "The Last Thing He Told Me",
-        "kind": "series",
-        "season": 2,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 51,
-        "checkedAt": 1793526773
+        "schema": 1,
+        "season": 2,
+        "year": "2026"
       },
       "selection": null
     },
@@ -1142,6 +1135,363 @@
           }
         ]
       }
+    },
+    "born-to-be-wild": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "6bedeeb5834c45842bb9e3204ca34a33e1c2e9cc9613834b13fbe1e8e3c27de1",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Born to be Wild",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 9,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "生而狂野",
+        "libraries": 3,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "生而狂野",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "f1": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "e60ef39530f080d002ef32a7a2885e6d3555b6b53188fa127cd6fd2a69bb515e",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "F1 The Movie",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 17,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "F1：狂飙飞车",
+        "libraries": 3,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "F1：狂飙飞车",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "the-first-snow-of-fraggle-rock": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "e7c6538db5030c809634537335cc0e2bc805f08060f9ddc22fb7810425dbed7e",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The First Snow of Fraggle Rock",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 12,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "布偶奇遇记美好初雪",
+        "libraries": 3,
+        "checkedLibraries": 24,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "布偶奇遇记美好初雪",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "wondla": {
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "70020322db6683545647522257bc015c036b8751f6c740f9b0d5e214125e4113",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "the-family-plan-2": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "327298d99a2450cffed37902e55bd76e27c52b63120ad3b9e957a109b6f66694",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Family Plan 2",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "家庭计划2",
+        "libraries": 22,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "家庭计划2",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "come-see-me-in-the-good-light": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "28dc5fe23b0f2c8009305032ee896247925e54458bd2cc9eb1d2b64c440f7b82",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Come See Me in the Good Light",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 21,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "向光而行",
+        "libraries": 13,
+        "checkedLibraries": 19,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "向光而行",
+            "libraries": 13
+          }
+        ]
+      }
+    },
+    "palm-royale": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "57aec0ae49864f1feab067d4c9e8ee95c47fd02b5b30fb324eb304f6286c40c8",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Palm Royale",
+        "kind": "series",
+        "season": 2,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "皇家棕榈",
+        "libraries": 22,
+        "checkedLibraries": 3,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "皇家棕榈",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "pluribus": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "75c72e2a1517263d35f8bffe661b7059ee71df85eaa729e469ab6edc2851bf4a",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Pluribus",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 35,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "同乐者",
+        "libraries": 22,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "同乐者",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "down-cemetery-road": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "922605c44b5d42089c0c454333f3af3d2ed200e5b21a3b9ae29146c5b8d2e0f1",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Down Cemetery Road",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 9,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "坟场回路",
+        "libraries": 4,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "坟场回路",
+            "libraries": 4
+          }
+        ]
+      }
+    },
+    "stiller-meara-nothing-is-lost": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "6c37ea8a2a9aa05df6780661389e4a52f0a9315f2b2cb32c9ec039b9fed1ccec",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Stiller & Meara: Nothing is Lost",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 7,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "斯蒂勒与米拉未曾落幕",
+        "libraries": 2,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "斯蒂勒与米拉未曾落幕",
+            "libraries": 2
+          }
+        ]
+      }
+    },
+    "mr-scorsese": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "5d6067cf7f72207d41ac8094f07c162384d55cbd41da9dd2de3627f051a48f80",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Mr. Scorsese",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 8,
+        "checkedAt": 1793538677
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "斯科塞斯先生",
+        "libraries": 8,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "斯科塞斯先生",
+            "libraries": 8
+          }
+        ]
+      }
+    },
+    "loot": {
+      "checkedAt": 1793538677,
+      "lastAttemptAt": 1793538677,
+      "nextRetry": 1793542277,
+      "fingerprint": "13d346a801a6a143e8de7f95e29d2b86d685e5fe4a9b17f4c3a80e73b1234285",
+      "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Loot",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793538677
+      },
+      "selection": null
     }
   }
 }

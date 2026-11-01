@@ -1,28 +1,705 @@
 {
   "records": [
     {
-      "slug": "vietnam-the-war-that-changed-america",
+      "slug": "born-to-be-wild",
       "check": {
         "schema": 1,
-        "en": "Vietnam: The War That Changed America",
+        "en": "Born to be Wild",
         "kind": "series",
         "season": 1,
         "year": "2025",
         "found": true,
-        "routes": 18,
-        "checkedAt": 1793527855
+        "routes": 9,
+        "checkedAt": 1793538677
       },
       "recallOnly": false,
-      "libraries": 6,
+      "libraries": 4,
       "complete": false,
       "events": [
         {
           "provider": "hn",
           "http": 200,
           "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
           "matchedRecords": 1,
           "identityRecords": 1,
           "routes": 1
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 6
+        }
+      ]
+    },
+    {
+      "slug": "f1",
+      "check": {
+        "schema": 1,
+        "en": "F1 The Movie",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 17,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 3,
+      "complete": false,
+      "events": [
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 15
+        },
+        {
+          "provider": "shenhua",
+          "http": 0,
+          "reason": "media_unavailable"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 0,
+          "reason": "network"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "the-first-snow-of-fraggle-rock",
+      "check": {
+        "schema": 1,
+        "en": "The First Snow of Fraggle Rock",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 12,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 3,
+      "complete": false,
+      "events": [
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
         },
         {
           "provider": "jy",
@@ -75,6 +752,27 @@
           "routes": 0
         },
         {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
           "provider": "bf",
           "http": 200,
           "reason": "checked",
@@ -91,13 +789,2860 @@
           "routes": 0
         },
         {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 7
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 4
+        }
+      ]
+    },
+    {
+      "slug": "wondla",
+      "status": "incomplete",
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
           "provider": "lz",
-          "http": 0
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "the-family-plan-2",
+      "check": {
+        "schema": 1,
+        "en": "The Family Plan 2",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 22,
+      "complete": false,
+      "events": [
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 10
+        },
+        {
+          "provider": "shenhua",
+          "http": 0,
+          "reason": "media_unavailable"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 0,
+          "reason": "network"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "come-see-me-in-the-good-light",
+      "check": {
+        "schema": 1,
+        "en": "Come See Me in the Good Light",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 21,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 14,
+      "complete": false,
+      "events": [
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 8
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "palm-royale",
+      "check": {
+        "schema": 1,
+        "en": "Palm Royale",
+        "kind": "series",
+        "season": 2,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 22,
+      "complete": false,
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
         },
         {
           "provider": "lz",
           "http": 200,
           "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "shenhua",
+          "http": 0,
+          "reason": "media_unavailable"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 10
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 0,
+          "reason": "network"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "pluribus",
+      "check": {
+        "schema": 1,
+        "en": "Pluribus",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 35,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 24,
+      "complete": false,
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 2,
+          "identityRecords": 2,
+          "routes": 2
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 2,
+          "identityRecords": 2,
+          "routes": 11
+        },
+        {
+          "provider": "shenhua",
+          "http": 0,
+          "reason": "media_unavailable"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "down-cemetery-road",
+      "check": {
+        "schema": 1,
+        "en": "Down Cemetery Road",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 9,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 4,
+      "complete": false,
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 2,
+          "identityRecords": 2,
+          "routes": 2
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 2,
+          "identityRecords": 2,
+          "routes": 5
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 0,
+          "reason": "network"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "stiller-meara-nothing-is-lost",
+      "check": {
+        "schema": 1,
+        "en": "Stiller & Meara: Nothing is Lost",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 7,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 2,
+      "complete": false,
+      "events": [
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 6
+        }
+      ]
+    },
+    {
+      "slug": "mr-scorsese",
+      "check": {
+        "schema": 1,
+        "en": "Mr. Scorsese",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 8,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": false,
+      "libraries": 8,
+      "complete": false,
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -145,17 +3690,12 @@
           "routes": 0
         },
         {
-          "provider": "ff",
-          "http": 403,
-          "reason": "http"
-        },
-        {
-          "provider": "ff",
+          "provider": "bf",
           "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "zzoc",
@@ -184,7 +3724,7 @@
           "routes": 0
         },
         {
-          "provider": "zy360",
+          "provider": "huya",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -200,12 +3740,12 @@
           "routes": 0
         },
         {
-          "provider": "huya",
+          "provider": "zy360",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "piaoling",
@@ -219,6 +3759,14 @@
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
           "provider": "maoyan",
@@ -237,19 +3785,20 @@
           "routes": 0
         },
         {
-          "provider": "wujin",
+          "provider": "zuida",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
         },
         {
-          "provider": "zuida",
-          "http": 0
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
         },
         {
-          "provider": "zuida",
+          "provider": "ruyi",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -265,25 +3814,17 @@
           "routes": 0
         },
         {
-          "provider": "uku",
-          "http": 0
-        },
-        {
-          "provider": "uku",
+          "provider": "jiji",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
         },
         {
-          "provider": "jiji",
-          "http": 0
-        },
-        {
-          "provider": "jiji",
+          "provider": "uku",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -297,9 +3838,9 @@
           "provider": "ikanbot",
           "http": 200,
           "reason": "partial_results",
-          "matchedRecords": 1,
+          "matchedRecords": 0,
           "identityRecords": 0,
-          "routes": 2
+          "routes": 0
         },
         {
           "provider": "changzhang",
@@ -310,7 +3851,7 @@
           "routes": 1
         },
         {
-          "provider": "shenhua",
+          "provider": "bblue",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -318,7 +3859,7 @@
           "routes": 0
         },
         {
-          "provider": "bblue",
+          "provider": "shenhua",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -334,9 +3875,411 @@
           "provider": "shared",
           "http": 200,
           "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        }
+      ]
+    },
+    {
+      "slug": "loot",
+      "check": {
+        "schema": 1,
+        "en": "Loot",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793538677
+      },
+      "recallOnly": true,
+      "libraries": 23,
+      "complete": false,
+      "events": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "partial_results",
           "matchedRecords": 1,
           "identityRecords": 0,
-          "routes": 12
+          "routes": 1
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
         },
         {
           "provider": "ruyi",
@@ -347,6 +4290,148 @@
           "provider": "ruyi",
           "http": 200,
           "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 10
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "shenhua",
+          "http": 0,
+          "reason": "media_unavailable"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 0,
+          "reason": "network"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -355,12 +4440,22 @@
     }
   ],
   "changed": [
-    "vietnam-the-war-that-changed-america"
+    "born-to-be-wild",
+    "f1",
+    "the-first-snow-of-fraggle-rock",
+    "the-family-plan-2",
+    "come-see-me-in-the-good-light",
+    "palm-royale",
+    "pluribus",
+    "down-cemetery-road",
+    "stiller-meara-nothing-is-lost",
+    "mr-scorsese",
+    "loot"
   ],
-  "checkedAt": 1793527855,
+  "checkedAt": 1793538677,
   "requestedLibraries": 33,
   "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
-  "eligible": 1,
-  "cached": 0,
-  "remainingDue": 0
+  "eligible": 313,
+  "cached": 7,
+  "remainingDue": 294
 }

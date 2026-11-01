@@ -124,6 +124,69 @@
           "rating": 7.7
         }
       ]
+    },
+    "umc.cmc.5sgng9umkaa6mylh0k5kqsepp": {
+      "en": "Born to be Wild",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36486517",
+          "sourceUrl": "https://movie.douban.com/subject/36486517/",
+          "title": "生而狂野",
+          "summary": "这部历时数年、跨越三大洲拍摄的六集纪录片，追踪六只濒危幼崽在人类世界成长却终将回归自然的历程。从初生襁褓到踏上荒野征程，聚焦这些生命在生存挑战中展现的坚韧与胜利，既刻画动物自身的生存之道，也展现守护它们的非凡人类。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2025,
+          "checkedAt": "2026-11-01T13:11:17+00:00",
+          "originalTitle": "Born to be Wild",
+          "rating": 8.2
+        }
+      ]
+    },
+    "umc.cmc.27uh51l7oh3ghql2gxb6xvb1s": {
+      "en": "Come See Me in the Good Light",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37153813",
+          "sourceUrl": "https://movie.douban.com/subject/37153813/",
+          "title": "向光而行",
+          "summary": "这部纪录片由编剧、喜剧人泰格·诺塔洛（Tig Notaro）、著名歌手布兰迪·卡莉（Brandi Carlile）等担当监制，讲述两位才华横溢的诗人，安德烈亚·吉布森和梅根·法利的故事。“在最美的光影中，在电闪雷鸣的瞬间，我的爱人伴我左右。”吉布森在 ta 的诗作 Good Light 中这样写道。通过本片，诗人邀请我们一同见证 ta 对生命、爱与死亡的深刻思考。面对生命的有限，两人用诗歌和爱，书写了一曲动人的生命乐章。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2025,
+          "checkedAt": "2026-11-01T13:11:17+00:00",
+          "originalTitle": "Come See Me in the Good Light",
+          "rating": 7.4
+        }
+      ]
+    },
+    "umc.cmc.4a06j5lm5pxny9nx505zo5g0y": {
+      "en": "Mr. Scorsese",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37361690",
+          "sourceUrl": "https://movie.douban.com/subject/37361690/",
+          "title": "斯科塞斯先生",
+          "summary": "深度探访马丁·斯科塞斯丰富多彩的人生，包含他的私人档案，以及与亲友、传奇合作伙伴和这位具有远见的电影大师本人的深度对谈。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2025,
+          "checkedAt": "2026-11-01T13:11:17+00:00",
+          "originalTitle": "Mr. Scorsese",
+          "rating": 8.6
+        }
+      ]
     }
   }
 }
