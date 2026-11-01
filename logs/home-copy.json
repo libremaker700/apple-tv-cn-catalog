@@ -1,15 +1,15 @@
 {
-  "checkedAt": 1793496039,
+  "checkedAt": 1793496781,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
       "requested": 0,
-      "cacheHits": 6,
+      "cacheHits": 7,
       "translated": 0,
       "pending": 1,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 2,
+      "retainedCopy": 0,
+      "sourceMissing": 1,
       "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
     },
     {
@@ -125,5 +125,5 @@
   ],
   "translated": 0,
   "pending": 1,
-  "version": "3a98849751331ef6fb15ed257403650f9f7a0ea8303e812628477bae021e07e5"
+  "version": "31e1ccff3d24dc7e6591ca32198dc4742dc45633efe6e4823d0966f992c6052d"
 }
