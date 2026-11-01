@@ -2,7 +2,7 @@ import copy,sys,time,unittest
 from pathlib import Path
 from unittest.mock import Mock
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from mainland_names import public_sources,candidate_matches,source_count
+from mainland_names import public_sources,candidate_matches,recall_matches,source_count
 from source_votes import apply_selection
 
 class Votes(unittest.TestCase):
@@ -16,7 +16,7 @@ class Votes(unittest.TestCase):
             return Mock(status_code=200,json=lambda:{'list':rows})
         session.get.side_effect=get
         best,_=public_sources({'kind':'movie','year':'2020','douban_id':'12345678'},['甲名称','乙名称'],providers,session=session)
-        self.assertEqual(best['title'],'乙名称');self.assertEqual(best['libraries'],2);self.assertEqual(best['selection']['requestedLibraries'],3);self.assertEqual({r['title']:r['libraries']for r in best['selection']['options']},{'乙名称':2,'甲名称':1})
+        self.assertEqual(best['title'],'乙名称');self.assertEqual(best['libraries'],3);self.assertEqual(best['selection']['libraries'],2);self.assertEqual(best['selection']['requestedLibraries'],3);self.assertEqual({r['title']:r['libraries']for r in best['selection']['options']},{'乙名称':2,'甲名称':1})
     def test_conflict_season_year_and_unknown_medium_are_not_votes(self):
         ref={'kind':'series','year':'2020','season':1,'douban_id':'12345678'};good=self.row('甲名称第一季',type_name='欧美剧');self.assertTrue(candidate_matches(ref,good,['甲名称']))
         for field,value in [('vod_name','甲名称第二季'),('vod_year','2021'),('vod_douban_id','87654321'),('type_name','')]:self.assertFalse(candidate_matches(ref,dict(good,**{field:value}),['甲名称']))
@@ -35,3 +35,19 @@ class Votes(unittest.TestCase):
     def test_movie_same_number_can_cross_one_release_year_but_conflicts_cannot(self):
         ref={'kind':'movie','year':'2018','douban_id':'27060077'};row=self.row('绿皮书',vod_year='2019',vod_douban_id='27060077')
         self.assertTrue(candidate_matches(ref,row,['绿皮书']));self.assertFalse(candidate_matches(ref,dict(row,vod_douban_id='27060078'),['绿皮书']));self.assertFalse(candidate_matches(ref,dict(row,vod_year='2021'),['绿皮书']))
+    def test_recall_keeps_season_year_type_and_id_boundaries(self):
+        ref={'kind':'series','year':'2026','season':2,'douban_id':'12345678'};row=self.row('甲名称第二季',type_name='欧美剧',vod_year='2026',vod_douban_id='')
+        self.assertTrue(recall_matches(ref,row,['甲名称']))
+        for change in ({'vod_name':'甲名称第一季'},{'vod_name':'甲名称'},{'vod_year':'2025'},{'type_name':''},{'type_name':'电影解说'},{'vod_douban_id':'87654321'},{'vod_name':'甲名称2026第二季'}):
+            self.assertFalse(recall_matches(ref,dict(row,**change),['甲名称']),change)
+    def test_documentary_series_can_be_recalled_without_cast_or_new_name_votes(self):
+        ref={'kind':'series','year':'2025','season':1};row=self.row('越南：改变美国的战争',type_name='纪录片',vod_year='2025',vod_douban_id='')
+        self.assertTrue(recall_matches(ref,row,['越南 改变美国的战争']));self.assertFalse(candidate_matches(ref,row,['越南 改变美国的战争']))
+    def test_weak_alias_recall_cannot_outvote_strong_title(self):
+        session=Mock()
+        def get(url,**kw):
+            row=self.row('已核验名称'if 'strong.'in url else'已核验别名',vod_douban_id='12345678'if 'strong.'in url else'')
+            return Mock(status_code=200,json=lambda:{'list':[row]})
+        session.get.side_effect=get
+        best,_=public_sources({'kind':'movie','year':'2020','douban_id':'12345678'},['已核验名称','已核验别名'],[{'id':s,'url':'https://'+s+'.test/api'}for s in('strong','weak1','weak2')],session=session)
+        self.assertEqual(best['libraries'],3);self.assertEqual(best['title'],'已核验名称');self.assertEqual(best['selection']['options'],[{'title':'已核验名称','libraries':1}])

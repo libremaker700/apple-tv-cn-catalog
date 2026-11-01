@@ -32,6 +32,14 @@ class CloudChecks(unittest.TestCase):
             root=Path(folder);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir();work=self.work(releaseDate='2027-01-01',seasons=[{'season':2,'year':'2027','releaseDate':'2027-01-01'}])
             for file,data in [('docs/catalog.json',{'entries':[work]}),('docs/home/home.json',{'works':[]}),('docs/version.json',{})]:(root/file).write_text(json.dumps(data),encoding='utf8')
             probe=Mock();run(root,probe=probe,now=1793440000);probe.assert_not_called()
+    def test_recall_only_result_preserves_reviewed_title_and_evidence_status(self):
+        with tempfile.TemporaryDirectory()as folder:
+            root=Path(folder);work=self.work();work['zh'].pop('name_status');work['zh']['provenance']='reviewed_mainland_catalog';self.fixture(root,[work])
+            probe=Mock(return_value=({'title':'片库别名','routes':2,'libraries':1,'recallOnly':True,'complete':False},[]))
+            with patch('source_availability.publish')as publish,patch('mainland_names.republish_home'):
+                result=run(root,probe=probe,now=1793440000);zh=publish.call_args.args[0]['entries'][0]['zh']
+            self.assertEqual(zh['title'],'豆瓣名称');self.assertNotIn('name_status',zh);self.assertNotIn('name_sources',zh);self.assertNotIn('nameSelection',zh);self.assertTrue(zh['sourceCheck']['found'])
+            record=json.loads((root/'data/cloud-source-cache.json').read_text())['records']['example'];self.assertEqual(record['nextRetry']-record['checkedAt'],3600);self.assertTrue(result['records'][0]['recallOnly'])
     def test_old_negative_check_is_retried_with_season_query_policy(self):
         with tempfile.TemporaryDirectory()as folder:
             root=Path(folder);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir();work=self.work();now=1793440000

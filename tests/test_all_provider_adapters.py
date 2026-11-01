@@ -43,14 +43,14 @@ class Registry(unittest.TestCase):
         ref=source_people({'kind':'series','season':1,'year':'2026'},{'directors':['导演甲'],'actors':['演员甲','演员乙']});session=Mock();session.get.return_value=Mock(status_code=200,json=lambda:{'list':[cms()]})
         best,_=public_sources(ref,['夜曲'],[{'id':'a','url':'https://example.test/api'}],session=session)
         self.assertEqual(best['libraries'],1)
-    def test_unconfirmed_identity_cannot_be_mistaken_for_no_record(self):
+    def test_verified_alias_recall_does_not_require_people_or_rename(self):
         session=Mock();session.get.return_value=Mock(status_code=200,json=lambda:{'list':[cms()]})
         best,events=public_sources({'kind':'series','season':1,'year':'2026'},['夜曲'],[{'id':'a','url':'https://example.test/api'}],session=session)
-        self.assertIsNone(best);self.assertTrue(incomplete(events));self.assertEqual(events[0]['reason'],'identity_pending')
-    def test_conflicting_people_without_number_is_pending_not_absent(self):
+        self.assertTrue(best['recallOnly']);self.assertEqual(best['libraries'],1);self.assertEqual(best['title'],'夜曲');self.assertNotIn('selection',best);self.assertFalse(incomplete(events));self.assertEqual(events[0]['identityRecords'],0)
+    def test_people_strings_do_not_decide_name_based_recall_or_supply_votes(self):
         session=Mock();session.get.return_value=Mock(status_code=200,json=lambda:{'list':[cms()]})
         best,events=public_sources({'kind':'series','season':1,'year':'2026','actors':'演员丙,演员丁','directors':'导演乙'},['夜曲'],[{'id':'a','url':'https://example.test/api'}],session=session)
-        self.assertIsNone(best);self.assertTrue(incomplete(events));self.assertEqual(events[0]['reason'],'identity_pending')
+        self.assertTrue(best['recallOnly']);self.assertNotIn('selection',best);self.assertEqual(events[0]['identityRecords'],0)
 
 class Ikan(unittest.TestCase):
     def page(self,identity='12345'):

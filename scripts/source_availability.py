@@ -119,14 +119,14 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
             cache['records'][slug]=pending;dump(path,cache)
             report['records'].append({'slug':slug,'status':'incomplete','events':events});continue
         check=make_check(work,query,best,now);zh['sourceCheck']=check;work['zh']=zh
-        if best:
+        if best and not best.get('recallOnly'):
             selected=base(best['title']);zh['aliases']=list(dict.fromkeys([selected,zh['title']]+zh.get('aliases',[])));zh['title']=selected
             zh['name_status']='verified_title_sources'
             if subject:
                 if not zh.get('name_sources'):zh['name_sources']=[{'type':'douban_mobile_identity','url':'https://movie.douban.com/subject/'+str(subject)+'/','retrieved_at':str(now)}]
             if best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
-        cache['records'][slug]={'checkedAt':now,'lastAttemptAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
-        report['records'].append({'slug':slug,'check':check,'events':events});report['changed'].append(slug);dump(path,cache)
+        cache['records'][slug]={'checkedAt':now,'lastAttemptAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{'complete':(best or{}).get('complete',True)}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
+        report['records'].append({'slug':slug,'check':check,'recallOnly':bool(best and best.get('recallOnly')),'libraries':(best or{}).get('libraries',0),'complete':(best or{}).get('complete',False),'events':events});report['changed'].append(slug);dump(path,cache)
     by_slug={e['slug']:e for e in main['entries']}
     for work in home['works']:
         if work.get('knownCatalog')and work['slug']in report['changed']and work['slug']in by_slug:sync_home_zh(work,by_slug[work['slug']])

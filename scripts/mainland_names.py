@@ -41,7 +41,7 @@ def season(title):
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
 def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
 
-SOURCE_QUERY_POLICY='all-app-adapters-library-votes-v4'
+SOURCE_QUERY_POLICY='verified-alias-recall-strong-name-votes-v5'
 
 def source_people(ref,patch):
     for key in ('directors','actors'):
@@ -68,23 +68,29 @@ def source_queries(ref,names):
             key=re.sub(r'\s+',' ',query).casefold()
             if key not in seen:output.append(query);seen.add(key)
     return output
-def candidate_matches(ref,row,names):
+def recall_matches(ref,row,names,strong=False):
+    """Recall an existing verified alias; this alone never authorizes renaming."""
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))
     if not kind or re.search(r'解说|预告|花絮|短剧|伦理',kind+' '+title):return False
     expected=str(ref.get('douban_id')or'');actual=str(row.get('vod_douban_id')or'');valid=lambda s:bool(re.fullmatch(r'[1-9][0-9]{4,9}',s))
     if valid(expected)and valid(actual)and expected!=actual:return False
     same_id=valid(expected)and expected==actual
-    if not same_id:
-        people=lambda text:{norm(n)for n in re.split(r'[,，/、;；|]+',str(text or''))if norm(n)and norm(n)not in ('未知','不详','unknown')}
-        if not(people(ref.get('directors'))&people(row.get('vod_director')))or len(people(ref.get('actors'))&people(row.get('vod_actor')))<2:return False
     from source_votes import canonical_name
     year_matches=year==str(ref['year'])or ref['kind']=='movie'and same_id and re.fullmatch(r'(19|20)\d{2}',year)and re.fullmatch(r'(19|20)\d{2}',str(ref['year']))and abs(int(year)-int(ref['year']))<=1
-    if (norm(base(canonical_name(ref,title,names,base,norm)))not in {norm(base(n))for n in names}and not same_id)or not year_matches:return False
-    if ref['kind']=='series':return season(title)==ref['season']and bool(re.search(r'剧|劇|动漫|动画|综艺',kind))and not re.search(r'片|电影',kind)
+    # A year suffix or an unknown alias needs stronger identity evidence.
+    compared=canonical_name(ref,title,names,base,norm)if strong else title
+    if (norm(base(compared))not in {norm(base(n))for n in names}and not same_id)or not year_matches:return False
+    if ref['kind']=='series':return season(title)==ref['season']and bool(re.search(r'剧|劇|动漫|动画|综艺|纪录片|紀錄片',kind))and not re.search(r'电影|電影|剧情片|喜剧片|动作片|恐怖片',kind)
     return (bool(re.search(r'电影|電影|片',kind))or same_id and bool(re.search(r'动漫|动画',kind))and not re.search(r'第.+季|season\s*\d+',title,re.I))and not re.search(r'电视剧|连续剧|欧美剧|剧集|日剧|韩剧|综艺',kind)
+def candidate_matches(ref,row,names):
+    expected=str(ref.get('douban_id')or'');actual=str(row.get('vod_douban_id')or'')
+    same_id=bool(re.fullmatch(r'[1-9][0-9]{4,9}',expected))and expected==actual
+    people=lambda text:{norm(n)for n in re.split(r'[,，/、;；|]+',str(text or''))if norm(n)and norm(n)not in ('未知','不详','内详','unknown')}
+    if not same_id and(not(people(ref.get('directors'))&people(row.get('vod_director')))or len(people(ref.get('actors'))&people(row.get('vod_actor')))<2):return False
+    return recall_matches(ref,row,names,strong=True)
 def public_sources(ref,names,providers,session=None,deadline=None):
     from source_votes import collect
-    return collect(ref,names,providers,session,time.monotonic()+90 if deadline is None else deadline,candidate_matches,source_queries,base,norm)
+    return collect(ref,names,providers,session,time.monotonic()+90 if deadline is None else deadline,candidate_matches,source_queries,base,norm,recall=recall_matches)
 
 def independent_name(ref,hits,lookup,now,http=None):
     for item in hits[:6]:
@@ -133,7 +139,11 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if work.get('knownCatalog'):continue
         selected.append((work,True))
     selected+=[(e,False)for e in main['entries']]
-    selected.sort(key=lambda pair:(chinese((pair[0].get('zh')or{}).get('title','')),cache['records'].get(pair[0]['slug'],{}).get('checkedAt',0),pair[0]['en']))
+    def priority(pair):
+        work=pair[0];n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1)
+        current=next((s for s in work.get('seasons',[])if s.get('season')==n),{})
+        return (source_deferred(current or work,now),chinese((work.get('zh')or{}).get('title','')),cache['records'].get(work['slug'],{}).get('checkedAt',0),work['en'])
+    selected.sort(key=priority)
     for work,is_home in selected:
         key=work['slug'];zh=work.get('zh')or{};old=cache['records'].get(key,{})
         if slugs and key not in slugs:continue
