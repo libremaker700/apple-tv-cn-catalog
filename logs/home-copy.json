@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793506157,
+  "checkedAt": 1793518761,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -94,12 +94,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 7,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 3,
+      "sourceMissing": 3,
       "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f"
     },
     {
@@ -125,5 +125,5 @@
   ],
   "translated": 0,
   "pending": 0,
-  "version": "056d0d0fcac5e0884be3cbbfc0aa40f45d03c1ecaca66ca62e0ef302b115dbb8"
+  "version": "7e79fe946dd12e105f193cc0f19a34043ff8d0f5fdf9e035f8ae38ea29781bb6"
 }
