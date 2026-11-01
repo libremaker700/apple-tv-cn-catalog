@@ -156,8 +156,8 @@
       }
     },
     "not-a-box": {
-      "checkedAt": 1793544253,
-      "nextRetry": 1793630653,
+      "checkedAt": 1793544625,
+      "nextRetry": 1793631025,
       "result": {
         "slug": "not-a-box",
         "en": "Not a Box",
@@ -166,22 +166,26 @@
         "discoveryEvents": [
           {
             "account": "GEMINI_API_KEY_1",
-            "http": 404,
+            "model": "gemini-3.5-flash-lite",
+            "http": 429,
             "status": "api_error"
           },
           {
             "account": "GEMINI_API_KEY_2",
-            "http": 404,
+            "model": "gemini-3.5-flash-lite",
+            "http": 429,
             "status": "api_error"
           },
           {
             "account": "GEMINI_API_KEY_3",
-            "http": 404,
+            "model": "gemini-3.5-flash-lite",
+            "http": 429,
             "status": "api_error"
           },
           {
             "account": "GEMINI_API_KEY_4",
-            "http": 404,
+            "model": "gemini-3.5-flash-lite",
+            "http": 429,
             "status": "api_error"
           },
           {
@@ -269,7 +273,7 @@
             "Not a Box"
           ],
           "q": 0,
-          "page": 4,
+          "page": 7,
           "offset": 0,
           "done": false
         },
@@ -312,7 +316,7 @@
             "Not a Box"
           ],
           "q": 0,
-          "page": 4,
+          "page": 7,
           "offset": 0,
           "done": false
         },
@@ -506,7 +510,7 @@
           ],
           "q": 0,
           "page": 1,
-          "offset": 7
+          "offset": 12
         },
         "ikanbot": {
           "queries": [
@@ -943,6 +947,6 @@
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 9
+    "2026-11": 10
   }
 }
