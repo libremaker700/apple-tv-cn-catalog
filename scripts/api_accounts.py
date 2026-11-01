@@ -23,9 +23,15 @@ class SearchAccounts:
                         r=self.session.post('https://ydc-index.io/v1/search',headers={'X-API-Key':key},json={'query':query,'count':8,'country':'CN','language':'ZH-HANS','boost_domains':['movie.douban.com','www2.ikanbot.com']},timeout=(8,35),allow_redirects=False)
                     else:
                         r=self.session.post('https://api.tavily.com/search',headers={'Authorization':'Bearer '+key},json={'query':query,'search_depth':'basic','max_results':6,'include_answer':False,'include_raw_content':False},timeout=(8,35),allow_redirects=False)
-                    status=r.status_code;self.events.append({'service':service,'account':name,'http':status})
+                    status=r.status_code
+                    try:data=r.json()
+                    except ValueError:data={}
+                    error=str(data.get('error')or data.get('message')or'')[:1000].lower()if isinstance(data,dict)else''
+                    exhausted=status in(402,432,433)or bool(re.search(r'credit.{0,30}(exhaust|insufficient|limit|zero)|quota.{0,30}(exceed|exhaust)|usage limit|balance.{0,20}(insufficient|exhaust)',error))
+                    self.events.append({'service':service,'account':name,'http':status,'reason':'quota_exhausted'if exhausted else'rate_limited'if status==429 else'http'})
+                    if exhausted:self.disabled.add(name);continue
                     if status==200:
-                        data=r.json();items=(data.get('results')or{}).get('web',[])if service=='ydc'else data.get('results',[])
+                        items=(data.get('results')or{}).get('web',[])if service=='ydc'else data.get('results',[])
                         return [{'title':str(x.get('title',''))[:250],'url':str(x.get('url',''))[:2000]}for x in items[:8]],'ok'
                     if status in (400,404,422):return [],'request_configuration_error'
                     if status in (401,402,403,429)or status>=500:self.disabled.add(name);continue

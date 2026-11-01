@@ -35,7 +35,7 @@ def imdb(data):
         if found:return found.group()
     return ''
 
-def verify_payload(ref,data,subject_id,endpoint,checked_at):
+def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
     if not isinstance(data,dict) or not data.get('title') or data.get('code') or data.get('error'):return None
     if data.get('id') and str(data['id'])!=subject_id:return None
     wanted='movie' if ref.get('kind')=='movie' else 'tv'
@@ -44,12 +44,15 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     if wanted=='tv'and subject_season(str(data['title'])+' '+str(data.get('original_title','')))!=season:return None
     expected={norm(work_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
     aka=data.get('aka') if isinstance(data.get('aka'),list) else []
-    originals=[data.get('original_title','')]+aka
+    originals=[data.get('original_title','')]+aka+[data.get('title','')]
     if not expected or not expected.intersection(norm(work_title(s)) for s in originals):return None
     expected_year=str(ref.get('year',''));source_year=str(data.get('year',''))
     if ref.get('imdb_id') and imdb(data) and imdb(data)!=ref['imdb_id']:return None
     if not re.fullmatch(r'(19|20)\d{2}',source_year) or not re.fullmatch(r'(19|20)\d{2}',expected_year):return None
     if source_year!=expected_year and not (ref.get('imdb_id') and imdb(data)==ref['imdb_id']):return None
+    if identity_only:
+        people=lambda key:[CC.convert(str(v.get('name','')if isinstance(v,dict)else v))for v in data.get(key,[])if isinstance(v,(str,dict))][:30]
+        return {'douban_id':str(subject_id),'year':source_year,'season':season,'actors':people('actors'),'directors':people('directors'),'url':'https://movie.douban.com/subject/'+str(subject_id)+'/'}
     name=CC.convert(work_title(data['title']))
     if not mainland_name(name) or len(name)>80:return None
     aliases=list(dict.fromkeys(CC.convert(work_title(s)) for s in [name]+aka if mainland_name(s) and len(s)<80))
@@ -74,12 +77,14 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at):
     return patch
 
 class DoubanMobile:
-    def __init__(self,pages):self.pages=pages;self.diagnostics=[]
+    def __init__(self,pages):self.pages=pages;self.diagnostics=[];self.identities={}
     def subject(self,ref,subject_id,checked_at):
         if not re.fullmatch(r'\d{1,12}',str(subject_id)):return None
         kind='movie' if ref.get('kind')=='movie' else 'tv'
         data=self.pages.json('https://m.douban.com/rexxar/api/v2/'+kind+'/'+str(subject_id))
         patch=verify_payload(ref,data,str(subject_id),kind,checked_at)
+        identity=verify_payload(ref,data,str(subject_id),kind,checked_at,identity_only=True)
+        if identity:self.identities[str(subject_id)]=identity
         self.diagnostics.append({'stage':'subject','subject_id':str(subject_id),'status':'VERIFIED' if patch else 'UNVERIFIED'})
         return patch
     def lookup(self,ref,checked_at):

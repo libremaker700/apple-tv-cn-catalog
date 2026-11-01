@@ -20,7 +20,25 @@ concurrency:
   group: apple-catalog
   cancel-in-progress: false
 jobs:
+  cadence:
+    runs-on: ubuntu-latest
+    outputs:
+      due: ${{ steps.check.outputs.due }}
+    steps:
+      - id: check
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import datetime, os
+          day = datetime.datetime.now(datetime.timezone.utc).date()
+          due = os.environ['EVENT'] != 'schedule' or (day - datetime.date(2026, 11, 1)).days % 3 == 0
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('due=' + str(due).lower() + '\n')
+          PY
   titles:
+    needs: cadence
+    if: needs.cadence.outputs.due == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -39,6 +57,10 @@ jobs:
       - name: Direct Douban names and sources, then verified search fallback
         id: lookup
         env:
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
           YDC_API_KEYI_1: ${{ secrets.YDC_API_KEYI_1 }}
