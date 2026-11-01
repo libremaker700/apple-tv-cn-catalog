@@ -1,0 +1,1131 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-01T23:04:07+00:00",
+  "namesOnly": true,
+  "geminiUsed": false,
+  "sourceProbingPerformed": false,
+  "records": [
+    {
+      "slug": "to-mom-and-dad-with-love",
+      "en": "To Mom (And Dad), With Love",
+      "year": "2022",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "to-mom-and-dad-with-love",
+        "en": "To Mom (And Dad), With Love",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cached": false
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-6ippzjfc3jg0l4b8x8cslmhfa",
+      "en": "Peanuts in Space: Secrets of Apollo 10",
+      "year": "2021",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-6ippzjfc3jg0l4b8x8cslmhfa",
+        "en": "Peanuts in Space: Secrets of Apollo 10",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "12-12-12",
+      "en": "12 12 12",
+      "year": "2026",
+      "season": 1,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
+      "en": "A Carpool Karaoke Christmas",
+      "year": "2024",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
+        "en": "A Carpool Karaoke Christmas",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "awkwafina-the-unlikely-cook",
+      "en": "Awkwafina: The Unlikely Cook",
+      "year": "2026",
+      "season": 1,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "bearbrick",
+      "en": "BE@RBRICK",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "bearbrick",
+        "en": "BE@RBRICK",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "carpool-karaoke-the-series",
+      "en": "Carpool Karaoke: The Series",
+      "year": "2017",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "carpool-karaoke-the-series",
+        "en": "Carpool Karaoke: The Series",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "doug-unplugs",
+      "en": "Doug Unplugs",
+      "year": "2021",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "doug-unplugs",
+        "en": "Doug Unplugs",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "fleetwood-mac-the-chain",
+      "en": "Fleetwood Mac: The Chain",
+      "year": "2027",
+      "season": 0,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+      "en": "Formula 1: Drive to Survive",
+      "year": "2026",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+        "en": "Formula 1: Drive to Survive",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "fraggle-rock-a-holiday-gift",
+      "en": "Fraggle Rock: A Holiday Gift",
+      "year": "2026",
+      "season": 0,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "get-rolling-with-otis",
+      "en": "Get Rolling With Otis",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "get-rolling-with-otis",
+        "en": "Get Rolling With Otis",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "greatness-code",
+      "en": "Greatness Code",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "greatness-code",
+        "en": "Greatness Code",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "hello-jack-the-kindness-show",
+      "en": "Hello, Jack! The Kindness Show",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "hello-jack-the-kindness-show",
+        "en": "Hello, Jack! The Kindness Show",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "helpsters",
+      "en": "Helpsters",
+      "year": "2022",
+      "season": 3,
+      "skip": "",
+      "result": {
+        "slug": "helpsters",
+        "en": "Helpsters",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
+      "en": "Helpsters Help You",
+      "year": "2020",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
+        "en": "Helpsters Help You",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-5mffp3n83az89t42qnhew9vn5",
+      "en": "I, Robot",
+      "year": "2004",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-5mffp3n83az89t42qnhew9vn5",
+        "en": "I, Robot",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
+      "en": "It's Christmastime Again, Charlie Brown",
+      "year": "1992",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
+        "en": "It's Christmastime Again, Charlie Brown",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-17y48i5ko6gft5ieh148nzqzn",
+      "en": "It's the Easter Beagle, Charlie Brown!",
+      "year": "1974",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-17y48i5ko6gft5ieh148nzqzn",
+        "en": "It's the Easter Beagle, Charlie Brown!",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-6x263wzi05ds2h4oen54w8881",
+      "en": "Jurassic World",
+      "year": "2015",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-6x263wzi05ds2h4oen54w8881",
+        "en": "Jurassic World",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "kpopped",
+      "en": "KPOPPED",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "kpopped",
+        "en": "KPOPPED",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
+      "en": "Long Way Down",
+      "year": "2007",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
+        "en": "Long Way Down",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "lovely-little-farm",
+      "en": "Lovely Little Farm",
+      "year": "2023",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "lovely-little-farm",
+        "en": "Lovely Little Farm",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "lulu-is-a-rhinoceros",
+      "en": "Lulu Is a Rhinoceros",
+      "year": "2025",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "lulu-is-a-rhinoceros",
+        "en": "Lulu Is a Rhinoceros",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-13tm01bb2zcat3s04rxgju0zh",
+      "en": "MLS Awards Expansion Team to San Diego",
+      "year": "2023",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-13tm01bb2zcat3s04rxgju0zh",
+        "en": "MLS Awards Expansion Team to San Diego",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-58su2j1i0etuvq64m6nxfm11y",
+      "en": "Messi Mania",
+      "year": "2023",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-58su2j1i0etuvq64m6nxfm11y",
+        "en": "Messi Mania",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "napoleon-the-directors-cut",
+      "en": "Napoleon: The Director’s Cut",
+      "year": "2024",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "napoleon-the-directors-cut",
+        "en": "Napoleon: The Director’s Cut",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "not-a-box",
+      "en": "Not a Box",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "not-a-box",
+        "en": "Not a Box",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "now-and-then",
+      "en": "Now & Then",
+      "year": "2022",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "now-and-then",
+        "en": "Now & Then",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "number-one-on-the-call-sheet",
+      "en": "Number One on the Call Sheet",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "number-one-on-the-call-sheet",
+        "en": "Number One on the Call Sheet",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "outcome",
+      "en": "Outcome",
+      "year": "2026",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "outcome",
+        "en": "Outcome",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "pretzel-and-the-puppies",
+      "en": "Pretzel and the Puppies",
+      "year": "2022",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "pretzel-and-the-puppies",
+        "en": "Pretzel and the Puppies",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "sago-mini-friends",
+      "en": "Sago Mini Friends",
+      "year": "2024",
+      "season": 3,
+      "skip": "",
+      "result": {
+        "slug": "sago-mini-friends",
+        "en": "Sago Mini Friends",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "slumberkins",
+      "en": "Slumberkins",
+      "year": "2022",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "slumberkins",
+        "en": "Slumberkins",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
+      "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "year": "2026",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
+        "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "snoopy-unleashed",
+      "en": "Snoopy Unleashed",
+      "year": "2027",
+      "season": 0,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "the-dink",
+      "en": "The Dink",
+      "year": "2026",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "the-dink",
+        "en": "The Dink",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "the-hunt",
+      "en": "The Hunt (Traqués)",
+      "year": "2026",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-hunt",
+        "en": "The Hunt (Traqués)",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "the-line",
+      "en": "The Line",
+      "year": "2021",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-line",
+        "en": "The Line",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "the-oprah-conversation",
+      "en": "The Oprah Conversation",
+      "year": "2020",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-oprah-conversation",
+        "en": "The Oprah Conversation",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-63led2pm5a1w4wvabyn4xxxjp",
+      "en": "The Peanuts Classics",
+      "year": "1966",
+      "season": 1,
+      "skip": "",
+      "status": "missing_identity"
+    },
+    {
+      "slug": "the-problem-with-jon-stewart",
+      "en": "The Problem With Jon Stewart",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "the-problem-with-jon-stewart",
+        "en": "The Problem With Jon Stewart",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
+      "en": "The Sixth Sense",
+      "year": "1999",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
+        "en": "The Sixth Sense",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "the-wanted-man",
+      "en": "The Wanted Man",
+      "year": "2027",
+      "season": 1,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "home-5iudnxk9tyxo63gewawi330mw",
+      "en": "Tropic Thunder",
+      "year": "2008",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-5iudnxk9tyxo63gewawi330mw",
+        "en": "Tropic Thunder",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "twas-the-fight-before-christmas",
+      "en": "Twas the Fight Before Christmas",
+      "year": "2021",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "twas-the-fight-before-christmas",
+        "en": "Twas the Fight Before Christmas",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "way-of-the-warrior-kid",
+      "en": "Way of the Warrior Kid",
+      "year": "2026",
+      "season": 0,
+      "skip": "future_release",
+      "status": "future_release"
+    },
+    {
+      "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
+      "en": "Wonder Pets",
+      "year": "2006",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
+        "en": "Wonder Pets",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          },
+          {
+            "host": "m.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "wonder-pets-in-the-city",
+      "en": "Wonder Pets: In the City",
+      "year": "2026",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "wonder-pets-in-the-city",
+        "en": "Wonder Pets: In the City",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "yo-gabba-gabbaland",
+      "en": "Yo Gabba GabbaLand!",
+      "year": "2026",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "yo-gabba-gabbaland",
+        "en": "Yo Gabba GabbaLand!",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    },
+    {
+      "slug": "tu-tambien-lo-harias",
+      "en": "You Would Do It Too (Tú También lo Harías)",
+      "year": "2024",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "tu-tambien-lo-harias",
+        "en": "You Would Do It Too (Tú También lo Harías)",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 0,
+            "cooldown": true
+          }
+        ]
+      },
+      "status": "network_incomplete"
+    }
+  ],
+  "summary": {
+    "future_release": 7,
+    "missing_identity": 1,
+    "network_incomplete": 43
+  }
+}
