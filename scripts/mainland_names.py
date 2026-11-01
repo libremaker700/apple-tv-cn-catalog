@@ -41,7 +41,7 @@ def season(title):
     return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
 def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
 
-SOURCE_QUERY_POLICY='all-app-adapters-library-votes-v3'
+SOURCE_QUERY_POLICY='all-app-adapters-library-votes-v4'
 
 def source_people(ref,patch):
     for key in ('directors','actors'):

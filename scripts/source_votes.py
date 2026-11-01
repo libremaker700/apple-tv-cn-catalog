@@ -62,7 +62,10 @@ def collect(ref,names,providers,session,deadline,matches,queries,base,norm):
                             continue
                         seen_records.add(record);row=adapter.playable(row);count=usable_groups(row)
                         if count:rows.append((canonical_name(ref,str(row['vod_name']),names,base,norm),count))
-                except AdapterError as error:complete=False;events.append({'provider':provider['id'],'http':error.http,'reason':error.reason});break
+                except AdapterError as error:
+                    complete=False;events.append({'provider':provider['id'],'http':error.http,'reason':error.reason})
+                    if error.reason=='http'and error.http in(400,404,422):continue
+                    break
                 except (requests.RequestException,ValueError,TypeError,AttributeError):complete=False;events.append({'provider':provider['id'],'http':0});break
         except AdapterError as error:complete=False;events.append({'provider':provider['id'],'http':error.http,'reason':error.reason})
         finally:

@@ -19,6 +19,11 @@ class Registry(unittest.TestCase):
         with patch('source_votes.create',side_effect=adapter):
             best,_=public_sources({'kind':'series','year':'2026','season':1,'actors':'演员甲,演员乙','directors':'导演甲'},['夜曲'],providers,session=Mock(),deadline=deadline)
         self.assertEqual(len(set(seen)),33);self.assertTrue(all(0<left<=10 for left in deadlines));self.assertEqual(best['libraries'],33);self.assertTrue(best['selection']['complete'])
+    def test_http_query_errors_do_not_prove_empty_catalog(self):
+        for code in(400,404,422,500):
+            session=Mock();session.get.return_value=Mock(status_code=code)
+            best,events=public_sources({'kind':'series','year':'2026','season':1},['夜曲'],[{'id':'a','url':'https://example.test/api'}],session=session)
+            self.assertIsNone(best);self.assertTrue(incomplete(events));self.assertEqual(events[0]['reason'],'http');self.assertEqual(events[0]['http'],code)
     def test_all_33_app_libraries_and_protocol_types(self):
         rows=json.loads((Path(__file__).resolve().parents[1]/'data/public-source-providers.json').read_text(encoding='utf8'))
         self.assertEqual(len(rows),33);self.assertEqual(len({r['id']for r in rows}),33);self.assertEqual(len({provider_key(r)for r in rows}),33)

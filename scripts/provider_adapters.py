@@ -44,7 +44,6 @@ class Cms:
         remaining=self.deadline-time.monotonic()
         if remaining<=0:raise AdapterError('deadline')
         response=self.session.get(self.provider['url'],params=dict(ac='detail',**params),timeout=(min(5,remaining/3),min(9,remaining*2/3)),allow_redirects=False)
-        if response.status_code in(400,404,422):return []
         if response.status_code!=200:raise AdapterError('http',response.status_code)
         data=response.json()
         if not isinstance(data,dict)or not isinstance(data.get('list'),list):raise AdapterError('invalid_response')
