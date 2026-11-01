@@ -229,6 +229,46 @@
           "rating": 8.6
         }
       ]
+    },
+    "umc.cmc.3flhku7zffp93eqd53bqlzi04": {
+      "en": "To Mom (And Dad), With Love",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35883780",
+          "sourceUrl": "https://movie.douban.com/subject/35883780/",
+          "title": "史努比特辑：将爱献给父母",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING",
+          "season": 0,
+          "year": 2022,
+          "checkedAt": "2026-11-01T23:20:23+00:00",
+          "originalTitle": "To Mom (And Dad), With Love"
+        }
+      ]
+    },
+    "umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa": {
+      "en": "Peanuts in Space: Secrets of Apollo 10",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35239017",
+          "sourceUrl": "https://movie.douban.com/subject/35239017/",
+          "title": "花生在太空：阿波罗十号的秘密",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING",
+          "season": 0,
+          "year": 2019,
+          "checkedAt": "2026-11-01T23:20:35+00:00",
+          "originalTitle": "Peanuts in Space: Secrets of Apollo 10"
+        }
+      ]
     }
   }
 }

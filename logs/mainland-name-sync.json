@@ -12,7 +12,22 @@
       "verificationEvents": [
         {
           "host": "movie.douban.com",
-          "status": 0,
+          "status": 200,
+          "cached": false
+        },
+        {
+          "host": "movie.douban.com",
+          "status": 200,
+          "cached": false
+        },
+        {
+          "host": "m.douban.com",
+          "status": 301,
+          "cooldown": true
+        },
+        {
+          "host": "m.douban.com",
+          "status": 301,
           "cooldown": true
         }
       ]
@@ -29,5 +44,5 @@
       "reason": "http"
     }
   ],
-  "reservedThisMonth": 55
+  "reservedThisMonth": 96
 }
