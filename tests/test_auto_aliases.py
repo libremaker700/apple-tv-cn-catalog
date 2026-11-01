@@ -32,13 +32,14 @@ class AutomaticAliases(unittest.TestCase):
         self.assertEqual(pool.search('name')[1],'ok');self.assertEqual(pool.events[0]['reason'],'quota_exhausted');self.assertEqual(len(session.post.call_args_list),2);self.assertNotIn('PRIVATE',json.dumps(pool.events))
     def test_keyword_cap(self):
         words=keywords('Not a Box',['不是一个盒子','其他名字','另一个名字']);self.assertLessEqual(len(words),4);self.assertIn('盒子',words)
-    def test_model_discovery_avoids_retired_default_and_switches_accounts(self):
-        from alias_discovery import model_hints
-        first=Mock();first.models.return_value={'api_http':402,'models':[]}
-        second=Mock();second.models.return_value={'api_http':200,'models':[{'name':'gemini-3.1-flash-lite','methods':['generateContent']}]};second.search.return_value={'status':'ok','api_http':200,'candidate_titles':['不是一个盒子']}
-        with patch('api_accounts.accounts',return_value=[('one','private1'),('two','private2')]),patch('gemini_titles.GeminiTitles',side_effect=[first,second]):
-            hints,events=model_hints({'english_title':'Not a Box'})
-        self.assertEqual(hints,['不是一个盒子']);self.assertEqual(second.model,'gemini-3.1-flash-lite');self.assertEqual(len(events),2);self.assertNotIn('private2',json.dumps(events))
+    def test_search_titles_only_supply_untrusted_locator_terms(self):
+        from alias_discovery import search_hints
+        hints=search_hints([{'title':'《不是一个盒子》Not a Box 2025 - 豆瓣'}]);self.assertEqual(hints[0],'不是一个盒子');self.assertIn('盒子',keywords('Not a Box',hints))
+    def test_title_pipeline_cannot_access_gemini(self):
+        root=Path(__file__).resolve().parents[1]
+        self.assertNotIn('GEMINI_API_KEY',(root/'.github/workflows/title-update.yml').read_text('utf8'))
+        self.assertNotIn('gemini_titles',(root/'scripts/alias_discovery.py').read_text('utf8'))
+        self.assertNotIn('model_hints',(root/'scripts/mainland_names.py').read_text('utf8'))
     def test_automatic_alias_is_saved_and_reused_for_source_checks(self):
         import tempfile
         from mainland_names import run
@@ -48,9 +49,9 @@ class AutomaticAliases(unittest.TestCase):
             root=Path(tmp);(root/'docs/home').mkdir(parents=True);(root/'data').mkdir()
             work={'slug':'not-a-box','en':'Not a Box','kind':'series','releaseDate':'2025-06-13','artworkSeasonNumber':1,'seasons':[{'season':1,'year':'2025','releaseDate':'2025-06-13'}],'zh':{'_identityYear':2025}}
             for file,value in [('docs/catalog.json',{'entries':[work]}),('docs/home/home.json',{'works':[]}),('docs/version.json',{})]:(root/file).write_text(json.dumps(value),encoding='utf8')
-            client=Mock(events=[]);client.search.return_value=([],'ok');mobile=Mock(identities={'37374251':identity});mobile.lookup.return_value=None
+            client=Mock(events=[]);client.search.return_value=([{'title':'《不是一个盒子》','url':'https://example.test/'}],'ok');mobile=Mock(identities={'37374251':identity});mobile.lookup.return_value=None
             probe=Mock(return_value=({'title':'不是一个盒子','routes':2},[]))
-            with patch('mainland_names.DoubanMobile',return_value=mobile),patch('alias_discovery.model_hints',return_value=(['不是一个盒子'],[])),patch('alias_discovery.discover',return_value=(alias,[])),patch('mainland_names.publish'),patch('mainland_names.republish_home'):
+            with patch('mainland_names.DoubanMobile',return_value=mobile),patch('alias_discovery.discover',return_value=(alias,[])),patch('mainland_names.publish'),patch('mainland_names.republish_home'):
                 result=run(root,client=client,lookup=Mock(),probe=probe)
             self.assertEqual(result['records'][0]['confidence'],'VERIFIED');self.assertEqual(probe.call_args.args[0]['douban_id'],'37374251')
             cached=json.loads((root/'data/mainland-name-cache.json').read_text(encoding='utf8'))['records']['not-a-box'];self.assertEqual(cached['identity']['douban_id'],'37374251');self.assertEqual(cached['discovery']['_hints'],['不是一个盒子'])

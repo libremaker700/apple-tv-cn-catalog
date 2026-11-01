@@ -57,14 +57,14 @@ jobs:
       - name: Direct Douban names and sources, then verified search fallback
         id: lookup
         env:
-          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
-          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
-          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
-          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
           YDC_API_KEYI_1: ${{ secrets.YDC_API_KEYI_1 }}
           YDC_API_KEYI_2: ${{ secrets.YDC_API_KEYI_2 }}
+          YDC_API_KEYI_3: ${{ secrets.YDC_API_KEYI_3 }}
+          YDC_API_KEYI_4: ${{ secrets.YDC_API_KEYI_4 }}
+          YDC_API_KEYI: ${{ secrets.YDC_API_KEYI }}
+          YDC_API_KEY: ${{ secrets.YDC_API_KEY }}
           YDC_API_KEY_1: ${{ secrets.YDC_API_KEY_1 }}
           YDC_API_KEY_2: ${{ secrets.YDC_API_KEY_2 }}
           YDC_API_KEY_3: ${{ secrets.YDC_API_KEY_3 }}
@@ -73,6 +73,7 @@ jobs:
           TAVILY_API_KEY_2: ${{ secrets.TAVILY_API_KEY_2 }}
           TAVILY_API_KEY_3: ${{ secrets.TAVILY_API_KEY_3 }}
           TAVILY_API_KEY_4: ${{ secrets.TAVILY_API_KEY_4 }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           TITLE_LOOKUP_LIMIT: ${{ inputs.limit || vars.TITLE_LOOKUP_LIMIT || '3' }}
           TARGET_SLUG: ${{ inputs.slug }}
         run: |

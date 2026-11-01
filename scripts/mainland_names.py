@@ -165,7 +165,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':detail_year,'season':0 if work['kind']=='movie'else n,'want_summary':True,'display_name_zh':zh.get('title','')}
         source_ref=source_people({'year':str(current.get('year')or year),'season':n,'kind':work['kind']},zh)
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
-        deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=old.get('identity');discovery_events=[]
+        deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=old.get('identity');discovery_events=[];hits=[]
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
         else:
@@ -195,11 +195,15 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                             if field in patch:fallback[field]=copy.deepcopy(patch[field])
                     patch=fallback;probed=False
             if (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
-                from alias_discovery import discover,model_hints
+                from alias_discovery import discover,search_hints
+                if discovery.get('_hintPolicy')!='ydc-tavily-v1':discovery.pop('_hints',None)
+                discovery['_hintPolicy']='ydc-tavily-v1'
                 hints=(patch.get('aliases_zh',[])+[patch['display_name_zh']]if patch else zh.get('aliases',[])+([zh['title']]if zh.get('title')else[]))or discovery.get('_hints',[])
+                if not hints:hints=search_hints(hits)
                 if not hints:
-                    hints,model_events=model_hints(ref);discovery_events+=model_events
-                    discovery['_hints']=hints
+                    extra_hits,extra_status=client.search('"'+work['en']+'" '+detail_year+' 动画 电视剧 中文名 别名')
+                    hints=search_hints(extra_hits);discovery_events.append({'service':'ydc_tavily','stage':'candidate_names','status':extra_status})
+                discovery['_hints']=hints
                 alias_patch,extra=discover(identity_record,ref,providers,hints,state=discovery);discovery_events+=extra
                 if alias_patch:
                     if patch:patch['aliases_zh']=list(dict.fromkeys(patch.get('aliases_zh',[])+alias_patch['aliases_zh']))

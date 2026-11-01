@@ -1,10 +1,19 @@
-"""Bounded automatic alias discovery. Search/model text is never identity evidence."""
+"""Bounded automatic alias discovery. Search text is never identity evidence."""
 import math,re,time
 from concurrent.futures import ThreadPoolExecutor
 import requests
 from provider_adapters import create,AdapterError
 from mainland_names import candidate_matches,base,source_people
 from title_sources import norm,chinese
+
+def search_hints(hits):
+    """Untrusted locator strings; book/unrelated titles still require CMS identity."""
+    out=[]
+    for hit in hits[:8]:
+        title=str(hit.get('title',''))
+        out+=re.findall(r'《([^》]{2,40})》',title)
+        out+=re.findall(r'[\u3400-\u9fff]{2,20}',title)
+    return list(dict.fromkeys(value for value in out if value not in('豆瓣','百度百科','豆瓣电影','在线观看','电影','电视剧','动画')) )[:3]
 
 def keywords(original,hints):
     out=[]
@@ -15,36 +24,6 @@ def keywords(original,hints):
             word=re.sub(r'[^\u3400-\u9fff]','',base(name))
             if len(word)>=4:out.append(word[-2:])
     return list(dict.fromkeys(out))[:4]
-
-def model_hints(ref):
-    from api_accounts import accounts
-    from gemini_titles import GeminiTitles
-    events=[];deadline=time.monotonic()+45
-    class BoundedSession(requests.Session):
-        def request(self,*args,**kwargs):
-            left=deadline-time.monotonic()
-            if left<=0:raise requests.Timeout()
-            kwargs['timeout']=(min(5,left/3),min(20,left*2/3))
-            return super().request(*args,**kwargs)
-    for name,key in accounts('GEMINI'):
-        if time.monotonic()>=deadline:break
-        with BoundedSession()as session:
-            client=GeminiTitles(key,session=session);available=client.models()
-            models=[row['name']for row in available['models']if 'generateContent'in row['methods']and'flash'in row['name']and not re.search('image|audio|tts|live|robot',row['name'])]
-            preferred=['gemini-3.5-flash-lite','gemini-3.1-flash-lite','gemini-2.5-flash-lite','gemini-2.5-flash']
-            models=sorted(models,key=lambda model:(preferred.index(model)if model in preferred else len(preferred),model))[:2]
-            if not models:events.append({'account':name,'http':available['api_http'],'status':'no_available_model'});continue
-            for model in models:
-                client.model=model;result=client.search(ref)
-                events.append({'account':name,'model':model,'http':result.get('api_http',0),'status':result['status']})
-                if result['status']=='ok':return result['candidate_titles'][:3],events
-                if result.get('api_http')==200:
-                    result=client.search(ref,grounded=False)
-                    events.append({'account':name,'model':model,'http':result.get('api_http',0),'status':result['status'],'untrustedHints':True})
-                    if result['status']=='ok':return result['candidate_titles'][:3],events
-                    break
-                if result.get('api_http')not in(400,404):break
-    return [],events
 
 def discover(identity,ref,providers,hints=(),deadline=None,state=None):
     if not identity:return None,[]
