@@ -68,6 +68,8 @@ def publish(catalog,checked_at,mode):
     value=apply_main(value,ROOT)
     from detail_metadata import apply_cached as apply_details
     value=apply_details(value,ROOT)
+    from list_artwork import apply_cached as apply_list_artwork
+    value=apply_list_artwork(value,ROOT)
     images={}
     for e in value['entries']:
         from source_availability import apply_cached

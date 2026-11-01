@@ -31,4 +31,13 @@ Display-name selection runs in GitHub, never in the Android playback page. The n
 - python scripts/catalog.py --force
 - python scripts/title_lookup.py --force
 
+Undersized horizontal library artwork is handled separately by
+`scripts/list_artwork.py`. Its default command is an offline plan; explicit
+`--apply` requests a bounded cloud upgrade to 640×360 while preserving 628px and
+larger originals. Cached tier bytes are reapplied during publication, with
+failure retaining the existing image. The scheduled sync processes at most 12
+due works with 3 workers. See `docs/cloud-list-artwork-policy.md` for source,
+season, size, cache and rollback rules. This does not change portrait or hero
+specifications or the Gemini/Douban metadata pipelines.
+
 Dependencies: requests, Pillow, opencc-python-reimplemented.
