@@ -6,6 +6,14 @@
       "chineseHint": "史努比特辑：将爱献给父母",
       "imdbId": "tt19866966",
       "policy": "search_hint_only_not_title_approval"
+    },
+    "home-6ippzjfc3jg0l4b8x8cslmhfa": {
+      "englishTitle": "Peanuts in Space: Secrets of Apollo 10",
+      "officialId": "umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa",
+      "expectedPlatformYear": "2021",
+      "releaseYear": "2019",
+      "releaseYearEvidence": "https://www.imdb.com/title/tt10238966/",
+      "policy": "verified_original_movie_year_not_platform_date"
     }
   }
 }

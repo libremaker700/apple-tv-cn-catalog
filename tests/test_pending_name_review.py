@@ -32,3 +32,14 @@ class NameOnlyReview(unittest.TestCase):
             self.assertTrue(work.call_args.kwargs['names_only']);self.assertEqual(work.call_count,1)
             self.assertNotIn('title',result['records'][0]['result'])
             self.assertTrue((root/'docs/pending-name-review.md').exists())
+    def test_original_movie_year_override_requires_exact_known_official_identity(self):
+        for official in ['umc.cmc.known','umc.cmc.wrong']:
+            with self.subTest(official=official),tempfile.TemporaryDirectory()as tmp:
+                root=Path(tmp);self.setup_root(root,[{'slug':'test','en':'Exact Title','kind':'movie','officialId':official,'year':'2021','releaseDate':'2021-06-22'}])
+                hint={'englishTitle':'Exact Title','officialId':'umc.cmc.known','expectedPlatformYear':'2021','releaseYear':'2019','releaseYearEvidence':'https://www.imdb.com/title/tt10238966/','policy':'verified_original_movie_year_not_platform_date'}
+                (root/'data/name-search-hints.json').write_text(json.dumps({'works':{'test':hint}}),encoding='utf8')
+                client=Mock(events=[]);client.search.return_value=([],'ok');lookup=Mock();lookup.pages.events=[]
+                with patch('mainland_names.DoubanMobile')as mobile:
+                    mobile.return_value.lookup.return_value=None
+                    run(root,limit=1,force=True,client=client,lookup=lookup,names_only=True)
+                self.assertEqual(mobile.return_value.lookup.call_args.args[0]['year'],'2019'if official=='umc.cmc.known'else'2021')

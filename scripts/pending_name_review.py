@@ -18,6 +18,16 @@ def candidates(root):
     return sorted(rows,key=lambda row:(priority.get(row['slug'],2),row['en']))
 
 def review(root=ROOT,limit=64):
+    # A manual transport recheck can retry old connection errors. Do not clear
+    # HTTP access-limit/denial cooldowns (401/403/418/429).
+    transport=root/'data/source-cache.json'
+    if transport.exists():
+        cache=load(transport)
+        for value in cache.get('hosts',{}).values():
+            if value.get('status')==0:value['retry_at']=0
+        for value in cache.get('pages',{}).values():
+            if value.get('status')==0:value['expires_at']=0
+        dump(transport,cache)
     started=time.monotonic();rows=candidates(root);report={'schema':1,'checkedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'namesOnly':True,'geminiUsed':False,'sourceProbingPerformed':False,'records':[]}
     path=root/'docs/pending-name-review.json'
     count=0

@@ -185,7 +185,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if hint.get('englishTitle')==work['en']:
             if not ref['display_name_zh']:ref['display_name_zh']=hint.get('chineseHint','')
             if re.fullmatch(r'tt\d{7,10}',hint.get('imdbId','')):ref['imdb_id']=hint['imdbId']
-        source_ref=source_people({'year':str(current.get('year')or year),'season':n,'kind':work['kind']},zh)
+            if work['kind']=='movie'and hint.get('policy')=='verified_original_movie_year_not_platform_date'and work.get('officialId')==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and re.fullmatch(r'(19|20)\d{2}',hint.get('releaseYear',''))and re.fullmatch(r'https://www\.imdb\.com/title/tt\d{7,10}/',hint.get('releaseYearEvidence','')):
+                ref['year']=hint['releaseYear']
+        source_ref=source_people({'year':ref['year'],'season':n,'kind':work['kind']},zh)
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=old.get('identity');discovery_events=[];hits=[]
         if released_after_name_only and zh.get('name_sources'):
@@ -259,6 +261,8 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
                 if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
+            if work['kind']=='movie'and ref['year']!=detail_year:
+                zh['searchYear']=int(ref['year']);record['originalReleaseYear']=int(ref['year'])
         if not patch:
             pages=getattr(lookup,'pages',None)
             record['verificationEvents']=getattr(pages,'events',[])[-12:]if pages is not None else[]

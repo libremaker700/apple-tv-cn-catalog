@@ -1,5 +1,5 @@
 """Mobile subject verification, following Prime's lookup endpoints without trusting suggestion type."""
-import math,re
+import html,math,re
 from opencc import OpenCC
 from metadata_policy import POLICY
 CC=OpenCC('t2s')
@@ -100,7 +100,7 @@ class DoubanMobile:
             queries=queries[:1]+[localized]+queries[1:]
         for title in queries[:2]:
             rows=self.pages.json('https://movie.douban.com/j/subject_suggest',params={'q':title})
-            if not isinstance(rows,list):self.diagnostics.append({'stage':'suggest','status':'UNAVAILABLE'});return None
+            if not isinstance(rows,list):self.diagnostics.append({'stage':'suggest','status':'UNAVAILABLE'});break
             if not rows:self.diagnostics.append({'stage':'suggest','status':'EMPTY_RESPONSE'});continue
             patches=[]
             for row in rows[:3]:
@@ -110,6 +110,24 @@ class DoubanMobile:
                 seen.add(sid);patch=self.subject(ref,sid,checked_at)
                 if patch:patches.append(patch)
             names={norm(p['display_name_zh']) for p in patches}
+            if len(names)==1:return patches[0]
+            if len(names)>1:return None
+        # The public mobile search page is a separate supported search surface.
+        # Its movie links are candidates only: every subject must still pass
+        # the same original-title/year/medium/season verification above.
+        getter=getattr(self.pages,'get',None)
+        if not callable(getter):return None
+        for title in queries[:2]:
+            raw=getter('https://m.douban.com/search/',params={'query':title})
+            if not isinstance(raw,str):continue
+            ids=list(dict.fromkeys(re.findall(r'href=[\"\'](?:https://m\.douban\.com)?/movie/subject/(\d+)/?[\"\']',html.unescape(raw))))[:3]
+            self.diagnostics.append({'stage':'mobile_search','candidates':len(ids)})
+            patches=[]
+            for sid in ids:
+                if sid in seen:continue
+                seen.add(sid);patch=self.subject(ref,sid,checked_at)
+                if patch:patches.append(patch)
+            names={norm(p['display_name_zh'])for p in patches}
             if len(names)==1:return patches[0]
             if len(names)>1:return None
         return None
