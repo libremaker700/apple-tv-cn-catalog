@@ -73,7 +73,7 @@ class ResolverTests(unittest.TestCase):
             def get(self,url,**kw):
                 self.calls.append(kw['headers']);return type('R',(),{'status_code':200,'content':b'[]','text':'[]'})()
         session=Session();pages=PublicPages(session)
-        with patch('public_sources.time.monotonic',side_effect=[100,100,100,101.8]),patch('public_sources.time.sleep') as sleep:
+        with patch('public_sources.time.monotonic',return_value=100),patch('public_sources.time.sleep') as sleep:
             pages.get('https://movie.douban.com/j/subject_suggest',{'q':'x'});pages.get('https://m.douban.com/rexxar/api/v2/tv/12345')
         self.assertEqual(session.calls[0]['X-Requested-With'],'XMLHttpRequest');self.assertIn('Referer',session.calls[1]);sleep.assert_called_once()
         self.assertAlmostEqual(sleep.call_args.args[0],1.8)

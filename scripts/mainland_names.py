@@ -266,6 +266,8 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if not patch:
             pages=getattr(lookup,'pages',None)
             record['verificationEvents']=getattr(pages,'events',[])[-12:]if pages is not None else[]
+            diagnostics=getattr(mobile,'diagnostics',[])
+            record['subjectDiagnostics']=diagnostics if isinstance(diagnostics,list)else[]
         cache['records'][key]={'checkedAt':now,'nextRetry':now+86400,'result':record,'identity':identity_record,'discovery':discovery};report['records'].append(record);dump(cache_path,cache)
     report['accounts']=client.events;report['reservedThisMonth']=used;dump(root/'logs/mainland-name-sync.json',report)
     if report['changed']:

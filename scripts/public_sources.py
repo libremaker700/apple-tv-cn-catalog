@@ -1,7 +1,7 @@
 """Bounded public-page reads with positive cache and host-wide access-error cooldowns."""
 import hashlib,html,json,re,time
 from pathlib import Path
-from urllib.parse import urlencode,urlsplit
+from urllib.parse import urlencode,urlsplit,urljoin
 import requests
 HOSTS={'movie.douban.com','m.douban.com','zh.wikipedia.org','en.wikipedia.org','baike.baidu.com','api.bgm.tv'}
 
@@ -33,10 +33,12 @@ class PublicPages:
         if parts.scheme!='https' or host not in HOSTS or parts.username or parts.password:return None
         full=url+('?' + urlencode(sorted(params.items())) if params else '')
         key=hashlib.sha256(full.encode()).hexdigest();old=self.data['pages'].get(key,{})
+        if 300<=old.get('status',0)<400:old={}
+        if old.get('status')==0 and old.get('expires_at',0)-old.get('fetched_at',0)>60:old['expires_at']=old.get('fetched_at',0)+60
         if old.get('expires_at',0)>now and (old.get('status')!=200 or key in self.bodies):
             self.events.append({'host':host,'status':old['status'],'cached':True});return self.bodies.get(key)
         blocked=self.data['hosts'].get(host,{})
-        if blocked.get('retry_at',0)>now:
+        if blocked.get('retry_at',0)>now and (blocked.get('status')not in(0,)and not 300<=blocked.get('status',0)<400):
             self.events.append({'host':host,'status':blocked['status'],'cooldown':True});return None
         status=0;body=None
         try:
@@ -47,16 +49,28 @@ class PublicPages:
                 self.last_douban_request=time.monotonic()
                 headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36','Referer':'https://m.douban.com/movie/' if host=='m.douban.com' else 'https://movie.douban.com/','Accept-Language':'zh-CN,zh;q=0.9','Accept':'application/json'})
                 if parts.path=='/j/subject_suggest':headers['X-Requested-With']='XMLHttpRequest'
-            response=self.session.get(url,params=params,headers=headers,timeout=(6,15),allow_redirects=False)
-            status=response.status_code
+            current=url;query=params;deadline=time.monotonic()+21
+            for attempt in range(3):
+                remaining=deadline-time.monotonic()
+                if remaining<=0:break
+                response=self.session.get(current,params=query,headers=headers,timeout=(min(6,remaining/3),min(15,remaining*2/3)),allow_redirects=False)
+                status=response.status_code
+                if status not in(301,302,303,307,308):break
+                location=getattr(response,'headers',{}).get('Location','')
+                target=urljoin(current,location);dest=urlsplit(target)
+                if not location or dest.scheme!='https'or dest.hostname!=host or dest.username or dest.password or re.search(r'/(?:accounts|login|captcha|sorry)(?:/|$)',dest.path):break
+                if target==current:break
+                current=target;query=None
             if status==200 and len(response.content)<=512_000:body=response.text
-        except requests.RequestException:pass
+        except requests.RequestException as error:
+            status=0
+            self.events.append({'host':host,'status':0,'errorType':type(error).__name__})
         self.events.append({'host':host,'status':status,'cached':False})
-        if status in (401,403,418,429) or status==0 or 300<=status<400 or status>=500:
+        if status in (401,403,418,429) or status>=500:
             self.data['hosts'][host]={'status':status,'retry_at':now+(86400 if status==429 else 21600)}
         if body:self.bodies[key]=body
         # Persist only transport metadata, never whole article/review HTML or credentials.
-        self.data['pages'][key]={'url':full,'status':status,'fetched_at':now,'expires_at':now+(7*86400 if body else 21600),'sha256':hashlib.sha256(body.encode()).hexdigest() if body else ''}
+        self.data['pages'][key]={'url':full,'status':status,'fetched_at':now,'expires_at':now+(7*86400 if body else 60 if status==0 else 21600),'sha256':hashlib.sha256(body.encode()).hexdigest() if body else ''}
         self.save();return body
     def json(self,url,**kwargs):
         raw=self.get(url,kwargs.get('params'))

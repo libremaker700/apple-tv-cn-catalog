@@ -76,6 +76,7 @@ def publish(catalog,checked_at,mode):
     for e in value['entries']:
         from source_availability import apply_cached
         apply_cached(e,ROOT)
+        e['chinesePending']=not bool(re.search(r'[\u3400-\u9fff]',str((e.get('zh')or{}).get('title',''))))
         e.pop('seasonCheckedAt',None)
         if e.get('seasons'):e['seasons']=public_seasons(e['seasons'])
         label_seasons(e)

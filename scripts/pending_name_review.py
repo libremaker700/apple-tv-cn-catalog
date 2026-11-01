@@ -28,12 +28,21 @@ def review(root=ROOT,limit=64):
         for value in cache.get('pages',{}).values():
             if value.get('status')==0:value['expires_at']=0
         dump(transport,cache)
-    started=time.monotonic();rows=candidates(root);report={'schema':1,'checkedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'namesOnly':True,'geminiUsed':False,'sourceProbingPerformed':False,'records':[]}
     path=root/'docs/pending-name-review.json'
+    started=time.monotonic();rows=candidates(root)
+    if path.exists():
+        previous=load(path);main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json')
+        works={w['slug']:w for w in main['entries']+home['works']}
+        for old in previous.get('records',[]):
+            work=works.get(old['slug'],{})
+            if old.get('status')=='verified'and work.get('en')==old['en']and re.search(r'[\u3400-\u9fff]',str((work.get('zh')or{}).get('title',''))):rows.append(dict(old,_reused=True))
+    report={'schema':1,'checkedAt':datetime.now(timezone.utc).isoformat(timespec='seconds'),'namesOnly':True,'geminiUsed':False,'sourceProbingPerformed':False,'records':[]}
     count=0
     for row in rows:
         result=dict(row)
-        if row['skip']:result['status']=row['skip']
+        if row.get('_reused'):
+            result.pop('_reused',None);result['reusedVerified']=True
+        elif row['skip']:result['status']=row['skip']
         elif count>=max(0,min(64,limit))or time.monotonic()-started>1050:result['status']='not_attempted_budget'
         else:
             count+=1
@@ -43,14 +52,15 @@ def review(root=ROOT,limit=64):
                 if record:
                     result['result']=record
                     limited=any(e.get('status')in(0,401,403,418,429)or e.get('cooldown')for e in record.get('verificationEvents',[]))
-                    result['status']='verified'if record['confidence']=='VERIFIED'else'network_incomplete'if limited else'unverified'
+                    reviewed=any(e.get('stage')in('subject','mobile_search')for e in record.get('subjectDiagnostics',[]))
+                    result['status']='verified'if record['confidence']=='VERIFIED'else'network_incomplete'if limited and not reviewed else'unverified'
                 else:result['status']='missing_identity'
             except Exception as error:result.update(status='error_retry',errorType=type(error).__name__)
         report['records'].append(result);report['summary']={status:sum(r['status']==status for r in report['records'])for status in sorted({r['status']for r in report['records']})}
         dump(path,report)
         print(json.dumps({'slug':row['slug'],'status':result['status']},ensure_ascii=True),flush=True)
     status_names={'verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
-    lines=['# 待匹配中文名复核','', '本报告仅复核中文名，不查播放源，不使用 Gemini。搜索提示不能直接成为中文名；通过作品身份核验后才发布。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
+    lines=['# 待匹配中文名复核','', '本报告仅复核中文名，不查播放源，不使用 Gemini。保留前次已核实结果，继续检查余下作品。搜索提示不能直接成为中文名；通过作品身份核验后才发布。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
     for row in report['records']:
         cells=[row['en'],status_names[row['status']],row.get('result',{}).get('title',''),str(row['year'])+' / '+str(row['season'])]
         lines.append('| '+' | '.join(str(c).replace('|','／').replace('\n',' ')for c in cells)+' |')
