@@ -5,7 +5,7 @@ from urllib.parse import urlsplit
 import requests
 
 VOTE_POLICY='library-votes-v1'
-WEB_FLAGS={'ruyi','jjzy','ukyun','hnyun','gsyun','subyun'}
+WEB_FLAGS={'changzhang','ruyi','jjzy','ukyun','hnyun','gsyun','subyun'}
 
 def usable_groups(row):
     flags=str(row.get('vod_play_from','')).split('$$$');count=0

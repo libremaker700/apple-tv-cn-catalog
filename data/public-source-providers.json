@@ -110,5 +110,9 @@
   {
     "id": "ikun",
     "url": "https://ikunzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "changzhang",
+    "url": "https://api.changzhang.tv/api.php/provide/vod"
   }
 ]
