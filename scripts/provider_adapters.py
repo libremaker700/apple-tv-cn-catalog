@@ -111,6 +111,9 @@ def config(name):
 
 class Shared:
     ROUTES=[('https://vlogic.'+host,'https://vcache.'+host)for host in('qvfic.com','zwtlzch.cn','ybsdkl.cn','shkjbd.com','mjrlin.cn','srnffc.cn')]
+    @staticmethod
+    def medium(row):
+        return plain(row.get('channelName'))or{'1':'电影','2':'电视剧','3':'动漫','4':'综艺纪录'}.get(str(row.get('channelId')),'')
     def __init__(self,transport,settings):
         self.http=transport;self.settings=settings;self.details={}
         if not(settings.get('guest')or{}).get('token'):raise AdapterError('needs_configuration')
@@ -141,7 +144,7 @@ class Shared:
         out=[]
         for row in result['items'][:30]:
             year=row.get('year')or'';year=year.get('name','')if isinstance(year,dict)else str(year)
-            out.append(dict(vod_id=str(row.get('id','')),vod_name=plain(row.get('title')),vod_year=year,type_name={1:'电影',2:'电视剧'}.get(row.get('channelId'),''),vod_actor=names(row.get('actors')),vod_director=names(row.get('directors'))))
+            out.append(dict(vod_id=str(row.get('id','')),vod_name=plain(row.get('title')),vod_year=year,type_name=self.medium(row),vod_actor=names(row.get('actors')),vod_director=names(row.get('directors'))))
         return out
     def describe(self,row):
         identity=str(row['vod_id'])
@@ -149,7 +152,7 @@ class Shared:
         body=self.call('/v2/vod/detail.capi',{'vodId':identity},True)
         if not isinstance(body,dict)or str(body.get('id',identity))!=identity:raise AdapterError('identity_changed')
         self.details[identity]=body;year=body.get('year')or{}
-        return dict(row,vod_name=plain(body.get('title')),vod_year=str(year.get('name','')if isinstance(year,dict)else year),vod_actor=names(body.get('actors')),vod_director=names(body.get('directors')))
+        return dict(row,vod_name=plain(body.get('title')),vod_year=str(year.get('name','')if isinstance(year,dict)else year),type_name=self.medium(body)or row.get('type_name',''),vod_actor=names(body.get('actors')),vod_director=names(body.get('directors')))
     def playable(self,row):
         flags=[];groups=[]
         for source in self.details[str(row['vod_id'])].get('playSources',[])[:20]:

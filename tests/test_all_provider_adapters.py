@@ -67,6 +67,14 @@ class Ikan(unittest.TestCase):
         with self.assertRaises(AdapterError):adapter.search('夜曲')
 
 class SharedSession(unittest.TestCase):
+    def test_documentary_channel_and_detail_type_are_preserved_for_recall(self):
+        from mainland_names import recall_matches
+        transport=Mock();adapter=Shared(transport,SETTINGS)
+        adapter.call=Mock(side_effect=[{'items':[{'id':1,'title':'越南改变美国的战争','year':{'name':'2025'},'channelId':'4'}]}, {'id':1,'title':'越南改变美国的战争','year':{'name':'2025'},'channelId':4,'channelName':'综艺纪录'}])
+        row=adapter.search('越南改变美国的战争')[0];self.assertEqual(row['type_name'],'综艺纪录')
+        detail=adapter.describe(dict(row,type_name=''));self.assertEqual(detail['type_name'],'综艺纪录')
+        self.assertTrue(recall_matches({'kind':'series','season':1,'year':'2025'},detail,['越南：改变美国的战争']))
+        self.assertEqual(Shared.medium({'channelId':'3'}),'动漫');self.assertEqual(Shared.medium({'channelId':99}),'')
     def test_signed_search_uses_private_headers_without_returning_them(self):
         transport=Mock();transport.fetch.return_value=(json.dumps({'code':200,'data':{'items':[{'id':1,'title':'夜曲第一季','year':{'name':'2026'},'channelId':2,'directors':[{'name':'导演甲'}],'actors':[{'name':'演员甲'},{'name':'演员乙'}]}]}}).encode(),{})
         adapter=Shared(transport,SETTINGS);rows=adapter.search('夜曲第一季');self.assertEqual(rows[0]['vod_actor'],'演员甲,演员乙')
