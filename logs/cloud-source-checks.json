@@ -9,8 +9,8 @@
         "season": 1,
         "year": "2025",
         "found": true,
-        "routes": 7,
-        "checkedAt": 1793527453
+        "routes": 18,
+        "checkedAt": 1793527855
       },
       "recallOnly": false,
       "libraries": 6,
@@ -92,32 +92,10 @@
         },
         {
           "provider": "lz",
-          "http": 200,
-          "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
+          "http": 0
         },
         {
-          "provider": "ff",
-          "http": 403,
-          "reason": "http"
-        },
-        {
-          "provider": "ff",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "yy",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "yy",
+          "provider": "lz",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -133,12 +111,12 @@
           "routes": 1
         },
         {
-          "provider": "xigua",
-          "http": 403,
-          "reason": "http"
+          "provider": "yy",
+          "http": 200,
+          "reason": "identity_pending"
         },
         {
-          "provider": "xigua",
+          "provider": "yy",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -154,6 +132,32 @@
           "routes": 1
         },
         {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
           "provider": "zzoc",
           "http": 403,
           "reason": "http"
@@ -180,7 +184,7 @@
           "routes": 0
         },
         {
-          "provider": "huya",
+          "provider": "zy360",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -196,7 +200,7 @@
           "routes": 0
         },
         {
-          "provider": "zy360",
+          "provider": "huya",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -233,7 +237,7 @@
           "routes": 0
         },
         {
-          "provider": "zuida",
+          "provider": "wujin",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -241,23 +245,11 @@
           "routes": 0
         },
         {
-          "provider": "wujin",
+          "provider": "zuida",
           "http": 0
         },
         {
-          "provider": "wujin",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "jiji",
-          "http": 0
-        },
-        {
-          "provider": "jiji",
+          "provider": "zuida",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -274,19 +266,27 @@
         },
         {
           "provider": "uku",
-          "http": 200,
-          "reason": "checked",
-          "matchedRecords": 1,
-          "identityRecords": 1,
-          "routes": 1
+          "http": 0
         },
         {
-          "provider": "changzhang",
+          "provider": "uku",
           "http": 200,
-          "reason": "checked",
-          "matchedRecords": 1,
-          "identityRecords": 1,
-          "routes": 1
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
         },
         {
           "provider": "ikanbot",
@@ -302,32 +302,17 @@
           "routes": 2
         },
         {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 1,
+          "identityRecords": 1,
+          "routes": 1
+        },
+        {
           "provider": "shenhua",
           "http": 200,
           "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "shared",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shared",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shared",
-          "http": 200,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "shared",
-          "http": 200,
-          "reason": "partial_results",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -341,8 +326,22 @@
           "routes": 0
         },
         {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 12
+        },
+        {
           "provider": "ruyi",
-          "http": 0
+          "http": 0,
+          "reason": "invalid_response"
         },
         {
           "provider": "ruyi",
@@ -358,7 +357,7 @@
   "changed": [
     "vietnam-the-war-that-changed-america"
   ],
-  "checkedAt": 1793527453,
+  "checkedAt": 1793527855,
   "requestedLibraries": 33,
   "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
   "eligible": 1,

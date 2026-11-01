@@ -1111,10 +1111,10 @@
       "pending": true
     },
     "vietnam-the-war-that-changed-america": {
-      "checkedAt": 1793527453,
-      "lastAttemptAt": 1793527453,
-      "nextRetry": 1793531053,
-      "fingerprint": "e99cfc20610e546a0aabfcb0e594c0952579500f156a0f3c3daf6e34fbb91e1b",
+      "checkedAt": 1793527855,
+      "lastAttemptAt": 1793527855,
+      "nextRetry": 1793531455,
+      "fingerprint": "2b04db7c4042723454d78e7bb1569111e438c1078abf22c8a66be1f7b1291599",
       "queryPolicy": "verified-alias-recall-strong-name-votes-v5",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
@@ -1124,21 +1124,21 @@
         "season": 1,
         "year": "2025",
         "found": true,
-        "routes": 7,
-        "checkedAt": 1793527453
+        "routes": 18,
+        "checkedAt": 1793527855
       },
       "selection": {
         "policy": "library-votes-v1",
         "title": "越南 改变美国的战争",
-        "libraries": 5,
-        "checkedLibraries": 20,
+        "libraries": 4,
+        "checkedLibraries": 18,
         "attemptedLibraries": 33,
         "requestedLibraries": 33,
         "complete": false,
         "options": [
           {
             "title": "越南 改变美国的战争",
-            "libraries": 5
+            "libraries": 4
           }
         ]
       }
