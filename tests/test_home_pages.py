@@ -61,15 +61,15 @@ class HomePages(unittest.TestCase):
             return value
         api.canvas=canvas
         def checked_shelf(row):
-            self.assertNotEqual(row['header']['title'],'Great Movies Now on Apple TV','Excluded shelf must not be paginated or collected')
+            self.assertNotEqual(row['header']['title'],'Watch Premieres for Free')
             return row
         api.shelf=checked_shelf;value,report=collect({'entries':[]},api,image);validate_pages(value)
         actual=[s['officialTitle']for s in value['shelves']]
-        self.assertEqual(actual[:2],['Curated Films','Top 10 Movies'])
+        self.assertEqual(actual[:3],['Great Movies Now on Apple TV','Curated Films','Top 10 Movies'])
         self.assertGreater(actual.index('Top 10 TV Shows'),actual.index('New Releases'))
-        self.assertNotIn('Great Movies Now on Apple TV',actual);self.assertNotIn('Sporting Event',actual);self.assertNotIn('Watch Premieres for Free',actual)
-        self.assertEqual(len(actual),8);self.assertEqual(actual[-1],'Coming to Apple TV')
-        self.assertEqual([r['officialId']for r in value['shelves'][0]['items']],[x['id']for x in reversed(api.rows[:7])])
+        self.assertIn('Great Movies Now on Apple TV',actual);self.assertNotIn('Sporting Event',actual);self.assertNotIn('Watch Premieres for Free',actual)
+        self.assertEqual(len(actual),9);self.assertEqual(actual[-1],'Coming to Apple TV')
+        self.assertEqual([r['officialId']for r in value['shelves'][1]['items']],[x['id']for x in reversed(api.rows[:7])])
 
     def test_rejects_dangling_topic_region_and_playback_injection(self):
         v=self.value()
