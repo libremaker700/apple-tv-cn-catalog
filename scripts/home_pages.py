@@ -19,7 +19,7 @@ def page_url(url):
     p=urlsplit(url)
     if p.scheme!='https' or p.hostname!='tv.apple.com' or p.username or p.password or not re.fullmatch(r'/us/(room|shelf|collection|channel)/[^?#]+',p.path):raise ValueError('Invalid topic source')
     return 'https://tv.apple.com'+p.path
-def collect(catalog,api,image):
+def collect(catalog,api,image,poster=None):
     entries={};works={};details={};art_jobs={};pages=[]
     for e in catalog['entries']:
         for url in [(e.get('officialIdentity')or{}).get('watchUrl',''),(e.get('zh')or{}).get('watchUrl','')]:
@@ -67,7 +67,11 @@ def collect(catalog,api,image):
                 value['summaryEn']=str(detail.get('description')or detail.get('heroDescription')or'')[:1800]
                 value['landscapeSource']=art(detail,960,540)['sourceArtwork']
             works[identity]=value
-        return dict(slug=slug,officialId=identity,**art(it,w,h))
+        row=dict(slug=slug,officialId=identity,**art(it,w,h))
+        logo=(it.get('images',{}).get('contentLogo')or{}).get('url','')
+        if w==400 and h==600 and logo:
+            row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
+        return row
     def work_rows(items,w,h):
         rows=[];seen=set()
         for item in items:
@@ -123,6 +127,9 @@ def collect(catalog,api,image):
     for page in [home]+pages:
         for row in page['hero']+[r for s in page['shelves']for r in s['items']]:
             if 'sourceArtwork'in row:row.update(rendered[row.pop('sourceArtwork')])
+            if row.get('sourceLogo'):
+                if not callable(poster):raise ValueError('Official logo renderer is required')
+                row.update(poster(row,row.pop('sourceLogo')))
     for value in works.values():
         if value.get('landscapeSource'):value['landscapeArtwork']=rendered[value.pop('landscapeSource')]['artwork']
     out={'schema':3,'source':CHANNEL,'sources':list(dict.fromkeys([CHANNEL]+[p['source']for p in pages])),'hero':home['hero'],'shelves':home['shelves'],'pages':pages,'works':list(works.values())}

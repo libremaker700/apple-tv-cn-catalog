@@ -92,6 +92,7 @@ jobs:
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
           git add docs data/season-cache.json data/home-image-cache.json
+          if [ -f data/home-logo-cache.json ]; then git add data/home-logo-cache.json; fi
           for FILE in data/home-work-cache.json data/home-season-cache.json data/home-title-cache.json data/source-cache.json data/official-pages-cache.json data/home-copy-cache.json logs/home-copy.json data/genre-translation-cache.json data/work-summary-cache.json data/work-original-cache.json logs/work-summaries.json data/list-artwork-cache.json logs/list-artwork.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
           git diff --cached --quiet || git commit -m 'catalog: update verified metadata and images'
           git push

@@ -131,7 +131,10 @@ def sync():
     previous_home=folder/'home.json'
     if previous_home.is_file():remember_home_titles(load(previous_home),ROOT)
     html=fetch(SOURCE).decode('utf-8')
-    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
+    from poster_logos import PosterLogos
+    logos=PosterLogos(ROOT,fetch)
+    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image,poster=logos.apply)
+    report['officialLogoPosters']=logos.count
     from home_seasons import enrich as enrich_seasons,reconcile as reconcile_seasons
     from catalog import get as season_get
     report['channelSeasons']=enrich_seasons(value,ROOT,season_get,now)
