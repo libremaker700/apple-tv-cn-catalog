@@ -1722,6 +1722,1780 @@
         "title": "心灵投手",
         "watchUrl": "https://tv.apple.com/us/movie/the-rookie/umc.cmc.59i5501mld9dk1cle3fo8zy4d"
       }
+    },
+    "umc.cmc.38gup8z7ry56rjuknjvb20zi1": {
+      "en": "Anchorman: The Legend of Ron Burgundy",
+      "kind": "movie",
+      "year": "2004",
+      "verifiedZh": {
+        "_identityYear": 2004,
+        "actors": [
+          "威尔·法瑞尔",
+          "克里斯蒂娜·艾伯盖特",
+          "保罗·路德",
+          "史蒂夫·卡瑞尔",
+          "大卫·科恩查内",
+          "佛莱德·威拉特",
+          "克里斯·帕内尔",
+          "塞斯·罗根",
+          "亚当·麦凯",
+          "贾德·阿帕图"
+        ],
+        "aliases": [
+          "王牌播音员",
+          "名嘴传奇",
+          "新闻采编",
+          "新闻主播"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:14+00:00",
+          "originalTitle": "Anchorman: The Legend of Ron Burgundy",
+          "rating": 6.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1308770/",
+          "subjectId": "1308770",
+          "summary": "在电视播音员被视为权威的昔日年代里，朗•伯甘蒂（威尔•法瑞尔 Will Ferrell 饰）是屡屡获奖的圣迭戈王牌播音员，4频道在他的新闻小组的带领下笑傲同行，组内的三个怪家伙只有在朗的身边才能大展拳脚。工作之外，风流成性的朗自然也不会放弃利用知名度勾女，然而一个让他吃瘪的女郎维罗妮卡（克里斯蒂娜•艾伯盖特 Christina Applegate 饰）居然还是新闻部的新同事，众人先后对维罗妮卡展开攻势结果全军覆没，最后朗用狂野的风度征服了冰美人，维罗妮卡与朗的期望不同，这个有强烈事业心的女人开始在工作中崭露头角并挑战朗的地位，一次车祸后，朗的生活迅速变得混乱起来…… 影片申明“本片根据真实故事改编”。",
+          "summaryStatus": "AVAILABLE",
+          "title": "王牌播音员",
+          "year": 2004
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:14+00:00",
+            "originalTitle": "Anchorman: The Legend of Ron Burgundy",
+            "rating": 6.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1308770/",
+            "subjectId": "1308770",
+            "summary": "在电视播音员被视为权威的昔日年代里，朗•伯甘蒂（威尔•法瑞尔 Will Ferrell 饰）是屡屡获奖的圣迭戈王牌播音员，4频道在他的新闻小组的带领下笑傲同行，组内的三个怪家伙只有在朗的身边才能大展拳脚。工作之外，风流成性的朗自然也不会放弃利用知名度勾女，然而一个让他吃瘪的女郎维罗妮卡（克里斯蒂娜•艾伯盖特 Christina Applegate 饰）居然还是新闻部的新同事，众人先后对维罗妮卡展开攻势结果全军覆没，最后朗用狂野的风度征服了冰美人，维罗妮卡与朗的期望不同，这个有强烈事业心的女人开始在工作中崭露头角并挑战朗的地位，一次车祸后，朗的生活迅速变得混乱起来…… 影片申明“本片根据真实故事改编”。",
+            "summaryStatus": "AVAILABLE",
+            "title": "王牌播音员",
+            "year": 2004
+          }
+        ],
+        "directors": [
+          "亚当·麦凯"
+        ],
+        "douban_id": "1308770",
+        "douban_title": "王牌播音员",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793581994",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1308770/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2004,
+        "summary": "在20世纪70年代由男性主导的广播界中，罗恩·伯根迪是圣迭戈收视率最高的新闻主播，但随着一名雄心勃勃的女性被聘为新主播，罗恩和他的伙伴们的生活即将发生改变。",
+        "summary_original": "Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.",
+        "summary_source_hash": "00e293f6aed84add5fe4740ccab37ce6734055920b183982600b7003c7a7dd78",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/anchorman-the-legend-of-ron-burgundy/umc.cmc.38gup8z7ry56rjuknjvb20zi1"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "王牌播音员",
+        "watchUrl": "https://tv.apple.com/us/movie/anchorman-the-legend-of-ron-burgundy/umc.cmc.38gup8z7ry56rjuknjvb20zi1"
+      }
+    },
+    "umc.cmc.20sgkdxqbvucopzt913joa0gr": {
+      "en": "Arrival",
+      "kind": "movie",
+      "year": "2016",
+      "verifiedZh": {
+        "_identityYear": 2016,
+        "actors": [
+          "艾米·亚当斯",
+          "杰瑞米·雷纳",
+          "福里斯特·惠特克",
+          "迈克尔·斯图巴",
+          "马泰",
+          "马克·奥布莱恩",
+          "乔·柯布登",
+          "派特·凯利",
+          "娜塔莉·希波蒂",
+          "阮朴生",
+          "克里斯蒂安· 杰达",
+          "朱利安·凯西"
+        ],
+        "aliases": [
+          "降临",
+          "你一生的故事",
+          "抵达",
+          "抵达者"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:23+00:00",
+          "originalTitle": "Arrival",
+          "rating": 7.8,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/21324900/",
+          "subjectId": "21324900",
+          "summary": "地球的上空突然出现了十二架贝壳状的不明飞行物，悬浮在十二个不同的国家的上空，外星人向人类发出了讯号，但人类却并不能够解读。美国军方找到了语言学家路易斯（艾米·亚当斯 Amy Adams 饰）和物理学家伊恩（杰瑞米·雷纳 Jeremy Renner 饰），希望两人能够合作破解外星人的语言之谜。 经过数次的接触，路易斯发现外星人使用了一种极为特殊的圆环状的文字，并逐渐了解了其中的奥妙。由于一直无法确定外星人来到地球的真正目的，中国、俄罗斯等四国决定对外星人发起进攻，美方亦决定放弃研究将全部人员撤离，在这个节骨眼上，路易斯终于明白了外星人的意图，利用外星人赋予她的特殊的“武器”，路易斯以一人之力改变了未来。",
+          "summaryStatus": "AVAILABLE",
+          "title": "降临",
+          "year": 2016
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:23+00:00",
+            "originalTitle": "Arrival",
+            "rating": 7.8,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/21324900/",
+            "subjectId": "21324900",
+            "summary": "地球的上空突然出现了十二架贝壳状的不明飞行物，悬浮在十二个不同的国家的上空，外星人向人类发出了讯号，但人类却并不能够解读。美国军方找到了语言学家路易斯（艾米·亚当斯 Amy Adams 饰）和物理学家伊恩（杰瑞米·雷纳 Jeremy Renner 饰），希望两人能够合作破解外星人的语言之谜。 经过数次的接触，路易斯发现外星人使用了一种极为特殊的圆环状的文字，并逐渐了解了其中的奥妙。由于一直无法确定外星人来到地球的真正目的，中国、俄罗斯等四国决定对外星人发起进攻，美方亦决定放弃研究将全部人员撤离，在这个节骨眼上，路易斯终于明白了外星人的意图，利用外星人赋予她的特殊的“武器”，路易斯以一人之力改变了未来。",
+            "summaryStatus": "AVAILABLE",
+            "title": "降临",
+            "year": 2016
+          }
+        ],
+        "directors": [
+          "丹尼斯·维伦纽瓦"
+        ],
+        "douban_id": "21324900",
+        "douban_title": "降临",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582003",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/21324900/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2016,
+        "summary": "语言学教授露易丝·班克斯（艾米·亚当斯饰）率领一支精英调查团队，在巨大的宇宙飞船降落在全球12个地点时展开行动。随着各国处于全球战争的边缘，班克斯和她的团队必须与时间赛跑，寻找与外星访客沟通的方法。为了解开这个谜团，她冒着危及自己生命乃至全人类的风险进行尝试。",
+        "summary_original": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
+        "summary_source_hash": "e886384ee14e793d50646ea79d1687f9e38799150a3323fa3b35a0cc8ca5965a",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/arrival/umc.cmc.20sgkdxqbvucopzt913joa0gr"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "降临",
+        "watchUrl": "https://tv.apple.com/us/movie/arrival/umc.cmc.20sgkdxqbvucopzt913joa0gr"
+      }
+    },
+    "umc.cmc.25ktz0wuqizbiwz0ao8vumjll": {
+      "en": "Bad Boys",
+      "kind": "movie",
+      "year": "1995",
+      "verifiedZh": {
+        "_identityYear": 1995,
+        "actors": [
+          "马丁·劳伦斯",
+          "威尔·史密斯",
+          "蒂娅·里欧妮",
+          "切基·卡尤",
+          "特里萨·兰德尔",
+          "乔·潘托里亚诺",
+          "丽莎·博伊尔",
+          "迈克尔·塔利费罗",
+          "马克·麦考利",
+          "弗兰克·约翰·休斯",
+          "安娜·莱文",
+          "萨姆·阿耶尔斯",
+          "玛格·海根柏格",
+          "内斯特·塞拉诺",
+          "胡里奥·奥斯卡·门乔索",
+          "迈克尔·因佩里奥利",
+          "萨韦里奥·格拉",
+          "肖恩·托布",
+          "马蒂·麦克索利",
+          "凯文·考利甘",
+          "约翰·萨利"
+        ],
+        "aliases": [
+          "绝地战警",
+          "坏小子",
+          "绝地战警1"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:27+00:00",
+          "originalTitle": "Bad Boys",
+          "rating": 7.5,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1296102/",
+          "subjectId": "1296102",
+          "summary": "迈阿密警局的一对“黄金”搭档，顾家爱妻的好男人宾纳（马丁•劳伦斯）和衣着光鲜风流倜傥的富家子弟劳瑞（威尔•史密斯），奉命追查一桩价值上亿美元的毒品证物失窃案，如果不能及时完成任务，他俩就得卷铺盖走人。 在两人疲于奔命之际，该案件唯一的性感女证人打电话到警局声称她愿意指认主谋，但条件是劳瑞必须出面保护她，否则一切免谈，此时劳瑞刚好不在警局，宾纳为套取线索，急中生智冒名顶替。其后，为了不失去女证人的信任，两人只得将对调身份一事进行到底，宾纳在枪林弹雨及汽车追逐中贴身保护女证人，劳瑞则来到他家中陪伴其妻。",
+          "summaryStatus": "AVAILABLE",
+          "title": "绝地战警",
+          "year": 1995
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:27+00:00",
+            "originalTitle": "Bad Boys",
+            "rating": 7.5,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1296102/",
+            "subjectId": "1296102",
+            "summary": "迈阿密警局的一对“黄金”搭档，顾家爱妻的好男人宾纳（马丁•劳伦斯）和衣着光鲜风流倜傥的富家子弟劳瑞（威尔•史密斯），奉命追查一桩价值上亿美元的毒品证物失窃案，如果不能及时完成任务，他俩就得卷铺盖走人。 在两人疲于奔命之际，该案件唯一的性感女证人打电话到警局声称她愿意指认主谋，但条件是劳瑞必须出面保护她，否则一切免谈，此时劳瑞刚好不在警局，宾纳为套取线索，急中生智冒名顶替。其后，为了不失去女证人的信任，两人只得将对调身份一事进行到底，宾纳在枪林弹雨及汽车追逐中贴身保护女证人，劳瑞则来到他家中陪伴其妻。",
+            "summaryStatus": "AVAILABLE",
+            "title": "绝地战警",
+            "year": 1995
+          }
+        ],
+        "directors": [
+          "迈克尔·贝"
+        ],
+        "douban_id": "1296102",
+        "douban_title": "绝地战警",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582007",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1296102/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1995,
+        "summary": "导演迈克尔·贝（《勇闯夺命岛》、《绝世天劫》）以及制片团队唐·辛普森和杰瑞·布鲁克海默（《比佛利山警探》、《壮志凌云》）带来了一场自始至终充满爆炸性动作的惊险之旅。威尔·史密斯和马丁·劳伦斯在这部充满动作的电影中联手成为打击犯罪的搭档，这是一对真正的绝地战警的好人！价值一亿美元的没收海洛因刚刚被从警方保管中劫走。这些失踪的毒品曾是侦探迈克·劳瑞（威尔·史密斯饰）和马库斯·伯内特（马丁·劳伦斯饰）职业生涯中破获的最大案件，现在威胁要关闭迈阿密警察局的缉毒部门。当毒品调查变得致命时，凶手绑架了唯一的目击者、一个美丽的警察线人（蒂娅·里欧妮饰）也是这群男孩的好朋友，这让事情变得个人化了！疾驰的汽车、美丽的女人和不间断的动作让《绝地战警》成为一段有保证的美好时光！",
+        "summary_original": "From director Michael Bay (The Rock, Armageddon) and the production team of Don Simpson and Jerry Bruckheimer (Beverly Hills Cop, Top Gun) comes a thrill ride of explosive action from beginning to end. Will Smith and Martin Lawrence team up as partners in crime, crime-fighting that is, in this action-packed flick about a couple of good guys who are real Bad Boys! One hundred million dollars worth of confiscated heroin has just been jacked from police custody. Once the career bust of Detective Mike Lowery (Will Smith) and Marcus Burnett (Martin Lawrence), the missing drugs now threaten to shut down the narcotics division of the Miami Police Department. When the drug investigation turns deadly, the murderers kidnap the only witness, a beautful police informant (Téa Leoni) and close friend of the boys, which makes things get personal! Fast cars, a gorgeous woman and non-stop action make Bad Boys a guaranteed good time!",
+        "summary_source_hash": "0fb5b44b25385f16682da66e5984b3fc309fe431bd45be4398f40107f0a48da0",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/bad-boys/umc.cmc.25ktz0wuqizbiwz0ao8vumjll"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "绝地战警",
+        "watchUrl": "https://tv.apple.com/us/movie/bad-boys/umc.cmc.25ktz0wuqizbiwz0ao8vumjll"
+      }
+    },
+    "umc.cmc.63shspjw8f8vnl45r7zw9i3jx": {
+      "en": "Big",
+      "kind": "movie",
+      "year": "1988",
+      "verifiedZh": {
+        "_identityYear": 1988,
+        "actors": [
+          "汤姆·汉克斯",
+          "伊丽莎白·珀金斯",
+          "罗伯特·劳吉亚",
+          "约翰·赫德",
+          "杰瑞德·拉什顿",
+          "大卫·莫斯科",
+          "乔恩·拉威茨",
+          "梅塞迪丝·鲁尔",
+          "乔什·克拉克",
+          "Oliver Block",
+          "艾伦·沃瑟曼",
+          "Mark Ballou",
+          "Gary Howard Klar",
+          "罗基茨·雷德格拉尔",
+          "杰姆·蒂尼",
+          "保罗·赫尔曼",
+          "南希·吉尔斯",
+          "达娜·卡明斯基",
+          "哈维-米勒",
+          "特雷西·雷纳",
+          "詹姆斯·埃克豪斯",
+          "Linda Gillen",
+          "Bert Goldstein",
+          "皮特·麦克罗比",
+          "保罗·J·Q·李",
+          "黛布拉·乔·拉普",
+          "基思·雷丁",
+          "莱拉·艾维",
+          "文斯·库蓬",
+          "约翰·罗斯曼"
+        ],
+        "aliases": [
+          "长大",
+          "飞越未来",
+          "飞进未来",
+          "飞向未来",
+          "飞越童真",
+          "嗨，我长大了",
+          "大人"
+        ],
+        "contentRating": "PG",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:32+00:00",
+          "originalTitle": "Big",
+          "rating": 8.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1293212/",
+          "subjectId": "1293212",
+          "summary": "12岁的乔什（汤姆·汉克斯 Tom Hanks 饰）似乎对自己的年龄有些意见：个子太矮而无法坐绕环滑车，年纪太小追不到心仪女孩……于是他向游乐场里的一个古旧许愿机投了25美分，许愿变成一个大人。不料第二天起床，乔什竟发现自己一夜之间长大了近20岁，现在他是一个不折不扣的大人了，连母亲都认为他是绑架儿子的陌生人而将他赶了出去。乔什只好自谋生计，在一家玩具公司找到了职位。在一次偶然的机会，乔什孩子般的天真与热情给玩具公司老板留下了深刻印象，他的点子也使他在工作中频获嘉奖，很快住进了宽敞的公寓，并与年轻同事苏珊（伊丽莎白·帕金斯 Elizabeth Perkins 饰）展开了浪漫恋情。然而随着工作、生活、爱情这些成人世界的压力开始向乔什逼近，乔什那颗刚满13岁的心渐渐感到困倦失落，他开始回想，这是否就是自己想要的成长…… 本片曾获提名奥斯卡最佳男主角及最佳原创剧本。",
+          "summaryStatus": "AVAILABLE",
+          "title": "长大",
+          "year": 1988
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:32+00:00",
+            "originalTitle": "Big",
+            "rating": 8.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1293212/",
+            "subjectId": "1293212",
+            "summary": "12岁的乔什（汤姆·汉克斯 Tom Hanks 饰）似乎对自己的年龄有些意见：个子太矮而无法坐绕环滑车，年纪太小追不到心仪女孩……于是他向游乐场里的一个古旧许愿机投了25美分，许愿变成一个大人。不料第二天起床，乔什竟发现自己一夜之间长大了近20岁，现在他是一个不折不扣的大人了，连母亲都认为他是绑架儿子的陌生人而将他赶了出去。乔什只好自谋生计，在一家玩具公司找到了职位。在一次偶然的机会，乔什孩子般的天真与热情给玩具公司老板留下了深刻印象，他的点子也使他在工作中频获嘉奖，很快住进了宽敞的公寓，并与年轻同事苏珊（伊丽莎白·帕金斯 Elizabeth Perkins 饰）展开了浪漫恋情。然而随着工作、生活、爱情这些成人世界的压力开始向乔什逼近，乔什那颗刚满13岁的心渐渐感到困倦失落，他开始回想，这是否就是自己想要的成长…… 本片曾获提名奥斯卡最佳男主角及最佳原创剧本。",
+            "summaryStatus": "AVAILABLE",
+            "title": "长大",
+            "year": 1988
+          }
+        ],
+        "directors": [
+          "潘妮·马歇尔"
+        ],
+        "douban_id": "1293212",
+        "douban_title": "长大",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582012",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1293212/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1988,
+        "summary": "一个愿望将12岁的乔希·巴斯金（大卫·莫斯科饰）变成了一个30岁的成年人（汤姆·汉克斯饰）后，他前往纽约并在麦克米伦玩具公司得到了一份基层工作。与公司老板（罗伯特·洛吉亚饰）的一次偶然相遇给他带来了测试新玩具的晋升机会。不久，同事苏珊·劳伦斯（伊丽莎白·帕金斯饰）对乔希产生了浪漫的情愫。然而，作为成年人生活的压力开始压垮他，他渴望回到过去简单的小男孩生活。",
+        "summary_original": "After a wish turns 12-year-old Josh Baskin (David Moscow) into a 30-year-old man (Tom Hanks), he heads to New York City and gets a low-level job at MacMillen Toy Company. A chance encounter with the owner (Robert Loggia) of the company leads to a promotion testing new toys. Soon a fellow employee, Susan Lawrence (Elizabeth Perkins), takes a romantic interest in Josh. However, the pressure of living as an adult begins to overwhelm him, and he longs to return to his simple, former life as a boy.",
+        "summary_source_hash": "36fb031dc644138a4244923125c47d500301bf09b853c8b6124fc6c398bb8396",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/big/umc.cmc.63shspjw8f8vnl45r7zw9i3jx"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "长大",
+        "watchUrl": "https://tv.apple.com/us/movie/big/umc.cmc.63shspjw8f8vnl45r7zw9i3jx"
+      }
+    },
+    "umc.cmc.u6exigmijzw1ym6mdpfeqlxt": {
+      "en": "Body of Lies",
+      "kind": "movie",
+      "year": "2008",
+      "verifiedZh": {
+        "_identityYear": 2008,
+        "actors": [
+          "莱昂纳多·迪卡普里奥",
+          "罗素·克劳",
+          "马克·斯特朗",
+          "格什菲·法拉哈尼"
+        ],
+        "aliases": [
+          "谎言之躯"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:41+00:00",
+          "originalTitle": "Body of Lies",
+          "rating": 7.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/2091015/",
+          "subjectId": "2091015",
+          "summary": "罗格·菲利斯（莱昂那多·迪卡普里奥 Leonardo DiCaprio 饰）曾是一名穿梭于炮火硝烟中的战地记者，如今他受雇于CIA，成为美国方面潜伏在伊拉克的特工，随时追踪臭名昭著的恐怖分子阿尔萨里姆（Alon Aboutboul 饰）。他的上司爱德·霍夫曼（罗素·克劳 Russell Crowe 饰）在遥远的美国坐镇，他凭借手中的电脑掌控大局。 通过一个不愿当人肉炸弹的恐怖分子的供述，罗格得知阿尔萨里姆正在策划新一轮的恐怖袭击。在接下来的冲突中，罗格的助手不幸身亡，自己也多处负伤。就在他还未康复之际，又被霍夫曼派往了阿曼。另一方面，对手不断散播与美国军方达成合作的谣言，这令身处虎穴的罗格顿时陷入莫大的危险之中……",
+          "summaryStatus": "AVAILABLE",
+          "title": "谎言之躯",
+          "year": 2008
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:41+00:00",
+            "originalTitle": "Body of Lies",
+            "rating": 7.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/2091015/",
+            "subjectId": "2091015",
+            "summary": "罗格·菲利斯（莱昂那多·迪卡普里奥 Leonardo DiCaprio 饰）曾是一名穿梭于炮火硝烟中的战地记者，如今他受雇于CIA，成为美国方面潜伏在伊拉克的特工，随时追踪臭名昭著的恐怖分子阿尔萨里姆（Alon Aboutboul 饰）。他的上司爱德·霍夫曼（罗素·克劳 Russell Crowe 饰）在遥远的美国坐镇，他凭借手中的电脑掌控大局。 通过一个不愿当人肉炸弹的恐怖分子的供述，罗格得知阿尔萨里姆正在策划新一轮的恐怖袭击。在接下来的冲突中，罗格的助手不幸身亡，自己也多处负伤。就在他还未康复之际，又被霍夫曼派往了阿曼。另一方面，对手不断散播与美国军方达成合作的谣言，这令身处虎穴的罗格顿时陷入莫大的危险之中……",
+            "summaryStatus": "AVAILABLE",
+            "title": "谎言之躯",
+            "year": 2008
+          }
+        ],
+        "directors": [
+          "雷德利·斯科特"
+        ],
+        "douban_id": "2091015",
+        "douban_title": "谎言之躯",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582021",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/2091015/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2008,
+        "summary": "罗杰·费里斯（莱昂纳多·迪卡普里奥 饰）是美国情报部门最顶尖的外勤人员，在那些人命连能换取的情报都不如的地方执行任务。在带他走遍全球的行动中，费里斯的下一次呼吸往往取决于安全电话线另一端的声音——中情局老兵埃德·霍夫曼（罗素·克劳 饰）。霍夫曼在郊区的笔记本电脑前运筹帷幄，正追踪着一个新崛起的恐怖分子头目，该头目在躲避世界上最先进的情报网络的同时，策划了一系列爆炸活动。为了引诱恐怖分子现身，费里斯将不得不深入其阴暗的世界，然而费里斯越接近目标，就越发现信任既是一种危险的筹码，也是唯一能让他活着离开的东西。",
+        "summary_original": "Roger Ferris (Leonardo DiCaprio) is the best man U.S. Intelligence has on the ground, in places where human life is worth no more than the information it can get you. In operations that take him around the globe, Ferris' next breath often depends on the voice at the other end of a secure phone line--CIA veteran Ed Hoffman (Russell Crowe). Strategizing from a laptop in the suburbs, Hoffman is on the trail of an emerging terrorist leader who has orchestrated a campaign of bombings while eluding the most sophisticated intelligence network in the world. To lure the terrorist out into the open, Ferris will have to penetrate his murky world, but the closer Ferris gets to the target, the more he discovers that trust is both a dangerous commodity and the only one that will get him out alive.",
+        "summary_source_hash": "1ae6d5210215bf9c2743ffc21714fd43b42861c13c744337ff27da77e5a4cfe1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/body-of-lies/umc.cmc.u6exigmijzw1ym6mdpfeqlxt"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "谎言之躯",
+        "watchUrl": "https://tv.apple.com/us/movie/body-of-lies/umc.cmc.u6exigmijzw1ym6mdpfeqlxt"
+      }
+    },
+    "umc.cmc.65fz9a9ilhwcb3jh08qyi0nqh": {
+      "en": "Clueless",
+      "kind": "movie",
+      "year": "1995",
+      "verifiedZh": {
+        "_identityYear": 1995,
+        "actors": [
+          "艾丽西亚·希尔维斯通",
+          "斯黛西·达什",
+          "布莱特妮·墨菲",
+          "保罗·路德",
+          "唐纳德·法森",
+          "埃莉萨·多诺万",
+          "布瑞金·梅耶",
+          "杰瑞米·西斯托",
+          "丹·哈达亚",
+          "华莱士·肖恩",
+          "特温·卡普兰",
+          "朱莉·布朗",
+          "尼克尔·比德尔贝克",
+          "卡尔·哥特列布",
+          "约瑟夫·D·雷特曼",
+          "艾米·海克林",
+          "比利·维斯特"
+        ],
+        "aliases": [
+          "独领风骚",
+          "倩女掌门人",
+          "无影无踪"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:50+00:00",
+          "originalTitle": "Clueless",
+          "rating": 7.7,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1295295/",
+          "subjectId": "1295295",
+          "summary": "故事发生在位于比弗利山庄的一所贵族学校中，能够进入此学校就读的学生们，非富即贵，所以，校园里奢侈和自由的风气和普通的学校是无法相比的。在这里，成绩和品行都不重要，重要的是五颜六色的名牌时装，是闪闪发光的珠宝配饰，是张扬奔放肆意挥洒的个性。我们的主人公雪儿（艾丽西亚·希尔维斯通 Alicia Silverstone 饰）就在这样的世界里生活成长着。 一位转学生的到来吸引了雪儿的注意，在偌大的校园里，在同学朋友的眼中，这名转学生简直就是“怪胎”，穿着平庸打扮又土气，雪儿决定帮助她改头换面，“重新做人”。在雪儿的指导下，转学生果然有了焕然一新的面貌，甚至更胜雪儿一筹，这让雪儿的内心里十分不平。",
+          "summaryStatus": "AVAILABLE",
+          "title": "独领风骚",
+          "year": 1995
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:50+00:00",
+            "originalTitle": "Clueless",
+            "rating": 7.7,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1295295/",
+            "subjectId": "1295295",
+            "summary": "故事发生在位于比弗利山庄的一所贵族学校中，能够进入此学校就读的学生们，非富即贵，所以，校园里奢侈和自由的风气和普通的学校是无法相比的。在这里，成绩和品行都不重要，重要的是五颜六色的名牌时装，是闪闪发光的珠宝配饰，是张扬奔放肆意挥洒的个性。我们的主人公雪儿（艾丽西亚·希尔维斯通 Alicia Silverstone 饰）就在这样的世界里生活成长着。 一位转学生的到来吸引了雪儿的注意，在偌大的校园里，在同学朋友的眼中，这名转学生简直就是“怪胎”，穿着平庸打扮又土气，雪儿决定帮助她改头换面，“重新做人”。在雪儿的指导下，转学生果然有了焕然一新的面貌，甚至更胜雪儿一筹，这让雪儿的内心里十分不平。",
+            "summaryStatus": "AVAILABLE",
+            "title": "独领风骚",
+            "year": 1995
+          }
+        ],
+        "directors": [
+          "艾米·海克林"
+        ],
+        "douban_id": "1295295",
+        "douban_title": "独领风骚",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582030",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1295295/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1995,
+        "summary": "简·奥斯汀可能从未想象过，她于1816年出版的小说《爱玛》会被改编成一部以贝弗利山庄高中超级富有青少年为视角的新鲜讽刺作品。雪儿（艾丽西亚·西尔维斯特饰）和迪昂（史黛西·达什饰）都以“过去现在拍电视购物广告的伟大歌手”命名，她们是被宠坏的上流社会女孩，比起取得好成绩，她们更在乎穿对衣服和尽可能受欢迎。但雪儿与她严厉却热心的律师父亲（丹·海达亚饰）以及英俊敏感的继兄（保罗·路德饰）住在一起，她内心也有一种本能，想要帮助那些不太幸運的人——比如她撮合的两位内向老师（在此过程中还“谈判”提高了自己的成绩）以及新朋友泰（布兰妮·墨菲饰），泰一开始是个怪咖，最终却成了雪儿的门徒。雪儿也有她敏感的一面，她一直在寻找完美的男友，最终在最意想不到的地方找到了。",
+        "summary_original": "Jane Austen might never have imagined that her 1816 novel Emma could be turned into a fresh and satirical look at ultra-rich teenagers in a Beverly Hills high school. Cher (Alicia Silverstone) and Dionne (Stacey Dash), both named after \"great singers of the past that now do infomercials,\" are pampered upper-class girls who care less about getting good grades than wearing the right clothes and being as popular as possible. But Cher, who lives with her tough yet warm-hearted lawyer dad (Dan Hedaya) and hunky, sensitive stepbrother (Paul Rudd), also has an innate urge to help those less fortunate — like the two introverted teachers she brings together (\"negotiating\" herself improved grades in the process) and new friend Tai (Brittany Murphy), who starts out a geek and ends up a Cher prodigy. Cher also possesses her own sensitive side, and she is looking for the perfect boyfriend, whom she ends up finding where she least expected.",
+        "summary_source_hash": "07fcbaa21cebc213ff5cd1c131005cceefdc65efd12d827c1181b341d468a5db",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/clueless/umc.cmc.65fz9a9ilhwcb3jh08qyi0nqh"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "独领风骚",
+        "watchUrl": "https://tv.apple.com/us/movie/clueless/umc.cmc.65fz9a9ilhwcb3jh08qyi0nqh"
+      }
+    },
+    "umc.cmc.5g1hhn1bnv4it2tfxvjnkcyvw": {
+      "en": "Dave",
+      "kind": "movie",
+      "year": "1993",
+      "verifiedZh": {
+        "_identityYear": 1993,
+        "actors": [
+          "凯文·克莱恩",
+          "西格妮·韦弗",
+          "弗兰克·兰格拉",
+          "凯文·杜恩",
+          "文·瑞姆斯",
+          "本·金斯利",
+          "查尔斯·格罗丁",
+          "费斯·普林斯",
+          "劳拉·琳妮",
+          "邦妮·亨特",
+          "帕利·贝尔",
+          "斯特凡·吉拉什",
+          "安娜·迪佛·史密斯",
+          "查尔斯·哈拉汉",
+          "汤姆·杜根",
+          "斯蒂芬·鲁特",
+          "拉尔夫·曼扎",
+          "盖瑞·罗斯"
+        ],
+        "aliases": [
+          "雾水总统",
+          "冒牌总统",
+          "戴夫",
+          "达夫"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:13:59+00:00",
+          "originalTitle": "Dave",
+          "rating": 7.5,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1292871/",
+          "subjectId": "1292871",
+          "summary": "戴夫·柯维在长相上酷似新任美国总统米切尔。一天，米切尔在与女秘做爱时，突然中风，昏迷不醒。白宫幕僚长鲍勃让戴夫冒统总统，以伺机夺位。谁知在戴夫当总统期间，勤政爱民，大力推动改革法案，鲍勃盛怒之下，揭发米切尔政府贪污内幕。戴夫为保荐副总统顺利接任，在议会上演出了一幕最精彩的中风……",
+          "summaryStatus": "AVAILABLE",
+          "title": "雾水总统",
+          "year": 1993
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:13:59+00:00",
+            "originalTitle": "Dave",
+            "rating": 7.5,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1292871/",
+            "subjectId": "1292871",
+            "summary": "戴夫·柯维在长相上酷似新任美国总统米切尔。一天，米切尔在与女秘做爱时，突然中风，昏迷不醒。白宫幕僚长鲍勃让戴夫冒统总统，以伺机夺位。谁知在戴夫当总统期间，勤政爱民，大力推动改革法案，鲍勃盛怒之下，揭发米切尔政府贪污内幕。戴夫为保荐副总统顺利接任，在议会上演出了一幕最精彩的中风……",
+            "summaryStatus": "AVAILABLE",
+            "title": "雾水总统",
+            "year": 1993
+          }
+        ],
+        "directors": [
+          "伊万·雷特曼"
+        ],
+        "douban_id": "1292871",
+        "douban_title": "雾水总统",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582039",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1292871/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1993,
+        "summary": "在《冒牌总统》中，凯文·克莱恩一人分饰两角，分别饰演总统比尔·米歇尔和临时工中介老板戴夫·科维奇。当总统突发严重中风并陷入植物人状态时，他的幕僚长鲍勃·亚历山大（弗兰克·兰格拉饰）说服戴夫来扮演总统。比尔·米歇尔总统腐败而令人讨厌，有着精心伪装的政治外表，而戴夫则真心关爱他人并想要帮助人们。这导致他与亚历山大针锋相对，亚历山大的真正企图是将副总统卷入丑闻，并让“戴夫总统”在假装第二次致命中风之前提名他为新任副总统。埃伦·米歇尔（西格妮·韦弗饰）是一位疏远的真正第一夫人，尽管婚姻缺乏爱，她仍乐于利用自己的角色为需要帮助的人服务。她最终识破了这个骗局，并在她的帮助下，戴夫得以拨乱反正，两人也在过程中擦出了爱情的火花。",
+        "summary_original": "In Dave, Kevin Kline stars in dual roles as President Bill Mitchell and a temp agency owner named Dave Kovic. When the President has a massive stroke that leaves him in a vegetative state, his Chief of Staff, Bob Alexander (Frank Langella), convinces Dave to play the part. Whereas President Bill Mitchell was corrupt and nasty with a well-crafted political façade, Dave genuinely cares and wants to help people. This leads him to lock horns with Alexander, whose real agenda is to implicate the Vice President in a scandal and have \"President Dave\" nominate him the new VP just before pretending to have a second, fatal stroke. Ellen Mitchell (Sigourney Weaver) is the estranged First Lady who enjoys using her role to be of service to the needy, despite the lack of love in her marriage. She eventually catches on to the ruse and with her help, Dave is able to set things right and the two of them find romance along the way.",
+        "summary_source_hash": "ead984fc572e4fe023302973c44109e6984eac761682bf71b6a43c60a1169376",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/dave/umc.cmc.5g1hhn1bnv4it2tfxvjnkcyvw"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "雾水总统",
+        "watchUrl": "https://tv.apple.com/us/movie/dave/umc.cmc.5g1hhn1bnv4it2tfxvjnkcyvw"
+      }
+    },
+    "umc.cmc.40eizj37hvedszozcidhgpari": {
+      "en": "Dead Poets Society",
+      "kind": "movie",
+      "year": "1989",
+      "verifiedZh": {
+        "_identityYear": 1989,
+        "actors": [
+          "罗宾·威廉姆斯",
+          "罗伯特·肖恩·莱纳德",
+          "伊桑·霍克",
+          "乔西·查尔斯",
+          "盖尔·汉森",
+          "迪伦·库斯曼",
+          "阿勒隆·鲁杰罗",
+          "詹姆斯·沃特斯顿",
+          "诺曼·劳埃德",
+          "柯特伍德·史密斯",
+          "卡拉·贝尔韦尔",
+          "利昂·波纳尔",
+          "乔治·马丁",
+          "乔·奥菲耶里",
+          "马特·凯里",
+          "凯文·库尼",
+          "拉腊·弗林·鲍尔",
+          "亚历桑德拉·鲍尔斯",
+          "梅洛拉·沃尔特斯",
+          "帕梅拉·伯勒尔",
+          "约翰·库宁汉姆",
+          "迪布拉·穆尼",
+          "库尔特·莱特纳",
+          "凯瑟·斯内德",
+          "霍纳斯·斯蒂克洛瑞斯",
+          "杰米·肯尼迪"
+        ],
+        "aliases": [
+          "死亡诗社",
+          "壮志骄阳"
+        ],
+        "contentRating": "PG",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:08+00:00",
+          "originalTitle": "Dead Poets Society",
+          "rating": 9.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1291548/",
+          "subjectId": "1291548",
+          "summary": "威尔顿预备学院以其沉稳凝重的教学风格和较高的升学率闻名，作为其毕业班的学生，理想就是升入名校。新学期文学老师约翰·基汀（罗宾·威廉姆斯 饰）的到来如同一阵春风，一反传统名校的严肃刻板。 基汀带学生们在校史楼内聆听死亡的声音，反思生的意义 ；让男生们在绿茵场上宣读自己的理想；鼓励学生站在课桌上，用新的视角俯瞰世界。老师自由发散式的哲学思维让学生内心产生强烈的共鸣，他们渐渐学会自己思考与求索，勇敢的追问人生的路途，甚至违反门禁，成立死亡诗社，在山洞里击节而歌！ 基汀教授、基汀老师、基汀队长，他的教育宛若春风化雨，润物无声的留在每个人心里…",
+          "summaryStatus": "AVAILABLE",
+          "title": "死亡诗社",
+          "year": 1989
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:08+00:00",
+            "originalTitle": "Dead Poets Society",
+            "rating": 9.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1291548/",
+            "subjectId": "1291548",
+            "summary": "威尔顿预备学院以其沉稳凝重的教学风格和较高的升学率闻名，作为其毕业班的学生，理想就是升入名校。新学期文学老师约翰·基汀（罗宾·威廉姆斯 饰）的到来如同一阵春风，一反传统名校的严肃刻板。 基汀带学生们在校史楼内聆听死亡的声音，反思生的意义 ；让男生们在绿茵场上宣读自己的理想；鼓励学生站在课桌上，用新的视角俯瞰世界。老师自由发散式的哲学思维让学生内心产生强烈的共鸣，他们渐渐学会自己思考与求索，勇敢的追问人生的路途，甚至违反门禁，成立死亡诗社，在山洞里击节而歌！ 基汀教授、基汀老师、基汀队长，他的教育宛若春风化雨，润物无声的留在每个人心里…",
+            "summaryStatus": "AVAILABLE",
+            "title": "死亡诗社",
+            "year": 1989
+          }
+        ],
+        "directors": [
+          "彼得·威尔"
+        ],
+        "douban_id": "1291548",
+        "douban_title": "死亡诗社",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582048",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1291548/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1989,
+        "summary": "“对青春动荡火焰的一曲抒情、华丽而坚韧的颂歌”（《综艺》）。罗宾·威廉姆斯在这部令人动容的1989年剧情片中大放异彩，他饰演一位英语老师，回到母校——一所管理严格的佛蒙特预科学校——工作，并在学生心中点燃了一团强烈的火焰。",
+        "summary_original": "'A lyrical, gorgeous and tough evocation of the unsteady fires of youth' ('Variety'). Robin Williams shines in this stirring 1989 drama as an English teacher who goes to work at his alma mater--a rigorous Vermont prep school--and lights a powerful flame in his students.",
+        "summary_source_hash": "29095369cd62ec54c540e6e8ca6f2b005c038f9cc678e05c48001996c0ebbe77",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/dead-poets-society/umc.cmc.40eizj37hvedszozcidhgpari"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "死亡诗社",
+        "watchUrl": "https://tv.apple.com/us/movie/dead-poets-society/umc.cmc.40eizj37hvedszozcidhgpari"
+      }
+    },
+    "umc.cmc.3f1fb5wz6e4418nucy3ej1lrn": {
+      "en": "Eat Pray Love",
+      "kind": "movie",
+      "year": "2010",
+      "verifiedZh": {
+        "_identityYear": 2010,
+        "actors": [
+          "朱莉娅·罗伯茨",
+          "哈维尔·巴登",
+          "詹姆斯·弗兰科",
+          "比利·克鲁德普",
+          "理查德·詹金斯",
+          "维奥拉·戴维斯",
+          "图娃·诺沃妮",
+          "卢卡·阿金泰罗",
+          "TJ·鲍尔",
+          "迈克·奥麦利",
+          "阿什莉·阿特金森",
+          "Lisa Roberts Gillan",
+          "瑞恩·欧南",
+          "吉塔·雷迪",
+          "Dwayne Clark",
+          "Jen Kwok",
+          "玛丽·特斯塔",
+          "Welker White",
+          "何塞·拉蒙·罗萨里奥",
+          "Lucia Guzzardi",
+          "Elena Arvigo",
+          "安德里亚·迪·斯戴法诺",
+          "雷莫·雷莫蒂",
+          "Vanessa Marini",
+          "Lidia Biondi",
+          "迈克尔·昆普斯蒂",
+          "彼得·戴维斯",
+          "苏菲·汤普森",
+          "克里斯汀·哈金",
+          "Arlene Tur"
+        ],
+        "aliases": [
+          "美食、祈祷和恋爱",
+          "一辈子做女孩",
+          "饮食、祷告与爱情",
+          "真正的喜悦",
+          "饭祷爱(豆友译名)"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:12+00:00",
+          "originalTitle": "Eat Pray Love",
+          "rating": 7.4,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/2033822/",
+          "subjectId": "2033822",
+          "summary": "年轻干练的伊丽莎白·吉尔伯特（朱莉娅·罗伯茨 Julia Roberts 饰）是《纽约时报》的一名人气作家，她经常周游世界，撰写相关的旅游文章。她的生活同样令人欣羡，丈夫史蒂芬（比利·克鲁德普 Billy Crudup 饰）帅气潇洒、气质不凡；饮食无忧、优哉安 乐。然而伊丽莎白却渐渐感到空虚和恐慌，似乎着周遭的一切都不是她真正追求的。伊丽莎白决定走出变质的婚姻，寻找自我。在漫长的离婚拉锯战后，她踏上了周游世界的旅途，在美食、祈祷和恋爱中，认真地思考人生的种种…… 本片根据伊丽莎白·吉尔伯特（Elizabeth Gilbert）的同名自传改编，著名影星布莱德•彼特担任该片制片人。",
+          "summaryStatus": "AVAILABLE",
+          "title": "美食、祈祷和恋爱",
+          "year": 2010
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:12+00:00",
+            "originalTitle": "Eat Pray Love",
+            "rating": 7.4,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/2033822/",
+            "subjectId": "2033822",
+            "summary": "年轻干练的伊丽莎白·吉尔伯特（朱莉娅·罗伯茨 Julia Roberts 饰）是《纽约时报》的一名人气作家，她经常周游世界，撰写相关的旅游文章。她的生活同样令人欣羡，丈夫史蒂芬（比利·克鲁德普 Billy Crudup 饰）帅气潇洒、气质不凡；饮食无忧、优哉安 乐。然而伊丽莎白却渐渐感到空虚和恐慌，似乎着周遭的一切都不是她真正追求的。伊丽莎白决定走出变质的婚姻，寻找自我。在漫长的离婚拉锯战后，她踏上了周游世界的旅途，在美食、祈祷和恋爱中，认真地思考人生的种种…… 本片根据伊丽莎白·吉尔伯特（Elizabeth Gilbert）的同名自传改编，著名影星布莱德•彼特担任该片制片人。",
+            "summaryStatus": "AVAILABLE",
+            "title": "美食、祈祷和恋爱",
+            "year": 2010
+          }
+        ],
+        "directors": [
+          "瑞恩·墨菲"
+        ],
+        "douban_id": "2033822",
+        "douban_title": "美食、祈祷和恋爱",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582052",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/2033822/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2010,
+        "summary": "莉兹·吉尔伯特（朱莉娅·罗伯茨饰）在《美食、祈祷和恋爱》中饰演一个现代女性，她踏上了一段环游世界的旅程，旨在惊叹于世界的美丽，同时重新发现和连接自己真正的内心。在经历了一场离婚后站在人生的十字路口，吉尔伯特从工作中请了一年假，一反常态地走出了自己的舒适区，冒着一切风险去改变自己的生活。在她奇妙而异国情调的旅行中，她体验了在意大利通过进食获得的滋养的简单快乐；在印度的祈祷力量；最后，出乎意料地，在巴厘岛获得了内心的平静与爱的平衡。改编自一个鼓舞人心的真实故事，《美食, 祈祷和恋爱》证明了确实有一种以上的方式来放飞自我并看世界。",
+        "summary_original": "Liz Gilbert (Julia Roberts) is a modern woman on a quest to marvel at and travel the world while rediscovering and reconnecting with her true inner self in Eat Pray Love. At a crossroads after a divorce, Gilbert takes a year-long sabbatical from her job and steps uncharacteristically out of her comfort zone, risking everything to change her life. In her wondrous and exotic travels, she experiences the simple pleasure of nourishment by eating in Italy; the power of prayer in India, and, finally and unexpectedly, the inner peace and balance of love in Bali. Based on an inspiring true story, Eat Pray Love proves that there really is more than one way to let yourself go and see the world.",
+        "summary_source_hash": "43280e5aebb052d2c5f4070fb87fbd306c99fcd8fc92052874b3f483109352f0",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/eat-pray-love/umc.cmc.3f1fb5wz6e4418nucy3ej1lrn"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "美食、祈祷和恋爱",
+        "watchUrl": "https://tv.apple.com/us/movie/eat-pray-love/umc.cmc.3f1fb5wz6e4418nucy3ej1lrn"
+      }
+    },
+    "umc.cmc.5ov9f55aw8qvmd5pumhgnwu3e": {
+      "en": "Forrest Gump",
+      "kind": "movie",
+      "year": "1994",
+      "verifiedZh": {
+        "_identityYear": 1994,
+        "actors": [
+          "汤姆·汉克斯",
+          "罗宾·怀特",
+          "加里·辛尼斯",
+          "麦凯尔泰·威廉逊",
+          "莎莉·菲尔德",
+          "海利·乔·奥斯蒙",
+          "迈克尔·康纳·亨弗里斯",
+          "哈罗德·G·赫瑟姆",
+          "山姆·安德森",
+          "伊俄涅·M·特雷奇",
+          "彼得·道博森",
+          "希芳·法隆",
+          "伊丽莎白·汉克斯",
+          "汉娜·豪尔",
+          "克里斯托弗·琼斯",
+          "罗布·兰德里",
+          "杰森·麦克奎尔",
+          "桑尼·施罗耶",
+          "艾德·戴维斯",
+          "丹尼尔C.斯瑞派克",
+          "大卫·布里斯宾",
+          "德博拉·麦克蒂尔",
+          "艾尔·哈林顿",
+          "阿非莫·奥米拉",
+          "约翰·沃德斯塔德",
+          "迈克尔·伯吉斯",
+          "埃里克·安德伍德",
+          "拜伦·明斯",
+          "斯蒂芬·布吉格沃特",
+          "约翰·威廉·高尔特"
+        ],
+        "aliases": [
+          "阿甘正传",
+          "福雷斯特·冈普"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:17+00:00",
+          "originalTitle": "Forrest Gump",
+          "rating": 9.5,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1292720/",
+          "subjectId": "1292720",
+          "summary": "阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。 阿甘像普通孩子一样上学，并且认识了一生的朋友和至爱珍妮（罗宾·莱特·潘 饰），在珍妮 和妈妈的爱护下，阿甘凭着上帝赐予的“飞毛腿”开始了一生不停的奔跑。 阿甘成为橄榄球巨星、越战英雄、乒乓球外交使者、亿万富翁，但是，他始终忘不了珍妮，几次匆匆的相聚和离别，更是加深了阿甘的思念。 有一天，阿甘收到珍妮的信，他们终于又要见面……",
+          "summaryStatus": "AVAILABLE",
+          "title": "阿甘正传",
+          "year": 1994
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:17+00:00",
+            "originalTitle": "Forrest Gump",
+            "rating": 9.5,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1292720/",
+            "subjectId": "1292720",
+            "summary": "阿甘（汤姆·汉克斯 饰）于二战结束后不久出生在美国南方阿拉巴马州一个闭塞的小镇，他先天弱智，智商只有75，然而他的妈妈是一个性格坚强的女性，她常常鼓励阿甘“傻人有傻福”，要他自强不息。 阿甘像普通孩子一样上学，并且认识了一生的朋友和至爱珍妮（罗宾·莱特·潘 饰），在珍妮 和妈妈的爱护下，阿甘凭着上帝赐予的“飞毛腿”开始了一生不停的奔跑。 阿甘成为橄榄球巨星、越战英雄、乒乓球外交使者、亿万富翁，但是，他始终忘不了珍妮，几次匆匆的相聚和离别，更是加深了阿甘的思念。 有一天，阿甘收到珍妮的信，他们终于又要见面……",
+            "summaryStatus": "AVAILABLE",
+            "title": "阿甘正传",
+            "year": 1994
+          }
+        ],
+        "directors": [
+          "罗伯特·泽米吉斯"
+        ],
+        "douban_id": "1292720",
+        "douban_title": "阿甘正传",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582057",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1292720/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1994,
+        "summary": "“傻人有傻福，”福雷斯特·甘普（汤姆·汉克斯凭此角荣获奥斯卡奖）在等公交车时对一个陌生人这样谈论自己相对的智力水平。尽管智商低于常人，但甘普过着一段真正幸运的人生，得以近距离见证20世纪下半叶许多最难忘的事件。与汤姆·汉克斯一同出演的还有饰演福雷斯特母亲的莎莉·菲尔德；饰演他在越南的长官的加里·西尼斯；饰演他精通各种虾料理的不幸军队死党的小迈克尔蒂·威廉姆斯；以及通过数字魔法将福雷斯特置于一系列非凡历史事件和人物之中的特效艺术家们。",
+        "summary_original": "\"Stupid is as stupid does,\" says Forrest Gump (played by Tom Hanks in an Oscar-winning performance) as he discusses his relative level of intelligence with a stranger while waiting for a bus. Despite his sub-normal IQ, Gump leads a truly charmed life, with a ringside seat for many of the most memorable events of the second half of the 20th century. Featured alongside Tom Hanks are Sally Field as Forrest's mother; Gary Sinise as his commanding officer in Vietnam; Mykelti Williamson as his ill-fated Army buddy who is familiar with every recipe that involves shrimp; and the special effects artists whose digital magic place Forrest amidst a remarkable array of historical events and people.",
+        "summary_source_hash": "8277df3c54f9c375b02ec7fefa24d546b9736938e794417f67f3c8b57d58b50e",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/forrest-gump/umc.cmc.5ov9f55aw8qvmd5pumhgnwu3e"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "阿甘正传",
+        "watchUrl": "https://tv.apple.com/us/movie/forrest-gump/umc.cmc.5ov9f55aw8qvmd5pumhgnwu3e"
+      }
+    },
+    "umc.cmc.6omfkui754hy1907q88mrt3g2": {
+      "en": "Get Smart",
+      "kind": "movie",
+      "year": "2008",
+      "verifiedZh": {
+        "_identityYear": 2008,
+        "actors": [
+          "史蒂夫·卡瑞尔",
+          "安妮·海瑟薇",
+          "道恩·强森",
+          "艾伦·阿金",
+          "特伦斯·斯坦普",
+          "泰瑞·克鲁斯",
+          "大卫·科恩查内",
+          "詹姆斯·肯恩",
+          "比尔·默瑞",
+          "帕特里克·沃伯顿",
+          "丘增",
+          "内特·托伦斯",
+          "肯·戴维蒂安",
+          "大卫·S·李",
+          "达利普·辛格",
+          "吉奥夫·皮尔森",
+          "凯利·卡巴茨",
+          "林赛·霍利斯特"
+        ],
+        "aliases": [
+          "糊涂侦探",
+          "特务行不行",
+          "特务S唛"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:23+00:00",
+          "originalTitle": "Get Smart",
+          "rating": 6.8,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1972701/",
+          "subjectId": "1972701",
+          "summary": "冷战结束后，天控局面临被解散的危险，但是这个美国最大的特务机关，依旧担负着重要的使命。不过，近期天控局总部却遭受了突发性袭击，导致特工们都有被身份曝光的危险。其中也包括强壮如牛、身手不凡的23号特工（道恩•强森 Dwayne Johnson 饰）。总部经过研究发现，袭击事件是一个叫盖不达集团的，为了迎敌，总部对分析家麦克斯韦（史蒂夫•卡瑞尔 Steve Carell 饰）委以重任，后者终于等到了一展身手的机会。于是，他积极参与了对付盖不达的行动，不过之前的两次演习都被他搞砸了。唯一的收获是，他跟99号特工（安妮•海瑟薇 Anne Hathaway 饰）结成了搭档，后者是唯一不怕身份曝光的特工。他们在飞机上遇到了一个疑似的恐怖分子，但是当他们出手时，却意外陷入了对方的圈套。此后，这对欢喜冤家又接连遇到一系列令人啼笑皆非的困境……",
+          "summaryStatus": "AVAILABLE",
+          "title": "糊涂侦探",
+          "year": 2008
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:23+00:00",
+            "originalTitle": "Get Smart",
+            "rating": 6.8,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1972701/",
+            "subjectId": "1972701",
+            "summary": "冷战结束后，天控局面临被解散的危险，但是这个美国最大的特务机关，依旧担负着重要的使命。不过，近期天控局总部却遭受了突发性袭击，导致特工们都有被身份曝光的危险。其中也包括强壮如牛、身手不凡的23号特工（道恩•强森 Dwayne Johnson 饰）。总部经过研究发现，袭击事件是一个叫盖不达集团的，为了迎敌，总部对分析家麦克斯韦（史蒂夫•卡瑞尔 Steve Carell 饰）委以重任，后者终于等到了一展身手的机会。于是，他积极参与了对付盖不达的行动，不过之前的两次演习都被他搞砸了。唯一的收获是，他跟99号特工（安妮•海瑟薇 Anne Hathaway 饰）结成了搭档，后者是唯一不怕身份曝光的特工。他们在飞机上遇到了一个疑似的恐怖分子，但是当他们出手时，却意外陷入了对方的圈套。此后，这对欢喜冤家又接连遇到一系列令人啼笑皆非的困境……",
+            "summaryStatus": "AVAILABLE",
+            "title": "糊涂侦探",
+            "year": 2008
+          }
+        ],
+        "directors": [
+          "彼得·西格尔"
+        ],
+        "douban_id": "1972701",
+        "douban_title": "糊涂侦探",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582063",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1972701/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2008,
+        "summary": "忘掉《糊涂侦探》（这部经典电视剧的现代电影改编版）背后的基本剧情吧。那些所谓的剧情——比如邪恶组织KAOS企图炸毁洛杉矶，以及关于俄罗斯武器盗窃案的开场白——往好了说是最基本的，往坏了说是令人费解的。这部电影实际上是一个关于草根逆袭的故事：麦克斯韦·斯马特（史蒂夫·卡瑞尔 饰）是秘密政府机构“管制局”里一个聪明但书呆子气的分析师，当总部遭到袭击，除了99号特工（安妮·海瑟薇 饰）之外所有管制局特工的身份都泄露时，他终于如愿以偿成为了一名外勤特工。麦克斯和99号必须阻止坏人并拯救世界……前提是他们能学会如何合作。",
+        "summary_original": "Forget the underlying plot in Get Smart, the modern-day cinematic adaptation of the classic TV series. What passes for one -- something about evil organization KAOS' attempts to bomb Los Angeles, with a preamble about weapons theft in Russia -- is rudimentary at best and confounding at worst. The movie is really the triumph-of-the-underdog story of Maxwell Smart (Steve Carell), a brilliant-but-nerdy analyst at secret government agency Control who finally gets his wish to become a field agent when headquarters is attacked and the identity of all of Control's operatives -- except for Agent 99 (Anne Hathaway) -- is compromised. It's up to Max and 99 to stop the bad guys and save the day ... provided they can learn to work together.",
+        "summary_source_hash": "cf37fbd7fea64641e7b60e9798c64e47912ba59140dc60e07ae7db7f59b5a2ec",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/get-smart/umc.cmc.6omfkui754hy1907q88mrt3g2"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "糊涂侦探",
+        "watchUrl": "https://tv.apple.com/us/movie/get-smart/umc.cmc.6omfkui754hy1907q88mrt3g2"
+      }
+    },
+    "umc.cmc.1vrwat5k1ucm5k42q97ioqyq3": {
+      "en": "Interstellar",
+      "kind": "movie",
+      "year": "2014",
+      "verifiedZh": {
+        "_identityYear": 2014,
+        "actors": [
+          "马修·麦康纳",
+          "安妮·海瑟薇",
+          "杰西卡·查斯坦",
+          "麦肯吉·弗依",
+          "卡西·阿弗莱克",
+          "迈克尔·凯恩",
+          "马特·达蒙",
+          "提莫西·查拉梅",
+          "艾伦·伯斯汀",
+          "约翰·利思戈",
+          "韦斯·本特利",
+          "大卫·吉亚西",
+          "比尔·欧文",
+          "托弗·格雷斯",
+          "科莱特·沃夫",
+          "弗朗西斯·X.麦卡蒂",
+          "安德鲁·博尔巴",
+          "乔什·斯图沃特",
+          "莱雅·卡里恩斯",
+          "利亚姆·迪金森",
+          "杰夫·赫普内尔",
+          "伊莱耶斯·加贝尔",
+          "布鲁克·史密斯",
+          "大卫·奥伊罗",
+          "威廉·德瓦内",
+          "拉什·费加",
+          "格里芬·弗雷泽",
+          "弗洛拉·诺兰"
+        ],
+        "aliases": [
+          "星际穿越",
+          "星际空间",
+          "星际之间",
+          "星际远航",
+          "星际"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:27+00:00",
+          "originalTitle": "Interstellar",
+          "rating": 9.4,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1889243/",
+          "subjectId": "1889243",
+          "summary": "近未来的地球黄沙遍野，小麦、秋葵等基础农作物相继因枯萎病灭绝，人类不再像从前那样仰望星空，放纵想象力和灵感的迸发，而是每日在沙尘暴的肆虐下倒数着所剩不多的光景。在家务农的前NASA宇航员库珀（马修·麦康纳 Matthew McConaughey 饰）接连在女儿墨菲（麦肯吉·弗依 Mackenzie Foy 饰）的书房发现奇怪的重力场现象，随即得知在某个未知区域内前NASA成员仍秘密进行一个拯救人类的计划。多年以前土星附近出现神秘虫洞，NASA借机将数名宇航员派遣到遥远的星系寻找适合居住的星球。在布兰德教授（迈克尔·凯恩 Michael Caine 饰）的劝说下，库珀忍痛告别了女儿，和其他三名专家教授女儿艾米莉亚·布兰德（安妮·海瑟薇 Anne Hathaway 饰）、罗米利（大卫·吉雅西 David Gyasi 饰）、多伊尔（韦斯·本特利 Wes Bentley 饰）搭乘宇宙飞船前往目前已知的最有希望的三颗星球考察。 他们穿越遥远的星系银河，感受了一小时七年光阴的沧海桑田，窥见了未知星球和黑洞的壮伟与神秘。在浩瀚宇宙的绝望而孤独角落，总有一份超越了时空的笃定情怀将他们紧紧相连……",
+          "summaryStatus": "AVAILABLE",
+          "title": "星际穿越",
+          "year": 2014
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:27+00:00",
+            "originalTitle": "Interstellar",
+            "rating": 9.4,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1889243/",
+            "subjectId": "1889243",
+            "summary": "近未来的地球黄沙遍野，小麦、秋葵等基础农作物相继因枯萎病灭绝，人类不再像从前那样仰望星空，放纵想象力和灵感的迸发，而是每日在沙尘暴的肆虐下倒数着所剩不多的光景。在家务农的前NASA宇航员库珀（马修·麦康纳 Matthew McConaughey 饰）接连在女儿墨菲（麦肯吉·弗依 Mackenzie Foy 饰）的书房发现奇怪的重力场现象，随即得知在某个未知区域内前NASA成员仍秘密进行一个拯救人类的计划。多年以前土星附近出现神秘虫洞，NASA借机将数名宇航员派遣到遥远的星系寻找适合居住的星球。在布兰德教授（迈克尔·凯恩 Michael Caine 饰）的劝说下，库珀忍痛告别了女儿，和其他三名专家教授女儿艾米莉亚·布兰德（安妮·海瑟薇 Anne Hathaway 饰）、罗米利（大卫·吉雅西 David Gyasi 饰）、多伊尔（韦斯·本特利 Wes Bentley 饰）搭乘宇宙飞船前往目前已知的最有希望的三颗星球考察。 他们穿越遥远的星系银河，感受了一小时七年光阴的沧海桑田，窥见了未知星球和黑洞的壮伟与神秘。在浩瀚宇宙的绝望而孤独角落，总有一份超越了时空的笃定情怀将他们紧紧相连……",
+            "summaryStatus": "AVAILABLE",
+            "title": "星际穿越",
+            "year": 2014
+          }
+        ],
+        "directors": [
+          "克里斯托弗·诺兰"
+        ],
+        "douban_id": "1889243",
+        "douban_title": "星际穿越",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582067",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1889243/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2014,
+        "summary": "导演克里斯托弗·诺兰（《盗梦空间》、《黑暗骑士》三部曲）带来了一群先驱者执行人类历史上最重要任务的故事。奥斯卡奖得主马修·麦康纳（《达拉斯买家俱乐部》）饰演由前飞行员转行的农民库珀，他必须离开家人和日渐衰落的地球，领导一支超越本星系的远征队，去探索人类在星际间是否有未来。奥斯卡奖得主安妮·海瑟薇（《悲惨世界》）和奥斯卡奖提名者杰西卡·查斯坦（《刺杀本·拉登》）也出演了这部里程碑式的电影。",
+        "summary_original": "From director Christopher Nolan (Inception, The Dark Knight trilogy) comes the story of a team of pioneers undertaking the most important mission in human history. Academy Award®-winner Matthew McConaughey (Dallas Buyer’s Club) stars as ex-pilot-turned-farmer Cooper, who must leave his family and a foundering Earth behind to lead an expedition traveling beyond this galaxy to discover whether mankind has a future among the stars. Academy Award®-winner Anne Hathaway (Les Misérables) and Academy Award®-nominee Jessica Chastain (Zero Dark Thirty) also star in this landmark film.",
+        "summary_source_hash": "ec75a0c7ce3a698ed9db0dae15ed881c32e6f0f2ea7e382afa6b612e0f9d5ebf",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/interstellar/umc.cmc.1vrwat5k1ucm5k42q97ioqyq3"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "星际穿越",
+        "watchUrl": "https://tv.apple.com/us/movie/interstellar/umc.cmc.1vrwat5k1ucm5k42q97ioqyq3"
+      }
+    },
+    "umc.cmc.1akqb9p1qgiwuigy5xm63wdf2": {
+      "en": "Julie & Julia",
+      "kind": "movie",
+      "year": "2009",
+      "verifiedZh": {
+        "_identityYear": 2009,
+        "actors": [
+          "梅丽尔·斯特里普",
+          "艾米·亚当斯",
+          "斯坦利·图齐",
+          "克里斯·梅西纳",
+          "琳达·埃蒙德",
+          "海伦·凯莉",
+          "玛丽·莱恩·莱杰斯库",
+          "简·林奇"
+        ],
+        "aliases": [
+          "朱莉与朱莉娅",
+          "朱丽与朱丽娅",
+          "茱莉对茱莉亚",
+          "茱莉与朱丽叶",
+          "美味厨神"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:36+00:00",
+          "originalTitle": "Julie & Julia",
+          "rating": 8.1,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/2996640/",
+          "subjectId": "2996640",
+          "summary": "对工作感到灰心沮丧的曼哈顿下城发展公司员工茱莉•鲍威尔（艾美·亚当斯Amy Adams 饰）决定用一年时间实践美国最受欢迎的电视名厨茱莉亚•切尔德（梅丽尔•斯特里普 Meryl Streep 饰）第一本食谱《精通法国烹饪的艺术》中的全部524道菜，并写博客记录每日进展。与此同时，电影平行穿插茱莉亚•切尔德随美国新闻署任职的丈夫保罗•切尔德（斯坦利•塔奇 Stanley Tucci 饰）于1948年来到法国巴黎居住，学习烹饪，并历经十年艰辛出版厚达七百多页的《精通法国烹饪的艺术》过程。茱莉•鲍威尔在模仿茱莉亚•切尔德的历程中终于找到了自我，而随着博客浏览量的增加，就连茱莉亚本人也得知了茱莉的存在，但结果却在茱莉意料之外。",
+          "summaryStatus": "AVAILABLE",
+          "title": "朱莉与朱莉娅",
+          "year": 2009
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:36+00:00",
+            "originalTitle": "Julie & Julia",
+            "rating": 8.1,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/2996640/",
+            "subjectId": "2996640",
+            "summary": "对工作感到灰心沮丧的曼哈顿下城发展公司员工茱莉•鲍威尔（艾美·亚当斯Amy Adams 饰）决定用一年时间实践美国最受欢迎的电视名厨茱莉亚•切尔德（梅丽尔•斯特里普 Meryl Streep 饰）第一本食谱《精通法国烹饪的艺术》中的全部524道菜，并写博客记录每日进展。与此同时，电影平行穿插茱莉亚•切尔德随美国新闻署任职的丈夫保罗•切尔德（斯坦利•塔奇 Stanley Tucci 饰）于1948年来到法国巴黎居住，学习烹饪，并历经十年艰辛出版厚达七百多页的《精通法国烹饪的艺术》过程。茱莉•鲍威尔在模仿茱莉亚•切尔德的历程中终于找到了自我，而随着博客浏览量的增加，就连茱莉亚本人也得知了茱莉的存在，但结果却在茱莉意料之外。",
+            "summaryStatus": "AVAILABLE",
+            "title": "朱莉与朱莉娅",
+            "year": 2009
+          }
+        ],
+        "directors": [
+          "诺拉·艾芙隆"
+        ],
+        "douban_id": "2996640",
+        "douban_title": "朱莉与朱莉娅",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582076",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/2996640/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2009,
+        "summary": "一位烹饪传奇人物在《朱莉与朱莉娅》中为一名沮丧的上班族提供了一份新的生活秘方，这是一部真实的故事，讲述了朱莉娅·查尔德（梅丽尔·斯特里普饰）的生活和食谱如何激励初出茅庐的作家朱莉·鲍威尔（艾米·亚当斯饰）在365天内完成了524道食谱，并将法国烹饪的魅力介绍给新一代人。斯坦利·图齐（《穿普拉达的女王》）联合主演了导演诺拉·埃夫隆这部关于快乐、痴迷和黄油的美味喜剧。请慢用！",
+        "summary_original": "A culinary legend provides a frustrated office worker with a new recipe for life in Julie & Julia, the true stories of how Julia Child's (Meryl Streep) life and cookbook inspired fledgling writer Julie Powell (Amy Adams) to whip up 524 recipes in 365 days and introduce a new generation to the magic of French cooking. Stanley Tucci (The Devil Wears Prada) co-stars in director Nora Ephron's delicious comedy about joy, obsession and butter. Bon appétit!",
+        "summary_source_hash": "f70306222cccd90900802acd13fd261280c223ec6150f78831aebaae0fa617d1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/julie--julia/umc.cmc.1akqb9p1qgiwuigy5xm63wdf2"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "朱莉与朱莉娅",
+        "watchUrl": "https://tv.apple.com/us/movie/julie--julia/umc.cmc.1akqb9p1qgiwuigy5xm63wdf2"
+      }
+    },
+    "umc.cmc.4e8pvt0eezl2rnq71x4nx3atn": {
+      "en": "Minority Report",
+      "kind": "movie",
+      "year": "2002",
+      "verifiedZh": {
+        "_identityYear": 2002,
+        "actors": [
+          "汤姆·克鲁斯",
+          "科林·法瑞尔",
+          "马克斯·冯·叙多夫",
+          "萨曼莎·莫顿",
+          "凯瑟琳·莫里斯"
+        ],
+        "aliases": [
+          "少数派报告"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:45+00:00",
+          "originalTitle": "Minority Report",
+          "rating": 7.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1297689/",
+          "subjectId": "1297689",
+          "summary": "随着科技的发展，人类发明了能侦察人的脑电波的“聪明”的机器人――“先知”。“先知”能侦察出人的犯罪企图，所以在罪犯犯罪之前，就已经被犯罪预防组织的警察逮捕并获刑。 乔恩（汤姆•克鲁斯 Tom Cruise 饰）就是犯罪预防组织的一个主管。在一次通过“先知”成功阻止了一起因外遇引起的双人命案之后，乔恩隐约感到了这一套完美的预防犯罪系统中隐含的秘密，那就是少数派报告。原来，共有三个“先知”一起判定一个人是否有杀人企图。当出现分歧时，按少数服从多数原则定案，但最后若证明少数那一方是正确的话，则会秘密保存一份少数派报告。 乔恩一觉醒来，突然发现自己已是昔日同事的抓捕对象。乔恩唯一的出路就是找到能证明自己清白的那份少数派报告……",
+          "summaryStatus": "AVAILABLE",
+          "title": "少数派报告",
+          "year": 2002
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:45+00:00",
+            "originalTitle": "Minority Report",
+            "rating": 7.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1297689/",
+            "subjectId": "1297689",
+            "summary": "随着科技的发展，人类发明了能侦察人的脑电波的“聪明”的机器人――“先知”。“先知”能侦察出人的犯罪企图，所以在罪犯犯罪之前，就已经被犯罪预防组织的警察逮捕并获刑。 乔恩（汤姆•克鲁斯 Tom Cruise 饰）就是犯罪预防组织的一个主管。在一次通过“先知”成功阻止了一起因外遇引起的双人命案之后，乔恩隐约感到了这一套完美的预防犯罪系统中隐含的秘密，那就是少数派报告。原来，共有三个“先知”一起判定一个人是否有杀人企图。当出现分歧时，按少数服从多数原则定案，但最后若证明少数那一方是正确的话，则会秘密保存一份少数派报告。 乔恩一觉醒来，突然发现自己已是昔日同事的抓捕对象。乔恩唯一的出路就是找到能证明自己清白的那份少数派报告……",
+            "summaryStatus": "AVAILABLE",
+            "title": "少数派报告",
+            "year": 2002
+          }
+        ],
+        "directors": [
+          "史蒂文·斯皮尔伯格"
+        ],
+        "douban_id": "1297689",
+        "douban_title": "少数派报告",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582085",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1297689/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2002,
+        "summary": "在未来，一个特殊的警察部门能够在谋杀犯实施犯罪之前将其逮捕，而该部门的一名警官却被指控将犯下未来的谋杀罪。",
+        "summary_original": "In a future where a special police unit is able to arrest murderers before they commit the crime, an officer from that unit is himself accused of a future murder.",
+        "summary_source_hash": "7c0da2ade21986a973a2005e7a1e9d91844239dc530af5f8bfa41b67cc047586",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/minority-report/umc.cmc.4e8pvt0eezl2rnq71x4nx3atn"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "少数派报告",
+        "watchUrl": "https://tv.apple.com/us/movie/minority-report/umc.cmc.4e8pvt0eezl2rnq71x4nx3atn"
+      }
+    },
+    "umc.cmc.7fxny3aaxgkm020pguu5gmxaw": {
+      "en": "Prisoners",
+      "kind": "movie",
+      "year": "2013",
+      "verifiedZh": {
+        "_identityYear": 2013,
+        "actors": [
+          "休·杰克曼",
+          "杰克·吉伦哈尔",
+          "维奥拉·戴维斯",
+          "玛丽亚·贝罗",
+          "泰伦斯·霍华德",
+          "梅丽莎·里奥",
+          "保罗·达诺",
+          "迪兰·明奈特",
+          "艾琳·格拉西莫维奇",
+          "韦恩·杜瓦尔",
+          "兰·卡琉",
+          "大卫·达斯马齐连",
+          "布拉德·詹姆斯",
+          "安东尼·雷诺兹"
+        ],
+        "aliases": [
+          "囚徒"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:14:54+00:00",
+          "originalTitle": "Prisoners",
+          "rating": 8.1,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/3592859/",
+          "subjectId": "3592859",
+          "summary": "凯勒（休·杰克曼 Hugh Jackman 饰）是一名木匠，一次意外中，他的女儿安娜（艾琳·格拉西莫维奇 Erin Gerasimovich 饰）同小伙伴乔伊（凯拉·德鲁·西蒙斯 Kyla Drew Simmons 饰）一起莫名失踪。对于女儿遭遇的不测，心急如焚的凯勒向警方寻求帮助，很快，案件的负责人洛基（杰克·吉伦哈尔 Jake Gyllenhaal 饰）就将目标锁定在了一位名叫艾利克斯（保罗·达诺 Paul Dano 饰）的男子身上。 不幸的是，由于证据不足，警方不得不在四十八小时之后释放了艾利克斯，对警方失望透顶的凯勒决定靠自己的力量寻找女儿的踪迹。经验丰富的凯勒亲手捉住了艾利克斯，他希望能够通过武力获取关于女儿的讯息。安娜和乔伊最终能够获救吗？坚称自己无辜的艾利克斯又是否真的就是罪魁祸首呢？",
+          "summaryStatus": "AVAILABLE",
+          "title": "囚徒",
+          "year": 2013
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:14:54+00:00",
+            "originalTitle": "Prisoners",
+            "rating": 8.1,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/3592859/",
+            "subjectId": "3592859",
+            "summary": "凯勒（休·杰克曼 Hugh Jackman 饰）是一名木匠，一次意外中，他的女儿安娜（艾琳·格拉西莫维奇 Erin Gerasimovich 饰）同小伙伴乔伊（凯拉·德鲁·西蒙斯 Kyla Drew Simmons 饰）一起莫名失踪。对于女儿遭遇的不测，心急如焚的凯勒向警方寻求帮助，很快，案件的负责人洛基（杰克·吉伦哈尔 Jake Gyllenhaal 饰）就将目标锁定在了一位名叫艾利克斯（保罗·达诺 Paul Dano 饰）的男子身上。 不幸的是，由于证据不足，警方不得不在四十八小时之后释放了艾利克斯，对警方失望透顶的凯勒决定靠自己的力量寻找女儿的踪迹。经验丰富的凯勒亲手捉住了艾利克斯，他希望能够通过武力获取关于女儿的讯息。安娜和乔伊最终能够获救吗？坚称自己无辜的艾利克斯又是否真的就是罪魁祸首呢？",
+            "summaryStatus": "AVAILABLE",
+            "title": "囚徒",
+            "year": 2013
+          }
+        ],
+        "directors": [
+          "丹尼斯·维伦纽瓦"
+        ],
+        "douban_id": "3592859",
+        "douban_title": "囚徒",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582094",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/3592859/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2013,
+        "summary": "为了保护家人，你能走多远？凯勒·多福（休·杰克曼饰）正面临着每个父母最可怕的噩梦。他六岁的女儿安娜和她的小朋友乔伊失踪了，随着时间一分一秒过去，恐慌开始蔓延。最好的线索是一辆之前停在她家街道上的破旧房车。负责调查的洛基警探（杰克·吉伦哈尔）逮捕了司机亚历克斯·琼斯（保罗·达诺），但由于缺乏证据被迫将其释放。",
+        "summary_original": "How far would you go to protect your family? Keller Dover (Hugh Jackman) is facing every parent's worst nightmare. His six-year-old daughter, Anna, is missing, together with her young friend, Joy, and as minutes turn to hours, panic sets in. The best lead is a dilapidated RV that had earlier been parked on their street. Heading the investigation, Detective Loki (Jake Gyllenhaal) arrests its driver, Alex Jones (Paul Dano), but a lack of evidence forces his release.",
+        "summary_source_hash": "fcb75b6ef8157848286ba2167b43515a56a4f73131c69224856ee1baf1f9c136",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/prisoners/umc.cmc.7fxny3aaxgkm020pguu5gmxaw"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "囚徒",
+        "watchUrl": "https://tv.apple.com/us/movie/prisoners/umc.cmc.7fxny3aaxgkm020pguu5gmxaw"
+      }
+    },
+    "umc.cmc.1hfvw2p79f9qdeydow8nmrn7t": {
+      "en": "Pulp Fiction",
+      "kind": "movie",
+      "year": "1994",
+      "verifiedZh": {
+        "_identityYear": 1994,
+        "actors": [
+          "约翰·特拉沃尔塔",
+          "乌玛·瑟曼",
+          "阿曼达·普拉莫",
+          "蒂姆·罗斯",
+          "塞缪尔·杰克逊",
+          "菲尔·拉马",
+          "布鲁斯·威利斯",
+          "弗兰克·威利",
+          "布尔·斯蒂尔斯",
+          "文·瑞姆斯",
+          "劳拉·拉芙蕾丝",
+          "保罗·卡尔德龙",
+          "布罗娜·加拉赫",
+          "罗姗娜·阿奎特",
+          "埃里克·斯托尔兹",
+          "玛丽亚·德·梅黛洛"
+        ],
+        "aliases": [
+          "低俗小说",
+          "黑色追击令",
+          "低级趣味小说"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:15:03+00:00",
+          "originalTitle": "Pulp Fiction",
+          "rating": 8.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1291832/",
+          "subjectId": "1291832",
+          "summary": "《低俗小说》由“文森特和马沙的妻子”、“金表”、“邦妮的处境”三个故事以及影片首尾的序幕和尾声五个部分组成。看似独立的小故事里面，却又有环环相扣的人和事。 盗贼“小南瓜”和“小兔子”在早餐店里打劫，却遇上了天大的麻烦——黑社会成员朱尔斯（塞缪尔•杰克逊Samuel L. Jackson饰）和文森特（约翰•特拉沃尔塔John Travolta饰）在店内用餐，可谓天外有天。二人是否会放过两名小盗贼？ 而文森特是黑社会大哥马沙•华莱士（文•瑞姆斯Ving Rhames饰）的手下，马沙下命令让他陪妻子一个晚上，明知如有雷池必死无疑，但面对马沙妻子美艳诱惑，文森特该怎么办。 文森特的故事还没完，拳击手布奇（布鲁斯•威利斯Bruce Willis饰）的出现将令他的人生从此改变。布奇有一块祖传金表，就是因为这块金表，他和马沙分享了一个耻辱的秘密。 故事环状结构，回到开端。朱尔斯在小盗贼面前诵读圣经，表示对杀人的厌倦和感悟。什么事件令他如此转变？“邦妮的处境”中就有答案。",
+          "summaryStatus": "AVAILABLE",
+          "title": "低俗小说",
+          "year": 1994
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:15:03+00:00",
+            "originalTitle": "Pulp Fiction",
+            "rating": 8.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1291832/",
+            "subjectId": "1291832",
+            "summary": "《低俗小说》由“文森特和马沙的妻子”、“金表”、“邦妮的处境”三个故事以及影片首尾的序幕和尾声五个部分组成。看似独立的小故事里面，却又有环环相扣的人和事。 盗贼“小南瓜”和“小兔子”在早餐店里打劫，却遇上了天大的麻烦——黑社会成员朱尔斯（塞缪尔•杰克逊Samuel L. Jackson饰）和文森特（约翰•特拉沃尔塔John Travolta饰）在店内用餐，可谓天外有天。二人是否会放过两名小盗贼？ 而文森特是黑社会大哥马沙•华莱士（文•瑞姆斯Ving Rhames饰）的手下，马沙下命令让他陪妻子一个晚上，明知如有雷池必死无疑，但面对马沙妻子美艳诱惑，文森特该怎么办。 文森特的故事还没完，拳击手布奇（布鲁斯•威利斯Bruce Willis饰）的出现将令他的人生从此改变。布奇有一块祖传金表，就是因为这块金表，他和马沙分享了一个耻辱的秘密。 故事环状结构，回到开端。朱尔斯在小盗贼面前诵读圣经，表示对杀人的厌倦和感悟。什么事件令他如此转变？“邦妮的处境”中就有答案。",
+            "summaryStatus": "AVAILABLE",
+            "title": "低俗小说",
+            "year": 1994
+          }
+        ],
+        "directors": [
+          "昆汀·塔伦蒂诺"
+        ],
+        "douban_id": "1291832",
+        "douban_title": "低俗小说",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582103",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1291832/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1994,
+        "summary": "文森特·维加（约翰·特拉沃尔塔饰）和朱尔斯·温菲尔德（塞缪尔·L·杰克逊饰）是一对喜欢讨论哲学的杀手。在这部极具时代酷感的多线索犯罪电影中，他们的故事与他们的老板、黑帮老大马塞尔斯·华莱士（文·瑞姆斯饰），他的演员妻子米娅（乌玛·瑟曼饰），苦苦挣扎的拳击手布奇·柯立芝（布鲁斯·威利斯饰），资深善后专家温斯顿·沃尔夫（哈威·凯特尔饰）以及一对紧张兮兮的持枪劫匪“南瓜”（蒂姆·罗斯饰）和“小兔子”（阿曼达·普拉莫饰）的故事交织在一起。",
+        "summary_original": "Vincent Vega (John Travolta) and Jules Winnfield (Samuel L. Jackson) are hitmen with a penchant for philosophical discussions. In this ultra-hip, multi-strand crime movie, their storyline is interwoven with those of their boss, gangster Marsellus Wallace (Ving Rhames) ; his actress wife, Mia (Uma Thurman) ; struggling boxer Butch Coolidge (Bruce Willis) ; master fixer Winston Wolfe (Harvey Keitel) and a nervous pair of armed robbers, \"Pumpkin\" (Tim Roth) and \"Honey Bunny\" (Amanda Plummer).",
+        "summary_source_hash": "6c73456765b681d9369e41374cd3d7d1fa83907f5b1a4bf6883e0d7f6789cf3a",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/pulp-fiction/umc.cmc.1hfvw2p79f9qdeydow8nmrn7t"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "低俗小说",
+        "watchUrl": "https://tv.apple.com/us/movie/pulp-fiction/umc.cmc.1hfvw2p79f9qdeydow8nmrn7t"
+      }
+    },
+    "umc.cmc.1yzqh3cqb681zufb495p6kzzr": {
+      "en": "Rachel Getting Married",
+      "kind": "movie",
+      "year": "2008",
+      "verifiedZh": {
+        "_identityYear": 2008,
+        "actors": [
+          "塞巴斯蒂安·斯坦",
+          "安妮·海瑟薇",
+          "比尔·欧文",
+          "安娜·迪佛·史密斯",
+          "安娜莱吉·阿什福特",
+          "罗丝玛丽·德薇特",
+          "维多利亚·海恩斯",
+          "马瑟·泽科尔",
+          "达雷尔·拉森"
+        ],
+        "aliases": [
+          "蕾切尔的婚礼",
+          "爱与痛的嫁期",
+          "瑞秋要出嫁",
+          "姐姐的婚礼"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:15:08+00:00",
+          "originalTitle": "Rachel Getting Married",
+          "rating": 6.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/2267369/",
+          "subjectId": "2267369",
+          "summary": "在康复中心戒毒治疗的金茉（安妮•海瑟薇 Anne Hathaway饰），因为姐姐蕾切尔（罗丝玛丽•德薇特 Rosemarie DeWitt 饰）即将举行婚礼，被父亲保罗（比尔•欧文 Bill Irwin 饰）接回了家。但她还是要定期去参加瘾君子互助会活动。巧的是，她发现姐夫的伴郎基兰（玛德•奇科尔 Mather Zickel 饰）竟然也是互助会成员，同命相怜的两人倍感亲近。 在交流中，金茉得知伴娘不是自己，勃然大怒。经过一番争取，蕾切尔最终还是同意金茉出任伴娘。但是，这次妥协并没未让姐妹重修旧好。金茉不合时宜的“道歉计划”让整个家庭陷入了矛盾之中，只有父亲始终细心维护着她。在一次争吵中，姐姐蕾切尔提及早年弟弟车祸死亡之事，这让金茉内心的负罪感愈加沉重，并导致她与母亲艾比（德博拉•温格 Debra Winger 饰）大打出手……",
+          "summaryStatus": "AVAILABLE",
+          "title": "蕾切尔的婚礼",
+          "year": 2008
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:15:08+00:00",
+            "originalTitle": "Rachel Getting Married",
+            "rating": 6.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/2267369/",
+            "subjectId": "2267369",
+            "summary": "在康复中心戒毒治疗的金茉（安妮•海瑟薇 Anne Hathaway饰），因为姐姐蕾切尔（罗丝玛丽•德薇特 Rosemarie DeWitt 饰）即将举行婚礼，被父亲保罗（比尔•欧文 Bill Irwin 饰）接回了家。但她还是要定期去参加瘾君子互助会活动。巧的是，她发现姐夫的伴郎基兰（玛德•奇科尔 Mather Zickel 饰）竟然也是互助会成员，同命相怜的两人倍感亲近。 在交流中，金茉得知伴娘不是自己，勃然大怒。经过一番争取，蕾切尔最终还是同意金茉出任伴娘。但是，这次妥协并没未让姐妹重修旧好。金茉不合时宜的“道歉计划”让整个家庭陷入了矛盾之中，只有父亲始终细心维护着她。在一次争吵中，姐姐蕾切尔提及早年弟弟车祸死亡之事，这让金茉内心的负罪感愈加沉重，并导致她与母亲艾比（德博拉•温格 Debra Winger 饰）大打出手……",
+            "summaryStatus": "AVAILABLE",
+            "title": "蕾切尔的婚礼",
+            "year": 2008
+          }
+        ],
+        "directors": [
+          "乔纳森·戴米"
+        ],
+        "douban_id": "2267369",
+        "douban_title": "蕾切尔的婚礼",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582108",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/2267369/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2008,
+        "summary": "一个在过去10年里反复进出戒毒所的年轻女子为了参加妹妹的婚礼，回家度周末。",
+        "summary_original": "A young woman who has been in and out from rehab for the past 10 years returns home for the weekend for her sister's wedding.",
+        "summary_source_hash": "1f898fae8d4d22383527907f61cd5172215d4cb8fad45a5f629e4e5d1455cd9d",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/rachel-getting-married/umc.cmc.1yzqh3cqb681zufb495p6kzzr"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "蕾切尔的婚礼",
+        "watchUrl": "https://tv.apple.com/us/movie/rachel-getting-married/umc.cmc.1yzqh3cqb681zufb495p6kzzr"
+      }
+    },
+    "umc.cmc.4cv94ek82vqrruz5yhv52ss3f": {
+      "en": "Talladega Nights: The Ballad of Ricky Bobby",
+      "kind": "movie",
+      "year": "2006",
+      "verifiedZh": {
+        "_identityYear": 2006,
+        "actors": [
+          "威尔·法瑞尔",
+          "约翰·C·赖利",
+          "萨莎·拜伦·科恩",
+          "盖瑞·科尔",
+          "迈克·克拉克·邓肯",
+          "莱丝莉·比伯",
+          "简·林奇",
+          "艾米·亚当斯",
+          "安迪·里克特",
+          "莫莉·香侬",
+          "格雷格·格曼",
+          "大卫·科恩查内",
+          "杰克·麦克布瑞尔",
+          "伊恩·罗伯茨",
+          "帕特·亨格尔",
+          "Jake Johnson",
+          "杰森·戴维斯",
+          "Austin Crim",
+          "亚当·麦凯",
+          "小戴尔·恩哈特",
+          "休斯顿·图姆林",
+          "格雷森·拉塞尔",
+          "特德·曼森",
+          "丹尼·文森",
+          "Mike Joy",
+          "Larry McReynolds",
+          "达雷尔·沃尔特里普",
+          "Jamie McMurray",
+          "罗伯·里格尔",
+          "皮特·布里斯"
+        ],
+        "aliases": [
+          "塔拉德加之夜",
+          "王牌飙风",
+          "绝世车王",
+          "塔拉迪加之夜：瑞奇·鲍比之歌"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:15:12+00:00",
+          "originalTitle": "Talladega Nights: The Ballad of Ricky Bobby",
+          "rating": 6.4,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1796824/",
+          "subjectId": "1796824",
+          "summary": "瑞奇•鲍比（威尔•法瑞尔 Will Ferrell 饰）的赛车手父亲在他幼年时便宣告失踪，父亲临走前“不是第一，便是最后”的宣言一直陪伴着瑞奇和死党卡尔（约翰•C•赖利 John C. Reilly 饰），成年后的瑞奇与卡尔双双进入丹尼特车队担任维修人员，一次在塔拉德加的比赛中，赛车手因畏惧故障选择退出，救场的瑞奇展示了强大的驾驶技术夺得第三名一举成名，自此和卡尔转为赛车手为车队出战，出色的成绩令瑞奇名利双收，抱得娇妻，好友卡尔则忠心耿耿担任绿叶为他扫清赛道，不可一世的瑞奇很快遭到了队友的挑战——来自法国的F1车手让•杰拉德，杰拉德彻底击败瑞奇令其一蹶不振，正当丧失了一切的瑞奇心灰意懒时，失踪多年的父亲突然出现，要帮助他夺回一切……",
+          "summaryStatus": "AVAILABLE",
+          "title": "塔拉德加之夜",
+          "year": 2006
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:15:12+00:00",
+            "originalTitle": "Talladega Nights: The Ballad of Ricky Bobby",
+            "rating": 6.4,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1796824/",
+            "subjectId": "1796824",
+            "summary": "瑞奇•鲍比（威尔•法瑞尔 Will Ferrell 饰）的赛车手父亲在他幼年时便宣告失踪，父亲临走前“不是第一，便是最后”的宣言一直陪伴着瑞奇和死党卡尔（约翰•C•赖利 John C. Reilly 饰），成年后的瑞奇与卡尔双双进入丹尼特车队担任维修人员，一次在塔拉德加的比赛中，赛车手因畏惧故障选择退出，救场的瑞奇展示了强大的驾驶技术夺得第三名一举成名，自此和卡尔转为赛车手为车队出战，出色的成绩令瑞奇名利双收，抱得娇妻，好友卡尔则忠心耿耿担任绿叶为他扫清赛道，不可一世的瑞奇很快遭到了队友的挑战——来自法国的F1车手让•杰拉德，杰拉德彻底击败瑞奇令其一蹶不振，正当丧失了一切的瑞奇心灰意懒时，失踪多年的父亲突然出现，要帮助他夺回一切……",
+            "summaryStatus": "AVAILABLE",
+            "title": "塔拉德加之夜",
+            "year": 2006
+          }
+        ],
+        "directors": [
+          "亚当·麦凯"
+        ],
+        "douban_id": "1796824",
+        "douban_title": "塔拉德加之夜",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582112",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1796824/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2006,
+        "summary": "作为四轮赛车领域最快的人，瑞奇·鲍比（威尔·法瑞尔 饰）是NASCAR历史上最伟大的车手之一。瑞奇是一个身材魁梧、毛发浓密、战绩辉煌的美国车手，他拥有一个头脑简单的亡命之徒所能渴望的一切：一座豪华宅邸、一个性感火辣的妻子（莱丝莉·比伯 饰）以及吃不完的快餐。然而，当瑞奇被浮夸的欧洲白痴让·日拉尔（萨莎·拜伦·科恩 饰）击败并沦为一个充满恐惧的废人时，他那涡轮增压般的生活方式遭遇了意想不到的挫折。由于妻子和工作都被最好的朋友兼另一个傻瓜卡尔·诺顿（约翰·C·赖利 饰）抢走，瑞奇必须全力以赴，才能让自己的职业生涯重回正轨、打败日拉尔并夺回他的名誉和财富。因为正如瑞奇·鲍比总是说的那样，如果你不是第一，你就是最后！",
+        "summary_original": "The fastest man on four wheels, Ricky Bobby (Will Ferrell) is one of the greatest drivers in NASCAR history. A big, hairy American winning machine, Ricky has everything a dimwitted daredevil could want, a luxurious mansion, a smokin' hot wife (Leslie Bibb) and all the fast food he can eat. But Ricky's turbo-charged lifestyle hits an unexpected speed bump when he's bested by flamboyant Euro-idiot Jean Girard (Sacha Baron Cohen, TV's \"Da Ali G Show\") and reduced to a fear-ridden wreck. Losing his wife and job to best bud and fellow fool, Cal Naughton, Jr. (John C. Reilly), Ricky must kick some serious asphalt if he's to get his career back on the track, beat Girard and reclaim his fame and fortune. 'Cause as Ricky Bobby always says, if you ain't first, you're last!",
+        "summary_source_hash": "b36b469d0807cd5967b41e40161a64d38235aed45c1bbf694d58ac0e9bd45152",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/talladega-nights-the-ballad-of-ricky-bobby/umc.cmc.4cv94ek82vqrruz5yhv52ss3f"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "塔拉德加之夜",
+        "watchUrl": "https://tv.apple.com/us/movie/talladega-nights-the-ballad-of-ricky-bobby/umc.cmc.4cv94ek82vqrruz5yhv52ss3f"
+      }
+    },
+    "umc.cmc.3d7jpq67ivm8he8ndug7lmr63": {
+      "en": "The Nice Guys",
+      "kind": "movie",
+      "year": "2016",
+      "verifiedZh": {
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "officialReleaseYear": 2016,
+        "summary": "故事设定在20世纪70年代的洛杉矶，运气不佳的私家侦探霍兰·马奇（瑞恩·高斯林饰）与受雇打手杰克逊·希利（罗素·克劳饰）必须联手调查一个失踪女孩的案件以及一名色情明星看似无关的死亡事件。在调查过程中，他们揭露了一个直达最高权力核心的惊天阴谋。",
+        "summary_original": "Set in 1970s Los Angeles, down-on-his-luck private eye Holland March (Ryan Gosling) and hired leg-breaker Jackson Healy (Russell Crowe) must work together to solve the case of a missing girl and the seemingly unrelated death of a porn star. During their investigation, they uncover a shocking conspiracy that reaches up to the highest circles of power.",
+        "summary_source_hash": "64d1f008b0f1ad7cbf1ae1cab89cdc634283fe4978cf2aae930ddbdd49506c0a",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63"
+          }
+        ],
+        "summary_status": "translated_official",
+        "watchUrl": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63",
+        "title": "耐撕侦探",
+        "aliases": [
+          "耐撕侦探",
+          "好好侦探",
+          "好伙计们",
+          "好人",
+          "好家伙们"
+        ],
+        "name_status": "verified_title_sources",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/25917787/",
+            "retrieved_at": "1793582118"
+          }
+        ],
+        "_identityYear": 2016,
+        "douban_title": "耐撕侦探",
+        "douban_id": "25917787",
+        "actors": [
+          "罗素·克劳",
+          "瑞恩·高斯林",
+          "安格瑞·赖斯",
+          "马特·波莫",
+          "玛格丽特·库里",
+          "亚雅·达科斯塔",
+          "凯斯·大卫",
+          "博·纳普",
+          "罗伊丝·史密斯",
+          "Murielle Telio",
+          "吉尔·杰拉德",
+          "黛西·塔汉",
+          "金·贝辛格",
+          "杰克·基默"
+        ],
+        "directors": [
+          "沙恩·布莱克"
+        ],
+        "detailSeasons": [
+          {
+            "schema": 1,
+            "source": "douban",
+            "subjectId": "25917787",
+            "sourceUrl": "https://movie.douban.com/subject/25917787/",
+            "title": "耐撕侦探",
+            "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+            "summaryStatus": "AVAILABLE",
+            "ratingStatus": "AVAILABLE",
+            "season": 0,
+            "year": 2016,
+            "checkedAt": "2026-11-02T01:15:18+00:00",
+            "originalTitle": "The Nice Guys",
+            "rating": 7.0
+          }
+        ],
+        "detailMetadata": {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "25917787",
+          "sourceUrl": "https://movie.douban.com/subject/25917787/",
+          "title": "耐撕侦探",
+          "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2016,
+          "checkedAt": "2026-11-02T01:15:18+00:00",
+          "originalTitle": "The Nice Guys",
+          "rating": 7.0
+        }
+      }
     }
   }
 }
