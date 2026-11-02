@@ -3502,48 +3502,7 @@
       "kind": "movie",
       "year": "1996",
       "verifiedZh": {
-        "contentRating": "R",
-        "metadataPolicy": "mainland-v1",
-        "officialReleaseYear": 1996,
-        "summary": "科尔（布鲁斯·威利斯 饰）被送回过去，以拯救人类免受致命病毒的侵害，该病毒迫使人类在未来居住在阴暗的地下社区中。在旅途中，他遇到了一位精神病学家（玛德琳·斯托）和一个精神病人（布拉德·皮特饰，其精湛的演技令人叹为观止），后者可能掌握着解开神秘反叛组织“十二猴子军”的关键，该组织被认为是释放这场致命疾病的元凶。他坚信自己能够获得纯净的病毒样本以便在未来找到治疗方法，但他却接连遇到一个个谜题，与时间展开了一场赛跑。这部由天才导演特瑞·吉利姆打造的科幻杰作是一部现代经典之作。",
-        "summary_original": "Cole (Bruce Willis) is sent back in time to save the human race from a deadly virus that has forced mankind into dank underground communities in the future. Along his travels, he encounters a psychiatrist (Madeleine Stowe) and a mental patient, brilliantly portrayed by Brad Pitt, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease. Believing he can obtain a pure virus sample in order to find a cure in the future, he is met with one riddle after another that puts him in a race with time. This sci-fi masterpiece from the genius mind of Terry Gilliam is a modern-day classic.",
-        "summary_source_hash": "fb93d004f67e5d24d3996e0e45c09cfd941bd876605cc7bd73f9ea9c37f2ab33",
-        "summary_sources": [
-          {
-            "type": "apple_us_translation",
-            "url": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r"
-          }
-        ],
-        "summary_status": "translated_official",
-        "watchUrl": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r",
-        "title": "十二猴子",
-        "aliases": [
-          "十二猴子",
-          "12猴子",
-          "十二猴子军",
-          "十二只猴子"
-        ],
-        "name_status": "verified_title_sources",
-        "name_sources": [
-          {
-            "type": "douban_mobile_identity",
-            "url": "https://movie.douban.com/subject/1298744/",
-            "retrieved_at": "1793583393"
-          }
-        ],
         "_identityYear": 1996,
-        "douban_title": "十二猴子",
-        "douban_id": "1298744",
-        "releaseDateEvidence": {
-          "sourceUrl": "https://movie.douban.com/subject/1298744/",
-          "dates": [
-            "1995-12-08(纽约首映)",
-            "1996-01-05(美国)"
-          ],
-          "platformReleaseDate": "1996-01-05",
-          "originalYear": 1995,
-          "basis": "user_confirmed_subject_dates"
-        },
         "actors": [
           "布鲁斯·威利斯",
           "玛德琳·斯托",
@@ -3564,42 +3523,83 @@
           "乔伊佩里洛",
           "Bruce Kirkpatrick"
         ],
+        "aliases": [
+          "十二猴子",
+          "12猴子",
+          "十二猴子军",
+          "十二只猴子"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:36:33+00:00",
+          "originalTitle": "12 Monkeys",
+          "rating": 8.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1298744/",
+          "subjectId": "1298744",
+          "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
+          "summaryStatus": "AVAILABLE",
+          "title": "十二猴子",
+          "year": 1995
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:36:33+00:00",
+            "originalTitle": "12 Monkeys",
+            "rating": 8.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1298744/",
+            "subjectId": "1298744",
+            "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
+            "summaryStatus": "AVAILABLE",
+            "title": "十二猴子",
+            "year": 1995
+          }
+        ],
         "directors": [
           "特瑞·吉列姆"
         ],
-        "detailSeasons": [
+        "douban_id": "1298744",
+        "douban_title": "十二猴子",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
           {
-            "schema": 1,
-            "source": "douban",
-            "subjectId": "1298744",
-            "sourceUrl": "https://movie.douban.com/subject/1298744/",
-            "title": "十二猴子",
-            "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
-            "summaryStatus": "AVAILABLE",
-            "ratingStatus": "AVAILABLE",
-            "season": 0,
-            "year": 1995,
-            "checkedAt": "2026-11-02T01:36:33+00:00",
-            "originalTitle": "12 Monkeys",
-            "rating": 8.2
+            "retrieved_at": "1793583393",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1298744/"
           }
         ],
-        "detailMetadata": {
-          "schema": 1,
-          "source": "douban",
-          "subjectId": "1298744",
-          "sourceUrl": "https://movie.douban.com/subject/1298744/",
-          "title": "十二猴子",
-          "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE",
-          "season": 0,
-          "year": 1995,
-          "checkedAt": "2026-11-02T01:36:33+00:00",
-          "originalTitle": "12 Monkeys",
-          "rating": 8.2
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1996,
+        "releaseDateEvidence": {
+          "basis": "user_confirmed_subject_dates",
+          "dates": [
+            "1995-12-08(纽约首映)",
+            "1996-01-05(美国)"
+          ],
+          "originalYear": 1995,
+          "platformReleaseDate": "1996-01-05",
+          "sourceUrl": "https://movie.douban.com/subject/1298744/"
         },
-        "searchYear": 1995
+        "searchYear": 1995,
+        "summary": "科尔（布鲁斯·威利斯 饰）被送回过去，以拯救人类免受致命病毒的侵害，该病毒迫使人类在未来居住在阴暗的地下社区中。在旅途中，他遇到了一位精神病学家（玛德琳·斯托）和一个精神病人（布拉德·皮特饰，其精湛的演技令人叹为观止），后者可能掌握着解开神秘反叛组织“十二猴子军”的关键，该组织被认为是释放这场致命疾病的元凶。他坚信自己能够获得纯净的病毒样本以便在未来找到治疗方法，但他却接连遇到一个个谜题，与时间展开了一场赛跑。这部由天才导演特瑞·吉利姆打造的科幻杰作是一部现代经典之作。",
+        "summary_original": "Cole (Bruce Willis) is sent back in time to save the human race from a deadly virus that has forced mankind into dank underground communities in the future. Along his travels, he encounters a psychiatrist (Madeleine Stowe) and a mental patient, brilliantly portrayed by Brad Pitt, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease. Believing he can obtain a pure virus sample in order to find a cure in the future, he is met with one riddle after another that puts him in a race with time. This sci-fi masterpiece from the genius mind of Terry Gilliam is a modern-day classic.",
+        "summary_source_hash": "fb93d004f67e5d24d3996e0e45c09cfd941bd876605cc7bd73f9ea9c37f2ab33",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "十二猴子",
+        "watchUrl": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r"
       }
     }
   }
