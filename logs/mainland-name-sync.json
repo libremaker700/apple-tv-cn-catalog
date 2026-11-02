@@ -1,31 +1,605 @@
 {
   "order": [
     "douban_direct",
-    "verified_search_fallback"
+    "public_source_match",
+    "you.com_fallback",
+    "douban_or_plex_identity",
+    "public_source_match"
   ],
   "records": [
     {
-      "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
-      "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
-      "searchStatus": "douban_direct",
-      "confidence": "VERIFIED",
-      "sourcePolicy": "not_checked_name_review",
-      "detailMetadata": {
-        "season": 0,
-        "subjectId": "38535567",
-        "summaryStatus": "PENDING",
-        "ratingStatus": "NO_RATING"
+      "slug": "not-a-box",
+      "en": "Not a Box",
+      "searchStatus": "ai_candidates_then_sources_or_douban",
+      "confidence": "IDENTITY_ONLY",
+      "sourceNameResolution": {
+        "policy": "ai-answer-verified-source-or-douban-v1",
+        "aiStatus": "ok",
+        "aiService": "ydc",
+        "aiCandidates": [
+          "不是一个纸箱子",
+          "不是盒子"
+        ],
+        "aiSources": [
+          {
+            "title": "Not a Box │ 誠品線上",
+            "url": "https://www.eslite.com/product/1001294883041211"
+          },
+          {
+            "title": "敦煌網路書局 E-CAVES",
+            "url": "https://www.cavesbooks.com.tw/zh/Shop/WSP20241101100658C0U/Goods/GDS2013112704241333E"
+          },
+          {
+            "title": "Not a Box - Wikidata",
+            "url": "https://www.wikidata.org/wiki/Q7062251"
+          },
+          {
+            "title": "豆瓣各小组别称，持续收集更新中",
+            "url": "https://www.douban.com/group/topic/204035535/"
+          },
+          {
+            "title": "豆瓣 - 维基百科，自由的百科全书",
+            "url": "https://zh.wikipedia.org/wiki/%E8%B1%86%E7%93%A3"
+          },
+          {
+            "title": "能不能解释一下豆瓣各组别称（+组员全称）是什...",
+            "url": "https://www.douban.com/group/topic/163404331/"
+          },
+          {
+            "title": "游戏 - 豆瓣",
+            "url": "https://m.douban.com/game/subject/35236279/"
+          },
+          {
+            "title": "豆瓣",
+            "url": "https://m.douban.com/movie/subject/25885742/reviews"
+          }
+        ],
+        "queryNames": [
+          "不是一个盒子",
+          "不是一个纸箱子",
+          "不是盒子",
+          "Not a Box"
+        ],
+        "discoveredAliases": [],
+        "doubanTitle": "Not a Box",
+        "selectedTitle": "Not a Box",
+        "decision": "douban_fallback_no_confirmed_source",
+        "stages": [
+          "ai_candidates_source_query",
+          "bounded_keyword_discovery"
+        ]
       },
-      "title": "史努比特辑：有家真好",
+      "sourcePolicy": "ai_name_source_verification",
+      "title": "Not a Box",
       "sourceMatch": null,
-      "sourceEvents": []
+      "sourceEvents": [
+        {
+          "provider": "ff",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "ff",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hn",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "dytt",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "lz",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "gs",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "js",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "hh",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bf",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "yy",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "sb",
+          "http": 0
+        },
+        {
+          "provider": "sb",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xigua",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "xigua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "modu",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "xl",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "huya",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 0
+        },
+        {
+          "provider": "zy360",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "piaoling",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "piaoling",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 0
+        },
+        {
+          "provider": "iqy",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 0
+        },
+        {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 0
+        },
+        {
+          "provider": "zuida",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ruyi",
+          "http": 0,
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ruyi",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 0
+        },
+        {
+          "provider": "jiji",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "uku",
+          "http": 0
+        },
+        {
+          "provider": "uku",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 0
+        },
+        {
+          "provider": "ikun",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shenhua",
+          "http": 451,
+          "reason": "http"
+        },
+        {
+          "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "bblue",
+          "http": 451,
+          "reason": "http"
+        },
+        {
+          "provider": "bblue",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 0
+        },
+        {
+          "provider": "changzhang",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "shared",
+          "http": 0,
+          "reason": "deadline"
+        },
+        {
+          "provider": "shared",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 1,
+          "identityRecords": 0,
+          "routes": 1
+        },
+        {
+          "provider": "ff",
+          "reason": "http"
+        },
+        {
+          "provider": "hn",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "lz",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "jy",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "gs",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "bd",
+          "reason": "http"
+        },
+        {
+          "provider": "dytt",
+          "reason": "http"
+        },
+        {
+          "provider": "bf",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "js",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "hh",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "sb",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "xl",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "yy",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "zy360",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "huya",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "xigua",
+          "reason": "http"
+        },
+        {
+          "provider": "modu",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "zzoc",
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "reason": "http"
+        },
+        {
+          "provider": "iqy",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "wujin",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "zuida",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "piaoling",
+          "reason": "http"
+        },
+        {
+          "provider": "maoyan",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "jiji",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "uku",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "ruyi",
+          "reason": "invalid_response"
+        },
+        {
+          "provider": "ikun",
+          "reason": "page_limit"
+        },
+        {
+          "provider": "changzhang",
+          "reason": "transport"
+        },
+        {
+          "provider": "shared",
+          "reason": "session_or_api_rejected"
+        },
+        {
+          "provider": "ikanbot",
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "shenhua",
+          "reason": "http"
+        },
+        {
+          "provider": "bblue",
+          "reason": "http"
+        }
+      ],
+      "identityVerifiedWithoutChineseName": true,
+      "verifiedIdentity": {
+        "douban_id": "37374251",
+        "title": "Not a Box",
+        "originalTitle": "",
+        "aliases": [],
+        "year": "2025",
+        "season": 1,
+        "actors": [
+          "伊恩·詹姆斯·柯莱特",
+          "伊莎贝尔·伯奇"
+        ],
+        "directors": [],
+        "url": "https://movie.douban.com/subject/37374251/"
+      }
     }
   ],
   "changed": [
-    "snoopy-presents-theres-no-place-like-home-snoopy"
+    "not-a-box"
   ],
   "geminiUsed": false,
-  "namesOnly": true,
-  "accounts": [],
-  "reservedThisMonth": 155
+  "namesOnly": false,
+  "accounts": [
+    {
+      "service": "ydc",
+      "account": "YDC_API_KEYI_1",
+      "stage": "candidate_answer",
+      "http": 200,
+      "reason": "http"
+    }
+  ],
+  "reservedThisMonth": 156
 }

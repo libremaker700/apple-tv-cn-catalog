@@ -779,20 +779,592 @@
       "discovery": {}
     },
     "not-a-box": {
-      "checkedAt": 1793586182,
-      "nextRetry": 1793672582,
+      "checkedAt": 1793589643,
+      "nextRetry": 1793676043,
       "result": {
         "slug": "not-a-box",
         "en": "Not a Box",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "魔盒",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "IDENTITY_ONLY",
+        "sourceNameResolution": {
+          "policy": "ai-answer-verified-source-or-douban-v1",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "不是一个纸箱子",
+            "不是盒子"
+          ],
+          "aiSources": [
+            {
+              "title": "Not a Box │ 誠品線上",
+              "url": "https://www.eslite.com/product/1001294883041211"
+            },
+            {
+              "title": "敦煌網路書局 E-CAVES",
+              "url": "https://www.cavesbooks.com.tw/zh/Shop/WSP20241101100658C0U/Goods/GDS2013112704241333E"
+            },
+            {
+              "title": "Not a Box - Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q7062251"
+            },
+            {
+              "title": "豆瓣各小组别称，持续收集更新中",
+              "url": "https://www.douban.com/group/topic/204035535/"
+            },
+            {
+              "title": "豆瓣 - 维基百科，自由的百科全书",
+              "url": "https://zh.wikipedia.org/wiki/%E8%B1%86%E7%93%A3"
+            },
+            {
+              "title": "能不能解释一下豆瓣各组别称（+组员全称）是什...",
+              "url": "https://www.douban.com/group/topic/163404331/"
+            },
+            {
+              "title": "游戏 - 豆瓣",
+              "url": "https://m.douban.com/game/subject/35236279/"
+            },
+            {
+              "title": "豆瓣",
+              "url": "https://m.douban.com/movie/subject/25885742/reviews"
+            }
+          ],
+          "queryNames": [
+            "不是一个盒子",
+            "不是一个纸箱子",
+            "不是盒子",
+            "Not a Box"
+          ],
+          "discoveredAliases": [],
+          "doubanTitle": "Not a Box",
+          "selectedTitle": "Not a Box",
+          "decision": "douban_fallback_no_confirmed_source",
+          "stages": [
+            "ai_candidates_source_query",
+            "bounded_keyword_discovery"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "title": "Not a Box",
         "sourceMatch": null,
-        "sourceEvents": []
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 451,
+            "reason": "http"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 451,
+            "reason": "http"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 0,
+            "routes": 1
+          },
+          {
+            "provider": "ff",
+            "reason": "http"
+          },
+          {
+            "provider": "hn",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "lz",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jy",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "gs",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "bd",
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "reason": "http"
+          },
+          {
+            "provider": "bf",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "js",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "hh",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "sb",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xl",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "yy",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "zy360",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "huya",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xigua",
+            "reason": "http"
+          },
+          {
+            "provider": "modu",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "zzoc",
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "reason": "http"
+          },
+          {
+            "provider": "iqy",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "wujin",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "zuida",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "piaoling",
+            "reason": "http"
+          },
+          {
+            "provider": "maoyan",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jiji",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "uku",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "ruyi",
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ikun",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "changzhang",
+            "reason": "transport"
+          },
+          {
+            "provider": "shared",
+            "reason": "session_or_api_rejected"
+          },
+          {
+            "provider": "ikanbot",
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shenhua",
+            "reason": "http"
+          },
+          {
+            "provider": "bblue",
+            "reason": "http"
+          }
+        ],
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "37374251",
+          "title": "Not a Box",
+          "originalTitle": "",
+          "aliases": [],
+          "year": "2025",
+          "season": 1,
+          "actors": [
+            "伊恩·詹姆斯·柯莱特",
+            "伊莎贝尔·伯奇"
+          ],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/37374251/"
+        }
       },
       "identity": {
         "douban_id": "37374251",
+        "title": "Not a Box",
+        "originalTitle": "",
+        "aliases": [],
         "year": "2025",
         "season": 1,
         "actors": [
@@ -1091,7 +1663,438 @@
           "done": true
         },
         "_hintPolicy": "ydc-tavily-v1",
-        "_hints": []
+        "_hints": [],
+        "aiSourceNames": {
+          "key": "6809e88a5cdbb2a2ed45d9a6d5612b9afe49775f6ccd98bbc688fa808d659ed0",
+          "answer": {
+            "names": [
+              "不是一个纸箱子",
+              "不是盒子"
+            ],
+            "sources": [
+              {
+                "title": "Not a Box │ 誠品線上",
+                "url": "https://www.eslite.com/product/1001294883041211"
+              },
+              {
+                "title": "敦煌網路書局 E-CAVES",
+                "url": "https://www.cavesbooks.com.tw/zh/Shop/WSP20241101100658C0U/Goods/GDS2013112704241333E"
+              },
+              {
+                "title": "Not a Box - Wikidata",
+                "url": "https://www.wikidata.org/wiki/Q7062251"
+              },
+              {
+                "title": "豆瓣各小组别称，持续收集更新中",
+                "url": "https://www.douban.com/group/topic/204035535/"
+              },
+              {
+                "title": "豆瓣 - 维基百科，自由的百科全书",
+                "url": "https://zh.wikipedia.org/wiki/%E8%B1%86%E7%93%A3"
+              },
+              {
+                "title": "能不能解释一下豆瓣各组别称（+组员全称）是什...",
+                "url": "https://www.douban.com/group/topic/163404331/"
+              },
+              {
+                "title": "游戏 - 豆瓣",
+                "url": "https://m.douban.com/game/subject/35236279/"
+              },
+              {
+                "title": "豆瓣",
+                "url": "https://m.douban.com/movie/subject/25885742/reviews"
+              }
+            ],
+            "status": "ok",
+            "service": "ydc"
+          },
+          "expiresAt": 1794194443,
+          "discovery": {
+            "ff": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "hn": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "lz": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 4,
+              "offset": 0,
+              "done": false
+            },
+            "jy": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "gs": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "bd": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "dytt": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "bf": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 4,
+              "offset": 0,
+              "done": false
+            },
+            "js": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "hh": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "sb": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "xl": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "yy": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "zy360": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "huya": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "xigua": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "modu": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "zzoc": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "5o5k": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "iqy": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "wujin": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "zuida": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "piaoling": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "maoyan": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "jiji": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "uku": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "ruyi": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "ikun": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "changzhang": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0
+            },
+            "shared": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 3
+            },
+            "ikanbot": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 1
+            },
+            "shenhua": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "bblue": {
+              "queries": [
+                "Not a Box",
+                "不是一个盒子",
+                "盒子",
+                "不是一个纸箱子"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            }
+          }
+        }
       }
     },
     "maximum-pleasure-guaranteed": {
@@ -4615,6 +5618,6 @@
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 155
+    "2026-11": 156
   }
 }
