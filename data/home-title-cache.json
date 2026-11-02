@@ -3411,39 +3411,7 @@
       "kind": "movie",
       "year": "2016",
       "verifiedZh": {
-        "contentRating": "R",
-        "metadataPolicy": "mainland-v1",
-        "officialReleaseYear": 2016,
-        "summary": "故事设定在20世纪70年代的洛杉矶，运气不佳的私家侦探霍兰·马奇（瑞恩·高斯林饰）与受雇打手杰克逊·希利（罗素·克劳饰）必须联手调查一个失踪女孩的案件以及一名色情明星看似无关的死亡事件。在调查过程中，他们揭露了一个直达最高权力核心的惊天阴谋。",
-        "summary_original": "Set in 1970s Los Angeles, down-on-his-luck private eye Holland March (Ryan Gosling) and hired leg-breaker Jackson Healy (Russell Crowe) must work together to solve the case of a missing girl and the seemingly unrelated death of a porn star. During their investigation, they uncover a shocking conspiracy that reaches up to the highest circles of power.",
-        "summary_source_hash": "64d1f008b0f1ad7cbf1ae1cab89cdc634283fe4978cf2aae930ddbdd49506c0a",
-        "summary_sources": [
-          {
-            "type": "apple_us_translation",
-            "url": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63"
-          }
-        ],
-        "summary_status": "translated_official",
-        "watchUrl": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63",
-        "title": "耐撕侦探",
-        "aliases": [
-          "耐撕侦探",
-          "好好侦探",
-          "好伙计们",
-          "好人",
-          "好家伙们"
-        ],
-        "name_status": "verified_title_sources",
-        "name_sources": [
-          {
-            "type": "douban_mobile_identity",
-            "url": "https://movie.douban.com/subject/25917787/",
-            "retrieved_at": "1793582118"
-          }
-        ],
         "_identityYear": 2016,
-        "douban_title": "耐撕侦探",
-        "douban_id": "25917787",
         "actors": [
           "罗素·克劳",
           "瑞恩·高斯林",
@@ -3460,41 +3428,178 @@
           "金·贝辛格",
           "杰克·基默"
         ],
+        "aliases": [
+          "耐撕侦探",
+          "好好侦探",
+          "好伙计们",
+          "好人",
+          "好家伙们"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T01:15:18+00:00",
+          "originalTitle": "The Nice Guys",
+          "rating": 7.0,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/25917787/",
+          "subjectId": "25917787",
+          "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+          "summaryStatus": "AVAILABLE",
+          "title": "耐撕侦探",
+          "year": 2016
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T01:15:18+00:00",
+            "originalTitle": "The Nice Guys",
+            "rating": 7.0,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/25917787/",
+            "subjectId": "25917787",
+            "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+            "summaryStatus": "AVAILABLE",
+            "title": "耐撕侦探",
+            "year": 2016
+          }
+        ],
         "directors": [
           "沙恩·布莱克"
+        ],
+        "douban_id": "25917787",
+        "douban_title": "耐撕侦探",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793582118",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/25917787/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2016,
+        "summary": "故事设定在20世纪70年代的洛杉矶，运气不佳的私家侦探霍兰·马奇（瑞恩·高斯林饰）与受雇打手杰克逊·希利（罗素·克劳饰）必须联手调查一个失踪女孩的案件以及一名色情明星看似无关的死亡事件。在调查过程中，他们揭露了一个直达最高权力核心的惊天阴谋。",
+        "summary_original": "Set in 1970s Los Angeles, down-on-his-luck private eye Holland March (Ryan Gosling) and hired leg-breaker Jackson Healy (Russell Crowe) must work together to solve the case of a missing girl and the seemingly unrelated death of a porn star. During their investigation, they uncover a shocking conspiracy that reaches up to the highest circles of power.",
+        "summary_source_hash": "64d1f008b0f1ad7cbf1ae1cab89cdc634283fe4978cf2aae930ddbdd49506c0a",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "耐撕侦探",
+        "watchUrl": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63"
+      }
+    },
+    "umc.cmc.49nuxpa3uc9ezls951h0ra32r": {
+      "en": "12 Monkeys",
+      "kind": "movie",
+      "year": "1996",
+      "verifiedZh": {
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "officialReleaseYear": 1996,
+        "summary": "科尔（布鲁斯·威利斯 饰）被送回过去，以拯救人类免受致命病毒的侵害，该病毒迫使人类在未来居住在阴暗的地下社区中。在旅途中，他遇到了一位精神病学家（玛德琳·斯托）和一个精神病人（布拉德·皮特饰，其精湛的演技令人叹为观止），后者可能掌握着解开神秘反叛组织“十二猴子军”的关键，该组织被认为是释放这场致命疾病的元凶。他坚信自己能够获得纯净的病毒样本以便在未来找到治疗方法，但他却接连遇到一个个谜题，与时间展开了一场赛跑。这部由天才导演特瑞·吉利姆打造的科幻杰作是一部现代经典之作。",
+        "summary_original": "Cole (Bruce Willis) is sent back in time to save the human race from a deadly virus that has forced mankind into dank underground communities in the future. Along his travels, he encounters a psychiatrist (Madeleine Stowe) and a mental patient, brilliantly portrayed by Brad Pitt, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease. Believing he can obtain a pure virus sample in order to find a cure in the future, he is met with one riddle after another that puts him in a race with time. This sci-fi masterpiece from the genius mind of Terry Gilliam is a modern-day classic.",
+        "summary_source_hash": "fb93d004f67e5d24d3996e0e45c09cfd941bd876605cc7bd73f9ea9c37f2ab33",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r"
+          }
+        ],
+        "summary_status": "translated_official",
+        "watchUrl": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r",
+        "title": "十二猴子",
+        "aliases": [
+          "十二猴子",
+          "12猴子",
+          "十二猴子军",
+          "十二只猴子"
+        ],
+        "name_status": "verified_title_sources",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1298744/",
+            "retrieved_at": "1793583393"
+          }
+        ],
+        "_identityYear": 1996,
+        "douban_title": "十二猴子",
+        "douban_id": "1298744",
+        "releaseDateEvidence": {
+          "sourceUrl": "https://movie.douban.com/subject/1298744/",
+          "dates": [
+            "1995-12-08(纽约首映)",
+            "1996-01-05(美国)"
+          ],
+          "platformReleaseDate": "1996-01-05",
+          "originalYear": 1995,
+          "basis": "user_confirmed_subject_dates"
+        },
+        "actors": [
+          "布鲁斯·威利斯",
+          "玛德琳·斯托",
+          "布拉德·皮特",
+          "克里斯托弗·普卢默",
+          "大卫·摩斯",
+          "乔恩·塞达",
+          "Joseph Melito",
+          "迈克尔·禅斯",
+          "弗农·坎贝尔",
+          "H. Michael Walls",
+          "Bob Adrian",
+          "西蒙·琼斯",
+          "Carol Florence",
+          "Bill Raymond",
+          "欧内斯特·阿布巴",
+          "艾尔玛·圣保罗",
+          "乔伊佩里洛",
+          "Bruce Kirkpatrick"
+        ],
+        "directors": [
+          "特瑞·吉列姆"
         ],
         "detailSeasons": [
           {
             "schema": 1,
             "source": "douban",
-            "subjectId": "25917787",
-            "sourceUrl": "https://movie.douban.com/subject/25917787/",
-            "title": "耐撕侦探",
-            "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+            "subjectId": "1298744",
+            "sourceUrl": "https://movie.douban.com/subject/1298744/",
+            "title": "十二猴子",
+            "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
             "summaryStatus": "AVAILABLE",
             "ratingStatus": "AVAILABLE",
             "season": 0,
-            "year": 2016,
-            "checkedAt": "2026-11-02T01:15:18+00:00",
-            "originalTitle": "The Nice Guys",
-            "rating": 7.0
+            "year": 1995,
+            "checkedAt": "2026-11-02T01:36:33+00:00",
+            "originalTitle": "12 Monkeys",
+            "rating": 8.2
           }
         ],
         "detailMetadata": {
           "schema": 1,
           "source": "douban",
-          "subjectId": "25917787",
-          "sourceUrl": "https://movie.douban.com/subject/25917787/",
-          "title": "耐撕侦探",
-          "summary": "亚美莉亚（玛格丽特·库里 Margaret Qualley 饰）雇佣了打手杰克逊（罗素·克劳 Russell Crowe 饰），委托他帮助自己摆脱正在监视自己的私家侦探霍兰德（瑞恩·高斯林 Ryan Gosling 饰），哪知道在完成任务的过程中，杰克逊发现，一个远比霍兰德危险得多的人亦在监视着亚美莉亚的一举一动，更糟糕的是，亚美莉亚随后失踪了，无奈之下，杰克逊只得再度找到霍兰德，要求他寻找亚美莉亚的下落。 之后，霍兰德的女儿霍莉（安格瑞·赖斯 Angourie Rice 饰）也加入了行动当中，随着调查的深入，越来越多的线索被联系到了一起，越来越多的角色被卷入这个巨大的阴谋之中。",
+          "subjectId": "1298744",
+          "sourceUrl": "https://movie.douban.com/subject/1298744/",
+          "title": "十二猴子",
+          "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
           "summaryStatus": "AVAILABLE",
           "ratingStatus": "AVAILABLE",
           "season": 0,
-          "year": 2016,
-          "checkedAt": "2026-11-02T01:15:18+00:00",
-          "originalTitle": "The Nice Guys",
-          "rating": 7.0
-        }
+          "year": 1995,
+          "checkedAt": "2026-11-02T01:36:33+00:00",
+          "originalTitle": "12 Monkeys",
+          "rating": 8.2
+        },
+        "searchYear": 1995
       }
     }
   }

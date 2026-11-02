@@ -956,6 +956,27 @@
           "rating": 7.0
         }
       ]
+    },
+    "umc.cmc.49nuxpa3uc9ezls951h0ra32r": {
+      "en": "12 Monkeys",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "1298744",
+          "sourceUrl": "https://movie.douban.com/subject/1298744/",
+          "title": "十二猴子",
+          "summary": "公元2035年，人类被12只猴子军研制的一种病毒侵袭，大部分人类都在这场病毒灾难中死亡，只有少数人侥幸逃生，但也只能在阴暗的地下，苟且偷生。 科学家们决定派人穿越时光回到1996年追查12只猴子军的来历。囚徒詹姆斯·科尔(布鲁斯·威利斯 Bruce Willis 饰)被 挑选为志愿者。阴差阳错，科尔回到了1990年，当他向当时的人们描述未来的那场大灾难时，被当作精神病捉了起来并被医生凯瑟琳·雪莉（玛德琳·斯通 Madeleine Stowe 饰）诊断为精神分裂症。科尔在病友杰弗里·戈因斯帮助下逃脱，回到了未来。因为没查清12只猴子军的来历，科尔再次被派回了1996年。 科尔这次发现了12只猴子军的起源地在费城，他找到了医生凯瑟琳，二人一起展开了追查12只猴子军的冒险之旅!",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 1995,
+          "checkedAt": "2026-11-02T01:36:33+00:00",
+          "originalTitle": "12 Monkeys",
+          "rating": 8.2
+        }
+      ]
     }
   }
 }

@@ -5,24 +5,35 @@
   ],
   "records": [
     {
-      "slug": "home-3d7jpq67ivm8he8ndug7lmr63",
-      "en": "The Nice Guys",
+      "slug": "home-49nuxpa3uc9ezls951h0ra32r",
+      "en": "12 Monkeys",
       "searchStatus": "douban_direct",
       "confidence": "VERIFIED",
       "sourcePolicy": "not_checked_name_review",
       "detailMetadata": {
         "season": 0,
-        "subjectId": "25917787",
+        "subjectId": "1298744",
         "summaryStatus": "AVAILABLE",
         "ratingStatus": "AVAILABLE"
       },
-      "title": "耐撕侦探",
+      "title": "十二猴子",
       "sourceMatch": null,
-      "sourceEvents": []
+      "sourceEvents": [],
+      "originalReleaseYear": 1995,
+      "releaseDateEvidence": {
+        "sourceUrl": "https://movie.douban.com/subject/1298744/",
+        "dates": [
+          "1995-12-08(纽约首映)",
+          "1996-01-05(美国)"
+        ],
+        "platformReleaseDate": "1996-01-05",
+        "originalYear": 1995,
+        "basis": "user_confirmed_subject_dates"
+      }
     }
   ],
   "changed": [
-    "home-3d7jpq67ivm8he8ndug7lmr63"
+    "home-49nuxpa3uc9ezls951h0ra32r"
   ],
   "geminiUsed": false,
   "namesOnly": true,

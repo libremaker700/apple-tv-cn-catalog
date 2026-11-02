@@ -2971,102 +2971,64 @@
       "discovery": {}
     },
     "home-49nuxpa3uc9ezls951h0ra32r": {
-      "checkedAt": 1793581979,
-      "nextRetry": 1793668379,
+      "checkedAt": 1793583393,
+      "nextRetry": 1793669793,
       "result": {
         "slug": "home-49nuxpa3uc9ezls951h0ra32r",
         "en": "12 Monkeys",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "1298744",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "1293182",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "1781126",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1298744",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "十二猴子",
+        "sourceMatch": null,
+        "sourceEvents": [],
+        "originalReleaseYear": 1995,
+        "releaseDateEvidence": {
+          "sourceUrl": "https://movie.douban.com/subject/1298744/",
+          "dates": [
+            "1995-12-08(纽约首映)",
+            "1996-01-05(美国)"
+          ],
+          "platformReleaseDate": "1996-01-05",
+          "originalYear": 1995,
+          "basis": "user_confirmed_subject_dates"
+        }
       },
-      "identity": null,
+      "identity": {
+        "douban_id": "1298744",
+        "year": "1995",
+        "season": 0,
+        "actors": [
+          "布鲁斯·威利斯",
+          "玛德琳·斯托",
+          "布拉德·皮特",
+          "克里斯托弗·普卢默",
+          "大卫·摩斯",
+          "乔恩·塞达",
+          "Joseph Melito",
+          "迈克尔·禅斯",
+          "弗农·坎贝尔",
+          "H. Michael Walls",
+          "Bob Adrian",
+          "西蒙·琼斯",
+          "Carol Florence",
+          "Bill Raymond",
+          "欧内斯特·阿布巴",
+          "艾尔玛·圣保罗",
+          "乔伊佩里洛",
+          "Bruce Kirkpatrick"
+        ],
+        "directors": [
+          "特瑞·吉列姆"
+        ],
+        "url": "https://movie.douban.com/subject/1298744/"
+      },
       "discovery": {}
     },
     "home-38gup8z7ry56rjuknjvb20zi1": {
