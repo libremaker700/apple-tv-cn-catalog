@@ -53,23 +53,46 @@
       "discovery": {}
     },
     "12-12-12": {
-      "checkedAt": 1793420711,
-      "nextRetry": 1793507111,
+      "checkedAt": 1793585967,
+      "nextRetry": 1793672367,
       "result": {
         "slug": "12-12-12",
         "en": "12 12 12",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED"
-      }
-    },
-    "home-750u3qv5wz0d41pn1v2rvn7oe": {
-      "checkedAt": 1793575758,
-      "nextRetry": 1793662158,
-      "result": {
-        "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
-        "en": "A Carpool Karaoke Christmas",
-        "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "36894893",
+          "year": "2026",
+          "season": 1,
+          "actors": [
+            "安东尼·麦凯",
+            "詹米·多南",
+            "杰克·凯西",
+            "阿加莎·罗塞勒",
+            "萨莉·哈姆森",
+            "何塞·加西亚",
+            "卡莉·瑞斯",
+            "朱利叶斯·费梅尔",
+            "米克洛斯·贝雷斯",
+            "皮特·布科夫斯基",
+            "希尔德加德·斯罗德",
+            "Merlin Leonhardt",
+            "克里斯蒂安·恰克瓦里",
+            "Georg Bütow",
+            "帕特里克·法比安",
+            "威尔弗里德·霍赫霍尔丁格",
+            "Billy Rayner",
+            "尼古拉斯·博斯克",
+            "安娜·扎伊科娃",
+            "奥拉维尔·达里·奥拉夫松",
+            "阿宾·格雷亚"
+          ],
+          "directors": [
+            "卡莉·斯考格兰德"
+          ],
+          "url": "https://movie.douban.com/subject/36894893/"
+        },
         "verificationEvents": [
           {
             "host": "movie.douban.com",
@@ -83,11 +106,177 @@
           },
           {
             "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "36894893",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 3
+          },
+          {
+            "stage": "subject",
+            "subject_id": "20266721",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "3715829",
+            "status": "UNVERIFIED"
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "36894893",
+        "year": "2026",
+        "season": 1,
+        "actors": [
+          "安东尼·麦凯",
+          "詹米·多南",
+          "杰克·凯西",
+          "阿加莎·罗塞勒",
+          "萨莉·哈姆森",
+          "何塞·加西亚",
+          "卡莉·瑞斯",
+          "朱利叶斯·费梅尔",
+          "米克洛斯·贝雷斯",
+          "皮特·布科夫斯基",
+          "希尔德加德·斯罗德",
+          "Merlin Leonhardt",
+          "克里斯蒂安·恰克瓦里",
+          "Georg Bütow",
+          "帕特里克·法比安",
+          "威尔弗里德·霍赫霍尔丁格",
+          "Billy Rayner",
+          "尼古拉斯·博斯克",
+          "安娜·扎伊科娃",
+          "奥拉维尔·达里·奥拉夫松",
+          "阿宾·格雷亚"
+        ],
+        "directors": [
+          "卡莉·斯考格兰德"
+        ],
+        "url": "https://movie.douban.com/subject/36894893/"
+      },
+      "discovery": {}
+    },
+    "home-750u3qv5wz0d41pn1v2rvn7oe": {
+      "checkedAt": 1793585981,
+      "nextRetry": 1793672381,
+      "result": {
+        "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
+        "en": "A Carpool Karaoke Christmas",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "37161992",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -95,11 +284,6 @@
           {
             "stage": "mobile_search",
             "candidates": 1
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37161992",
-            "status": "UNVERIFIED"
           }
         ]
       },
@@ -107,14 +291,38 @@
       "discovery": {}
     },
     "awkwafina-the-unlikely-cook": {
-      "checkedAt": 1793420711,
-      "nextRetry": 1793507111,
+      "checkedAt": 1793585991,
+      "nextRetry": 1793672391,
       "result": {
         "slug": "awkwafina-the-unlikely-cook",
         "en": "Awkwafina: The Unlikely Cook",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED"
-      }
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "37862350",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "奥卡菲娜：意想不到的厨师",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "identity": {
+        "douban_id": "37862350",
+        "year": "2026",
+        "season": 1,
+        "actors": [
+          "奥卡菲娜",
+          "欧阳万成",
+          "罗伊·崔",
+          "甄文达"
+        ],
+        "directors": [],
+        "url": "https://movie.douban.com/subject/37862350/"
+      },
+      "discovery": {}
     },
     "women-in-blue-las-azules": {
       "checkedAt": 1793437131,
@@ -140,41 +348,17 @@
       }
     },
     "bearbrick": {
-      "checkedAt": 1793575768,
-      "nextRetry": 1793662168,
+      "checkedAt": 1793585993,
+      "nextRetry": 1793672393,
       "result": {
         "slug": "bearbrick",
         "en": "BE@RBRICK",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "37262751",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "积木熊",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": {
         "douban_id": "37262751",
@@ -193,8 +377,8 @@
       "discovery": {}
     },
     "carpool-karaoke-the-series": {
-      "checkedAt": 1793575772,
-      "nextRetry": 1793662172,
+      "checkedAt": 1793586007,
+      "nextRetry": 1793672407,
       "result": {
         "slug": "carpool-karaoke-the-series",
         "en": "Carpool Karaoke: The Series",
@@ -225,9 +409,49 @@
             "host": "m.douban.com",
             "status": 404,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "26985567",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -257,13 +481,22 @@
       "discovery": {}
     },
     "doug-unplugs": {
-      "checkedAt": 1793575780,
-      "nextRetry": 1793662180,
+      "checkedAt": 1793586022,
+      "nextRetry": 1793672422,
       "result": {
         "slug": "doug-unplugs",
         "en": "Doug Unplugs",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "35599365",
+          "year": "2021",
+          "season": 2,
+          "actors": [],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/35599365/"
+        },
         "verificationEvents": [
           {
             "host": "movie.douban.com",
@@ -291,12 +524,47 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35599365",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -304,11 +572,6 @@
           {
             "stage": "mobile_search",
             "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35599365",
-            "status": "UNVERIFIED"
           },
           {
             "stage": "subject",
@@ -368,8 +631,8 @@
       "discovery": {}
     },
     "get-rolling-with-otis": {
-      "checkedAt": 1793575802,
-      "nextRetry": 1793662202,
+      "checkedAt": 1793586053,
+      "nextRetry": 1793672453,
       "result": {
         "slug": "get-rolling-with-otis",
         "en": "Get Rolling With Otis",
@@ -400,9 +663,49 @@
             "host": "m.douban.com",
             "status": 200,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35599354",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -463,8 +766,8 @@
       "discovery": {}
     },
     "hello-jack-the-kindness-show": {
-      "checkedAt": 1793575818,
-      "nextRetry": 1793662218,
+      "checkedAt": 1793586067,
+      "nextRetry": 1793672467,
       "result": {
         "slug": "hello-jack-the-kindness-show",
         "en": "Hello, Jack! The Kindness Show",
@@ -495,9 +798,49 @@
             "host": "m.douban.com",
             "status": 200,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35576353",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -518,7 +861,7 @@
           },
           {
             "stage": "subject",
-            "subject_id": "26795149",
+            "subject_id": "35791619",
             "status": "UNVERIFIED"
           }
         ]
@@ -556,45 +899,17 @@
       "discovery": {}
     },
     "not-a-box": {
-      "checkedAt": 1793575908,
-      "nextRetry": 1793662308,
+      "checkedAt": 1793586182,
+      "nextRetry": 1793672582,
       "result": {
         "slug": "not-a-box",
         "en": "Not a Box",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37374251",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "魔盒",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": {
         "douban_id": "37374251",
@@ -1390,14 +1705,28 @@
       "discovery": {}
     },
     "home-3xi33xb3r3xbxx4lssz8cswdr": {
-      "checkedAt": 1793575835,
-      "nextRetry": 1793662235,
+      "checkedAt": 1793586081,
+      "nextRetry": 1793672481,
       "result": {
         "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
         "en": "Helpsters Help You",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "35138269",
+          "year": "2020",
+          "season": 1,
+          "actors": [],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/35138269/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -1409,7 +1738,37 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
@@ -1418,7 +1777,7 @@
           {
             "stage": "subject",
             "subject_id": "35138269",
-            "status": "UNVERIFIED"
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "mobile_search",
@@ -1473,17 +1832,46 @@
       "discovery": {}
     },
     "home-17y48i5ko6gft5ieh148nzqzn": {
-      "checkedAt": 1793575856,
-      "nextRetry": 1793662256,
+      "checkedAt": 1793586089,
+      "nextRetry": 1793672489,
       "result": {
         "slug": "home-17y48i5ko6gft5ieh148nzqzn",
         "en": "It's the Easter Beagle, Charlie Brown!",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "5054433",
+          "year": "1974",
+          "season": 0,
+          "actors": [
+            "Todd Barbee",
+            "Melanie Kohn",
+            "Stephen Sheffer",
+            "Linda Ercoli",
+            "Lynn Mortensen",
+            "Jimmy Ahrens",
+            "比尔·莫伦茨"
+          ],
+          "directors": [
+            "Phil Roman"
+          ],
+          "url": "https://movie.douban.com/subject/5054433/"
+        },
         "verificationEvents": [
           {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
             "host": "movie.douban.com",
-            "status": 200,
+            "status": 302,
             "cached": false
           },
           {
@@ -1492,34 +1880,55 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
           {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
+            "stage": "subject",
+            "subject_id": "5054433",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "mobile_search",
             "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "5054433",
-            "status": "UNVERIFIED"
           },
           {
             "stage": "subject",
@@ -1603,14 +2012,31 @@
       "discovery": {}
     },
     "kpopped": {
-      "checkedAt": 1793575868,
-      "nextRetry": 1793662268,
+      "checkedAt": 1793586105,
+      "nextRetry": 1793672505,
       "result": {
         "slug": "kpopped",
         "en": "KPOPPED",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "37443489",
+          "year": "2025",
+          "season": 1,
+          "actors": [
+            "鸟叔",
+            "梅根·西·斯塔莉安"
+          ],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/37443489/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -1622,7 +2048,37 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
@@ -1631,7 +2087,7 @@
           {
             "stage": "subject",
             "subject_id": "37443489",
-            "status": "UNVERIFIED"
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "mobile_search",
@@ -1653,88 +2109,24 @@
       "discovery": {}
     },
     "home-cal17ey3zhv2lx3xkzjqjstb": {
-      "checkedAt": 1793575872,
-      "nextRetry": 1793662272,
+      "checkedAt": 1793586113,
+      "nextRetry": 1793672513,
       "result": {
         "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
         "en": "Long Way Down",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "2367101",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "1820138",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37311378",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "长路迢迢",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": null,
       "discovery": {}
     },
     "lovely-little-farm": {
-      "checkedAt": 1793575884,
-      "nextRetry": 1793662284,
+      "checkedAt": 1793586129,
+      "nextRetry": 1793672529,
       "result": {
         "slug": "lovely-little-farm",
         "en": "Lovely Little Farm",
@@ -1742,6 +2134,11 @@
         "confidence": "UNVERIFIED",
         "verificationEvents": [
           {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
             "host": "movie.douban.com",
             "status": 200,
             "cached": false
@@ -1754,20 +2151,50 @@
           {
             "host": "m.douban.com",
             "status": 200,
+            "cached": true
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
             "status": 200,
-            "cached": true
+            "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
             "status": 200,
-            "cached": true
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35898683",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -1775,11 +2202,6 @@
           {
             "stage": "mobile_search",
             "candidates": 1
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35898683",
-            "status": "UNVERIFIED"
           }
         ]
       },
@@ -1787,50 +2209,17 @@
       "discovery": {}
     },
     "lulu-is-a-rhinoceros": {
-      "checkedAt": 1793575888,
-      "nextRetry": 1793662288,
+      "checkedAt": 1793586139,
+      "nextRetry": 1793672539,
       "result": {
         "slug": "lulu-is-a-rhinoceros",
         "en": "Lulu Is a Rhinoceros",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37357015",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "露露是一头犀牛",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": null,
       "discovery": {}
@@ -1870,14 +2259,30 @@
       "discovery": {}
     },
     "home-58su2j1i0etuvq64m6nxfm11y": {
-      "checkedAt": 1793575896,
-      "nextRetry": 1793662296,
+      "checkedAt": 1793586150,
+      "nextRetry": 1793672550,
       "result": {
         "slug": "home-58su2j1i0etuvq64m6nxfm11y",
         "en": "Messi Mania",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "38483287",
+          "year": "2023",
+          "season": 0,
+          "actors": [
+            "利昂内尔·梅西"
+          ],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/38483287/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -1889,24 +2294,50 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
           {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
+            "stage": "subject",
+            "subject_id": "38483287",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "mobile_search",
             "candidates": 1
-          },
-          {
-            "stage": "subject",
-            "subject_id": "38483287",
-            "status": "UNVERIFIED"
           }
         ]
       },
@@ -1923,8 +2354,8 @@
       "discovery": {}
     },
     "napoleon-the-directors-cut": {
-      "checkedAt": 1793575900,
-      "nextRetry": 1793662300,
+      "checkedAt": 1793586161,
+      "nextRetry": 1793672561,
       "result": {
         "slug": "napoleon-the-directors-cut",
         "en": "Napoleon: The Director’s Cut",
@@ -1933,7 +2364,7 @@
         "verificationEvents": [
           {
             "host": "movie.douban.com",
-            "status": 200,
+            "status": 302,
             "cached": false
           },
           {
@@ -1942,8 +2373,8 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
-            "status": 200,
+            "host": "movie.douban.com",
+            "status": 302,
             "cached": false
           },
           {
@@ -1952,12 +2383,52 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35224919",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -1968,17 +2439,17 @@
           },
           {
             "stage": "subject",
-            "subject_id": "25863052",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
             "subject_id": "5174889",
             "status": "UNVERIFIED"
           },
           {
             "stage": "subject",
             "subject_id": "11600065",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "34836705",
             "status": "UNVERIFIED"
           }
         ]
@@ -1987,8 +2458,8 @@
       "discovery": {}
     },
     "now-and-then": {
-      "checkedAt": 1793575913,
-      "nextRetry": 1793662313,
+      "checkedAt": 1793586192,
+      "nextRetry": 1793672592,
       "result": {
         "slug": "now-and-then",
         "en": "Now & Then",
@@ -2019,9 +2490,49 @@
             "host": "m.douban.com",
             "status": 404,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "35507236",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -2051,66 +2562,17 @@
       "discovery": {}
     },
     "number-one-on-the-call-sheet": {
-      "checkedAt": 1793575921,
-      "nextRetry": 1793662321,
+      "checkedAt": 1793586207,
+      "nextRetry": 1793672607,
       "result": {
         "slug": "number-one-on-the-call-sheet",
         "en": "Number One on the Call Sheet",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": true
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "35576357",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35576356",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37290675",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "通告大咖",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": null,
       "discovery": {}
@@ -2178,61 +2640,17 @@
       "discovery": {}
     },
     "pretzel-and-the-puppies": {
-      "checkedAt": 1793575933,
-      "nextRetry": 1793662333,
+      "checkedAt": 1793586222,
+      "nextRetry": 1793672622,
       "result": {
         "slug": "pretzel-and-the-puppies",
         "en": "Pretzel and the Puppies",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "35758781",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "30191960",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "26846731",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "椒盐卷饼和小狗",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": {
         "douban_id": "35758781",
@@ -2251,70 +2669,23 @@
       "discovery": {}
     },
     "sago-mini-friends": {
-      "checkedAt": 1793575940,
-      "nextRetry": 1793662340,
+      "checkedAt": 1793586237,
+      "nextRetry": 1793672637,
       "result": {
         "slug": "sago-mini-friends",
         "en": "Sago Mini Friends",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37112671",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "3286531",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "27205200",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 3,
+          "subjectId": "37112671",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "Sago Mini 小小伙伴(港/台)",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": {
         "douban_id": "37112671",
@@ -2333,14 +2704,36 @@
       "discovery": {}
     },
     "slumberkins": {
-      "checkedAt": 1793575948,
-      "nextRetry": 1793662348,
+      "checkedAt": 1793586238,
+      "nextRetry": 1793672638,
       "result": {
         "slug": "slumberkins",
         "en": "Slumberkins",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "36148714",
+          "year": "2022",
+          "season": 1,
+          "actors": [
+            "詹妮弗·黑尔",
+            "约纳斯·基布雷亚布",
+            "阿德琳·斯布恩",
+            "乔希·班迪",
+            "Victor Yerrid",
+            "Brayden Morgan",
+            "Araceli Prasarttongosoth"
+          ],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/36148714/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -2352,7 +2745,37 @@
             "cached": false
           },
           {
-            "host": "m.douban.com",
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
@@ -2361,7 +2784,7 @@
           {
             "stage": "subject",
             "subject_id": "36148714",
-            "status": "UNVERIFIED"
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "mobile_search",
@@ -2388,14 +2811,28 @@
       "discovery": {}
     },
     "snoopy-presents-theres-no-place-like-home-snoopy": {
-      "checkedAt": 1793575953,
-      "nextRetry": 1793662353,
+      "checkedAt": 1793586247,
+      "nextRetry": 1793672647,
       "result": {
         "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
         "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "38479326",
+          "year": "2026",
+          "season": 1,
+          "actors": [],
+          "directors": [],
+          "url": "https://movie.douban.com/subject/38479326/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -2408,11 +2845,6 @@
           },
           {
             "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
             "status": 200,
             "cached": false
           },
@@ -2420,17 +2852,44 @@
             "host": "m.douban.com",
             "status": 404,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
           {
             "stage": "subject",
             "subject_id": "38535567",
@@ -2439,7 +2898,11 @@
           {
             "stage": "subject",
             "subject_id": "38479326",
-            "status": "UNVERIFIED"
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 3
           },
           {
             "stage": "subject",
@@ -2570,61 +3033,17 @@
       "discovery": {}
     },
     "the-oprah-conversation": {
-      "checkedAt": 1793575985,
-      "nextRetry": 1793662385,
+      "checkedAt": 1793586275,
+      "nextRetry": 1793672675,
       "result": {
         "slug": "the-oprah-conversation",
         "en": "The Oprah Conversation",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "35161274",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "33418604",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "33964332",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "奥普拉名人会",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": null,
       "discovery": {}
@@ -2795,8 +3214,8 @@
       "discovery": {}
     },
     "wonder-pets-in-the-city": {
-      "checkedAt": 1793576026,
-      "nextRetry": 1793662426,
+      "checkedAt": 1793586302,
+      "nextRetry": 1793672702,
       "result": {
         "slug": "wonder-pets-in-the-city",
         "en": "Wonder Pets: In the City",
@@ -2825,11 +3244,51 @@
           },
           {
             "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
             "status": 200,
             "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "37135394",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -2850,7 +3309,7 @@
           },
           {
             "stage": "subject",
-            "subject_id": "34951711",
+            "subject_id": "1307089",
             "status": "UNVERIFIED"
           }
         ]
@@ -2859,8 +3318,8 @@
       "discovery": {}
     },
     "yo-gabba-gabbaland": {
-      "checkedAt": 1793576035,
-      "nextRetry": 1793662435,
+      "checkedAt": 1793586316,
+      "nextRetry": 1793672716,
       "result": {
         "slug": "yo-gabba-gabbaland",
         "en": "Yo Gabba GabbaLand!",
@@ -2891,9 +3350,49 @@
             "host": "m.douban.com",
             "status": 200,
             "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
           }
         ],
         "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "36988909",
+            "status": "UNVERIFIED"
+          },
           {
             "stage": "suggest",
             "status": "EMPTY_RESPONSE"
@@ -3978,10 +4477,374 @@
         "url": "https://movie.douban.com/subject/25917787/"
       },
       "discovery": {}
+    },
+    "fleetwood-mac-the-chain": {
+      "checkedAt": 1793586038,
+      "nextRetry": 1793672438,
+      "result": {
+        "slug": "fleetwood-mac-the-chain",
+        "en": "Fleetwood Mac: The Chain",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "39008276",
+          "year": "2027",
+          "season": 0,
+          "actors": [
+            "米克·弗利特伍德",
+            "John McVie",
+            "克里斯汀·麦克维"
+          ],
+          "directors": [
+            "弗兰克·马歇尔"
+          ],
+          "url": "https://movie.douban.com/subject/39008276/"
+        },
+        "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "39008276",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 3
+          },
+          {
+            "stage": "subject",
+            "subject_id": "36504324",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "4724533",
+            "status": "UNVERIFIED"
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "39008276",
+        "year": "2027",
+        "season": 0,
+        "actors": [
+          "米克·弗利特伍德",
+          "John McVie",
+          "克里斯汀·麦克维"
+        ],
+        "directors": [
+          "弗兰克·马歇尔"
+        ],
+        "url": "https://movie.douban.com/subject/39008276/"
+      },
+      "discovery": {}
+    },
+    "snoopy-unleashed": {
+      "checkedAt": 1793586260,
+      "nextRetry": 1793672660,
+      "result": {
+        "slug": "snoopy-unleashed",
+        "en": "Snoopy Unleashed",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 302,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "38432357",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 2
+          },
+          {
+            "stage": "subject",
+            "subject_id": "1309150",
+            "status": "UNVERIFIED"
+          }
+        ]
+      },
+      "identity": null,
+      "discovery": {}
+    },
+    "the-wanted-man": {
+      "checkedAt": 1793586287,
+      "nextRetry": 1793672687,
+      "result": {
+        "slug": "the-wanted-man",
+        "en": "The Wanted Man",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "movie.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 404,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "subjectDiagnostics": [
+          {
+            "stage": "subject",
+            "subject_id": "37344952",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "suggest",
+            "status": "EMPTY_RESPONSE"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 3
+          },
+          {
+            "stage": "subject",
+            "subject_id": "5064920",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "6873176",
+            "status": "UNVERIFIED"
+          }
+        ]
+      },
+      "identity": null,
+      "discovery": {}
+    },
+    "way-of-the-warrior-kid": {
+      "checkedAt": 1793586300,
+      "nextRetry": 1793672700,
+      "result": {
+        "slug": "way-of-the-warrior-kid",
+        "en": "Way of the Warrior Kid",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "36877090",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "海豹小子",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "identity": {
+        "douban_id": "36877090",
+        "year": "2026",
+        "season": 0,
+        "actors": [
+          "克里斯·帕拉特",
+          "裘德·希尔",
+          "琳达·卡德里尼",
+          "莫尼布·阿卜哈特",
+          "卡桑德拉·贝坦科尔特",
+          "列维·麦康纳",
+          "帕克·扬",
+          "瑞秋·阿什利·约翰逊",
+          "乔希·斯通",
+          "蔡斯·拉姆齐",
+          "克里斯·维尔德",
+          "Austin Boyce",
+          "Ava Torres",
+          "Delon de Metz",
+          "杰森·罗格尔",
+          "尼克·德拉戈",
+          "鲍里斯·伦敦",
+          "Tina Alexis Allen",
+          "Shane Alexander",
+          "Jessie Keller"
+        ],
+        "directors": [
+          "约瑟夫·麦克金提·尼彻"
+        ],
+        "url": "https://movie.douban.com/subject/36877090/"
+      },
+      "discovery": {}
     }
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 127
+    "2026-11": 154
   }
 }

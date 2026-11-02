@@ -11,25 +11,10 @@
           "这是南瓜大王哦查理·布朗",
           "这是个大南瓜哦！查理·布朗！",
           "史努比卡通：万圣节南瓜头",
-          "It’s the Great Pumpkin, Charlie Brown",
-          "这是南瓜大王哦！ 查理·布朗！"
+          "It’s the Great Pumpkin, Charlie Brown"
         ],
         "contentRating": "G",
         "metadataPolicy": "mainland-v1",
-        "nameSelection": {
-          "checkedLibraries": 28,
-          "complete": false,
-          "libraries": 2,
-          "options": [
-            {
-              "libraries": 2,
-              "title": "这是南瓜大王哦！ 查理·布朗！"
-            }
-          ],
-          "policy": "library-votes-v1",
-          "requestedLibraries": 28,
-          "title": "这是南瓜大王哦！ 查理·布朗！"
-        },
         "name_sources": [
           {
             "type": "reviewed_douban_display_evidence",
@@ -40,16 +25,6 @@
         "officialReleaseYear": null,
         "provenance": "reviewed_name_alias",
         "searchYear": 1966,
-        "sourceCheck": {
-          "checkedAt": 1793495628,
-          "en": "It’s the Great Pumpkin, Charlie Brown",
-          "found": true,
-          "kind": "movie",
-          "routes": 2,
-          "schema": 1,
-          "season": 0,
-          "year": "1966"
-        },
         "summary": "服装、糖果、这部经典特辑——有些事物生动诠释了万圣节。加入花生漫画伙伴们的行列，开启一场永恒的冒险：查理·布朗筹备派对，史努比将目标对准红色男爵，莱纳斯则耐心等待南瓜地的奇迹。",
         "summary_original": "Costumes, candy, this classic special—some things just scream Halloween. Join the Peanuts gang for a timeless adventure as Charlie Brown preps for a party, Snoopy sets his sights on the Red Baron, and Linus patiently awaits a pumpkin patch miracle.",
         "summary_source_hash": "5db3f229ffe7095cf659b8b8f45c2dabbd5fad0e0ccb2b2d5fd2bf5d9375c460",
@@ -1208,9 +1183,41 @@
     },
     "umc.cmc.cal17ey3zhv2lx3xkzjqjstb": {
       "en": "Long Way Down",
+      "kind": "series",
       "year": "2007",
-      "patch": null,
-      "nextRetry": 1793497073
+      "verifiedZh": {
+        "_identityYear": 2007,
+        "aliases": [
+          "长路迢迢"
+        ],
+        "contentRating": "TV-MA",
+        "douban_title": "",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "plex_public_identity",
+            "url": "https://watch.plex.tv/zh/show/long-way-down"
+          },
+          {
+            "type": "plex_original_identity",
+            "url": "https://watch.plex.tv/en/show/long-way-down"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2007,
+        "summary": "伊万·麦格雷戈和查理·布尔曼回归Long Way系列的第二段旅程，从苏格兰最北端一路骑行15,000英里至南非最南端。",
+        "summary_original": "Ewan McGregor and Charley Boorman return for a second spin in the Long Way series, traveling 15,000 miles from the northernmost tip of Scotland to the southernmost tip of South Africa.",
+        "summary_source_hash": "cd94edb2ca0aa7c088c5240472fd910b77c44dba1169920d9a18a7277c4c8a9c",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/long-way-down/umc.cmc.cal17ey3zhv2lx3xkzjqjstb"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "长路迢迢",
+        "watchUrl": "https://tv.apple.com/us/show/long-way-down/umc.cmc.cal17ey3zhv2lx3xkzjqjstb"
+      }
     },
     "umc.cmc.2j3fje2s0rh78ius1k1kil5tr": {
       "en": "The Sixth Sense",

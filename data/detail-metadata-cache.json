@@ -977,6 +977,66 @@
           "rating": 8.2
         }
       ]
+    },
+    "umc.cmc.1fhnal2vix2077ouh1hjy2eoc": {
+      "en": "Awkwafina: The Unlikely Cook",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37862350",
+          "sourceUrl": "https://movie.douban.com/subject/37862350/",
+          "title": "奥卡菲娜：意想不到的厨师",
+          "summary": "好莱坞演员兼喜剧演员奥卡菲娜出身餐饮世家，但她却不会做饭。跟随这位明星踏上这段充满启发性的美食之旅，看她如何学习烹饪技艺，并尝试重振家族备受喜爱的中餐馆。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING",
+          "season": 1,
+          "year": 2026,
+          "checkedAt": "2026-11-02T02:19:51+00:00",
+          "originalTitle": "Awkwafina: The Unlikely Cook"
+        }
+      ]
+    },
+    "umc.cmc.4ckulbycyeuavnlen3du06vvy": {
+      "en": "Sago Mini Friends",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37112671",
+          "sourceUrl": "https://movie.douban.com/subject/37112671/",
+          "title": "Sago Mini 小小伙伴(港/台)",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING",
+          "season": 3,
+          "year": 2024,
+          "checkedAt": "2026-11-02T02:23:57+00:00",
+          "originalTitle": "Sago Mini Friends"
+        }
+      ]
+    },
+    "umc.cmc.21vzhs44oeejdkoxenkcdmre0": {
+      "en": "Way of the Warrior Kid",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36877090",
+          "sourceUrl": "https://movie.douban.com/subject/36877090/",
+          "title": "海豹小子",
+          "summary": "杰克（克里斯·帕拉特 饰）是一名受伤的海豹突击队士兵，他成了心灵导师，陪伴他害羞又面临挣扎的外甥马克（裘德·希尔 饰）成长。他运用军事训练原则，教导即将升上高中的马克如何成为一名小战士。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING",
+          "season": 0,
+          "year": 2026,
+          "checkedAt": "2026-11-02T02:25:00+00:00",
+          "originalTitle": "Way of the Warrior Kid"
+        }
+      ]
     }
   }
 }
