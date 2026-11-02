@@ -83,7 +83,13 @@ jobs:
           PENDING_ONLY: ${{ inputs.pending_only }}
         run: |
           if [ "$PENDING_ONLY" = "true" ]; then
-            python scripts/pending_name_review.py --limit 64
+            python scripts/refresh_identity_targets.py
+            REVIEW_ARGS=(--limit 64)
+            if [ -n "$TARGET_SLUG" ]; then
+              IFS=',' read -ra TARGETS <<< "$TARGET_SLUG"
+              for TARGET in "${TARGETS[@]}"; do REVIEW_ARGS+=(--slug "$TARGET"); done
+            fi
+            python scripts/pending_name_review.py "${REVIEW_ARGS[@]}"
             exit 0
           fi
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
@@ -104,7 +110,7 @@ jobs:
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          for FILE in data/mainland-name-cache.json data/detail-metadata-cache.json data/source-cache.json logs/mainland-name-sync.json data/cloud-source-cache.json logs/cloud-source-checks.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
+          for FILE in data/mainland-name-cache.json data/detail-metadata-cache.json data/source-cache.json data/home-season-cache.json logs/identity-season-refresh.json logs/mainland-name-sync.json data/cloud-source-cache.json logs/cloud-source-checks.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
           git diff --cached --quiet || git commit -m 'catalog: preserve independent title-search reservations'
           git push
       - run: python scripts/catalog.py --validate

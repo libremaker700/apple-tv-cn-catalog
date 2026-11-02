@@ -7,6 +7,14 @@
       "imdbId": "tt19866966",
       "policy": "search_hint_only_not_title_approval"
     },
+    "tu-tambien-lo-harias": {
+      "englishTitle": "You Would Do It Too (Tú También lo Harías)",
+      "officialId": "umc.cmc.7ad5xech8wu5nh2p221ymy9r2",
+      "expectedPlatformYear": "2024",
+      "releaseYear": "2023",
+      "releaseYearEvidence": "https://www.imdb.com/title/tt18988142/",
+      "policy": "verified_original_series_year_not_platform_date"
+    },
     "home-6ippzjfc3jg0l4b8x8cslmhfa": {
       "englishTitle": "Peanuts in Space: Secrets of Apollo 10",
       "officialId": "umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa",

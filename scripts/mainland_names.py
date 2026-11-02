@@ -115,23 +115,9 @@ def independent_name(ref,hits,lookup,now,http=None):
         if part.hostname in ('movie.douban.com','m.douban.com')and sid:
             patch=DoubanMobile(lookup.pages).subject(ref,sid[1],str(now))
             if patch:return patch
-        if part.hostname in ('www2.ikanbot.com','www.ikanbot.com')and re.fullmatch(r'/play/\d+',part.path) and not getattr(lookup,'ikanbot_blocked',False):
-            # A blocked site is left pending. Never solve or bypass its access challenge.
-            try:
-                response=(http or requests).get(item['url'],timeout=(5,12),allow_redirects=False)
-                if response.status_code!=200:
-                    if response.status_code in (401,403,429):lookup.ikanbot_blocked=True
-                    continue
-                raw=response.text;head=re.search(r'(?is)<h1[^>]*>(.*?)</h1>',raw);parts=[plain_html(v)for v in re.findall(r'(?is)<h3[^>]*>(.*?)</h3>',raw)]
-                if not head or len(parts)<2:continue
-                aliases=[s.strip()for s in re.split(r'[,，/]',parts[0])]
-                if norm(ref['english_title'])not in {norm(s)for s in aliases}or str(ref['year'])not in parts[1]:continue
-                expected='Movie'if ref['kind']=='movie'else'TVSeries'
-                if not re.search(r'@type[\"\s:]+ '+expected,raw,re.I) and not re.search(r'@type[\"\s:]+'+expected,raw,re.I):continue
-                title=plain_html(head[1]);
-                if chinese(title):return {'metadataPolicy':'mainland-v1','display_name_zh':title,'aliases_zh':[title],'name_status':'verified_title_sources','sources':[{'type':'ikanbot_identity_fields','url':item['url']}],'name_checked_at':str(now)}
-            except requests.RequestException:continue
-    return None
+    from plex_names import PlexNames
+    return PlexNames(getattr(lookup,'pages',None)).lookup(ref,str(now),hits)
+
 
 def republish_home(home,root):
     from home_sync import validate
@@ -145,7 +131,7 @@ def republish_home(home,root):
 
 def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None,names_only=False):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');cache_path=root/'data/mainland-name-cache.json';cache=read(cache_path,{'records':{},'budgets':{}});now=int(time.time());month=time.strftime('%Y-%m',time.gmtime(now));budget=200
-    report={'order':['douban_direct','verified_search_fallback']if names_only else['douban_direct','public_source_match','you.com_fallback','douban_or_ikanbot_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False,'namesOnly':names_only};used=int(cache['budgets'].get(month,0))
+    report={'order':['douban_direct','verified_search_fallback']if names_only else['douban_direct','public_source_match','you.com_fallback','douban_or_plex_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False,'namesOnly':names_only};used=int(cache['budgets'].get(month,0))
     search_hints_by_slug=read(root/'data/name-search-hints.json',{'works':{}}).get('works',{})
     def reserve():
         nonlocal used
@@ -185,7 +171,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if hint.get('englishTitle')==work['en']:
             if not ref['display_name_zh']:ref['display_name_zh']=hint.get('chineseHint','')
             if re.fullmatch(r'tt\d{7,10}',hint.get('imdbId','')):ref['imdb_id']=hint['imdbId']
-            if work['kind']=='movie'and hint.get('policy')=='verified_original_movie_year_not_platform_date'and work.get('officialId')==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and re.fullmatch(r'(19|20)\d{2}',hint.get('releaseYear',''))and re.fullmatch(r'https://www\.imdb\.com/title/tt\d{7,10}/',hint.get('releaseYearEvidence','')):
+            official=work.get('officialId')or(work.get('officialIdentity')or{}).get('watchUrl','').rstrip('/').split('/')[-1]
+            allowed=work['kind']=='movie'and hint.get('policy')=='verified_original_movie_year_not_platform_date'or work['kind']=='series'and n==1 and hint.get('policy')=='verified_original_series_year_not_platform_date'
+            if allowed and official==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and re.fullmatch(r'(19|20)\d{2}',hint.get('releaseYear',''))and re.fullmatch(r'https://www\.imdb\.com/title/tt\d{7,10}/',hint.get('releaseYearEvidence','')):
                 ref['year']=hint['releaseYear']
         source_ref=source_people({'year':ref['year'],'season':n,'kind':work['kind']},zh)
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
@@ -261,8 +249,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
                 if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
-            if work['kind']=='movie'and ref['year']!=detail_year:
+            if ref['year']!=detail_year:
                 zh['searchYear']=int(ref['year']);record['originalReleaseYear']=int(ref['year'])
+                if work['kind']=='series':zh['searchSeason']=n
         if not patch:
             pages=getattr(lookup,'pages',None)
             record['verificationEvents']=getattr(pages,'events',[])[-12:]if pages is not None else[]

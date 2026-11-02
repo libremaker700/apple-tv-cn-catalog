@@ -24,6 +24,7 @@ def clean_zh(value):
         packet=value.get('detailMetadata')
         if packet and any(row['season']==packet['season']and row!=packet or row['season']!=packet['season']and row['subjectId']==packet['subjectId']for row in rows):return None
     if 'searchYear'in value and (type(value['searchYear'])is not int or not 1900<=value['searchYear']<=2099 or value.get('name_status')!='verified_title_sources'):return None
+    if 'searchSeason'in value and (type(value['searchSeason'])is not int or not 1<=value['searchSeason']<=100 or 'searchYear'not in value):return None
     check=value.get('sourceCheck')
     if check is not None:
         if not isinstance(check,dict)or set(check)!=set(('schema','en','kind','season','year','found','routes','checkedAt')):return None

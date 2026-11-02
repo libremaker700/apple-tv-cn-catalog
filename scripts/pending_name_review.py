@@ -17,7 +17,7 @@ def candidates(root):
     priority={'to-mom-and-dad-with-love':0,'home-6ippzjfc3jg0l4b8x8cslmhfa':1}
     return sorted(rows,key=lambda row:(priority.get(row['slug'],2),row['en']))
 
-def review(root=ROOT,limit=64):
+def review(root=ROOT,limit=64,slugs=None):
     # A manual transport recheck can retry old connection errors. Do not clear
     # HTTP access-limit/denial cooldowns (401/403/418/429).
     transport=root/'data/source-cache.json'
@@ -29,7 +29,7 @@ def review(root=ROOT,limit=64):
             if value.get('status')==0:value['expires_at']=0
         dump(transport,cache)
     path=root/'docs/pending-name-review.json'
-    started=time.monotonic();rows=candidates(root)
+    started=time.monotonic();rows=candidates(root);previous=load(path)if path.exists()else{'records':[]};old_rows={r['slug']:r for r in previous.get('records',[])}
     if path.exists():
         previous=load(path);main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json')
         works={w['slug']:w for w in main['entries']+home['works']}
@@ -42,6 +42,8 @@ def review(root=ROOT,limit=64):
         result=dict(row)
         if row.get('_reused'):
             result.pop('_reused',None);result['reusedVerified']=True
+        elif slugs and row['slug']not in slugs:
+            result=dict(old_rows.get(row['slug'],dict(row,status='not_attempted_budget')),notRecheckedThisRun=True)
         elif row['skip']:result['status']=row['skip']
         elif count>=max(0,min(64,limit))or time.monotonic()-started>1050:result['status']='not_attempted_budget'
         else:
@@ -68,4 +70,4 @@ def review(root=ROOT,limit=64):
     return report
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int,default=64);args=parser.parse_args();value=review(limit=args.limit);print(json.dumps(value['summary'],ensure_ascii=True))
+    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int,default=64);parser.add_argument('--slug',action='append');args=parser.parse_args();value=review(limit=args.limit,slugs=args.slug);print(json.dumps(value['summary'],ensure_ascii=True))

@@ -25,7 +25,8 @@ def work_title(text):return re.sub(r'\s*(?:第\s*[0-9一二三四五六七八九
 def title_queries(title):
     title=str(title or '').strip()
     short=re.sub(r'\s*\([^()]{1,100}\)\s*$','',title).strip()
-    return list(dict.fromkeys(t for t in (title,short) if t))
+    native=re.search(r'\(([^()]{2,100})\)\s*$',title)
+    return list(dict.fromkeys(t for t in (title,short,native[1]if native else'') if t))
 def mainland_name(s):return isinstance(s,str) and bool(re.search(r'[\u3400-\u9fff]',s)) and not re.search(r'[（(](?:港|台|香港|台湾|臺灣)[）)]',s)
 def imdb(data):
     extra=(data.get('attrs') or {}).get('imdb',[])

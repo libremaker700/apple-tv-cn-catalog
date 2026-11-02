@@ -44,7 +44,7 @@ def label_seasons(entry):
 def public_seasons(rows):
     return [{k:v for k,v in row.items() if k not in ('checkedAt','imageCheckedAt')} for row in rows]
 
-def parse_show(text,show_id):
+def parse_show(text,show_id,allow_partial=False):
     blocks=Scripts(text).blocks
     packed=next((v for a,v in blocks if a.get('id')=='serialized-server-data'),None)
     if not isinstance(packed,dict):raise SeasonError('show_page_format_changed')
@@ -61,7 +61,7 @@ def parse_show(text,show_id):
         number=row.get('seasonNumber');sid=row.get('id','')
         if type(number) is not int or not 1<=number<=100 or number in seen or not ID.fullmatch(sid) or sid in ids:raise SeasonError('duplicate_or_invalid_season')
         seen.add(number);ids.add(sid);clean.append({'season':number,'officialId':sid,'officialEpisodeCount':max(0,int(row.get('episodeCount') or 0))})
-    if seen!=set(range(1,max(seen)+1)):raise SeasonError('official_season_list_has_gaps')
+    if not allow_partial and seen!=set(range(1,max(seen)+1)):raise SeasonError('official_season_list_has_gaps')
     config=next((r.get('data',{}) for r in rows if r.get('intent',{}).get('$kind')=='UtsConfigureIntent'),{})
     params=config.get('configuration',{}).get('applicationProps',{}).get('requiredParamsMap',{}).get('Default',{})
     params={k:params[k] for k in ('utsk','utscf','caller','sf','v','pfm','locale') if k in params}

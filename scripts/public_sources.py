@@ -3,7 +3,7 @@ import hashlib,html,json,re,time
 from pathlib import Path
 from urllib.parse import urlencode,urlsplit,urljoin
 import requests
-HOSTS={'movie.douban.com','m.douban.com','zh.wikipedia.org','en.wikipedia.org','baike.baidu.com','api.bgm.tv'}
+HOSTS={'movie.douban.com','m.douban.com','zh.wikipedia.org','en.wikipedia.org','baike.baidu.com','api.bgm.tv','watch.plex.tv'}
 
 def plain_html(raw):
     raw=re.sub(r'(?is)<(script|style|head|nav|footer)\b[^>]*>.*?</\1>','',raw)
@@ -61,7 +61,7 @@ class PublicPages:
                 if not location or dest.scheme!='https'or dest.hostname!=host or dest.username or dest.password or re.search(r'/(?:accounts|login|captcha|sorry)(?:/|$)',dest.path):break
                 if target==current:break
                 current=target;query=None
-            if status==200 and len(response.content)<=512_000:body=response.text
+            if status==200 and len(response.content)<=(2_000_000 if host=='watch.plex.tv'else 512_000):body=response.text
         except requests.RequestException as error:
             status=0
             self.events.append({'host':host,'status':0,'errorType':type(error).__name__})

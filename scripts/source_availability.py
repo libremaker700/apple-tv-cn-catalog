@@ -8,6 +8,7 @@ def reference(work):
     current=next((s for s in work.get('seasons',[])if s.get('season')==n),{})
     if kind=='movie':year=zh.get('searchYear')or zh.get('_identityYear')or work.get('year')or str(work.get('releaseDate',''))[:4]
     else:year=work.get('artworkSeasonYear')or current.get('year')or (str(work.get('releaseDate',''))[:4]if work.get('seasonNumber')==n else '')or (zh.get('_identityYear')or work.get('year')if n==1 else '')
+    if kind=='series'and zh.get('searchSeason')==n and zh.get('name_status')=='verified_title_sources':year=zh.get('searchYear')or year
     return {'en':work['en'],'kind':kind,'season':0 if kind=='movie'else n,'year':str(year or '')}
 
 def make_check(work,ref,best,now):

@@ -26,7 +26,7 @@ class HomeSeasons(unittest.TestCase):
                     number=2 if 's2/' in url else 1
                     return {'data':{'id':'umc.cmc.s'+str(number),'showId':'umc.cmc.show','seasonNumber':number,'releaseDate':('2026' if number==2 else '2025')+'-01-01'}}
             return Response()
-        with tempfile.TemporaryDirectory() as directory,patch.object(home_seasons,'parse_show',side_effect=lambda *args:(copy.deepcopy(options),{},'')):
+        with tempfile.TemporaryDirectory() as directory,patch.object(home_seasons,'parse_show',side_effect=lambda *args,**kwargs:(copy.deepcopy(options),{},'')):
             root=Path(directory);(root/'data').mkdir()
             home_seasons.enrich(home,root,get,100000);self.assertEqual(len(home['works'][0]['seasons']),1)
             options.append({'season':2,'officialId':'umc.cmc.s2','officialEpisodeCount':2})

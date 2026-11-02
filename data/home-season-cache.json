@@ -172,6 +172,19 @@
           "metadataStatus": "verified"
         }
       ]
+    },
+    "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0": {
+      "checkedAt": 1793578468,
+      "seasons": [
+        {
+          "season": 8,
+          "officialId": "umc.cmc.5rfal0wwpyghyzfhjv33hctrk",
+          "officialEpisodeCount": 8,
+          "year": "2026",
+          "releaseDate": "2026-02-27",
+          "metadataStatus": "verified"
+        }
+      ]
     }
   }
 }

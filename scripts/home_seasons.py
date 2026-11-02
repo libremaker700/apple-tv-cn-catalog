@@ -19,7 +19,7 @@ def enrich(home, root, get, now=None):
         status = 'cached'
         if now - previous.get('checkedAt', 0) >= 6 * 3600:
             try:
-                options, params, _ = parse_show(get(work['watchUrl']).text, identity)
+                options, params, _ = parse_show(get(work['watchUrl']).text, identity,allow_partial=True)
                 verified = []
                 for option in options:
                     meta = get('https://uts-api.itunes.apple.com/uts/v3/seasons/' + option['officialId'] + '/metadata?' + urlencode(params)).json()['data']
@@ -36,9 +36,18 @@ def enrich(home, root, get, now=None):
                 status = 'retained' if rows else 'unavailable'
         if rows:
             work['seasons'] = rows
+            bind_display_season(work)
         report.append({'officialId': identity, 'status': status, 'seasons': [r['season'] for r in rows]})
     dump(path, cache)
     return report
+
+def bind_display_season(work):
+    rows=[s for s in work.get('seasons',[])if s.get('metadataStatus')=='verified']
+    exact=[s for s in rows if s.get('releaseDate')==work.get('releaseDate')]
+    if len(exact)!=1:exact=[s for s in rows if str(s.get('year'))==str(work.get('year'))]
+    if len(exact)==1:
+        s=exact[0];work.update(artworkSeasonNumber=s['season'],artworkSeasonYear=str(s['year']),heroSeasonNumber=s['season'],seasonNumber=s['season'])
+    return work
 
 
 def reconcile(home, catalog):
