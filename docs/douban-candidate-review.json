@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T02:25:30+00:00",
+  "checkedAt": "2026-11-02T02:42:22+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -9,78 +9,116 @@
       "available": true,
       "subjectId": "36894893",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "12 12 12",
       "originalTitle": "",
       "year": "2026",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2026-11-13(美国)"
+      ],
+      "durations": []
     },
     "37161992": {
       "available": true,
       "subjectId": "37161992",
       "endpoint": "movie",
+      "mediaType": "tv",
       "title": "兜风 KTV 过圣诞",
       "originalTitle": "A Carpool Karaoke Christmas",
       "year": "2024",
-      "season": 0,
-      "aliases": []
+      "season": 1,
+      "aliases": [],
+      "releaseDates": [
+        "2024-12-15(美国)"
+      ],
+      "durations": [
+        "59分钟"
+      ]
     },
     "37862350": {
       "available": true,
       "subjectId": "37862350",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "奥卡菲娜：意想不到的厨师",
       "originalTitle": "The Unlikely Cook with Awkwafina",
       "year": "2026",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2026-11-06(美国)"
+      ],
+      "durations": []
     },
     "37262751": {
       "available": true,
       "subjectId": "37262751",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Be@rbrick",
       "originalTitle": "",
       "year": "2025",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2025-03-21(美国)"
+      ],
+      "durations": []
     },
     "26985567": {
       "available": true,
       "subjectId": "26985567",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "拼车K歌秀 第一季",
       "originalTitle": "Carpool Karaoke Season 1",
       "year": "2017",
       "season": 1,
       "aliases": [
         "拼车卡拉OK"
-      ]
+      ],
+      "releaseDates": [
+        "2017-08-09(美国)"
+      ],
+      "durations": []
     },
     "35599365": {
       "available": true,
       "subjectId": "35599365",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Doug Unplugs Season 2",
       "originalTitle": "",
       "year": "2021",
       "season": 2,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2021-09-17(美国)"
+      ],
+      "durations": []
     },
     "39008276": {
       "available": true,
       "subjectId": "39008276",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "Fleetwood Mac: The Chain",
       "originalTitle": "",
       "year": "2027",
       "season": 0,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2027-01-29(美国)"
+      ],
+      "durations": []
     },
     "30465634": {
       "available": true,
       "subjectId": "30465634",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "一级方程式：疾速争胜 第一季",
       "originalTitle": "Formula 1: Drive to Survive Season 1",
       "year": "2019",
@@ -89,62 +127,98 @@
         "一级方程式：极速求生(港)",
         "一级方程式：飆速求生(台)",
         "Formula 1：疾速争胜(新)"
+      ],
+      "releaseDates": [
+        "2019-03-08(美国)"
+      ],
+      "durations": [
+        "40分钟"
       ]
     },
     "35599354": {
       "available": true,
       "subjectId": "35599354",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Get Rolling With Otis Season 1",
       "originalTitle": "",
       "year": "2021",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2021-10-08(美国)"
+      ],
+      "durations": []
     },
     "35887604": {
       "available": true,
       "subjectId": "35887604",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "伟大的密码 第二季",
       "originalTitle": "Greatness Code Season 2",
       "year": "2022",
       "season": 2,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2022-05-13(美国)"
+      ],
+      "durations": [
+        "9分钟"
+      ]
     },
     "35576353": {
       "available": true,
       "subjectId": "35576353",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Hello, Jack! The Kindness Show Season 1",
       "originalTitle": "",
       "year": "2021",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2021-11-05(美国)"
+      ],
+      "durations": []
     },
     "35914330": {
       "available": true,
       "subjectId": "35914330",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "布偶小帮手 第三季",
       "originalTitle": "Helpsters Season 3",
       "year": "2022",
       "season": 3,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2022-05-27(美国)"
+      ],
+      "durations": []
     },
     "35138269": {
       "available": true,
       "subjectId": "35138269",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Helpsters Help You",
       "originalTitle": "",
       "year": "2020",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2020-04-23(美国)"
+      ],
+      "durations": [
+        "3分钟"
+      ]
     },
     "1308843": {
       "available": true,
       "subjectId": "1308843",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "我，机器人",
       "originalTitle": "I, Robot",
       "year": "2004",
@@ -153,12 +227,19 @@
         "智能叛变(港)",
         "机械公敌(台)",
         "我，机器人"
+      ],
+      "releaseDates": [
+        "2004-07-16(美国)"
+      ],
+      "durations": [
+        "115分钟"
       ]
     },
     "4091371": {
       "available": true,
       "subjectId": "4091371",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "查理·布朗，圣诞节又到了",
       "originalTitle": "It's Christmastime Again, Charlie Brown",
       "year": "1992",
@@ -166,22 +247,36 @@
       "aliases": [
         "史努比再度圣诞节",
         "查理·布朗，又是圣诞节"
+      ],
+      "releaseDates": [
+        "1992-11-07"
+      ],
+      "durations": [
+        "23分钟"
       ]
     },
     "5054433": {
       "available": true,
       "subjectId": "5054433",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "It's the Easter Beagle, Charlie Brown",
       "originalTitle": "",
       "year": "1974",
       "season": 0,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "1974"
+      ],
+      "durations": [
+        "30分钟"
+      ]
     },
     "10440138": {
       "available": true,
       "subjectId": "10440138",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "侏罗纪世界",
       "originalTitle": "Jurassic World",
       "year": "2015",
@@ -190,66 +285,102 @@
         "侏罗纪公园4",
         "Jurassic Park IV",
         "Jurassic Park 4"
+      ],
+      "releaseDates": [
+        "2015-06-10(中国大陆)"
+      ],
+      "durations": [
+        "124分钟"
       ]
     },
     "37443489": {
       "available": true,
       "subjectId": "37443489",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "KPOPPED",
       "originalTitle": "K-popped",
       "year": "2025",
       "season": 1,
       "aliases": [
         "케이팝드"
-      ]
+      ],
+      "releaseDates": [
+        "2025-08-29(韩国)"
+      ],
+      "durations": []
     },
     "2367101": {
       "available": true,
       "subjectId": "2367101",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "长路迢迢",
       "originalTitle": "Long Way Down",
       "year": "2008",
       "season": 1,
       "aliases": [
         "长路迢迢"
+      ],
+      "releaseDates": [
+        "2008-06-05"
+      ],
+      "durations": [
+        "47"
       ]
     },
     "35898683": {
       "available": true,
       "subjectId": "35898683",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "可爱的小农场 第一季",
       "originalTitle": "Lovely Little Farm Season 1",
       "year": "2022",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2022-06-10(英国)"
+      ],
+      "durations": []
     },
     "37357015": {
       "available": true,
       "subjectId": "37357015",
       "endpoint": "movie",
+      "mediaType": "tv",
       "title": "露露是一头犀牛 第一季",
       "originalTitle": "Lulu Is a Rhinoceros Season 1",
       "year": "2025",
-      "season": 0,
-      "aliases": []
+      "season": 1,
+      "aliases": [],
+      "releaseDates": [
+        "2025-05-30(美国)"
+      ],
+      "durations": []
     },
     "38483287": {
       "available": true,
       "subjectId": "38483287",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "Messi Mania",
       "originalTitle": "",
       "year": "2023",
       "season": 0,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2023-09-16(中国大陆)"
+      ],
+      "durations": [
+        "27分钟"
+      ]
     },
     "35224919": {
       "available": true,
       "subjectId": "35224919",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "拿破仑",
       "originalTitle": "Napoleon",
       "year": "2023",
@@ -257,46 +388,72 @@
       "aliases": [
         "士兵行囊",
         "Kitbag"
+      ],
+      "releaseDates": [
+        "2023-12-01(中国大陆)"
+      ],
+      "durations": [
+        "158分钟",
+        "157分钟(中国大陆)",
+        "206分钟(导演剪辑版)"
       ]
     },
     "37374251": {
       "available": true,
       "subjectId": "37374251",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Not a Box",
       "originalTitle": "",
       "year": "2025",
       "season": 1,
       "aliases": [
         "No es una caja"
-      ]
+      ],
+      "releaseDates": [
+        "2025-06-13(美国)"
+      ],
+      "durations": []
     },
     "35507236": {
       "available": true,
       "subjectId": "35507236",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "此时此刻",
       "originalTitle": "Now and Then",
       "year": "2022",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2022-05-20(美国)"
+      ],
+      "durations": [
+        "53分钟"
+      ]
     },
     "37290675": {
       "available": true,
       "subjectId": "37290675",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "通告大咖",
       "originalTitle": "Number One on the Call Sheet",
       "year": "2024",
       "season": 1,
       "aliases": [
         "叱咤好莱坞"
-      ]
+      ],
+      "releaseDates": [
+        "2024-03-28(美国)"
+      ],
+      "durations": []
     },
     "36160466": {
       "available": true,
       "subjectId": "36160466",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "星途恶果",
       "originalTitle": "Outcome",
       "year": "2026",
@@ -304,24 +461,38 @@
       "aliases": [
         "补锅巨星(港)",
         "腥途恶果(台)"
+      ],
+      "releaseDates": [
+        "2026-04-10(美国网络)"
+      ],
+      "durations": [
+        "83分钟"
       ]
     },
     "35758781": {
       "available": true,
       "subjectId": "35758781",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Pretzel and the Puppies",
       "originalTitle": "",
       "year": "2022",
       "season": 1,
       "aliases": [
         "Pretzel y sus cachorros"
+      ],
+      "releaseDates": [
+        "2022-02-11(美国)"
+      ],
+      "durations": [
+        "22分钟"
       ]
     },
     "37112671": {
       "available": true,
       "subjectId": "37112671",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Sago Mini Friends Season 3",
       "originalTitle": "",
       "year": "2024",
@@ -331,56 +502,87 @@
         "Le monde maxi de Sago Mini",
         "Sago Mini Freunde!",
         "サゴミニフレンズ"
+      ],
+      "releaseDates": [
+        "2024-11-22(美国)"
+      ],
+      "durations": [
+        "23分钟"
       ]
     },
     "36148714": {
       "available": true,
       "subjectId": "36148714",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Slumberkins",
       "originalTitle": "",
       "year": "2022",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2022-11-04(美国)"
+      ],
+      "durations": []
     },
     "38535567": {
       "available": true,
       "subjectId": "38535567",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "史努比特辑：有家真好",
       "originalTitle": "Snoopy Presents: There's No Place Like Home, Snoopy",
       "year": "2026",
       "season": 0,
       "aliases": [
         "史诺比开心呈献：在家千日好(港)"
+      ],
+      "releaseDates": [
+        "2026-07-31(美国)"
+      ],
+      "durations": [
+        "31分钟"
       ]
     },
     "38432357": {
       "available": true,
       "subjectId": "38432357",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "Snoopy Unleashed",
       "originalTitle": "",
       "year": "2028",
       "season": 0,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2028(未定)"
+      ],
+      "durations": []
     },
     "37054667": {
       "available": true,
       "subjectId": "37054667",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "低弧慢球",
       "originalTitle": "The Dink",
       "year": "2026",
       "season": 0,
       "aliases": [
         "匹克球"
+      ],
+      "releaseDates": [
+        "2026-07-24(美国网络)"
+      ],
+      "durations": [
+        "102分钟"
       ]
     },
     "36783469": {
       "available": true,
       "subjectId": "36783469",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "猎杀",
       "originalTitle": "Traqués",
       "year": "2026",
@@ -390,44 +592,68 @@
         "A l'Ombre des Forêts‎",
         "The Hunt",
         "狩猎"
+      ],
+      "releaseDates": [
+        "2026-03-04(法国)"
+      ],
+      "durations": [
+        "49分钟"
       ]
     },
     "35576361": {
       "available": true,
       "subjectId": "35576361",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "底线 第一季",
       "originalTitle": "The Line Season 1",
       "year": "2021",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2021-11-19(美国)"
+      ],
+      "durations": [
+        "55分钟"
+      ]
     },
     "35161274": {
       "available": true,
       "subjectId": "35161274",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "The Oprah Conversation",
       "originalTitle": "",
       "year": "2020",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2020-07-30(美国)"
+      ],
+      "durations": []
     },
     "35907552": {
       "available": true,
       "subjectId": "35907552",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "囧司徒的问题 第二季",
       "originalTitle": "The Problem with Jon Stewart Season 2",
       "year": "2022",
       "season": 2,
       "aliases": [
         "鍾史超域有問題(港)"
-      ]
+      ],
+      "releaseDates": [
+        "2022-10-07(美国)"
+      ],
+      "durations": []
     },
     "1297630": {
       "available": true,
       "subjectId": "1297630",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "第六感",
       "originalTitle": "The Sixth Sense",
       "year": "1999",
@@ -436,22 +662,34 @@
         "鬼眼(港)",
         "灵异第六感(台)",
         "第六感"
+      ],
+      "releaseDates": [
+        "1999-08-06(美国)"
+      ],
+      "durations": [
+        "107分钟"
       ]
     },
     "37344952": {
       "available": true,
       "subjectId": "37344952",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "必杀名单",
       "originalTitle": "The Wanted Man",
       "year": "2026",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2026(英国)"
+      ],
+      "durations": []
     },
     "1994879": {
       "available": true,
       "subjectId": "1994879",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "热带惊雷",
       "originalTitle": "Tropic Thunder",
       "year": "2008",
@@ -460,66 +698,105 @@
         "雷霆丧星(港)",
         "开麦拉惊魂(台)",
         "热带惊雷"
+      ],
+      "releaseDates": [
+        "2008-08-13(美国)"
+      ],
+      "durations": [
+        "107 分钟",
+        "121 分钟(未分级导演剪辑版)"
       ]
     },
     "35657015": {
       "available": true,
       "subjectId": "35657015",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "圣诞讼",
       "originalTitle": "'Twas the Fight Before Christmas",
       "year": "2021",
       "season": 0,
       "aliases": [
         "The Fight Before Christmas"
+      ],
+      "releaseDates": [
+        "2021-11-26(美国)"
+      ],
+      "durations": [
+        "91分钟"
       ]
     },
     "36877090": {
       "available": true,
       "subjectId": "36877090",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "海豹小子",
       "originalTitle": "Way of the Warrior Kid",
       "year": "2026",
       "season": 0,
       "aliases": [
         "少年作战指南"
+      ],
+      "releaseDates": [
+        "2026-11-25(美国网络)"
+      ],
+      "durations": [
+        "106分钟"
       ]
     },
     "5238948": {
       "available": true,
       "subjectId": "5238948",
       "endpoint": "movie",
+      "mediaType": "movie",
       "title": "神奇宠物救援队",
       "originalTitle": "Wonder Pets!",
       "year": "2006",
       "season": 0,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2006(美国)"
+      ],
+      "durations": [
+        "23"
+      ]
     },
     "37135394": {
       "available": true,
       "subjectId": "37135394",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Wonder Pets: In the City",
       "originalTitle": "",
       "year": "2024",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2024-12-13(美国)"
+      ],
+      "durations": []
     },
     "36988909": {
       "available": true,
       "subjectId": "36988909",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "Yo Gabba GabbaLand!",
       "originalTitle": "",
       "year": "2024",
       "season": 1,
-      "aliases": []
+      "aliases": [],
+      "releaseDates": [
+        "2024-08-09(美国)"
+      ],
+      "durations": []
     },
     "35853143": {
       "available": true,
       "subjectId": "35853143",
       "endpoint": "tv",
+      "mediaType": "tv",
       "title": "大巴劫案疑云",
       "originalTitle": "Tú también lo harías",
       "year": "2023",
@@ -527,6 +804,12 @@
       "aliases": [
         "You Would Do It Too",
         "你也会如此"
+      ],
+      "releaseDates": [
+        "2023-04-26(西班牙)"
+      ],
+      "durations": [
+        "30分钟"
       ]
     }
   },
@@ -544,19 +827,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
+      "status": "identity_no_chinese_name",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36894893",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "12 12 12",
           "originalTitle": "",
           "year": "2026",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2026-11-13(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -572,20 +862,29 @@
       "officialId": "umc.cmc.750u3qv5wz0d41pn1v2rvn7oe",
       "kind": "movie",
       "active": true,
-      "finalTitle": "",
-      "status": "unverified",
+      "finalTitle": "兜风 KTV 过圣诞",
+      "status": "verified_name_only",
       "requestedSeason": 0,
       "requestedYear": "2024",
+      "currentKind": "movie",
+      "nameOnlyScope": "single_episode_special",
       "subjects": [
         {
           "available": true,
           "subjectId": "37161992",
           "endpoint": "movie",
+          "mediaType": "tv",
           "title": "兜风 KTV 过圣诞",
           "originalTitle": "A Carpool Karaoke Christmas",
           "year": "2024",
-          "season": 0,
-          "aliases": []
+          "season": 1,
+          "aliases": [],
+          "releaseDates": [
+            "2024-12-15(美国)"
+          ],
+          "durations": [
+            "59分钟"
+          ]
         }
       ]
     },
@@ -605,16 +904,23 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37862350",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "奥卡菲娜：意想不到的厨师",
           "originalTitle": "The Unlikely Cook with Awkwafina",
           "year": "2026",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2026-11-06(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -634,16 +940,23 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2025",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37262751",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Be@rbrick",
           "originalTitle": "",
           "year": "2025",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2025-03-21(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -659,22 +972,29 @@
       "officialId": "umc.cmc.2wyy7chw6bmy46fekqlqq1ulb",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "拼车K歌秀",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2017",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "26985567",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "拼车K歌秀 第一季",
           "originalTitle": "Carpool Karaoke Season 1",
           "year": "2017",
           "season": 1,
           "aliases": [
             "拼车卡拉OK"
-          ]
+          ],
+          "releaseDates": [
+            "2017-08-09(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -691,19 +1011,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "season_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 2,
+      "requestedYear": "2021",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35599365",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Doug Unplugs Season 2",
           "originalTitle": "",
           "year": "2021",
           "season": 2,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2021-09-17(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -723,16 +1050,23 @@
       "status": "identity_no_chinese_name",
       "requestedSeason": 0,
       "requestedYear": "2027",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "39008276",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "Fleetwood Mac: The Chain",
           "originalTitle": "",
           "year": "2027",
           "season": 0,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2027-01-29(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -752,11 +1086,14 @@
       "status": "verified_name_preserved",
       "requestedSeason": 8,
       "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "30465634",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "一级方程式：疾速争胜 第一季",
           "originalTitle": "Formula 1: Drive to Survive Season 1",
           "year": "2019",
@@ -765,6 +1102,12 @@
             "一级方程式：极速求生(港)",
             "一级方程式：飆速求生(台)",
             "Formula 1：疾速争胜(新)"
+          ],
+          "releaseDates": [
+            "2019-03-08(美国)"
+          ],
+          "durations": [
+            "40分钟"
           ]
         }
       ]
@@ -783,6 +1126,8 @@
       "status": "no_candidate_supplied",
       "requestedSeason": 0,
       "requestedYear": "2026",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": []
     },
     {
@@ -798,19 +1143,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "status": "season_conflict",
+      "requestedSeason": 2,
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35599354",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Get Rolling With Otis Season 1",
           "originalTitle": "",
           "year": "2021",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2021-10-08(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -826,20 +1178,29 @@
       "officialId": "umc.cmc.4xpk6thd1574yu8hy2xdozyz6",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "season_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "finalTitle": "伟大的密码",
+      "status": "verified_name_preserved",
+      "requestedSeason": 2,
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35887604",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "伟大的密码 第二季",
           "originalTitle": "Greatness Code Season 2",
           "year": "2022",
           "season": 2,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2022-05-13(美国)"
+          ],
+          "durations": [
+            "9分钟"
+          ]
         }
       ]
     },
@@ -856,19 +1217,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "status": "season_conflict",
+      "requestedSeason": 2,
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35576353",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Hello, Jack! The Kindness Show Season 1",
           "originalTitle": "",
           "year": "2021",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2021-11-05(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -884,20 +1252,27 @@
       "officialId": "umc.cmc.kfh7cellb1a3dmiehxhvq8gl",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "season_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "finalTitle": "布偶小帮手",
+      "status": "verified_name_preserved",
+      "requestedSeason": 3,
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35914330",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "布偶小帮手 第三季",
           "originalTitle": "Helpsters Season 3",
           "year": "2022",
           "season": 3,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2022-05-27(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -917,16 +1292,25 @@
       "status": "identity_no_chinese_name",
       "requestedSeason": 1,
       "requestedYear": "2020",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35138269",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Helpsters Help You",
           "originalTitle": "",
           "year": "2020",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2020-04-23(美国)"
+          ],
+          "durations": [
+            "3分钟"
+          ]
         }
       ]
     },
@@ -946,11 +1330,14 @@
       "status": "verified_cached_not_in_current_catalog",
       "requestedSeason": 1,
       "requestedYear": "",
+      "currentKind": null,
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "1308843",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "我，机器人",
           "originalTitle": "I, Robot",
           "year": "2004",
@@ -959,6 +1346,12 @@
             "智能叛变(港)",
             "机械公敌(台)",
             "我，机器人"
+          ],
+          "releaseDates": [
+            "2004-07-16(美国)"
+          ],
+          "durations": [
+            "115分钟"
           ]
         }
       ]
@@ -979,11 +1372,14 @@
       "status": "verified_name_preserved",
       "requestedSeason": 0,
       "requestedYear": "1992",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "4091371",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "查理·布朗，圣诞节又到了",
           "originalTitle": "It's Christmastime Again, Charlie Brown",
           "year": "1992",
@@ -991,6 +1387,12 @@
           "aliases": [
             "史努比再度圣诞节",
             "查理·布朗，又是圣诞节"
+          ],
+          "releaseDates": [
+            "1992-11-07"
+          ],
+          "durations": [
+            "23分钟"
           ]
         }
       ]
@@ -1011,16 +1413,25 @@
       "status": "identity_no_chinese_name",
       "requestedSeason": 0,
       "requestedYear": "1974",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "5054433",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "It's the Easter Beagle, Charlie Brown",
           "originalTitle": "",
           "year": "1974",
           "season": 0,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "1974"
+          ],
+          "durations": [
+            "30分钟"
+          ]
         }
       ]
     },
@@ -1040,11 +1451,14 @@
       "status": "verified_cached_not_in_current_catalog",
       "requestedSeason": 1,
       "requestedYear": "",
+      "currentKind": null,
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "10440138",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "侏罗纪世界",
           "originalTitle": "Jurassic World",
           "year": "2015",
@@ -1053,6 +1467,12 @@
             "侏罗纪公园4",
             "Jurassic Park IV",
             "Jurassic Park 4"
+          ],
+          "releaseDates": [
+            "2015-06-10(中国大陆)"
+          ],
+          "durations": [
+            "124分钟"
           ]
         }
       ]
@@ -1070,21 +1490,28 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
+      "status": "identity_no_chinese_name",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2025",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37443489",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "KPOPPED",
           "originalTitle": "K-popped",
           "year": "2025",
           "season": 1,
           "aliases": [
             "케이팝드"
-          ]
+          ],
+          "releaseDates": [
+            "2025-08-29(韩国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1104,17 +1531,26 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2007",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "2367101",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "长路迢迢",
           "originalTitle": "Long Way Down",
           "year": "2008",
           "season": 1,
           "aliases": [
             "长路迢迢"
+          ],
+          "releaseDates": [
+            "2008-06-05"
+          ],
+          "durations": [
+            "47"
           ]
         }
       ]
@@ -1131,20 +1567,27 @@
       "officialId": "",
       "kind": "series",
       "active": true,
-      "finalTitle": "可爱的小农场",
-      "status": "verified_name_preserved",
+      "finalTitle": "",
+      "status": "year_conflict",
       "requestedSeason": 1,
-      "requestedYear": "2022",
+      "requestedYear": "2023",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35898683",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "可爱的小农场 第一季",
           "originalTitle": "Lovely Little Farm Season 1",
           "year": "2022",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2022-06-10(英国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1164,16 +1607,23 @@
       "status": "verified_name_preserved",
       "requestedSeason": 0,
       "requestedYear": "2025",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37357015",
           "endpoint": "movie",
+          "mediaType": "tv",
           "title": "露露是一头犀牛 第一季",
           "originalTitle": "Lulu Is a Rhinoceros Season 1",
           "year": "2025",
-          "season": 0,
-          "aliases": []
+          "season": 1,
+          "aliases": [],
+          "releaseDates": [
+            "2025-05-30(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1191,6 +1641,8 @@
       "status": "no_candidate_supplied",
       "requestedSeason": 0,
       "requestedYear": "2023",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": []
     },
     {
@@ -1209,16 +1661,25 @@
       "status": "identity_no_chinese_name",
       "requestedSeason": 0,
       "requestedYear": "2023",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "38483287",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "Messi Mania",
           "originalTitle": "",
           "year": "2023",
           "season": 0,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2023-09-16(中国大陆)"
+          ],
+          "durations": [
+            "27分钟"
+          ]
         }
       ]
     },
@@ -1234,15 +1695,18 @@
       "officialId": "umc.cmc.gtk0q9t2mapcjs75d31vvrs2",
       "kind": "movie",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "拿破仑：导演剪辑版",
+      "status": "verified_name_only",
       "requestedSeason": 0,
-      "requestedYear": "",
+      "requestedYear": "2024",
+      "currentKind": "movie",
+      "nameOnlyScope": "director_cut",
       "subjects": [
         {
           "available": true,
           "subjectId": "35224919",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "拿破仑",
           "originalTitle": "Napoleon",
           "year": "2023",
@@ -1250,6 +1714,14 @@
           "aliases": [
             "士兵行囊",
             "Kitbag"
+          ],
+          "releaseDates": [
+            "2023-12-01(中国大陆)"
+          ],
+          "durations": [
+            "158分钟",
+            "157分钟(中国大陆)",
+            "206分钟(导演剪辑版)"
           ]
         }
       ]
@@ -1270,18 +1742,25 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2025",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37374251",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Not a Box",
           "originalTitle": "",
           "year": "2025",
           "season": 1,
           "aliases": [
             "No es una caja"
-          ]
+          ],
+          "releaseDates": [
+            "2025-06-13(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1297,20 +1776,29 @@
       "officialId": "umc.cmc.1w3e47nmnt4o304oaauh4k2rm",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "此时此刻",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35507236",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "此时此刻",
           "originalTitle": "Now and Then",
           "year": "2022",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2022-05-20(美国)"
+          ],
+          "durations": [
+            "53分钟"
+          ]
         }
       ]
     },
@@ -1330,18 +1818,25 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2025",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37290675",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "通告大咖",
           "originalTitle": "Number One on the Call Sheet",
           "year": "2024",
           "season": 1,
           "aliases": [
             "叱咤好莱坞"
-          ]
+          ],
+          "releaseDates": [
+            "2024-03-28(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1357,15 +1852,18 @@
       "officialId": "umc.cmc.3uvjztuy2y8ve2rj6nvgyop89",
       "kind": "movie",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "星途恶果",
+      "status": "verified_name_preserved",
       "requestedSeason": 0,
-      "requestedYear": "",
+      "requestedYear": "2026",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36160466",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "星途恶果",
           "originalTitle": "Outcome",
           "year": "2026",
@@ -1373,6 +1871,12 @@
           "aliases": [
             "补锅巨星(港)",
             "腥途恶果(台)"
+          ],
+          "releaseDates": [
+            "2026-04-10(美国网络)"
+          ],
+          "durations": [
+            "83分钟"
           ]
         }
       ]
@@ -1393,17 +1897,26 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35758781",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Pretzel and the Puppies",
           "originalTitle": "",
           "year": "2022",
           "season": 1,
           "aliases": [
             "Pretzel y sus cachorros"
+          ],
+          "releaseDates": [
+            "2022-02-11(美国)"
+          ],
+          "durations": [
+            "22分钟"
           ]
         }
       ]
@@ -1420,15 +1933,18 @@
       "officialId": "umc.cmc.4ckulbycyeuavnlen3du06vvy",
       "kind": "series",
       "active": true,
-      "finalTitle": "Sago Mini 小小伙伴(港/台)",
-      "status": "verified_name_preserved",
-      "requestedSeason": 1,
-      "requestedYear": "2022",
+      "finalTitle": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 3,
+      "requestedYear": "2024",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37112671",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Sago Mini Friends Season 3",
           "originalTitle": "",
           "year": "2024",
@@ -1438,6 +1954,12 @@
             "Le monde maxi de Sago Mini",
             "Sago Mini Freunde!",
             "サゴミニフレンズ"
+          ],
+          "releaseDates": [
+            "2024-11-22(美国)"
+          ],
+          "durations": [
+            "23分钟"
           ]
         }
       ]
@@ -1455,19 +1977,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
+      "status": "identity_no_chinese_name",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36148714",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Slumberkins",
           "originalTitle": "",
           "year": "2022",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2022-11-04(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1483,21 +2012,30 @@
       "officialId": "umc.cmc.52sgmi3vdpedurrbtz6louqqo",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "史努比特辑：有家真好",
+      "status": "verified_name_preserved",
       "requestedSeason": 0,
-      "requestedYear": "",
+      "requestedYear": "2026",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "38535567",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "史努比特辑：有家真好",
           "originalTitle": "Snoopy Presents: There's No Place Like Home, Snoopy",
           "year": "2026",
           "season": 0,
           "aliases": [
             "史诺比开心呈献：在家千日好(港)"
+          ],
+          "releaseDates": [
+            "2026-07-31(美国)"
+          ],
+          "durations": [
+            "31分钟"
           ]
         }
       ]
@@ -1518,16 +2056,23 @@
       "status": "year_conflict",
       "requestedSeason": 0,
       "requestedYear": "2027",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "38432357",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "Snoopy Unleashed",
           "originalTitle": "",
           "year": "2028",
           "season": 0,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2028(未定)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1543,21 +2088,30 @@
       "officialId": "umc.cmc.5tugaz9vt498ajn7q64ypaqxn",
       "kind": "movie",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "低弧慢球",
+      "status": "verified_name_preserved",
       "requestedSeason": 0,
-      "requestedYear": "",
+      "requestedYear": "2026",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37054667",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "低弧慢球",
           "originalTitle": "The Dink",
           "year": "2026",
           "season": 0,
           "aliases": [
             "匹克球"
+          ],
+          "releaseDates": [
+            "2026-07-24(美国网络)"
+          ],
+          "durations": [
+            "102分钟"
           ]
         }
       ]
@@ -1574,15 +2128,18 @@
       "officialId": "umc.cmc.4w9agfyrx2fgc5k9rls2cffho",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "猎杀",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36783469",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "猎杀",
           "originalTitle": "Traqués",
           "year": "2026",
@@ -1592,6 +2149,12 @@
             "A l'Ombre des Forêts‎",
             "The Hunt",
             "狩猎"
+          ],
+          "releaseDates": [
+            "2026-03-04(法国)"
+          ],
+          "durations": [
+            "49分钟"
           ]
         }
       ]
@@ -1608,20 +2171,29 @@
       "officialId": "umc.cmc.4u53f7zokr7g40tjj4gs61xbu",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "底线",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2021",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35576361",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "底线 第一季",
           "originalTitle": "The Line Season 1",
           "year": "2021",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2021-11-19(美国)"
+          ],
+          "durations": [
+            "55分钟"
+          ]
         }
       ]
     },
@@ -1641,16 +2213,23 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2020",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35161274",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "The Oprah Conversation",
           "originalTitle": "",
           "year": "2020",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2020-07-30(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1668,6 +2247,8 @@
       "status": "no_candidate_supplied",
       "requestedSeason": 1,
       "requestedYear": "1966",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": []
     },
     {
@@ -1682,22 +2263,29 @@
       "officialId": "umc.cmc.4fcexvzqezr25p9weks6sxpob",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "season_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "finalTitle": "囧司徒的问题",
+      "status": "verified_name_preserved",
+      "requestedSeason": 2,
+      "requestedYear": "2022",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35907552",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "囧司徒的问题 第二季",
           "originalTitle": "The Problem with Jon Stewart Season 2",
           "year": "2022",
           "season": 2,
           "aliases": [
             "鍾史超域有問題(港)"
-          ]
+          ],
+          "releaseDates": [
+            "2022-10-07(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1717,11 +2305,14 @@
       "status": "verified_cached_not_in_current_catalog",
       "requestedSeason": 1,
       "requestedYear": "",
+      "currentKind": null,
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "1297630",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "第六感",
           "originalTitle": "The Sixth Sense",
           "year": "1999",
@@ -1730,6 +2321,12 @@
             "鬼眼(港)",
             "灵异第六感(台)",
             "第六感"
+          ],
+          "releaseDates": [
+            "1999-08-06(美国)"
+          ],
+          "durations": [
+            "107分钟"
           ]
         }
       ]
@@ -1749,17 +2346,24 @@
       "finalTitle": "",
       "status": "year_conflict",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2027",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37344952",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "必杀名单",
           "originalTitle": "The Wanted Man",
           "year": "2026",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2026(英国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1779,11 +2383,14 @@
       "status": "verified_cached_not_in_current_catalog",
       "requestedSeason": 1,
       "requestedYear": "",
+      "currentKind": null,
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "1994879",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "热带惊雷",
           "originalTitle": "Tropic Thunder",
           "year": "2008",
@@ -1792,6 +2399,13 @@
             "雷霆丧星(港)",
             "开麦拉惊魂(台)",
             "热带惊雷"
+          ],
+          "releaseDates": [
+            "2008-08-13(美国)"
+          ],
+          "durations": [
+            "107 分钟",
+            "121 分钟(未分级导演剪辑版)"
           ]
         }
       ]
@@ -1808,21 +2422,30 @@
       "officialId": "umc.cmc.lvpflyaolcrevsfje3rt5l6p?ctx_brand=tvs.sbd.4000",
       "kind": "movie",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "圣诞讼",
+      "status": "verified_name_preserved",
       "requestedSeason": 0,
-      "requestedYear": "",
+      "requestedYear": "2021",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35657015",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "圣诞讼",
           "originalTitle": "'Twas the Fight Before Christmas",
           "year": "2021",
           "season": 0,
           "aliases": [
             "The Fight Before Christmas"
+          ],
+          "releaseDates": [
+            "2021-11-26(美国)"
+          ],
+          "durations": [
+            "91分钟"
           ]
         }
       ]
@@ -1843,17 +2466,26 @@
       "status": "verified_name_preserved",
       "requestedSeason": 0,
       "requestedYear": "2026",
+      "currentKind": "movie",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36877090",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "海豹小子",
           "originalTitle": "Way of the Warrior Kid",
           "year": "2026",
           "season": 0,
           "aliases": [
             "少年作战指南"
+          ],
+          "releaseDates": [
+            "2026-11-25(美国网络)"
+          ],
+          "durations": [
+            "106分钟"
           ]
         }
       ]
@@ -1874,16 +2506,25 @@
       "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2006",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "5238948",
           "endpoint": "movie",
+          "mediaType": "movie",
           "title": "神奇宠物救援队",
           "originalTitle": "Wonder Pets!",
           "year": "2006",
           "season": 0,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2006(美国)"
+          ],
+          "durations": [
+            "23"
+          ]
         }
       ]
     },
@@ -1900,19 +2541,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "status": "season_conflict",
+      "requestedSeason": 2,
+      "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "37135394",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Wonder Pets: In the City",
           "originalTitle": "",
           "year": "2024",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2024-12-13(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1929,19 +2577,26 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "year_conflict",
-      "requestedSeason": 1,
-      "requestedYear": "",
+      "status": "season_conflict",
+      "requestedSeason": 2,
+      "requestedYear": "2026",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "36988909",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "Yo Gabba GabbaLand!",
           "originalTitle": "",
           "year": "2024",
           "season": 1,
-          "aliases": []
+          "aliases": [],
+          "releaseDates": [
+            "2024-08-09(美国)"
+          ],
+          "durations": []
         }
       ]
     },
@@ -1957,15 +2612,18 @@
       "officialId": "umc.cmc.7ad5xech8wu5nh2p221ymy9r2",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
+      "finalTitle": "大巴劫案疑云",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
+      "requestedYear": "2024",
+      "currentKind": "series",
+      "nameOnlyScope": null,
       "subjects": [
         {
           "available": true,
           "subjectId": "35853143",
           "endpoint": "tv",
+          "mediaType": "tv",
           "title": "大巴劫案疑云",
           "originalTitle": "Tú también lo harías",
           "year": "2023",
@@ -1973,18 +2631,24 @@
           "aliases": [
             "You Would Do It Too",
             "你也会如此"
+          ],
+          "releaseDates": [
+            "2023-04-26(西班牙)"
+          ],
+          "durations": [
+            "30分钟"
           ]
         }
       ]
     }
   ],
   "summary": {
-    "identity_no_chinese_name": 4,
+    "identity_no_chinese_name": 9,
     "no_candidate_supplied": 3,
     "season_conflict": 4,
-    "unverified": 1,
     "verified_cached_not_in_current_catalog": 4,
-    "verified_name_preserved": 14,
-    "year_conflict": 19
+    "verified_name_only": 2,
+    "verified_name_preserved": 24,
+    "year_conflict": 3
   }
 }

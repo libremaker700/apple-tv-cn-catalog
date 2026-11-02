@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T02:19:27+00:00",
+  "checkedAt": "2026-11-02T02:41:57+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -133,7 +133,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
@@ -144,115 +145,10 @@
       "result": {
         "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
         "en": "A Carpool Karaoke Christmas",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "37161992",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          }
-        ]
-      },
-      "status": "unverified"
-    },
-    {
-      "slug": "awkwafina-the-unlikely-cook",
-      "en": "Awkwafina: The Unlikely Cook",
-      "year": "2026",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "awkwafina-the-unlikely-cook",
-        "en": "Awkwafina: The Unlikely Cook",
         "searchStatus": "douban_direct",
         "confidence": "VERIFIED",
         "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 1,
-          "subjectId": "37862350",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "奥卡菲娜：意想不到的厨师",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "bearbrick",
-      "en": "BE@RBRICK",
-      "year": "2025",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "bearbrick",
-        "en": "BE@RBRICK",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "积木熊",
+        "title": "兜风 KTV 过圣诞",
         "sourceMatch": null,
         "sourceEvents": []
       },
@@ -267,102 +163,20 @@
       "result": {
         "slug": "carpool-karaoke-the-series",
         "en": "Carpool Karaoke: The Series",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "26985567",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "30257718",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "34907957",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "38656604",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "26985567",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "拼车K歌秀",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "slug": "doug-unplugs",
@@ -472,7 +286,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "fleetwood-mac-the-chain",
@@ -584,7 +399,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "fraggle-rock-a-holiday-gift",
@@ -699,7 +515,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "hello-jack-the-kindness-show",
@@ -805,7 +622,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
@@ -891,7 +709,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-17y48i5ko6gft5ieh148nzqzn",
@@ -1007,7 +826,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "kpopped",
@@ -1096,25 +916,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
-    },
-    {
-      "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
-      "en": "Long Way Down",
-      "year": "2007",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
-        "en": "Long Way Down",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "长路迢迢",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "lovely-little-farm",
@@ -1200,25 +1003,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "lulu-is-a-rhinoceros",
-      "en": "Lulu Is a Rhinoceros",
-      "year": "2025",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "lulu-is-a-rhinoceros",
-        "en": "Lulu Is a Rhinoceros",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "露露是一头犀牛",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-13tm01bb2zcat3s04rxgju0zh",
@@ -1343,7 +1129,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "napoleon-the-directors-cut",
@@ -1354,116 +1141,10 @@
       "result": {
         "slug": "napoleon-the-directors-cut",
         "en": "Napoleon: The Director’s Cut",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 302,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 302,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 302,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "35224919",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "5174889",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "11600065",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "34836705",
-            "status": "UNVERIFIED"
-          }
-        ]
-      },
-      "status": "unverified"
-    },
-    {
-      "slug": "not-a-box",
-      "en": "Not a Box",
-      "year": "2025",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "not-a-box",
-        "en": "Not a Box",
-        "searchStatus": "ok",
+        "searchStatus": "douban_direct",
         "confidence": "VERIFIED",
         "sourcePolicy": "not_checked_name_review",
-        "title": "魔盒",
+        "title": "拿破仑：导演剪辑版",
         "sourceMatch": null,
         "sourceEvents": []
       },
@@ -1478,9 +1159,53 @@
       "result": {
         "slug": "now-and-then",
         "en": "Now & Then",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "35507236",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "此时此刻",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "sago-mini-friends",
+      "en": "Sago Mini Friends",
+      "year": "2024",
+      "season": 3,
+      "skip": "",
+      "result": {
+        "slug": "sago-mini-friends",
+        "en": "Sago Mini Friends",
         "searchStatus": "ok",
         "confidence": "UNVERIFIED",
+        "identityVerifiedWithoutChineseName": true,
+        "verifiedIdentity": {
+          "douban_id": "37112671",
+          "year": "2024",
+          "season": 3,
+          "actors": [
+            "Ian Ho",
+            "Claire Poon",
+            "Liam McKenna"
+          ],
+          "directors": [
+            "Chad Hicks"
+          ],
+          "url": "https://movie.douban.com/subject/37112671/"
+        },
         "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": true
+          },
           {
             "host": "movie.douban.com",
             "status": 200,
@@ -1493,12 +1218,7 @@
           },
           {
             "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
+            "status": 200,
             "cached": false
           },
           {
@@ -1545,8 +1265,13 @@
         "subjectDiagnostics": [
           {
             "stage": "subject",
-            "subject_id": "35507236",
-            "status": "UNVERIFIED"
+            "subject_id": "37112671",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "37112671",
+            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
           },
           {
             "stage": "suggest",
@@ -1558,82 +1283,17 @@
           },
           {
             "stage": "subject",
-            "subject_id": "35116319",
+            "subject_id": "3286531",
             "status": "UNVERIFIED"
           },
           {
             "stage": "subject",
-            "subject_id": "35743120",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "24844037",
+            "subject_id": "27205200",
             "status": "UNVERIFIED"
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "number-one-on-the-call-sheet",
-      "en": "Number One on the Call Sheet",
-      "year": "2025",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "number-one-on-the-call-sheet",
-        "en": "Number One on the Call Sheet",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "通告大咖",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "pretzel-and-the-puppies",
-      "en": "Pretzel and the Puppies",
-      "year": "2022",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "pretzel-and-the-puppies",
-        "en": "Pretzel and the Puppies",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "椒盐卷饼和小狗",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "sago-mini-friends",
-      "en": "Sago Mini Friends",
-      "year": "2024",
-      "season": 3,
-      "skip": "",
-      "result": {
-        "slug": "sago-mini-friends",
-        "en": "Sago Mini Friends",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 3,
-          "subjectId": "37112671",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "Sago Mini 小小伙伴(港/台)",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "identity_no_chinese_name"
     },
     {
       "slug": "slumberkins",
@@ -1727,7 +1387,8 @@
           }
         ]
       },
-      "status": "identity_no_chinese_name"
+      "status": "identity_no_chinese_name",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
@@ -1738,102 +1399,20 @@
       "result": {
         "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
         "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "identityVerifiedWithoutChineseName": true,
-        "verifiedIdentity": {
-          "douban_id": "38479326",
-          "year": "2026",
-          "season": 1,
-          "actors": [],
-          "directors": [],
-          "url": "https://movie.douban.com/subject/38479326/"
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "38535567",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
         },
-        "verificationEvents": [
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "watch.plex.tv",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "38535567",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "38479326",
-            "status": "IDENTITY_VERIFIED_NO_CHINESE_NAME"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35337632",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "title": "史努比特辑：有家真好",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "status": "identity_no_chinese_name"
+      "status": "verified"
     },
     {
       "slug": "snoopy-unleashed",
@@ -1925,25 +1504,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "the-oprah-conversation",
-      "en": "The Oprah Conversation",
-      "year": "2020",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "the-oprah-conversation",
-        "en": "The Oprah Conversation",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "奥普拉名人会",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-63led2pm5a1w4wvabyn4xxxjp",
@@ -2053,31 +1615,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "way-of-the-warrior-kid",
-      "en": "Way of the Warrior Kid",
-      "year": "2026",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "way-of-the-warrior-kid",
-        "en": "Way of the Warrior Kid",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "36877090",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "海豹小子",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "wonder-pets-in-the-city",
@@ -2183,7 +1722,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "yo-gabba-gabbaland",
@@ -2289,7 +1829,191 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
+    },
+    {
+      "slug": "awkwafina-the-unlikely-cook",
+      "en": "Awkwafina: The Unlikely Cook",
+      "year": "2026",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "awkwafina-the-unlikely-cook",
+        "en": "Awkwafina: The Unlikely Cook",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "37862350",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "奥卡菲娜：意想不到的厨师",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "bearbrick",
+      "en": "BE@RBRICK",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "bearbrick",
+        "en": "BE@RBRICK",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "积木熊",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
+      "en": "Long Way Down",
+      "year": "2007",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
+        "en": "Long Way Down",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "长路迢迢",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "lulu-is-a-rhinoceros",
+      "en": "Lulu Is a Rhinoceros",
+      "year": "2025",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "lulu-is-a-rhinoceros",
+        "en": "Lulu Is a Rhinoceros",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "露露是一头犀牛",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "not-a-box",
+      "en": "Not a Box",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "not-a-box",
+        "en": "Not a Box",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "魔盒",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "number-one-on-the-call-sheet",
+      "en": "Number One on the Call Sheet",
+      "year": "2025",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "number-one-on-the-call-sheet",
+        "en": "Number One on the Call Sheet",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "通告大咖",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "pretzel-and-the-puppies",
+      "en": "Pretzel and the Puppies",
+      "year": "2022",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "pretzel-and-the-puppies",
+        "en": "Pretzel and the Puppies",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "椒盐卷饼和小狗",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "the-oprah-conversation",
+      "en": "The Oprah Conversation",
+      "year": "2020",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-oprah-conversation",
+        "en": "The Oprah Conversation",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "奥普拉名人会",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "way-of-the-warrior-kid",
+      "en": "Way of the Warrior Kid",
+      "year": "2026",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "way-of-the-warrior-kid",
+        "en": "Way of the Warrior Kid",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "36877090",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "海豹小子",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
     },
     {
       "slug": "home-49nuxpa3uc9ezls951h0ra32r",
@@ -2883,7 +2607,7 @@
     "future_release": 1,
     "identity_no_chinese_name": 9,
     "missing_identity": 1,
-    "unverified": 12,
-    "verified": 33
+    "unverified": 8,
+    "verified": 37
   }
 }
