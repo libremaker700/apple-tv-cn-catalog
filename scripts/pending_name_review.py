@@ -65,7 +65,12 @@ def review(root=ROOT,limit=64,slugs=None):
         report['records'].append(result);report['summary']={status:sum(r['status']==status for r in report['records'])for status in sorted({r['status']for r in report['records']})}
         dump(path,report)
         print(json.dumps({'slug':row['slug'],'status':result['status']},ensure_ascii=True),flush=True)
-    status_names={'identity_no_chinese_name':'身份已核实，条目未提供中文名','verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
+    return save_report(root,report)
+
+def save_report(root,report):
+    report['summary']={status:sum(r['status']==status for r in report['records'])for status in sorted({r['status']for r in report['records']})}
+    dump(root/'docs/pending-name-review.json',report)
+    status_names={'identity_no_chinese_name':'身份已核实，暂无经片库确认的中文名','verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
     lines=['# 待匹配中文名复核','', '本报告复核中文名，不使用 Gemini。已上线且豆瓣身份已核实的作品，使用 YDC／Tavily 查询候选名，再查片库；同片同季且返回有效媒体地址后按片库数量选名，否则保留豆瓣名称。超时不代表片库未收录；媒体地址不等于播放器已出画面。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
     for row in report['records']:
         cells=[row['en'],status_names[row['status']],row.get('result',{}).get('title',''),str(row['year'])+' / '+str(row['season'])]
@@ -73,5 +78,30 @@ def review(root=ROOT,limit=64,slugs=None):
     (root/'docs/pending-name-review.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
     return report
 
+def summarize(root=ROOT):
+    """Refresh the report from completed evidence without issuing network requests."""
+    path=root/'docs/pending-name-review.json'
+    report=load(path)if path.exists()else{'records':[]}
+    main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json')
+    works={w['slug']:w for w in main['entries']+home['works']}
+    rows={r['slug']:r for r in report['records']}
+    cache=load(root/'data/mainland-name-cache.json')
+    for slug,cached in cache.get('records',{}).items():
+        result=cached.get('result',{});work=works.get(slug)
+        if not work or not result.get('sourceNameResolution'):continue
+        zh=work.get('zh')or{};chinese=bool(re.search(r'[\u3400-\u9fff]',zh.get('title','')))
+        # The latest committed catalog, rather than an earlier Plex result,
+        # determines whether the name is still pending.
+        row=rows.get(slug)
+        if row is None:
+            row={'slug':slug,'en':work['en'],'year':str(zh.get('_identityYear')or work.get('year','')),'season':0 if work['kind']=='movie'else int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1),'skip':''}
+            report['records'].append(row)
+        row.update(result=result,status='verified'if chinese else'identity_no_chinese_name')
+        row.pop('reusedVerified',None);row.pop('notRecheckedThisRun',None)
+        report['sourceProbingPerformed']=True
+    report['checkedAt']=datetime.now(timezone.utc).isoformat(timespec='seconds')
+    report['geminiUsed']=False
+    return save_report(root,report)
+
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int,default=64);parser.add_argument('--slug',action='append');args=parser.parse_args();value=review(limit=args.limit,slugs=args.slug);print(json.dumps(value['summary'],ensure_ascii=True))
+    parser=argparse.ArgumentParser();parser.add_argument('--limit',type=int,default=64);parser.add_argument('--slug',action='append');parser.add_argument('--summarize',action='store_true');args=parser.parse_args();value=summarize()if args.summarize else review(limit=args.limit,slugs=args.slug);print(json.dumps(value['summary'],ensure_ascii=True))

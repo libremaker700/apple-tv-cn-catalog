@@ -14,7 +14,7 @@
       "confidence": "IDENTITY_ONLY",
       "sourceNameResolution": {
         "policy": "ai-answer-verified-source-or-douban-v2",
-        "aiStatus": "accounts_unavailable",
+        "aiStatus": "no_candidate_answer",
         "aiService": null,
         "aiCandidates": [],
         "aiSources": [],

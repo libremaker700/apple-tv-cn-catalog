@@ -51,6 +51,11 @@ class CandidateAccounts(unittest.TestCase):
         self.assertEqual(client.candidate_names('名字')['names'],['不是盒子'])
         self.assertEqual(session.post.call_args.args[0],'https://api.you.com/v1/research')
         self.assertEqual(session.post.call_args.kwargs['json']['research_effort'],'standard')
+    def test_empty_success_is_not_account_failure_or_quota(self):
+        session=Mock();session.post.side_effect=[self.response(200,{'output':{'content':'{"names":[]}'}}),self.response(200,{'answer':'{"names":[]}'})]
+        client=SearchAccounts(session,{'ydc':[('a','key1')],'tavily':[('b','key2')]})
+        self.assertEqual(client.candidate_names('name')['status'],'no_candidate_answer')
+        self.assertEqual(client.disabled,set())
 
 class Publication(unittest.TestCase):
     def test_stale_plex_name_is_replaced_and_no_second_source_probe_occurs(self):

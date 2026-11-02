@@ -16,6 +16,7 @@ class SearchAccounts:
     def candidate_names(self,question):
         """Ask an answer-generating service; returned names remain untrusted queries."""
         from opencc import OpenCC
+        answered=False
         for service in ('ydc','tavily'):
             for name,key in self.pools.get(service,[]):
                 if name in self.disabled:continue
@@ -34,6 +35,7 @@ class SearchAccounts:
                     if status!=200:
                         if status==401:self.disabled.add(name);continue
                         break  # Endpoint/configuration/rate errors are not fixed by cycling the same service's keys.
+                    answered=True
                     output=data.get('output')or{};answer=output.get('content','')if service=='ydc'else data.get('answer','')
                     text=answer if isinstance(answer,str)else json.dumps(answer,ensure_ascii=False)
                     text=text[:12000];names=[]
@@ -49,7 +51,7 @@ class SearchAccounts:
                     break  # An empty answer can use the other service, not identical keys.
                 except (requests.RequestException,ValueError,TypeError):
                     self.events.append({'service':service,'account':name,'stage':'candidate_answer','http':0});break
-        return {'names':[],'sources':[],'status':'accounts_unavailable'}
+        return {'names':[],'sources':[],'status':'no_candidate_answer'if answered else'accounts_unavailable'}
     def search(self,query):
         for service in ('ydc','tavily'):
             for name,key in self.pools.get(service,[]):

@@ -788,7 +788,7 @@
         "confidence": "IDENTITY_ONLY",
         "sourceNameResolution": {
           "policy": "ai-answer-verified-source-or-douban-v2",
-          "aiStatus": "accounts_unavailable",
+          "aiStatus": "no_candidate_answer",
           "aiService": null,
           "aiCandidates": [],
           "aiSources": [],
@@ -1607,7 +1607,7 @@
           "answer": {
             "names": [],
             "sources": [],
-            "status": "accounts_unavailable"
+            "status": "no_candidate_answer"
           },
           "expiresAt": 1793593759,
           "discovery": {
