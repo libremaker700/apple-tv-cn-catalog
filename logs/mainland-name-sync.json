@@ -13,51 +13,13 @@
       "searchStatus": "ai_candidates_then_sources_or_douban",
       "confidence": "IDENTITY_ONLY",
       "sourceNameResolution": {
-        "policy": "ai-answer-verified-source-or-douban-v1",
-        "aiStatus": "ok",
-        "aiService": "ydc",
-        "aiCandidates": [
-          "不是一个纸箱子",
-          "不是盒子"
-        ],
-        "aiSources": [
-          {
-            "title": "Not a Box │ 誠品線上",
-            "url": "https://www.eslite.com/product/1001294883041211"
-          },
-          {
-            "title": "敦煌網路書局 E-CAVES",
-            "url": "https://www.cavesbooks.com.tw/zh/Shop/WSP20241101100658C0U/Goods/GDS2013112704241333E"
-          },
-          {
-            "title": "Not a Box - Wikidata",
-            "url": "https://www.wikidata.org/wiki/Q7062251"
-          },
-          {
-            "title": "豆瓣各小组别称，持续收集更新中",
-            "url": "https://www.douban.com/group/topic/204035535/"
-          },
-          {
-            "title": "豆瓣 - 维基百科，自由的百科全书",
-            "url": "https://zh.wikipedia.org/wiki/%E8%B1%86%E7%93%A3"
-          },
-          {
-            "title": "能不能解释一下豆瓣各组别称（+组员全称）是什...",
-            "url": "https://www.douban.com/group/topic/163404331/"
-          },
-          {
-            "title": "游戏 - 豆瓣",
-            "url": "https://m.douban.com/game/subject/35236279/"
-          },
-          {
-            "title": "豆瓣",
-            "url": "https://m.douban.com/movie/subject/25885742/reviews"
-          }
-        ],
+        "policy": "ai-answer-verified-source-or-douban-v2",
+        "aiStatus": "accounts_unavailable",
+        "aiService": null,
+        "aiCandidates": [],
+        "aiSources": [],
         "queryNames": [
           "不是一个盒子",
-          "不是一个纸箱子",
-          "不是盒子",
           "Not a Box"
         ],
         "discoveredAliases": [],
@@ -87,27 +49,6 @@
           "routes": 0
         },
         {
-          "provider": "jy",
-          "http": 200,
-          "reason": "checked",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "bd",
-          "http": 403,
-          "reason": "http"
-        },
-        {
-          "provider": "bd",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
           "provider": "hn",
           "http": 200,
           "reason": "checked",
@@ -116,6 +57,19 @@
           "routes": 0
         },
         {
+          "provider": "bd",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "bd",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
           "provider": "dytt",
           "http": 403,
           "reason": "http"
@@ -124,6 +78,14 @@
           "provider": "dytt",
           "http": 200,
           "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "jy",
+          "http": 200,
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -161,7 +123,7 @@
           "routes": 0
         },
         {
-          "provider": "bf",
+          "provider": "xl",
           "http": 200,
           "reason": "checked",
           "matchedRecords": 0,
@@ -177,13 +139,9 @@
           "routes": 0
         },
         {
-          "provider": "sb",
-          "http": 0
-        },
-        {
-          "provider": "sb",
+          "provider": "bf",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -210,35 +168,35 @@
           "routes": 0
         },
         {
-          "provider": "zzoc",
-          "http": 403,
-          "reason": "http"
-        },
-        {
-          "provider": "zzoc",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "5o5k",
-          "http": 403,
-          "reason": "http"
-        },
-        {
-          "provider": "5o5k",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "xl",
+          "provider": "sb",
           "http": 200,
           "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "5o5k",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "5o5k",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "zzoc",
+          "http": 403,
+          "reason": "http"
+        },
+        {
+          "provider": "zzoc",
+          "http": 200,
+          "reason": "partial_results",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -253,12 +211,8 @@
         },
         {
           "provider": "zy360",
-          "http": 0
-        },
-        {
-          "provider": "zy360",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
@@ -277,6 +231,22 @@
           "routes": 0
         },
         {
+          "provider": "wujin",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "maoyan",
+          "http": 200,
+          "reason": "checked",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
           "provider": "iqy",
           "http": 0
         },
@@ -289,35 +259,11 @@
           "routes": 0
         },
         {
-          "provider": "wujin",
-          "http": 0
-        },
-        {
-          "provider": "wujin",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
           "provider": "zuida",
           "http": 0
         },
         {
           "provider": "zuida",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "maoyan",
-          "http": 0
-        },
-        {
-          "provider": "maoyan",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -338,48 +284,27 @@
           "routes": 0
         },
         {
-          "provider": "jiji",
-          "http": 0
-        },
-        {
-          "provider": "jiji",
+          "provider": "ikun",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
         },
         {
           "provider": "uku",
-          "http": 0
-        },
-        {
-          "provider": "uku",
           "http": 200,
-          "reason": "partial_results",
+          "reason": "checked",
           "matchedRecords": 0,
           "identityRecords": 0,
           "routes": 0
         },
         {
-          "provider": "ikanbot",
-          "http": 0,
-          "reason": "identity_pending"
-        },
-        {
-          "provider": "ikanbot",
-          "http": 200,
-          "reason": "partial_results",
-          "matchedRecords": 0,
-          "identityRecords": 0,
-          "routes": 0
-        },
-        {
-          "provider": "ikun",
+          "provider": "jiji",
           "http": 0
         },
         {
-          "provider": "ikun",
+          "provider": "jiji",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -393,6 +318,19 @@
         },
         {
           "provider": "shenhua",
+          "http": 200,
+          "reason": "partial_results",
+          "matchedRecords": 0,
+          "identityRecords": 0,
+          "routes": 0
+        },
+        {
+          "provider": "ikanbot",
+          "http": 0,
+          "reason": "identity_pending"
+        },
+        {
+          "provider": "ikanbot",
           "http": 200,
           "reason": "partial_results",
           "matchedRecords": 0,
@@ -551,11 +489,11 @@
         },
         {
           "provider": "changzhang",
-          "reason": "transport"
+          "reason": "page_limit"
         },
         {
           "provider": "shared",
-          "reason": "session_or_api_rejected"
+          "reason": "detail_limit"
         },
         {
           "provider": "ikanbot",
@@ -599,7 +537,14 @@
       "stage": "candidate_answer",
       "http": 200,
       "reason": "http"
+    },
+    {
+      "service": "tavily",
+      "account": "TAVILY_API_KEY_1",
+      "stage": "candidate_answer",
+      "http": 200,
+      "reason": "http"
     }
   ],
-  "reservedThisMonth": 156
+  "reservedThisMonth": 158
 }
