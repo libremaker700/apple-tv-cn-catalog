@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T02:42:22+00:00",
+  "checkedAt": "2026-11-02T02:50:39+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -1328,7 +1328,7 @@
       "active": false,
       "finalTitle": "我，机器人",
       "status": "verified_cached_not_in_current_catalog",
-      "requestedSeason": 1,
+      "requestedSeason": 0,
       "requestedYear": "",
       "currentKind": null,
       "nameOnlyScope": null,
@@ -1449,7 +1449,7 @@
       "active": false,
       "finalTitle": "侏罗纪世界",
       "status": "verified_cached_not_in_current_catalog",
-      "requestedSeason": 1,
+      "requestedSeason": 0,
       "requestedYear": "",
       "currentKind": null,
       "nameOnlyScope": null,
@@ -1567,12 +1567,12 @@
       "officialId": "",
       "kind": "series",
       "active": true,
-      "finalTitle": "",
-      "status": "year_conflict",
-      "requestedSeason": 1,
+      "finalTitle": "可爱的小农场",
+      "status": "verified_name_only",
+      "requestedSeason": 2,
       "requestedYear": "2023",
       "currentKind": "series",
-      "nameOnlyScope": null,
+      "nameOnlyScope": "series_name_only",
       "subjects": [
         {
           "available": true,
@@ -1934,7 +1934,7 @@
       "kind": "series",
       "active": true,
       "finalTitle": "",
-      "status": "identity_no_chinese_name",
+      "status": "regional_alias_only",
       "requestedSeason": 3,
       "requestedYear": "2024",
       "currentKind": "series",
@@ -2303,7 +2303,7 @@
       "active": false,
       "finalTitle": "第六感",
       "status": "verified_cached_not_in_current_catalog",
-      "requestedSeason": 1,
+      "requestedSeason": 0,
       "requestedYear": "",
       "currentKind": null,
       "nameOnlyScope": null,
@@ -2381,7 +2381,7 @@
       "active": false,
       "finalTitle": "热带惊雷",
       "status": "verified_cached_not_in_current_catalog",
-      "requestedSeason": 1,
+      "requestedSeason": 0,
       "requestedYear": "",
       "currentKind": null,
       "nameOnlyScope": null,
@@ -2643,12 +2643,13 @@
     }
   ],
   "summary": {
-    "identity_no_chinese_name": 9,
+    "identity_no_chinese_name": 8,
     "no_candidate_supplied": 3,
+    "regional_alias_only": 1,
     "season_conflict": 4,
     "verified_cached_not_in_current_catalog": 4,
-    "verified_name_only": 2,
+    "verified_name_only": 3,
     "verified_name_preserved": 24,
-    "year_conflict": 3
+    "year_conflict": 2
   }
 }

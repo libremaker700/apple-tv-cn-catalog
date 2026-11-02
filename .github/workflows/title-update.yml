@@ -88,7 +88,7 @@ jobs:
           CANDIDATE_AUDIT: ${{ inputs.candidate_audit }}
         run: |
           if [ "$PENDING_ONLY" = "true" ]; then
-            if [ "$CANDIDATE_AUDIT" = "true" ]; then python scripts/audit_douban_candidates.py; fi
+            if [ "$CANDIDATE_AUDIT" = "true" ]; then python scripts/reconcile_candidate_series.py; python scripts/audit_douban_candidates.py; fi
             python scripts/refresh_identity_targets.py
             REVIEW_ARGS=(--limit 64)
             if [ -n "$TARGET_SLUG" ]; then
