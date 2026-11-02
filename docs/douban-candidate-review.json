@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T03:30:13+00:00",
+  "checkedAt": "2026-11-02T03:40:53+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -1738,8 +1738,8 @@
       "officialId": "umc.cmc.5v5f721a2mlxcurdhh0wm56if",
       "kind": "series",
       "active": true,
-      "finalTitle": "Not a Box",
-      "status": "identity_no_chinese_name",
+      "finalTitle": "不是个盒子",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
       "requestedYear": "2025",
       "currentKind": "series",
@@ -2643,13 +2643,13 @@
     }
   ],
   "summary": {
-    "identity_no_chinese_name": 9,
+    "identity_no_chinese_name": 8,
     "no_candidate_supplied": 3,
     "regional_alias_only": 1,
     "season_conflict": 4,
     "verified_cached_not_in_current_catalog": 4,
     "verified_name_only": 3,
-    "verified_name_preserved": 23,
+    "verified_name_preserved": 24,
     "year_conflict": 2
   }
 }
