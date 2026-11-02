@@ -22,6 +22,24 @@
       "releaseYear": "2019",
       "releaseYearEvidence": "https://www.imdb.com/title/tt10238966/",
       "policy": "verified_original_movie_year_not_platform_date"
+    },
+    "home-49nuxpa3uc9ezls951h0ra32r": {
+      "englishTitle": "12 Monkeys",
+      "officialId": "umc.cmc.49nuxpa3uc9ezls951h0ra32r",
+      "expectedPlatformYear": "1996",
+      "policy": "verified_regional_release_dates",
+      "releaseDateEvidence": {
+        "subjectId": "1298744",
+        "sourceUrl": "https://movie.douban.com/subject/1298744/",
+        "confirmedBy": "user",
+        "originalTitle": "Twelve Monkeys",
+        "originalYear": "1995",
+        "officialReleaseDate": "1996-01-05",
+        "dates": [
+          "1995-12-08(纽约首映)",
+          "1996-01-05(美国)"
+        ]
+      }
     }
   }
 }

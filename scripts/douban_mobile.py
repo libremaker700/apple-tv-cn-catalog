@@ -2,6 +2,7 @@
 import html,math,re
 from opencc import OpenCC
 from metadata_policy import POLICY
+from release_identity import title_number_key,regional_date,subject_with_dates
 CC=OpenCC('t2s')
 
 def norm(s):return re.sub(r'[^a-z0-9\u3400-\u9fff]','',str(s or '').casefold())
@@ -46,11 +47,17 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
     expected={norm(work_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
     aka=data.get('aka') if isinstance(data.get('aka'),list) else []
     originals=[data.get('original_title','')]+aka+[data.get('title','')]
-    if not expected or not expected.intersection(norm(work_title(s)) for s in originals):return None
+    if ref.get('douban_id')and str(ref['douban_id'])!=str(subject_id):return None
+    exact=bool(expected.intersection(norm(work_title(s))for s in originals))
+    regional=regional_date(ref,data.get('_full_pubdate',data.get('pubdate',[])))
+    shared_id=bool(ref.get('imdb_id')and imdb(data)==ref['imdb_id']or ref.get('douban_id')and str(ref['douban_id'])==str(subject_id))
+    numeric={title_number_key(work_title(t))for t in title_queries(ref.get('english_title')or ref.get('original_title'))}
+    numeric_match=bool(numeric.intersection(title_number_key(work_title(s))for s in originals))
+    if not expected or not(exact or numeric_match and(regional or shared_id)):return None
     expected_year=str(ref.get('year',''));source_year=str(data.get('year',''))
     if ref.get('imdb_id') and imdb(data) and imdb(data)!=ref['imdb_id']:return None
     if not re.fullmatch(r'(19|20)\d{2}',source_year) or not re.fullmatch(r'(19|20)\d{2}',expected_year):return None
-    if source_year!=expected_year and not (ref.get('imdb_id') and imdb(data)==ref['imdb_id']):return None
+    if source_year!=expected_year and not (ref.get('imdb_id') and imdb(data)==ref['imdb_id'])and not regional:return None
     if identity_only:
         people=lambda key:[CC.convert(str(v.get('name','')if isinstance(v,dict)else v))for v in data.get(key,[])if isinstance(v,(str,dict))][:30]
         return {'douban_id':str(subject_id),'year':source_year,'season':season,'actors':people('actors'),'directors':people('directors'),'url':'https://movie.douban.com/subject/'+str(subject_id)+'/'}
@@ -68,6 +75,7 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
         values=[CC.convert(str(row.get('name')or''))if isinstance(row,dict)else CC.convert(row)for row in rows if isinstance(row,(str,dict))]
         return list(dict.fromkeys(value.strip()for value in values if value.strip()))[:30]
     patch['actors']=people('actors');patch['directors']=people('directors')
+    if regional:patch['release_date_evidence']={'sourceUrl':url,'dates':data.get('_full_pubdate',data.get('pubdate',[])),'platformReleaseDate':ref['release_date'],'originalYear':int(source_year),'basis':data.get('_release_date_basis','douban_subject_dates')}
     if source_year!=expected_year:patch['release_year']=int(source_year)
     # Imported late to avoid a source-lookup import cycle.
     from title_sources import synopsis_patch
@@ -83,6 +91,7 @@ class DoubanMobile:
         if not re.fullmatch(r'\d{1,12}',str(subject_id)):return None
         kind='movie' if ref.get('kind')=='movie' else 'tv'
         data=self.pages.json('https://m.douban.com/rexxar/api/v2/'+kind+'/'+str(subject_id))
+        data=subject_with_dates(ref,data,subject_id,self.pages)
         patch=verify_payload(ref,data,str(subject_id),kind,checked_at)
         identity=verify_payload(ref,data,str(subject_id),kind,checked_at,identity_only=True)
         if identity:self.identities[str(subject_id)]=identity
