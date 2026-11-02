@@ -175,6 +175,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if not ref['display_name_zh']:ref['display_name_zh']=hint.get('chineseHint','')
             if re.fullmatch(r'tt\d{7,10}',hint.get('imdbId','')):ref['imdb_id']=hint['imdbId']
             official=work.get('officialId')or(work.get('officialIdentity')or{}).get('watchUrl','').rstrip('/').split('/')[-1]
+            if official==hint.get('officialId'):
+                ref['candidate_subject_ids']=[str(s)for s in hint.get('candidateSubjectIds',[])if re.fullmatch(r'\d{1,12}',str(s))][:3]
+                ref['candidate_original_titles']=[str(t)for t in hint.get('candidateOriginalTitles',[])if isinstance(t,str)and len(t)<=200][:3]
             if work['kind']=='movie'and official==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and ref.get('release_date')==(hint.get('releaseDateEvidence')or{}).get('officialReleaseDate'):
                 ref['release_date_evidence']=copy.deepcopy(hint.get('releaseDateEvidence')or{})
             allowed=work['kind']=='movie'and hint.get('policy')=='verified_original_movie_year_not_platform_date'or work['kind']=='series'and n==1 and hint.get('policy')=='verified_original_series_year_not_platform_date'
@@ -192,6 +195,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             identities=list(mobile.identities.values())if isinstance(mobile.identities,dict)else[]
             if len(identities)==1:identity_record=identities[0]
             elif len(identities)>1:identity_record=None
+            elif names_only:identity_record=None
             status='douban_direct'
             if patch and not deferred and not names_only:
                 source_people(source_ref,patch)
@@ -262,6 +266,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if work['kind']=='movie'and patch.get('release_date_evidence')and patch.get('release_year'):
                 zh['searchYear']=int(patch['release_year']);record['originalReleaseYear']=int(patch['release_year']);record['releaseDateEvidence']=copy.deepcopy(patch['release_date_evidence'])
         if not patch:
+            if identity_record:record['identityVerifiedWithoutChineseName']=True;record['verifiedIdentity']=copy.deepcopy(identity_record)
             pages=getattr(lookup,'pages',None)
             record['verificationEvents']=getattr(pages,'events',[])[-12:]if pages is not None else[]
             diagnostics=getattr(mobile,'diagnostics',[])

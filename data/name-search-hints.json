@@ -13,7 +13,11 @@
       "expectedPlatformYear": "2024",
       "releaseYear": "2023",
       "releaseYearEvidence": "https://www.imdb.com/title/tt18988142/",
-      "policy": "verified_original_series_year_not_platform_date"
+      "policy": "verified_original_series_year_not_platform_date",
+      "candidateSubjectIds": [
+        "35853143"
+      ],
+      "allowFutureNameReview": true
     },
     "home-6ippzjfc3jg0l4b8x8cslmhfa": {
       "englishTitle": "Peanuts in Space: Secrets of Apollo 10",
@@ -40,6 +44,369 @@
           "1996-01-05(美国)"
         ]
       }
+    },
+    "12-12-12": {
+      "englishTitle": "12 12 12",
+      "officialId": "umc.cmc.2xeasogpeiwbaegczytrdg1uh",
+      "candidateSubjectIds": [
+        "36894893"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-750u3qv5wz0d41pn1v2rvn7oe": {
+      "englishTitle": "A Carpool Karaoke Christmas",
+      "officialId": "umc.cmc.750u3qv5wz0d41pn1v2rvn7oe",
+      "candidateSubjectIds": [
+        "37161992"
+      ],
+      "allowFutureNameReview": true
+    },
+    "awkwafina-the-unlikely-cook": {
+      "englishTitle": "Awkwafina: The Unlikely Cook",
+      "officialId": "umc.cmc.1fhnal2vix2077ouh1hjy2eoc",
+      "candidateSubjectIds": [
+        "37862350"
+      ],
+      "allowFutureNameReview": true,
+      "candidateOriginalTitles": [
+        "The Unlikely Cook with Awkwafina"
+      ]
+    },
+    "bearbrick": {
+      "englishTitle": "BE@RBRICK",
+      "officialId": "umc.cmc.18fsq2h43zx0v5h31hyeq1d7w",
+      "candidateSubjectIds": [
+        "37262751"
+      ],
+      "allowFutureNameReview": true
+    },
+    "carpool-karaoke-the-series": {
+      "englishTitle": "Carpool Karaoke: The Series",
+      "officialId": "umc.cmc.2wyy7chw6bmy46fekqlqq1ulb",
+      "candidateSubjectIds": [
+        "26985567"
+      ],
+      "allowFutureNameReview": true
+    },
+    "doug-unplugs": {
+      "englishTitle": "Doug Unplugs",
+      "officialId": "umc.cmc.3oxevpgaoqomu820s0e70ri75",
+      "candidateSubjectIds": [
+        "35599365"
+      ],
+      "allowFutureNameReview": true
+    },
+    "fleetwood-mac-the-chain": {
+      "englishTitle": "Fleetwood Mac: The Chain",
+      "officialId": "",
+      "candidateSubjectIds": [
+        "39008276"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-4ym1omzf14f4jwcmb7lnu91o0": {
+      "englishTitle": "Formula 1: Drive to Survive",
+      "officialId": "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0",
+      "candidateSubjectIds": [
+        "30465634"
+      ],
+      "allowFutureNameReview": true
+    },
+    "get-rolling-with-otis": {
+      "englishTitle": "Get Rolling With Otis",
+      "officialId": "umc.cmc.3tql7vmqfmedyw1ab7efys3z",
+      "candidateSubjectIds": [
+        "35599354"
+      ],
+      "allowFutureNameReview": true
+    },
+    "greatness-code": {
+      "englishTitle": "Greatness Code",
+      "officialId": "umc.cmc.4xpk6thd1574yu8hy2xdozyz6",
+      "candidateSubjectIds": [
+        "35887604"
+      ],
+      "allowFutureNameReview": true
+    },
+    "hello-jack-the-kindness-show": {
+      "englishTitle": "Hello, Jack! The Kindness Show",
+      "officialId": "umc.cmc.67f7csjyodc41iybksdv6s0pt",
+      "candidateSubjectIds": [
+        "35576353"
+      ],
+      "allowFutureNameReview": true
+    },
+    "helpsters": {
+      "englishTitle": "Helpsters",
+      "officialId": "umc.cmc.kfh7cellb1a3dmiehxhvq8gl",
+      "candidateSubjectIds": [
+        "35914330"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-3xi33xb3r3xbxx4lssz8cswdr": {
+      "englishTitle": "Helpsters Help You",
+      "officialId": "umc.cmc.3xi33xb3r3xbxx4lssz8cswdr",
+      "candidateSubjectIds": [
+        "35138269"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-5mffp3n83az89t42qnhew9vn5": {
+      "englishTitle": "I, Robot",
+      "officialId": "umc.cmc.5mffp3n83az89t42qnhew9vn5",
+      "candidateSubjectIds": [
+        "1308843"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-4k47h7cte42k5kzw8ltnks1f7": {
+      "englishTitle": "It's Christmastime Again, Charlie Brown",
+      "officialId": "umc.cmc.4k47h7cte42k5kzw8ltnks1f7",
+      "candidateSubjectIds": [
+        "4091371"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-17y48i5ko6gft5ieh148nzqzn": {
+      "englishTitle": "It's the Easter Beagle, Charlie Brown!",
+      "officialId": "umc.cmc.17y48i5ko6gft5ieh148nzqzn",
+      "candidateSubjectIds": [
+        "5054433"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-6x263wzi05ds2h4oen54w8881": {
+      "englishTitle": "Jurassic World",
+      "officialId": "umc.cmc.6x263wzi05ds2h4oen54w8881",
+      "candidateSubjectIds": [
+        "10440138"
+      ],
+      "allowFutureNameReview": true
+    },
+    "kpopped": {
+      "englishTitle": "KPOPPED",
+      "officialId": "umc.cmc.1yvpbd5uvcq8txtj1gfnw5iox",
+      "candidateSubjectIds": [
+        "37443489"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-cal17ey3zhv2lx3xkzjqjstb": {
+      "englishTitle": "Long Way Down",
+      "officialId": "umc.cmc.cal17ey3zhv2lx3xkzjqjstb",
+      "candidateSubjectIds": [
+        "2367101"
+      ],
+      "allowFutureNameReview": true
+    },
+    "lovely-little-farm": {
+      "englishTitle": "Lovely Little Farm",
+      "officialId": "",
+      "candidateSubjectIds": [
+        "35898683"
+      ],
+      "allowFutureNameReview": true
+    },
+    "lulu-is-a-rhinoceros": {
+      "englishTitle": "Lulu Is a Rhinoceros",
+      "officialId": "umc.cmc.3q3rnlgmnlkdh3p5djze6l019",
+      "candidateSubjectIds": [
+        "37357015"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-58su2j1i0etuvq64m6nxfm11y": {
+      "englishTitle": "Messi Mania",
+      "officialId": "umc.cmc.58su2j1i0etuvq64m6nxfm11y",
+      "candidateSubjectIds": [
+        "38483287"
+      ],
+      "allowFutureNameReview": true
+    },
+    "napoleon-the-directors-cut": {
+      "englishTitle": "Napoleon: The Director’s Cut",
+      "officialId": "umc.cmc.gtk0q9t2mapcjs75d31vvrs2",
+      "candidateSubjectIds": [
+        "35224919"
+      ],
+      "allowFutureNameReview": true
+    },
+    "not-a-box": {
+      "englishTitle": "Not a Box",
+      "officialId": "umc.cmc.5v5f721a2mlxcurdhh0wm56if",
+      "candidateSubjectIds": [
+        "37374251"
+      ],
+      "allowFutureNameReview": true
+    },
+    "now-and-then": {
+      "englishTitle": "Now & Then",
+      "officialId": "umc.cmc.1w3e47nmnt4o304oaauh4k2rm",
+      "candidateSubjectIds": [
+        "35507236"
+      ],
+      "allowFutureNameReview": true
+    },
+    "number-one-on-the-call-sheet": {
+      "englishTitle": "Number One on the Call Sheet",
+      "officialId": "umc.cmc.6p9tke2tbri1vnn2cuaxcj4mi",
+      "candidateSubjectIds": [
+        "37290675"
+      ],
+      "allowFutureNameReview": true
+    },
+    "outcome": {
+      "englishTitle": "Outcome",
+      "officialId": "umc.cmc.3uvjztuy2y8ve2rj6nvgyop89",
+      "candidateSubjectIds": [
+        "36160466"
+      ],
+      "allowFutureNameReview": true
+    },
+    "pretzel-and-the-puppies": {
+      "englishTitle": "Pretzel and the Puppies",
+      "officialId": "umc.cmc.kpgzlz0lejug1vhtakgizdlh",
+      "candidateSubjectIds": [
+        "35758781"
+      ],
+      "allowFutureNameReview": true
+    },
+    "sago-mini-friends": {
+      "englishTitle": "Sago Mini Friends",
+      "officialId": "umc.cmc.4ckulbycyeuavnlen3du06vvy",
+      "candidateSubjectIds": [
+        "37112671"
+      ],
+      "allowFutureNameReview": true
+    },
+    "slumberkins": {
+      "englishTitle": "Slumberkins",
+      "officialId": "umc.cmc.4r9fjly8gp831gqkfe8ft1xrb",
+      "candidateSubjectIds": [
+        "36148714"
+      ],
+      "allowFutureNameReview": true
+    },
+    "snoopy-presents-theres-no-place-like-home-snoopy": {
+      "englishTitle": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "officialId": "umc.cmc.52sgmi3vdpedurrbtz6louqqo",
+      "candidateSubjectIds": [
+        "38535567"
+      ],
+      "allowFutureNameReview": true
+    },
+    "snoopy-unleashed": {
+      "englishTitle": "Snoopy Unleashed",
+      "officialId": "",
+      "candidateSubjectIds": [
+        "38432357"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-dink": {
+      "englishTitle": "The Dink",
+      "officialId": "umc.cmc.5tugaz9vt498ajn7q64ypaqxn",
+      "candidateSubjectIds": [
+        "37054667"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-hunt": {
+      "englishTitle": "The Hunt (Traqués)",
+      "officialId": "umc.cmc.4w9agfyrx2fgc5k9rls2cffho",
+      "candidateSubjectIds": [
+        "36783469"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-line": {
+      "englishTitle": "The Line",
+      "officialId": "umc.cmc.4u53f7zokr7g40tjj4gs61xbu",
+      "candidateSubjectIds": [
+        "35576361"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-oprah-conversation": {
+      "englishTitle": "The Oprah Conversation",
+      "officialId": "umc.cmc.49yt85r7ow6904u0177r694qy",
+      "candidateSubjectIds": [
+        "35161274"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-problem-with-jon-stewart": {
+      "englishTitle": "The Problem With Jon Stewart",
+      "officialId": "umc.cmc.4fcexvzqezr25p9weks6sxpob",
+      "candidateSubjectIds": [
+        "35907552"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-2j3fje2s0rh78ius1k1kil5tr": {
+      "englishTitle": "The Sixth Sense",
+      "officialId": "umc.cmc.2j3fje2s0rh78ius1k1kil5tr",
+      "candidateSubjectIds": [
+        "1297630"
+      ],
+      "allowFutureNameReview": true
+    },
+    "the-wanted-man": {
+      "englishTitle": "The Wanted Man",
+      "officialId": "umc.cmc.4zu5puz6y7th7shv3kypuzhhm",
+      "candidateSubjectIds": [
+        "37344952"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-5iudnxk9tyxo63gewawi330mw": {
+      "englishTitle": "Tropic Thunder",
+      "officialId": "umc.cmc.5iudnxk9tyxo63gewawi330mw",
+      "candidateSubjectIds": [
+        "1994879"
+      ],
+      "allowFutureNameReview": true
+    },
+    "twas-the-fight-before-christmas": {
+      "englishTitle": "Twas the Fight Before Christmas",
+      "officialId": "umc.cmc.lvpflyaolcrevsfje3rt5l6p?ctx_brand=tvs.sbd.4000",
+      "candidateSubjectIds": [
+        "35657015"
+      ],
+      "allowFutureNameReview": true
+    },
+    "way-of-the-warrior-kid": {
+      "englishTitle": "Way of the Warrior Kid",
+      "officialId": "umc.cmc.21vzhs44oeejdkoxenkcdmre0",
+      "candidateSubjectIds": [
+        "36877090"
+      ],
+      "allowFutureNameReview": true
+    },
+    "home-ns4q9hpoj4b1749wbl7crwbl": {
+      "englishTitle": "Wonder Pets",
+      "officialId": "umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "candidateSubjectIds": [
+        "5238948"
+      ],
+      "allowFutureNameReview": true
+    },
+    "wonder-pets-in-the-city": {
+      "englishTitle": "Wonder Pets: In the City",
+      "officialId": "umc.cmc.dsa24wciry96i1e8dcq0b9sm",
+      "candidateSubjectIds": [
+        "37135394"
+      ],
+      "allowFutureNameReview": true
+    },
+    "yo-gabba-gabbaland": {
+      "englishTitle": "Yo Gabba GabbaLand!",
+      "officialId": "umc.cmc.6a8qdw6e76cba2l0rkgzfbocl",
+      "candidateSubjectIds": [
+        "36988909"
+      ],
+      "allowFutureNameReview": true
     }
   }
 }

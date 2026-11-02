@@ -45,6 +45,7 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
     season=0 if wanted=='movie'else int(ref.get('season')or 1)
     if wanted=='tv'and subject_season(str(data['title'])+' '+str(data.get('original_title','')))!=season:return None
     expected={norm(work_title(t)) for t in title_queries(ref.get('english_title') or ref.get('original_title'))}
+    if str(subject_id)in ref.get('candidate_subject_ids',[]):expected.update(norm(work_title(t))for t in ref.get('candidate_original_titles',[]))
     aka=data.get('aka') if isinstance(data.get('aka'),list) else []
     originals=[data.get('original_title','')]+aka+[data.get('title','')]
     if ref.get('douban_id')and str(ref['douban_id'])!=str(subject_id):return None
@@ -62,6 +63,8 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
         people=lambda key:[CC.convert(str(v.get('name','')if isinstance(v,dict)else v))for v in data.get(key,[])if isinstance(v,(str,dict))][:30]
         return {'douban_id':str(subject_id),'year':source_year,'season':season,'actors':people('actors'),'directors':people('directors'),'url':'https://movie.douban.com/subject/'+str(subject_id)+'/'}
     name=CC.convert(work_title(data['title']))
+    if not mainland_name(name):
+        name=next((CC.convert(work_title(s))for s in aka if mainland_name(s)and len(s)<80),'')
     if not mainland_name(name) or len(name)>80:return None
     aliases=list(dict.fromkeys(CC.convert(work_title(s)) for s in [name]+aka if mainland_name(s) and len(s)<80))
     url='https://movie.douban.com/subject/'+subject_id+'/'
@@ -95,10 +98,18 @@ class DoubanMobile:
         patch=verify_payload(ref,data,str(subject_id),kind,checked_at)
         identity=verify_payload(ref,data,str(subject_id),kind,checked_at,identity_only=True)
         if identity:self.identities[str(subject_id)]=identity
-        self.diagnostics.append({'stage':'subject','subject_id':str(subject_id),'status':'VERIFIED' if patch else 'UNVERIFIED'})
+        self.diagnostics.append({'stage':'subject','subject_id':str(subject_id),'status':'VERIFIED'if patch else'IDENTITY_VERIFIED_NO_CHINESE_NAME'if identity else'UNVERIFIED'})
         return patch
     def lookup(self,ref,checked_at):
         seen=set()
+        patches=[]
+        for sid in list(dict.fromkeys(ref.get('candidate_subject_ids',[])))[:3]:
+            if not re.fullmatch(r'\d{1,12}',str(sid)):continue
+            sid=str(sid);seen.add(sid);patch=self.subject(ref,sid,checked_at)
+            if patch:patches.append(patch)
+        names={norm(p['display_name_zh'])for p in patches}
+        if len(names)==1:return patches[0]
+        if len(names)>1:return None
         queries=title_queries(ref.get('english_title') or ref.get('original_title'))
         if ref.get('kind')!='movie'and int(ref.get('season')or 1)>1:
             queries=[title+' Season '+str(ref['season'])for title in queries]

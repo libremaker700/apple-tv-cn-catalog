@@ -7,12 +7,15 @@ from title_lookup import dump
 
 def candidates(root):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');seen=set();rows=[]
+    hints=load(root/'data/name-search-hints.json').get('works',{})if(root/'data/name-search-hints.json').exists()else{}
     for work in main['entries']+[w for w in home['works']if not w.get('knownCatalog')]:
         if work['slug']in seen or re.search(r'[\u3400-\u9fff]',str((work.get('zh')or{}).get('title',''))):continue
         seen.add(work['slug']);n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1)
         season=next((s for s in work.get('seasons',[])if s['season']==n),{})
         year=str(season.get('year')or(work.get('zh')or{}).get('_identityYear')or(work.get('officialIdentity')or{}).get('year')or work.get('year')or str(work.get('releaseDate',''))[:4])
         reason='future_release'if source_deferred(season or work)else'missing_year'if not re.fullmatch(r'(19|20)\d{2}',year)else''
+        hint=hints.get(work['slug'],{});official=work.get('officialId')or(work.get('officialIdentity')or{}).get('watchUrl','').rstrip('/').split('/')[-1]
+        if reason=='future_release'and hint.get('allowFutureNameReview')and hint.get('englishTitle')==work['en']and hint.get('officialId')==official and hint.get('candidateSubjectIds'):reason=''
         rows.append({'slug':work['slug'],'en':work['en'],'year':year,'season':0 if work['kind']=='movie'else n,'skip':reason})
     priority={'to-mom-and-dad-with-love':0,'home-6ippzjfc3jg0l4b8x8cslmhfa':1}
     return sorted(rows,key=lambda row:(priority.get(row['slug'],2),row['en']))
@@ -55,13 +58,13 @@ def review(root=ROOT,limit=64,slugs=None):
                     result['result']=record
                     limited=any(e.get('status')in(0,401,403,418,429)or e.get('cooldown')for e in record.get('verificationEvents',[]))
                     reviewed=any(e.get('stage')in('subject','mobile_search')for e in record.get('subjectDiagnostics',[]))
-                    result['status']='verified'if record['confidence']=='VERIFIED'else'network_incomplete'if limited and not reviewed else'unverified'
+                    result['status']='verified'if record['confidence']=='VERIFIED'else'identity_no_chinese_name'if record.get('identityVerifiedWithoutChineseName')else'network_incomplete'if limited and not reviewed else'unverified'
                 else:result['status']='missing_identity'
             except Exception as error:result.update(status='error_retry',errorType=type(error).__name__)
         report['records'].append(result);report['summary']={status:sum(r['status']==status for r in report['records'])for status in sorted({r['status']for r in report['records']})}
         dump(path,report)
         print(json.dumps({'slug':row['slug'],'status':result['status']},ensure_ascii=True),flush=True)
-    status_names={'verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
+    status_names={'identity_no_chinese_name':'身份已核实，条目未提供中文名','verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
     lines=['# 待匹配中文名复核','', '本报告仅复核中文名，不查播放源，不使用 Gemini。保留前次已核实结果，继续检查余下作品。搜索提示不能直接成为中文名；通过作品身份核验后才发布。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
     for row in report['records']:
         cells=[row['en'],status_names[row['status']],row.get('result',{}).get('title',''),str(row['year'])+' / '+str(row['season'])]
