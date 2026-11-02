@@ -411,6 +411,26 @@
       "text": "一位赛车传奇重返赛道，在这部史诗般的惊险之旅中与一位崛起的后起之秀展开激烈的较量。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793497509
+    },
+    "0a1d87cec45e27fcc2f53c7eb7bbc3e342fb80914984f3b595a0f6cbf67df270": {
+      "text": "对连环纵火犯的搜寻引发了一场充满秘密与猜忌的扭曲游戏。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793581114
+    },
+    "a33ce96fa6ce09a668cd27ef924675b7a3517e75bae8858f864b19e1aa698cc2": {
+      "text": "迈尔斯·特勒和安雅·泰勒-乔伊必须守护世界上最致命的秘密。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793581114
+    },
+    "f201ff514a98feaff332c50e83106cb4680a522e46444cdfbe0c36e196c7e6b8": {
+      "text": "奥克塔维亚·斯宾瑟饰演一位真实犯罪播客主，为了真相不惜一切代价。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793581114
+    },
+    "0759baa01b527e85d211b571fdaf58c593e37b838aa74db4b66271518e24dff8": {
+      "text": "艾米·亚当斯在语言、失落与外星接触的故事中表现惊艳。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793581114
     }
   }
 }

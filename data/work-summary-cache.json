@@ -1890,6 +1890,106 @@
       "text": "《神奇宠物！》的主演豚鼠林尼、小鸭明明和乌龟塔克是教室里的宠物。每天最后一个孩子离开后，它们会接听来自世界某处陷入困境的幼小动物的易拉罐求救电话。它们会立刻飞奔或爬行，乘着由散落的玩具做成的飞船前往救援。主角们通过真实的儿童歌声进行交流。曾获奖的作曲家为每场历险的起伏以及探索区域的文化创作了相应的音乐伴奏。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
+    },
+    "e886384ee14e793d50646ea79d1687f9e38799150a3323fa3b35a0cc8ca5965a": {
+      "text": "语言学教授露易丝·班克斯（艾米·亚当斯饰）率领一支精英调查团队，在巨大的宇宙飞船降落在全球12个地点时展开行动。随着各国处于全球战争的边缘，班克斯和她的团队必须与时间赛跑，寻找与外星访客沟通的方法。为了解开这个谜团，她冒着危及自己生命乃至全人类的风险进行尝试。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "64d1f008b0f1ad7cbf1ae1cab89cdc634283fe4978cf2aae930ddbdd49506c0a": {
+      "text": "故事设定在20世纪70年代的洛杉矶，运气不佳的私家侦探霍兰·马奇（瑞恩·高斯林饰）与受雇打手杰克逊·希利（罗素·克劳饰）必须联手调查一个失踪女孩的案件以及一名色情明星看似无关的死亡事件。在调查过程中，他们揭露了一个直达最高权力核心的惊天阴谋。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "fcb75b6ef8157848286ba2167b43515a56a4f73131c69224856ee1baf1f9c136": {
+      "text": "为了保护家人，你能走多远？凯勒·多福（休·杰克曼饰）正面临着每个父母最可怕的噩梦。他六岁的女儿安娜和她的小朋友乔伊失踪了，随着时间一分一秒过去，恐慌开始蔓延。最好的线索是一辆之前停在她家街道上的破旧房车。负责调查的洛基警探（杰克·吉伦哈尔）逮捕了司机亚历克斯·琼斯（保罗·达诺），但由于缺乏证据被迫将其释放。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "ec75a0c7ce3a698ed9db0dae15ed881c32e6f0f2ea7e382afa6b612e0f9d5ebf": {
+      "text": "导演克里斯托弗·诺兰（《盗梦空间》、《黑暗骑士》三部曲）带来了一群先驱者执行人类历史上最重要任务的故事。奥斯卡奖得主马修·麦康纳（《达拉斯买家俱乐部》）饰演由前飞行员转行的农民库珀，他必须离开家人和日渐衰落的地球，领导一支超越本星系的远征队，去探索人类在星际间是否有未来。奥斯卡奖得主安妮·海瑟薇（《悲惨世界》）和奥斯卡奖提名者杰西卡·查斯坦（《刺杀本·拉登》）也出演了这部里程碑式的电影。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "b36b469d0807cd5967b41e40161a64d38235aed45c1bbf694d58ac0e9bd45152": {
+      "text": "作为四轮赛车领域最快的人，瑞奇·鲍比（威尔·法瑞尔 饰）是NASCAR历史上最伟大的车手之一。瑞奇是一个身材魁梧、毛发浓密、战绩辉煌的美国车手，他拥有一个头脑简单的亡命之徒所能渴望的一切：一座豪华宅邸、一个性感火辣的妻子（莱丝莉·比伯 饰）以及吃不完的快餐。然而，当瑞奇被浮夸的欧洲白痴让·日拉尔（萨莎·拜伦·科恩 饰）击败并沦为一个充满恐惧的废人时，他那涡轮增压般的生活方式遭遇了意想不到的挫折。由于妻子和工作都被最好的朋友兼另一个傻瓜卡尔·诺顿（约翰·C·赖利 饰）抢走，瑞奇必须全力以赴，才能让自己的职业生涯重回正轨、打败日拉尔并夺回他的名誉和财富。因为正如瑞奇·鲍比总是说的那样，如果你不是第一，你就是最后！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "fb93d004f67e5d24d3996e0e45c09cfd941bd876605cc7bd73f9ea9c37f2ab33": {
+      "text": "科尔（布鲁斯·威利斯 饰）被送回过去，以拯救人类免受致命病毒的侵害，该病毒迫使人类在未来居住在阴暗的地下社区中。在旅途中，他遇到了一位精神病学家（玛德琳·斯托）和一个精神病人（布拉德·皮特饰，其精湛的演技令人叹为观止），后者可能掌握着解开神秘反叛组织“十二猴子军”的关键，该组织被认为是释放这场致命疾病的元凶。他坚信自己能够获得纯净的病毒样本以便在未来找到治疗方法，但他却接连遇到一个个谜题，与时间展开了一场赛跑。这部由天才导演特瑞·吉利姆打造的科幻杰作是一部现代经典之作。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "1ae6d5210215bf9c2743ffc21714fd43b42861c13c744337ff27da77e5a4cfe1": {
+      "text": "罗杰·费里斯（莱昂纳多·迪卡普里奥 饰）是美国情报部门最顶尖的外勤人员，在那些人命连能换取的情报都不如的地方执行任务。在带他走遍全球的行动中，费里斯的下一次呼吸往往取决于安全电话线另一端的声音——中情局老兵埃德·霍夫曼（罗素·克劳 饰）。霍夫曼在郊区的笔记本电脑前运筹帷幄，正追踪着一个新崛起的恐怖分子头目，该头目在躲避世界上最先进的情报网络的同时，策划了一系列爆炸活动。为了引诱恐怖分子现身，费里斯将不得不深入其阴暗的世界，然而费里斯越接近目标，就越发现信任既是一种危险的筹码，也是唯一能让他活着离开的东西。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "cf37fbd7fea64641e7b60e9798c64e47912ba59140dc60e07ae7db7f59b5a2ec": {
+      "text": "忘掉《糊涂侦探》（这部经典电视剧的现代电影改编版）背后的基本剧情吧。那些所谓的剧情——比如邪恶组织KAOS企图炸毁洛杉矶，以及关于俄罗斯武器盗窃案的开场白——往好了说是最基本的，往坏了说是令人费解的。这部电影实际上是一个关于草根逆袭的故事：麦克斯韦·斯马特（史蒂夫·卡瑞尔 饰）是秘密政府机构“管制局”里一个聪明但书呆子气的分析师，当总部遭到袭击，除了99号特工（安妮·海瑟薇 饰）之外所有管制局特工的身份都泄露时，他终于如愿以偿成为了一名外勤特工。麦克斯和99号必须阻止坏人并拯救世界……前提是他们能学会如何合作。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "6c73456765b681d9369e41374cd3d7d1fa83907f5b1a4bf6883e0d7f6789cf3a": {
+      "text": "文森特·维加（约翰·特拉沃尔塔饰）和朱尔斯·温菲尔德（塞缪尔·L·杰克逊饰）是一对喜欢讨论哲学的杀手。在这部极具时代酷感的多线索犯罪电影中，他们的故事与他们的老板、黑帮老大马塞尔斯·华莱士（文·瑞姆斯饰），他的演员妻子米娅（乌玛·瑟曼饰），苦苦挣扎的拳击手布奇·柯立芝（布鲁斯·威利斯饰），资深善后专家温斯顿·沃尔夫（哈威·凯特尔饰）以及一对紧张兮兮的持枪劫匪“南瓜”（蒂姆·罗斯饰）和“小兔子”（阿曼达·普拉莫饰）的故事交织在一起。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "7c0da2ade21986a973a2005e7a1e9d91844239dc530af5f8bfa41b67cc047586": {
+      "text": "在未来，一个特殊的警察部门能够在谋杀犯实施犯罪之前将其逮捕，而该部门的一名警官却被指控将犯下未来的谋杀罪。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "8277df3c54f9c375b02ec7fefa24d546b9736938e794417f67f3c8b57d58b50e": {
+      "text": "“傻人有傻福，”福雷斯特·甘普（汤姆·汉克斯凭此角荣获奥斯卡奖）在等公交车时对一个陌生人这样谈论自己相对的智力水平。尽管智商低于常人，但甘普过着一段真正幸运的人生，得以近距离见证20世纪下半叶许多最难忘的事件。与汤姆·汉克斯一同出演的还有饰演福雷斯特母亲的莎莉·菲尔德；饰演他在越南的长官的加里·西尼斯；饰演他精通各种虾料理的不幸军队死党的小迈克尔蒂·威廉姆斯；以及通过数字魔法将福雷斯特置于一系列非凡历史事件和人物之中的特效艺术家们。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "36fb031dc644138a4244923125c47d500301bf09b853c8b6124fc6c398bb8396": {
+      "text": "一个愿望将12岁的乔希·巴斯金（大卫·莫斯科饰）变成了一个30岁的成年人（汤姆·汉克斯饰）后，他前往纽约并在麦克米伦玩具公司得到了一份基层工作。与公司老板（罗伯特·洛吉亚饰）的一次偶然相遇给他带来了测试新玩具的晋升机会。不久，同事苏珊·劳伦斯（伊丽莎白·帕金斯饰）对乔希产生了浪漫的情愫。然而，作为成年人生活的压力开始压垮他，他渴望回到过去简单的小男孩生活。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "ead984fc572e4fe023302973c44109e6984eac761682bf71b6a43c60a1169376": {
+      "text": "在《冒牌总统》中，凯文·克莱恩一人分饰两角，分别饰演总统比尔·米歇尔和临时工中介老板戴夫·科维奇。当总统突发严重中风并陷入植物人状态时，他的幕僚长鲍勃·亚历山大（弗兰克·兰格拉饰）说服戴夫来扮演总统。比尔·米歇尔总统腐败而令人讨厌，有着精心伪装的政治外表，而戴夫则真心关爱他人并想要帮助人们。这导致他与亚历山大针锋相对，亚历山大的真正企图是将副总统卷入丑闻，并让“戴夫总统”在假装第二次致命中风之前提名他为新任副总统。埃伦·米歇尔（西格妮·韦弗饰）是一位疏远的真正第一夫人，尽管婚姻缺乏爱，她仍乐于利用自己的角色为需要帮助的人服务。她最终识破了这个骗局，并在她的帮助下，戴夫得以拨乱反正，两人也在过程中擦出了爱情的火花。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "00e293f6aed84add5fe4740ccab37ce6734055920b183982600b7003c7a7dd78": {
+      "text": "在20世纪70年代由男性主导的广播界中，罗恩·伯根迪是圣迭戈收视率最高的新闻主播，但随着一名雄心勃勃的女性被聘为新主播，罗恩和他的伙伴们的生活即将发生改变。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "07fcbaa21cebc213ff5cd1c131005cceefdc65efd12d827c1181b341d468a5db": {
+      "text": "简·奥斯汀可能从未想象过，她于1816年出版的小说《爱玛》会被改编成一部以贝弗利山庄高中超级富有青少年为视角的新鲜讽刺作品。雪儿（艾丽西亚·西尔维斯特饰）和迪昂（史黛西·达什饰）都以“过去现在拍电视购物广告的伟大歌手”命名，她们是被宠坏的上流社会女孩，比起取得好成绩，她们更在乎穿对衣服和尽可能受欢迎。但雪儿与她严厉却热心的律师父亲（丹·海达亚饰）以及英俊敏感的继兄（保罗·路德饰）住在一起，她内心也有一种本能，想要帮助那些不太幸運的人——比如她撮合的两位内向老师（在此过程中还“谈判”提高了自己的成绩）以及新朋友泰（布兰妮·墨菲饰），泰一开始是个怪咖，最终却成了雪儿的门徒。雪儿也有她敏感的一面，她一直在寻找完美的男友，最终在最意想不到的地方找到了。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "1f898fae8d4d22383527907f61cd5172215d4cb8fad45a5f629e4e5d1455cd9d": {
+      "text": "一个在过去10年里反复进出戒毒所的年轻女子为了参加妹妹的婚礼，回家度周末。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "43280e5aebb052d2c5f4070fb87fbd306c99fcd8fc92052874b3f483109352f0": {
+      "text": "莉兹·吉尔伯特（朱莉娅·罗伯茨饰）在《美食、祈祷和恋爱》中饰演一个现代女性，她踏上了一段环游世界的旅程，旨在惊叹于世界的美丽，同时重新发现和连接自己真正的内心。在经历了一场离婚后站在人生的十字路口，吉尔伯特从工作中请了一年假，一反常态地走出了自己的舒适区，冒着一切风险去改变自己的生活。在她奇妙而异国情调的旅行中，她体验了在意大利通过进食获得的滋养的简单快乐；在印度的祈祷力量；最后，出乎意料地，在巴厘岛获得了内心的平静与爱的平衡。改编自一个鼓舞人心的真实故事，《美食, 祈祷和恋爱》证明了确实有一种以上的方式来放飞自我并看世界。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "f70306222cccd90900802acd13fd261280c223ec6150f78831aebaae0fa617d1": {
+      "text": "一位烹饪传奇人物在《朱莉与朱莉娅》中为一名沮丧的上班族提供了一份新的生活秘方，这是一部真实的故事，讲述了朱莉娅·查尔德（梅丽尔·斯特里普饰）的生活和食谱如何激励初出茅庐的作家朱莉·鲍威尔（艾米·亚当斯饰）在365天内完成了524道食谱，并将法国烹饪的魅力介绍给新一代人。斯坦利·图齐（《穿普拉达的女王》）联合主演了导演诺拉·埃夫隆这部关于快乐、痴迷和黄油的美味喜剧。请慢用！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "0fb5b44b25385f16682da66e5984b3fc309fe431bd45be4398f40107f0a48da0": {
+      "text": "导演迈克尔·贝（《勇闯夺命岛》、《绝世天劫》）以及制片团队唐·辛普森和杰瑞·布鲁克海默（《比佛利山警探》、《壮志凌云》）带来了一场自始至终充满爆炸性动作的惊险之旅。威尔·史密斯和马丁·劳伦斯在这部充满动作的电影中联手成为打击犯罪的搭档，这是一对真正的绝地战警的好人！价值一亿美元的没收海洛因刚刚被从警方保管中劫走。这些失踪的毒品曾是侦探迈克·劳瑞（威尔·史密斯饰）和马库斯·伯内特（马丁·劳伦斯饰）职业生涯中破获的最大案件，现在威胁要关闭迈阿密警察局的缉毒部门。当毒品调查变得致命时，凶手绑架了唯一的目击者、一个美丽的警察线人（蒂娅·里欧妮饰）也是这群男孩的好朋友，这让事情变得个人化了！疾驰的汽车、美丽的女人和不间断的动作让《绝地战警》成为一段有保证的美好时光！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "29095369cd62ec54c540e6e8ca6f2b005c038f9cc678e05c48001996c0ebbe77": {
+      "text": "“对青春动荡火焰的一曲抒情、华丽而坚韧的颂歌”（《综艺》）。罗宾·威廉姆斯在这部令人动容的1989年剧情片中大放异彩，他饰演一位英语老师，回到母校——一所管理严格的佛蒙特预科学校——工作，并在学生心中点燃了一团强烈的火焰。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     }
   },
   "works": {
@@ -5672,6 +5772,206 @@
       "source": "https://tv.apple.com/us/show/wonder-pets/umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
       "contentRating": "TV-Y",
       "officialReleaseYear": 2006
+    },
+    "umc.cmc.20sgkdxqbvucopzt913joa0gr": {
+      "text": "语言学教授露易丝·班克斯（艾米·亚当斯饰）率领一支精英调查团队，在巨大的宇宙飞船降落在全球12个地点时展开行动。随着各国处于全球战争的边缘，班克斯和她的团队必须与时间赛跑，寻找与外星访客沟通的方法。为了解开这个谜团，她冒着危及自己生命乃至全人类的风险进行尝试。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
+      "hash": "e886384ee14e793d50646ea79d1687f9e38799150a3323fa3b35a0cc8ca5965a",
+      "source": "https://tv.apple.com/us/movie/arrival/umc.cmc.20sgkdxqbvucopzt913joa0gr",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2016
+    },
+    "umc.cmc.3d7jpq67ivm8he8ndug7lmr63": {
+      "text": "故事设定在20世纪70年代的洛杉矶，运气不佳的私家侦探霍兰·马奇（瑞恩·高斯林饰）与受雇打手杰克逊·希利（罗素·克劳饰）必须联手调查一个失踪女孩的案件以及一名色情明星看似无关的死亡事件。在调查过程中，他们揭露了一个直达最高权力核心的惊天阴谋。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Set in 1970s Los Angeles, down-on-his-luck private eye Holland March (Ryan Gosling) and hired leg-breaker Jackson Healy (Russell Crowe) must work together to solve the case of a missing girl and the seemingly unrelated death of a porn star. During their investigation, they uncover a shocking conspiracy that reaches up to the highest circles of power.",
+      "hash": "64d1f008b0f1ad7cbf1ae1cab89cdc634283fe4978cf2aae930ddbdd49506c0a",
+      "source": "https://tv.apple.com/us/movie/the-nice-guys/umc.cmc.3d7jpq67ivm8he8ndug7lmr63",
+      "contentRating": "R",
+      "officialReleaseYear": 2016
+    },
+    "umc.cmc.7fxny3aaxgkm020pguu5gmxaw": {
+      "text": "为了保护家人，你能走多远？凯勒·多福（休·杰克曼饰）正面临着每个父母最可怕的噩梦。他六岁的女儿安娜和她的小朋友乔伊失踪了，随着时间一分一秒过去，恐慌开始蔓延。最好的线索是一辆之前停在她家街道上的破旧房车。负责调查的洛基警探（杰克·吉伦哈尔）逮捕了司机亚历克斯·琼斯（保罗·达诺），但由于缺乏证据被迫将其释放。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "How far would you go to protect your family? Keller Dover (Hugh Jackman) is facing every parent's worst nightmare. His six-year-old daughter, Anna, is missing, together with her young friend, Joy, and as minutes turn to hours, panic sets in. The best lead is a dilapidated RV that had earlier been parked on their street. Heading the investigation, Detective Loki (Jake Gyllenhaal) arrests its driver, Alex Jones (Paul Dano), but a lack of evidence forces his release.",
+      "hash": "fcb75b6ef8157848286ba2167b43515a56a4f73131c69224856ee1baf1f9c136",
+      "source": "https://tv.apple.com/us/movie/prisoners/umc.cmc.7fxny3aaxgkm020pguu5gmxaw",
+      "contentRating": "R",
+      "officialReleaseYear": 2013
+    },
+    "umc.cmc.1vrwat5k1ucm5k42q97ioqyq3": {
+      "text": "导演克里斯托弗·诺兰（《盗梦空间》、《黑暗骑士》三部曲）带来了一群先驱者执行人类历史上最重要任务的故事。奥斯卡奖得主马修·麦康纳（《达拉斯买家俱乐部》）饰演由前飞行员转行的农民库珀，他必须离开家人和日渐衰落的地球，领导一支超越本星系的远征队，去探索人类在星际间是否有未来。奥斯卡奖得主安妮·海瑟薇（《悲惨世界》）和奥斯卡奖提名者杰西卡·查斯坦（《刺杀本·拉登》）也出演了这部里程碑式的电影。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "From director Christopher Nolan (Inception, The Dark Knight trilogy) comes the story of a team of pioneers undertaking the most important mission in human history. Academy Award®-winner Matthew McConaughey (Dallas Buyer’s Club) stars as ex-pilot-turned-farmer Cooper, who must leave his family and a foundering Earth behind to lead an expedition traveling beyond this galaxy to discover whether mankind has a future among the stars. Academy Award®-winner Anne Hathaway (Les Misérables) and Academy Award®-nominee Jessica Chastain (Zero Dark Thirty) also star in this landmark film.",
+      "hash": "ec75a0c7ce3a698ed9db0dae15ed881c32e6f0f2ea7e382afa6b612e0f9d5ebf",
+      "source": "https://tv.apple.com/us/movie/interstellar/umc.cmc.1vrwat5k1ucm5k42q97ioqyq3",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2014
+    },
+    "umc.cmc.4cv94ek82vqrruz5yhv52ss3f": {
+      "text": "作为四轮赛车领域最快的人，瑞奇·鲍比（威尔·法瑞尔 饰）是NASCAR历史上最伟大的车手之一。瑞奇是一个身材魁梧、毛发浓密、战绩辉煌的美国车手，他拥有一个头脑简单的亡命之徒所能渴望的一切：一座豪华宅邸、一个性感火辣的妻子（莱丝莉·比伯 饰）以及吃不完的快餐。然而，当瑞奇被浮夸的欧洲白痴让·日拉尔（萨莎·拜伦·科恩 饰）击败并沦为一个充满恐惧的废人时，他那涡轮增压般的生活方式遭遇了意想不到的挫折。由于妻子和工作都被最好的朋友兼另一个傻瓜卡尔·诺顿（约翰·C·赖利 饰）抢走，瑞奇必须全力以赴，才能让自己的职业生涯重回正轨、打败日拉尔并夺回他的名誉和财富。因为正如瑞奇·鲍比总是说的那样，如果你不是第一，你就是最后！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "The fastest man on four wheels, Ricky Bobby (Will Ferrell) is one of the greatest drivers in NASCAR history. A big, hairy American winning machine, Ricky has everything a dimwitted daredevil could want, a luxurious mansion, a smokin' hot wife (Leslie Bibb) and all the fast food he can eat. But Ricky's turbo-charged lifestyle hits an unexpected speed bump when he's bested by flamboyant Euro-idiot Jean Girard (Sacha Baron Cohen, TV's \"Da Ali G Show\") and reduced to a fear-ridden wreck. Losing his wife and job to best bud and fellow fool, Cal Naughton, Jr. (John C. Reilly), Ricky must kick some serious asphalt if he's to get his career back on the track, beat Girard and reclaim his fame and fortune. 'Cause as Ricky Bobby always says, if you ain't first, you're last!",
+      "hash": "b36b469d0807cd5967b41e40161a64d38235aed45c1bbf694d58ac0e9bd45152",
+      "source": "https://tv.apple.com/us/movie/talladega-nights-the-ballad-of-ricky-bobby/umc.cmc.4cv94ek82vqrruz5yhv52ss3f",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2006
+    },
+    "umc.cmc.49nuxpa3uc9ezls951h0ra32r": {
+      "text": "科尔（布鲁斯·威利斯 饰）被送回过去，以拯救人类免受致命病毒的侵害，该病毒迫使人类在未来居住在阴暗的地下社区中。在旅途中，他遇到了一位精神病学家（玛德琳·斯托）和一个精神病人（布拉德·皮特饰，其精湛的演技令人叹为观止），后者可能掌握着解开神秘反叛组织“十二猴子军”的关键，该组织被认为是释放这场致命疾病的元凶。他坚信自己能够获得纯净的病毒样本以便在未来找到治疗方法，但他却接连遇到一个个谜题，与时间展开了一场赛跑。这部由天才导演特瑞·吉利姆打造的科幻杰作是一部现代经典之作。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Cole (Bruce Willis) is sent back in time to save the human race from a deadly virus that has forced mankind into dank underground communities in the future. Along his travels, he encounters a psychiatrist (Madeleine Stowe) and a mental patient, brilliantly portrayed by Brad Pitt, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease. Believing he can obtain a pure virus sample in order to find a cure in the future, he is met with one riddle after another that puts him in a race with time. This sci-fi masterpiece from the genius mind of Terry Gilliam is a modern-day classic.",
+      "hash": "fb93d004f67e5d24d3996e0e45c09cfd941bd876605cc7bd73f9ea9c37f2ab33",
+      "source": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r",
+      "contentRating": "R",
+      "officialReleaseYear": 1996
+    },
+    "umc.cmc.u6exigmijzw1ym6mdpfeqlxt": {
+      "text": "罗杰·费里斯（莱昂纳多·迪卡普里奥 饰）是美国情报部门最顶尖的外勤人员，在那些人命连能换取的情报都不如的地方执行任务。在带他走遍全球的行动中，费里斯的下一次呼吸往往取决于安全电话线另一端的声音——中情局老兵埃德·霍夫曼（罗素·克劳 饰）。霍夫曼在郊区的笔记本电脑前运筹帷幄，正追踪着一个新崛起的恐怖分子头目，该头目在躲避世界上最先进的情报网络的同时，策划了一系列爆炸活动。为了引诱恐怖分子现身，费里斯将不得不深入其阴暗的世界，然而费里斯越接近目标，就越发现信任既是一种危险的筹码，也是唯一能让他活着离开的东西。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Roger Ferris (Leonardo DiCaprio) is the best man U.S. Intelligence has on the ground, in places where human life is worth no more than the information it can get you. In operations that take him around the globe, Ferris' next breath often depends on the voice at the other end of a secure phone line--CIA veteran Ed Hoffman (Russell Crowe). Strategizing from a laptop in the suburbs, Hoffman is on the trail of an emerging terrorist leader who has orchestrated a campaign of bombings while eluding the most sophisticated intelligence network in the world. To lure the terrorist out into the open, Ferris will have to penetrate his murky world, but the closer Ferris gets to the target, the more he discovers that trust is both a dangerous commodity and the only one that will get him out alive.",
+      "hash": "1ae6d5210215bf9c2743ffc21714fd43b42861c13c744337ff27da77e5a4cfe1",
+      "source": "https://tv.apple.com/us/movie/body-of-lies/umc.cmc.u6exigmijzw1ym6mdpfeqlxt",
+      "contentRating": "R",
+      "officialReleaseYear": 2008
+    },
+    "umc.cmc.6omfkui754hy1907q88mrt3g2": {
+      "text": "忘掉《糊涂侦探》（这部经典电视剧的现代电影改编版）背后的基本剧情吧。那些所谓的剧情——比如邪恶组织KAOS企图炸毁洛杉矶，以及关于俄罗斯武器盗窃案的开场白——往好了说是最基本的，往坏了说是令人费解的。这部电影实际上是一个关于草根逆袭的故事：麦克斯韦·斯马特（史蒂夫·卡瑞尔 饰）是秘密政府机构“管制局”里一个聪明但书呆子气的分析师，当总部遭到袭击，除了99号特工（安妮·海瑟薇 饰）之外所有管制局特工的身份都泄露时，他终于如愿以偿成为了一名外勤特工。麦克斯和99号必须阻止坏人并拯救世界……前提是他们能学会如何合作。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Forget the underlying plot in Get Smart, the modern-day cinematic adaptation of the classic TV series. What passes for one -- something about evil organization KAOS' attempts to bomb Los Angeles, with a preamble about weapons theft in Russia -- is rudimentary at best and confounding at worst. The movie is really the triumph-of-the-underdog story of Maxwell Smart (Steve Carell), a brilliant-but-nerdy analyst at secret government agency Control who finally gets his wish to become a field agent when headquarters is attacked and the identity of all of Control's operatives -- except for Agent 99 (Anne Hathaway) -- is compromised. It's up to Max and 99 to stop the bad guys and save the day ... provided they can learn to work together.",
+      "hash": "cf37fbd7fea64641e7b60e9798c64e47912ba59140dc60e07ae7db7f59b5a2ec",
+      "source": "https://tv.apple.com/us/movie/get-smart/umc.cmc.6omfkui754hy1907q88mrt3g2",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2008
+    },
+    "umc.cmc.1hfvw2p79f9qdeydow8nmrn7t": {
+      "text": "文森特·维加（约翰·特拉沃尔塔饰）和朱尔斯·温菲尔德（塞缪尔·L·杰克逊饰）是一对喜欢讨论哲学的杀手。在这部极具时代酷感的多线索犯罪电影中，他们的故事与他们的老板、黑帮老大马塞尔斯·华莱士（文·瑞姆斯饰），他的演员妻子米娅（乌玛·瑟曼饰），苦苦挣扎的拳击手布奇·柯立芝（布鲁斯·威利斯饰），资深善后专家温斯顿·沃尔夫（哈威·凯特尔饰）以及一对紧张兮兮的持枪劫匪“南瓜”（蒂姆·罗斯饰）和“小兔子”（阿曼达·普拉莫饰）的故事交织在一起。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Vincent Vega (John Travolta) and Jules Winnfield (Samuel L. Jackson) are hitmen with a penchant for philosophical discussions. In this ultra-hip, multi-strand crime movie, their storyline is interwoven with those of their boss, gangster Marsellus Wallace (Ving Rhames) ; his actress wife, Mia (Uma Thurman) ; struggling boxer Butch Coolidge (Bruce Willis) ; master fixer Winston Wolfe (Harvey Keitel) and a nervous pair of armed robbers, \"Pumpkin\" (Tim Roth) and \"Honey Bunny\" (Amanda Plummer).",
+      "hash": "6c73456765b681d9369e41374cd3d7d1fa83907f5b1a4bf6883e0d7f6789cf3a",
+      "source": "https://tv.apple.com/us/movie/pulp-fiction/umc.cmc.1hfvw2p79f9qdeydow8nmrn7t",
+      "contentRating": "R",
+      "officialReleaseYear": 1994
+    },
+    "umc.cmc.4e8pvt0eezl2rnq71x4nx3atn": {
+      "text": "在未来，一个特殊的警察部门能够在谋杀犯实施犯罪之前将其逮捕，而该部门的一名警官却被指控将犯下未来的谋杀罪。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In a future where a special police unit is able to arrest murderers before they commit the crime, an officer from that unit is himself accused of a future murder.",
+      "hash": "7c0da2ade21986a973a2005e7a1e9d91844239dc530af5f8bfa41b67cc047586",
+      "source": "https://tv.apple.com/us/movie/minority-report/umc.cmc.4e8pvt0eezl2rnq71x4nx3atn",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2002
+    },
+    "umc.cmc.5ov9f55aw8qvmd5pumhgnwu3e": {
+      "text": "“傻人有傻福，”福雷斯特·甘普（汤姆·汉克斯凭此角荣获奥斯卡奖）在等公交车时对一个陌生人这样谈论自己相对的智力水平。尽管智商低于常人，但甘普过着一段真正幸运的人生，得以近距离见证20世纪下半叶许多最难忘的事件。与汤姆·汉克斯一同出演的还有饰演福雷斯特母亲的莎莉·菲尔德；饰演他在越南的长官的加里·西尼斯；饰演他精通各种虾料理的不幸军队死党的小迈克尔蒂·威廉姆斯；以及通过数字魔法将福雷斯特置于一系列非凡历史事件和人物之中的特效艺术家们。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "\"Stupid is as stupid does,\" says Forrest Gump (played by Tom Hanks in an Oscar-winning performance) as he discusses his relative level of intelligence with a stranger while waiting for a bus. Despite his sub-normal IQ, Gump leads a truly charmed life, with a ringside seat for many of the most memorable events of the second half of the 20th century. Featured alongside Tom Hanks are Sally Field as Forrest's mother; Gary Sinise as his commanding officer in Vietnam; Mykelti Williamson as his ill-fated Army buddy who is familiar with every recipe that involves shrimp; and the special effects artists whose digital magic place Forrest amidst a remarkable array of historical events and people.",
+      "hash": "8277df3c54f9c375b02ec7fefa24d546b9736938e794417f67f3c8b57d58b50e",
+      "source": "https://tv.apple.com/us/movie/forrest-gump/umc.cmc.5ov9f55aw8qvmd5pumhgnwu3e",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 1994
+    },
+    "umc.cmc.63shspjw8f8vnl45r7zw9i3jx": {
+      "text": "一个愿望将12岁的乔希·巴斯金（大卫·莫斯科饰）变成了一个30岁的成年人（汤姆·汉克斯饰）后，他前往纽约并在麦克米伦玩具公司得到了一份基层工作。与公司老板（罗伯特·洛吉亚饰）的一次偶然相遇给他带来了测试新玩具的晋升机会。不久，同事苏珊·劳伦斯（伊丽莎白·帕金斯饰）对乔希产生了浪漫的情愫。然而，作为成年人生活的压力开始压垮他，他渴望回到过去简单的小男孩生活。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "After a wish turns 12-year-old Josh Baskin (David Moscow) into a 30-year-old man (Tom Hanks), he heads to New York City and gets a low-level job at MacMillen Toy Company. A chance encounter with the owner (Robert Loggia) of the company leads to a promotion testing new toys. Soon a fellow employee, Susan Lawrence (Elizabeth Perkins), takes a romantic interest in Josh. However, the pressure of living as an adult begins to overwhelm him, and he longs to return to his simple, former life as a boy.",
+      "hash": "36fb031dc644138a4244923125c47d500301bf09b853c8b6124fc6c398bb8396",
+      "source": "https://tv.apple.com/us/movie/big/umc.cmc.63shspjw8f8vnl45r7zw9i3jx",
+      "contentRating": "PG",
+      "officialReleaseYear": 1988
+    },
+    "umc.cmc.5g1hhn1bnv4it2tfxvjnkcyvw": {
+      "text": "在《冒牌总统》中，凯文·克莱恩一人分饰两角，分别饰演总统比尔·米歇尔和临时工中介老板戴夫·科维奇。当总统突发严重中风并陷入植物人状态时，他的幕僚长鲍勃·亚历山大（弗兰克·兰格拉饰）说服戴夫来扮演总统。比尔·米歇尔总统腐败而令人讨厌，有着精心伪装的政治外表，而戴夫则真心关爱他人并想要帮助人们。这导致他与亚历山大针锋相对，亚历山大的真正企图是将副总统卷入丑闻，并让“戴夫总统”在假装第二次致命中风之前提名他为新任副总统。埃伦·米歇尔（西格妮·韦弗饰）是一位疏远的真正第一夫人，尽管婚姻缺乏爱，她仍乐于利用自己的角色为需要帮助的人服务。她最终识破了这个骗局，并在她的帮助下，戴夫得以拨乱反正，两人也在过程中擦出了爱情的火花。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In Dave, Kevin Kline stars in dual roles as President Bill Mitchell and a temp agency owner named Dave Kovic. When the President has a massive stroke that leaves him in a vegetative state, his Chief of Staff, Bob Alexander (Frank Langella), convinces Dave to play the part. Whereas President Bill Mitchell was corrupt and nasty with a well-crafted political façade, Dave genuinely cares and wants to help people. This leads him to lock horns with Alexander, whose real agenda is to implicate the Vice President in a scandal and have \"President Dave\" nominate him the new VP just before pretending to have a second, fatal stroke. Ellen Mitchell (Sigourney Weaver) is the estranged First Lady who enjoys using her role to be of service to the needy, despite the lack of love in her marriage. She eventually catches on to the ruse and with her help, Dave is able to set things right and the two of them find romance along the way.",
+      "hash": "ead984fc572e4fe023302973c44109e6984eac761682bf71b6a43c60a1169376",
+      "source": "https://tv.apple.com/us/movie/dave/umc.cmc.5g1hhn1bnv4it2tfxvjnkcyvw",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 1993
+    },
+    "umc.cmc.38gup8z7ry56rjuknjvb20zi1": {
+      "text": "在20世纪70年代由男性主导的广播界中，罗恩·伯根迪是圣迭戈收视率最高的新闻主播，但随着一名雄心勃勃的女性被聘为新主播，罗恩和他的伙伴们的生活即将发生改变。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.",
+      "hash": "00e293f6aed84add5fe4740ccab37ce6734055920b183982600b7003c7a7dd78",
+      "source": "https://tv.apple.com/us/movie/anchorman-the-legend-of-ron-burgundy/umc.cmc.38gup8z7ry56rjuknjvb20zi1",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2004
+    },
+    "umc.cmc.65fz9a9ilhwcb3jh08qyi0nqh": {
+      "text": "简·奥斯汀可能从未想象过，她于1816年出版的小说《爱玛》会被改编成一部以贝弗利山庄高中超级富有青少年为视角的新鲜讽刺作品。雪儿（艾丽西亚·西尔维斯特饰）和迪昂（史黛西·达什饰）都以“过去现在拍电视购物广告的伟大歌手”命名，她们是被宠坏的上流社会女孩，比起取得好成绩，她们更在乎穿对衣服和尽可能受欢迎。但雪儿与她严厉却热心的律师父亲（丹·海达亚饰）以及英俊敏感的继兄（保罗·路德饰）住在一起，她内心也有一种本能，想要帮助那些不太幸運的人——比如她撮合的两位内向老师（在此过程中还“谈判”提高了自己的成绩）以及新朋友泰（布兰妮·墨菲饰），泰一开始是个怪咖，最终却成了雪儿的门徒。雪儿也有她敏感的一面，她一直在寻找完美的男友，最终在最意想不到的地方找到了。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Jane Austen might never have imagined that her 1816 novel Emma could be turned into a fresh and satirical look at ultra-rich teenagers in a Beverly Hills high school. Cher (Alicia Silverstone) and Dionne (Stacey Dash), both named after \"great singers of the past that now do infomercials,\" are pampered upper-class girls who care less about getting good grades than wearing the right clothes and being as popular as possible. But Cher, who lives with her tough yet warm-hearted lawyer dad (Dan Hedaya) and hunky, sensitive stepbrother (Paul Rudd), also has an innate urge to help those less fortunate — like the two introverted teachers she brings together (\"negotiating\" herself improved grades in the process) and new friend Tai (Brittany Murphy), who starts out a geek and ends up a Cher prodigy. Cher also possesses her own sensitive side, and she is looking for the perfect boyfriend, whom she ends up finding where she least expected.",
+      "hash": "07fcbaa21cebc213ff5cd1c131005cceefdc65efd12d827c1181b341d468a5db",
+      "source": "https://tv.apple.com/us/movie/clueless/umc.cmc.65fz9a9ilhwcb3jh08qyi0nqh",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 1995
+    },
+    "umc.cmc.1yzqh3cqb681zufb495p6kzzr": {
+      "text": "一个在过去10年里反复进出戒毒所的年轻女子为了参加妹妹的婚礼，回家度周末。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "A young woman who has been in and out from rehab for the past 10 years returns home for the weekend for her sister's wedding.",
+      "hash": "1f898fae8d4d22383527907f61cd5172215d4cb8fad45a5f629e4e5d1455cd9d",
+      "source": "https://tv.apple.com/us/movie/rachel-getting-married/umc.cmc.1yzqh3cqb681zufb495p6kzzr",
+      "contentRating": "R",
+      "officialReleaseYear": 2008
+    },
+    "umc.cmc.3f1fb5wz6e4418nucy3ej1lrn": {
+      "text": "莉兹·吉尔伯特（朱莉娅·罗伯茨饰）在《美食、祈祷和恋爱》中饰演一个现代女性，她踏上了一段环游世界的旅程，旨在惊叹于世界的美丽，同时重新发现和连接自己真正的内心。在经历了一场离婚后站在人生的十字路口，吉尔伯特从工作中请了一年假，一反常态地走出了自己的舒适区，冒着一切风险去改变自己的生活。在她奇妙而异国情调的旅行中，她体验了在意大利通过进食获得的滋养的简单快乐；在印度的祈祷力量；最后，出乎意料地，在巴厘岛获得了内心的平静与爱的平衡。改编自一个鼓舞人心的真实故事，《美食, 祈祷和恋爱》证明了确实有一种以上的方式来放飞自我并看世界。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Liz Gilbert (Julia Roberts) is a modern woman on a quest to marvel at and travel the world while rediscovering and reconnecting with her true inner self in Eat Pray Love. At a crossroads after a divorce, Gilbert takes a year-long sabbatical from her job and steps uncharacteristically out of her comfort zone, risking everything to change her life. In her wondrous and exotic travels, she experiences the simple pleasure of nourishment by eating in Italy; the power of prayer in India, and, finally and unexpectedly, the inner peace and balance of love in Bali. Based on an inspiring true story, Eat Pray Love proves that there really is more than one way to let yourself go and see the world.",
+      "hash": "43280e5aebb052d2c5f4070fb87fbd306c99fcd8fc92052874b3f483109352f0",
+      "source": "https://tv.apple.com/us/movie/eat-pray-love/umc.cmc.3f1fb5wz6e4418nucy3ej1lrn",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2010
+    },
+    "umc.cmc.1akqb9p1qgiwuigy5xm63wdf2": {
+      "text": "一位烹饪传奇人物在《朱莉与朱莉娅》中为一名沮丧的上班族提供了一份新的生活秘方，这是一部真实的故事，讲述了朱莉娅·查尔德（梅丽尔·斯特里普饰）的生活和食谱如何激励初出茅庐的作家朱莉·鲍威尔（艾米·亚当斯饰）在365天内完成了524道食谱，并将法国烹饪的魅力介绍给新一代人。斯坦利·图齐（《穿普拉达的女王》）联合主演了导演诺拉·埃夫隆这部关于快乐、痴迷和黄油的美味喜剧。请慢用！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "A culinary legend provides a frustrated office worker with a new recipe for life in Julie & Julia, the true stories of how Julia Child's (Meryl Streep) life and cookbook inspired fledgling writer Julie Powell (Amy Adams) to whip up 524 recipes in 365 days and introduce a new generation to the magic of French cooking. Stanley Tucci (The Devil Wears Prada) co-stars in director Nora Ephron's delicious comedy about joy, obsession and butter. Bon appétit!",
+      "hash": "f70306222cccd90900802acd13fd261280c223ec6150f78831aebaae0fa617d1",
+      "source": "https://tv.apple.com/us/movie/julie--julia/umc.cmc.1akqb9p1qgiwuigy5xm63wdf2",
+      "contentRating": "PG-13",
+      "officialReleaseYear": 2009
+    },
+    "umc.cmc.25ktz0wuqizbiwz0ao8vumjll": {
+      "text": "导演迈克尔·贝（《勇闯夺命岛》、《绝世天劫》）以及制片团队唐·辛普森和杰瑞·布鲁克海默（《比佛利山警探》、《壮志凌云》）带来了一场自始至终充满爆炸性动作的惊险之旅。威尔·史密斯和马丁·劳伦斯在这部充满动作的电影中联手成为打击犯罪的搭档，这是一对真正的绝地战警的好人！价值一亿美元的没收海洛因刚刚被从警方保管中劫走。这些失踪的毒品曾是侦探迈克·劳瑞（威尔·史密斯饰）和马库斯·伯内特（马丁·劳伦斯饰）职业生涯中破获的最大案件，现在威胁要关闭迈阿密警察局的缉毒部门。当毒品调查变得致命时，凶手绑架了唯一的目击者、一个美丽的警察线人（蒂娅·里欧妮饰）也是这群男孩的好朋友，这让事情变得个人化了！疾驰的汽车、美丽的女人和不间断的动作让《绝地战警》成为一段有保证的美好时光！",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "From director Michael Bay (The Rock, Armageddon) and the production team of Don Simpson and Jerry Bruckheimer (Beverly Hills Cop, Top Gun) comes a thrill ride of explosive action from beginning to end. Will Smith and Martin Lawrence team up as partners in crime, crime-fighting that is, in this action-packed flick about a couple of good guys who are real Bad Boys! One hundred million dollars worth of confiscated heroin has just been jacked from police custody. Once the career bust of Detective Mike Lowery (Will Smith) and Marcus Burnett (Martin Lawrence), the missing drugs now threaten to shut down the narcotics division of the Miami Police Department. When the drug investigation turns deadly, the murderers kidnap the only witness, a beautful police informant (Téa Leoni) and close friend of the boys, which makes things get personal! Fast cars, a gorgeous woman and non-stop action make Bad Boys a guaranteed good time!",
+      "hash": "0fb5b44b25385f16682da66e5984b3fc309fe431bd45be4398f40107f0a48da0",
+      "source": "https://tv.apple.com/us/movie/bad-boys/umc.cmc.25ktz0wuqizbiwz0ao8vumjll",
+      "contentRating": "R",
+      "officialReleaseYear": 1995
+    },
+    "umc.cmc.40eizj37hvedszozcidhgpari": {
+      "text": "“对青春动荡火焰的一曲抒情、华丽而坚韧的颂歌”（《综艺》）。罗宾·威廉姆斯在这部令人动容的1989年剧情片中大放异彩，他饰演一位英语老师，回到母校——一所管理严格的佛蒙特预科学校——工作，并在学生心中点燃了一团强烈的火焰。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "'A lyrical, gorgeous and tough evocation of the unsteady fires of youth' ('Variety'). Robin Williams shines in this stirring 1989 drama as an English teacher who goes to work at his alma mater--a rigorous Vermont prep school--and lights a powerful flame in his students.",
+      "hash": "29095369cd62ec54c540e6e8ca6f2b005c038f9cc678e05c48001996c0ebbe77",
+      "source": "https://tv.apple.com/us/movie/dead-poets-society/umc.cmc.40eizj37hvedszozcidhgpari",
+      "contentRating": "PG",
+      "officialReleaseYear": 1989
     }
   }
 }

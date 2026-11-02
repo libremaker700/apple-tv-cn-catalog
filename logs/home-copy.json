@@ -1,15 +1,15 @@
 {
-  "checkedAt": 1793580604,
+  "checkedAt": 1793581180,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
       "requested": 0,
-      "cacheHits": 7,
+      "cacheHits": 8,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 2,
-      "sourceMissing": 2,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 9,
+      "cacheHits": 10,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
     },
     {
@@ -94,22 +94,22 @@
     },
     {
       "requested": 0,
-      "cacheHits": 7,
+      "cacheHits": 10,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 3,
-      "sourceMissing": 3,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f"
     },
     {
       "requested": 0,
-      "cacheHits": 9,
+      "cacheHits": 10,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
     },
     {
@@ -125,5 +125,5 @@
   ],
   "translated": 0,
   "pending": 0,
-  "version": "63d216be650a46ef6e4b8aada748658a3c9f97e1346a8e16446bbc384ecf8267"
+  "version": "6fc7ac13d48352fb8ff80b8b1f45f5a8b85f54a01ccdd684e1d6270e12de07b6"
 }

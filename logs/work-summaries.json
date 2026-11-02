@@ -1,13 +1,74 @@
 {
   "works": 378,
-  "translated": 0,
-  "cacheHits": 378,
+  "translated": 20,
+  "cacheHits": 358,
   "existingChinese": 0,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 0,
-  "usage": [],
+  "apiCalls": 5,
+  "usage": [
+    {
+      "promptTokenCount": 604,
+      "candidatesTokenCount": 630,
+      "totalTokenCount": 1234,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 604
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 864,
+      "candidatesTokenCount": 955,
+      "totalTokenCount": 1819,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 864
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 628,
+      "candidatesTokenCount": 684,
+      "totalTokenCount": 1312,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 689,
+      "candidatesTokenCount": 736,
+      "totalTokenCount": 1425,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 689
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    {
+      "promptTokenCount": 713,
+      "candidatesTokenCount": 861,
+      "totalTokenCount": 1574,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 713
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  ],
   "errors": [],
-  "ready": 378,
+  "ready": 398,
   "pending": 0
 }
