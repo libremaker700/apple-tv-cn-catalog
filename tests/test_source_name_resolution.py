@@ -50,7 +50,7 @@ class CandidateAccounts(unittest.TestCase):
         client=SearchAccounts(session,{'ydc':[('a','key1'),('b','key2')]})
         self.assertEqual(client.candidate_names('名字')['names'],['不是盒子'])
         self.assertEqual(session.post.call_args.args[0],'https://api.you.com/v1/research')
-        self.assertEqual(session.post.call_args.kwargs['json']['research_effort'],'lite')
+        self.assertEqual(session.post.call_args.kwargs['json']['research_effort'],'standard')
 
 class Publication(unittest.TestCase):
     def test_stale_plex_name_is_replaced_and_no_second_source_probe_occurs(self):

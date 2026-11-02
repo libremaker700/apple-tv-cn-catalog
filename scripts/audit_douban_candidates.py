@@ -24,6 +24,12 @@ def run(root=ROOT,collect=True):
         pages.save()
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');works={w['slug']:w for w in main['entries']+[w for w in home['works']if not w.get('knownCatalog')]}
     review=load(root/'docs/pending-name-review.json');ledger={r['slug']:r for r in review.get('records',[])}
+    latest=root/'data/mainland-name-cache.json'
+    if latest.exists():
+        for slug,row in load(latest).get('records',{}).items():
+            result=row.get('result',{})
+            if result.get('sourceNameResolution')and result.get('identityVerifiedWithoutChineseName'):
+                ledger[slug]={'status':'identity_no_chinese_name'}
     cache=load(root/'data/home-title-cache.json').get('records',{});rows=[]
     for item in source:
         w=works.get(item.get('slug'),{});zh=w.get('zh')or{};n=0 if(w.get('kind')or item.get('kind'))=='movie'else int(w.get('artworkSeasonNumber')or w.get('seasonNumber')or 1)

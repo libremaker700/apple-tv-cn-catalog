@@ -1,6 +1,6 @@
 """AI names are locators; only identity-checked playable library votes may rename a work."""
 import copy,hashlib,json,re,time
-POLICY='ai-answer-verified-source-or-douban-v1'
+POLICY='ai-answer-verified-source-or-douban-v2'
 def resolve(identity,ref,providers,client,direct_patch=None,hints=(),state=None,probe=None,discover=None,now=None):
     from mainland_names import public_sources,source_people,base
     from alias_discovery import discover as find_aliases
@@ -9,7 +9,8 @@ def resolve(identity,ref,providers,client,direct_patch=None,hints=(),state=None,
     key=hashlib.sha256(json.dumps([POLICY,identity['douban_id'],ref['english_title'],ref['year'],ref['season'],original],ensure_ascii=False).encode()).hexdigest()
     ai=state.get('answer',{})
     if state.get('key')!=key or now>=state.get('expiresAt',0):
-        question=(f"{ref['year']}年的{ref['english_title']}（{'电影'if kind=='movie'else'第'+str(ref['season'])+'季剧集'}，豆瓣编号{identity['douban_id']}）在中国叫什么？请查实际使用的中文片名、中文别名及视频片库使用的名字。区分同名书籍、其他年份作品和其他季，不要仅凭字面翻译猜测。只输出JSON对象，格式为names字段的中文名称数组；不确定则返回空数组。")
+        people='、'.join(str(p)for p in identity.get('actors',[])[:5])
+        question=(f"Apple TV上的{ref['year']}年影视作品{ref['english_title']}（{'电影'if kind=='movie'else'第'+str(ref['season'])+'季剧集'}，豆瓣编号{identity['douban_id']}，演员：{people}）在中国叫什么？作品背景：{ref.get('name_context','')[:500]}。请查这部影视作品实际使用的中文片名、中文别名及视频片库使用的名字。务必区分同名绘本／书籍与影视改编，也区分其他年份、其他季；只找到书名不能作为剧名答案，不要字面翻译猜测。只输出JSON对象，格式为names字段的中文名称数组；找不到本影视作品中文名则返回空数组。")
         ai=client.candidate_names(question);state.update(key=key,answer=copy.deepcopy(ai),expiresAt=now+(7*86400 if ai.get('names')else 3600))
     candidates=list(dict.fromkeys(list(hints)+[n for n in ai.get('names',[])if isinstance(n,str)and re.search(r'[\u3400-\u9fff]',n)]+[original]+identity.get('aliases',[])))[:4]
     target=source_people({'kind':kind,'year':str(identity['year'])if kind=='movie'else str(ref['year']),'season':int(ref['season']or 1),'douban_id':identity['douban_id']},identity)

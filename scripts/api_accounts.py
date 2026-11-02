@@ -22,7 +22,7 @@ class SearchAccounts:
                 if not self.reserve():return {'names':[],'sources':[],'status':'budget_exhausted'}
                 try:
                     if service=='ydc':
-                        r=self.session.post('https://api.you.com/v1/research',headers={'X-API-Key':key},json={'input':question,'research_effort':'lite'},timeout=(8,45),allow_redirects=False)
+                        r=self.session.post('https://api.you.com/v1/research',headers={'X-API-Key':key},json={'input':question,'research_effort':'standard'},timeout=(8,45),allow_redirects=False)
                     else:
                         r=self.session.post('https://api.tavily.com/search',headers={'Authorization':'Bearer '+key},json={'query':question,'search_depth':'basic','max_results':6,'include_answer':'advanced','include_raw_content':False},timeout=(8,45),allow_redirects=False)
                     try:data=r.json()

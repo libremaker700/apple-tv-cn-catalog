@@ -102,6 +102,7 @@ jobs:
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
           if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
           python scripts/mainland_names.py "${ARGS[@]}"
+          if [ -f docs/douban-candidate-review.json ]; then python scripts/audit_douban_candidates.py --summarize; fi
           python - <<'PY'
           import json, os
           records = json.load(open('logs/mainland-name-sync.json'))['records']

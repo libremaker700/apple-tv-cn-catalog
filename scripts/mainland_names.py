@@ -205,6 +205,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             status='douban_direct'
             if not deferred and identity_record and callable(getattr(type(client),'candidate_names',None)):
                 from source_name_resolution import resolve
+                ref['name_context']=str(zh.get('summary_original')or zh.get('summary')or'')[:500]
                 bound_hints=hint.get('sourceNameHints',[])if hint.get('englishTitle')==work['en']and hint.get('officialId')==official else[]
                 resolution=resolve(identity_record,ref,providers,client,direct_patch=patch,hints=bound_hints,state=discovery.setdefault('aiSourceNames',{}),probe=probe,now=now)
                 patch=resolution['patch'];best=resolution['best'];events=resolution['events'];probed=True;status='ai_candidates_then_sources_or_douban'
