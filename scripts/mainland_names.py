@@ -202,6 +202,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if len(identities)==1:identity_record=identities[0]
             elif len(identities)>1:identity_record=None
             elif names_only:identity_record=None
+            previous_identity=old.get('identity')or{}
+            if not identity_record and(discovery.get('aiSourceNames',{}).get('knownLibraryName')or hint.get('confirmedSourceNames'))and str(previous_identity.get('year'))==ref['year']and previous_identity.get('season')==ref['season']:
+                identity_record=previous_identity
             status='douban_direct'
             if not deferred and identity_record and callable(getattr(type(client),'candidate_names',None)):
                 from source_name_resolution import resolve
@@ -258,7 +261,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             record['sourcePolicy']='ai_name_source_verification'if resolution else'not_checked_name_review'if names_only else'deferred_until_release'if deferred else'eligible'
             title=patch['display_name_zh']if not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+([]if resolution else zh.get('aliases',[])))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch.get('douban_title',patch['display_name_zh']if any(s.get('type')=='douban_mobile_identity'for s in patch['sources'])else zh.get('douban_title','')))
-            if resolution and not best:zh.pop('nameSelection',None)
+            if resolution and not best:
+                if patch.get('name_selection'):zh['nameSelection']=copy.deepcopy(patch['name_selection'])
+                else:zh.pop('nameSelection',None)
             if verified_subject(patch):zh['douban_id']=verified_subject(patch)
             if patch.get('name_only_scope'):
                 zh['nameOnlyScope']=patch['name_only_scope']

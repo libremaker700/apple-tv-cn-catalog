@@ -46,6 +46,14 @@ class NameAuthority(unittest.TestCase):
         self.assertEqual(self.client.candidate_names.call_count,1)
         self.identity['douban_id']='12345678';self.call(state=state)
         self.assertEqual(self.client.candidate_names.call_count,2)
+    def test_confirmed_automatic_library_name_is_retained_after_all_routes_fail(self):
+        state={};vote={'title':'不是个盒子','routes':0,'nameEvidenceOnly':True,'selection':{'libraries':1,'options':[{'title':'不是个盒子','libraries':1}]}}
+        self.call(vote,state=state)
+        result,_=self.call(state=state)
+        self.assertEqual(result['patch']['display_name_zh'],'不是个盒子')
+        self.assertEqual(result['evidence']['decision'],'cached_verified_library_entry_name')
+        self.identity['douban_id']='12345678';result,_=self.call(state=state)
+        self.assertEqual(result['patch']['display_name_zh'],'Not a Box')
 
 class CandidateAccounts(unittest.TestCase):
     def response(self,status,payload):return Mock(status_code=status,json=lambda:payload)
