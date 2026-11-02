@@ -5,7 +5,7 @@ from metadata_policy import POLICY
 from release_identity import title_number_key,regional_date,subject_with_dates
 CC=OpenCC('t2s')
 
-def norm(s):return re.sub(r'[^a-z0-9\u3400-\u9fff]','',str(s or '').casefold())
+def norm(s):return re.sub(r'[^a-z0-9\u3400-\u9fff]','',re.sub(r'(?<=[a-z])\s*&\s*(?=[a-z])',' and ',str(s or '').casefold()))
 def base_title(s):return re.sub(r'\s*(?:第\s*[一1]\s*季|season\s*1)\s*$','',str(s or ''),flags=re.I).strip()
 def subject_season(text):
     """An unnumbered TV subject is season one; explicit later seasons must match."""
@@ -28,7 +28,7 @@ def title_queries(title):
     short=re.sub(r'\s*\([^()]{1,100}\)\s*$','',title).strip()
     native=re.search(r'\(([^()]{2,100})\)\s*$',title)
     return list(dict.fromkeys(t for t in (title,short,native[1]if native else'') if t))
-def mainland_name(s):return isinstance(s,str) and bool(re.search(r'[\u3400-\u9fff]',s)) and not re.search(r'[（(](?:港|台|香港|台湾|臺灣)[）)]',s)
+def mainland_name(s):return isinstance(s,str) and bool(re.search(r'[\u3400-\u9fff]',s)) and not re.search(r'[（(](?:港|台|香港|台湾|臺灣)(?:[/／、·和及](?:港|台|香港|台湾|臺灣))*[）)]',s)
 def imdb(data):
     extra=(data.get('attrs') or {}).get('imdb',[])
     values=[data.get('imdb_id','')]+(extra if isinstance(extra,list) else [extra])
@@ -96,6 +96,9 @@ class DoubanMobile:
         data=self.pages.json('https://m.douban.com/rexxar/api/v2/'+kind+'/'+str(subject_id))
         data=subject_with_dates(ref,data,subject_id,self.pages)
         patch=verify_payload(ref,data,str(subject_id),kind,checked_at)
+        if not patch:
+            from candidate_name_rules import name_only
+            patch=name_only(ref,data,str(subject_id),checked_at)
         identity=verify_payload(ref,data,str(subject_id),kind,checked_at,identity_only=True)
         if identity:self.identities[str(subject_id)]=identity
         self.diagnostics.append({'stage':'subject','subject_id':str(subject_id),'status':'VERIFIED'if patch else'IDENTITY_VERIFIED_NO_CHINESE_NAME'if identity else'UNVERIFIED'})

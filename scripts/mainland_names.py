@@ -25,6 +25,7 @@ def source_count(row):
     from source_votes import usable_groups
     return usable_groups(row)
 def verified_subject(info):
+    if info.get('name_only_scope')or info.get('nameOnlyScope'):return None
     value=str(info.get('douban_id')or'')
     if re.fullmatch(r'[1-9][0-9]{4,9}',value):return value
     for source in info.get('sources',info.get('name_sources',[])):
@@ -149,6 +150,8 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         return (source_deferred(current or work,now),cache['records'].get(work['slug'],{}).get('checkedAt',0),work['en'])
     selected.sort(key=priority)
     for work,is_home in selected:
+        from candidate_name_rules import apply_kind
+        apply_kind(work,search_hints_by_slug.get(work['slug'],{}))
         key=work['slug'];zh=work.get('zh')or{};old=cache['records'].get(key,{})
         if slugs and key not in slugs:continue
         if key in seen:continue
@@ -178,6 +181,9 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if official==hint.get('officialId'):
                 ref['candidate_subject_ids']=[str(s)for s in hint.get('candidateSubjectIds',[])if re.fullmatch(r'\d{1,12}',str(s))][:3]
                 ref['candidate_original_titles']=[str(t)for t in hint.get('candidateOriginalTitles',[])if isinstance(t,str)and len(t)<=200][:3]
+                ref['candidate_name_rule']=copy.deepcopy(hint.get('candidateNameRule')or{})
+                added=re.search(r'(\d+) minutes of new footage',str((work.get('zh')or{}).get('summary_original','')))
+                if added:ref['edition_added_minutes']=int(added[1])
             if work['kind']=='movie'and official==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and ref.get('release_date')==(hint.get('releaseDateEvidence')or{}).get('officialReleaseDate'):
                 ref['release_date_evidence']=copy.deepcopy(hint.get('releaseDateEvidence')or{})
             allowed=work['kind']=='movie'and hint.get('policy')=='verified_original_movie_year_not_platform_date'or work['kind']=='series'and n==1 and hint.get('policy')=='verified_original_series_year_not_platform_date'
@@ -245,6 +251,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             title=patch['display_name_zh']if not best else base(best['title'])
             zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any(s.get('type')=='douban_mobile_identity'for s in patch['sources'])else zh.get('douban_title',''))
             if verified_subject(patch):zh['douban_id']=verified_subject(patch)
+            if patch.get('name_only_scope'):
+                zh['nameOnlyScope']=patch['name_only_scope']
+                for field in ['douban_id','douban_title','detailMetadata','detailSeasons']:zh.pop(field,None)
+            else:zh.pop('nameOnlyScope',None)
             if patch.get('release_date_evidence'):zh['releaseDateEvidence']=copy.deepcopy(patch['release_date_evidence'])
             for person_field in ('actors','directors'):
                 if patch.get(person_field):zh[person_field]=copy.deepcopy(patch[person_field])

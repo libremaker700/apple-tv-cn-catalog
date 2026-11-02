@@ -135,7 +135,10 @@ def collect(previous):
         e=clean_entry(e)
         if not e.get('zh') and slug in mainland:e['zh']=clean_zh(mainland[slug]);e['chinesePending']=not bool(e['zh'])
         from season_scope import apply as apply_season_scope
-        return apply_season_scope(collector.sync(e,seeds.get(slug,{})),ROOT)
+        result=apply_season_scope(collector.sync(e,seeds.get(slug,{})),ROOT)
+        from candidate_name_rules import apply_kind
+        hints=load(ROOT/'data/name-search-hints.json').get('works',{})if(ROOT/'data/name-search-hints.json').exists()else{}
+        apply_kind(result,hints.get(slug,{}));return result
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool: entries=list(pool.map(entry,rows))
     cache_file.write_bytes(raw_json(collector.cache))
     report={'checkedAt':collector.now,'verified':sum(r['status']=='verified' for r in collector.report),'pending':sum(r['status']=='pending' for r in collector.report),'works':sorted(collector.report,key=lambda r:r['slug'])}

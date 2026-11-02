@@ -1001,22 +1001,7 @@
     "umc.cmc.4ckulbycyeuavnlen3du06vvy": {
       "en": "Sago Mini Friends",
       "kind": "series",
-      "details": [
-        {
-          "schema": 1,
-          "source": "douban",
-          "subjectId": "37112671",
-          "sourceUrl": "https://movie.douban.com/subject/37112671/",
-          "title": "Sago Mini 小小伙伴(港/台)",
-          "summary": "",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING",
-          "season": 3,
-          "year": 2024,
-          "checkedAt": "2026-11-02T02:23:57+00:00",
-          "originalTitle": "Sago Mini Friends"
-        }
-      ]
+      "details": []
     },
     "umc.cmc.21vzhs44oeejdkoxenkcdmre0": {
       "en": "Way of the Warrior Kid",

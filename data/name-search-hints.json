@@ -59,7 +59,10 @@
       "candidateSubjectIds": [
         "37161992"
       ],
-      "allowFutureNameReview": true
+      "allowFutureNameReview": true,
+      "candidateNameRule": {
+        "policy": "single_episode_special"
+      }
     },
     "awkwafina-the-unlikely-cook": {
       "englishTitle": "Awkwafina: The Unlikely Cook",
@@ -86,7 +89,10 @@
       "candidateSubjectIds": [
         "26985567"
       ],
-      "allowFutureNameReview": true
+      "allowFutureNameReview": true,
+      "candidateOriginalTitles": [
+        "Carpool Karaoke Season 1"
+      ]
     },
     "doug-unplugs": {
       "englishTitle": "Doug Unplugs",
@@ -230,7 +236,13 @@
       "candidateSubjectIds": [
         "35224919"
       ],
-      "allowFutureNameReview": true
+      "allowFutureNameReview": true,
+      "candidateNameRule": {
+        "policy": "director_cut",
+        "originalYear": 2023,
+        "platformYear": 2024,
+        "editionMinutes": 206
+      }
     },
     "not-a-box": {
       "englishTitle": "Not a Box",
@@ -294,7 +306,13 @@
       "candidateSubjectIds": [
         "38535567"
       ],
-      "allowFutureNameReview": true
+      "allowFutureNameReview": true,
+      "canonicalKindEvidence": {
+        "kind": "movie",
+        "officialUrl": "https://tv.apple.com/us/movie/theres-no-place-like-home-snoopy/umc.cmc.52sgmi3vdpedurrbtz6louqqo",
+        "releaseDate": "2026-07-31",
+        "subjectId": "38535567"
+      }
     },
     "snoopy-unleashed": {
       "englishTitle": "Snoopy Unleashed",
