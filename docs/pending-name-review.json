@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T00:17:55+00:00",
+  "checkedAt": "2026-11-02T01:12:59+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -13,6 +13,107 @@
       "skip": "future_release",
       "status": "future_release",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-49nuxpa3uc9ezls951h0ra32r",
+      "en": "12 Monkeys",
+      "year": "1996",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-49nuxpa3uc9ezls951h0ra32r",
+        "en": "12 Monkeys",
+        "searchStatus": "ok",
+        "confidence": "UNVERIFIED",
+        "verificationEvents": [
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "m.douban.com",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          },
+          {
+            "host": "watch.plex.tv",
+            "status": 200,
+            "cached": false
+          }
+        ],
+        "subjectDiagnostics": [
+          {
+            "stage": "suggest",
+            "status": "EMPTY_RESPONSE"
+          },
+          {
+            "stage": "mobile_search",
+            "candidates": 3
+          },
+          {
+            "stage": "subject",
+            "subject_id": "1298744",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "1293182",
+            "status": "UNVERIFIED"
+          },
+          {
+            "stage": "subject",
+            "subject_id": "1781126",
+            "status": "UNVERIFIED"
+          }
+        ]
+      },
+      "status": "unverified"
     },
     {
       "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
@@ -60,6 +161,54 @@
       },
       "status": "unverified",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-38gup8z7ry56rjuknjvb20zi1",
+      "en": "Anchorman: The Legend of Ron Burgundy",
+      "year": "2004",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-38gup8z7ry56rjuknjvb20zi1",
+        "en": "Anchorman: The Legend of Ron Burgundy",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1308770",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "王牌播音员",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-20sgkdxqbvucopzt913joa0gr",
+      "en": "Arrival",
+      "year": "2016",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-20sgkdxqbvucopzt913joa0gr",
+        "en": "Arrival",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "21324900",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "降临",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
     },
     {
       "slug": "awkwafina-the-unlikely-cook",
@@ -112,6 +261,78 @@
       },
       "status": "unverified",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-25ktz0wuqizbiwz0ao8vumjll",
+      "en": "Bad Boys",
+      "year": "1995",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-25ktz0wuqizbiwz0ao8vumjll",
+        "en": "Bad Boys",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1296102",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "绝地战警",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-63shspjw8f8vnl45r7zw9i3jx",
+      "en": "Big",
+      "year": "1988",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-63shspjw8f8vnl45r7zw9i3jx",
+        "en": "Big",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1293212",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "长大",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-u6exigmijzw1ym6mdpfeqlxt",
+      "en": "Body of Lies",
+      "year": "2008",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-u6exigmijzw1ym6mdpfeqlxt",
+        "en": "Body of Lies",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "2091015",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "谎言之躯",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
     },
     {
       "slug": "carpool-karaoke-the-series",
@@ -179,6 +400,78 @@
       },
       "status": "unverified",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-65fz9a9ilhwcb3jh08qyi0nqh",
+      "en": "Clueless",
+      "year": "1995",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-65fz9a9ilhwcb3jh08qyi0nqh",
+        "en": "Clueless",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1295295",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "独领风骚",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-5g1hhn1bnv4it2tfxvjnkcyvw",
+      "en": "Dave",
+      "year": "1993",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-5g1hhn1bnv4it2tfxvjnkcyvw",
+        "en": "Dave",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1292871",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "雾水总统",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-40eizj37hvedszozcidhgpari",
+      "en": "Dead Poets Society",
+      "year": "1989",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-40eizj37hvedszozcidhgpari",
+        "en": "Dead Poets Society",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1291548",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "死亡诗社",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
     },
     {
       "slug": "doug-unplugs",
@@ -253,6 +546,30 @@
       "notRecheckedThisRun": true
     },
     {
+      "slug": "home-3f1fb5wz6e4418nucy3ej1lrn",
+      "en": "Eat Pray Love",
+      "year": "2010",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-3f1fb5wz6e4418nucy3ej1lrn",
+        "en": "Eat Pray Love",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "2033822",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "美食、祈祷和恋爱",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
       "slug": "fleetwood-mac-the-chain",
       "en": "Fleetwood Mac: The Chain",
       "year": "2027",
@@ -262,24 +579,24 @@
       "notRecheckedThisRun": true
     },
     {
-      "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
-      "en": "Formula 1: Drive to Survive",
-      "year": "2026",
-      "season": 8,
+      "slug": "home-5ov9f55aw8qvmd5pumhgnwu3e",
+      "en": "Forrest Gump",
+      "year": "1994",
+      "season": 0,
       "skip": "",
       "result": {
-        "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
-        "en": "Formula 1: Drive to Survive",
+        "slug": "home-5ov9f55aw8qvmd5pumhgnwu3e",
+        "en": "Forrest Gump",
         "searchStatus": "douban_direct",
         "confidence": "VERIFIED",
         "sourcePolicy": "not_checked_name_review",
         "detailMetadata": {
-          "season": 8,
-          "subjectId": "37502429",
+          "season": 0,
+          "subjectId": "1292720",
           "summaryStatus": "AVAILABLE",
           "ratingStatus": "AVAILABLE"
         },
-        "title": "一级方程式：疾速争胜",
+        "title": "阿甘正传",
         "sourceMatch": null,
         "sourceEvents": []
       },
@@ -360,6 +677,30 @@
       },
       "status": "unverified",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-6omfkui754hy1907q88mrt3g2",
+      "en": "Get Smart",
+      "year": "2008",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-6omfkui754hy1907q88mrt3g2",
+        "en": "Get Smart",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1972701",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "糊涂侦探",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
     },
     {
       "slug": "hello-jack-the-kindness-show",
@@ -472,6 +813,30 @@
       "notRecheckedThisRun": true
     },
     {
+      "slug": "home-1vrwat5k1ucm5k42q97ioqyq3",
+      "en": "Interstellar",
+      "year": "2014",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-1vrwat5k1ucm5k42q97ioqyq3",
+        "en": "Interstellar",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1889243",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "星际穿越",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
       "slug": "home-17y48i5ko6gft5ieh148nzqzn",
       "en": "It's the Easter Beagle, Charlie Brown!",
       "year": "1974",
@@ -537,6 +902,30 @@
       },
       "status": "unverified",
       "notRecheckedThisRun": true
+    },
+    {
+      "slug": "home-1akqb9p1qgiwuigy5xm63wdf2",
+      "en": "Julie & Julia",
+      "year": "2009",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-1akqb9p1qgiwuigy5xm63wdf2",
+        "en": "Julie & Julia",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "2996640",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "朱莉与朱莉娅",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
     },
     {
       "slug": "kpopped",
@@ -858,6 +1247,30 @@
       "notRecheckedThisRun": true
     },
     {
+      "slug": "home-4e8pvt0eezl2rnq71x4nx3atn",
+      "en": "Minority Report",
+      "year": "2002",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-4e8pvt0eezl2rnq71x4nx3atn",
+        "en": "Minority Report",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1297689",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "少数派报告",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
       "slug": "napoleon-the-directors-cut",
       "en": "Napoleon: The Director’s Cut",
       "year": "2024",
@@ -1170,6 +1583,78 @@
       "notRecheckedThisRun": true
     },
     {
+      "slug": "home-7fxny3aaxgkm020pguu5gmxaw",
+      "en": "Prisoners",
+      "year": "2013",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-7fxny3aaxgkm020pguu5gmxaw",
+        "en": "Prisoners",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "3592859",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "囚徒",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-1hfvw2p79f9qdeydow8nmrn7t",
+      "en": "Pulp Fiction",
+      "year": "1994",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-1hfvw2p79f9qdeydow8nmrn7t",
+        "en": "Pulp Fiction",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1291832",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "低俗小说",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-1yzqh3cqb681zufb495p6kzzr",
+      "en": "Rachel Getting Married",
+      "year": "2008",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-1yzqh3cqb681zufb495p6kzzr",
+        "en": "Rachel Getting Married",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "2267369",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "蕾切尔的婚礼",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
       "slug": "sago-mini-friends",
       "en": "Sago Mini Friends",
       "year": "2024",
@@ -1361,6 +1846,54 @@
       "notRecheckedThisRun": true
     },
     {
+      "slug": "home-4cv94ek82vqrruz5yhv52ss3f",
+      "en": "Talladega Nights: The Ballad of Ricky Bobby",
+      "year": "2006",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-4cv94ek82vqrruz5yhv52ss3f",
+        "en": "Talladega Nights: The Ballad of Ricky Bobby",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1796824",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "塔拉德加之夜",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-3d7jpq67ivm8he8ndug7lmr63",
+      "en": "The Nice Guys",
+      "year": "2016",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-3d7jpq67ivm8he8ndug7lmr63",
+        "en": "The Nice Guys",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "25917787",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "耐撕侦探",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified"
+    },
+    {
       "slug": "the-oprah-conversation",
       "en": "The Oprah Conversation",
       "year": "2020",
@@ -1449,24 +1982,6 @@
       "skip": "future_release",
       "status": "future_release",
       "notRecheckedThisRun": true
-    },
-    {
-      "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
-      "en": "Wonder Pets",
-      "year": "2006",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
-        "en": "Wonder Pets",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "神奇宠物救援队",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
     },
     {
       "slug": "wonder-pets-in-the-city",
@@ -1603,93 +2118,24 @@
       "notRecheckedThisRun": true
     },
     {
-      "slug": "tu-tambien-lo-harias",
-      "en": "You Would Do It Too (Tú También lo Harías)",
-      "year": "2024",
-      "season": 1,
+      "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+      "en": "Formula 1: Drive to Survive",
+      "year": "2026",
+      "season": 8,
       "skip": "",
       "result": {
-        "slug": "tu-tambien-lo-harias",
-        "en": "You Would Do It Too (Tú También lo Harías)",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "title": "大巴劫案疑云",
-        "sourceMatch": null,
-        "sourceEvents": [],
-        "originalReleaseYear": 2023
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "greatness-code",
-      "en": "Greatness Code",
-      "year": "2022",
-      "season": 2,
-      "skip": "",
-      "result": {
-        "slug": "greatness-code",
-        "en": "Greatness Code",
+        "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+        "en": "Formula 1: Drive to Survive",
         "searchStatus": "douban_direct",
         "confidence": "VERIFIED",
         "sourcePolicy": "not_checked_name_review",
         "detailMetadata": {
-          "season": 2,
-          "subjectId": "35887604",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "伟大的密码",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "helpsters",
-      "en": "Helpsters",
-      "year": "2022",
-      "season": 3,
-      "skip": "",
-      "result": {
-        "slug": "helpsters",
-        "en": "Helpsters",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 3,
-          "subjectId": "35914330",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "布偶小帮手",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "home-5mffp3n83az89t42qnhew9vn5",
-      "en": "I, Robot",
-      "year": "2004",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-5mffp3n83az89t42qnhew9vn5",
-        "en": "I, Robot",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1308843",
+          "season": 8,
+          "subjectId": "37502429",
           "summaryStatus": "AVAILABLE",
           "ratingStatus": "AVAILABLE"
         },
-        "title": "我，机器人",
+        "title": "一级方程式：疾速争胜",
         "sourceMatch": null,
         "sourceEvents": []
       },
@@ -1715,256 +2161,6 @@
           "ratingStatus": "AVAILABLE"
         },
         "title": "查理·布朗，圣诞节又到了",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "home-6x263wzi05ds2h4oen54w8881",
-      "en": "Jurassic World",
-      "year": "2015",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-6x263wzi05ds2h4oen54w8881",
-        "en": "Jurassic World",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "10440138",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "侏罗纪世界",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "outcome",
-      "en": "Outcome",
-      "year": "2026",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "outcome",
-        "en": "Outcome",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "36160466",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "星途恶果",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "the-dink",
-      "en": "The Dink",
-      "year": "2026",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "the-dink",
-        "en": "The Dink",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "37054667",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "低弧慢球",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "the-hunt",
-      "en": "The Hunt (Traqués)",
-      "year": "2026",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "the-hunt",
-        "en": "The Hunt (Traqués)",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 1,
-          "subjectId": "36783469",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "猎杀",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "the-line",
-      "en": "The Line",
-      "year": "2021",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "the-line",
-        "en": "The Line",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 1,
-          "subjectId": "35576361",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "底线",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "the-problem-with-jon-stewart",
-      "en": "The Problem With Jon Stewart",
-      "year": "2022",
-      "season": 2,
-      "skip": "",
-      "result": {
-        "slug": "the-problem-with-jon-stewart",
-        "en": "The Problem With Jon Stewart",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 2,
-          "subjectId": "35907552",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "囧司徒的问题",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
-      "en": "The Sixth Sense",
-      "year": "1999",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
-        "en": "The Sixth Sense",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1297630",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "第六感",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "home-5iudnxk9tyxo63gewawi330mw",
-      "en": "Tropic Thunder",
-      "year": "2008",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-5iudnxk9tyxo63gewawi330mw",
-        "en": "Tropic Thunder",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1994879",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "热带惊雷",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "twas-the-fight-before-christmas",
-      "en": "Twas the Fight Before Christmas",
-      "year": "2021",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "twas-the-fight-before-christmas",
-        "en": "Twas the Fight Before Christmas",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "35657015",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "圣诞讼",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified",
-      "reusedVerified": true
-    },
-    {
-      "slug": "to-mom-and-dad-with-love",
-      "en": "To Mom (And Dad), With Love",
-      "year": "2022",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "to-mom-and-dad-with-love",
-        "en": "To Mom (And Dad), With Love",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "35883780",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "史努比特辑：将爱献给父母",
         "sourceMatch": null,
         "sourceEvents": []
       },
@@ -2001,7 +2197,7 @@
   "summary": {
     "future_release": 7,
     "missing_identity": 1,
-    "unverified": 25,
-    "verified": 18
+    "unverified": 26,
+    "verified": 22
   }
 }
