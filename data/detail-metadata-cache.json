@@ -1022,6 +1022,68 @@
           "originalTitle": "Way of the Warrior Kid"
         }
       ]
+    },
+    "umc.cmc.2wyy7chw6bmy46fekqlqq1ulb": {
+      "en": "Carpool Karaoke: The Series",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "26985567",
+          "sourceUrl": "https://movie.douban.com/subject/26985567/",
+          "title": "拼车K歌秀",
+          "summary": "苹果已经进入了原创影视制作，并在苹果音乐客户端中播出，其最引人关注的原创节目是云集了大牌明星的《顺风车卡拉OK》（Carpool Karaoke）。 这一剧集每一集长度为20分钟，每一集将有一位大牌明星出场，在搭乘顺风车的过程中和司机飙歌。《顺风车卡拉OK》在过去的播出过程中引发轰动，而苹果获得了本季节目的版权。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2017,
+          "checkedAt": "2026-11-02T02:41:59+00:00",
+          "originalTitle": "Carpool Karaoke: The Series",
+          "rating": 8.7
+        }
+      ]
+    },
+    "umc.cmc.1w3e47nmnt4o304oaauh4k2rm": {
+      "en": "Now & Then",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35507236",
+          "sourceUrl": "https://movie.douban.com/subject/35507236/",
+          "title": "此时此刻",
+          "summary": "发生在迈阿密的这个故事将会探索年轻时对未来的朝气面对成年后的现实的矛盾，一群大学好友在一个狂欢周末中失去了其中的一个朋友，20年后一个突如其来的匿名威胁着剩下五个人的生活，他们只能联合起来找出幕后的真相。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2022,
+          "checkedAt": "2026-11-02T02:42:05+00:00",
+          "originalTitle": "Now & Then",
+          "rating": 5.8
+        }
+      ]
+    },
+    "umc.cmc.52sgmi3vdpedurrbtz6louqqo": {
+      "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "38535567",
+          "sourceUrl": "https://movie.douban.com/subject/38535567/",
+          "title": "史努比特辑：有家真好",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING",
+          "season": 0,
+          "year": 2026,
+          "checkedAt": "2026-11-02T02:42:20+00:00",
+          "originalTitle": "Snoopy Presents: There’s No Place Like Home, Snoopy"
+        }
+      ]
     }
   }
 }

@@ -3608,6 +3608,41 @@
         "title": "十二猴子",
         "watchUrl": "https://tv.apple.com/us/movie/12-monkeys/umc.cmc.49nuxpa3uc9ezls951h0ra32r"
       }
+    },
+    "umc.cmc.750u3qv5wz0d41pn1v2rvn7oe": {
+      "en": "A Carpool Karaoke Christmas",
+      "kind": "movie",
+      "year": "2024",
+      "verifiedZh": {
+        "_identityYear": 2024,
+        "aliases": [
+          "兜风 KTV 过圣诞"
+        ],
+        "contentRating": "TV-PG",
+        "metadataPolicy": "mainland-v1",
+        "nameOnlyScope": "single_episode_special",
+        "name_sources": [
+          {
+            "retrieved_at": "1793587317",
+            "type": "douban_single_episode_special_name_only",
+            "url": "https://movie.douban.com/subject/37161992/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2024,
+        "summary": "詹姆斯·柯登将钥匙交给了赞恩·洛，开启这场国际节日公路旅行。当赞恩在日本与杜阿·利帕、在密苏里州家乡与查普尔·罗恩、在洛杉矶与Lady Gaga共度佳节时，这里便成了流行天后的冬日仙境。",
+        "summary_original": "James Corden passes the keys to Zane Lowe for this international holiday road trip. It’s a pop diva winter wonderland when Zane gets festive with Dua Lipa in Japan, Chappell Roan in her Missouri hometown, and Lady Gaga in Los Angeles.",
+        "summary_source_hash": "5a1bb0a10b6d68885c0b0ad5e5484c7461a2697ca138ef5f14eb5d40ae3c15f0",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/a-carpool-karaoke-christmas/umc.cmc.750u3qv5wz0d41pn1v2rvn7oe"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "兜风 KTV 过圣诞",
+        "watchUrl": "https://tv.apple.com/us/movie/a-carpool-karaoke-christmas/umc.cmc.750u3qv5wz0d41pn1v2rvn7oe"
+      }
     }
   }
 }

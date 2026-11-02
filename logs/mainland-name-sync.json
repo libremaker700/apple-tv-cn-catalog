@@ -5,114 +5,27 @@
   ],
   "records": [
     {
-      "slug": "yo-gabba-gabbaland",
-      "en": "Yo Gabba GabbaLand!",
-      "searchStatus": "ok",
-      "confidence": "UNVERIFIED",
-      "verificationEvents": [
-        {
-          "host": "movie.douban.com",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "m.douban.com",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "m.douban.com",
-          "status": 404,
-          "cached": false
-        },
-        {
-          "host": "m.douban.com",
-          "status": 404,
-          "cached": false
-        },
-        {
-          "host": "m.douban.com",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        },
-        {
-          "host": "watch.plex.tv",
-          "status": 200,
-          "cached": false
-        }
-      ],
-      "subjectDiagnostics": [
-        {
-          "stage": "subject",
-          "subject_id": "36988909",
-          "status": "UNVERIFIED"
-        },
-        {
-          "stage": "suggest",
-          "status": "EMPTY_RESPONSE"
-        },
-        {
-          "stage": "mobile_search",
-          "candidates": 3
-        },
-        {
-          "stage": "subject",
-          "subject_id": "36209111",
-          "status": "UNVERIFIED"
-        },
-        {
-          "stage": "subject",
-          "subject_id": "25862406",
-          "status": "UNVERIFIED"
-        },
-        {
-          "stage": "subject",
-          "subject_id": "6894818",
-          "status": "UNVERIFIED"
-        }
-      ]
+      "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
+      "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "searchStatus": "douban_direct",
+      "confidence": "VERIFIED",
+      "sourcePolicy": "not_checked_name_review",
+      "detailMetadata": {
+        "season": 0,
+        "subjectId": "38535567",
+        "summaryStatus": "PENDING",
+        "ratingStatus": "NO_RATING"
+      },
+      "title": "史努比特辑：有家真好",
+      "sourceMatch": null,
+      "sourceEvents": []
     }
   ],
-  "changed": [],
+  "changed": [
+    "snoopy-presents-theres-no-place-like-home-snoopy"
+  ],
   "geminiUsed": false,
   "namesOnly": true,
-  "accounts": [
-    {
-      "service": "ydc",
-      "account": "YDC_API_KEYI_1",
-      "http": 200,
-      "reason": "http"
-    }
-  ],
-  "reservedThisMonth": 154
+  "accounts": [],
+  "reservedThisMonth": 155
 }
