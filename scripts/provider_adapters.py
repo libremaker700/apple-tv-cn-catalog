@@ -152,7 +152,7 @@ class Shared:
         body=self.call('/v2/vod/detail.capi',{'vodId':identity},True)
         if not isinstance(body,dict)or str(body.get('id',identity))!=identity:raise AdapterError('identity_changed')
         self.details[identity]=body;year=body.get('year')or{}
-        return dict(row,vod_name=plain(body.get('title')),vod_year=str(year.get('name','')if isinstance(year,dict)else year),type_name=self.medium(body)or row.get('type_name',''),vod_actor=names(body.get('actors')),vod_director=names(body.get('directors')))
+        return dict(row,vod_name=plain(body.get('title')),vod_year=str(year.get('name','')if isinstance(year,dict)else year),type_name=self.medium(body)or row.get('type_name',''),vod_actor=names(body.get('actors')),vod_director=names(body.get('directors')),_hasPlayEntries=bool(body.get('playSources')))
     def playable(self,row):
         flags=[];groups=[]
         for source in self.details[str(row['vod_id'])].get('playSources',[])[:20]:

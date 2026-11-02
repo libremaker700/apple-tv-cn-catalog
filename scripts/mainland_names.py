@@ -106,9 +106,9 @@ def candidate_matches(ref,row,names):
     people=lambda text:{norm(n)for n in re.split(r'[,，/、;；|]+',str(text or''))if norm(n)and norm(n)not in ('未知','不详','内详','unknown')}
     if not same_id and(not(people(ref.get('directors'))&people(row.get('vod_director')))or len(people(ref.get('actors'))&people(row.get('vod_actor')))<2):return False
     return recall_matches(ref,row,names,strong=True)
-def public_sources(ref,names,providers,session=None,deadline=None):
+def public_sources(ref,names,providers,session=None,deadline=None,name_evidence=False):
     from source_votes import collect
-    return collect(ref,names,providers,session,time.monotonic()+90 if deadline is None else deadline,candidate_matches,source_queries,base,norm,recall=recall_matches)
+    return collect(ref,names,providers,session,time.monotonic()+90 if deadline is None else deadline,candidate_matches,source_queries,base,norm,recall=recall_matches,name_evidence=name_evidence)
 
 def independent_name(ref,hits,lookup,now,http=None):
     for item in hits[:6]:
@@ -207,7 +207,8 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 from source_name_resolution import resolve
                 ref['name_context']=str(zh.get('summary_original')or zh.get('summary')or'')[:500]
                 bound_hints=hint.get('sourceNameHints',[])if hint.get('englishTitle')==work['en']and hint.get('officialId')==official else[]
-                resolution=resolve(identity_record,ref,providers,client,direct_patch=patch,hints=bound_hints,state=discovery.setdefault('aiSourceNames',{}),probe=probe,now=now)
+                confirmed=hint.get('confirmedSourceNames',[])if hint.get('englishTitle')==work['en']and hint.get('officialId')==official else[]
+                resolution=resolve(identity_record,ref,providers,client,direct_patch=patch,hints=bound_hints,confirmed=confirmed,state=discovery.setdefault('aiSourceNames',{}),probe=probe,now=now)
                 patch=resolution['patch'];best=resolution['best'];events=resolution['events'];probed=True;status='ai_candidates_then_sources_or_douban'
             if resolution is None and patch and not deferred and not names_only:
                 source_people(source_ref,patch)
@@ -273,10 +274,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 work['zh']=zh
                 if remember(work,packet,root):record['detailMetadata']={'season':packet['season'],'subjectId':packet['subjectId'],'summaryStatus':packet['summaryStatus'],'ratingStatus':packet['ratingStatus']}
             from source_votes import incomplete
-            if (not names_only or resolution)and not deferred and (best or probed and not incomplete(events)):
+            if not resolution and not names_only and not deferred and (best or probed and not incomplete(events)):
                 from source_availability import make_check
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
-                if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
+            if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
             if resolution and not re.search(r'[\u3400-\u9fff]',title):record.update(confidence='IDENTITY_ONLY',identityVerifiedWithoutChineseName=True,verifiedIdentity=copy.deepcopy(identity_record))
             if ref['year']!=detail_year:

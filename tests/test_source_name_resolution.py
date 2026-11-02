@@ -1,4 +1,4 @@
-import sys,unittest,json,tempfile
+import sys,unittest,json,tempfile,time
 from pathlib import Path
 from unittest.mock import Mock
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
@@ -25,10 +25,21 @@ class NameAuthority(unittest.TestCase):
         result,_=self.call(vote)
         self.assertEqual(result['patch']['display_name_zh'],'不是一个盒子')
         self.assertEqual(result['patch']['douban_title'],'Not a Box')
-        self.assertEqual(result['evidence']['decision'],'verified_playable_source_name')
+        self.assertEqual(result['evidence']['decision'],'verified_library_entry_name')
         result,_=self.call(dict(vote,recallOnly=True))
         self.assertEqual(result['patch']['display_name_zh'],'Not a Box')
         result,_=self.call(dict(vote,routes=0))
+        self.assertEqual(result['patch']['display_name_zh'],'Not a Box')
+        result,_=self.call(dict(vote,routes=0,nameEvidenceOnly=True))
+        self.assertEqual(result['patch']['display_name_zh'],'不是一个盒子')
+        self.assertFalse(result['evidence']['playbackVerified'])
+    def test_confirmed_library_name_survives_expired_media_and_wrong_identity_is_ignored(self):
+        entry={'title':'不是个盒子','provider':'shared','subjectId':'37374251','year':2025,'season':1,'evidence':'user_confirmed_library_entry','playbackStatus':'unavailable_or_partial'}
+        result,_=self.call(confirmed=[entry])
+        self.assertEqual(result['patch']['display_name_zh'],'不是个盒子')
+        self.assertEqual(result['evidence']['decision'],'user_confirmed_library_entry_name')
+        self.assertFalse(result['evidence']['playbackVerified'])
+        result,_=self.call(confirmed=[dict(entry,season=2)])
         self.assertEqual(result['patch']['display_name_zh'],'Not a Box')
     def test_cached_answer_is_identity_bound_and_user_hint_is_not_approval(self):
         state={};self.call(state=state,hints=['不是一个盒子']);self.call(state=state)
@@ -58,6 +69,22 @@ class CandidateAccounts(unittest.TestCase):
         self.assertEqual(client.disabled,set())
 
 class Publication(unittest.TestCase):
+    def test_expired_playback_cannot_erase_identity_checked_name_vote(self):
+        from unittest.mock import patch
+        from source_votes import collect
+        from provider_adapters import AdapterError
+        from mainland_names import base,norm
+        adapter=Mock();row={'vod_id':'1','vod_name':'不是个盒子','_hasPlayEntries':True}
+        adapter.search.return_value=[row];adapter.describe.return_value=row
+        adapter.playable.side_effect=AdapterError('media_unavailable')
+        args=({'kind':'series','season':1,'year':'2025'},['不是个盒子'],[{'id':'shared','url':'https://example.invalid'}],None)
+        with patch('source_votes.create',return_value=adapter):
+            result,_=collect(*args,time.monotonic()+5,lambda *args:True,lambda *args:['不是个盒子'],base,norm,name_evidence=True)
+            self.assertEqual(result['selection']['libraries'],1)
+            self.assertEqual(result['routes'],0)
+            self.assertTrue(result['nameEvidenceOnly']);adapter.playable.assert_not_called()
+            result,_=collect(*args,time.monotonic()+5,lambda *args:True,lambda *args:['不是个盒子'],base,norm)
+            self.assertIsNone(result) # playback checks remain strict
     def test_stale_plex_name_is_replaced_and_no_second_source_probe_occurs(self):
         from unittest.mock import patch
         from mainland_names import run

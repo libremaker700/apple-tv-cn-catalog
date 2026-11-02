@@ -31,7 +31,7 @@ def usable_groups(row):
             except ValueError:continue
     return count
 
-def collect(ref,names,providers,session,deadline,matches,queries,base,norm,recall=None):
+def collect(ref,names,providers,session,deadline,matches,queries,base,norm,recall=None,name_evidence=False):
     unique=[];seen=set()
     for provider in providers:
         address=provider_key(provider)
@@ -61,7 +61,11 @@ def collect(ref,names,providers,session,deadline,matches,queries,base,norm,recal
                             if not row.get('type_name')or not same_id and not id_conflict:
                                 complete=False;events.append({'provider':provider['id'],'http':200,'reason':'identity_pending'})
                             continue
-                        seen_records.add(record);row=adapter.playable(row);count=usable_groups(row)
+                        seen_records.add(record)
+                        if name_evidence and strong and has_play_entries(row):
+                            rows.append((canonical_name(ref,str(row['vod_name']),names,base,norm),usable_groups(row),True))
+                            continue
+                        row=adapter.playable(row);count=usable_groups(row)
                         if count:rows.append((canonical_name(ref,str(row['vod_name']),names,base,norm),count,strong))
                 except AdapterError as error:
                     complete=False;events.append({'provider':provider['id'],'http':error.http,'reason':error.reason})
@@ -94,7 +98,18 @@ def collect(ref,names,providers,session,deadline,matches,queries,base,norm,recal
     ranked=sorted(votes.items(),key=lambda pair:(-len(pair[1]['libraries']),pair[0]!=preferred,pair[0]));key,best=ranked[0]
     options=[{'title':base(min(g['titles'],key=lambda s:(len(s),s))),'libraries':len(g['libraries'])}for _,g in ranked]
     title=min(best['titles'],key=lambda s:(len(s),s))
-    return {'title':title,'routes':routes,'libraries':len(libraries),'complete':coverage,'selection':{'policy':VOTE_POLICY,'title':base(title),'libraries':len(best['libraries']),'checkedLibraries':checked,'attemptedLibraries':attempted,'requestedLibraries':len(unique),'complete':coverage,'options':options}},events
+    return {'title':title,'routes':routes,'libraries':len(libraries),'complete':coverage,**({'nameEvidenceOnly':True}if name_evidence else{}),'selection':{'policy':VOTE_POLICY,'title':base(title),'libraries':len(best['libraries']),'checkedLibraries':checked,'attemptedLibraries':attempted,'requestedLibraries':len(unique),'complete':coverage,'options':options}},events
+
+def has_play_entries(row):
+    """Playback metadata can prove a source name even when the media has expired."""
+    if row.get('_hasPlayEntries'):return True
+    for group in str(row.get('vod_play_url','')).split('$$$')[:50]:
+        for entry in group.split('#'):
+            label,separator,address=entry.partition('$')
+            if re.search('预告|花絮|彩蛋|特辑|幕后',label):continue
+            if separator and address.strip():return True
+            if not separator and re.match(r'^https?://',label):return True
+    return False
 
 def apply_selection(work,selection):
     if not isinstance(selection,dict)or selection.get('policy')!=VOTE_POLICY or not isinstance(selection.get('title'),str)or not re.search('[\u3400-\u9fff]',selection['title'])or type(selection.get('libraries'))is not int or selection['libraries']<1:return

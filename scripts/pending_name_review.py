@@ -71,7 +71,7 @@ def save_report(root,report):
     report['summary']={status:sum(r['status']==status for r in report['records'])for status in sorted({r['status']for r in report['records']})}
     dump(root/'docs/pending-name-review.json',report)
     status_names={'identity_no_chinese_name':'身份已核实，暂无经片库确认的中文名','verified':'已确认中文名','network_incomplete':'网络未完成，待重试','unverified':'身份未核实','missing_identity':'身份资料不足','missing_year':'缺少年份','future_release':'尚未上线，本轮跳过','not_attempted_budget':'本轮预算未轮到','error_retry':'执行异常，待重试'}
-    lines=['# 待匹配中文名复核','', '本报告复核中文名，不使用 Gemini。已上线且豆瓣身份已核实的作品，使用 YDC／Tavily 查询候选名，再查片库；同片同季且返回有效媒体地址后按片库数量选名，否则保留豆瓣名称。超时不代表片库未收录；媒体地址不等于播放器已出画面。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
+    lines=['# 待匹配中文名复核','', '本报告复核中文名，不使用 Gemini。已上线且豆瓣身份已核实的作品，使用 YDC／Tavily 查询候选名，再查片库；同片同季且有播放条目即可按片库数量选名，已确认片名不会因线路过期被撤销。用户确认的片库名称另记来源；没有片库名称证据时保留豆瓣名称。超时不代表未收录；名称确认不等于播放器已出画面。','', '检查时间（UTC）：'+report['checkedAt'],'', '| 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |','|---|---|---|---|']
     for row in report['records']:
         cells=[row['en'],status_names[row['status']],row.get('result',{}).get('title',''),str(row['year'])+' / '+str(row['season'])]
         lines.append('| '+' | '.join(str(c).replace('|','／').replace('\n',' ')for c in cells)+' |')
