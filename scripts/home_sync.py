@@ -3,13 +3,22 @@ import copy,hashlib,io,json,re,time,concurrent.futures,threading
 from pathlib import Path
 from urllib.parse import urlsplit
 import requests
-from PIL import Image
+from PIL import Image,ImageOps
 from catalog import ROOT,DOCS,load,raw_json
 
 SOURCE='https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 ROOM='https://tv.apple.com/us/room/sci-fi-on-appletv/edt.item.650b3154-accd-4b87-9f89-6bde117cee31'
 LABELS={'uts.col.tv-plus-newest-releases':'最新上线','uts.col.ChartsShows.tvs.sbd.4000':'热门剧集','uts.col.ChartsMovies.tvs.sbd.4000':'热门电影','uts.col.free-premieres-on-tv-plus':'首集精选','uts.col.tv-plus-great-movies':'精选电影'}
+def normalize_image(raw,width,height):
+    # Apple's legacy image endpoints sometimes round one edge down by one pixel.
+    with Image.open(io.BytesIO(raw))as im:
+        if im.format!='JPEG' or abs(im.width-width)>1 or abs(im.height-height)>1:raise ValueError('Official image dimensions do not match requested size')
+        im.verify()
+    with Image.open(io.BytesIO(raw))as im:
+        if im.size==(width,height):return raw
+        output=io.BytesIO();ImageOps.fit(im.convert('RGB'),(width,height),method=Image.Resampling.LANCZOS).save(output,'JPEG',quality=95)
+        return output.getvalue()
 def fetch(url):
     u=urlsplit(url)
     if not (url in (SOURCE,ROOM) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
@@ -100,9 +109,7 @@ def sync():
         if previous and now-previous.get('checkedAt',0)<6*3600 and path.is_file():
             raw=path.read_bytes()
             if hashlib.sha256(raw).hexdigest()==path.stem:return {'artwork':BASE+previous['path'],'width':width,'height':height}
-        raw=fetch(url)
-        with Image.open(io.BytesIO(raw)) as im:
-            assert im.size==(width,height) and im.format=='JPEG';im.verify()
+        raw=normalize_image(fetch(url),width,height)
         ref='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(folder/ref).write_bytes(raw)
         with cache_lock:
             cache[url]={'path':ref,'checkedAt':now}
