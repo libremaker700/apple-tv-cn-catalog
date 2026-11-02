@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T02:50:39+00:00",
+  "checkedAt": "2026-11-02T03:30:13+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -1564,7 +1564,7 @@
       "notes": "第一季为 **2022**，原表为 2023",
       "candidateOnly": true,
       "slug": "lovely-little-farm",
-      "officialId": "",
+      "officialId": "umc.cmc.iajaormpogjbe142ssfirdys",
       "kind": "series",
       "active": true,
       "finalTitle": "可爱的小农场",
@@ -1738,8 +1738,8 @@
       "officialId": "umc.cmc.5v5f721a2mlxcurdhh0wm56if",
       "kind": "series",
       "active": true,
-      "finalTitle": "魔盒",
-      "status": "verified_name_preserved",
+      "finalTitle": "Not a Box",
+      "status": "identity_no_chinese_name",
       "requestedSeason": 1,
       "requestedYear": "2025",
       "currentKind": "series",
@@ -2010,7 +2010,7 @@
       "candidateOnly": true,
       "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
       "officialId": "umc.cmc.52sgmi3vdpedurrbtz6louqqo",
-      "kind": "series",
+      "kind": "movie",
       "active": true,
       "finalTitle": "史努比特辑：有家真好",
       "status": "verified_name_preserved",
@@ -2643,13 +2643,13 @@
     }
   ],
   "summary": {
-    "identity_no_chinese_name": 8,
+    "identity_no_chinese_name": 9,
     "no_candidate_supplied": 3,
     "regional_alias_only": 1,
     "season_conflict": 4,
     "verified_cached_not_in_current_catalog": 4,
     "verified_name_only": 3,
-    "verified_name_preserved": 24,
+    "verified_name_preserved": 23,
     "year_conflict": 2
   }
 }

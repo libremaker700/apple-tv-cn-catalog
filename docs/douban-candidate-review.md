@@ -2,7 +2,7 @@
 
 候选编号只用于定位条目；不是中文名、季数、年份或版本的自动批准。保留原有已核实结果，不把第一季资料套给后续季。没有候选或请求失败不等于未收录。
 
-检查时间：2026-11-02T02:50:39+00:00
+检查时间：2026-11-02T03:30:13+00:00
 
 | 英文原名 | 当前中文名 | 结果 | 当前年／季 | 候选条目 |
 |---|---|---|---|---|
@@ -31,7 +31,7 @@
 | MLS Awards Expansion Team to San Diego | — | 清单未提供可核实条目，不认定未收录 | 2023 / 0 | — |
 | Messi Mania | — | 身份已核实，暂无可采用的中文名 | 2023 / 0 | [38483287](https://movie.douban.com/subject/38483287/) |
 | Napoleon: The Director’s Cut | 拿破仑：导演剪辑版 | 已核实特别篇／版本名称，未套用详情评分 | 2024 / 0 | [35224919](https://movie.douban.com/subject/35224919/) |
-| Not a Box | 魔盒 | 已核实中文名，保留现有资料 | 2025 / 1 | [37374251](https://movie.douban.com/subject/37374251/) |
+| Not a Box | Not a Box | 身份已核实，暂无可采用的中文名 | 2025 / 1 | [37374251](https://movie.douban.com/subject/37374251/) |
 | Now & Then | 此时此刻 | 已核实中文名，保留现有资料 | 2022 / 1 | [35507236](https://movie.douban.com/subject/35507236/) |
 | Number One on the Call Sheet | 通告大咖 | 已核实中文名，保留现有资料 | 2025 / 1 | [37290675](https://movie.douban.com/subject/37290675/) |
 | Outcome | 星途恶果 | 已核实中文名，保留现有资料 | 2026 / 0 | [36160466](https://movie.douban.com/subject/36160466/) |
