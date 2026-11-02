@@ -2,63 +2,504 @@
   "records": {
     "umc.cmc.1c5nvp802hos5t3u0umlukkwh": {
       "en": "It’s the Great Pumpkin, Charlie Brown",
+      "kind": "movie",
       "year": "1966",
-      "patch": null,
-      "nextRetry": 1793454637
+      "verifiedZh": {
+        "_identityYear": 1966,
+        "aliases": [
+          "这是南瓜大王哦！查理·布朗！",
+          "这是南瓜大王哦查理·布朗",
+          "这是个大南瓜哦！查理·布朗！",
+          "史努比卡通：万圣节南瓜头",
+          "It’s the Great Pumpkin, Charlie Brown",
+          "这是南瓜大王哦！ 查理·布朗！"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "nameSelection": {
+          "checkedLibraries": 28,
+          "complete": false,
+          "libraries": 2,
+          "options": [
+            {
+              "libraries": 2,
+              "title": "这是南瓜大王哦！ 查理·布朗！"
+            }
+          ],
+          "policy": "library-votes-v1",
+          "requestedLibraries": 28,
+          "title": "这是南瓜大王哦！ 查理·布朗！"
+        },
+        "name_sources": [
+          {
+            "type": "reviewed_douban_display_evidence",
+            "url": "https://movie.douban.com/awards/asa/14/nominees"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": null,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 1966,
+        "sourceCheck": {
+          "checkedAt": 1793495628,
+          "en": "It’s the Great Pumpkin, Charlie Brown",
+          "found": true,
+          "kind": "movie",
+          "routes": 2,
+          "schema": 1,
+          "season": 0,
+          "year": "1966"
+        },
+        "summary": "服装、糖果、这部经典特辑——有些事物生动诠释了万圣节。加入花生漫画伙伴们的行列，开启一场永恒的冒险：查理·布朗筹备派对，史努比将目标对准红色男爵，莱纳斯则耐心等待南瓜地的奇迹。",
+        "summary_original": "Costumes, candy, this classic special—some things just scream Halloween. Join the Peanuts gang for a timeless adventure as Charlie Brown preps for a party, Snoopy sets his sights on the Red Baron, and Linus patiently awaits a pumpkin patch miracle.",
+        "summary_source_hash": "5db3f229ffe7095cf659b8b8f45c2dabbd5fad0e0ccb2b2d5fd2bf5d9375c460",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/its-the-great-pumpkin-charlie-brown/umc.cmc.1c5nvp802hos5t3u0umlukkwh"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "这是南瓜大王哦！查理·布朗！",
+        "watchUrl": "https://tv.apple.com/us/movie/its-the-great-pumpkin-charlie-brown/umc.cmc.1c5nvp802hos5t3u0umlukkwh"
+      }
     },
     "umc.cmc.ljmzio5szpnhca4ydns8f99q": {
       "en": "Good Will Hunting",
+      "kind": "movie",
       "year": "1997",
-      "patch": null,
-      "nextRetry": 1793454637
+      "verifiedZh": {
+        "aliases": [
+          "心灵捕手",
+          "Good Will Hunting"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1292656/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1997,
+        "provenance": "audited_title_import",
+        "searchYear": 1997,
+        "summary": "美国顶尖大学里最聪明的头脑不是学生……而是擦地板的小伙。威尔·亨廷是一个固执的工人阶级天才，却在生活的课堂上屡屡不及格。在一次次触犯法律之后，威尔的最后希望是一位心理学教授，他或许是唯一能走入他内心的人。",
+        "summary_original": "The most brilliant mind at America’s top university isn’t a student...he’s the kid who cleans the floors. Will Hunting is a headstrong, working-class genius who’s failing the lessons of life. After one too many run-ins with the law, Will’s last chance is a psychology professor who might be the only man who can reach him.",
+        "summary_source_hash": "cf2085e6049ce67dc3b81317ce0483b64baad6144ec5c591d472eb38a75bd26d",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/good-will-hunting/umc.cmc.ljmzio5szpnhca4ydns8f99q"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "心灵捕手",
+        "watchUrl": "https://tv.apple.com/us/movie/good-will-hunting/umc.cmc.ljmzio5szpnhca4ydns8f99q"
+      }
     },
     "umc.cmc.5mffp3n83az89t42qnhew9vn5": {
       "en": "I, Robot",
+      "kind": "movie",
       "year": "2004",
-      "patch": null,
-      "nextRetry": 1793454637
+      "verifiedZh": {
+        "_identityYear": 2004,
+        "actors": [
+          "威尔·史密斯",
+          "布里吉特·莫伊纳汉",
+          "艾伦·图代克",
+          "詹姆斯·克伦威尔",
+          "布鲁斯·格林伍德",
+          "阿德里安·里卡德",
+          "齐·麦克布赖德",
+          "杰瑞·瓦塞尔曼",
+          "菲奥娜·霍根",
+          "彼得·新田",
+          "特瑞·陈",
+          "戴维·哈索姆",
+          "斯科特·海因德尔",
+          "莎朗·威尔金斯",
+          "克雷格·马奇",
+          "凯安娜·考克斯",
+          "达伦·摩尔",
+          "阿伦·道格拉斯",
+          "谢拉·戴森",
+          "鲍比·斯图尔特"
+        ],
+        "aliases": [
+          "我，机器人"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:30:39+00:00",
+          "originalTitle": "I, Robot",
+          "rating": 8.3,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1308843/",
+          "subjectId": "1308843",
+          "summary": "公元2035年，是人和机器人和谐相处的社会，智能机器人作为最好的生产工具和人类伙伴，逐渐深入人类生活的各个领域，而由于机器人“三大法则”的限制，人类对机器人充满信任，很多机器人甚至已经成为家庭成员。 总部位于芝加哥的USR公司开发出了更先进的NS-5型超能机器人，然而就在新产品上市前夕，机器人的创造者阿尔弗莱德•朗宁博士却在公司内离奇自杀。 黑人警探戴尔•斯普纳（威尔•史密斯 饰）接手了此案的调查，由于不愉快的往事，斯普纳对机器人充满了怀疑，不相信人类与机器人能够和谐共处。他根据对朗宁博士生前在3D投影机内留下的信息分析和对自杀现场的勘查，怀疑对象锁定了朗宁博士自己研制的NS-5型机器人桑尼，而公司总裁劳伦斯•罗伯逊似乎也与此事有关。 斯普纳结识了专门研究机器人心理的女科学家苏珊•凯文(碧姬•奈娜汉 饰)，随着二人调查的深入，真相一步一步被揭露出来：机器人竟然具备了自我进化的能力，他们对“三大法则”有了自己的理解，他们随时会转化成整个人类的“机械公敌”。 斯普纳和凯文开始了对抗机器人的行动，一场制造者和被制造者之间的战争拉开序幕。",
+          "summaryStatus": "AVAILABLE",
+          "title": "我，机器人",
+          "year": 2004
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:30:39+00:00",
+            "originalTitle": "I, Robot",
+            "rating": 8.3,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1308843/",
+            "subjectId": "1308843",
+            "summary": "公元2035年，是人和机器人和谐相处的社会，智能机器人作为最好的生产工具和人类伙伴，逐渐深入人类生活的各个领域，而由于机器人“三大法则”的限制，人类对机器人充满信任，很多机器人甚至已经成为家庭成员。 总部位于芝加哥的USR公司开发出了更先进的NS-5型超能机器人，然而就在新产品上市前夕，机器人的创造者阿尔弗莱德•朗宁博士却在公司内离奇自杀。 黑人警探戴尔•斯普纳（威尔•史密斯 饰）接手了此案的调查，由于不愉快的往事，斯普纳对机器人充满了怀疑，不相信人类与机器人能够和谐共处。他根据对朗宁博士生前在3D投影机内留下的信息分析和对自杀现场的勘查，怀疑对象锁定了朗宁博士自己研制的NS-5型机器人桑尼，而公司总裁劳伦斯•罗伯逊似乎也与此事有关。 斯普纳结识了专门研究机器人心理的女科学家苏珊•凯文(碧姬•奈娜汉 饰)，随着二人调查的深入，真相一步一步被揭露出来：机器人竟然具备了自我进化的能力，他们对“三大法则”有了自己的理解，他们随时会转化成整个人类的“机械公敌”。 斯普纳和凯文开始了对抗机器人的行动，一场制造者和被制造者之间的战争拉开序幕。",
+            "summaryStatus": "AVAILABLE",
+            "title": "我，机器人",
+            "year": 2004
+          }
+        ],
+        "directors": [
+          "亚历克斯·普罗亚斯"
+        ],
+        "douban_id": "1308843",
+        "douban_title": "我，机器人",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793575839",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1308843/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2004,
+        "summary": "在 2035 年，技术和机器人是日常生活信赖的一部分，但对患有机器人恐惧症的警探 Del Spooner（Will Smith 饰）来说并非如此。在调查一位著名机器人设计师的疑似自杀案时，Spooner 警探与机器人心理学家 Dr. Susan Calvin（Bridget Moynahan 饰）以及一个具有人类情感的原型机器人合作，挫败了一场旨在推翻人类统治的全球革命。",
+        "summary_original": "In the year 2035, technology and robots are a trusted part of everyday life, but not for robo-phobic police detective Del Spooner (Will Smith). While investigating the apparent suicide of a renowned robot designer, detective Spooner teams with robo-psychologist Dr. Susan Calvin (Bridget Moynahan) and a prototype robot with human emotions to thwart a worldwide revolution designed to overthrow human rule.",
+        "summary_source_hash": "79b6a619ad7d7feb510094d4737401c66524a5902f9087c75fb96e735899be99",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/i-robot/umc.cmc.5mffp3n83az89t42qnhew9vn5"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "我，机器人",
+        "watchUrl": "https://tv.apple.com/us/movie/i-robot/umc.cmc.5mffp3n83az89t42qnhew9vn5"
+      }
     },
     "umc.cmc.3sr644gks0beiq8og6ax314ww": {
       "en": "Insomnia",
+      "kind": "movie",
       "year": "2002",
-      "patch": null,
-      "nextRetry": 1793454637
+      "verifiedZh": {
+        "_identityYear": 2002,
+        "aliases": [
+          "失眠症",
+          "致命对抗",
+          "Insomnia"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1307210/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2002,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 2002,
+        "summary": "奥斯卡奖得主罗宾·威廉姆斯、阿尔·帕西诺和希拉里·斯万克主演了一部惊悚片，故事发生在午夜太阳不落的土地上，在这里，连强硬警察的心智也可能被失眠症所吞噬。在阿拉斯加永恒阳光的炙烤下，两名洛杉矶警察老兵正在逼近一名少女谋杀案的嫌疑人。但当警官威尔·多默（帕西诺饰）不小心击中搭档时，他们的谋杀嫌疑人、深居简出的小说家沃尔特·芬奇（威廉姆斯饰）目睹了枪击事件，并以此勒索多默。现在，随着一位理想主义的本地侦探（斯万克饰）对案件展开调查，赌注不断加码，多默的理智也开始崩溃。",
+        "summary_original": "Academy Award winners Robin Williams, Al Pacino and Hilary Swank star in a thriller set in the land of the midnight sun, where a the mind of even a tough cop can be threatened by Insomnia. Under the glare of the permanent Alaska sun, two veteran Los Angeles police officers close in on their suspect in the murder of a teenage girl. But when officer Will Dormer (Pacino) accidentally shoots his partner, their murder suspect, reclusive novelist Walter Finch (Williams), witnesses the shooting--and blackmails Dormer. Now, as an idealistic local detective (Swank) investigates the case, and the stakes rise, Dormer's sanity begins to falter.",
+        "summary_source_hash": "b3688581f4382f9252b6554698b01ad2d51887c4b2396680a46c058529f2a0a6",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/insomnia/umc.cmc.3sr644gks0beiq8og6ax314ww"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "失眠症",
+        "watchUrl": "https://tv.apple.com/us/movie/insomnia/umc.cmc.3sr644gks0beiq8og6ax314ww"
+      }
     },
     "umc.cmc.j1bslw4gxyqw5h0gmiz853ec": {
       "en": "Blood Diamond",
+      "kind": "movie",
       "year": "2006",
-      "patch": null,
-      "nextRetry": 1793454637
+      "verifiedZh": {
+        "_identityYear": 2006,
+        "aliases": [
+          "血钻",
+          "血腥钻石",
+          "滴血钻石",
+          "Blood Diamond"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1428175/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2006,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 2006,
+        "summary": "奥斯卡提名演员 Leonardo DiCaprio 和 Djimon Hounsou 携手奥斯卡获奖明星 Jennifer Conley，出演由《最后的武士》导演 Ed Zwick 执导的这部剧情动作片。DiCaprio 饰演 Danny Archer，一名在塞拉利昂内战混乱中寻找珍贵钻石的雇佣兵贩子；Honso（《角斗士》主演）饰演一位寻找失踪儿子的悲惨父亲，而 A Beautiful Mind 则饰演一位寻找“血钻”交易背后真相的记者。被迫面对钻石交易残酷的人类代价后，Archer 改变了对经济回报的追求，转而寻求救赎。",
+        "summary_original": "Oscar nominees Leonardo DiCaprio and Djimon Hounsou join Oscar-winning star Jennifer Conley in this drama and action movie by Ed Zwick, the maker of The Last Samurai. DiCaprio plays Danny Archer, a mercenary trafficker looking for a precious diamond amid the chaos of the Civil War in Sierra Leone and Honso (Gladiator) as a miserable father looking for his missing son and A Beautiful Mind as a journalist looking for the truth behind the trade in \"conflict diamonds.\" Forced to face the brutal human cost of diamond trade, Archer changes his search for financial reward and seeks a search for salvation.",
+        "summary_source_hash": "bd3ade43bf8462e8f15899efc1f4b34fc2e44c5dcfc84a947a06d0c80c288369",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/blood-diamond/umc.cmc.j1bslw4gxyqw5h0gmiz853ec"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "血钻",
+        "watchUrl": "https://tv.apple.com/us/movie/blood-diamond/umc.cmc.j1bslw4gxyqw5h0gmiz853ec"
+      }
     },
     "umc.cmc.5iudnxk9tyxo63gewawi330mw": {
       "en": "Tropic Thunder",
+      "kind": "movie",
       "year": "2008",
-      "patch": null,
-      "nextRetry": 1793455935
+      "verifiedZh": {
+        "_identityYear": 2008,
+        "actors": [
+          "本·斯蒂勒",
+          "小罗伯特·唐尼",
+          "杰克·布莱克",
+          "马修·麦康纳",
+          "史蒂夫·库根",
+          "尼克·诺特",
+          "布兰登·T·杰克逊",
+          "杰伊·巴鲁切尔",
+          "汤姆·克鲁斯",
+          "比尔·哈德尔",
+          "雷吉·李"
+        ],
+        "aliases": [
+          "热带惊雷"
+        ],
+        "contentRating": "R",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:33:26+00:00",
+          "originalTitle": "Tropic Thunder",
+          "rating": 6.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1994879/",
+          "subjectId": "1994879",
+          "summary": "好莱坞计划拍摄一部讲述越战期间，美国一支精英小队前往越南东南部执行绝密任务的战争片，片名《热带惊雷》。该片耗资巨大，场面壮观，号称有史以来最贵的越战影片，并云集了塔克·斯皮德曼（本·斯蒂勒 Ben Stiller 饰）、柯克·拉扎鲁斯（小罗伯特·唐尼 Robert Downey Jr. 饰）、杰夫·波特尼（杰克·布莱克 Jack Black 饰）等过气或当红明星。为力求真实，导演达明·柯克伯恩（史蒂夫·库根 Steve Coogan 饰）甚至将剧组拉至东南亚进行拍摄。影片开拍伊始便状况不断，争议话题频出，最后还卷入当地一场真实的战争之中…… 本片荣获2009年美国演员协会杰出贡献奖、2008年好莱坞电影节年度喜剧奖、2009年青年艺术家奖最佳男配角奖（Brandon Soo Hoo）。",
+          "summaryStatus": "AVAILABLE",
+          "title": "热带惊雷",
+          "year": 2008
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:33:26+00:00",
+            "originalTitle": "Tropic Thunder",
+            "rating": 6.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1994879/",
+            "subjectId": "1994879",
+            "summary": "好莱坞计划拍摄一部讲述越战期间，美国一支精英小队前往越南东南部执行绝密任务的战争片，片名《热带惊雷》。该片耗资巨大，场面壮观，号称有史以来最贵的越战影片，并云集了塔克·斯皮德曼（本·斯蒂勒 Ben Stiller 饰）、柯克·拉扎鲁斯（小罗伯特·唐尼 Robert Downey Jr. 饰）、杰夫·波特尼（杰克·布莱克 Jack Black 饰）等过气或当红明星。为力求真实，导演达明·柯克伯恩（史蒂夫·库根 Steve Coogan 饰）甚至将剧组拉至东南亚进行拍摄。影片开拍伊始便状况不断，争议话题频出，最后还卷入当地一场真实的战争之中…… 本片荣获2009年美国演员协会杰出贡献奖、2008年好莱坞电影节年度喜剧奖、2009年青年艺术家奖最佳男配角奖（Brandon Soo Hoo）。",
+            "summaryStatus": "AVAILABLE",
+            "title": "热带惊雷",
+            "year": 2008
+          }
+        ],
+        "directors": [
+          "本·斯蒂勒"
+        ],
+        "douban_id": "1994879",
+        "douban_title": "热带惊雷",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793576006",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1994879/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2008,
+        "summary": "本·斯蒂勒、杰克·布莱克和小罗伯特·唐尼领衔主演群星云集的《热带惊雷》，这是一部动作喜剧，讲述了一群自以为是的演员着手拍摄史上最昂贵的战争电影的故事。由于成本激增迫使制片厂取消了这部电影，沮丧的导演拒绝停止拍摄，把他的演员带入了东南亚的丛林，在那里他们遇到了真正的坏蛋。",
+        "summary_original": "Ben Stiller, Jack Black and Robert Downey Jr. lead an ensemble cast in \"Tropic Thunder,\" an action comedy about a group of self-absorbed actors who set out to make the most expensive war film. After ballooning costs force the studio to cancel the movie, the frustrated director refuses to stop shooting, leading his cast into the jungles of Southeast Asia, where they encounter real bad guys.",
+        "summary_source_hash": "8ec16ea4d07fed406ffafccaf522ff81ea502a35baf3288eb64b6dc47538d58e",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/tropic-thunder/umc.cmc.5iudnxk9tyxo63gewawi330mw"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "热带惊雷",
+        "watchUrl": "https://tv.apple.com/us/movie/tropic-thunder/umc.cmc.5iudnxk9tyxo63gewawi330mw"
+      }
     },
     "umc.cmc.6o1742rqdwxl2dxav5trdajut": {
       "en": "28 Days Later",
+      "kind": "movie",
       "year": "2003",
-      "patch": null,
-      "nextRetry": 1793455935
+      "verifiedZh": {
+        "aliases": [
+          "惊变28天",
+          "28 Days Later"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1306421/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2003,
+        "provenance": "audited_title_import",
+        "searchYear": 2002,
+        "summary": "一名医务室病人从昏迷中醒来，发现自己身处空无一人的房间……空旷的医院……荒凉的城市。一种强大的病毒将受害者锁在永久的嗜血狂怒状态中，将他周围的世界变成了一个看似荒凉的不毛之地。现在，少数幸存者必须为生存而战，却不知道最糟糕的还在后头……",
+        "summary_original": "An infirmary patient awakens from a coma to an empty room...in a vacant hospital...in a deserted city. A powerful virus, which locks victims into a permanent state of murderous rage, has transformed the world around him into a seemingly desolate wasteland. Now a handful of survivors must fight to stay alive, unaware that the worst is yet to come...",
+        "summary_source_hash": "182f4c737bcf1a6977999ddedafe5e50b4f85cfd79cb6d95029bea8cc330a18a",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/28-days-later/umc.cmc.6o1742rqdwxl2dxav5trdajut"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "惊变28天",
+        "watchUrl": "https://tv.apple.com/us/movie/28-days-later/umc.cmc.6o1742rqdwxl2dxav5trdajut"
+      }
     },
     "umc.cmc.54i1kouogtrem4mgqc068agfk": {
       "en": "Black Hawk Down",
+      "kind": "movie",
       "year": "2002",
-      "patch": null,
-      "nextRetry": 1793455935
+      "verifiedZh": {
+        "aliases": [
+          "黑鹰坠落",
+          "Black Hawk Down"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1291824/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2002,
+        "provenance": "audited_title_import",
+        "searchYear": 2001,
+        "summary": "《黑鹰坠落》动作场面密集，真实且令人揪心地记录了美军在索马里摩加迪沙的军事行动。作为联合国维和部队的一部分，一队美国精锐士兵执行任务，旨在绑架索马里军阀的几位高级副官，以制止这个四分五裂的国家旷日持久的内战。精心策划的任务出了大错，导致美军经历了自越南战争以来最大规模的单场交火。由著名动作制片人杰瑞·布鲁克海默和备受赞誉的动作导演雷德利·斯科特联手打造。",
+        "summary_original": "Black Hawk Down is the action packed true harrowing account of US Military action in Mogadishu, Somalia. As part of a UN Peacekeeping force, a group of elite US soldiers undertake a mission to abduct several top lieutenants of a Somalian warlord to stop the civil war that has been tearing the country apart. The carefully planned mission goes terribly wrong, resulting in the US military's single biggest firefight since Vietnam. From famed action producer Jerry Bruckheimer and acclaimed action director Ridley Scott.",
+        "summary_source_hash": "692a95f912b0d1352e21d03da3dece79bbb413d051b8095f42e978eb7c393fb9",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/black-hawk-down/umc.cmc.54i1kouogtrem4mgqc068agfk"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "黑鹰坠落",
+        "watchUrl": "https://tv.apple.com/us/movie/black-hawk-down/umc.cmc.54i1kouogtrem4mgqc068agfk"
+      }
     },
     "umc.cmc.4wfs3tno6kih50j21qgn1n0m3": {
       "en": "Fury",
+      "kind": "movie",
       "year": "2014",
-      "patch": null,
-      "nextRetry": 1793455935
+      "verifiedZh": {
+        "aliases": [
+          "狂怒",
+          "Fury"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/23331914/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2014,
+        "provenance": "audited_title_import",
+        "searchYear": 2014,
+        "summary": "1945 年 4 月。随着盟军在欧洲战场发起最后冲刺，一位久经沙场的陆军中士 Wardaddy（Brad Pitt 饰）指挥着一辆谢尔曼坦克及其五人机组，在敌后执行一项致命任务。在敌众我寡、火力悬殊且排里塞进了一名菜鸟士兵的情况下，Wardaddy 和他的部下们在英勇袭击纳粹德国心脏的尝试中面临着压倒性的艰难险阻。",
+        "summary_original": "April, 1945. As the Allies make their final push in the European Theatre, a battle-hardened army sergeant named Wardaddy (Brad Pitt) commands a Sherman tank and her five-man crew on a deadly mission behind enemy lines. Outnumbered and outgunned, and with a rookie soldier thrust into their platoon, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany.",
+        "summary_source_hash": "1e39a2cb7d77b9a5c2903a112fc4b859e52ea1e61849d89307843699a4ae55a1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/fury/umc.cmc.4wfs3tno6kih50j21qgn1n0m3"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "狂怒",
+        "watchUrl": "https://tv.apple.com/us/movie/fury/umc.cmc.4wfs3tno6kih50j21qgn1n0m3"
+      }
     },
     "umc.cmc.3xurji5y3xzb0sjj3xwc6s868": {
       "en": "The Girl With the Dragon Tattoo",
+      "kind": "movie",
       "year": "2011",
-      "patch": null,
-      "nextRetry": 1793455935
+      "verifiedZh": {
+        "_identityYear": 2011,
+        "aliases": [
+          "龙纹身的女孩",
+          "龙纹身女孩",
+          "The Girl With the Dragon Tattoo"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/4206357/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2011,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 2011,
+        "summary": "身败名裂的财经记者米凯尔·布洛姆奎斯特（丹尼尔·克雷格饰）在被富有瑞典实业家亨里克·范格（克里斯托弗·普卢默饰）雇佣去调查范格侄女海莉40年前的谋杀案后，找到了救赎名誉的机会。范格坚信海莉是被自己家族的某个人杀害的。最终加入布洛姆奎斯特踏上寻找真相的危险征途的是莉丝贝丝·萨兰德（鲁妮·玛拉饰），一个不同寻常但足智多谋的调查员，她那脆弱的信任并不容易赢得。",
+        "summary_original": "Disgraced financial reporter Mikael Blomkvist (Daniel Craig) finds a chance to redeem his honor after being hired by wealthy Swedish industrialist Henrik Vanger (Christopher Plummer) to solve the 40-year-old murder of Vanger's niece, Harriet. Vanger believes that Harriet was killed by a member of his own family. Eventually joining Blomkvist on his dangerous quest for the truth is Lisbeth Salander (Rooney Mara), an unusual but ingenious investigator whose fragile trust is not easily won.",
+        "summary_source_hash": "2d0cd6082bf592f6487dd545810ef7957dd7399063a27256ab584739bb2f8ae0",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/the-girl-with-the-dragon-tattoo/umc.cmc.3xurji5y3xzb0sjj3xwc6s868"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "龙纹身的女孩",
+        "watchUrl": "https://tv.apple.com/us/movie/the-girl-with-the-dragon-tattoo/umc.cmc.3xurji5y3xzb0sjj3xwc6s868"
+      }
     },
     "umc.cmc.amuoq00hqelfi98j0gvg641x": {
       "en": "Wolfwalkers",
@@ -68,9 +509,39 @@
     },
     "umc.cmc.2wsvpzg4a3atiedlysr6zrfrv": {
       "en": "Yo Gabba Gabba!",
+      "kind": "series",
       "year": "2007",
-      "patch": null,
-      "nextRetry": 1793458734
+      "verifiedZh": {
+        "aliases": [
+          "嘎巴宝宝",
+          "Yo Gabba Gabba!"
+        ],
+        "contentRating": "TV-Y",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/3097781/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2007,
+        "provenance": "audited_title_import",
+        "summary": "随着 DJ 兰斯·罗克和朋友们与众多不可思议的特邀嘉宾一起跳舞、欢笑和成长，重温一个标志性的想象力世界。",
+        "summary_original": "Revisit an iconic world of imagination as DJ Lance Rock and friends dance, laugh, and grow with an incredible cast of special guests.",
+        "summary_source_hash": "e94d04f6a63572b4f416c4a363475d8672b34a8efb0aecb1f52d12a26fe083dd",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/yo-gabba-gabba/umc.cmc.2wsvpzg4a3atiedlysr6zrfrv"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "嘎巴宝宝",
+        "watchUrl": "https://tv.apple.com/us/show/yo-gabba-gabba/umc.cmc.2wsvpzg4a3atiedlysr6zrfrv"
+      }
     },
     "umc.cmc.iajaormpogjbe142ssfirdys": {
       "en": "Lovely Little Farm",
@@ -86,33 +557,230 @@
     },
     "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms": {
       "en": "A Charlie Brown Thanksgiving",
+      "kind": "movie",
       "year": "1973",
-      "patch": null,
-      "nextRetry": 1793458734
+      "verifiedZh": {
+        "_identityYear": 1973,
+        "aliases": [
+          "查理布朗的感恩节",
+          "查理·布朗的感恩节",
+          "史努比的故事：查理布朗的感恩节",
+          "史努比的故事查理布朗的感恩节",
+          "A Charlie Brown Thanksgiving"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "type": "reviewed_douban_display_evidence",
+            "url": "https://movie.douban.com/subject/5300042/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1973,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 1973,
+        "summary": "薄荷帕蒂邀请所有人去查理·布朗家过感恩节，尽管他要去看望他的祖母。史努比决定在朋友们的帮助下烹制他自己版本的感恩节大餐。",
+        "summary_original": "Peppermint Patty invites everyone to Charlie Brown's for Thanksgiving, even though he's going to see his grandmother. Snoopy decides to cook his own version of a Thanksgiving meal with help from his friends.",
+        "summary_source_hash": "240eefd0956780060e8bb50cd8ec3dcdb246632f222d6b8ceb05762ad0dc971f",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理布朗的感恩节",
+        "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
+      }
     },
     "umc.cmc.1kt2wacwwoz0brw6duwve9hje": {
       "en": "The Charlie Brown and Snoopy Show",
+      "kind": "series",
       "year": "1983",
-      "patch": null,
-      "nextRetry": 1793459664
+      "verifiedZh": {
+        "aliases": [
+          "查理·布朗和史努比秀",
+          "The Charlie Brown and Snoopy Show"
+        ],
+        "contentRating": "TV-G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1830126/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1983,
+        "provenance": "audited_title_import",
+        "summary": "查理·布朗、史努比和整个花生漫画伙伴们在这系列经典短片中，体验生活中的点滴时刻与丰富情感。",
+        "summary_original": "Charlie Brown, Snoopy, and the whole Peanuts gang navigate the small moments—and big feelings—of life in these collections of classic shorts.",
+        "summary_source_hash": "d35a9db69c2cbb348c4d7647ff53c78dd1ccb3967a7af87f4eca53eeaae4f59c",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/the-charlie-brown-and-snoopy-show/umc.cmc.1kt2wacwwoz0brw6duwve9hje"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理·布朗和史努比秀",
+        "watchUrl": "https://tv.apple.com/us/show/the-charlie-brown-and-snoopy-show/umc.cmc.1kt2wacwwoz0brw6duwve9hje"
+      }
     },
     "umc.cmc.2m5fntzbjem6fhniurq8a17om": {
       "en": "Fraggle Rock",
+      "kind": "series",
       "year": "1983",
-      "patch": null,
-      "nextRetry": 1793459664
+      "verifiedZh": {
+        "aliases": [
+          "布偶奇遇记",
+          "Fraggle Rock"
+        ],
+        "contentRating": "TV-PG",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/2153532/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1983,
+        "provenance": "audited_title_import",
+        "summary": "在一个发明家工作间的踢脚板后面，隐藏着布满奇妙生物的洞穴。这片由魔法和音乐紧密相连的土地，正是吉姆·汉森的经典作品《Fraggle Rock》。",
+        "summary_original": "Hidden behind the baseboard of an inventor’s workshop are caves filled with wonderful creatures. Bound together by magic and music, this land is Jim Henson’s classic Fraggle Rock.",
+        "summary_source_hash": "a232647677cf13ce44e634f9e90f061da3535dbbb507183a0e11a2827be1d341",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/fraggle-rock/umc.cmc.2m5fntzbjem6fhniurq8a17om"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "布偶奇遇记",
+        "watchUrl": "https://tv.apple.com/us/show/fraggle-rock/umc.cmc.2m5fntzbjem6fhniurq8a17om"
+      }
     },
     "umc.cmc.3glsixv3225ngtbm57lq72oam": {
       "en": "This is America, Charlie Brown",
+      "kind": "series",
       "year": "1988",
-      "patch": null,
-      "nextRetry": 1793459664
+      "verifiedZh": {
+        "aliases": [
+          "这就是美国，查理布朗",
+          "This is America, Charlie Brown"
+        ],
+        "contentRating": "TV-G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1930721/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1988,
+        "provenance": "audited_title_import",
+        "summary": "史努比和伙伴们得以近距离见证美国历史上的重大时刻，例如人类首次飞机飞行、太空旅行以及向华盛顿进军。",
+        "summary_original": "Snoopy and the gang get front-row seats for groundbreaking American moments like the first aircraft flight, space travel, and the March on Washington.",
+        "summary_source_hash": "5098d123945a1068d23e03cc02881fec1fa802245f15ba224e5030c701836f24",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/this-is-america-charlie-brown/umc.cmc.3glsixv3225ngtbm57lq72oam"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "这就是美国，查理布朗",
+        "watchUrl": "https://tv.apple.com/us/show/this-is-america-charlie-brown/umc.cmc.3glsixv3225ngtbm57lq72oam"
+      }
     },
     "umc.cmc.4k47h7cte42k5kzw8ltnks1f7": {
       "en": "It's Christmastime Again, Charlie Brown",
+      "kind": "movie",
       "year": "1992",
-      "patch": null,
-      "nextRetry": 1793459664
+      "verifiedZh": {
+        "_identityYear": 1992,
+        "actors": [
+          "Jamie E. Smith",
+          "John Christian Graas",
+          "玛内特·帕特森",
+          "Mindy Ann Martin"
+        ],
+        "aliases": [
+          "查理·布朗，圣诞节又到了",
+          "史努比再度圣诞节",
+          "查理·布朗，又是圣诞节"
+        ],
+        "contentRating": "G",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:30:48+00:00",
+          "originalTitle": "It's Christmastime Again, Charlie Brown",
+          "rating": 8.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/4091371/",
+          "subjectId": "4091371",
+          "summary": "“史努比再度圣诞节”是一个电视特辑，根据“花生”系列喜剧改编。自从《史努比的圣诞节》1965年发布后，这是第一部以“花生”为主题的特辑，由各种与圣诞相关的故事线组成。1992年11月在CBS首播之后，这一系列发布了两次视频。",
+          "summaryStatus": "AVAILABLE",
+          "title": "查理·布朗，圣诞节又到了",
+          "year": 1992
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:30:48+00:00",
+            "originalTitle": "It's Christmastime Again, Charlie Brown",
+            "rating": 8.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/4091371/",
+            "subjectId": "4091371",
+            "summary": "“史努比再度圣诞节”是一个电视特辑，根据“花生”系列喜剧改编。自从《史努比的圣诞节》1965年发布后，这是第一部以“花生”为主题的特辑，由各种与圣诞相关的故事线组成。1992年11月在CBS首播之后，这一系列发布了两次视频。",
+            "summaryStatus": "AVAILABLE",
+            "title": "查理·布朗，圣诞节又到了",
+            "year": 1992
+          }
+        ],
+        "directors": [
+          "比尔·莫伦茨"
+        ],
+        "douban_id": "4091371",
+        "douban_title": "查理·布朗，圣诞节又到了",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793575848",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/4091371/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1992,
+        "summary": "随着圣诞节临近，花生漫画伙伴们正忙乱地准备庆祝。查理·布朗需要钱给暗恋对象买礼物；薄荷·帕蒂正担心她的读书报告；而萨莉最不想做的事，就是在戏剧首秀中搞砸。",
+        "summary_original": "As Christmas draws near, the Peanuts gang are in a tizzy as they prepare to celebrate. Charlie Brown needs money for his crush’s gift. Peppermint Patty’s worried about her book report. And the last thing Sally wants is to mess up her debut in the play.",
+        "summary_source_hash": "bf45f5f77d17e1b833d616c2b0f38474d80f1266231d8fdc0e81283219563909",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/its-christmastime-again-charlie-brown/umc.cmc.4k47h7cte42k5kzw8ltnks1f7"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理·布朗，圣诞节又到了",
+        "watchUrl": "https://tv.apple.com/us/movie/its-christmastime-again-charlie-brown/umc.cmc.4k47h7cte42k5kzw8ltnks1f7"
+      }
     },
     "umc.cmc.3rbpynkdkoc4rlyskaa8n3nmi": {
       "en": "Amber Brown",
@@ -128,86 +796,932 @@
     },
     "umc.cmc.72bog44gdxl0cafwane0z8r32": {
       "en": "Happy New Year, Charlie Brown!",
+      "kind": "movie",
       "year": "1986",
-      "patch": null,
-      "nextRetry": 1793460564
+      "verifiedZh": {
+        "aliases": [
+          "新年快乐，查理布朗",
+          "Happy New Year, Charlie Brown!"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/3005809/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1986,
+        "provenance": "audited_title_import",
+        "searchYear": 1986,
+        "summary": "正值薄荷·帕蒂的新年前夜派对之夜，但查理·布朗必须写一篇关于《战争与和平》的读书报告。为了能加入派对与红发小女孩共舞，他拼命想要及时完成报告。",
+        "summary_original": "It's the night of Peppermint Patty’s New Year’s Eve bash, but Charlie Brown has to write a book report about War and Peace. Hoping to join the fun for a special dance with the Little Red-Haired Girl, he tries desperately to finish in time.",
+        "summary_source_hash": "6b86b4bde6207a411c6946a9cc50af319c9c832bc749376fa4df447b6e28365f",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/happy-new-year-charlie-brown/umc.cmc.72bog44gdxl0cafwane0z8r32"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "新年快乐，查理布朗",
+        "watchUrl": "https://tv.apple.com/us/movie/happy-new-year-charlie-brown/umc.cmc.72bog44gdxl0cafwane0z8r32"
+      }
     },
     "umc.cmc.39d349kfxr4sevo0fkv1uurhj": {
       "en": "I Want A Dog For Christmas, Charlie Brown",
+      "kind": "movie",
       "year": "2003",
-      "patch": null,
-      "nextRetry": 1793460564
+      "verifiedZh": {
+        "aliases": [
+          "查理布朗的圣诞礼物",
+          "I Want A Dog For Christmas, Charlie Brown"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/5232762/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2003,
+        "provenance": "audited_title_import",
+        "searchYear": 2003,
+        "summary": "莱纳斯（Rerun）向圣诞老人要的唯一礼物是一只狗，但他妈妈不让他养。和史诺比在一起的时光成了绝佳的安慰。但当史诺比忙得没空陪莱纳斯时，他们找来了一个替补——史诺比的弟弟史派克（Spike）。",
+        "summary_original": "All Rerun wants from Santa is a dog, but his mother won’t let him have one. Spending time with Snoopy provides the perfect pick-me-up. But when Snoopy gets too busy to play with Rerun, they call in a substitute—Snoopy’s brother Spike.",
+        "summary_source_hash": "d125a66651146a518595461bfe8ec36832bfaea9584cb861f8ec6931c8da71ba",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/i-want-a-dog-for-christmas-charlie-brown/umc.cmc.39d349kfxr4sevo0fkv1uurhj"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理布朗的圣诞礼物",
+        "watchUrl": "https://tv.apple.com/us/movie/i-want-a-dog-for-christmas-charlie-brown/umc.cmc.39d349kfxr4sevo0fkv1uurhj"
+      }
     },
     "umc.cmc.3kzb220yzo1iz1oy11kpu498x": {
       "en": "Charlie Brown’s Christmas Tales",
+      "kind": "movie",
       "year": "2002",
-      "patch": null,
-      "nextRetry": 1793460564
+      "verifiedZh": {
+        "aliases": [
+          "查理·布朗的圣诞故事",
+          "Charlie Brown’s Christmas Tales"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/5233865/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2002,
+        "provenance": "audited_title_import",
+        "searchYear": 2002,
+        "summary": "与花生漫画帮一起庆祝一年中最快乐的时光。史诺比、查理·布朗、莱纳斯、露西和萨莉分别在取材自原作花生漫画专栏的一系列圣诞故事中担任主角。",
+        "summary_original": "Celebrate the merriest time of the year with the Peanuts gang. Snoopy, Charlie Brown, Linus, Lucy, and Sally each star in a collection of Christmastime tales from the original Peanuts comic strips.",
+        "summary_source_hash": "6f875c411951cd9c7ee19b2b5354c2e408723a035ee6246c44dc15a68237c0a1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/charlie-browns-christmas-tales/umc.cmc.3kzb220yzo1iz1oy11kpu498x"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理·布朗的圣诞故事",
+        "watchUrl": "https://tv.apple.com/us/movie/charlie-browns-christmas-tales/umc.cmc.3kzb220yzo1iz1oy11kpu498x"
+      }
     },
     "umc.cmc.30cyxu8by31op677sm0djtm72": {
       "en": "A Charlie Brown Valentine",
+      "kind": "movie",
       "year": "2022",
-      "patch": null,
-      "nextRetry": 1793460564
+      "verifiedZh": {
+        "aliases": [
+          "查理·布朗的情人节",
+          "A Charlie Brown Valentine"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/5134758/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2022,
+        "provenance": "audited_title_import",
+        "searchYear": 2002,
+        "summary": "温暖而美好的感觉弥漫在空气中，灵感迸发的史诺比写下了关于情人节的诗。查理·布朗试图给红发小女孩留下好印象。萨莉和露西希望能收到暗恋对象送的卡片。薄荷·帕蒂邀请“查克”去跳舞。",
+        "summary_original": "Warm and fuzzy feelings fill the air as an inspired Snoopy writes poems about Valentine’s Day. Charlie Brown tries to impress the Little Red-Haired Girl. Sally and Lucy hope to get cards from their crushes. Peppermint Patty asks “Chuck” to the dance.",
+        "summary_source_hash": "2a31bae308e004df7a1b9da74471e68aecfde4f26508e1bfc683e8f7df2445d1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/a-charlie-brown-valentine/umc.cmc.30cyxu8by31op677sm0djtm72"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "查理·布朗的情人节",
+        "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-valentine/umc.cmc.30cyxu8by31op677sm0djtm72"
+      }
     },
     "umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa": {
       "en": "Peanuts in Space: Secrets of Apollo 10",
+      "kind": "movie",
       "year": "2021",
-      "patch": null,
-      "nextRetry": 1793497073
+      "verifiedZh": {
+        "_identityYear": 2021,
+        "actors": [
+          "杰夫·高布伦",
+          "朗·霍华德",
+          "Isabella Leo",
+          "Terry McGurrin",
+          "伊森·普焦托",
+          "Wyatt White"
+        ],
+        "aliases": [
+          "花生在太空：阿波罗十号的秘密",
+          "史努比漫游太空：探秘阿波罗十号"
+        ],
+        "contentRating": "TV-G",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:20:35+00:00",
+          "originalTitle": "Peanuts in Space: Secrets of Apollo 10",
+          "ratingStatus": "NO_RATING",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/35239017/",
+          "subjectId": "35239017",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "title": "花生在太空：阿波罗十号的秘密",
+          "year": 2019
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:20:35+00:00",
+            "originalTitle": "Peanuts in Space: Secrets of Apollo 10",
+            "ratingStatus": "NO_RATING",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/35239017/",
+            "subjectId": "35239017",
+            "summary": "",
+            "summaryStatus": "PENDING",
+            "title": "花生在太空：阿波罗十号的秘密",
+            "year": 2019
+          }
+        ],
+        "directors": [
+          "摩根·内维尔",
+          "里德·索伦森"
+        ],
+        "douban_id": "35239017",
+        "douban_title": "花生在太空：阿波罗十号的秘密",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793575235",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/35239017/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2021,
+        "searchYear": 2019,
+        "summary": "为了庆祝登月 50 周年，这部纪录片试图解开这个巨大的谜团：史诺比曾是绝密宇航员吗？由杰夫·高布伦（Jeff Goldblum）饰演一位自费出版的美国宇航局历史学家，朗·霍华德（Ron Howard）本色出演，《太空中的花生》深情而轻松地审视了美国宇航局和查尔斯·M·舒尔茨（Charles M. Schulz）深受喜爱的花生漫画角色。",
+        "summary_original": "To celebrate the 50th anniversary of the moon landing, this documentary tries to solve the great mystery: Was Snoopy a top-secret astronaut? Starring Jeff Goldblum as a self-published NASA historian and Ron Howard as himself, Peanuts in Space takes an affectionate, lighthearted look at NASA and Charles M. Schulz’s beloved Peanuts characters.",
+        "summary_source_hash": "f63d5c733d4fc530f2654f3d7f18d8ad409b5de49d9f44fa05af3bf23415fc54",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/peanuts-in-space-secrets-of-apollo-10/umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "花生在太空：阿波罗十号的秘密",
+        "watchUrl": "https://tv.apple.com/us/movie/peanuts-in-space-secrets-of-apollo-10/umc.cmc.6ippzjfc3jg0l4b8x8cslmhfa"
+      }
     },
     "umc.cmc.ns4q9hpoj4b1749wbl7crwbl": {
       "en": "Wonder Pets",
+      "kind": "series",
       "year": "2006",
-      "patch": null,
-      "nextRetry": 1793497073
+      "verifiedZh": {
+        "_identityYear": 2006,
+        "aliases": [
+          "神奇宠物救援队"
+        ],
+        "contentRating": "TV-Y",
+        "douban_title": "",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "plex_public_identity",
+            "url": "https://watch.plex.tv/zh/show/the-wonder-pets"
+          },
+          {
+            "type": "plex_original_identity",
+            "url": "https://watch.plex.tv/en/show/the-wonder-pets"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2006,
+        "summary": "《神奇宠物！》的主演豚鼠林尼、小鸭明明和乌龟塔克是教室里的宠物。每天最后一个孩子离开后，它们会接听来自世界某处陷入困境的幼小动物的易拉罐求救电话。它们会立刻飞奔或爬行，乘着由散落的玩具做成的飞船前往救援。主角们通过真实的儿童歌声进行交流。曾获奖的作曲家为每场历险的起伏以及探索区域的文化创作了相应的音乐伴奏。",
+        "summary_original": "Stars of The Wonder Pets! Linny the guinea pig, Ming-Ming the duckling, and Tuck the turtle are classroom pets who, after the last child has left for the day, answer a tin-can call from a baby animal in distress somewhere in the world. They instantly fly, hop, or crawl into action by flying off to the rescue in their Flyboat (made from scattered playroom toys). The main characters communicate via song, using real children's voices. Award-winning composers have developed musical accompaniments that match the ups and downs of each adventure and the culture of the area explored.",
+        "summary_source_hash": "ac21aca10840bfb3a747d646277557768c4bda72fb87cbe05b94f7d615530ed8",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/wonder-pets/umc.cmc.ns4q9hpoj4b1749wbl7crwbl"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "神奇宠物救援队",
+        "watchUrl": "https://tv.apple.com/us/show/wonder-pets/umc.cmc.ns4q9hpoj4b1749wbl7crwbl"
+      }
     },
     "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0": {
       "en": "Formula 1: Drive to Survive",
+      "kind": "series",
       "year": "2026",
-      "patch": null,
-      "nextRetry": 1793497073
+      "verifiedZh": {
+        "_identityYear": 2026,
+        "actors": [
+          "马克斯·维斯塔潘",
+          "角田裕毅"
+        ],
+        "aliases": [
+          "一级方程式：疾速争胜",
+          "一级方程式：极速争胜"
+        ],
+        "contentRating": "TV-MA",
+        "detailMetadata": {
+          "checkedAt": "2026-11-02T00:17:55+00:00",
+          "originalTitle": "Formula 1: Drive to Survive",
+          "rating": 7.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 8,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/37502429/",
+          "subjectId": "37502429",
+          "summary": "Netflix出品的F1纪录片《极速求生》第八季，于2026年2月27日全球上线，全季10集聚焦2025赛季的激烈赛场与围场秘辛。本季不仅呈现了诺里斯以2分分差险胜维斯塔潘拿下生涯首个车手总冠军、迈凯伦卫冕车队冠军的极致争冠大戏，还深度揭秘汉密尔顿加盟法拉利后的磨合困境 、红牛领队霍纳突然离任的车队动荡，以及迈凯伦队内的队友竞争。同时，镜头也捕捉到胡肯伯格拿下惊喜领奖台的温情时刻，更因这是最后一季聚焦地效赛车的内容而颇具纪念意义，依旧以赛道高光画面搭配独家幕后视角，展现F1赛场内外的热血与波澜。",
+          "summaryStatus": "AVAILABLE",
+          "title": "一级方程式：疾速争胜",
+          "year": 2026
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-02T00:17:55+00:00",
+            "originalTitle": "Formula 1: Drive to Survive",
+            "rating": 7.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 8,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/37502429/",
+            "subjectId": "37502429",
+            "summary": "Netflix出品的F1纪录片《极速求生》第八季，于2026年2月27日全球上线，全季10集聚焦2025赛季的激烈赛场与围场秘辛。本季不仅呈现了诺里斯以2分分差险胜维斯塔潘拿下生涯首个车手总冠军、迈凯伦卫冕车队冠军的极致争冠大戏，还深度揭秘汉密尔顿加盟法拉利后的磨合困境 、红牛领队霍纳突然离任的车队动荡，以及迈凯伦队内的队友竞争。同时，镜头也捕捉到胡肯伯格拿下惊喜领奖台的温情时刻，更因这是最后一季聚焦地效赛车的内容而颇具纪念意义，依旧以赛道高光画面搭配独家幕后视角，展现F1赛场内外的热血与波澜。",
+            "summaryStatus": "AVAILABLE",
+            "title": "一级方程式：疾速争胜",
+            "year": 2026
+          }
+        ],
+        "directors": [
+          "David Hayes",
+          "Rob Wills"
+        ],
+        "douban_id": "37502429",
+        "douban_title": "一级方程式：疾速争胜",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793578675",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/37502429/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2026,
+        "summary": "在一级方程式赛车迎来第 75 个年头之际，新秀们奋起直追，一支曾夺得冠军的车队陷入混乱，一场三方争夺世界冠军的较量正紧紧锁住整个发车区。",
+        "summary_original": "In Formula 1's 75th year, rookies surge forward and a title-winning team faces turmoil as a three-way contest for the world championship grips the grid.",
+        "summary_source_hash": "0bb6dbbf99f9c0fa2b2cdb374f43e3db37c679b25608445b04f3b21fac0737f6",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/formula-1-drive-to-survive/umc.cmc.4ym1omzf14f4jwcmb7lnu91o0"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "一级方程式：疾速争胜",
+        "watchUrl": "https://tv.apple.com/us/show/formula-1-drive-to-survive/umc.cmc.4ym1omzf14f4jwcmb7lnu91o0"
+      }
     },
     "umc.cmc.13c4zk3hpybm6u0cfk1x0vyi": {
       "en": "Long Way Round",
+      "kind": "series",
       "year": "2004",
-      "patch": {
+      "verifiedZh": {
+        "_identityYear": 2004,
+        "aliases": [
+          "漫漫长路",
+          "Long Way Round"
+        ],
+        "contentRating": "TV-MA",
+        "detailMetadata": {
+          "checkedAt": "2026-10-31T01:37:53+00:00",
+          "originalTitle": "Long Way Round",
+          "rating": 9.2,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 1,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1494797/",
+          "subjectId": "1494797",
+          "summary": "曾主演电影《星际大战》、《红磨坊》的英国男艺人伊旺麦奎格（Ewan Mcgregor）和他的好友 查理布尔曼Charley Boorman 骑着BMW重型机车完成环游世界的壮举，他们从伦敦出发，穿越欧洲、俄罗斯、西伯利亚、哈萨克、蒙古、阿拉斯加，最后回到终点纽约，这趟全程达32000公里的重机长征，共费时115天。",
+          "summaryStatus": "AVAILABLE",
+          "title": "漫漫长路",
+          "year": 2004
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-10-31T01:37:53+00:00",
+            "originalTitle": "Long Way Round",
+            "rating": 9.2,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 1,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1494797/",
+            "subjectId": "1494797",
+            "summary": "曾主演电影《星际大战》、《红磨坊》的英国男艺人伊旺麦奎格（Ewan Mcgregor）和他的好友 查理布尔曼Charley Boorman 骑着BMW重型机车完成环游世界的壮举，他们从伦敦出发，穿越欧洲、俄罗斯、西伯利亚、哈萨克、蒙古、阿拉斯加，最后回到终点纽约，这趟全程达32000公里的重机长征，共费时115天。",
+            "summaryStatus": "AVAILABLE",
+            "title": "漫漫长路",
+            "year": 2004
+          }
+        ],
         "metadataPolicy": "mainland-v1",
-        "display_name_zh": "漫漫长路",
-        "aliases_zh": [
-          "漫漫长路"
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1494797/"
+          }
         ],
         "name_status": "verified_title_sources",
-        "name_checked_at": "2026-10-31T01:37:53+00:00",
-        "sources": [
-          {
-            "type": "douban_mobile_identity",
-            "url": "https://movie.douban.com/subject/1494797/",
-            "retrieved_at": "2026-10-31T01:37:53+00:00"
-          }
-        ],
-        "douban_id": "1494797",
-        "douban_url": "https://movie.douban.com/subject/1494797/",
-        "rating_status": "AVAILABLE",
-        "douban_rating": 9.2,
-        "rating_checked_at": "2026-10-31T01:37:53+00:00",
-        "summary_zh": "曾主演电影《星际大战》、《红磨坊》的英国男艺人伊旺麦奎格（Ewan Mcgregor）和他的好友 查理布尔曼Charley Boorman 骑着BMW重型机车完成环游世界的壮举，他们从伦敦出发，穿越欧洲、俄罗斯、西伯利亚、哈萨克、蒙古、阿拉斯加，最后回到终点纽约，这趟全程达32000公里的重机长征，共费时115天。",
+        "officialReleaseYear": 2004,
+        "provenance": "audited_title_import",
+        "summary": "2004年，伊万·麦格雷戈和查理·布尔曼开启了一项史诗般的挑战：仅用115天骑行20,000英里，穿越12个国家和19个时区。在Long Way系列的第一篇章中，这对挚友克服重重阻碍，实现了他们的梦想。",
+        "summary_original": "In 2004, Ewan McGregor and Charley Boorman embarked on an epic challenge to bike 20,000 miles across 12 countries and 19 time zones in just 115 days. In the first chapter of the Long Way series, the best friends realized their dream—against all odds.",
+        "summary_source_hash": "29204d76d916fc4298d1f19cfb232cba1ce916612e65aa19b9a4c8b84bd64844",
         "summary_sources": [
           {
-            "type": "verified_page_synopsis",
-            "url": "https://movie.douban.com/subject/1494797/",
-            "retrieved_at": "2026-10-31T01:37:53+00:00"
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/show/long-way-round/umc.cmc.13c4zk3hpybm6u0cfk1x0vyi"
           }
         ],
-        "summary_checked_at": "2026-10-31T01:37:53+00:00"
-      },
-      "nextRetry": 1793497073
+        "summary_status": "translated_official",
+        "title": "漫漫长路",
+        "watchUrl": "https://tv.apple.com/us/show/long-way-round/umc.cmc.13c4zk3hpybm6u0cfk1x0vyi"
+      }
     },
     "umc.cmc.cal17ey3zhv2lx3xkzjqjstb": {
       "en": "Long Way Down",
       "year": "2007",
       "patch": null,
       "nextRetry": 1793497073
+    },
+    "umc.cmc.2j3fje2s0rh78ius1k1kil5tr": {
+      "en": "The Sixth Sense",
+      "kind": "movie",
+      "year": "1999",
+      "verifiedZh": {
+        "_identityYear": 1999,
+        "actors": [
+          "布鲁斯·威利斯",
+          "海利·乔·奥斯蒙",
+          "托妮·科莱特",
+          "奥莉维亚·威廉姆斯",
+          "唐尼·沃尔伯格",
+          "特拉沃·摩根",
+          "彼得·安东尼·唐伯蒂斯",
+          "格伦·菲茨杰拉德",
+          "米莎·巴顿",
+          "Lisa Summerour",
+          "法尔德斯·巴姆",
+          "杰弗里·泽布尼斯"
+        ],
+        "aliases": [
+          "第六感"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:33:22+00:00",
+          "originalTitle": "The Sixth Sense",
+          "rating": 8.9,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/1297630/",
+          "subjectId": "1297630",
+          "summary": "麦克（布鲁斯·威利斯 饰）是著名儿童心理学家，却也有始终未能治愈的患者，甚至因此遭到枪击，这名少年随后也饮枪自毙。这给麦克带来很大心理阴影，一年后他找到另一个症状很像这名患者的男孩柯尔（海利·乔·奥斯蒙 饰），并耐心的做起了他的医生。柯尔并不容易接近，但麦克还是慢慢赢得 了他的信任，得知了柯尔的秘密。原来柯尔有着灵异的第六感，可以看到鬼魂。虽然这令人感到难以置信，但麦克在证实了事情的真相后还是帮助柯尔接受了这个事实。 可是就在问题即将得到解决的时候，麦克却在柯尔的引导下，发现了一个更令人震惊的秘密……",
+          "summaryStatus": "AVAILABLE",
+          "title": "第六感",
+          "year": 1999
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:33:22+00:00",
+            "originalTitle": "The Sixth Sense",
+            "rating": 8.9,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/1297630/",
+            "subjectId": "1297630",
+            "summary": "麦克（布鲁斯·威利斯 饰）是著名儿童心理学家，却也有始终未能治愈的患者，甚至因此遭到枪击，这名少年随后也饮枪自毙。这给麦克带来很大心理阴影，一年后他找到另一个症状很像这名患者的男孩柯尔（海利·乔·奥斯蒙 饰），并耐心的做起了他的医生。柯尔并不容易接近，但麦克还是慢慢赢得 了他的信任，得知了柯尔的秘密。原来柯尔有着灵异的第六感，可以看到鬼魂。虽然这令人感到难以置信，但麦克在证实了事情的真相后还是帮助柯尔接受了这个事实。 可是就在问题即将得到解决的时候，麦克却在柯尔的引导下，发现了一个更令人震惊的秘密……",
+            "summaryStatus": "AVAILABLE",
+            "title": "第六感",
+            "year": 1999
+          }
+        ],
+        "directors": [
+          "M·奈特·沙马兰"
+        ],
+        "douban_id": "1297630",
+        "douban_title": "第六感",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793576002",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1297630/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1999,
+        "summary": "年幼的科尔·希尔（海利·乔·奥斯蒙饰）被一个黑暗的秘密所困扰：他能看见鬼魂。那些带着未了心愿从阴影中现身的鬼魂让科尔感到恐惧。他害怕得不敢向任何人吐露内心的痛苦，除了儿童心理学家马尔科姆·克劳博士（布鲁斯·威利斯饰）。正当克劳博士试图揭开科尔超自然能力的真相时，对客户和治疗师而言，其结果都是一次震撼，让他们俩都觉醒并意识到了某种无法解释的事物。",
+        "summary_original": "Young Cole Sear (Haley Joel Osment) is haunted by a dark secret: he is visited by ghosts. Cole is frightened by visitations from those with unresolved problems who appear from the shadows. He is too afraid to tell anyone about his anguish, except child psychologist Dr. Malcolm Crowe (Bruce Willis). As Dr. Crowe tries to uncover the truth about Cole's supernatural abilities, the consequences for client and therapist are a jolt that awakens them both to something unexplainable.",
+        "summary_source_hash": "7fd19cd8d8c1234bf3e7365c5ae644681351e99b01287ce5f2305dc0ff92b644",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/the-sixth-sense/umc.cmc.2j3fje2s0rh78ius1k1kil5tr"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "第六感",
+        "watchUrl": "https://tv.apple.com/us/movie/the-sixth-sense/umc.cmc.2j3fje2s0rh78ius1k1kil5tr"
+      }
+    },
+    "umc.cmc.6x263wzi05ds2h4oen54w8881": {
+      "en": "Jurassic World",
+      "kind": "movie",
+      "year": "2015",
+      "verifiedZh": {
+        "_identityYear": 2015,
+        "actors": [
+          "克里斯·帕拉特",
+          "布莱丝·达拉斯·霍华德",
+          "文森特·多诺费奥",
+          "泰·辛普金斯",
+          "尼克·罗宾森",
+          "奥玛·希",
+          "黄荣亮",
+          "伊尔凡·可汗",
+          "朱迪·格雷尔",
+          "杰克·约翰逊",
+          "劳伦·拉普库斯",
+          "凯蒂·麦克格雷斯",
+          "布莱恩·泰",
+          "埃迪·J.费尔南德斯",
+          "因德尔·库马尔",
+          "安迪·巴克利",
+          "吉米·法伦"
+        ],
+        "aliases": [
+          "侏罗纪世界",
+          "侏罗纪公园4"
+        ],
+        "contentRating": "PG-13",
+        "detailMetadata": {
+          "checkedAt": "2026-11-01T23:31:04+00:00",
+          "originalTitle": "Jurassic World",
+          "rating": 7.8,
+          "ratingStatus": "AVAILABLE",
+          "schema": 1,
+          "season": 0,
+          "source": "douban",
+          "sourceUrl": "https://movie.douban.com/subject/10440138/",
+          "subjectId": "10440138",
+          "summary": "21世纪，曾经诞生过第一只恐龙的努布拉岛，在经历了一系列的惨剧之后迎来新的时代，如今这里经马斯拉尼之手建成了规模宏大的主题公园“侏罗纪世界”，数量繁多的远古生物每天都吸引数以万计的游客前来一饱眼福。为了吸引更多的游客，公司授意创意实验室采用不同动物的基因创造了集力量、速度和智慧于一体的暴虐霸王龙。作为负责人的克莱尔（布莱丝·达拉斯·霍华德 Bryce Dallas Howard 饰）原打算请专门负责迅猛龙的欧文·格雷迪（克里斯·普拉特 Chris Pratt 饰）评估暴虐霸王龙的防护设施，谁知这头可怕的怪物竟然骗过了精密仪器的监视和人类的眼睛，以迅雷不及掩耳的速度逃到了外面，随后对所见的一切生物展开了无差别的血腥屠杀。 原本快乐祥和的公园乱作一团，克莱尔必须深入危险之地救出两个被困的外甥，而欧文则不可避免地带着他的迅猛龙猎人团队迎战史无前例的的可怕对手……",
+          "summaryStatus": "AVAILABLE",
+          "title": "侏罗纪世界",
+          "year": 2015
+        },
+        "detailSeasons": [
+          {
+            "checkedAt": "2026-11-01T23:31:04+00:00",
+            "originalTitle": "Jurassic World",
+            "rating": 7.8,
+            "ratingStatus": "AVAILABLE",
+            "schema": 1,
+            "season": 0,
+            "source": "douban",
+            "sourceUrl": "https://movie.douban.com/subject/10440138/",
+            "subjectId": "10440138",
+            "summary": "21世纪，曾经诞生过第一只恐龙的努布拉岛，在经历了一系列的惨剧之后迎来新的时代，如今这里经马斯拉尼之手建成了规模宏大的主题公园“侏罗纪世界”，数量繁多的远古生物每天都吸引数以万计的游客前来一饱眼福。为了吸引更多的游客，公司授意创意实验室采用不同动物的基因创造了集力量、速度和智慧于一体的暴虐霸王龙。作为负责人的克莱尔（布莱丝·达拉斯·霍华德 Bryce Dallas Howard 饰）原打算请专门负责迅猛龙的欧文·格雷迪（克里斯·普拉特 Chris Pratt 饰）评估暴虐霸王龙的防护设施，谁知这头可怕的怪物竟然骗过了精密仪器的监视和人类的眼睛，以迅雷不及掩耳的速度逃到了外面，随后对所见的一切生物展开了无差别的血腥屠杀。 原本快乐祥和的公园乱作一团，克莱尔必须深入危险之地救出两个被困的外甥，而欧文则不可避免地带着他的迅猛龙猎人团队迎战史无前例的的可怕对手……",
+            "summaryStatus": "AVAILABLE",
+            "title": "侏罗纪世界",
+            "year": 2015
+          }
+        ],
+        "directors": [
+          "科林·特莱沃若"
+        ],
+        "douban_id": "10440138",
+        "douban_title": "侏罗纪世界",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "retrieved_at": "1793575864",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/10440138/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2015,
+        "summary": "侏罗纪世界豪华度假村位于哥斯达黎加海岸附近，为各种基因工程恐龙提供栖息地，其中包括凶猛而聪明的暴虐霸王龙。当这只庞大的生物逃脱时，引发了一系列连锁反应，导致其他恐龙疯狂横行。现在，全靠前军人兼动物专家（克里斯·帕特饰）利用他的特殊技能，从一场全力以赴的史前袭击中拯救两个小兄弟和其余游客。",
+        "summary_original": "Located off the coast of Costa Rica, the Jurassic World luxury resort provides a habitat for an array of genetically engineered dinosaurs, including the vicious and intelligent Indominus rex. When the massive creature escapes, it sets off a chain reaction that causes the other dinos to run amok. Now, it's up to a former military man and animal expert (Chris Pratt) to use his special skills to save two young brothers and the rest of the tourists from an all-out, prehistoric assault.",
+        "summary_source_hash": "393519a99825069b56c65b927c83adc3e328fa44a8451fbffb74896be02679f0",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/jurassic-world/umc.cmc.6x263wzi05ds2h4oen54w8881"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "侏罗纪世界",
+        "watchUrl": "https://tv.apple.com/us/movie/jurassic-world/umc.cmc.6x263wzi05ds2h4oen54w8881"
+      }
+    },
+    "umc.cmc.4fps2u7wpcpuv5uenubediwct": {
+      "en": "Going the Distance",
+      "kind": "movie",
+      "year": "2010",
+      "verifiedZh": {
+        "aliases": [
+          "远距离爱情",
+          "Going the Distance"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/3284396/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2010,
+        "provenance": "audited_title_import",
+        "searchYear": 2010,
+        "summary": "艾琳（德鲁·巴里摩尔）诙谐的机智和直言不讳的坦率，在第二天早上的啤酒、酒吧冷知识问答和早餐中，迷住了刚刚恢复单身的加勒特（贾斯汀·朗）。他们之间的化学反应擦出了热烈的夏日恋情火花，但随着艾琳回旧金山而加勒特留在纽约工作，谁也没有料到这段感情能持久。但是，当六周在城市里的纵情玩乐无意间变得意义非凡时，两人都不确定他们是否想要这段感情结束。虽然加勒特的哥们儿博克斯（杰森·苏戴奇斯）和丹（查理·戴）拿他登机前的卡路里控制以及他与手机的全职恋爱开玩笑，但他们并不想失去自己最好的酒友，去成全又一段摇摇欲坠的浪漫。与此同时，艾琳神经质、过度保护已婚的姐姐科琳（克莉丝汀·艾伯盖特）则想阻止艾琳走上一条再熟悉不过的老路。但尽管有着海岸相隔、唱反调的朋友和家人以及一些意想不到的诱惑，这对情侣可能还是会坚持到底。",
+        "summary_original": "Erin's (Drew Barrymore) wry wit and unfiltered frankness charm newly single Garrett (Justin Long) over beer, bar trivia and breakfast the next morning. Their chemistry sparks a full-fledged summer fling, but neither expects it to last once Erin heads home to San Francisco and Garrett stays behind for his job in New York City. But when six weeks of romping through the city inadvertently become meaningful, neither is sure they want it to end. And while Garrett's friends, Box (Jason Sudeikis) and Dan (Charlie Day), joke about his pre-flight calorie-cutting and his full-time relationship with his cell phone, they don't like losing their best drinking buddy to yet another rocky romance. At the same time, Erin's high-strung, overprotective married sister, Corrine (Christina Applegate), wants to keep Erin from heading down an all-too-familiar road. But despite the opposite coasts, the nay-saying friends and family, and a few unexpected temptations, the couple just might go the distance.",
+        "summary_source_hash": "98dd0ee90e9283369e21899a9709bb625977a6dcd5828c2d8a86f9e0c0e48f57",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/going-the-distance/umc.cmc.4fps2u7wpcpuv5uenubediwct"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "远距离爱情",
+        "watchUrl": "https://tv.apple.com/us/movie/going-the-distance/umc.cmc.4fps2u7wpcpuv5uenubediwct"
+      }
+    },
+    "umc.cmc.2nmvx85jvka8bkq435m65obfz": {
+      "en": "Master and Commander: The Far Side of the World",
+      "kind": "movie",
+      "year": "2003",
+      "verifiedZh": {
+        "_identityYear": 2003,
+        "aliases": [
+          "怒海争锋",
+          "怒海争锋：极地远征",
+          "Master and Commander: The Far Side of the World"
+        ],
+        "contentRating": "PG-13",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1307749/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2003,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 2003,
+        "summary": "“幸运”杰克·奥布里舰长（罗素·克劳饰）是英国海军中著名的功勋舰长。但当他的舰艇“惊奇号”突然遭到强大敌人的袭击时，奥布里在职责与友情之间陷入两难，他在两片大洋中展开高风险的追逐，以拦截并俘获敌人。面对一艘严重受损的舰艇和受伤的船员，这次任务可以拯救他的声誉，或者将他们全部毁灭。荣获10项奥斯卡奖提名，包括最佳影片！",
+        "summary_original": "Captain “Lucky” Jack Aubrey (Russell Crowe) is a renowned fighting captain in the British Navy. But when his ship, the Surprise, is suddenly attacked by a superior enemy, Aubrey is torn between duty and friendship as he pursues a high-stakes chase across two oceans to intercept and capture his foe. With a badly damaged ship and an injured crew, this mission can save his reputation, or destroy them all. Nominated for 10 Academy Awards, including Best Picture!",
+        "summary_source_hash": "16002ba465ba8df7920d2d648cb5fef4c4a34ebb7e0c89302c9813969343c523",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/master-and-commander-the-far-side-of-the-world/umc.cmc.2nmvx85jvka8bkq435m65obfz"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "怒海争锋",
+        "watchUrl": "https://tv.apple.com/us/movie/master-and-commander-the-far-side-of-the-world/umc.cmc.2nmvx85jvka8bkq435m65obfz"
+      }
+    },
+    "umc.cmc.gks6zztq8kxlbjnrhjhjj26z": {
+      "en": "Fallen",
+      "kind": "movie",
+      "year": "1998",
+      "verifiedZh": {
+        "aliases": [
+          "夺命感应",
+          "Fallen"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1298695/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1998,
+        "provenance": "audited_title_import",
+        "searchYear": 1998,
+        "summary": "奥斯卡奖得主丹泽尔·华盛顿在悬疑惊悚片《fallen》中饰演一位顽强的凶杀案侦探，陷入难以想象的邪恶魔掌之中。约翰·霍布斯侦探（华盛顿饰）和他的搭档琼斯（约翰·古德曼饰）抓获了一名恶魔连环杀手并目睹了他的处决，但可怕的谋杀案仍在继续。这些新的谋杀案是指向一个模仿杀手，还是更邪恶的东西？随着调查的展开，霍布斯的上司斯坦顿中尉（唐纳德·萨瑟兰）有了一个可怕的发现。现在，霍布斯侦探在与堕落者心灵深处的邪恶作斗争时，不得不面对一个又一个清醒的噩梦。",
+        "summary_original": "Academy Award-winner Denzel Washington stars as a tenacious homicide detective caught in the grasp of unimaginable evil in the suspense-thriller Fallen. Detective John Hobbes (Washington) and his partner, Jonesy (John Goodman), apprehend a demonic serial killer and witness his execution--but the grisly murders continue. Do these new slayings point to a copycat killer--or something even more sinister? As the investigation unfolds, Hobbes' superior officer, Lieutenant Stanton (Donald Sutherland), makes a frightening discovery. Now, Detective Hobbes confronts one waking nightmare after another as he battles the evil that dwells within the hearts and souls of the Fallen.",
+        "summary_source_hash": "d03f23b3468b088f7b5b65b58fe1a0b84694b5efbe9fa8030496b812eeb7f78b",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/fallen/umc.cmc.gks6zztq8kxlbjnrhjhjj26z"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "夺命感应",
+        "watchUrl": "https://tv.apple.com/us/movie/fallen/umc.cmc.gks6zztq8kxlbjnrhjhjj26z"
+      }
+    },
+    "umc.cmc.38xvbpqapyw5yrpq36aq49ox6": {
+      "en": "American Gangster",
+      "kind": "movie",
+      "year": "2007",
+      "verifiedZh": {
+        "aliases": [
+          "美国黑帮",
+          "American Gangster"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1578503/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2007,
+        "provenance": "audited_title_import",
+        "searchYear": 2007,
+        "summary": "奥斯卡奖得主丹泽尔·华盛顿和罗素·克劳与导演雷德利·斯科特（《角斗士》）合作，带来这部既有力量又真实的史诗故事。犯罪头目弗兰克·卢卡斯（华盛顿饰）凭借冷酷无情的街头战术和强烈的荣誉感，统治着哈林区混乱的毒品地下世界。当被排挤的警察里奇·罗伯茨（克劳饰）着手打垮卢卡斯的数百万美元帝国时，两人陷入了一场传奇的对决。《美国黑帮》是一部“残酷而 brilhante 的电影”（皮特·哈蒙德，《Maxim》）",
+        "summary_original": "Academy Award winners Denzel Washington and Russell Crowe team with director Ridley Scott (Gladiator) for an epic story as powerful as it is true. Armed with ruthless, street-wise tactics and a strict sense of honor, crime boss Frank Lucas (Washington) rules Harlem's chaotic drug underworld. When outcast cop Richie Roberts (Crowe) sets out to bring down Lucas's multi-million dollar empire, it plunges both men into a legendary confrontation. American Gangster is \"a brutal and brilliant film\" (Pete Hammond, Maxim)",
+        "summary_source_hash": "e8c589986d2719f063c2b91b319ba821771253064b2a97a8ecdcc65eb309f039",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/american-gangster/umc.cmc.38xvbpqapyw5yrpq36aq49ox6"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "美国黑帮",
+        "watchUrl": "https://tv.apple.com/us/movie/american-gangster/umc.cmc.38xvbpqapyw5yrpq36aq49ox6"
+      }
+    },
+    "umc.cmc.3ich7f8sravd24iswc9hqq54o": {
+      "en": "Definitely, Maybe",
+      "kind": "movie",
+      "year": "2008",
+      "verifiedZh": {
+        "aliases": [
+          "爱情三选一",
+          "Definitely, Maybe"
+        ],
+        "contentRating": "PG-13",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1922152/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2008,
+        "provenance": "audited_title_import",
+        "searchYear": 2008,
+        "summary": "当威尔（瑞安·雷诺兹饰）决定向女儿（阿比盖尔·布斯林饰）讲述他是如何遇到她母亲的故事时，他发现重新审视过去也可能给他第二次获得未来的机会。由伊丽莎白·班克斯、蕾切尔·薇兹和艾拉·菲舍尔共同主演，这是一个温馨的故事，让你意识到回头绝对为时不晚……也许还能找到一个幸福的结局。",
+        "summary_original": "When Will (Ryan Reynolds) decides to tell his daughter (Abigail Breslin) the story of how he met her mother, he discovers that a second look at the past might also give him a second chance at the future. Co-starring Elizabeth Banks, Rachel Weisz and Isla Fisher, it's the heartwarming story that makes you realize it's definitely never too late to go back…and maybe find a happy ending.",
+        "summary_source_hash": "a8520dedaab7210d53fdf6a43ef22b45175ccde7ad05e7245c719cc3b60826b3",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/definitely-maybe/umc.cmc.3ich7f8sravd24iswc9hqq54o"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "爱情三选一",
+        "watchUrl": "https://tv.apple.com/us/movie/definitely-maybe/umc.cmc.3ich7f8sravd24iswc9hqq54o"
+      }
+    },
+    "umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r": {
+      "en": "Taxi Driver",
+      "kind": "movie",
+      "year": "1976",
+      "verifiedZh": {
+        "_identityYear": 1976,
+        "aliases": [
+          "出租车司机",
+          "出租汽车司机",
+          "出租车司机冒险记",
+          "Taxi Driver"
+        ],
+        "contentRating": "R",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1292222/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1976,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 1976,
+        "summary": "饱受失眠困扰的孤僻者特拉维斯·比克尔（罗伯特·德尼罗饰）在纽约市找到了一份出租车司机的工作，每晚在街头游荡，随着他梦想清理这座肮脏的城市，他与现实的距离也越来越远。当特拉维斯遇到漂亮的竞选工作人员贝茜（西碧尔·谢帕德饰）时，他沉迷于拯救世界的想法，首先策划暗杀总统候选人，然后将注意力转向营救12岁的妓女爱丽丝（朱迪·福斯特饰）。",
+        "summary_original": "Suffering from insomnia, disturbed loner Travis Bickle (Robert De Niro) takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city. When Travis meets pretty campaign worker Betsy (Cybill Shepherd), he becomes obsessed with the idea of saving the world, first plotting to assassinate a presidential candidate, then directing his attentions toward rescuing 12-year-old prostitute Iris (Jodie Foster).",
+        "summary_source_hash": "56824ff1e23a0d7c20ae1432567af6732046fc3de793e9273522e43003b0f474",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/taxi-driver/umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "出租车司机",
+        "watchUrl": "https://tv.apple.com/us/movie/taxi-driver/umc.cmc.3dnsidxjodrqqk4eqg8i5wg8r"
+      }
+    },
+    "umc.cmc.2iqk0c0jh9ocfk2jtv2yda0k1": {
+      "en": "A Beautiful Mind",
+      "kind": "movie",
+      "year": "2001",
+      "verifiedZh": {
+        "aliases": [
+          "美丽心灵",
+          "A Beautiful Mind"
+        ],
+        "contentRating": "PG-13",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1306029/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2001,
+        "provenance": "audited_title_import",
+        "searchYear": 2001,
+        "summary": "一部受小约翰·福布斯·纳什生活中的事件启发的人性戏剧，部分基于西尔维娅·纳萨尔的传记《美丽心灵》。从声名狼藉的高峰到堕落的深渊，小约翰·福布斯·纳什经历了一切。作为一个数学天才，他在职业生涯早期就有了惊人的发现，并站在了国际声誉的边缘。但这位英俊而傲慢的纳什很快发现自己踏上了一段痛苦而令人心碎的自我发现之旅。",
+        "summary_original": "A human drama inspired by events in the life of John Forbes Nash Jr., and in part based on the biography \"A Beautiful Mind\" by Sylvia Nasar. From the heights of notoriety to the depths of depravity, John Forbes Nash Jr. experienced it all. A mathematical genius, he made an astonishing discovery early in his career and stood on the brink of international acclaim. But the handsome and arrogant Nash soon found himself on a painful and harrowing journey of self-discovery.",
+        "summary_source_hash": "1cc714afb4ae806b1d33cc8b9865b7b628530a2586878b4cbd1f50c540ba4ee1",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/a-beautiful-mind/umc.cmc.2iqk0c0jh9ocfk2jtv2yda0k1"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "美丽心灵",
+        "watchUrl": "https://tv.apple.com/us/movie/a-beautiful-mind/umc.cmc.2iqk0c0jh9ocfk2jtv2yda0k1"
+      }
+    },
+    "umc.cmc.2ep1vwlxkikhdettd106s2qhc": {
+      "en": "A League of Their Own",
+      "kind": "movie",
+      "year": "1992",
+      "verifiedZh": {
+        "aliases": [
+          "红粉联盟",
+          "A League of Their Own"
+        ],
+        "contentRating": "PG",
+        "metadataPolicy": "mainland-v1",
+        "name_checked_at": "2026-10-30T18:20:48+00:00",
+        "name_sources": [
+          {
+            "retrieved_at": "2026-10-30T18:20:48+00:00",
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1294721/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 1992,
+        "provenance": "audited_title_import",
+        "searchYear": 1992,
+        "summary": "汤姆·汉克斯、吉娜·戴维斯和麦当娜主演了这部来自曾为您带来《飞越未来》的团队的大联盟喜剧。汉克斯饰演吉米·杜根，一个大联盟生涯已经结束的过气球星。在男职业球员参战期间，杜根被聘请在1943年全美女子棒球联盟中担任教练，他发现自己被全女子球队的勇气和英雄主义重新吸引回了比赛。乔恩·洛威茨饰演的讽刺球探抢尽了风头，他招募了多蒂·辛森（吉娜·戴维斯），一个拥有贝比·鲁斯挥棒动作的棒球娃娃。队友麦当娜、洛丽·佩蒂和罗西·奥唐纳完善了阵容，带领球队进入世界大赛。改编自先驱女性在场内场外为数代运动员开辟道路的真实故事。",
+        "summary_original": "Tom Hanks, Geena Davis and Madonna star in this major-league comedy from the team that brought you Big. Hanks stars as Jimmy Dugan, a washed-up ballplayer whose big league days are over. Hired to coach in the All-American Girls Baseball League of 1943, while the male pros are at war, Dugan finds himself drawn back into the game by the heart and heroics of his all-girl team. Jon Lovitz adds a scene-stealing cameo as the sarcastic scout who recruits Dottie Hinson (Geena Davis), the baseball dolly with a Babe Ruth swing. Teammates Madonna, Lori Petty and Rosie O'Donnell round out the roster, taking the team to the World Series. Based on the true story of the pioneering women who blazed the trail, on the fields and off, for generations of athletes.",
+        "summary_source_hash": "fa996e657990a92ec04d519144f02948d25feeb22c4ea1189c30bfe9e0da9bb5",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/a-league-of-their-own/umc.cmc.2ep1vwlxkikhdettd106s2qhc"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "红粉联盟",
+        "watchUrl": "https://tv.apple.com/us/movie/a-league-of-their-own/umc.cmc.2ep1vwlxkikhdettd106s2qhc"
+      }
+    },
+    "umc.cmc.59i5501mld9dk1cle3fo8zy4d": {
+      "en": "The Rookie",
+      "kind": "movie",
+      "year": "2002",
+      "verifiedZh": {
+        "_identityYear": 2002,
+        "aliases": [
+          "心灵投手",
+          "棒球新秀",
+          "新手",
+          "The Rookie"
+        ],
+        "contentRating": "G",
+        "metadataPolicy": "mainland-v1",
+        "name_sources": [
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/1306952/"
+          }
+        ],
+        "name_status": "verified_title_sources",
+        "officialReleaseYear": 2002,
+        "provenance": "reviewed_name_alias",
+        "searchYear": 2002,
+        "summary": "一名高中棒球队教练在进入大联盟前受伤，当他同意参加大联盟试训时，迎来了职业投球生涯的第二次机会，但前提是其常年失利的球队必须赢得地区冠军。",
+        "summary_original": "A high school baseball coach, injured before making it to the big leagues, gets a second chance at a professional pitching career when he agrees to try out for the majors, but only if his perpetually losing team wins the district championship.",
+        "summary_source_hash": "04867f7c16798227ecd63132a8d48f9b292d784084324f6ef6faa9397d05bf13",
+        "summary_sources": [
+          {
+            "type": "apple_us_translation",
+            "url": "https://tv.apple.com/us/movie/the-rookie/umc.cmc.59i5501mld9dk1cle3fo8zy4d"
+          }
+        ],
+        "summary_status": "translated_official",
+        "title": "心灵投手",
+        "watchUrl": "https://tv.apple.com/us/movie/the-rookie/umc.cmc.59i5501mld9dk1cle3fo8zy4d"
+      }
     }
   }
 }

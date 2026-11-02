@@ -127,6 +127,9 @@ def sync():
         dump(details_path,details);return found
     from official_pages import Pages
     from home_pages import collect as collect_official
+    from home_titles import remember as remember_home_titles
+    previous_home=folder/'home.json'
+    if previous_home.is_file():remember_home_titles(load(previous_home),ROOT)
     html=fetch(SOURCE).decode('utf-8')
     value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image)
     from home_seasons import enrich as enrich_seasons,reconcile as reconcile_seasons

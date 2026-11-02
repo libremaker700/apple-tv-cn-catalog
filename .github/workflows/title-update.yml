@@ -110,7 +110,7 @@ jobs:
         run: |
           git config user.name catalog-bot
           git config user.email catalog-bot@users.noreply.github.com
-          for FILE in data/mainland-name-cache.json data/detail-metadata-cache.json data/source-cache.json data/home-season-cache.json logs/identity-season-refresh.json logs/mainland-name-sync.json data/cloud-source-cache.json logs/cloud-source-checks.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
+          for FILE in data/mainland-name-cache.json data/detail-metadata-cache.json data/source-cache.json data/home-season-cache.json data/home-title-cache.json logs/identity-season-refresh.json logs/mainland-name-sync.json data/cloud-source-cache.json logs/cloud-source-checks.json; do if [ -f "$FILE" ]; then git add "$FILE"; fi; done
           git diff --cached --quiet || git commit -m 'catalog: preserve independent title-search reservations'
           git push
       - run: python scripts/catalog.py --validate

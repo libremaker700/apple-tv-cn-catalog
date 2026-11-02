@@ -264,6 +264,8 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         published=load(root/'docs/catalog.json');by_slug={e['slug']:e for e in published['entries']}
         for work in home['works']:
             if work.get('knownCatalog')and work['slug']in report['changed']:work['zh']=copy.deepcopy(by_slug[work['slug']].get('zh'))
+        from home_titles import remember as remember_home_titles
+        remember_home_titles(home,root)
         republish_home(home,root)
     return report
 
