@@ -1,15 +1,15 @@
 {
-  "checkedAt": 1793539691,
+  "checkedAt": 1793580604,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
       "requested": 0,
-      "cacheHits": 8,
+      "cacheHits": 7,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 2,
+      "sourceMissing": 2,
       "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
     },
     {
@@ -104,12 +104,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 9,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 1,
+      "sourceMissing": 1,
       "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
     },
     {
@@ -125,5 +125,5 @@
   ],
   "translated": 0,
   "pending": 0,
-  "version": "056a49c8b6e2948619fa17b47edca31fc7230488104f5ff01141899c42257870"
+  "version": "63d216be650a46ef6e4b8aada748658a3c9f97e1346a8e16446bbc384ecf8267"
 }
