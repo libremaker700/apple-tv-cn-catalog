@@ -536,6 +536,27 @@
           "originalTitle": "Twas the Fight Before Christmas"
         }
       ]
+    },
+    "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0": {
+      "en": "Formula 1: Drive to Survive",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37502429",
+          "sourceUrl": "https://movie.douban.com/subject/37502429/",
+          "title": "一级方程式：疾速争胜",
+          "summary": "Netflix出品的F1纪录片《极速求生》第八季，于2026年2月27日全球上线，全季10集聚焦2025赛季的激烈赛场与围场秘辛。本季不仅呈现了诺里斯以2分分差险胜维斯塔潘拿下生涯首个车手总冠军、迈凯伦卫冕车队冠军的极致争冠大戏，还深度揭秘汉密尔顿加盟法拉利后的磨合困境 、红牛领队霍纳突然离任的车队动荡，以及迈凯伦队内的队友竞争。同时，镜头也捕捉到胡肯伯格拿下惊喜领奖台的温情时刻，更因这是最后一季聚焦地效赛车的内容而颇具纪念意义，依旧以赛道高光画面搭配独家幕后视角，展现F1赛场内外的热血与波澜。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 8,
+          "year": 2026,
+          "checkedAt": "2026-11-02T00:17:55+00:00",
+          "originalTitle": "Formula 1: Drive to Survive",
+          "rating": 7.2
+        }
+      ]
     }
   }
 }

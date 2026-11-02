@@ -333,83 +333,38 @@
       "discovery": {}
     },
     "home-4ym1omzf14f4jwcmb7lnu91o0": {
-      "checkedAt": 1793575790,
-      "nextRetry": 1793662190,
+      "checkedAt": 1793578675,
+      "nextRetry": 1793665075,
       "result": {
         "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
         "en": "Formula 1: Drive to Survive",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "30465634",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37502429",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35004928",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 8,
+          "subjectId": "37502429",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "一级方程式：疾速争胜",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "identity": null,
+      "identity": {
+        "douban_id": "37502429",
+        "year": "2026",
+        "season": 8,
+        "actors": [
+          "马克斯·维斯塔潘",
+          "角田裕毅"
+        ],
+        "directors": [
+          "David Hayes",
+          "Rob Wills"
+        ],
+        "url": "https://movie.douban.com/subject/37502429/"
+      },
       "discovery": {}
     },
     "get-rolling-with-otis": {
@@ -2824,70 +2779,17 @@
       "discovery": {}
     },
     "home-ns4q9hpoj4b1749wbl7crwbl": {
-      "checkedAt": 1793576019,
-      "nextRetry": 1793662419,
+      "checkedAt": 1793578683,
+      "nextRetry": 1793665083,
       "result": {
         "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
         "en": "Wonder Pets",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": true
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "5238948",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37135394",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "4890183",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "神奇宠物救援队",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
       "identity": null,
       "discovery": {}
@@ -3021,66 +2923,56 @@
       "discovery": {}
     },
     "tu-tambien-lo-harias": {
-      "checkedAt": 1793576043,
-      "nextRetry": 1793662443,
+      "checkedAt": 1793578694,
+      "nextRetry": 1793665094,
       "result": {
         "slug": "tu-tambien-lo-harias",
         "en": "You Would Do It Too (Tú También lo Harías)",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35853143",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "大巴劫案疑云",
+        "sourceMatch": null,
+        "sourceEvents": [],
+        "originalReleaseYear": 2023
       },
-      "identity": null,
+      "identity": {
+        "douban_id": "35853143",
+        "year": "2023",
+        "season": 1,
+        "actors": [
+          "巴勃罗·莫利内罗",
+          "安娜·波沃罗萨",
+          "帕科·图斯",
+          "米歇尔·珍娜",
+          "何塞·曼努埃尔·波加",
+          "埃莱娜·伊鲁雷塔",
+          "维提·苏亚雷斯",
+          "Christopher Corey Smith",
+          "琼·安吉拉\t",
+          "Pilar Bergés",
+          "哈维·萨兹",
+          "米蕾拉·巴里克",
+          "阿娜·瓦格纳",
+          "塞巴斯蒂安·蒙特奇诺",
+          "David Marcé",
+          "Aimar Vega",
+          "Jose Masegosa",
+          "Javier Mula",
+          "Jorge Valder",
+          "Carlos Oviedo"
+        ],
+        "directors": [
+          "大卫·维多利",
+          "维克托·库德拉多"
+        ],
+        "url": "https://movie.douban.com/subject/35853143/"
+      },
       "discovery": {}
     }
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 125
+    "2026-11": 126
   }
 }
