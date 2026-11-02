@@ -2,44 +2,44 @@
 
 本报告仅复核中文名，不查播放源，不使用 Gemini。保留前次已核实结果，继续检查余下作品。搜索提示不能直接成为中文名；通过作品身份核验后才发布。
 
-检查时间（UTC）：2026-11-02T01:36:33+00:00
+检查时间（UTC）：2026-11-02T02:19:27+00:00
 
 | 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |
 |---|---|---|---|
-| 12 12 12 | 尚未上线，本轮跳过 |  | 2026 / 1 |
-| 12 Monkeys | 已确认中文名 | 十二猴子 | 1996 / 0 |
+| 12 12 12 | 身份已核实，条目未提供中文名 |  | 2026 / 1 |
 | A Carpool Karaoke Christmas | 身份未核实 |  | 2024 / 0 |
-| Awkwafina: The Unlikely Cook | 尚未上线，本轮跳过 |  | 2026 / 1 |
-| BE@RBRICK | 身份未核实 |  | 2025 / 1 |
+| Awkwafina: The Unlikely Cook | 已确认中文名 | 奥卡菲娜：意想不到的厨师 | 2026 / 1 |
+| BE@RBRICK | 已确认中文名 | 积木熊 | 2025 / 1 |
 | Carpool Karaoke: The Series | 身份未核实 |  | 2017 / 1 |
-| Doug Unplugs | 身份未核实 |  | 2021 / 2 |
-| Fleetwood Mac: The Chain | 尚未上线，本轮跳过 |  | 2027 / 0 |
+| Doug Unplugs | 身份已核实，条目未提供中文名 |  | 2021 / 2 |
+| Fleetwood Mac: The Chain | 身份已核实，条目未提供中文名 |  | 2027 / 0 |
 | Fraggle Rock: A Holiday Gift | 尚未上线，本轮跳过 |  | 2026 / 0 |
 | Get Rolling With Otis | 身份未核实 |  | 2022 / 2 |
 | Hello, Jack! The Kindness Show | 身份未核实 |  | 2022 / 2 |
-| Helpsters Help You | 身份未核实 |  | 2020 / 1 |
-| It's the Easter Beagle, Charlie Brown! | 身份未核实 |  | 1974 / 0 |
-| KPOPPED | 身份未核实 |  | 2025 / 1 |
-| Long Way Down | 身份未核实 |  | 2007 / 1 |
+| Helpsters Help You | 身份已核实，条目未提供中文名 |  | 2020 / 1 |
+| It's the Easter Beagle, Charlie Brown! | 身份已核实，条目未提供中文名 |  | 1974 / 0 |
+| KPOPPED | 身份已核实，条目未提供中文名 |  | 2025 / 1 |
+| Long Way Down | 已确认中文名 | 长路迢迢 | 2007 / 1 |
 | Lovely Little Farm | 身份未核实 |  | 2023 / 1 |
-| Lulu Is a Rhinoceros | 身份未核实 |  | 2025 / 0 |
+| Lulu Is a Rhinoceros | 已确认中文名 | 露露是一头犀牛 | 2025 / 0 |
 | MLS Awards Expansion Team to San Diego | 身份未核实 |  | 2023 / 0 |
-| Messi Mania | 身份未核实 |  | 2023 / 0 |
+| Messi Mania | 身份已核实，条目未提供中文名 |  | 2023 / 0 |
 | Napoleon: The Director’s Cut | 身份未核实 |  | 2024 / 0 |
-| Not a Box | 身份未核实 |  | 2025 / 1 |
+| Not a Box | 已确认中文名 | 魔盒 | 2025 / 1 |
 | Now & Then | 身份未核实 |  | 2022 / 1 |
-| Number One on the Call Sheet | 身份未核实 |  | 2025 / 1 |
-| Pretzel and the Puppies | 身份未核实 |  | 2022 / 1 |
-| Sago Mini Friends | 身份未核实 |  | 2024 / 3 |
-| Slumberkins | 身份未核实 |  | 2022 / 1 |
-| Snoopy Presents: There’s No Place Like Home, Snoopy | 身份未核实 |  | 2026 / 1 |
-| Snoopy Unleashed | 尚未上线，本轮跳过 |  | 2027 / 0 |
-| The Oprah Conversation | 身份未核实 |  | 2020 / 1 |
+| Number One on the Call Sheet | 已确认中文名 | 通告大咖 | 2025 / 1 |
+| Pretzel and the Puppies | 已确认中文名 | 椒盐卷饼和小狗 | 2022 / 1 |
+| Sago Mini Friends | 已确认中文名 | Sago Mini 小小伙伴(港/台) | 2024 / 3 |
+| Slumberkins | 身份已核实，条目未提供中文名 |  | 2022 / 1 |
+| Snoopy Presents: There’s No Place Like Home, Snoopy | 身份已核实，条目未提供中文名 |  | 2026 / 1 |
+| Snoopy Unleashed | 身份未核实 |  | 2027 / 0 |
+| The Oprah Conversation | 已确认中文名 | 奥普拉名人会 | 2020 / 1 |
 | The Peanuts Classics | 身份资料不足 |  | 1966 / 1 |
-| The Wanted Man | 尚未上线，本轮跳过 |  | 2027 / 1 |
-| Way of the Warrior Kid | 尚未上线，本轮跳过 |  | 2026 / 0 |
+| The Wanted Man | 身份未核实 |  | 2027 / 1 |
+| Way of the Warrior Kid | 已确认中文名 | 海豹小子 | 2026 / 0 |
 | Wonder Pets: In the City | 身份未核实 |  | 2026 / 2 |
 | Yo Gabba GabbaLand! | 身份未核实 |  | 2026 / 2 |
+| 12 Monkeys | 已确认中文名 | 十二猴子 | 1996 / 0 |
 | Anchorman: The Legend of Ron Burgundy | 已确认中文名 | 王牌播音员 | 2004 / 0 |
 | Arrival | 已确认中文名 | 降临 | 2016 / 0 |
 | Bad Boys | 已确认中文名 | 绝地战警 | 1995 / 0 |

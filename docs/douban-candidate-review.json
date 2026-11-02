@@ -1,0 +1,1990 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-02T02:25:30+00:00",
+  "candidateOnly": true,
+  "geminiUsed": false,
+  "sourceProbingPerformed": false,
+  "subjects": {
+    "36894893": {
+      "available": true,
+      "subjectId": "36894893",
+      "endpoint": "tv",
+      "title": "12 12 12",
+      "originalTitle": "",
+      "year": "2026",
+      "season": 1,
+      "aliases": []
+    },
+    "37161992": {
+      "available": true,
+      "subjectId": "37161992",
+      "endpoint": "movie",
+      "title": "兜风 KTV 过圣诞",
+      "originalTitle": "A Carpool Karaoke Christmas",
+      "year": "2024",
+      "season": 0,
+      "aliases": []
+    },
+    "37862350": {
+      "available": true,
+      "subjectId": "37862350",
+      "endpoint": "tv",
+      "title": "奥卡菲娜：意想不到的厨师",
+      "originalTitle": "The Unlikely Cook with Awkwafina",
+      "year": "2026",
+      "season": 1,
+      "aliases": []
+    },
+    "37262751": {
+      "available": true,
+      "subjectId": "37262751",
+      "endpoint": "tv",
+      "title": "Be@rbrick",
+      "originalTitle": "",
+      "year": "2025",
+      "season": 1,
+      "aliases": []
+    },
+    "26985567": {
+      "available": true,
+      "subjectId": "26985567",
+      "endpoint": "tv",
+      "title": "拼车K歌秀 第一季",
+      "originalTitle": "Carpool Karaoke Season 1",
+      "year": "2017",
+      "season": 1,
+      "aliases": [
+        "拼车卡拉OK"
+      ]
+    },
+    "35599365": {
+      "available": true,
+      "subjectId": "35599365",
+      "endpoint": "tv",
+      "title": "Doug Unplugs Season 2",
+      "originalTitle": "",
+      "year": "2021",
+      "season": 2,
+      "aliases": []
+    },
+    "39008276": {
+      "available": true,
+      "subjectId": "39008276",
+      "endpoint": "movie",
+      "title": "Fleetwood Mac: The Chain",
+      "originalTitle": "",
+      "year": "2027",
+      "season": 0,
+      "aliases": []
+    },
+    "30465634": {
+      "available": true,
+      "subjectId": "30465634",
+      "endpoint": "tv",
+      "title": "一级方程式：疾速争胜 第一季",
+      "originalTitle": "Formula 1: Drive to Survive Season 1",
+      "year": "2019",
+      "season": 1,
+      "aliases": [
+        "一级方程式：极速求生(港)",
+        "一级方程式：飆速求生(台)",
+        "Formula 1：疾速争胜(新)"
+      ]
+    },
+    "35599354": {
+      "available": true,
+      "subjectId": "35599354",
+      "endpoint": "tv",
+      "title": "Get Rolling With Otis Season 1",
+      "originalTitle": "",
+      "year": "2021",
+      "season": 1,
+      "aliases": []
+    },
+    "35887604": {
+      "available": true,
+      "subjectId": "35887604",
+      "endpoint": "tv",
+      "title": "伟大的密码 第二季",
+      "originalTitle": "Greatness Code Season 2",
+      "year": "2022",
+      "season": 2,
+      "aliases": []
+    },
+    "35576353": {
+      "available": true,
+      "subjectId": "35576353",
+      "endpoint": "tv",
+      "title": "Hello, Jack! The Kindness Show Season 1",
+      "originalTitle": "",
+      "year": "2021",
+      "season": 1,
+      "aliases": []
+    },
+    "35914330": {
+      "available": true,
+      "subjectId": "35914330",
+      "endpoint": "tv",
+      "title": "布偶小帮手 第三季",
+      "originalTitle": "Helpsters Season 3",
+      "year": "2022",
+      "season": 3,
+      "aliases": []
+    },
+    "35138269": {
+      "available": true,
+      "subjectId": "35138269",
+      "endpoint": "tv",
+      "title": "Helpsters Help You",
+      "originalTitle": "",
+      "year": "2020",
+      "season": 1,
+      "aliases": []
+    },
+    "1308843": {
+      "available": true,
+      "subjectId": "1308843",
+      "endpoint": "movie",
+      "title": "我，机器人",
+      "originalTitle": "I, Robot",
+      "year": "2004",
+      "season": 0,
+      "aliases": [
+        "智能叛变(港)",
+        "机械公敌(台)",
+        "我，机器人"
+      ]
+    },
+    "4091371": {
+      "available": true,
+      "subjectId": "4091371",
+      "endpoint": "movie",
+      "title": "查理·布朗，圣诞节又到了",
+      "originalTitle": "It's Christmastime Again, Charlie Brown",
+      "year": "1992",
+      "season": 0,
+      "aliases": [
+        "史努比再度圣诞节",
+        "查理·布朗，又是圣诞节"
+      ]
+    },
+    "5054433": {
+      "available": true,
+      "subjectId": "5054433",
+      "endpoint": "movie",
+      "title": "It's the Easter Beagle, Charlie Brown",
+      "originalTitle": "",
+      "year": "1974",
+      "season": 0,
+      "aliases": []
+    },
+    "10440138": {
+      "available": true,
+      "subjectId": "10440138",
+      "endpoint": "movie",
+      "title": "侏罗纪世界",
+      "originalTitle": "Jurassic World",
+      "year": "2015",
+      "season": 0,
+      "aliases": [
+        "侏罗纪公园4",
+        "Jurassic Park IV",
+        "Jurassic Park 4"
+      ]
+    },
+    "37443489": {
+      "available": true,
+      "subjectId": "37443489",
+      "endpoint": "tv",
+      "title": "KPOPPED",
+      "originalTitle": "K-popped",
+      "year": "2025",
+      "season": 1,
+      "aliases": [
+        "케이팝드"
+      ]
+    },
+    "2367101": {
+      "available": true,
+      "subjectId": "2367101",
+      "endpoint": "tv",
+      "title": "长路迢迢",
+      "originalTitle": "Long Way Down",
+      "year": "2008",
+      "season": 1,
+      "aliases": [
+        "长路迢迢"
+      ]
+    },
+    "35898683": {
+      "available": true,
+      "subjectId": "35898683",
+      "endpoint": "tv",
+      "title": "可爱的小农场 第一季",
+      "originalTitle": "Lovely Little Farm Season 1",
+      "year": "2022",
+      "season": 1,
+      "aliases": []
+    },
+    "37357015": {
+      "available": true,
+      "subjectId": "37357015",
+      "endpoint": "movie",
+      "title": "露露是一头犀牛 第一季",
+      "originalTitle": "Lulu Is a Rhinoceros Season 1",
+      "year": "2025",
+      "season": 0,
+      "aliases": []
+    },
+    "38483287": {
+      "available": true,
+      "subjectId": "38483287",
+      "endpoint": "movie",
+      "title": "Messi Mania",
+      "originalTitle": "",
+      "year": "2023",
+      "season": 0,
+      "aliases": []
+    },
+    "35224919": {
+      "available": true,
+      "subjectId": "35224919",
+      "endpoint": "movie",
+      "title": "拿破仑",
+      "originalTitle": "Napoleon",
+      "year": "2023",
+      "season": 0,
+      "aliases": [
+        "士兵行囊",
+        "Kitbag"
+      ]
+    },
+    "37374251": {
+      "available": true,
+      "subjectId": "37374251",
+      "endpoint": "tv",
+      "title": "Not a Box",
+      "originalTitle": "",
+      "year": "2025",
+      "season": 1,
+      "aliases": [
+        "No es una caja"
+      ]
+    },
+    "35507236": {
+      "available": true,
+      "subjectId": "35507236",
+      "endpoint": "tv",
+      "title": "此时此刻",
+      "originalTitle": "Now and Then",
+      "year": "2022",
+      "season": 1,
+      "aliases": []
+    },
+    "37290675": {
+      "available": true,
+      "subjectId": "37290675",
+      "endpoint": "tv",
+      "title": "通告大咖",
+      "originalTitle": "Number One on the Call Sheet",
+      "year": "2024",
+      "season": 1,
+      "aliases": [
+        "叱咤好莱坞"
+      ]
+    },
+    "36160466": {
+      "available": true,
+      "subjectId": "36160466",
+      "endpoint": "movie",
+      "title": "星途恶果",
+      "originalTitle": "Outcome",
+      "year": "2026",
+      "season": 0,
+      "aliases": [
+        "补锅巨星(港)",
+        "腥途恶果(台)"
+      ]
+    },
+    "35758781": {
+      "available": true,
+      "subjectId": "35758781",
+      "endpoint": "tv",
+      "title": "Pretzel and the Puppies",
+      "originalTitle": "",
+      "year": "2022",
+      "season": 1,
+      "aliases": [
+        "Pretzel y sus cachorros"
+      ]
+    },
+    "37112671": {
+      "available": true,
+      "subjectId": "37112671",
+      "endpoint": "tv",
+      "title": "Sago Mini Friends Season 3",
+      "originalTitle": "",
+      "year": "2024",
+      "season": 3,
+      "aliases": [
+        "Sago Mini 小小伙伴(港/台)",
+        "Le monde maxi de Sago Mini",
+        "Sago Mini Freunde!",
+        "サゴミニフレンズ"
+      ]
+    },
+    "36148714": {
+      "available": true,
+      "subjectId": "36148714",
+      "endpoint": "tv",
+      "title": "Slumberkins",
+      "originalTitle": "",
+      "year": "2022",
+      "season": 1,
+      "aliases": []
+    },
+    "38535567": {
+      "available": true,
+      "subjectId": "38535567",
+      "endpoint": "movie",
+      "title": "史努比特辑：有家真好",
+      "originalTitle": "Snoopy Presents: There's No Place Like Home, Snoopy",
+      "year": "2026",
+      "season": 0,
+      "aliases": [
+        "史诺比开心呈献：在家千日好(港)"
+      ]
+    },
+    "38432357": {
+      "available": true,
+      "subjectId": "38432357",
+      "endpoint": "movie",
+      "title": "Snoopy Unleashed",
+      "originalTitle": "",
+      "year": "2028",
+      "season": 0,
+      "aliases": []
+    },
+    "37054667": {
+      "available": true,
+      "subjectId": "37054667",
+      "endpoint": "movie",
+      "title": "低弧慢球",
+      "originalTitle": "The Dink",
+      "year": "2026",
+      "season": 0,
+      "aliases": [
+        "匹克球"
+      ]
+    },
+    "36783469": {
+      "available": true,
+      "subjectId": "36783469",
+      "endpoint": "tv",
+      "title": "猎杀",
+      "originalTitle": "Traqués",
+      "year": "2026",
+      "season": 1,
+      "aliases": [
+        "森林阴影下",
+        "A l'Ombre des Forêts‎",
+        "The Hunt",
+        "狩猎"
+      ]
+    },
+    "35576361": {
+      "available": true,
+      "subjectId": "35576361",
+      "endpoint": "tv",
+      "title": "底线 第一季",
+      "originalTitle": "The Line Season 1",
+      "year": "2021",
+      "season": 1,
+      "aliases": []
+    },
+    "35161274": {
+      "available": true,
+      "subjectId": "35161274",
+      "endpoint": "tv",
+      "title": "The Oprah Conversation",
+      "originalTitle": "",
+      "year": "2020",
+      "season": 1,
+      "aliases": []
+    },
+    "35907552": {
+      "available": true,
+      "subjectId": "35907552",
+      "endpoint": "tv",
+      "title": "囧司徒的问题 第二季",
+      "originalTitle": "The Problem with Jon Stewart Season 2",
+      "year": "2022",
+      "season": 2,
+      "aliases": [
+        "鍾史超域有問題(港)"
+      ]
+    },
+    "1297630": {
+      "available": true,
+      "subjectId": "1297630",
+      "endpoint": "movie",
+      "title": "第六感",
+      "originalTitle": "The Sixth Sense",
+      "year": "1999",
+      "season": 0,
+      "aliases": [
+        "鬼眼(港)",
+        "灵异第六感(台)",
+        "第六感"
+      ]
+    },
+    "37344952": {
+      "available": true,
+      "subjectId": "37344952",
+      "endpoint": "tv",
+      "title": "必杀名单",
+      "originalTitle": "The Wanted Man",
+      "year": "2026",
+      "season": 1,
+      "aliases": []
+    },
+    "1994879": {
+      "available": true,
+      "subjectId": "1994879",
+      "endpoint": "movie",
+      "title": "热带惊雷",
+      "originalTitle": "Tropic Thunder",
+      "year": "2008",
+      "season": 0,
+      "aliases": [
+        "雷霆丧星(港)",
+        "开麦拉惊魂(台)",
+        "热带惊雷"
+      ]
+    },
+    "35657015": {
+      "available": true,
+      "subjectId": "35657015",
+      "endpoint": "movie",
+      "title": "圣诞讼",
+      "originalTitle": "'Twas the Fight Before Christmas",
+      "year": "2021",
+      "season": 0,
+      "aliases": [
+        "The Fight Before Christmas"
+      ]
+    },
+    "36877090": {
+      "available": true,
+      "subjectId": "36877090",
+      "endpoint": "movie",
+      "title": "海豹小子",
+      "originalTitle": "Way of the Warrior Kid",
+      "year": "2026",
+      "season": 0,
+      "aliases": [
+        "少年作战指南"
+      ]
+    },
+    "5238948": {
+      "available": true,
+      "subjectId": "5238948",
+      "endpoint": "movie",
+      "title": "神奇宠物救援队",
+      "originalTitle": "Wonder Pets!",
+      "year": "2006",
+      "season": 0,
+      "aliases": []
+    },
+    "37135394": {
+      "available": true,
+      "subjectId": "37135394",
+      "endpoint": "tv",
+      "title": "Wonder Pets: In the City",
+      "originalTitle": "",
+      "year": "2024",
+      "season": 1,
+      "aliases": []
+    },
+    "36988909": {
+      "available": true,
+      "subjectId": "36988909",
+      "endpoint": "tv",
+      "title": "Yo Gabba GabbaLand!",
+      "originalTitle": "",
+      "year": "2024",
+      "season": 1,
+      "aliases": []
+    },
+    "35853143": {
+      "available": true,
+      "subjectId": "35853143",
+      "endpoint": "tv",
+      "title": "大巴劫案疑云",
+      "originalTitle": "Tú también lo harías",
+      "year": "2023",
+      "season": 1,
+      "aliases": [
+        "You Would Do It Too",
+        "你也会如此"
+      ]
+    }
+  },
+  "records": [
+    {
+      "englishTitle": "12 12 12",
+      "candidateTitle": "12 12 12",
+      "subjectIds": [
+        "36894893"
+      ],
+      "notes": "2026；尚未播出，但已建立条目",
+      "candidateOnly": true,
+      "slug": "12-12-12",
+      "officialId": "umc.cmc.2xeasogpeiwbaegczytrdg1uh",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36894893",
+          "endpoint": "tv",
+          "title": "12 12 12",
+          "originalTitle": "",
+          "year": "2026",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "A Carpool Karaoke Christmas",
+      "candidateTitle": "兜风 KTV 过圣诞",
+      "subjectIds": [
+        "37161992"
+      ],
+      "notes": "2024；圣诞特别节目",
+      "candidateOnly": true,
+      "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
+      "officialId": "umc.cmc.750u3qv5wz0d41pn1v2rvn7oe",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "unverified",
+      "requestedSeason": 0,
+      "requestedYear": "2024",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37161992",
+          "endpoint": "movie",
+          "title": "兜风 KTV 过圣诞",
+          "originalTitle": "A Carpool Karaoke Christmas",
+          "year": "2024",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Awkwafina: The Unlikely Cook",
+      "candidateTitle": "奥卡菲娜：意想不到的厨师",
+      "subjectIds": [
+        "37862350"
+      ],
+      "notes": "2026；豆瓣英文名为 *The Unlikely Cook with Awkwafina*",
+      "candidateOnly": true,
+      "slug": "awkwafina-the-unlikely-cook",
+      "officialId": "umc.cmc.1fhnal2vix2077ouh1hjy2eoc",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "奥卡菲娜：意想不到的厨师",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2026",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37862350",
+          "endpoint": "tv",
+          "title": "奥卡菲娜：意想不到的厨师",
+          "originalTitle": "The Unlikely Cook with Awkwafina",
+          "year": "2026",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "BE@RBRICK",
+      "candidateTitle": "Be@rbrick",
+      "subjectIds": [
+        "37262751"
+      ],
+      "notes": "2025",
+      "candidateOnly": true,
+      "slug": "bearbrick",
+      "officialId": "umc.cmc.18fsq2h43zx0v5h31hyeq1d7w",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "积木熊",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2025",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37262751",
+          "endpoint": "tv",
+          "title": "Be@rbrick",
+          "originalTitle": "",
+          "year": "2025",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Carpool Karaoke: The Series",
+      "candidateTitle": "拼车K歌秀 第一季",
+      "subjectIds": [
+        "26985567"
+      ],
+      "notes": "2017；第一季",
+      "candidateOnly": true,
+      "slug": "carpool-karaoke-the-series",
+      "officialId": "umc.cmc.2wyy7chw6bmy46fekqlqq1ulb",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "26985567",
+          "endpoint": "tv",
+          "title": "拼车K歌秀 第一季",
+          "originalTitle": "Carpool Karaoke Season 1",
+          "year": "2017",
+          "season": 1,
+          "aliases": [
+            "拼车卡拉OK"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Doug Unplugs",
+      "candidateTitle": "Doug Unplugs Season 2",
+      "subjectIds": [
+        "35599365"
+      ],
+      "notes": "2021；**第二季**",
+      "candidateOnly": true,
+      "slug": "doug-unplugs",
+      "officialId": "umc.cmc.3oxevpgaoqomu820s0e70ri75",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "season_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35599365",
+          "endpoint": "tv",
+          "title": "Doug Unplugs Season 2",
+          "originalTitle": "",
+          "year": "2021",
+          "season": 2,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Fleetwood Mac: The Chain",
+      "candidateTitle": "Fleetwood Mac: The Chain",
+      "subjectIds": [
+        "39008276"
+      ],
+      "notes": "2027；已有条目",
+      "candidateOnly": true,
+      "slug": "fleetwood-mac-the-chain",
+      "officialId": "",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 0,
+      "requestedYear": "2027",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "39008276",
+          "endpoint": "movie",
+          "title": "Fleetwood Mac: The Chain",
+          "originalTitle": "",
+          "year": "2027",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Formula 1: Drive to Survive",
+      "candidateTitle": "一级方程式：疾速争胜 第一季",
+      "subjectIds": [
+        "30465634"
+      ],
+      "notes": "第一季为 **2019**，与原表的 2026 不同",
+      "candidateOnly": true,
+      "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
+      "officialId": "umc.cmc.4ym1omzf14f4jwcmb7lnu91o0",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "一级方程式：疾速争胜",
+      "status": "verified_name_preserved",
+      "requestedSeason": 8,
+      "requestedYear": "2026",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "30465634",
+          "endpoint": "tv",
+          "title": "一级方程式：疾速争胜 第一季",
+          "originalTitle": "Formula 1: Drive to Survive Season 1",
+          "year": "2019",
+          "season": 1,
+          "aliases": [
+            "一级方程式：极速求生(港)",
+            "一级方程式：飆速求生(台)",
+            "Formula 1：疾速争胜(新)"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Fraggle Rock: A Holiday Gift",
+      "candidateTitle": "—",
+      "subjectIds": [],
+      "notes": "未找到这个特别篇的确切条目",
+      "candidateOnly": true,
+      "slug": "fraggle-rock-a-holiday-gift",
+      "officialId": "",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "no_candidate_supplied",
+      "requestedSeason": 0,
+      "requestedYear": "2026",
+      "subjects": []
+    },
+    {
+      "englishTitle": "Get Rolling With Otis",
+      "candidateTitle": "Get Rolling With Otis Season 1",
+      "subjectIds": [
+        "35599354"
+      ],
+      "notes": "**仅确认第一季，2021**；未找到原表所示第二季的独立条目",
+      "candidateOnly": true,
+      "slug": "get-rolling-with-otis",
+      "officialId": "umc.cmc.3tql7vmqfmedyw1ab7efys3z",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35599354",
+          "endpoint": "tv",
+          "title": "Get Rolling With Otis Season 1",
+          "originalTitle": "",
+          "year": "2021",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Greatness Code",
+      "candidateTitle": "伟大的密码 第二季",
+      "subjectIds": [
+        "35887604"
+      ],
+      "notes": "2022；**第二季**",
+      "candidateOnly": true,
+      "slug": "greatness-code",
+      "officialId": "umc.cmc.4xpk6thd1574yu8hy2xdozyz6",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "season_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35887604",
+          "endpoint": "tv",
+          "title": "伟大的密码 第二季",
+          "originalTitle": "Greatness Code Season 2",
+          "year": "2022",
+          "season": 2,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Hello, Jack! The Kindness Show",
+      "candidateTitle": "Hello, Jack! The Kindness Show Season 1",
+      "subjectIds": [
+        "35576353"
+      ],
+      "notes": "**仅确认第一季，2021**；未找到第二季独立条目",
+      "candidateOnly": true,
+      "slug": "hello-jack-the-kindness-show",
+      "officialId": "umc.cmc.67f7csjyodc41iybksdv6s0pt",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35576353",
+          "endpoint": "tv",
+          "title": "Hello, Jack! The Kindness Show Season 1",
+          "originalTitle": "",
+          "year": "2021",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Helpsters",
+      "candidateTitle": "布偶小帮手 第三季",
+      "subjectIds": [
+        "35914330"
+      ],
+      "notes": "2022；**第三季**",
+      "candidateOnly": true,
+      "slug": "helpsters",
+      "officialId": "umc.cmc.kfh7cellb1a3dmiehxhvq8gl",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "season_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35914330",
+          "endpoint": "tv",
+          "title": "布偶小帮手 第三季",
+          "originalTitle": "Helpsters Season 3",
+          "year": "2022",
+          "season": 3,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Helpsters Help You",
+      "candidateTitle": "Helpsters Help You",
+      "subjectIds": [
+        "35138269"
+      ],
+      "notes": "2020；独立条目",
+      "candidateOnly": true,
+      "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
+      "officialId": "umc.cmc.3xi33xb3r3xbxx4lssz8cswdr",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 1,
+      "requestedYear": "2020",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35138269",
+          "endpoint": "tv",
+          "title": "Helpsters Help You",
+          "originalTitle": "",
+          "year": "2020",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "I, Robot",
+      "candidateTitle": "我，机器人",
+      "subjectIds": [
+        "1308843"
+      ],
+      "notes": "2004",
+      "candidateOnly": true,
+      "slug": "home-5mffp3n83az89t42qnhew9vn5",
+      "officialId": "umc.cmc.5mffp3n83az89t42qnhew9vn5",
+      "kind": "movie",
+      "active": false,
+      "finalTitle": "我，机器人",
+      "status": "verified_cached_not_in_current_catalog",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "1308843",
+          "endpoint": "movie",
+          "title": "我，机器人",
+          "originalTitle": "I, Robot",
+          "year": "2004",
+          "season": 0,
+          "aliases": [
+            "智能叛变(港)",
+            "机械公敌(台)",
+            "我，机器人"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "It's Christmastime Again, Charlie Brown",
+      "candidateTitle": "查理·布朗，圣诞节又到了",
+      "subjectIds": [
+        "4091371"
+      ],
+      "notes": "1992",
+      "candidateOnly": true,
+      "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
+      "officialId": "umc.cmc.4k47h7cte42k5kzw8ltnks1f7",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "查理·布朗，圣诞节又到了",
+      "status": "verified_name_preserved",
+      "requestedSeason": 0,
+      "requestedYear": "1992",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "4091371",
+          "endpoint": "movie",
+          "title": "查理·布朗，圣诞节又到了",
+          "originalTitle": "It's Christmastime Again, Charlie Brown",
+          "year": "1992",
+          "season": 0,
+          "aliases": [
+            "史努比再度圣诞节",
+            "查理·布朗，又是圣诞节"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "It's the Easter Beagle, Charlie Brown!",
+      "candidateTitle": "It's the Easter Beagle, Charlie Brown",
+      "subjectIds": [
+        "5054433"
+      ],
+      "notes": "1974；豆瓣主标题为英文",
+      "candidateOnly": true,
+      "slug": "home-17y48i5ko6gft5ieh148nzqzn",
+      "officialId": "umc.cmc.17y48i5ko6gft5ieh148nzqzn",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 0,
+      "requestedYear": "1974",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "5054433",
+          "endpoint": "movie",
+          "title": "It's the Easter Beagle, Charlie Brown",
+          "originalTitle": "",
+          "year": "1974",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Jurassic World",
+      "candidateTitle": "侏罗纪世界",
+      "subjectIds": [
+        "10440138"
+      ],
+      "notes": "2015",
+      "candidateOnly": true,
+      "slug": "home-6x263wzi05ds2h4oen54w8881",
+      "officialId": "umc.cmc.6x263wzi05ds2h4oen54w8881",
+      "kind": "movie",
+      "active": false,
+      "finalTitle": "侏罗纪世界",
+      "status": "verified_cached_not_in_current_catalog",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "10440138",
+          "endpoint": "movie",
+          "title": "侏罗纪世界",
+          "originalTitle": "Jurassic World",
+          "year": "2015",
+          "season": 0,
+          "aliases": [
+            "侏罗纪公园4",
+            "Jurassic Park IV",
+            "Jurassic Park 4"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "KPOPPED",
+      "candidateTitle": "KPOPPED",
+      "subjectIds": [
+        "37443489"
+      ],
+      "notes": "2025",
+      "candidateOnly": true,
+      "slug": "kpopped",
+      "officialId": "umc.cmc.1yvpbd5uvcq8txtj1gfnw5iox",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37443489",
+          "endpoint": "tv",
+          "title": "KPOPPED",
+          "originalTitle": "K-popped",
+          "year": "2025",
+          "season": 1,
+          "aliases": [
+            "케이팝드"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Long Way Down",
+      "candidateTitle": "长路迢迢",
+      "subjectIds": [
+        "2367101"
+      ],
+      "notes": "豆瓣标 **2008**，原表为 2007；已核对为同一纪录片",
+      "candidateOnly": true,
+      "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
+      "officialId": "umc.cmc.cal17ey3zhv2lx3xkzjqjstb",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "长路迢迢",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2007",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "2367101",
+          "endpoint": "tv",
+          "title": "长路迢迢",
+          "originalTitle": "Long Way Down",
+          "year": "2008",
+          "season": 1,
+          "aliases": [
+            "长路迢迢"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Lovely Little Farm",
+      "candidateTitle": "可爱的小农场 第一季",
+      "subjectIds": [
+        "35898683"
+      ],
+      "notes": "第一季为 **2022**，原表为 2023",
+      "candidateOnly": true,
+      "slug": "lovely-little-farm",
+      "officialId": "",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "可爱的小农场",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2022",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35898683",
+          "endpoint": "tv",
+          "title": "可爱的小农场 第一季",
+          "originalTitle": "Lovely Little Farm Season 1",
+          "year": "2022",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Lulu Is a Rhinoceros",
+      "candidateTitle": "露露是一头犀牛 第一季",
+      "subjectIds": [
+        "37357015"
+      ],
+      "notes": "2025；豆瓣条目名称确实带“第一季”",
+      "candidateOnly": true,
+      "slug": "lulu-is-a-rhinoceros",
+      "officialId": "umc.cmc.3q3rnlgmnlkdh3p5djze6l019",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "露露是一头犀牛",
+      "status": "verified_name_preserved",
+      "requestedSeason": 0,
+      "requestedYear": "2025",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37357015",
+          "endpoint": "movie",
+          "title": "露露是一头犀牛 第一季",
+          "originalTitle": "Lulu Is a Rhinoceros Season 1",
+          "year": "2025",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "MLS Awards Expansion Team to San Diego",
+      "candidateTitle": "—",
+      "subjectIds": [],
+      "notes": "未找到可核实的独立条目",
+      "candidateOnly": true,
+      "slug": "home-13tm01bb2zcat3s04rxgju0zh",
+      "officialId": "umc.cmc.13tm01bb2zcat3s04rxgju0zh",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "no_candidate_supplied",
+      "requestedSeason": 0,
+      "requestedYear": "2023",
+      "subjects": []
+    },
+    {
+      "englishTitle": "Messi Mania",
+      "candidateTitle": "Messi Mania",
+      "subjectIds": [
+        "38483287"
+      ],
+      "notes": "2023；27 分钟的独立专题",
+      "candidateOnly": true,
+      "slug": "home-58su2j1i0etuvq64m6nxfm11y",
+      "officialId": "umc.cmc.58su2j1i0etuvq64m6nxfm11y",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "identity_no_chinese_name",
+      "requestedSeason": 0,
+      "requestedYear": "2023",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "38483287",
+          "endpoint": "movie",
+          "title": "Messi Mania",
+          "originalTitle": "",
+          "year": "2023",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Napoleon: The Director’s Cut",
+      "candidateTitle": "拿破仑",
+      "subjectIds": [
+        "35224919"
+      ],
+      "notes": "**与 2023 年原版共用条目**；豆瓣片长包含“206 分钟（导演剪辑版）”",
+      "candidateOnly": true,
+      "slug": "napoleon-the-directors-cut",
+      "officialId": "umc.cmc.gtk0q9t2mapcjs75d31vvrs2",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35224919",
+          "endpoint": "movie",
+          "title": "拿破仑",
+          "originalTitle": "Napoleon",
+          "year": "2023",
+          "season": 0,
+          "aliases": [
+            "士兵行囊",
+            "Kitbag"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Not a Box",
+      "candidateTitle": "Not a Box",
+      "subjectIds": [
+        "37374251"
+      ],
+      "notes": "2025；豆瓣主标题为英文",
+      "candidateOnly": true,
+      "slug": "not-a-box",
+      "officialId": "umc.cmc.5v5f721a2mlxcurdhh0wm56if",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "魔盒",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2025",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37374251",
+          "endpoint": "tv",
+          "title": "Not a Box",
+          "originalTitle": "",
+          "year": "2025",
+          "season": 1,
+          "aliases": [
+            "No es una caja"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Now & Then",
+      "candidateTitle": "此时此刻",
+      "subjectIds": [
+        "35507236"
+      ],
+      "notes": "2022；豆瓣主标题不带“第一季”",
+      "candidateOnly": true,
+      "slug": "now-and-then",
+      "officialId": "umc.cmc.1w3e47nmnt4o304oaauh4k2rm",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35507236",
+          "endpoint": "tv",
+          "title": "此时此刻",
+          "originalTitle": "Now and Then",
+          "year": "2022",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Number One on the Call Sheet",
+      "candidateTitle": "通告大咖",
+      "subjectIds": [
+        "37290675"
+      ],
+      "notes": "两集完整节目的条目；**豆瓣标 2024，原表为 2025**",
+      "candidateOnly": true,
+      "slug": "number-one-on-the-call-sheet",
+      "officialId": "umc.cmc.6p9tke2tbri1vnn2cuaxcj4mi",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "通告大咖",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2025",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37290675",
+          "endpoint": "tv",
+          "title": "通告大咖",
+          "originalTitle": "Number One on the Call Sheet",
+          "year": "2024",
+          "season": 1,
+          "aliases": [
+            "叱咤好莱坞"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Outcome",
+      "candidateTitle": "星途恶果",
+      "subjectIds": [
+        "36160466"
+      ],
+      "notes": "2026",
+      "candidateOnly": true,
+      "slug": "outcome",
+      "officialId": "umc.cmc.3uvjztuy2y8ve2rj6nvgyop89",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36160466",
+          "endpoint": "movie",
+          "title": "星途恶果",
+          "originalTitle": "Outcome",
+          "year": "2026",
+          "season": 0,
+          "aliases": [
+            "补锅巨星(港)",
+            "腥途恶果(台)"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Pretzel and the Puppies",
+      "candidateTitle": "Pretzel and the Puppies",
+      "subjectIds": [
+        "35758781"
+      ],
+      "notes": "2022；豆瓣主标题为英文",
+      "candidateOnly": true,
+      "slug": "pretzel-and-the-puppies",
+      "officialId": "umc.cmc.kpgzlz0lejug1vhtakgizdlh",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "椒盐卷饼和小狗",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2022",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35758781",
+          "endpoint": "tv",
+          "title": "Pretzel and the Puppies",
+          "originalTitle": "",
+          "year": "2022",
+          "season": 1,
+          "aliases": [
+            "Pretzel y sus cachorros"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Sago Mini Friends",
+      "candidateTitle": "Sago Mini Friends Season 3",
+      "subjectIds": [
+        "37112671"
+      ],
+      "notes": "2024；**第三季**；中文别名为“Sago Mini 小小伙伴”",
+      "candidateOnly": true,
+      "slug": "sago-mini-friends",
+      "officialId": "umc.cmc.4ckulbycyeuavnlen3du06vvy",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "Sago Mini 小小伙伴(港/台)",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2022",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37112671",
+          "endpoint": "tv",
+          "title": "Sago Mini Friends Season 3",
+          "originalTitle": "",
+          "year": "2024",
+          "season": 3,
+          "aliases": [
+            "Sago Mini 小小伙伴(港/台)",
+            "Le monde maxi de Sago Mini",
+            "Sago Mini Freunde!",
+            "サゴミニフレンズ"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Slumberkins",
+      "candidateTitle": "Slumberkins",
+      "subjectIds": [
+        "36148714"
+      ],
+      "notes": "2022；豆瓣主标题为英文",
+      "candidateOnly": true,
+      "slug": "slumberkins",
+      "officialId": "umc.cmc.4r9fjly8gp831gqkfe8ft1xrb",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36148714",
+          "endpoint": "tv",
+          "title": "Slumberkins",
+          "originalTitle": "",
+          "year": "2022",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+      "candidateTitle": "史努比特辑：有家真好",
+      "subjectIds": [
+        "38535567"
+      ],
+      "notes": "2026；31 分钟特别篇；另有一个按“第一季”建立的条目，见下方说明",
+      "candidateOnly": true,
+      "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
+      "officialId": "umc.cmc.52sgmi3vdpedurrbtz6louqqo",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "38535567",
+          "endpoint": "movie",
+          "title": "史努比特辑：有家真好",
+          "originalTitle": "Snoopy Presents: There's No Place Like Home, Snoopy",
+          "year": "2026",
+          "season": 0,
+          "aliases": [
+            "史诺比开心呈献：在家千日好(港)"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Snoopy Unleashed",
+      "candidateTitle": "Snoopy Unleashed",
+      "subjectIds": [
+        "38432357"
+      ],
+      "notes": "**豆瓣标 2028（未定）**，原表为 2027",
+      "candidateOnly": true,
+      "slug": "snoopy-unleashed",
+      "officialId": "",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "2027",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "38432357",
+          "endpoint": "movie",
+          "title": "Snoopy Unleashed",
+          "originalTitle": "",
+          "year": "2028",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Dink",
+      "candidateTitle": "低弧慢球",
+      "subjectIds": [
+        "37054667"
+      ],
+      "notes": "2026",
+      "candidateOnly": true,
+      "slug": "the-dink",
+      "officialId": "umc.cmc.5tugaz9vt498ajn7q64ypaqxn",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37054667",
+          "endpoint": "movie",
+          "title": "低弧慢球",
+          "originalTitle": "The Dink",
+          "year": "2026",
+          "season": 0,
+          "aliases": [
+            "匹克球"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Hunt (Traqués)",
+      "candidateTitle": "猎杀",
+      "subjectIds": [
+        "36783469"
+      ],
+      "notes": "2026；法国剧 *Traqués*",
+      "candidateOnly": true,
+      "slug": "the-hunt",
+      "officialId": "umc.cmc.4w9agfyrx2fgc5k9rls2cffho",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36783469",
+          "endpoint": "tv",
+          "title": "猎杀",
+          "originalTitle": "Traqués",
+          "year": "2026",
+          "season": 1,
+          "aliases": [
+            "森林阴影下",
+            "A l'Ombre des Forêts‎",
+            "The Hunt",
+            "狩猎"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Line",
+      "candidateTitle": "底线 第一季",
+      "subjectIds": [
+        "35576361"
+      ],
+      "notes": "2021；Apple 的四集纪录剧",
+      "candidateOnly": true,
+      "slug": "the-line",
+      "officialId": "umc.cmc.4u53f7zokr7g40tjj4gs61xbu",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35576361",
+          "endpoint": "tv",
+          "title": "底线 第一季",
+          "originalTitle": "The Line Season 1",
+          "year": "2021",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Oprah Conversation",
+      "candidateTitle": "The Oprah Conversation",
+      "subjectIds": [
+        "35161274"
+      ],
+      "notes": "2020",
+      "candidateOnly": true,
+      "slug": "the-oprah-conversation",
+      "officialId": "umc.cmc.49yt85r7ow6904u0177r694qy",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "奥普拉名人会",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2020",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35161274",
+          "endpoint": "tv",
+          "title": "The Oprah Conversation",
+          "originalTitle": "",
+          "year": "2020",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Peanuts Classics",
+      "candidateTitle": "—",
+      "subjectIds": [],
+      "notes": "未找到这个合集名称对应的独立豆瓣条目",
+      "candidateOnly": true,
+      "slug": "home-63led2pm5a1w4wvabyn4xxxjp",
+      "officialId": "umc.cmc.63led2pm5a1w4wvabyn4xxxjp",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "no_candidate_supplied",
+      "requestedSeason": 1,
+      "requestedYear": "1966",
+      "subjects": []
+    },
+    {
+      "englishTitle": "The Problem With Jon Stewart",
+      "candidateTitle": "囧司徒的问题 第二季",
+      "subjectIds": [
+        "35907552"
+      ],
+      "notes": "2022；**第二季**",
+      "candidateOnly": true,
+      "slug": "the-problem-with-jon-stewart",
+      "officialId": "umc.cmc.4fcexvzqezr25p9weks6sxpob",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "season_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35907552",
+          "endpoint": "tv",
+          "title": "囧司徒的问题 第二季",
+          "originalTitle": "The Problem with Jon Stewart Season 2",
+          "year": "2022",
+          "season": 2,
+          "aliases": [
+            "鍾史超域有問題(港)"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Sixth Sense",
+      "candidateTitle": "第六感",
+      "subjectIds": [
+        "1297630"
+      ],
+      "notes": "1999",
+      "candidateOnly": true,
+      "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
+      "officialId": "umc.cmc.2j3fje2s0rh78ius1k1kil5tr",
+      "kind": "movie",
+      "active": false,
+      "finalTitle": "第六感",
+      "status": "verified_cached_not_in_current_catalog",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "1297630",
+          "endpoint": "movie",
+          "title": "第六感",
+          "originalTitle": "The Sixth Sense",
+          "year": "1999",
+          "season": 0,
+          "aliases": [
+            "鬼眼(港)",
+            "灵异第六感(台)",
+            "第六感"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "The Wanted Man",
+      "candidateTitle": "必杀名单",
+      "subjectIds": [
+        "37344952"
+      ],
+      "notes": "**豆瓣标 2026**，原表为 2027；休·劳瑞主演的对应剧集",
+      "candidateOnly": true,
+      "slug": "the-wanted-man",
+      "officialId": "umc.cmc.4zu5puz6y7th7shv3kypuzhhm",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37344952",
+          "endpoint": "tv",
+          "title": "必杀名单",
+          "originalTitle": "The Wanted Man",
+          "year": "2026",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Tropic Thunder",
+      "candidateTitle": "热带惊雷",
+      "subjectIds": [
+        "1994879"
+      ],
+      "notes": "2008",
+      "candidateOnly": true,
+      "slug": "home-5iudnxk9tyxo63gewawi330mw",
+      "officialId": "umc.cmc.5iudnxk9tyxo63gewawi330mw",
+      "kind": "movie",
+      "active": false,
+      "finalTitle": "热带惊雷",
+      "status": "verified_cached_not_in_current_catalog",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "1994879",
+          "endpoint": "movie",
+          "title": "热带惊雷",
+          "originalTitle": "Tropic Thunder",
+          "year": "2008",
+          "season": 0,
+          "aliases": [
+            "雷霆丧星(港)",
+            "开麦拉惊魂(台)",
+            "热带惊雷"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Twas the Fight Before Christmas",
+      "candidateTitle": "圣诞讼",
+      "subjectIds": [
+        "35657015"
+      ],
+      "notes": "2021",
+      "candidateOnly": true,
+      "slug": "twas-the-fight-before-christmas",
+      "officialId": "umc.cmc.lvpflyaolcrevsfje3rt5l6p?ctx_brand=tvs.sbd.4000",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 0,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35657015",
+          "endpoint": "movie",
+          "title": "圣诞讼",
+          "originalTitle": "'Twas the Fight Before Christmas",
+          "year": "2021",
+          "season": 0,
+          "aliases": [
+            "The Fight Before Christmas"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Way of the Warrior Kid",
+      "candidateTitle": "海豹小子",
+      "subjectIds": [
+        "36877090"
+      ],
+      "notes": "2026；别名“少年作战指南”",
+      "candidateOnly": true,
+      "slug": "way-of-the-warrior-kid",
+      "officialId": "umc.cmc.21vzhs44oeejdkoxenkcdmre0",
+      "kind": "movie",
+      "active": true,
+      "finalTitle": "海豹小子",
+      "status": "verified_name_preserved",
+      "requestedSeason": 0,
+      "requestedYear": "2026",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36877090",
+          "endpoint": "movie",
+          "title": "海豹小子",
+          "originalTitle": "Way of the Warrior Kid",
+          "year": "2026",
+          "season": 0,
+          "aliases": [
+            "少年作战指南"
+          ]
+        }
+      ]
+    },
+    {
+      "englishTitle": "Wonder Pets",
+      "candidateTitle": "神奇宠物救援队",
+      "subjectIds": [
+        "5238948"
+      ],
+      "notes": "2006",
+      "candidateOnly": true,
+      "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
+      "officialId": "umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "神奇宠物救援队",
+      "status": "verified_name_preserved",
+      "requestedSeason": 1,
+      "requestedYear": "2006",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "5238948",
+          "endpoint": "movie",
+          "title": "神奇宠物救援队",
+          "originalTitle": "Wonder Pets!",
+          "year": "2006",
+          "season": 0,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Wonder Pets: In the City",
+      "candidateTitle": "Wonder Pets: In the City",
+      "subjectIds": [
+        "37135394"
+      ],
+      "notes": "**已确认的是 2024 年条目**；未找到原表所示 2026 年第二季的独立条目",
+      "candidateOnly": true,
+      "slug": "wonder-pets-in-the-city",
+      "officialId": "umc.cmc.dsa24wciry96i1e8dcq0b9sm",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "37135394",
+          "endpoint": "tv",
+          "title": "Wonder Pets: In the City",
+          "originalTitle": "",
+          "year": "2024",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "Yo Gabba GabbaLand!",
+      "candidateTitle": "Yo Gabba GabbaLand!",
+      "subjectIds": [
+        "36988909"
+      ],
+      "notes": "**已确认的是 2024 年条目**；未找到 2026 年第二季的独立条目",
+      "candidateOnly": true,
+      "slug": "yo-gabba-gabbaland",
+      "officialId": "umc.cmc.6a8qdw6e76cba2l0rkgzfbocl",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "36988909",
+          "endpoint": "tv",
+          "title": "Yo Gabba GabbaLand!",
+          "originalTitle": "",
+          "year": "2024",
+          "season": 1,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "englishTitle": "You Would Do It Too (Tú También lo Harías)",
+      "candidateTitle": "大巴劫案疑云",
+      "subjectIds": [
+        "35853143"
+      ],
+      "notes": "**豆瓣标 2023**，原表为 2024；当前豆瓣主名为“大巴劫案疑云”",
+      "candidateOnly": true,
+      "slug": "tu-tambien-lo-harias",
+      "officialId": "umc.cmc.7ad5xech8wu5nh2p221ymy9r2",
+      "kind": "series",
+      "active": true,
+      "finalTitle": "",
+      "status": "year_conflict",
+      "requestedSeason": 1,
+      "requestedYear": "",
+      "subjects": [
+        {
+          "available": true,
+          "subjectId": "35853143",
+          "endpoint": "tv",
+          "title": "大巴劫案疑云",
+          "originalTitle": "Tú también lo harías",
+          "year": "2023",
+          "season": 1,
+          "aliases": [
+            "You Would Do It Too",
+            "你也会如此"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "identity_no_chinese_name": 4,
+    "no_candidate_supplied": 3,
+    "season_conflict": 4,
+    "unverified": 1,
+    "verified_cached_not_in_current_catalog": 4,
+    "verified_name_preserved": 14,
+    "year_conflict": 19
+  }
+}
