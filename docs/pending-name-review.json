@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-01T23:29:18+00:00",
+  "checkedAt": "2026-11-02T00:17:55+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -11,7 +11,8 @@
       "year": "2026",
       "season": 1,
       "skip": "future_release",
-      "status": "future_release"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-750u3qv5wz0d41pn1v2rvn7oe",
@@ -57,7 +58,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "awkwafina-the-unlikely-cook",
@@ -65,7 +67,8 @@
       "year": "2026",
       "season": 1,
       "skip": "future_release",
-      "status": "future_release"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "bearbrick",
@@ -107,7 +110,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "carpool-karaoke-the-series",
@@ -173,7 +177,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "doug-unplugs",
@@ -244,7 +249,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "fleetwood-mac-the-chain",
@@ -252,89 +258,32 @@
       "year": "2027",
       "season": 0,
       "skip": "future_release",
-      "status": "future_release"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
       "en": "Formula 1: Drive to Survive",
       "year": "2026",
-      "season": 1,
+      "season": 8,
       "skip": "",
       "result": {
         "slug": "home-4ym1omzf14f4jwcmb7lnu91o0",
         "en": "Formula 1: Drive to Survive",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": true
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "subject",
-            "subject_id": "30465634",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37502429",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35004928",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 8,
+          "subjectId": "37502429",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "一级方程式：疾速争胜",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "slug": "fraggle-rock-a-holiday-gift",
@@ -342,7 +291,8 @@
       "year": "2026",
       "season": 0,
       "skip": "future_release",
-      "status": "future_release"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "get-rolling-with-otis",
@@ -408,31 +358,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "greatness-code",
-      "en": "Greatness Code",
-      "year": "2022",
-      "season": 2,
-      "skip": "",
-      "result": {
-        "slug": "greatness-code",
-        "en": "Greatness Code",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 2,
-          "subjectId": "35887604",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "伟大的密码",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "hello-jack-the-kindness-show",
@@ -498,31 +425,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "helpsters",
-      "en": "Helpsters",
-      "year": "2022",
-      "season": 3,
-      "skip": "",
-      "result": {
-        "slug": "helpsters",
-        "en": "Helpsters",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 3,
-          "subjectId": "35914330",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "布偶小帮手",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-3xi33xb3r3xbxx4lssz8cswdr",
@@ -564,55 +468,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "home-5mffp3n83az89t42qnhew9vn5",
-      "en": "I, Robot",
-      "year": "2004",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-5mffp3n83az89t42qnhew9vn5",
-        "en": "I, Robot",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1308843",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "我，机器人",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
-      "en": "It's Christmastime Again, Charlie Brown",
-      "year": "1992",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
-        "en": "It's Christmastime Again, Charlie Brown",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "4091371",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "查理·布朗，圣诞节又到了",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-17y48i5ko6gft5ieh148nzqzn",
@@ -678,31 +535,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "home-6x263wzi05ds2h4oen54w8881",
-      "en": "Jurassic World",
-      "year": "2015",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-6x263wzi05ds2h4oen54w8881",
-        "en": "Jurassic World",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "10440138",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "侏罗纪世界",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "kpopped",
@@ -744,7 +578,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-cal17ey3zhv2lx3xkzjqjstb",
@@ -826,7 +661,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "lovely-little-farm",
@@ -882,7 +718,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "lulu-is-a-rhinoceros",
@@ -933,7 +770,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-13tm01bb2zcat3s04rxgju0zh",
@@ -969,7 +807,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-58su2j1i0etuvq64m6nxfm11y",
@@ -1015,7 +854,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "napoleon-the-directors-cut",
@@ -1081,7 +921,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "not-a-box",
@@ -1127,7 +968,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "now-and-then",
@@ -1193,7 +1035,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "number-one-on-the-call-sheet",
@@ -1260,31 +1103,8 @@
           }
         ]
       },
-      "status": "unverified"
-    },
-    {
-      "slug": "outcome",
-      "en": "Outcome",
-      "year": "2026",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "outcome",
-        "en": "Outcome",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "36160466",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "星途恶果",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "pretzel-and-the-puppies",
@@ -1346,7 +1166,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "sago-mini-friends",
@@ -1417,7 +1238,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "slumberkins",
@@ -1459,7 +1281,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "snoopy-presents-theres-no-place-like-home-snoopy",
@@ -1525,7 +1348,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "snoopy-unleashed",
@@ -1533,79 +1357,8 @@
       "year": "2027",
       "season": 0,
       "skip": "future_release",
-      "status": "future_release"
-    },
-    {
-      "slug": "the-dink",
-      "en": "The Dink",
-      "year": "2026",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "the-dink",
-        "en": "The Dink",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "37054667",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "低弧慢球",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "the-hunt",
-      "en": "The Hunt (Traqués)",
-      "year": "2026",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "the-hunt",
-        "en": "The Hunt (Traqués)",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 1,
-          "subjectId": "36783469",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "猎杀",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "the-line",
-      "en": "The Line",
-      "year": "2021",
-      "season": 1,
-      "skip": "",
-      "result": {
-        "slug": "the-line",
-        "en": "The Line",
-        "searchStatus": "ok",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 1,
-          "subjectId": "35576361",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "底线",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "the-oprah-conversation",
@@ -1667,7 +1420,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-63led2pm5a1w4wvabyn4xxxjp",
@@ -1675,55 +1429,8 @@
       "year": "1966",
       "season": 1,
       "skip": "",
-      "status": "missing_identity"
-    },
-    {
-      "slug": "the-problem-with-jon-stewart",
-      "en": "The Problem With Jon Stewart",
-      "year": "2022",
-      "season": 2,
-      "skip": "",
-      "result": {
-        "slug": "the-problem-with-jon-stewart",
-        "en": "The Problem With Jon Stewart",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 2,
-          "subjectId": "35907552",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "囧司徒的问题",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
-      "en": "The Sixth Sense",
-      "year": "1999",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
-        "en": "The Sixth Sense",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1297630",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "第六感",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "missing_identity",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "the-wanted-man",
@@ -1731,55 +1438,8 @@
       "year": "2027",
       "season": 1,
       "skip": "future_release",
-      "status": "future_release"
-    },
-    {
-      "slug": "home-5iudnxk9tyxo63gewawi330mw",
-      "en": "Tropic Thunder",
-      "year": "2008",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "home-5iudnxk9tyxo63gewawi330mw",
-        "en": "Tropic Thunder",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "1994879",
-          "summaryStatus": "AVAILABLE",
-          "ratingStatus": "AVAILABLE"
-        },
-        "title": "热带惊雷",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
-    },
-    {
-      "slug": "twas-the-fight-before-christmas",
-      "en": "Twas the Fight Before Christmas",
-      "year": "2021",
-      "season": 0,
-      "skip": "",
-      "result": {
-        "slug": "twas-the-fight-before-christmas",
-        "en": "Twas the Fight Before Christmas",
-        "searchStatus": "douban_direct",
-        "confidence": "VERIFIED",
-        "sourcePolicy": "not_checked_name_review",
-        "detailMetadata": {
-          "season": 0,
-          "subjectId": "35657015",
-          "summaryStatus": "PENDING",
-          "ratingStatus": "NO_RATING"
-        },
-        "title": "圣诞讼",
-        "sourceMatch": null,
-        "sourceEvents": []
-      },
-      "status": "verified"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "way-of-the-warrior-kid",
@@ -1787,7 +1447,8 @@
       "year": "2026",
       "season": 0,
       "skip": "future_release",
-      "status": "future_release"
+      "status": "future_release",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
@@ -1799,66 +1460,13 @@
         "slug": "home-ns4q9hpoj4b1749wbl7crwbl",
         "en": "Wonder Pets",
         "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 404,
-            "cached": true
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 3
-          },
-          {
-            "stage": "subject",
-            "subject_id": "5238948",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "37135394",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "4890183",
-            "status": "UNVERIFIED"
-          }
-        ]
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "神奇宠物救援队",
+        "sourceMatch": null,
+        "sourceEvents": []
       },
-      "status": "unverified"
+      "status": "verified"
     },
     {
       "slug": "wonder-pets-in-the-city",
@@ -1924,7 +1532,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "yo-gabba-gabbaland",
@@ -1990,7 +1599,8 @@
           }
         ]
       },
-      "status": "unverified"
+      "status": "unverified",
+      "notRecheckedThisRun": true
     },
     {
       "slug": "tu-tambien-lo-harias",
@@ -2001,56 +1611,340 @@
       "result": {
         "slug": "tu-tambien-lo-harias",
         "en": "You Would Do It Too (Tú También lo Harías)",
-        "searchStatus": "ok",
-        "confidence": "UNVERIFIED",
-        "verificationEvents": [
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "movie.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          },
-          {
-            "host": "m.douban.com",
-            "status": 200,
-            "cached": false
-          }
-        ],
-        "subjectDiagnostics": [
-          {
-            "stage": "suggest",
-            "status": "EMPTY_RESPONSE"
-          },
-          {
-            "stage": "subject",
-            "subject_id": "35853143",
-            "status": "UNVERIFIED"
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          },
-          {
-            "stage": "mobile_search",
-            "candidates": 1
-          }
-        ]
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "title": "大巴劫案疑云",
+        "sourceMatch": null,
+        "sourceEvents": [],
+        "originalReleaseYear": 2023
       },
-      "status": "unverified"
+      "status": "verified"
+    },
+    {
+      "slug": "greatness-code",
+      "en": "Greatness Code",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "greatness-code",
+        "en": "Greatness Code",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 2,
+          "subjectId": "35887604",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "伟大的密码",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "helpsters",
+      "en": "Helpsters",
+      "year": "2022",
+      "season": 3,
+      "skip": "",
+      "result": {
+        "slug": "helpsters",
+        "en": "Helpsters",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 3,
+          "subjectId": "35914330",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "布偶小帮手",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-5mffp3n83az89t42qnhew9vn5",
+      "en": "I, Robot",
+      "year": "2004",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-5mffp3n83az89t42qnhew9vn5",
+        "en": "I, Robot",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1308843",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "我，机器人",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
+      "en": "It's Christmastime Again, Charlie Brown",
+      "year": "1992",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-4k47h7cte42k5kzw8ltnks1f7",
+        "en": "It's Christmastime Again, Charlie Brown",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "4091371",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "查理·布朗，圣诞节又到了",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-6x263wzi05ds2h4oen54w8881",
+      "en": "Jurassic World",
+      "year": "2015",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-6x263wzi05ds2h4oen54w8881",
+        "en": "Jurassic World",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "10440138",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "侏罗纪世界",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "outcome",
+      "en": "Outcome",
+      "year": "2026",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "outcome",
+        "en": "Outcome",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "36160466",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "星途恶果",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "the-dink",
+      "en": "The Dink",
+      "year": "2026",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "the-dink",
+        "en": "The Dink",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "37054667",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "低弧慢球",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "the-hunt",
+      "en": "The Hunt (Traqués)",
+      "year": "2026",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-hunt",
+        "en": "The Hunt (Traqués)",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "36783469",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "猎杀",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "the-line",
+      "en": "The Line",
+      "year": "2021",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "the-line",
+        "en": "The Line",
+        "searchStatus": "ok",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "35576361",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "底线",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "the-problem-with-jon-stewart",
+      "en": "The Problem With Jon Stewart",
+      "year": "2022",
+      "season": 2,
+      "skip": "",
+      "result": {
+        "slug": "the-problem-with-jon-stewart",
+        "en": "The Problem With Jon Stewart",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 2,
+          "subjectId": "35907552",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "囧司徒的问题",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
+      "en": "The Sixth Sense",
+      "year": "1999",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-2j3fje2s0rh78ius1k1kil5tr",
+        "en": "The Sixth Sense",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1297630",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "第六感",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "home-5iudnxk9tyxo63gewawi330mw",
+      "en": "Tropic Thunder",
+      "year": "2008",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-5iudnxk9tyxo63gewawi330mw",
+        "en": "Tropic Thunder",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "1994879",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "热带惊雷",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
+    },
+    {
+      "slug": "twas-the-fight-before-christmas",
+      "en": "Twas the Fight Before Christmas",
+      "year": "2021",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "twas-the-fight-before-christmas",
+        "en": "Twas the Fight Before Christmas",
+        "searchStatus": "douban_direct",
+        "confidence": "VERIFIED",
+        "sourcePolicy": "not_checked_name_review",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35657015",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "圣诞讼",
+        "sourceMatch": null,
+        "sourceEvents": []
+      },
+      "status": "verified",
+      "reusedVerified": true
     },
     {
       "slug": "to-mom-and-dad-with-love",
@@ -2107,7 +2001,7 @@
   "summary": {
     "future_release": 7,
     "missing_identity": 1,
-    "unverified": 28,
-    "verified": 15
+    "unverified": 25,
+    "verified": 18
   }
 }
