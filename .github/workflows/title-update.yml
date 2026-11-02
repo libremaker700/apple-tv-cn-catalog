@@ -13,7 +13,7 @@ on:
         type: string
         default: ''
       pending_only:
-        description: Recheck missing Chinese names only; no playback source probing
+        description: Recheck missing Chinese names; verify released AI name candidates against libraries
         type: boolean
         default: false
       candidate_audit:
@@ -102,8 +102,15 @@ jobs:
           ARGS=(--limit "$TITLE_LOOKUP_LIMIT")
           if [ -n "$TARGET_SLUG" ]; then ARGS+=(--slug "$TARGET_SLUG" --force); fi
           python scripts/mainland_names.py "${ARGS[@]}"
+          python - <<'PY'
+          import json, os
+          records = json.load(open('logs/mainland-name-sync.json'))['records']
+          resolved = bool(records) and all('sourceNameResolution' in row for row in records)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('resolved_sources=' + str(resolved).lower() + '\n')
+          PY
       - name: Verify pending playback availability in GitHub
-        if: inputs.pending_only != true
+        if: inputs.pending_only != true && steps.lookup.outputs.resolved_sources != 'true'
         env:
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}

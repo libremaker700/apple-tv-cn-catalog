@@ -191,7 +191,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 ref['year']=hint['releaseYear']
         source_ref=source_people({'year':ref['year'],'season':n,'kind':work['kind']},zh)
         if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
-        deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=old.get('identity');discovery_events=[];hits=[]
+        deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=None;discovery_events=[];hits=[];resolution=None
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
         else:
@@ -203,12 +203,17 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             elif len(identities)>1:identity_record=None
             elif names_only:identity_record=None
             status='douban_direct'
-            if patch and not deferred and not names_only:
+            if not deferred and identity_record and callable(getattr(type(client),'candidate_names',None)):
+                from source_name_resolution import resolve
+                bound_hints=hint.get('sourceNameHints',[])if hint.get('englishTitle')==work['en']and hint.get('officialId')==official else[]
+                resolution=resolve(identity_record,ref,providers,client,direct_patch=patch,hints=bound_hints,state=discovery.setdefault('aiSourceNames',{}),probe=probe,now=now)
+                patch=resolution['patch'];best=resolution['best'];events=resolution['events'];probed=True;status='ai_candidates_then_sources_or_douban'
+            if resolution is None and patch and not deferred and not names_only:
                 source_people(source_ref,patch)
                 if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
                 direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
                 best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True;probed_names.update(direct_names)
-            if not patch or not deferred and not best and not names_only:
+            if resolution is None and (not patch or not deferred and not best and not names_only):
                 hits,fallback_status=client.search('"'+work['en']+'" '+detail_year+' '+ref.get('display_name_zh','')+' 中国大陆 中文片名 豆瓣')
                 fallback=independent_name(ref,hits,lookup,now)
                 status='douban_direct_then_'+fallback_status if patch else fallback_status
@@ -221,7 +226,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                         for field in ('detailMetadata','douban_id','douban_url','rating_status','douban_rating','rating_checked_at','summary_zh','summary_sources','summary_checked_at','actors','directors'):
                             if field in patch:fallback[field]=copy.deepcopy(patch[field])
                     patch=fallback;probed=False
-            if not names_only and (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
+            if resolution is None and not names_only and (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
                 from alias_discovery import discover,search_hints
                 if discovery.get('_hintPolicy')!='ydc-tavily-v1':discovery.pop('_hints',None)
                 discovery['_hintPolicy']='ydc-tavily-v1'
@@ -237,6 +242,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                     else:patch=alias_patch
                     status='automatic_identity_alias';probed=False
         record={'slug':key,'en':work['en'],'searchStatus':status,'confidence':'UNVERIFIED'}
+        if resolution:record['sourceNameResolution']=resolution['evidence']
         if discovery_events:record['discoveryEvents']=discovery_events
         if patch:
             source_people(source_ref,patch)
@@ -247,9 +253,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 remaining=[name for name in names if name not in probed_names]
                 if remaining:
                     best,new_events=(probe or public_sources)(source_ref,remaining,providers);events+=new_events
-            record['sourcePolicy']='not_checked_name_review'if names_only else'deferred_until_release'if deferred else'eligible'
+            record['sourcePolicy']='ai_name_source_verification'if resolution else'not_checked_name_review'if names_only else'deferred_until_release'if deferred else'eligible'
             title=patch['display_name_zh']if not best else base(best['title'])
-            zh.update(title=title,aliases=list(dict.fromkeys([title]+names+zh.get('aliases',[]))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch['display_name_zh']if any(s.get('type')=='douban_mobile_identity'for s in patch['sources'])else zh.get('douban_title',''))
+            zh.update(title=title,aliases=list(dict.fromkeys([title]+names+([]if resolution else zh.get('aliases',[])))),metadataPolicy='mainland-v1',name_status='verified_title_sources',name_sources=patch['sources'],_identityYear=int(year),douban_title=patch.get('douban_title',patch['display_name_zh']if any(s.get('type')=='douban_mobile_identity'for s in patch['sources'])else zh.get('douban_title','')))
+            if resolution and not best:zh.pop('nameSelection',None)
             if verified_subject(patch):zh['douban_id']=verified_subject(patch)
             if patch.get('name_only_scope'):
                 zh['nameOnlyScope']=patch['name_only_scope']
@@ -265,11 +272,12 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 work['zh']=zh
                 if remember(work,packet,root):record['detailMetadata']={'season':packet['season'],'subjectId':packet['subjectId'],'summaryStatus':packet['summaryStatus'],'ratingStatus':packet['ratingStatus']}
             from source_votes import incomplete
-            if not names_only and not deferred and (best or probed and not incomplete(events)):
+            if (not names_only or resolution)and not deferred and (best or probed and not incomplete(events)):
                 from source_availability import make_check
                 zh['sourceCheck']=make_check(work,source_ref,best,now)
                 if best and best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
             work['zh']=zh;record.update(confidence='VERIFIED',title=title,sourceMatch=best,sourceEvents=events);report['changed'].append(key)
+            if resolution and not re.search(r'[\u3400-\u9fff]',title):record.update(confidence='IDENTITY_ONLY',identityVerifiedWithoutChineseName=True,verifiedIdentity=copy.deepcopy(identity_record))
             if ref['year']!=detail_year:
                 zh['searchYear']=int(ref['year']);record['originalReleaseYear']=int(ref['year'])
                 if work['kind']=='series':zh['searchSeason']=n

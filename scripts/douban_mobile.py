@@ -61,7 +61,7 @@ def verify_payload(ref,data,subject_id,endpoint,checked_at,identity_only=False):
     if source_year!=expected_year and not (ref.get('imdb_id') and imdb(data)==ref['imdb_id'])and not regional:return None
     if identity_only:
         people=lambda key:[CC.convert(str(v.get('name','')if isinstance(v,dict)else v))for v in data.get(key,[])if isinstance(v,(str,dict))][:30]
-        return {'douban_id':str(subject_id),'year':source_year,'season':season,'actors':people('actors'),'directors':people('directors'),'url':'https://movie.douban.com/subject/'+str(subject_id)+'/'}
+        return {'douban_id':str(subject_id),'title':CC.convert(work_title(data['title'])),'originalTitle':data.get('original_title',''),'aliases':[CC.convert(work_title(s))for s in aka if mainland_name(s)and len(s)<80],'year':source_year,'season':season,'actors':people('actors'),'directors':people('directors'),'url':'https://movie.douban.com/subject/'+str(subject_id)+'/'}
     name=CC.convert(work_title(data['title']))
     if not mainland_name(name):
         name=next((CC.convert(work_title(s))for s in aka if mainland_name(s)and len(s)<80),'')
