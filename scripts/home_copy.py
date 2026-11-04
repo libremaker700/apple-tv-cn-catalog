@@ -163,6 +163,31 @@ def process(home,root,html,now,fetcher=None):
     summaries=read(root/'data/work-summary-cache.json',{}).get('works',{})
     reviewed=read(root/'data/home-copy-reviewed.json',[]);pages=[]
     translator=Translator(os.getenv('GEMINI_API_KEY',''),os.getenv('HOME_COPY_MODEL')or None)
+    # Shelf headings are official display copy, never candidate work names.
+    from home_pages import LABELS
+    headings={}
+    for target in [value]+value.get('pages',[]):
+        for shelf in target.get('shelves',[]):
+            original=clean(shelf.get('officialTitle')or shelf.get('title'))
+            if original in LABELS:shelf['title']=LABELS[original]
+            if original and not valid_zh(shelf.get('title')):
+                key=digest(['shelf-heading-v1',original]);saved=cache.setdefault('records',{}).get(key,{})
+                if valid_zh(saved.get('text')):shelf['title']=saved['text']
+                elif now>=saved.get('nextRetry',0):headings[key]=original
+    if headings:
+        rows=[{'id':key,'text':text}for key,text in list(headings.items())[:12]]
+        try:
+            translated=translator.translate(rows)
+            for row in rows:
+                text=translated.get(row['id'])
+                if valid_zh(text):cache['records'][row['id']]={'text':text,'model':translator.model,'createdAt':now}
+        except (ValueError,requests.RequestException,KeyError):
+            for row in rows:cache['records'][row['id']]={'nextRetry':now+6*3600}
+        for target in [value]+value.get('pages',[]):
+            for shelf in target.get('shelves',[]):
+                original=clean(shelf.get('officialTitle')or shelf.get('title'));saved=cache['records'].get(digest(['shelf-heading-v1',original]),{})
+                if not valid_zh(shelf.get('title'))and valid_zh(saved.get('text')):shelf['title']=saved['text']
+    dump(path,cache)
     for target in [value]+value.get('pages',[]):
         for shelf in target.get('shelves',[]):
             if shelf.get('officialTitle')=='Sci-Fi Mysteries':shelf['title']='动作科幻片'
