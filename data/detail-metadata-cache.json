@@ -1080,7 +1080,7 @@
           "ratingStatus": "NO_RATING",
           "season": 0,
           "year": 2026,
-          "checkedAt": "2026-11-02T02:42:20+00:00",
+          "checkedAt": "2026-11-04T07:34:36+00:00",
           "originalTitle": "Snoopy Presents: There’s No Place Like Home, Snoopy"
         }
       ]
@@ -1145,6 +1145,27 @@
           "checkedAt": "2026-11-04T04:38:13+00:00",
           "originalTitle": "A Charlie Brown Thanksgiving",
           "rating": 8.5
+        }
+      ]
+    },
+    "umc.cmc.3hac5oqhh3gxiu35spyu8fanf": {
+      "en": "All of You",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36973970",
+          "sourceUrl": "https://movie.douban.com/subject/36973970/",
+          "title": "你的全部",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2024,
+          "checkedAt": "2026-11-04T07:34:36+00:00",
+          "originalTitle": "All of You",
+          "rating": 5.8
         }
       ]
     }

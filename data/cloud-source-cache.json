@@ -1543,6 +1543,378 @@
           }
         ]
       }
+    },
+    "bad-monkey": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "ed3f12427f4cc0a4408f901d797d2c28e4fff5a3b8a6d35fd729ad6e002ff0e7",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Bad Monkey",
+        "kind": "series",
+        "season": 1,
+        "year": "2024",
+        "found": true,
+        "routes": 33,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "坏猴子",
+        "libraries": 1,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "坏猴子",
+            "libraries": 1
+          }
+        ]
+      }
+    },
+    "stick": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "c2dbca5fec3ebca60ccd9d98f27f529212ae00bc2bfea1dafd0f22ee9934579d",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Stick",
+        "kind": "series",
+        "season": 2,
+        "year": "2026",
+        "found": true,
+        "routes": 28,
+        "checkedAt": 1793777676
+      },
+      "selection": null
+    },
+    "snoopy-presents-theres-no-place-like-home-snoopy": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "70b84b04b5dce26ca9bc1ac8b09924d31886e09af28d4d3fcd717580a3f47b45",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Snoopy Presents: There’s No Place Like Home, Snoopy",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 23,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "史努比特辑：有家真好",
+        "libraries": 12,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "史努比特辑：有家真好",
+            "libraries": 12
+          }
+        ]
+      }
+    },
+    "the-dink": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "c91ac4bbbc76fdcef8ea9dca15047f144feb956595c830f4255a56a1d65d189f",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Dink",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 44,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "低弧慢球",
+        "libraries": 21,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "低弧慢球",
+            "libraries": 21
+          }
+        ]
+      }
+    },
+    "outcome": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "1b2959cb7daa751e47806479a8fb072a8b1c2b880b5f5b2784f0b2c6257d2fc4",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Outcome",
+        "kind": "movie",
+        "season": 0,
+        "year": "2026",
+        "found": true,
+        "routes": 28,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "星途恶果",
+        "libraries": 19,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "星途恶果",
+            "libraries": 19
+          }
+        ]
+      }
+    },
+    "the-hunt": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "f4803b536c8cb11a5a8171d2d529c6044c8c5cc3eb777d435c4bd78b7cf538bf",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Hunt (Traqués)",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 15,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "猎杀",
+        "libraries": 15,
+        "checkedLibraries": 5,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "猎杀",
+            "libraries": 15
+          }
+        ]
+      }
+    },
+    "the-last-frontier": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "3514d9bc4558ee828db2d202b8e5375bee9e0f23f2dedd8e77de8a99302c400c",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Last Frontier",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 48,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "失序边缘",
+        "libraries": 22,
+        "checkedLibraries": 21,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "失序边缘",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "the-lost-bus": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "bd445c63dc39a75f2dd1ba64ba3fb760ed7b310f896643cb4af70396dd751829",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Lost Bus",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 30,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "火烧天堂镇",
+        "libraries": 22,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "火烧天堂镇",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "all-of-you": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "cd281fc5e653e856c880dcc00e186d5ce78d60222a776748c6b181746c872a6d",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "All of You",
+        "kind": "movie",
+        "season": 0,
+        "year": "2024",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "你的全部",
+        "libraries": 20,
+        "checkedLibraries": 23,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "你的全部",
+            "libraries": 20
+          },
+          {
+            "title": "你的全部 All of You",
+            "libraries": 1
+          }
+        ]
+      }
+    },
+    "the-reluctant-traveler": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "a66f2d11118602a92cc29c1389a7a9dc2ca466f22144bc67088f0c0586f4dfc8",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Reluctant Traveler With Eugene Levy",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 1,
+        "checkedAt": 1793777676
+      },
+      "selection": null
+    },
+    "the-morning-show": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "99371cf17979250aad1c738f14b65185c49b11d2301eb3e1703b65d201ad276d",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Morning Show",
+        "kind": "series",
+        "season": 4,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "早间新闻",
+        "libraries": 22,
+        "checkedLibraries": 3,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "早间新闻",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "highest-2-lowest": {
+      "checkedAt": 1793777676,
+      "lastAttemptAt": 1793777676,
+      "nextRetry": 1793781276,
+      "fingerprint": "ebef30f78415b9c375706b2bf8bb46eca4bdab751fc93cfe911e5b2c8f392109",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Highest 2 Lowest",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1793777676
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "天国与地狱",
+        "libraries": 20,
+        "checkedLibraries": 8,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "天国与地狱",
+            "libraries": 20
+          }
+        ]
+      }
     }
   }
 }
