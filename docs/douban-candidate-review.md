@@ -2,7 +2,7 @@
 
 候选编号只用于定位条目；不是中文名、季数、年份或版本的自动批准。保留原有已核实结果，不把第一季资料套给后续季。没有候选或请求失败不等于未收录。
 
-检查时间：2026-11-02T03:40:53+00:00
+检查时间：2026-11-04T04:40:29+00:00
 
 | 英文原名 | 当前中文名 | 结果 | 当前年／季 | 候选条目 |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@
 | Jurassic World | 侏罗纪世界 | 已核实名称保留在缓存，本期目录无此作品 |  / 0 | [10440138](https://movie.douban.com/subject/10440138/) |
 | KPOPPED | — | 身份已核实，暂无可采用的中文名 | 2025 / 1 | [37443489](https://movie.douban.com/subject/37443489/) |
 | Long Way Down | 长路迢迢 | 已核实中文名，保留现有资料 | 2007 / 1 | [2367101](https://movie.douban.com/subject/2367101/) |
-| Lovely Little Farm | 可爱的小农场 | 已核实特别篇／版本名称，未套用详情评分 | 2023 / 2 | [35898683](https://movie.douban.com/subject/35898683/) |
+| Lovely Little Farm | 可爱的小农场 | 已核实特别篇／版本名称，未套用详情评分 | 2022 / 1 | [35898683](https://movie.douban.com/subject/35898683/) |
 | Lulu Is a Rhinoceros | 露露是一头犀牛 | 已核实中文名，保留现有资料 | 2025 / 0 | [37357015](https://movie.douban.com/subject/37357015/) |
 | MLS Awards Expansion Team to San Diego | — | 清单未提供可核实条目，不认定未收录 | 2023 / 0 | — |
 | Messi Mania | — | 身份已核实，暂无可采用的中文名 | 2023 / 0 | [38483287](https://movie.douban.com/subject/38483287/) |

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T03:40:53+00:00",
+  "checkedAt": "2026-11-04T04:40:29+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -1569,8 +1569,8 @@
       "active": true,
       "finalTitle": "可爱的小农场",
       "status": "verified_name_only",
-      "requestedSeason": 2,
-      "requestedYear": "2023",
+      "requestedSeason": 1,
+      "requestedYear": "2022",
       "currentKind": "series",
       "nameOnlyScope": "series_name_only",
       "subjects": [

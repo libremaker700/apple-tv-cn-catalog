@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-02T03:40:53+00:00",
+  "checkedAt": "2026-11-04T04:40:28+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": true,
@@ -2318,7 +2318,7 @@
           }
         ]
       },
-      "status": "verified"
+      "status": "identity_no_chinese_name"
     },
     {
       "slug": "number-one-on-the-call-sheet",
@@ -2988,13 +2988,1433 @@
       },
       "status": "verified",
       "reusedVerified": true
+    },
+    {
+      "slug": "1971-the-year-that-music-changed-everything",
+      "en": "1971: The Year That Music Changed Everything",
+      "year": "2021",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "1971-the-year-that-music-changed-everything",
+        "en": "1971: The Year That Music Changed Everything",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "1971：音乐改变世界的一年",
+            "1971：那一年，音乐改变了世界"
+          ],
+          "aiSources": [
+            {
+              "title": "1971：音乐改变世界的一年第04集在线播放免费观看电视剧全集高清播放-好配方电影网",
+              "url": "https://www.haopeifang.com/peifang/35445862_0_3.html"
+            },
+            {
+              "title": "1971：音乐改变世界的一年第02集在线播放免费观看电视剧全集高清播放-好配方电影网",
+              "url": "https://www.haopeifang.com/peifang/35445862_0_1.html"
+            },
+            {
+              "title": "‎受《1971：音乐改变世界的一年》启发的音乐 - 歌单 - Apple Music",
+              "url": "https://music.apple.com/us/playlist/%E5%8F%97-1971-%E9%9F%B3%E4%B9%90%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E7%9A%84%E4%B8%80%E5%B9%B4-%E5%90%AF%E5%8F%91%E7%9A%84%E9%9F%B3%E4%B9%90/pl.ca5eb6a9a12c49faa8380612dac09d79?l=zh-Hans-CN"
+            },
+            {
+              "title": "1971: The Year That Music Changed Everything (2021) directed by Asif Kapadia • Reviews, film + cast • Letterboxd",
+              "url": "https://letterboxd.com/film/1971-the-year-that-music-changed-everything/"
+            },
+            {
+              "title": "1971：音乐改变世界的一年 1971: The Year That Music Changed Everything 第1集",
+              "url": "https://movie.douban.com/subject/35445862/episode/1/"
+            },
+            {
+              "title": "1971：音乐改变世界的一年高清电影预告片下载-官方预告片、片花、宣传片",
+              "url": "https://zt124.6huo.com/movie/31829"
+            },
+            {
+              "title": "1971：音乐改变世界的一年_百度百科",
+              "url": "https://baike.baidu.com/item/1971%EF%BC%9A%E9%9F%B3%E4%B9%90%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E7%9A%84%E4%B8%80%E5%B9%B4/60680316"
+            },
+            {
+              "title": "1971：音乐改变世界的一年在线播放免费观看电视剧全集高清播放-好配方电影网",
+              "url": "https://www.haopeifang.com/peifang/35445862.html"
+            }
+          ],
+          "queryNames": [
+            "1971：音乐改变世界的一年",
+            "1971：那一年，音乐改变了世界"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "1971：音乐改变世界的一年",
+          "selectedTitle": "1971音乐改变世界的一年",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 1,
+          "subjectId": "35445862",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "1971音乐改变世界的一年",
+        "sourceMatch": {
+          "title": "1971音乐改变世界的一年",
+          "routes": 2,
+          "libraries": 3,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "1971音乐改变世界的一年",
+            "libraries": 3,
+            "checkedLibraries": 9,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "1971音乐改变世界的一年",
+                "libraries": 3
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "sb",
+            "http": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 0
+          }
+        ]
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "911-inside-the-presidents-war-room",
+      "en": "9/11: Inside the President’s War Room",
+      "year": "2021",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "911-inside-the-presidents-war-room",
+        "en": "9/11: Inside the President’s War Room",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "911：总统作战室",
+            "9/11：总统作战室",
+            "911 那天：直击美国总统战情室",
+            "回看 911，直击美国总统战情室"
+          ],
+          "aiSources": [
+            {
+              "title": "911：总统作战室 9/11: Inside the President’s War Room 海报",
+              "url": "https://movie.douban.com/subject/35576386/photos?type=R"
+            },
+            {
+              "title": "911：总统作战室",
+              "url": "https://piaofang.maoyan.com/movie/1442078"
+            },
+            {
+              "title": "纪录片《911：总统作战室》，再现布什政府的12小时_手机新浪网",
+              "url": "https://finance.sina.cn/2021-09-11/detail-iktzqtyt5380934.d.html"
+            },
+            {
+              "title": "二十年了。紀錄片《911 那天：直擊美國總統戰情室》揭小布希決策真相，百餘張當年畫面緬懷傷痛前行",
+              "url": "https://news.agentm.tw/183905/"
+            },
+            {
+              "title": "911：总统作战室迅雷下载_911：总统作战室_720P_911：总统作战室_1080P_迅雷电影天堂",
+              "url": "https://mip.xl720.com/thunder/58998.html"
+            },
+            {
+              "title": "纪录片《911：总统作战室 9/11: Inside the President’s War Room》下载 - 纪录片盒子 Docu-Hub",
+              "url": "https://docu-hub.com/title/2657/"
+            },
+            {
+              "title": "军事纪录片《911：总统作战室 9/11: Inside the President’s War Room》下载-零三纪录片资源网",
+              "url": "https://www.0318000.com/list/5361/"
+            },
+            {
+              "title": "911：总统作战室迅雷下载_911：总统作战室bt种子_911：总统作战室1080p|720p_BT天堂",
+              "url": "https://m.hibttiantang.com/movie/61825.html"
+            }
+          ],
+          "queryNames": [
+            "911：总统作战室",
+            "9/11：总统作战室",
+            "911 那天：直击美国总统战情室",
+            "回看 911，直击美国总统战情室"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "911：总统作战室",
+          "selectedTitle": "911：总统作战室",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35576386",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "911：总统作战室",
+        "sourceMatch": {
+          "title": "911：总统作战室",
+          "routes": 6,
+          "libraries": 6,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "911：总统作战室",
+            "libraries": 6,
+            "checkedLibraries": 10,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "911：总统作战室",
+                "libraries": 6
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikun",
+            "http": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "home-7grdgbjdq3tiy37f4dc3yeyms",
+      "en": "A Charlie Brown Thanksgiving",
+      "year": "1973",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "home-7grdgbjdq3tiy37f4dc3yeyms",
+        "en": "A Charlie Brown Thanksgiving",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "史努比的故事：查理布朗的感恩节",
+            "查理·布朗的感恩节",
+            "史努比卡通：查理布朗的感恩节"
+          ],
+          "aiSources": [
+            {
+              "title": "史努比的故事：查理布朗的感恩节 短评",
+              "url": "https://movie.douban.com/subject/5300042/comments?status=F"
+            },
+            {
+              "title": "史努比的故事：查理布朗的感恩节_百度百科",
+              "url": "https://baike.baidu.com/item/%E5%8F%B2%E5%8A%AA%E6%AF%94%E7%9A%84%E6%95%85%E4%BA%8B%EF%BC%9A%E6%9F%A5%E7%90%86%E5%B8%83%E6%9C%97%E7%9A%84%E6%84%9F%E6%81%A9%E8%8A%82/58127702"
+            },
+            {
+              "title": "查理·布朗的感恩节 - 搜狗百科",
+              "url": "https://baike.sogou.com/v141133627.htm"
+            },
+            {
+              "title": "A Charlie Brown Thanksgiving 查理布朗的感恩节 1973.srt - LWLTV",
+              "url": "https://www.lwltv.com/subtitles/634832598123741183"
+            },
+            {
+              "title": "史努比的故事：查理布朗的感恩节 A Charlie Brown Thanksgiving A.Charlie.Brown.Thanksgiving.1973.2160p.UHD.BluRay.x265-WhiteRhino - SubHD",
+              "url": "https://subhd.tv/a/384751"
+            },
+            {
+              "title": "觀看《史努比卡通：查理布朗的感恩節》- Apple TV+ (台灣)",
+              "url": "https://tv.apple.com/tw/movie/%E5%8F%B2%E5%8A%AA%E6%AF%94%E5%8D%A1%E9%80%9A%E6%9F%A5%E7%90%86%E5%B8%83%E6%9C%97%E7%9A%84%E6%84%9F%E6%81%A9%E7%AF%80/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
+            }
+          ],
+          "queryNames": [
+            "史努比的故事：查理布朗的感恩节",
+            "查理·布朗的感恩节",
+            "史努比卡通：查理布朗的感恩节",
+            "查理布朗的感恩节"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "查理布朗的感恩节",
+          "selectedTitle": "史努比的故事：查理布朗的感恩节",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "5300042",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "史努比的故事：查理布朗的感恩节",
+        "sourceMatch": {
+          "title": "史努比的故事：查理布朗的感恩节",
+          "routes": 4,
+          "libraries": 2,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "史努比的故事：查理布朗的感恩节",
+            "libraries": 1,
+            "checkedLibraries": 14,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "史努比的故事：查理布朗的感恩节",
+                "libraries": 1
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 0,
+            "routes": 3
+          }
+        ]
+      },
+      "status": "verified"
     }
   ],
   "summary": {
     "future_release": 1,
-    "identity_no_chinese_name": 9,
+    "identity_no_chinese_name": 10,
     "missing_identity": 1,
     "unverified": 8,
-    "verified": 37
+    "verified": 39
   }
 }
