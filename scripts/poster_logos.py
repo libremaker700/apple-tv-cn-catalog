@@ -6,13 +6,17 @@ from title_lookup import read,dump
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 def render(base,logo):
     with Image.open(io.BytesIO(base))as im:
-        if im.format!='JPEG'or im.size!=(400,600):raise ValueError('Invalid portrait background')
-        canvas=im.convert('RGBA')
+        if im.format!='JPEG'or im.size not in((400,600),(1920,720)):raise ValueError('Invalid portrait background')
+        canvas=im.convert('RGBA');banner=im.size==(1920,720)
     with Image.open(io.BytesIO(logo))as im:
         if im.format!='PNG'or im.width*im.height>2_000_000:raise ValueError('Invalid title treatment')
         mark=im.convert('RGBA');alpha=mark.getchannel('A')
         if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
-        mark=ImageOps.contain(mark,(235,70),Image.Resampling.LANCZOS)
+        mark=ImageOps.contain(mark,(280,90)if banner else(235,70),Image.Resampling.LANCZOS)
+    if banner:
+        canvas.alpha_composite(mark,(34,canvas.height-145-mark.height))
+        out=io.BytesIO();canvas.convert('RGB').save(out,'JPEG',quality=95,subsampling=0)
+        return out.getvalue()
     # Official portrait treatment: bottom legibility gradient and centred 100x30 logo box.
     stops=[(0,0),(.54,0),(.70,.35),(.85,.58),(1,.70)]
     shade=Image.new('RGBA',canvas.size);pixels=shade.load()
@@ -33,12 +37,13 @@ class PosterLogos:
         if not re.fullmatch(r'https://is\d+-ssl\.mzstatic\.com/image/[^\s{}]+\.png',source):raise ValueError('Invalid logo origin')
         ref=row['artwork'].removeprefix(BASE)
         if not re.fullmatch(r'images/[a-f0-9]{64}\.jpg',ref):raise ValueError('Invalid poster origin')
-        key=hashlib.sha256(('official-logo-v1|'+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
+        width,height=row.get('width',400),row.get('height',600)
+        key=hashlib.sha256((('official-banner-logo-v1|'if(width,height)==(1920,720)else'official-logo-v1|')+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
         path=self.folder/old.get('path','missing')
         if old and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
-            self.count+=1;return dict(artwork=BASE+old['path'],width=400,height=600,logoTreatment='official-composite-v1')
+            self.count+=1;return dict(artwork=BASE+old['path'],width=width,height=height,logoTreatment='official-composite-v1')
         logo=self.fetch(source)
         if len(logo)>4*1024*1024:raise ValueError('Logo is too large')
         raw=render((self.folder/ref).read_bytes(),logo);dest='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(self.folder/dest).write_bytes(raw)
         self.cache['records'][key]={'path':dest,'background':ref,'logoSource':source,'logoSha256':hashlib.sha256(logo).hexdigest(),'officialId':row['officialId']};dump(self.path,self.cache);self.count+=1
-        return dict(artwork=BASE+dest,width=400,height=600,logoTreatment='official-composite-v1')
+        return dict(artwork=BASE+dest,width=width,height=height,logoTreatment='official-composite-v1')

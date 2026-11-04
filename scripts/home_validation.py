@@ -72,9 +72,9 @@ def validate_pages(value):
         assert len(page['hero'])<=12 and 1<=len(page['shelves'])<=80
         rows(page['hero'],1920,1080)
         for shelf in page['shelves']:
-            assert shelf['title']and shelf['officialTitle']and page_url(shelf['source'])==shelf['source']and shelf['layout']in('portrait','landscape')and 0<len(shelf['items'])<=600
+            assert shelf['title']and shelf['officialTitle']and page_url(shelf['source'])==shelf['source']and shelf['layout']in('portrait','landscape','showcase')and 0<len(shelf['items'])<=600
             if shelf.get('morePageId'):assert shelf['morePageId']in page_ids
-            rows(shelf['items'],*((640,360)if shelf['layout']=='landscape'else(400,600)),shelf.get('kind')=='topics')
+            rows(shelf['items'],*((1920,720)if shelf['layout']=='showcase'else(640,360)if shelf['layout']=='landscape'else(400,600)),shelf.get('kind')=='topics')
     assert value['shelves'][-1]['title']=='即将上线'
     assert len({s['id']for s in value['shelves']})==len(value['shelves'])
     assert all(s['officialTitle']!='Watch Premieres for Free'for p in [value]+value['pages']for s in p['shelves'])

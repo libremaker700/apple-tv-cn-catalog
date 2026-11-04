@@ -41,6 +41,21 @@ class HomePages(unittest.TestCase):
         collect({'entries':[]},api,capture)
         self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/w0/1920x1080.jpg',1920,1080),calls)
         self.assertNotIn(('https://is1-ssl.mzstatic.com/image/thumb/generic/1920x1080.jpg',1920,1080),calls)
+    def test_official_single_showcase_keeps_banner_art_and_dimensions(self):
+        api=Fake();original=api.canvas
+        api.rows[4]['images']['shelfItemImage']={'url':'https://is1-ssl.mzstatic.com/image/thumb/holiday/{w}x{h}.{f}','width':4320,'height':1800}
+        def canvas(kind,identity):
+            value=original(kind,identity)
+            if kind=='channel':value['shelves'].insert(3,shelf('A Holiday Classic',[api.rows[4]],'epicShowcase'))
+            return value
+        api.canvas=canvas;calls=[]
+        value,_=collect({'entries':[]},api,lambda url,w,h:(calls.append((url,w,h))or image(url,w,h)))
+        validate_pages(value)
+        banner=next(s for s in value['shelves']if s['officialTitle']=='A Holiday Classic')
+        self.assertEqual(banner['layout'],'showcase');self.assertEqual(banner['title'],'节日经典')
+        self.assertEqual((banner['items'][0]['width'],banner['items'][0]['height']),(1920,720))
+        self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/holiday/1920x720.jpg',1920,720),calls)
+
     def value(self):return collect({'entries':[]},Fake(),image)[0]
     def test_seven_sections_and_complete_destination_counts(self):
         v=self.value();validate_pages(v)

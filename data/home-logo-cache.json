@@ -525,6 +525,13 @@
       "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/1qmWrri7y8OW2lNJGwa2Hw/470x140bb.png",
       "logoSha256": "e9f646a60831ad445402e8affa189cb5bb4aa9538075c15efda6a9c346118dff",
       "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
+    },
+    "e480ae2b7ed5976cacebd6dad62f4f80580ad5450d67206191c57ee0672b78b5": {
+      "path": "images/72d02bb8777b43a414a397b3d515dff93ab38a84dd7347727f6ddf36e0368d0b.jpg",
+      "background": "images/bb200b1e8644414dd3c7abb5a344093ddfbf226afa8b19e2b074a3574bb8cbd3.jpg",
+      "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/1qmWrri7y8OW2lNJGwa2Hw/470x140bb.png",
+      "logoSha256": "e9f646a60831ad445402e8affa189cb5bb4aa9538075c15efda6a9c346118dff",
+      "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
     }
   }
 }

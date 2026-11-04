@@ -10,6 +10,15 @@ class Logos(unittest.TestCase):
         raw=render(base,b.getvalue())
         with Image.open(io.BytesIO(raw))as im:
             self.assertEqual(im.size,(400,600));self.assertEqual(im.format,'JPEG');self.assertLess(abs(im.getpixel((200,50))[0]-180),3);self.assertGreater(im.getpixel((200,452))[0],220);self.assertLess(im.getpixel((200,452))[1],30)
+    def test_wide_showcase_keeps_full_width_and_title_treatment_at_lower_left(self):
+        base=self.blob('RGB',(1920,720),(180,180,180),'JPEG')
+        logo=Image.new('RGBA',(470,140));logo.paste((255,0,0,255),(30,20,440,120));b=io.BytesIO();logo.save(b,'PNG')
+        with Image.open(io.BytesIO(render(base,b.getvalue())))as im:
+            self.assertEqual(im.size,(1920,720))
+            self.assertLess(abs(im.getpixel((960,100))[0]-180),3)
+            self.assertGreater(im.getpixel((170,530))[0],220)
+            self.assertLess(im.getpixel((170,530))[1],30)
+
     def test_opaque_or_non_image_logo_is_rejected(self):
         base=self.blob('RGB',(400,600),'gray','JPEG')
         for logo in [b'not a logo',self.blob('RGB',(470,140),'white','PNG')]:

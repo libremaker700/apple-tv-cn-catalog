@@ -35,12 +35,15 @@ def collect(catalog,api,image,poster=None):
             details[identity]=value
         return details[identity]
     def art(it,w,h):
-        imgs=it.get('images',{});names=('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('shelfItemImage','posterArt','contentImageTall')
+        imgs=it.get('images',{});names=('shelfItemImage','shelfImageBackground','contentImage16X9')if(w,h)==(1920,720)else ('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('shelfItemImage','posterArt','contentImageTall')
         def choose(images):
             for n in names:
                 x=images.get(n)or{};a=x.get('width',0);b=x.get('height',0)
                 # Stage artwork may be 4:3; prefer it over generic title cards.
                 stage_background=w==1920 and h==1080 and n=='shelfImageBackground' and a and b and a>b
+                if (w,h)==(1920,720):
+                    if a and b and 2.2<a/b<2.9:return x.get('url')
+                    continue
                 if stage_background or (a and b and ((w>h and 1.6<a/b<1.9)or(w<h and .4<a/b<.8))):return x.get('url')
         url=choose(imgs)
         if not url and it.get('type')in('Movie','Show'):url=choose(metadata(it).get('images',{}))
@@ -71,7 +74,7 @@ def collect(catalog,api,image,poster=None):
             works[identity]=value
         row=dict(slug=slug,officialId=identity,**art(it,w,h))
         logo=(it.get('images',{}).get('contentLogo')or{}).get('url','')
-        if w==400 and h==600 and logo:
+        if (w,h)in((400,600),(1920,720)) and logo:
             row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
         return row
     def work_rows(items,w,h):
@@ -81,7 +84,7 @@ def collect(catalog,api,image,poster=None):
             if row and row['officialId']not in seen:seen.add(row['officialId']);row['rank']=len(rows)+1;rows.append(row)
         return rows
     def shelf(sh,source,forced=None):
-        title=clean((sh.get('header')or{}).get('title'));layout=forced or('landscape'if sh.get('displayType')=='epicShowcase'else'portrait');w,h=(640,360)if layout=='landscape'else(400,600)
+        title=clean((sh.get('header')or{}).get('title'));layout=forced or('showcase'if sh.get('displayType')=='epicShowcase'and len(sh.get('items',[]))==1 else'landscape'if sh.get('displayType')=='epicShowcase'else'portrait');w,h=(1920,720)if layout=='showcase'else(640,360)if layout=='landscape'else(400,600)
         if not title or title=='Watch Premieres for Free':return None
         rows=work_rows(api.shelf(sh)['items'],w,h)
         if not rows:return None
@@ -111,7 +114,7 @@ def collect(catalog,api,image,poster=None):
         if not title or excluded_home_shelf(sh) or sh.get('displayType')in ('epicStage','epicStageWithUpsell','channelUpsell','upNextLockup','sportsCardLockup'):continue
         if title!='Browse All Apple Originals' and not any(i.get('type')in ('Movie','Show')for i in sh.get('items',[])):continue
         if title=='Browse All Apple Originals':row={'id':sh['id'],'title':LABELS[title],'officialTitle':title,'source':CHANNEL,'layout':'portrait','kind':'topics','items':topic_rows,'count':len(topic_rows)}
-        else:row=shelf(sh,CHANNEL,'landscape'if title=='Dark Destinations'else'portrait')
+        else:row=shelf(sh,CHANNEL,'landscape'if title=='Dark Destinations'else None)
         if not row:continue
         if title=='Must-See Hits':
             pid='must-see-hits';row['morePageId']=pid;pages.append({'id':pid,'title':LABELS[title],'source':page_url((sh.get('header')or{}).get('url')or sh['url']),'hero':[],'shelves':[dict(row)]})
