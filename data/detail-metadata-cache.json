@@ -1084,6 +1084,69 @@
           "originalTitle": "Snoopy Presents: There’s No Place Like Home, Snoopy"
         }
       ]
+    },
+    "umc.cmc.6dkxf7hxdcaueu4jhe1wm2k2n": {
+      "en": "1971: The Year That Music Changed Everything",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35445862",
+          "sourceUrl": "https://movie.douban.com/subject/35445862/",
+          "title": "1971：音乐改变世界的一年",
+          "summary": "一个动荡的时代，1971年是音乐创新和重生的一年，政治和文化剧变让新面孔在舞台上大放异彩。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 1,
+          "year": 2021,
+          "checkedAt": "2026-11-04T04:38:13+00:00",
+          "originalTitle": "1971: The Year That Music Changed Everything",
+          "rating": 8.7
+        }
+      ]
+    },
+    "pr:911-inside-the-presidents-war-room": {
+      "en": "9/11: Inside the President’s War Room",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35576386",
+          "sourceUrl": "https://movie.douban.com/subject/35576386/",
+          "title": "911：总统作战室",
+          "summary": "Apple TV+和BBC联合出品，以“911”事件发生后12小时的故事为主线，记录了布什政府在袭击当天的行动轨迹，并公布了一些从未被披露过的细节。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2021,
+          "checkedAt": "2026-11-04T04:38:13+00:00",
+          "originalTitle": "9/11: Inside the President’s War Room",
+          "rating": 8.1
+        }
+      ]
+    },
+    "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms": {
+      "en": "A Charlie Brown Thanksgiving",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "5300042",
+          "sourceUrl": "https://movie.douban.com/subject/5300042/",
+          "title": "查理布朗的感恩节",
+          "summary": "这部经典的影片中你能看到查理布朗，史努比，伍德斯托克（Woodstock），这些家伙都在庆祝感恩节。虽然查理布朗感到自己在节日中像个傻子一样，但他最信赖的狗帮助他找到节日的意义。而且他最好的朋友，Linus，告诉了大家第一个真实的感恩节的故事。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 1973,
+          "checkedAt": "2026-11-04T04:38:13+00:00",
+          "originalTitle": "A Charlie Brown Thanksgiving",
+          "rating": 8.5
+        }
+      ]
     }
   }
 }

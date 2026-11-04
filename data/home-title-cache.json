@@ -537,19 +537,22 @@
       "verifiedZh": {
         "_identityYear": 1973,
         "aliases": [
-          "查理布朗的感恩节",
-          "查理·布朗的感恩节",
           "史努比的故事：查理布朗的感恩节",
-          "史努比的故事查理布朗的感恩节",
-          "A Charlie Brown Thanksgiving"
+          "查理布朗的感恩节"
         ],
         "contentRating": "G",
         "metadataPolicy": "mainland-v1",
         "name_checked_at": "2026-10-30T18:20:48+00:00",
         "name_sources": [
           {
-            "type": "reviewed_douban_display_evidence",
-            "url": "https://movie.douban.com/subject/5300042/"
+            "type": "douban_identity_cms_alias",
+            "url": "https://movie.douban.com/subject/5300042/",
+            "retrieved_at": "1793767093"
+          },
+          {
+            "type": "douban_mobile_identity",
+            "url": "https://movie.douban.com/subject/5300042/",
+            "retrieved_at": "1793767093"
           }
         ],
         "name_status": "verified_title_sources",
@@ -566,8 +569,61 @@
           }
         ],
         "summary_status": "translated_official",
-        "title": "查理布朗的感恩节",
-        "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
+        "title": "史努比的故事：查理布朗的感恩节",
+        "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
+        "douban_title": "查理布朗的感恩节",
+        "douban_id": "5300042",
+        "directors": [
+          "比尔·莫伦茨",
+          "菲尔·罗曼"
+        ],
+        "detailSeasons": [
+          {
+            "schema": 1,
+            "source": "douban",
+            "subjectId": "5300042",
+            "sourceUrl": "https://movie.douban.com/subject/5300042/",
+            "title": "查理布朗的感恩节",
+            "summary": "这部经典的影片中你能看到查理布朗，史努比，伍德斯托克（Woodstock），这些家伙都在庆祝感恩节。虽然查理布朗感到自己在节日中像个傻子一样，但他最信赖的狗帮助他找到节日的意义。而且他最好的朋友，Linus，告诉了大家第一个真实的感恩节的故事。",
+            "summaryStatus": "AVAILABLE",
+            "ratingStatus": "AVAILABLE",
+            "season": 0,
+            "year": 1973,
+            "checkedAt": "2026-11-04T04:38:13+00:00",
+            "originalTitle": "A Charlie Brown Thanksgiving",
+            "rating": 8.5
+          }
+        ],
+        "detailMetadata": {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "5300042",
+          "sourceUrl": "https://movie.douban.com/subject/5300042/",
+          "title": "查理布朗的感恩节",
+          "summary": "这部经典的影片中你能看到查理布朗，史努比，伍德斯托克（Woodstock），这些家伙都在庆祝感恩节。虽然查理布朗感到自己在节日中像个傻子一样，但他最信赖的狗帮助他找到节日的意义。而且他最好的朋友，Linus，告诉了大家第一个真实的感恩节的故事。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 1973,
+          "checkedAt": "2026-11-04T04:38:13+00:00",
+          "originalTitle": "A Charlie Brown Thanksgiving",
+          "rating": 8.5
+        },
+        "nameSelection": {
+          "policy": "library-votes-v1",
+          "title": "史努比的故事：查理布朗的感恩节",
+          "libraries": 1,
+          "checkedLibraries": 14,
+          "attemptedLibraries": 33,
+          "requestedLibraries": 33,
+          "complete": false,
+          "options": [
+            {
+              "title": "史努比的故事：查理布朗的感恩节",
+              "libraries": 1
+            }
+          ]
+        }
       }
     },
     "umc.cmc.1kt2wacwwoz0brw6duwve9hje": {
