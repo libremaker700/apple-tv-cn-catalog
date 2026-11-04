@@ -431,6 +431,26 @@
       "text": "艾米·亚当斯在语言、失落与外星接触的故事中表现惊艳。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793581114
+    },
+    "d6079ca7cfb535b4ab75b18839e833a8bb2f35a3cdac6f6e29330db832cfbf3c": {
+      "text": "温馨的朋友们了解一个充满情感的世界。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793756457
+    },
+    "caed0952d3be7dbb89342bb0bb8f1e0e571e4b55c6a2c9dd9d4673c7f23ea7af": {
+      "text": "布雷迪、贝利奇克和克拉夫特终于讲述了他们统治时期的真实故事。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793756457
+    },
+    "e4d45352c8d35849c125356b262a4152915a072ce72d3618954b96844d2cf7cc": {
+      "text": "在这部充满偏执氛围的惊悚片中，一名中央情报局特工无法分辨敌友。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793756457
+    },
+    "41a4af9c13274b12106ccb5e03bda231aafd9a4ecfdac8a8a92039b322a8a33b": {
+      "text": "布鲁斯·威利斯在特瑞·吉列姆这部黑暗超现实主义杰作中迷失于时间之中。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793756457
     }
   }
 }
