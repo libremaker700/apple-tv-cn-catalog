@@ -77,7 +77,7 @@ jobs:
         run: python scripts/work_summaries.py
       - name: Translate changed official homepage copy
         if: github.event_name != 'push'
-        continue-on-error: true
+        continue-on-error: ${{ inputs.mode != 'copy' }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_1 || secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
