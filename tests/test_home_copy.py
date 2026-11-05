@@ -92,6 +92,27 @@ class LegacyTopicNotes(unittest.TestCase):
         with self.assertRaises(AssertionError):validate_copy('umc.cmc.test',c)
 
 class ShowcaseCopyTests(unittest.TestCase):
+    def test_featured_heading_uses_verified_franchise_term(self):
+        import tempfile
+        from unittest.mock import patch
+        from home_copy import process
+
+        work={'officialId':'umc.cmc.test','kind':'series','en':'Fraggle Rock','zh':{'title':'布偶奇遇记','name_status':'verified_title_sources'}}
+        shelf={'id':'featured','layout':'featured','officialTitle':'The World of Fraggle Rock','title':'旧译文','source':CHANNEL,
+               'items':[{'officialId':work['officialId']}]}
+        home={'works':[work],'shelves':[shelf],'hero':[]}
+        translator=Translator();inputs=[]
+        def translate(rows):
+            inputs.extend(rows)
+            return {rows[0]['id']:'脆莓公园的世界' if len(inputs)==1 else '布偶奇遇记的世界'}
+        translator.translate=translate
+        with tempfile.TemporaryDirectory()as folder,patch('home_copy.Translator',return_value=translator):
+            first,_=process(home,Path(folder),'',1,showcases_only=True)
+            second,_=process(first,Path(folder),'',21602,showcases_only=True)
+            self.assertEqual(inputs[0]['glossary'],{'Fraggle Rock':'布偶奇遇记'})
+            self.assertEqual(first['shelves'][0]['title'],shelf['officialTitle'])
+            self.assertEqual(second['shelves'][0]['title'],'布偶奇遇记的世界')
+
     def test_showcase_heading_and_caption_follow_their_current_official_text(self):
         import tempfile
         from unittest.mock import patch
