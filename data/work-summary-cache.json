@@ -1990,6 +1990,9 @@
       "text": "“对青春动荡火焰的一曲抒情、华丽而坚韧的颂歌”（《综艺》）。罗宾·威廉姆斯在这部令人动容的1989年剧情片中大放异彩，他饰演一位英语老师，回到母校——一所管理严格的佛蒙特预科学校——工作，并在学生心中点燃了一团强烈的火焰。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
+    },
+    "542133491267d8c244664b7d24c24e1478c3e5bc35a102649e027fe7ca69886f": {
+      "nextRetry": 1793929440
     }
   },
   "works": {
@@ -5972,6 +5975,11 @@
       "source": "https://tv.apple.com/us/movie/dead-poets-society/umc.cmc.40eizj37hvedszozcidhgpari",
       "contentRating": "PG",
       "officialReleaseYear": 1989
+    },
+    "umc.cmc.7js98w9pfzw394wpm8da3cuzq": {
+      "contentRating": "TV-G",
+      "officialReleaseYear": 2026,
+      "source": "https://tv.apple.com/us/movie/12-days-of-snoopy/umc.cmc.7js98w9pfzw394wpm8da3cuzq"
     }
   }
 }

@@ -1,13 +1,19 @@
 {
-  "works": 378,
+  "works": 379,
   "translated": 0,
   "cacheHits": 378,
   "existingChinese": 0,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 0,
+  "apiCalls": 1,
   "usage": [],
-  "errors": [],
+  "errors": [
+    {
+      "stage": "translation",
+      "error": "ValueError",
+      "http": 503
+    }
+  ],
   "ready": 398,
   "pending": 0
 }

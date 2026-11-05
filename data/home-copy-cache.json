@@ -461,6 +461,46 @@
       "text": "史努比在查理·布朗和莱纳斯的帮助下准备了一场节日大餐。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793903157
+    },
+    "7720f48e0b359d2c6bbd3b0ae4829082247338569e087fe1951a7edf092767b6": {
+      "nextRetry": 1793929245
+    },
+    "95effa90ebc2b20a18d63344a9c7c5f5a1a7354316b34ba064c38addbbe6b46e": {
+      "nextRetry": 1793929245
+    },
+    "f1db82604d0b10bc6f3ea4878f5f592be6850228f80fd265e6e4b2e5936bb672": {
+      "nextRetry": 1793929245
+    },
+    "826cf496115a0a248f1213ed79aac1b3133f6c2bed449de9bf4c0c6c2d4e2743": {
+      "nextRetry": 1793929245
+    },
+    "6c7dee0646e41087546458c9ca41d4b9442491798eae8f06169e319f0d3d5f06": {
+      "nextRetry": 1793929245
+    },
+    "8cf7012cd15de84b5ed81b2e5fa622bf6e651b857dbd190372ae715a00e28f8f": {
+      "text": "文斯·沃恩在天堂的阴暗面惹上了麻烦。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793907645
+    },
+    "dab1ac8bbbc756f7d3aabb35029d64f94645d49fa9e99f749a63d63048139d43": {
+      "text": "善意在这个暖心的热门作品中回归。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793907645
+    },
+    "84716d4229facf11d0c7015580752498b36b91e85f2c6538bdfd0563436ed5e1": {
+      "text": "跟随史努比一起冲刺，争取在圣诞老人的好孩子名单上占有一席之地。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793907645
+    },
+    "25aac968c44377e12341884d3bb8f62cca54e21bc02d7a5667e8f39389c057fc": {
+      "text": "一辆可爱的拖拉机以善良和同情心引领潮流。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793907645
+    },
+    "ee19132c10753d584982987db3d9281cf11ca4231d82f9c77719f996d1850e2f": {
+      "text": "一个小男孩在神奇朋友的帮助下释放了他的创造力。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793907645
     }
   }
 }
