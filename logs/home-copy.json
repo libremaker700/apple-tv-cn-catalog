@@ -1,129 +1,37 @@
 {
-  "checkedAt": 1793756686,
+  "checkedAt": 1793903157,
   "copyVersion": "hero-copy-zh-cn-v2",
-  "pages": [
+  "pages": [],
+  "showcases": [
     {
-      "requested": 0,
-      "cacheHits": 9,
-      "translated": 0,
+      "requested": 1,
+      "cacheHits": 0,
+      "translated": 1,
       "pending": 0,
-      "apiHttp": 0,
+      "apiHttp": 200,
       "retainedCopy": 0,
       "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 6,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/coming-to-appletv/edt.item.62e4314e-8707-4e17-9b77-cdb29787ba94"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/sci-fi/edt.item.650b3154-accd-4b87-9f89-6bde117cee31"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/nonfiction/edt.item.645ac94d-2a19-439b-8a72-c8588eb16067"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/tv-shows/edt.item.690d376a-3d01-4c9f-825e-79e3f8ba78ea"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/dramas/edt.item.6452b08d-74b7-469c-8398-16932e421e67"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/comedies/edt.item.6452ad5e-06aa-4fcf-9411-ea551f0bf88a"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 10,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
-    },
-    {
-      "requested": 0,
-      "cacheHits": 9,
-      "translated": 0,
-      "pending": 0,
-      "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/movies/uts.room.movies-on-apple-tv"
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 154,
+        "candidatesTokenCount": 68,
+        "totalTokenCount": 222,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 154
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "apiError": "UNAVAILABLE",
+      "shelfId": "edt.col.690cfe3e-3759-40c2-8398-4bea97e2dd0b",
+      "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
+      "title": "假日经典",
+      "status": "ready"
     }
   ],
-  "translated": 0,
+  "translated": 1,
   "pending": 0,
-  "version": "0f05cb52c3712343aee89558bf2125782761901c108da969ebe31a656c9eff77"
+  "version": "4b2c71b5db0bd5cdae34bbfabd35d132858a533d6056507e9ea7805d43a4fba9"
 }
