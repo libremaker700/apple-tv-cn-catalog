@@ -1,5 +1,6 @@
 """Cloud adapters corresponding to App source types. Secrets and media URLs never enter reports."""
 import base64,hashlib,hmac,html,json,os,re,secrets,string,time
+from pathlib import Path
 from urllib.parse import quote,urlsplit
 import requests
 
@@ -110,7 +111,7 @@ def config(name):
     return value
 
 class Shared:
-    ROUTES=[('https://vlogic.'+host,'https://vcache.'+host)for host in('qvfic.com','zwtlzch.cn','ybsdkl.cn','shkjbd.com','mjrlin.cn','srnffc.cn')]
+    ROUTES=[(row['logicHost'],row['cacheHost'])for row in json.loads((Path(__file__).resolve().parent.parent/'data/shared-routes.json').read_text(encoding='utf-8'))]
     @staticmethod
     def medium(row):
         return plain(row.get('channelName'))or{'1':'电影','2':'电视剧','3':'动漫','4':'综艺纪录'}.get(str(row.get('channelId')),'')

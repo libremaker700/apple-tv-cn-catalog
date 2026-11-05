@@ -41,3 +41,9 @@ season, size, cache and rollback rules. This does not change portrait or hero
 specifications or the Gemini/Douban metadata pipelines.
 
 Dependencies: requests, Pillow, opencc-python-reimplemented, cryptography.
+
+Shared-library business/cache endpoints are configured in `data/shared-routes.json`.
+The five routes retain the user-specified order (qvfic, zwtlzch, mjrlin,
+shkjbd, then the IP fallback). Requests start from the first route; removed
+ybsdkl/srnffc endpoints are not restored from session settings. This public
+endpoint list contains no session credentials.

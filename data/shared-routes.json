@@ -1,0 +1,7 @@
+[
+  {"name":"线路01","logicHost":"https://vlogic.qvfic.com","cacheHost":"https://vcache.qvfic.com"},
+  {"name":"线路02","logicHost":"https://vlogic.zwtlzch.cn","cacheHost":"https://vcache.zwtlzch.cn"},
+  {"name":"线路03","logicHost":"https://vlogic.mjrlin.cn","cacheHost":"https://vcache.mjrlin.cn"},
+  {"name":"线路04","logicHost":"https://vlogic.shkjbd.com","cacheHost":"https://vcache.shkjbd.com"},
+  {"name":"线路05","logicHost":"https://43.248.100.71:51010","cacheHost":"https://43.248.100.71:51020"}
+]
