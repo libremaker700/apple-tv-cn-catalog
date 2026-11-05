@@ -56,7 +56,7 @@ def validate_pages(value):
             from detail_metadata import valid as valid_detail
             zh=w['zh'];assert clean_zh(zh)is not None and zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
             assert all(valid_detail(packet,w['kind'])for packet in zh.get('detailSeasons',[]))and(not zh.get('detailMetadata')or valid_detail(zh['detailMetadata'],w['kind']))
-    def rows(rows,w,h,topics=False):
+    def rows(rows,w,h,topics=False,source=None):
         seen=set()
         for r in rows:
             identity=r.get('pageId')if topics else r.get('slug');assert identity and identity not in seen;seen.add(identity)
@@ -67,6 +67,10 @@ def validate_pages(value):
                 from home_copy import validate_copy
                 assert not topics and (w,h)==(1920,1080)
                 validate_copy(r['officialId'],r['copy'])
+            if 'showcaseCopy'in r:
+                from home_copy import validate_copy
+                assert not topics and (w,h)==(1920,720) and len(rows)==1 and r['showcaseCopy']['source']==source
+                validate_copy(r['officialId'],r['showcaseCopy'])
     for page in [value]+value['pages']:
         if page is not value:assert re.fullmatch(r'[a-z0-9-]{1,100}',page['id'])and page['title']and page_url(page['source'])==page['source']
         assert len(page['hero'])<=12 and 1<=len(page['shelves'])<=80
@@ -74,7 +78,7 @@ def validate_pages(value):
         for shelf in page['shelves']:
             assert shelf['title']and shelf['officialTitle']and page_url(shelf['source'])==shelf['source']and shelf['layout']in('portrait','landscape','showcase')and 0<len(shelf['items'])<=600
             if shelf.get('morePageId'):assert shelf['morePageId']in page_ids
-            rows(shelf['items'],*((1920,720)if shelf['layout']=='showcase'else(640,360)if shelf['layout']=='landscape'else(400,600)),shelf.get('kind')=='topics')
+            rows(shelf['items'],*((1920,720)if shelf['layout']=='showcase'else(640,360)if shelf['layout']=='landscape'else(400,600)),shelf.get('kind')=='topics',shelf['source'])
     assert value['shelves'][-1]['title']=='即将上线'
     assert len({s['id']for s in value['shelves']})==len(value['shelves'])
     assert all(s['officialTitle']!='Watch Premieres for Free'for p in [value]+value['pages']for s in p['shelves'])

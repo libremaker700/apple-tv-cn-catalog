@@ -8,7 +8,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [sync, home, publish]
+        options: [sync, home, publish, copy]
         default: sync
 permissions:
   contents: write
@@ -66,7 +66,7 @@ jobs:
           HOME_COPY_MODEL: ${{ vars.HOME_COPY_MODEL }}
         run: python scripts/home_sync.py
       - name: Translate shared official work synopses once
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && inputs.mode != 'copy'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_1 || secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
@@ -85,7 +85,7 @@ jobs:
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
           GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
           HOME_COPY_MODEL: ${{ vars.HOME_COPY_MODEL }}
-        run: python scripts/home_copy.py
+        run: python scripts/home_copy.py ${{ inputs.mode == 'copy' && '--showcases-only' || '' }}
       - run: python scripts/home_sync.py --validate
       - name: Commit validated data and image files
         run: |

@@ -90,3 +90,38 @@ class LegacyTopicNotes(unittest.TestCase):
         c['noteZh']='';validate_copy('umc.cmc.test',c)
         c['noteZh']='Apple TV 科幻榜第2名'
         with self.assertRaises(AssertionError):validate_copy('umc.cmc.test',c)
+
+class ShowcaseCopyTests(unittest.TestCase):
+    def test_showcase_heading_and_caption_follow_their_current_official_text(self):
+        import tempfile
+        from unittest.mock import patch
+        from home_copy import process
+
+        work={'officialId':'umc.cmc.test','kind':'movie'}
+        item={'description':'Snoopy prepares dinner.','primaryMetadata':['Movie','Animation','Kids & Family'],
+              'explainabilityLine':'#1 in Kids & Family on Apple TV',
+              'segue':{'destination':{'id':work['officialId'],'storefront':'us','$kind':'MoviePageIntent'}}}
+        shelf={'id':'showcase','layout':'showcase','officialTitle':'A Holiday Classic','title':'旧译文','source':CHANNEL,
+               'items':[{'officialId':work['officialId']}]}
+        page={'data':[{'intent':{'$kind':'ChannelPageIntent','id':'tvs.sbd.4000','storefront':'us'},
+                       'data':{'shelves':[{'id':shelf['id'],'items':[item]}]}}]}
+        html=lambda: '<script id="serialized-server-data">'+json.dumps(page)+'</script>'
+        t=Translator();inputs=[]
+        def translate(rows):
+            inputs.extend(r['text'] for r in rows)
+            return {r['id']:'节日佳作' if r['text']=='A Holiday Classic' else '史努比准备晚餐。' for r in rows}
+        t.translate=translate
+        with tempfile.TemporaryDirectory()as folder,patch('home_copy.Translator',return_value=t):
+            root=Path(folder)
+            home={'works':[work],'shelves':[shelf],'hero':[]}
+            first,_=process(home,root,html(),1,showcases_only=True)
+            second,_=process(first,root,html(),2,showcases_only=True)
+            self.assertEqual(first,second)
+            self.assertEqual(inputs,['A Holiday Classic','Snoopy prepares dinner.'])
+            self.assertEqual(first['shelves'][0]['title'],'节日佳作')
+            copy=first['shelves'][0]['items'][0]['showcaseCopy']
+            self.assertEqual(copy['descriptionZh'],'史努比准备晚餐。')
+            self.assertEqual(copy['noteZh'],'Apple TV 儿童与家庭榜第1名')
+            shelf['officialTitle']='A Different Holiday';item['description']='Snoopy greets friends.'
+            process(home,root,html(),3,showcases_only=True)
+            self.assertEqual(inputs[-2:],['A Different Holiday','Snoopy greets friends.'])
