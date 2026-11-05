@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793908311,
+  "checkedAt": 1793908798,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [],
   "showcases": [
@@ -19,13 +19,13 @@
   ],
   "headings": [
     {
-      "requested": 2,
-      "translated": 2,
+      "requested": 1,
+      "translated": 1,
       "apiHttp": 200,
       "model": "gemini-3.5-flash-lite"
     }
   ],
-  "translated": 2,
+  "translated": 1,
   "pending": 0,
-  "version": "e18edc11c610a15985441aa2c2f416bef994fd1763740d207250e368f2931cff"
+  "version": "84f684478f51c9cdd69213f59377dfbda2f848f8da71f0b6702696382a2229db"
 }
