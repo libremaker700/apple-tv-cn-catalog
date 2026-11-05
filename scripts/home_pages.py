@@ -9,6 +9,7 @@ LABELS={'Top 10 TV Shows':'Top 10 电视剧','Top 10 Movies':'Top 10 电影','Ne
  'Essentials':'精选必看','Action-Packed Sci-Fi':'动作科幻','Sci-Fi Mysteries':'动作科幻片','Heartfelt Sci-Fi':'温情科幻','All Sci-Fi':'全部科幻影视','TV & Movie Fun':'趣味影视','Animation, Adventure & More':'动画与冒险','Family-Friendly Frights':'合家欢惊奇故事','Snoopy & Peanuts':'史努比与花生漫画','Watch with Your Family':'全家一起看','Books Come to Life':'书中的故事','Amazing Animals':'奇妙动物','Sing-Along Fun':'一起唱歌','All Shows':'全部剧集','All Movies':'全部电影'}
 LABELS.update({'Coming to Apple TV+':'即将上线','Latest Trailers':'最新预告','Explore Upcoming Apple Originals & Add to Watchlist':'即将上线的原创作品','Recent Highlights':'近期精选','Sports':'体育','Nature':'自然','Real-Life Stories':'真实故事','Music':'音乐','All Nonfiction Movies':'全部非虚构电影','All Nonfiction TV Shows':'全部非虚构剧集','Spies & Detectives':'间谍与侦探','Historical Epics':'历史史诗','Sci-Fi Action':'科幻动作','All Action Adventure':'全部动作冒险','Action':'动作','Comedy':'喜剧','Drama':'剧情','Nonfiction':'非虚构','Sci-Fi':'科幻','Kids & Family':'儿童与家庭','Crime Dramas':'犯罪剧情','Workplace Dramas':'职场故事','Go Back in Time':'回望历史','All Drama TV Shows':'全部剧情剧集','Feel-Good Comedies':'轻松治愈喜剧','Dark Comedies':'黑色喜剧','Funny Co-Workers':'职场喜剧','All Comedy TV Shows':'全部喜剧剧集','Based on a Book':'根据文学作品改编','Sci-Fi Thrillers':'科幻惊悚','Psychological Thrillers':'心理惊悚','Action Thrillers':'动作惊悚','All Thrillers':'全部惊悚作品','Crime Comedies':'犯罪喜剧','Crime Documentaries':'犯罪纪录片','All Crime':'全部犯罪题材','Great Movies Now on Apple TV':'Apple TV 正在热播','Comedies':'喜剧电影','Dramas':'剧情电影','Documentaries':'纪录片'})
 LABELS['A Holiday Classic']='节日经典'
+FEATURE_SIZE=(640,800)
 
 def excluded_home_shelf(shelf):
     title=(shelf.get('header')or{}).get('title')or shelf.get('officialTitle')or''
@@ -37,6 +38,7 @@ def collect(catalog,api,image,poster=None):
     def art(it,w,h):
         imgs=it.get('images',{});names=('shelfItemImage','shelfImageBackground','contentImage16X9')if(w,h)==(1920,720)else ('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('shelfItemImage','posterArt','contentImageTall')
         def choose(images):
+            if (w,h)==FEATURE_SIZE:return (images.get('shelfItemImage')or{}).get('url')
             for n in names:
                 x=images.get(n)or{};a=x.get('width',0);b=x.get('height',0)
                 # Stage artwork may be 4:3; prefer it over generic title cards.
@@ -74,7 +76,7 @@ def collect(catalog,api,image,poster=None):
             works[identity]=value
         row=dict(slug=slug,officialId=identity,**art(it,w,h))
         logo=(it.get('images',{}).get('contentLogo')or{}).get('url','')
-        if (w,h)in((400,600),(1920,720)) and logo:
+        if (w,h)in((400,600),(1920,720),FEATURE_SIZE) and logo:
             row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
         return row
     def work_rows(items,w,h):
@@ -84,10 +86,31 @@ def collect(catalog,api,image,poster=None):
             if row and row['officialId']not in seen:seen.add(row['officialId']);row['rank']=len(rows)+1;rows.append(row)
         return rows
     def shelf(sh,source,forced=None):
-        title=clean((sh.get('header')or{}).get('title'));layout=forced or('showcase'if sh.get('displayType')=='epicShowcase'and len(sh.get('items',[]))==1 else'landscape'if sh.get('displayType')=='epicShowcase'else'portrait');w,h=(1920,720)if layout=='showcase'else(640,360)if layout=='landscape'else(400,600)
+        title=clean((sh.get('header')or{}).get('title'))
         if not title or title=='Watch Premieres for Free':return None
-        rows=work_rows(api.shelf(sh)['items'],w,h)
+        items=api.shelf(sh)['items']
+        shows=[i for i in items if i.get('type')in('Movie','Show') and re.fullmatch(r'umc\.cmc\.[a-z0-9]+',i.get('id',''))]
+        epic=sh.get('displayType')=='epicShowcase'
+        def has_tall_art(item):
+            art=(item.get('images')or{}).get('shelfItemImage')or{}
+            return art.get('width',0)>0 and art.get('height',0)>art['width'] and bool(art.get('url'))
+        layout=forced or ('showcase' if epic and len(shows)==1 else
+            'featured' if epic and len({i['id']for i in shows})>=4 and all(map(has_tall_art,shows)) else
+            'landscape' if epic else 'portrait')
+        w,h={'showcase':(1920,720),'featured':FEATURE_SIZE,'landscape':(640,360),'portrait':(400,600)}[layout]
+        rows=work_rows(items,w,h)
         if not rows:return None
+        if layout=='featured':
+            from home_copy import GENRES,enrich
+            by_id={i['id']:i for i in shows}
+            copy={}
+            for row in rows:
+                identity=row['officialId']
+                genres=[GENRES[g['name']]for g in by_id[identity].get('genres',[])if g.get('name')in GENRES]
+                copy[identity]={'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
+            # The four-card format uses only the official type and genres, with no description.
+            for row in enrich({'hero':rows},copy,{},None,0,source_url=source)[0]['hero']:
+                rows[row['rank']-1]['showcaseCopy']=row['copy']
         return {'id':sh['id'],'title':LABELS.get(title,title),'officialTitle':title,'source':source,'layout':layout,'items':rows,'count':len(rows)}
     root=api.canvas('channel','tvs.sbd.4000');root_shelves=root['shelves'];home={'hero':[],'shelves':[]}
     for sh in root_shelves:

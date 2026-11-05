@@ -3,18 +3,21 @@ import hashlib,io,json,re
 from pathlib import Path
 from PIL import Image,ImageOps
 from title_lookup import read,dump
+from home_pages import FEATURE_SIZE
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 def render(base,logo):
     with Image.open(io.BytesIO(base))as im:
-        if im.format!='JPEG'or im.size not in((400,600),(1920,720)):raise ValueError('Invalid portrait background')
-        canvas=im.convert('RGBA');banner=im.size==(1920,720)
+        if im.format!='JPEG'or im.size not in((400,600),(1920,720),FEATURE_SIZE):raise ValueError('Invalid poster background')
+        canvas=im.convert('RGBA');banner=im.size==(1920,720);featured=im.size==FEATURE_SIZE
     with Image.open(io.BytesIO(logo))as im:
         if im.format!='PNG'or im.width*im.height>2_000_000:raise ValueError('Invalid title treatment')
         mark=im.convert('RGBA');alpha=mark.getchannel('A')
         if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
-        mark=ImageOps.contain(mark,(280,90)if banner else(235,70),Image.Resampling.LANCZOS)
-    if banner:
-        canvas.alpha_composite(mark,(34,canvas.height-145-mark.height))
+        if featured:mark=mark.crop(alpha.getbbox())
+        mark=ImageOps.contain(mark,(280,90)if banner else(310,76)if featured else(235,70),Image.Resampling.LANCZOS)
+    if banner or featured:
+        x,bottom=(34,88)if featured else(34,145)
+        canvas.alpha_composite(mark,(x,canvas.height-bottom-mark.height))
         out=io.BytesIO();canvas.convert('RGB').save(out,'JPEG',quality=95,subsampling=0)
         return out.getvalue()
     # Official portrait treatment: bottom legibility gradient and centred 100x30 logo box.
@@ -38,7 +41,8 @@ class PosterLogos:
         ref=row['artwork'].removeprefix(BASE)
         if not re.fullmatch(r'images/[a-f0-9]{64}\.jpg',ref):raise ValueError('Invalid poster origin')
         width,height=row.get('width',400),row.get('height',600)
-        key=hashlib.sha256((('official-banner-logo-v1|'if(width,height)==(1920,720)else'official-logo-v1|')+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
+        treatment={(1920,720):'official-banner-logo-v1',FEATURE_SIZE:'official-featured-logo-v1'}.get((width,height),'official-logo-v1')
+        key=hashlib.sha256((treatment+'|'+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
         path=self.folder/old.get('path','missing')
         if old and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
             self.count+=1;return dict(artwork=BASE+old['path'],width=width,height=height,logoTreatment='official-composite-v1')

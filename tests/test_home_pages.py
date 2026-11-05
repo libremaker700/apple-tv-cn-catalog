@@ -56,6 +56,26 @@ class HomePages(unittest.TestCase):
         self.assertEqual((banner['items'][0]['width'],banner['items'][0]['height']),(1920,720))
         self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/holiday/1920x720.jpg',1920,720),calls)
 
+    def test_official_tall_showcase_uses_four_or_more_four_by_five_posters(self):
+        api=Fake();original=api.canvas;calls=[]
+        for n,row in enumerate(api.rows[:5]):
+            row['images']['shelfItemImage']={'url':f'https://is1-ssl.mzstatic.com/image/thumb/tall{n}/{{w}}x{{h}}BDT.TVAES01.{{f}}','width':1680,'height':3636}
+            row['genres']=[{'name':'Kids & Family'},{'name':'Comedy'}]
+        def canvas(kind,identity):
+            value=original(kind,identity)
+            if kind=='room' and identity=='uts.room.kids':
+                for n in (3,4,5):value['shelves'].append(shelf(f'Featured {n}',api.rows[:n],'epicShowcase'))
+            return value
+        api.canvas=canvas
+        value,_=collect({'entries':[]},api,lambda url,w,h:(calls.append((url,w,h))or image(url,w,h)))
+        validate_pages(value)
+        kids=next(p for p in value['pages']if p['officialId']=='uts.room.kids')
+        self.assertEqual([s['layout']for s in kids['shelves']],['portrait','landscape','featured','featured'])
+        for s in kids['shelves'][2:]:
+            self.assertEqual([r['officialId']for r in s['items']],[r['id']for r in api.rows[:len(s['items'])]])
+            self.assertTrue(all((r['width'],r['height'])==(640,800) and r['showcaseCopy']['genresZh']==['儿童与家庭','喜剧']for r in s['items']))
+        self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/tall0/640x800BDT.TVAES01.jpg',640,800),calls)
+
     def value(self):return collect({'entries':[]},Fake(),image)[0]
     def test_seven_sections_and_complete_destination_counts(self):
         v=self.value();validate_pages(v)

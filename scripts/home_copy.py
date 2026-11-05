@@ -192,12 +192,13 @@ def process(home,root,html,now,fetcher=None,showcases_only=False):
     headings={};heading_rows=[]
     for target in [value]+value.get('pages',[]):
         for shelf in target.get('shelves',[]):
-            showcase=shelf.get('layout')=='showcase' and len(shelf.get('items',[]))==1 and shelf.get('kind')!='topics'
+            showcase=shelf.get('layout') in ('showcase','featured') and shelf.get('kind')!='topics'
             if showcases_only and not showcase:continue
             original=clean(shelf.get('officialTitle')or shelf.get('title'))
             if original in LABELS and not showcase:shelf['title']=LABELS[original]
             if original and (showcase or not valid_zh(shelf.get('title'))):
-                key=digest(['showcase-heading-v1'if showcase else'shelf-heading-v1',original]);saved=cache.setdefault('records',{}).get(key,{})
+                policy={'showcase':'showcase-heading-v1','featured':'featured-heading-v1'}.get(shelf.get('layout'),'shelf-heading-v1')
+                key=digest([policy,original]);saved=cache.setdefault('records',{}).get(key,{})
                 heading_rows.append((shelf,key))
                 if valid_zh(saved.get('text'),80):shelf['title']=saved['text']
                 elif now>=saved.get('nextRetry',0):headings[key]=original
