@@ -36,7 +36,7 @@ def clean_zh(value):
     for item in value.get('name_sources',[])+value.get('summary_sources',[]):
         if not allowed_source(item.get('url','')):return None
     if value.get('watchUrl') and not allowed_source(value['watchUrl']):return None
-    out=copy.deepcopy(value);out.pop('douban_rating_count',None)
+    out=copy.deepcopy(value);out.pop('douban_rating_count',None);out.pop('contentRating',None)
     for packet in [out.get('detailMetadata')]+out.get('detailSeasons',[]):
         if isinstance(packet,dict):packet.pop('ratingCount',None)
     return out

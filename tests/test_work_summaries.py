@@ -38,7 +38,7 @@ class Summaries(unittest.TestCase):
   self.assertEqual(source_id({'officialIdentity':{'watchUrl':'https://tv.apple.com/us/movie/fury/umc.cmc.test?ctx_brand=foo'}}),'umc.cmc.test')
   self.assertEqual(source_id({'slug':'test','officialUrl':'https://www.apple.com/tv-pr/originals/test/'}),'pr:test')
 
- def test_legacy_chinese_is_retranslated_and_official_rating_year_are_shared(self):
+ def test_legacy_chinese_is_retranslated_and_only_year_is_shared(self):
   from title_lookup import dump,read
   from work_summaries import run,apply_main
   class API:
@@ -50,8 +50,10 @@ class Summaries(unittest.TestCase):
    root=Path(t);identity='umc.cmc.test';url='https://tv.apple.com/us/movie/exact/'+identity;main={'entries':[{'slug':'exact','en':'Exact','kind':'movie','officialIdentity':{'watchUrl':url},'zh':{'summary':'不对应当前官网的旧中文简介'}}]}
    dump(root/'docs/catalog.json',main);dump(root/'docs/home/home.json',{'works':[]});k=key(identity,'Official about description');dump(root/'data/work-summary-cache.json',{'records':{k:{'text':'不对应的旧中文简介','method':'existing_chinese'}},'works':{}})
    translator=Translator();run(root,API(),translator,100);run(root,API(),translator,101)
-   self.assertEqual(translator.calls,1);zh=apply_main(main,root)['entries'][0]['zh'];self.assertEqual(zh['summary'],'严格依据官网原文的中文简介。');self.assertEqual(zh['contentRating'],'TV-MA');self.assertEqual(zh['officialReleaseYear'],2022)
- def test_only_official_display_rating_survives(self):
+   main['entries'][0]['zh']['contentRating']='TV-MA'
+   self.assertEqual(translator.calls,1);zh=apply_main(main,root)['entries'][0]['zh'];self.assertEqual(zh['summary'],'严格依据官网原文的中文简介。');self.assertNotIn('contentRating',zh);self.assertEqual(zh['officialReleaseYear'],2022)
+   self.assertNotIn('contentRating',read(root/'data/work-summary-cache.json',{})['works'][identity])
+ def test_official_detail_rating_is_discarded(self):
   from official_pages import slim_item
-  self.assertEqual(slim_item({'rating':{'displayName':'TV-MA','value':600}})['contentRating'],'TV-MA')
+  self.assertNotIn('contentRating',slim_item({'rating':{'displayName':'TV-MA','value':600}}))
   self.assertNotIn('contentRating',slim_item({'rating':{'displayName':'invented'}}));self.assertNotIn('contentRating',slim_item({'rating':'8.5'}))

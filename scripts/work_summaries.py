@@ -10,11 +10,11 @@ def key(identity,text):return digest([VERSION,identity,clean(text)])
 def norm(s):return re.sub(r"[^a-z0-9]","",unicodedata.normalize('NFKD',s).lower())
 def source_id(e):return e.get('officialId')or(urlsplit(e.get('officialIdentity',{}).get('watchUrl','')).path.rstrip('/').split('/')[-1])or('pr:'+e['slug']if e.get('officialUrl')=='https://www.apple.com/tv-pr/originals/'+e.get('slug','')+'/'else'')
 def attach(e,record):
+    if isinstance(e.get('zh'),dict):e['zh'].pop('contentRating',None)
     if not record:return
     zh=e.setdefault('zh',{}) or {};e['zh']=zh
     zh.update(metadataPolicy='mainland-v1')
-    for field in ('contentRating','officialReleaseYear'):
-        if field in record:zh[field]=record[field]
+    if 'officialReleaseYear'in record:zh['officialReleaseYear']=record['officialReleaseYear']
     if not valid_zh(record.get('text')):return
     zh.update(summary=record['text'],summary_status='legacy_chinese'if record.get('method')=='existing_chinese'else'translated_official',summary_sources=[{'type':'apple_us_translation','url':record['source']}],summary_source_hash=record['hash'],summary_original=record['original'])
     if not zh.get('watchUrl'):zh['watchUrl']=record['source']
@@ -31,6 +31,7 @@ def apply_home(value,root):
 def run(root,api,translator,now,limit=400):
     main=read(root/'docs/catalog.json',{});home=read(root/'docs/home/home.json',{})
     cache=read(root/'data/work-summary-cache.json',{'schema':1,'records':{},'works':{}});records=cache['records'];works=cache['works'];wanted={}
+    for record in works.values():record.pop('contentRating',None)
     for e in main['entries']:
         identity=source_id(e)
         if identity:wanted[identity]={'officialId':identity,'en':e['en'],'kind':e['kind'],'watchUrl':e.get('officialIdentity',{}).get('watchUrl')or e['officialUrl'],'zh':e.get('zh')}
@@ -50,7 +51,7 @@ def run(root,api,translator,now,limit=400):
             else:detail=api.get(w['kind'],identity)
             if detail.get('id')!=identity or detail.get('type')!=('Movie'if w['kind']=='movie'else'Show'):raise ValueError('identity')
             from datetime import datetime,timezone
-            date=detail.get('releaseDate');metadata[identity]={'contentRating':detail.get('contentRating',''),'officialReleaseYear':datetime.fromtimestamp(date/1000,timezone.utc).year if isinstance(date,(int,float))and date>0 else None,'source':w['watchUrl']}
+            date=detail.get('releaseDate');metadata[identity]={'officialReleaseYear':datetime.fromtimestamp(date/1000,timezone.utc).year if isinstance(date,(int,float))and date>0 else None,'source':w['watchUrl']}
             text=clean(detail.get('description')or detail.get('heroDescription')or w.get('summaryEn',''))
             if not text or len(text)>1800:report['missingOriginal']+=1;continue
             k=key(identity,text);source[identity]=(w,text,k)
