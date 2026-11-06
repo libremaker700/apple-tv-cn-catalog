@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793972149,
+  "checkedAt": 1793976912,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [],
   "showcases": [
@@ -24,7 +24,7 @@
       "apiHttp": 0,
       "retainedCopy": 0,
       "sourceMissing": 0,
-      "recomposed": 0,
+      "recomposed": 4,
       "artworkPending": 0,
       "shelfId": "edt.col.6acd7c3d-a004-4a4c-9bc0-0871a0d7063a",
       "title": "布偶奇遇记的世界",
@@ -38,7 +38,7 @@
       "apiHttp": 0,
       "retainedCopy": 0,
       "sourceMissing": 0,
-      "recomposed": 0,
+      "recomposed": 10,
       "artworkPending": 0,
       "shelfId": "uts.col.kids-tv-plus-family-time",
       "title": "全家共赏",
@@ -46,8 +46,8 @@
     }
   ],
   "headings": [],
-  "datedBadgesBackfilled": 8,
+  "datedBadgesBackfilled": 0,
   "translated": 0,
   "pending": 0,
-  "version": "84d1bc4eeccce12428603512e328b24124fa51cd7cfe9d1f199077e88245c8e1"
+  "version": "568d8896db9e9cdb0f1863171d4f3e06a3ab4df92cae53526574d317bc3c9632"
 }
