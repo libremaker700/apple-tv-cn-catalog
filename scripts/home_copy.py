@@ -11,6 +11,8 @@ VERSION='hero-copy-zh-cn-v2'
 GENRES={'Action':'动作','Adventure':'冒险','Animation':'动画','Classics':'经典','Comedy':'喜剧','Crime':'犯罪','Documentary':'纪录片','Drama':'剧情','Family':'家庭','Fantasy':'奇幻','History':'历史','Horror':'恐怖','Kids & Family':'儿童与家庭','Music':'音乐','Mystery':'悬疑','Romance':'爱情','Sci-Fi':'科幻','Sports':'体育','Thriller':'惊悚','War':'战争','Western':'西部','Holiday':'节日','Biography':'传记','Educational':'教育','Musical':'歌舞','News':'新闻','Reality':'真人秀','Short Films':'短片','Talk Show':'脱口秀','Travel':'旅行','War & Military':'战争与军事','Young Adult':'青少年','Independent':'独立电影','Interview':'访谈','LGBTQ':'多元题材','Action Comedy':'动作喜剧','Anthology Series':'单元剧','Comedy Series':'喜剧','Documentary Series':'纪录片','Docuseries':'纪录片','Drama Series':'剧情','Limited Series':'限定剧','Short Film':'短片','Special':'特别节目'}
 RATINGS={'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-13','R','NC-17','NR'}
 MONTHS=('january','february','march','april','may','june','july','august','september','october','november','december')
+DAYS={'Monday':'周一','Tuesday':'周二','Wednesday':'周三','Thursday':'周四','Friday':'周五','Saturday':'周六','Sunday':'周日'}
+BADGES={'new season':'新一季','just added':'新增'}
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 def clean(value):return re.sub(r'\s+',' ',str(value or '')).strip()
@@ -35,9 +37,8 @@ def fixed(text):
     if m:return 'Apple TV '+('电影'if m[2]=='Movie'else'电视剧')+'榜第'+m[1]+'名'
     m=re.fullmatch(r'#(\d{1,3}) in (.+) on Apple TV',text)
     if m and m[2] in GENRES:return 'Apple TV '+GENRES[m[2]]+'榜第'+m[1]+'名'
-    days={'Monday':'周一','Tuesday':'周二','Wednesday':'周三','Thursday':'周四','Friday':'周五','Saturday':'周六','Sunday':'周日'}
-    m=re.fullmatch(r'New Episode Every ('+'|'.join(days)+')',text)
-    if m:return '每'+days[m[1]]+'更新'
+    m=re.fullmatch(r'New Episode Every ('+'|'.join(DAYS)+')',text)
+    if m:return '每'+DAYS[m[1]]+'更新'
     m=re.fullmatch(r'((?:19|20)\d{2}) Emmy® Winner',text)
     return m[1]+'年艾美奖获奖作品'if m else ''
 
@@ -52,14 +53,17 @@ def dated_badge(text):
     return f'{prefix}{release.month}月{release.day}日上线'
 
 def fixed_badge(text):
-    return dated_badge(text) or fixed(text)
+    text=clean(text)
+    weekday=DAYS.get(text.removeprefix('Coming ')) if text.startswith('Coming ') else None
+    return dated_badge(text) or BADGES.get(text.casefold()) or (weekday+'上线' if weekday else fixed(text))
 
 def localize_cached_badges(home):
     updated=0
     for page in [home]+home.get('pages',[]):
-        for row in page.get('hero',[]):
-            caption=row.get('copy',{})
-            text=dated_badge(caption.get('badgeEn',''))
+        captions=[r.get('copy',{}) for r in page.get('hero',[])]
+        captions.extend(r['showcaseCopy'] for s in page.get('shelves',[]) for r in s['items'] if 'showcaseCopy'in r)
+        for caption in captions:
+            text=fixed_badge(caption.get('badgeEn',''))
             if text and caption.get('badgeZh')!=text:caption['badgeZh']=text;updated+=1
     return updated
 
@@ -74,8 +78,9 @@ def validate_copy(identity,c):
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
     if 'contentRating'in c:source['contentRating']=c['contentRating']
     legacy_empty_note=c['noteZh']==''and bool(re.fullmatch(r'#\d{1,3} in .+ on Apple TV',c['noteEn']))and bool(fixed(c['noteEn']))
-    legacy_empty_badge=c['badgeZh']==''and bool(dated_badge(c['badgeEn']))
-    assert c['sourceHash']==digest([identity,source])and (c['noteZh']==fixed(c['noteEn'])or legacy_empty_note)and (c['badgeZh']==fixed_badge(c['badgeEn'])or legacy_empty_badge)
+    localized_badge=fixed_badge(c['badgeEn'])
+    legacy_empty_badge=c['badgeZh']==''and bool(localized_badge)and not fixed(c['badgeEn'])
+    assert c['sourceHash']==digest([identity,source])and (c['noteZh']==fixed(c['noteEn'])or legacy_empty_note)and (c['badgeZh']==localized_badge or legacy_empty_badge)
     assert not c['descriptionZh']or valid_zh(c['descriptionZh'])
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
     assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))
@@ -84,6 +89,12 @@ def official_display_page(html,source_url):
     from home_pages import page_url
     source_url=page_url(source_url);is_room='/us/room/'in source_url
     return data_page(html,'RoomPageIntent'if is_room else'ChannelPageIntent',source_url.rsplit('/',1)[-1])
+
+def official_badge(item):
+    badge=item.get('badge')
+    if not isinstance(badge,str):return ''
+    text=clean(badge)
+    return text if len(text)<=200 and not re.search(r'<|>|https?://|AIza|tvly-',text) else ''
 
 def extract(html,home,allow_partial=False,source_url=CHANNEL):
     data=official_display_page(html,source_url)
@@ -96,7 +107,7 @@ def extract(html,home,allow_partial=False,source_url=CHANNEL):
         if dest.get('storefront')!='us' or dest.get('$kind')!=('MoviePageIntent'if w['kind']=='movie'else'ShowPageIntent'):raise ValueError('Copy identity mismatch')
         # Only these public display strings survive; offers, sessions and video URLs never do.
         metadata=item.get('primaryMetadata');genres=metadata[1:]if isinstance(metadata,list)and metadata else w.get('genres',[])
-        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2]}
+        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':official_badge(item),'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2]}
     if not allow_partial and not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
     if not result:raise ValueError('Official hero copy unavailable')
     return result
@@ -112,7 +123,7 @@ def showcase_source(shelf, page, works, snapshots):
         if (dest.get('id'),dest.get('storefront'),dest.get('$kind'))!=(identity,'us','MoviePageIntent'if work['kind']=='movie'else'ShowPageIntent'):continue
         metadata=item.get('primaryMetadata')or []
         genres=metadata[1:]if isinstance(metadata,list)and metadata else work.get('genres',[])
-        return {'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':'','noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:8]}
+        return {'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':official_badge(item),'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:8]}
     # The cached catalogue can still show a banner after it rotates off Apple US.
     # A captured official caption is reusable only for that exact shelf and work.
     for snapshot in snapshots:
@@ -136,7 +147,7 @@ def featured_source(shelf, page, works):
         if not metadata:genres=rows[identity].get('showcaseCopy',{}).get('genresZh',[])
         description=item.get('note')
         result[identity]={'descriptionEn':clean(description)[:1800] if isinstance(description,str)else'',
-                          'badgeEn':'','noteEn':clean(item.get('explainabilityLine'))[:200],
+                          'badgeEn':official_badge(item),'noteEn':clean(item.get('explainabilityLine'))[:200],
                           'genresZh':list(dict.fromkeys(genres))[:8]}
     return result
 
@@ -307,7 +318,7 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
     for target in [value]+value.get('pages',[]):
         for shelf in target.get('shelves',[]):
             showcase=shelf.get('layout') in ('showcase','featured') and shelf.get('kind')!='topics'
-            if showcases_only and not showcase:continue
+            # Copy-only limits the artwork and synopsis refresh below, not heading translation.
             original=clean(shelf.get('officialTitle')or shelf.get('title'))
             if shelf.get('layout')=='featured':shelf['title']=LABELS.get(original,original)
             if original in LABELS and not showcase:shelf['title']=LABELS[original]
@@ -375,7 +386,7 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
                 cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
         enriched,report=enrich(dict(target,works=value['works']),raw,cache,translator,now,source_url=url)
         target['hero']=enriched['hero'];pages.append(dict(report,source=url));dump(path,cache)
-    report={'checkedAt':now,'copyVersion':VERSION,'pages':pages,'showcases':showcases,'headings':heading_report,'datedBadgesBackfilled':updated_badges,'translated':sum(p.get('translated',0)for p in pages+showcases+heading_report),'pending':sum(p.get('pending',0)for p in pages+showcases)+sum(not valid_zh(cache['records'].get(key,{}).get('text'),80)for key in {key for _,key in heading_rows})}
+    report={'checkedAt':now,'copyVersion':VERSION,'pages':pages,'showcases':showcases,'headings':heading_report,'badgesBackfilled':updated_badges,'translated':sum(p.get('translated',0)for p in pages+showcases+heading_report),'pending':sum(p.get('pending',0)for p in pages+showcases)+sum(not valid_zh(cache['records'].get(key,{}).get('text'),80)for key in {key for _,key in heading_rows})}
     dump(path,cache);dump(root/'logs/home-copy.json',report)
     return value,report
 

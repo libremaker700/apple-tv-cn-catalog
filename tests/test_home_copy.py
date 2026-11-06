@@ -73,9 +73,12 @@ class DatedBadgeTests(unittest.TestCase):
         self.assertEqual(fixed_badge('Coming Nov 13'),'11月13日上线')
         self.assertEqual(fixed_badge('Coming January 22'),'1月22日上线')
         self.assertEqual(fixed_badge('Coming Sept. 6'),'9月6日上线')
-        for text in ('Coming February 30','New Season Foo 2','Coming Dec 0','Coming Dec 32','Coming Friday','New Season Dec 2 teaser'):
+        for text in ('Coming February 30','New Season Foo 2','Coming Dec 0','Coming Dec 32','New Season Dec 2 teaser'):
             self.assertEqual(fixed_badge(text),'')
         self.assertEqual(fixed_badge('New'),'新上线')
+        self.assertEqual(fixed_badge('New Season'),'新一季')
+        self.assertEqual(fixed_badge('Just Added'),'新增')
+        self.assertEqual(fixed_badge('Coming Friday'),'周五上线')
 
     def test_enrich_and_copy_only_backfill_derive_from_existing_official_date(self):
         from tempfile import TemporaryDirectory
@@ -98,11 +101,30 @@ class DatedBadgeTests(unittest.TestCase):
         home['pages']=[{'source':source,'hero':[{'officialId':identity,'copy':dict(legacy,source=source)}]}]
         with TemporaryDirectory()as directory,patch('home_copy.Translator',return_value=translator):
             result,report=process(home,Path(directory),'',2,showcases_only=True)
-        self.assertEqual(report['datedBadgesBackfilled'],2)
+        self.assertEqual(report['badgesBackfilled'],2)
         self.assertEqual(result['hero'][0]['copy'],current)
         self.assertEqual(result['pages'][0]['hero'][0]['copy'],dict(current,source=source))
         self.assertEqual(home['hero'][0]['copy'],legacy)
         self.assertEqual(translator.calls,0)
+
+    def test_undated_official_badge_is_backfilled_without_guessing_from_title(self):
+        from home_copy import localize_cached_badges
+        identity='umc.cmc.test'
+        row={'officialId':identity,'slug':'stick'}
+        raw={identity:{'descriptionEn':'','badgeEn':'New Season','noteEn':'','genresZh':[]}}
+        enriched,_=enrich({'hero':[row]},raw,{},Translator(),1)
+        legacy=dict(enriched['hero'][0]['copy'],badgeZh='')
+        validate_copy(identity,legacy)
+        home={'hero':[dict(row,copy=legacy),dict(row,copy={})]}
+        self.assertEqual(localize_cached_badges(home),1)
+        self.assertEqual(home['hero'][0]['copy']['badgeZh'],'新一季')
+        self.assertEqual(home['hero'][1]['copy'],{})
+
+    def test_official_badge_accepts_only_the_explicit_display_field(self):
+        from home_copy import official_badge
+        self.assertEqual(official_badge({'badge':' New\u00a0Season '}),'New Season')
+        for item in ({'note':'New Season'},{'badge':{'text':'New Season'}},{'badge':'<b>New</b>'}):
+            self.assertEqual(official_badge(item),'')
 
 class TopicCopyTests(unittest.TestCase):
     def test_topic_copy_is_contextual_and_same_original_translates_once(self):
@@ -146,6 +168,7 @@ class ShowcaseCopyTests(unittest.TestCase):
         works={identity:{'kind':'movie'}for identity in identities}
         def item(identity,description='',kind='MoviePageIntent'):
             return {'$kind':'HeroComponent','note':description,'metadataList':{'items':[{'text':'Movie'},{'text':'Animation'},{'text':'Kids & Family'}]},
+                    'badge':'Just Added' if identity==identities[0]else'',
                     'explainabilityLine':'#1 in Kids & Family on Apple TV' if identity==identities[0]else'',
                     'segue':{'destination':{'id':identity,'storefront':'us','$kind':kind}}}
         page={'shelves':[{'id':'elsewhere','items':[item(identities[1],'Unrelated synopsis.')]},
@@ -164,6 +187,7 @@ class ShowcaseCopyTests(unittest.TestCase):
         self.assertEqual(caption['descriptionEn'],'Official card text.')
         self.assertEqual(caption['descriptionZh'],'和史努比一起庆祝万圣节。')
         self.assertEqual(caption['genresZh'],['动画','儿童与家庭'])
+        self.assertEqual(caption['badgeZh'],'新增')
         self.assertEqual(caption['noteZh'],'Apple TV 儿童与家庭榜第1名')
         self.assertEqual(rows[0]['showcaseCopyPosition'],'raised-logo-v1')
         self.assertNotIn('showcaseCopy',rows[1]);self.assertNotIn('showcaseCopy',rows[2])
