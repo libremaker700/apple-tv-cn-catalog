@@ -23,6 +23,24 @@ class Logos(unittest.TestCase):
         base=self.blob('RGB',(400,600),'gray','JPEG')
         for logo in [b'not a logo',self.blob('RGB',(470,140),'white','PNG')]:
             with self.assertRaises((ValueError,OSError)):render(base,logo)
+    def test_reposition_uses_clean_official_background_and_cache(self):
+        with tempfile.TemporaryDirectory()as d:
+            root=Path(d);folder=root/'docs/home/images';folder.mkdir(parents=True);(root/'data').mkdir()
+            base=self.blob('RGB',(640,800),(180,180,180),'JPEG');name=hashlib.sha256(base).hexdigest()+'.jpg';(folder/name).write_bytes(base)
+            logo=Image.new('RGBA',(470,140));logo.paste((255,0,0,255),(30,20,430,120));encoded=io.BytesIO();logo.save(encoded,'PNG')
+            calls=[];renderer=PosterLogos(root,lambda url:(calls.append(url)or encoded.getvalue()))
+            row={'artwork':BASE+'images/'+name,'officialId':'umc.cmc.test','width':640,'height':800}
+            url='https://is1-ssl.mzstatic.com/image/thumb/example/470x140bb.png'
+            original=dict(row,**renderer.apply(row,url))
+            raised=renderer.reposition(original,True)
+            self.assertNotEqual(raised['artwork'],original['artwork'])
+            with Image.open(root/'docs/home'/raised['artwork'].removeprefix(BASE))as im:
+                self.assertEqual(im.size,(640,800))
+                self.assertLess(im.getpixel((100,530))[1],30)
+                self.assertGreater(im.getpixel((100,665))[1],160)
+            self.assertEqual(renderer.reposition(dict(raised,officialId=row['officialId']),False)['artwork'],original['artwork'])
+            self.assertEqual(len(calls),2)
+            with self.assertRaises(ValueError):renderer.reposition(dict(original,officialId='umc.cmc.other'),True)
     def test_cache_is_bound_to_background_and_logo_and_not_composited_twice(self):
         with tempfile.TemporaryDirectory()as d:
             root=Path(d);folder=root/'docs/home/images';folder.mkdir(parents=True);(root/'data').mkdir()

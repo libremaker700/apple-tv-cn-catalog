@@ -72,6 +72,8 @@ def validate_pages(value):
                 from home_copy import validate_copy
                 assert not topics and ((w,h)==(1920,720) and len(rows)==1 or (w,h)==FEATURE_SIZE and len(rows)>=4) and r['showcaseCopy']['source']==source
                 validate_copy(r['officialId'],r['showcaseCopy'])
+            if 'showcaseCopyPosition'in r:
+                assert not topics and (w,h)==FEATURE_SIZE and len(rows)>=4 and r['showcaseCopyPosition']=='raised-logo-v1' and r.get('logoTreatment')=='official-composite-v1' and 'showcaseCopy'in r
     for page in [value]+value['pages']:
         if page is not value:assert re.fullmatch(r'[a-z0-9-]{1,100}',page['id'])and page['title']and page_url(page['source'])==page['source']
         assert len(page['hero'])<=12 and 1<=len(page['shelves'])<=80

@@ -108,7 +108,7 @@ def collect(catalog,api,image,poster=None):
                 identity=row['officialId']
                 genres=[GENRES[g['name']]for g in by_id[identity].get('genres',[])if g.get('name')in GENRES]
                 copy[identity]={'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
-            # The four-card format uses only the official type and genres, with no description.
+            # Keep catalogue genres as a fallback until official room copy is available.
             for row in enrich({'hero':rows},copy,{},None,0,source_url=source)[0]['hero']:
                 rows[row['rank']-1]['showcaseCopy']=row['copy']
         return {'id':sh['id'],'title':LABELS.get(title,title),'officialTitle':title,'source':source,'layout':layout,'items':rows,'count':len(rows)}

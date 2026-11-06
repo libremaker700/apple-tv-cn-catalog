@@ -100,6 +100,56 @@ class LegacyTopicNotes(unittest.TestCase):
         with self.assertRaises(AssertionError):validate_copy('umc.cmc.test',c)
 
 class ShowcaseCopyTests(unittest.TestCase):
+    def test_featured_copy_uses_the_exact_official_shelf_and_work(self):
+        from home_copy import localize_featured,preserve_featured_copy
+        source='https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus'
+        identities=['umc.cmc.kids','umc.cmc.other','umc.cmc.wrongtype','umc.cmc.blank']
+        rows=[{'officialId':identity,'logoTreatment':'official-composite-v1','artwork':'original'}for identity in identities]
+        shelf={'id':'family','layout':'featured','source':source,'title':'全家共赏','items':rows}
+        works={identity:{'kind':'movie'}for identity in identities}
+        def item(identity,description='',kind='MoviePageIntent'):
+            return {'$kind':'HeroComponent','note':description,'metadataList':{'items':[{'text':'Movie'},{'text':'Animation'},{'text':'Kids & Family'}]},
+                    'explainabilityLine':'#1 in Kids & Family on Apple TV' if identity==identities[0]else'',
+                    'segue':{'destination':{'id':identity,'storefront':'us','$kind':kind}}}
+        page={'shelves':[{'id':'elsewhere','items':[item(identities[1],'Unrelated synopsis.')]},
+                         {'id':'family','items':[item(identities[0],'Official card text.'),item(identities[2],'Wrong type.','ShowPageIntent'),item(identities[3])]}]}
+        pending=copy.deepcopy(shelf)
+        class Poster:
+            def reposition(self,row,raised):
+                self.raised.append((row['officialId'],raised))
+                return {'artwork':'recomposed'}
+            raised=[]
+        cache={};translator=Translator();poster=Poster();report=localize_featured(shelf,page,works,cache,translator,1,poster)
+        self.assertEqual(report['translated'],1)
+        self.assertEqual(report['recomposed'],1)
+        self.assertEqual(poster.raised,[(identities[0],True)])
+        caption=rows[0]['showcaseCopy'];validate_copy(identities[0],caption)
+        self.assertEqual(caption['descriptionEn'],'Official card text.')
+        self.assertEqual(caption['descriptionZh'],'和史努比一起庆祝万圣节。')
+        self.assertEqual(caption['genresZh'],['动画','儿童与家庭'])
+        self.assertEqual(caption['noteZh'],'Apple TV 儿童与家庭榜第1名')
+        self.assertEqual(rows[0]['showcaseCopyPosition'],'raised-logo-v1')
+        self.assertNotIn('showcaseCopy',rows[1]);self.assertNotIn('showcaseCopy',rows[2])
+        self.assertEqual(rows[3]['showcaseCopy']['descriptionZh'],'')
+        self.assertEqual(rows[3]['artwork'],'original')
+        class BrokenPoster:
+            def reposition(self,row,raised):raise ValueError('no image')
+        failed=localize_featured(pending,page,works,cache,translator,2,BrokenPoster())
+        self.assertEqual(failed['artworkPending'],1)
+        self.assertNotIn('showcaseCopy',pending['items'][0])
+        self.assertEqual(pending['items'][0]['artwork'],'original')
+        recovered=localize_featured(pending,page,works,cache,translator,3,poster)
+        self.assertEqual(recovered['cacheHits'],1)
+        self.assertEqual(translator.calls,1)
+        self.assertEqual(pending['items'][0]['showcaseCopyPosition'],'raised-logo-v1')
+        refreshed=dict(shelf,items=[{'officialId':identities[0],'logoTreatment':'official-composite-v1','artwork':'new background'}])
+        preserve_featured_copy({'shelves':[refreshed]},{'shelves':[shelf]},BrokenPoster())
+        self.assertEqual(refreshed['items'][0]['artwork'],rows[0]['artwork'])
+        result=localize_featured(refreshed,{},works,cache,translator,2,poster)
+        self.assertEqual(result['retainedCopy'],1)
+        self.assertEqual(refreshed['items'][0]['showcaseCopy'],caption)
+        self.assertEqual(refreshed['items'][0]['showcaseCopyPosition'],'raised-logo-v1')
+
     def test_featured_heading_uses_verified_franchise_term(self):
         import tempfile
         from unittest.mock import patch

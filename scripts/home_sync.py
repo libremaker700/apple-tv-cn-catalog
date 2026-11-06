@@ -19,6 +19,15 @@ def normalize_image(raw,width,height):
         if im.size==(width,height):return raw
         output=io.BytesIO();ImageOps.fit(im.convert('RGB'),(width,height),method=Image.Resampling.LANCZOS).save(output,'JPEG',quality=95)
         return output.getvalue()
+def image_inventory(value,folder):
+    from home_pages import image_rows
+    images={}
+    for row in image_rows(value):
+        ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes()
+        images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
+    assert sum(x['bytes']for x in images.values())<=96*1024*1024
+    return images
+
 def fetch(url):
     u=urlsplit(url)
     if not (url in (SOURCE,ROOM) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
@@ -129,7 +138,8 @@ def sync():
     from home_pages import collect as collect_official
     from home_titles import remember as remember_home_titles
     previous_home=folder/'home.json'
-    if previous_home.is_file():remember_home_titles(load(previous_home),ROOT)
+    previous=load(previous_home)if previous_home.is_file()else{}
+    if previous:remember_home_titles(previous,ROOT)
     html=fetch(SOURCE).decode('utf-8')
     from poster_logos import PosterLogos
     logos=PosterLogos(ROOT,fetch)
@@ -151,16 +161,12 @@ def sync():
     report['reconciledShows']=reconcile_seasons(value,load(DOCS/'catalog.json'))
     from metadata_policy import restore_display_titles
     restore_display_titles(value.get('works',[]),ROOT)
-    from home_copy import process
-    value,copy_report=process(value,ROOT,html,now)
+    from home_copy import process,preserve_featured_copy
+    preserve_featured_copy(value,previous,logos)
+    value,copy_report=process(value,ROOT,html,now,poster=logos)
     report['copy']=copy_report
     validate(value)
-    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images={}
-    from home_pages import image_rows
-    rows=image_rows(value)
-    for row in rows:
-        ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes();images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
-    assert sum(x['bytes'] for x in images.values())<=96*1024*1024
+    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images=image_inventory(value,folder)
     path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
     manifest={'schema':1,'version':sha,'path':path,'images':images,'checkedAt':now}
     (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))

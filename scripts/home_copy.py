@@ -94,6 +94,68 @@ def showcase_source(shelf, page, works, snapshots):
             return snapshot['copy']
     return None
 
+def featured_source(shelf, page, works):
+    official=next((s for s in page.get('shelves',[])if s.get('id')==shelf['id']),None)
+    if official is None:return {}
+    rows={r['officialId']:r for r in shelf['items']}
+    result={}
+    for item in official.get('items',[]):
+        dest=(item.get('segue')or{}).get('destination')or{}
+        identity=dest.get('id','')
+        if identity not in rows or identity not in works or item.get('$kind')!='HeroComponent':continue
+        kind='MoviePageIntent'if works[identity]['kind']=='movie'else'ShowPageIntent'
+        if dest.get('storefront')!='us' or dest.get('$kind')!=kind:continue
+        metadata=(item.get('metadataList')or{}).get('items',[])
+        genres=[GENRES[m['text']]for m in metadata if isinstance(m,dict)and isinstance(m.get('text'),str)and m['text']in GENRES]
+        if not metadata:genres=rows[identity].get('showcaseCopy',{}).get('genresZh',[])
+        description=item.get('note')
+        result[identity]={'descriptionEn':clean(description)[:1800] if isinstance(description,str)else'',
+                          'badgeEn':'','noteEn':clean(item.get('explainabilityLine'))[:200],
+                          'genresZh':list(dict.fromkeys(genres))[:8]}
+    return result
+
+def localize_featured(shelf, official, works, cache, translator, now, poster):
+    raw=featured_source(shelf,official,works)
+    rows=[dict(row,copy=row['showcaseCopy'])if 'showcaseCopy'in row else row for row in shelf['items']]
+    if not raw and not any(row.get('copy',{}).get('descriptionEn')or row.get('copy',{}).get('noteEn')for row in rows):return None
+    localized,report=enrich({'hero':rows},raw,cache,translator,now,source_url=shelf['source'])
+    report['recomposed']=report['artworkPending']=0
+    for row,translation in zip(shelf['items'],localized['hero']):
+        caption=translation.get('copy')
+        if caption is None:continue
+        try:recomposed=position_featured_copy(row,caption,poster)
+        except (OSError,ValueError,requests.RequestException):report['artworkPending']+=1;continue
+        row['showcaseCopy']=caption
+        report['recomposed']+=int(recomposed)
+    return dict(report,shelfId=shelf['id'],title=shelf['title'],layout='featured')
+
+def position_featured_copy(row, caption, poster):
+    if row.get('logoTreatment')!='official-composite-v1':return False
+    raised=bool(caption['descriptionZh'] or caption['noteZh'])
+    if raised==(row.get('showcaseCopyPosition')=='raised-logo-v1'):return False
+    if poster is None:raise ValueError('Featured logo composition unavailable')
+    row.update(poster.reposition(row,raised))
+    if raised:row['showcaseCopyPosition']='raised-logo-v1'
+    else:row.pop('showcaseCopyPosition',None)
+    return True
+
+def preserve_featured_copy(home, previous, poster=None):
+    def rows(value):
+        for page in [value]+value.get('pages',[]):
+            for shelf in page.get('shelves',[]):
+                if shelf.get('layout')=='featured' and shelf.get('kind')!='topics':
+                    for row in shelf['items']:yield (shelf['source'],shelf['id'],row['officialId']),row
+    old={key:row for key,row in rows(previous)if 'showcaseCopy'in row}
+    for key,row in rows(home):
+        prior=old.get(key)
+        if prior is None:continue
+        caption=prior['showcaseCopy']
+        try:position_featured_copy(row,caption,poster)
+        except (OSError,ValueError,requests.RequestException):
+            if prior.get('showcaseCopyPosition')!='raised-logo-v1':continue
+            for field in ('artwork','logoTreatment','showcaseCopyPosition'):row[field]=prior[field]
+        row['showcaseCopy']=copy.deepcopy(caption)
+
 class Translator:
     def __init__(self,key,model=None,max_length=500):self.max_length=max_length;self.key=key;self.model=model;self.usage={};self.http=0;self.models=[];self.api_error=''
     def translate(self,rows):
@@ -198,7 +260,7 @@ def heading_glossary(title,shelf,works):
         if not any(original.casefold() in other.casefold()for other in selected):selected[original]=terms[original]
     return dict(list(selected.items())[:3])
 
-def process(home,root,html,now,fetcher=None,showcases_only=False):
+def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
     fetcher=fetcher or fetch_topic
     value=copy.deepcopy(home)
     remove_classifications(value)
@@ -250,13 +312,14 @@ def process(home,root,html,now,fetcher=None,showcases_only=False):
         if valid_zh(saved.get('text'),80):shelf['title']=saved['text']
     dump(path,cache)
     for target in [value]+value.get('pages',[]):
-        banners=[s for s in target.get('shelves',[]) if s.get('layout')=='showcase' and len(s['items'])==1 and s.get('kind')!='topics']
-        if not banners and (showcases_only or not target.get('hero')):continue
         url=target.get('source',CHANNEL)
+        banners=[s for s in target.get('shelves',[]) if s.get('layout')=='showcase' and len(s['items'])==1 and s.get('kind')!='topics']
+        featured=[s for s in target.get('shelves',[]) if s.get('layout')=='featured' and s.get('source')==url and s.get('kind')!='topics']
+        if not banners and not featured and (showcases_only or not target.get('hero')):continue
         body=''
         try:body=html if target is value else fetcher(url).decode('utf-8')
         except (ValueError,requests.RequestException):pass
-        if banners:
+        if banners or featured:
             try:official=official_display_page(body,url)
             except ValueError:official={}
             for shelf in banners:
@@ -265,6 +328,9 @@ def process(home,root,html,now,fetcher=None,showcases_only=False):
                 result,report=enrich({'hero':[row]}, {identity:original},cache,translator,now,source_url=shelf['source'])
                 row['showcaseCopy']=result['hero'][0]['copy']
                 showcases.append(dict(report,shelfId=shelf['id'],officialId=identity,title=shelf['title'],status=row['showcaseCopy']['status']))
+            for shelf in featured:
+                report=localize_featured(shelf,official,works,cache,translator,now,poster)
+                if report is not None:showcases.append(report)
         if showcases_only or not target.get('hero'):continue
         try:
             raw=extract(body,dict(target,works=value['works']),allow_partial=True,source_url=url)
@@ -288,16 +354,15 @@ def main():
     import argparse
     parser=argparse.ArgumentParser();parser.add_argument('--showcases-only',action='store_true');args=parser.parse_args()
     from catalog import ROOT,DOCS,load,raw_json
-    from home_sync import fetch,validate,validate_publication
+    from home_sync import fetch,image_inventory,validate,validate_publication
+    from poster_logos import PosterLogos
     folder=DOCS/'home';home=load(folder/'home.json');manifest=load(folder/'version.json');now=int(time.time())
-    value,report=process(home,ROOT,fetch(CHANNEL).decode('utf-8'),now,showcases_only=args.showcases_only);validate(value)
+    value,report=process(home,ROOT,fetch(CHANNEL).decode('utf-8'),now,showcases_only=args.showcases_only,
+                         poster=PosterLogos(ROOT,fetch));validate(value)
     blob=raw_json(value);sha=hashlib.sha256(blob).hexdigest()
     if sha!=manifest['version']:
         path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob)
-        # Keep only active image references after applying user shelf exclusions.
-        from home_pages import image_rows
-        refs={r['artwork'].removeprefix('https://libremaker700.github.io/apple-tv-cn-catalog/home/')for r in image_rows(value)}
-        manifest['images']={k:v for k,v in manifest['images'].items()if k in refs}
+        manifest['images']=image_inventory(value,folder)
         manifest.update(version=sha,path=path,checkedAt=now);(folder/'home.json').write_bytes(blob);(folder/'version.json').write_bytes(raw_json(manifest))
     report.update(version=sha,checkedAt=now,copyVersion=VERSION)
     dump(ROOT/'logs/home-copy.json',report);validate_publication();print(json.dumps(report,ensure_ascii=False))
