@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793969683,
+  "checkedAt": 1793972149,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [],
   "showcases": [
@@ -31,27 +31,14 @@
       "layout": "featured"
     },
     {
-      "requested": 9,
-      "cacheHits": 1,
-      "translated": 9,
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
       "pending": 0,
-      "apiHttp": 200,
+      "apiHttp": 0,
       "retainedCopy": 0,
       "sourceMissing": 0,
-      "model": "gemini-3.5-flash-lite",
-      "usage": {
-        "promptTokenCount": 567,
-        "candidatesTokenCount": 541,
-        "totalTokenCount": 1108,
-        "promptTokensDetails": [
-          {
-            "modality": "TEXT",
-            "tokenCount": 567
-          }
-        ],
-        "serviceTier": "standard"
-      },
-      "recomposed": 10,
+      "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "uts.col.kids-tv-plus-family-time",
       "title": "全家共赏",
@@ -59,7 +46,8 @@
     }
   ],
   "headings": [],
-  "translated": 9,
+  "datedBadgesBackfilled": 8,
+  "translated": 0,
   "pending": 0,
-  "version": "68fff976064911b56737458dc6a2d71ffbb4809162ebd4b8a7683117a41b0d5f"
+  "version": "84d1bc4eeccce12428603512e328b24124fa51cd7cfe9d1f199077e88245c8e1"
 }
