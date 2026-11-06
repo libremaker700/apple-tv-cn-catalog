@@ -1,7 +1,40 @@
 """The active catalog accepts mainland presentation metadata only."""
-import copy,re
+import copy,json,re,unicodedata
 from urllib.parse import urlsplit
 POLICY='mainland-v1'
+
+def restore_display_titles(works, root):
+    """Restore evidenced title separators without changing the chosen name or search scope."""
+    from detail_metadata import valid, work_id
+    path = root / 'data/mainland-catalog.json'
+    baseline = json.loads(path.read_text(encoding='utf-8'))['records'] if path.is_file() else {}
+
+    def key(title):
+        return re.sub(r'[\s:]+', '', unicodedata.normalize('NFKC', title)).casefold()
+
+    for work in works:
+        zh = work.get('zh') or {}
+        current = zh.get('title', '')
+        if not current or re.search(r'[:：]', current):
+            continue
+        reviewed = baseline.get(work.get('slug'), {})
+        official_id = work_id(work)
+        candidates = []
+        if official_id.startswith('umc.cmc.') and reviewed.get('watchUrl', '').rstrip('/').endswith('/' + official_id):
+            candidates.append(reviewed.get('title', ''))
+        packets = zh.get('detailSeasons') or [zh.get('detailMetadata')]
+        for packet in packets:
+            if not valid(packet, work.get('kind')):
+                continue
+            title = packet['title']
+            candidates.append(title)
+            if work.get('kind') == 'series':
+                candidates.append(re.sub(r'\s*(?:第\s*[0-9一二三四五六七八九十百]+\s*季|season\s*\d+)\s*$', '', title, flags=re.I))
+        for title in candidates:
+            if re.search(r'[:：]', title) and key(title) == key(current):
+                zh['title'] = title
+                zh['aliases'] = list(dict.fromkeys([title, current] + zh.get('aliases', [])))
+                break
 
 def allowed_source(url):
     try:

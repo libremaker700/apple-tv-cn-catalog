@@ -149,6 +149,8 @@ def sync():
     from source_availability import apply_cached
     for work in value.get('works',[]):apply_cached(work,ROOT)
     report['reconciledShows']=reconcile_seasons(value,load(DOCS/'catalog.json'))
+    from metadata_policy import restore_display_titles
+    restore_display_titles(value.get('works',[]),ROOT)
     from home_copy import process
     value,copy_report=process(value,ROOT,html,now)
     report['copy']=copy_report

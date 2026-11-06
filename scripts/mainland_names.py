@@ -126,6 +126,8 @@ def republish_home(home,root):
     home=apply_cached(home,root,home=True)
     from source_availability import apply_cached as apply_sources
     for work in home.get('works',[]):apply_sources(work,root)
+    from metadata_policy import restore_display_titles
+    restore_display_titles(home.get('works',[]),root)
     validate(home);folder=root/'docs/home';manifest=load(folder/'version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest();path='releases/'+sha+'/home.json'
     (folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob);(folder/'home.json').write_bytes(blob)
     manifest.update(version=sha,path=path,checkedAt=int(time.time()));(folder/'version.json').write_bytes(raw_json(manifest))

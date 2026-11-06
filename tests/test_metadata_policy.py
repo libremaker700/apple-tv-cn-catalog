@@ -2,11 +2,32 @@ import copy,sys,unittest,tempfile,json
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from metadata_policy import POLICY,allowed_source,clean_zh
+from metadata_policy import POLICY,allowed_source,clean_zh,restore_display_titles
 from title_sources import wiki_patch,Lookup
 import catalog
 
 class Policy(unittest.TestCase):
+    def test_display_punctuation_preserves_identity_and_search_alias(self):
+        watch_url='https://tv.apple.com/us/show/example/umc.cmc.example'
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'data').mkdir()
+            (root/'data/mainland-catalog.json').write_text(json.dumps({'records':{
+                'example':{'title':'主标题：副标题','watchUrl':watch_url}
+            }}),encoding='utf-8')
+            work={'slug':'example','kind':'series','officialIdentity':{'watchUrl':watch_url},
+                  'zh':{'title':'主标题副标题','aliases':['另一译名'],'searchSeason':2}}
+            other=copy.deepcopy(work)
+            other['officialIdentity']['watchUrl']+='2'
+            different=copy.deepcopy(work)
+            different['zh']['title']='主标题副标题2024'
+            restore_display_titles([work,other,different],root)
+            self.assertEqual(work['zh'],{'title':'主标题：副标题','aliases':['主标题：副标题','主标题副标题','另一译名'],'searchSeason':2})
+            self.assertEqual(other['zh']['title'],'主标题副标题')
+            self.assertEqual(different['zh']['title'],'主标题副标题2024')
+            restore_display_titles([work],root)
+            self.assertEqual(len(work['zh']['aliases']),3)
+
     def test_redirect_cannot_reopen_region_endpoint(self):
         class Reply:
             status_code=302
