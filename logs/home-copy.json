@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1793908798,
+  "checkedAt": 1793969683,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [],
   "showcases": [
@@ -15,17 +15,51 @@
       "officialId": "umc.cmc.7grdgbjdq3tiy37f4dc3yeyms",
       "title": "假日经典",
       "status": "ready"
-    }
-  ],
-  "headings": [
+    },
     {
-      "requested": 1,
-      "translated": 1,
+      "requested": 0,
+      "cacheHits": 0,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "recomposed": 0,
+      "artworkPending": 0,
+      "shelfId": "edt.col.6acd7c3d-a004-4a4c-9bc0-0871a0d7063a",
+      "title": "布偶奇遇记的世界",
+      "layout": "featured"
+    },
+    {
+      "requested": 9,
+      "cacheHits": 1,
+      "translated": 9,
+      "pending": 0,
       "apiHttp": 200,
-      "model": "gemini-3.5-flash-lite"
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 567,
+        "candidatesTokenCount": 541,
+        "totalTokenCount": 1108,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 567
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "recomposed": 10,
+      "artworkPending": 0,
+      "shelfId": "uts.col.kids-tv-plus-family-time",
+      "title": "全家共赏",
+      "layout": "featured"
     }
   ],
-  "translated": 1,
+  "headings": [],
+  "translated": 9,
   "pending": 0,
-  "version": "84f684478f51c9cdd69213f59377dfbda2f848f8da71f0b6702696382a2229db"
+  "version": "68fff976064911b56737458dc6a2d71ffbb4809162ebd4b8a7683117a41b0d5f"
 }

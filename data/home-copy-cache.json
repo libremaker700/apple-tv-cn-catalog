@@ -516,6 +516,51 @@
       "text": "布偶奇遇记的世界",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1793908798
+    },
+    "485de542472130fa1d6c59986b167cf06abcd4a639e06426851cf3d1191cbfd7": {
+      "text": "两姐妹在现实生活中的童话人物中寻找失踪的父母。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "bd6ce9e96b59e661016e036d629f4e17654bae3eaa926f575c7067f444ad835b": {
+      "text": "这一节日传统现已面向 Apple TV 订阅用户推出。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "10892d277eaf7b8ca68cbebf303c19e8e9fb31b6c3515548da019b83539688ea": {
+      "text": "与花生帮一起体验充满万圣节氛围的惊悚传统。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "55b56318d5c071da183523feba64336dc6620edcfefad6cb8f4fa7261dc895e9": {
+      "text": "与这只快乐跳舞、心怀大志的小猎犬及朋友们一同开启全新冒险。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "c9edb7c42caf68c0eaf04116947f7fd8c2e7e528f089b9aa6e2e6187dce31fc8": {
+      "text": "与花生帮一同加入史上最疯狂的夏令营。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "dfdd737020def9bd608ad555f7762146623b22187b95efdaf3bf0d74cc829a82": {
+      "text": "欣赏以查理·布朗、史努比及伙伴们为主角的标志性特辑。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "9966dc6f5968aa5dd5dd4493cc798b03d840b794262782df01d285c529bb2f11": {
+      "text": "加入史努比和花生帮，与 NASA 合作展开史诗般的冒险。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "994da8514a76e058c101e6796c0ab24417d3cf43fd108672c2b7d39b471e1d65": {
+      "text": "从标志性的配乐到温暖人心的信息，这部特辑堪称完美的节日作品。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
+    },
+    "f909fdeb27fb397fd982a4eaeb4d8b6f82f579f95549dc36b5539976731680d0": {
+      "text": "与 DJ 兰斯·罗克及其特邀嘉宾一起重温标志性的想象世界。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793969683
     }
   }
 }
