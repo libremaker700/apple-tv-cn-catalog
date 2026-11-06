@@ -1,11 +1,12 @@
 """Render Apple's separate title treatment into public, backwards-compatible JPEGs."""
-import hashlib,io,json,re
+import hashlib,io,re
 from pathlib import Path
 from PIL import Image,ImageOps
 from title_lookup import read,dump
-from home_pages import FEATURE_SIZE
+from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
-def render(base,logo,raised=False):
+FEATURE_LOGO_BOTTOM=248
+def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
     with Image.open(io.BytesIO(base))as im:
         if im.format!='JPEG'or im.size not in((400,600),(1920,720),FEATURE_SIZE):raise ValueError('Invalid poster background')
         canvas=im.convert('RGBA');banner=im.size==(1920,720);featured=im.size==FEATURE_SIZE
@@ -16,7 +17,7 @@ def render(base,logo,raised=False):
         if featured:mark=mark.crop(alpha.getbbox())
         mark=ImageOps.contain(mark,(280,90)if banner else(310,76)if featured else(235,70),Image.Resampling.LANCZOS)
     if banner or featured:
-        x,bottom=(34,232 if raised else 88)if featured else(34,145)
+        x,bottom=(34,featured_bottom)if featured else(34,145)
         canvas.alpha_composite(mark,(x,canvas.height-bottom-mark.height))
         out=io.BytesIO();canvas.convert('RGB').save(out,'JPEG',quality=95,subsampling=0)
         return out.getvalue()
@@ -36,25 +37,43 @@ def render(base,logo,raised=False):
 class PosterLogos:
     def __init__(self,root,fetch):
         self.root=Path(root);self.folder=self.root/'docs/home';self.path=self.root/'data/home-logo-cache.json';self.cache=read(self.path,{'schema':1,'records':{}});self.fetch=fetch;self.count=0
-    def apply(self,row,source,raised=False):
+    def apply(self,row,source,expected_logo=None,legacy=None):
         if not re.fullmatch(r'https://is\d+-ssl\.mzstatic\.com/image/[^\s{}]+\.png',source):raise ValueError('Invalid logo origin')
         ref=row['artwork'].removeprefix(BASE)
         if not re.fullmatch(r'images/[a-f0-9]{64}\.jpg',ref):raise ValueError('Invalid poster origin')
         width,height=row.get('width',400),row.get('height',600)
-        treatment={(1920,720):'official-banner-logo-v1',FEATURE_SIZE:'official-featured-raised-v1'if raised else'official-featured-logo-v1'}.get((width,height),'official-logo-v1')
+        featured=(width,height)==FEATURE_SIZE
+        treatment='official-banner-logo-v1'if (width,height)==(1920,720) else'official-logo-v1'
+        if featured:treatment='official-featured-'+FEATURE_LOGO_LAYOUT+'|'+row['officialId']
         key=hashlib.sha256((treatment+'|'+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
         path=self.folder/old.get('path','missing')
-        if old and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
-            self.count+=1;return dict(artwork=BASE+old['path'],width=width,height=height,logoTreatment='official-composite-v1')
-        logo=self.fetch(source)
-        if len(logo)>4*1024*1024:raise ValueError('Logo is too large')
-        raw=render((self.folder/ref).read_bytes(),logo,raised);dest='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(self.folder/dest).write_bytes(raw)
-        self.cache['records'][key]={'path':dest,'background':ref,'logoSource':source,'logoSha256':hashlib.sha256(logo).hexdigest(),'officialId':row['officialId']};dump(self.path,self.cache);self.count+=1
-        return dict(artwork=BASE+dest,width=width,height=height,logoTreatment='official-composite-v1')
+        if old and (expected_logo is None or expected_logo in (old.get('logoSha256'),old.get('verifiedPriorLogo'))) and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
+            dest=old['path']
+        else:
+            logo=self.fetch(source)
+            if len(logo)>4*1024*1024:raise ValueError('Logo is too large')
+            logo_hash=hashlib.sha256(logo).hexdigest()
+            base=(self.folder/ref).read_bytes()
+            if hashlib.sha256(base).hexdigest()!=Path(ref).stem:raise ValueError('Official background image hash mismatch')
+            reencoded=expected_logo is not None and logo_hash!=expected_logo
+            if reencoded:
+                # A CDN can re-encode the PNG. Only identical archived JPEG bytes prove it is still the same artwork.
+                if legacy is None or hashlib.sha256(render(base,logo,featured_bottom=legacy[1])).hexdigest()!=Path(legacy[0]).stem:
+                    raise ValueError('Official title logo changed since verification')
+            raw=render(base,logo);dest='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(self.folder/dest).write_bytes(raw)
+            record={'path':dest,'background':ref,'logoSource':source,'logoSha256':logo_hash,'officialId':row['officialId']}
+            if reencoded:record['verifiedPriorLogo']=expected_logo
+            self.cache['records'][key]=record;dump(self.path,self.cache)
+        self.count+=1
+        result=dict(artwork=BASE+dest,width=width,height=height,logoTreatment='official-composite-v1')
+        if featured:result.update(showcaseCopyPosition='raised-logo-v1',featuredLogoLayout=FEATURE_LOGO_LAYOUT)
+        return result
 
-    def reposition(self,row,raised):
+    def reposition(self,row):
         ref=row['artwork'].removeprefix(BASE)
         original=next((r for r in self.cache['records'].values()if r.get('path')==ref and r.get('officialId')==row['officialId']),None)
-        if original is None or (row.get('width'),row.get('height'))!=FEATURE_SIZE:
+        if original is None or (row.get('width'),row.get('height'))!=FEATURE_SIZE or not re.fullmatch(r'[a-f0-9]{64}',original.get('logoSha256','')):
             raise ValueError('Missing verified featured logo composition')
-        return self.apply(dict(row,artwork=BASE+original['background']),original['logoSource'],raised)
+        bottom=232 if row.get('showcaseCopyPosition')=='raised-logo-v1'else 88
+        if row.get('featuredLogoLayout')==FEATURE_LOGO_LAYOUT:bottom=FEATURE_LOGO_BOTTOM
+        return self.apply(dict(row,artwork=BASE+original['background']),original['logoSource'],expected_logo=original['logoSha256'],legacy=(ref,bottom))

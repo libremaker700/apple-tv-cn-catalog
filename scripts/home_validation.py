@@ -56,7 +56,7 @@ def validate_pages(value):
             from detail_metadata import valid as valid_detail
             zh=w['zh'];assert clean_zh(zh)is not None and zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
             assert all(valid_detail(packet,w['kind'])for packet in zh.get('detailSeasons',[]))and(not zh.get('detailMetadata')or valid_detail(zh['detailMetadata'],w['kind']))
-    from home_pages import FEATURE_SIZE
+    from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
     def rows(rows,w,h,topics=False,source=None):
         seen=set()
         for r in rows:
@@ -74,6 +74,8 @@ def validate_pages(value):
                 validate_copy(r['officialId'],r['showcaseCopy'])
             if 'showcaseCopyPosition'in r:
                 assert not topics and (w,h)==FEATURE_SIZE and len(rows)>=4 and r['showcaseCopyPosition']=='raised-logo-v1' and r.get('logoTreatment')=='official-composite-v1' and 'showcaseCopy'in r
+            if 'featuredLogoLayout'in r:
+                assert r['featuredLogoLayout']==FEATURE_LOGO_LAYOUT and r.get('showcaseCopyPosition')=='raised-logo-v1'
     for page in [value]+value['pages']:
         if page is not value:assert re.fullmatch(r'[a-z0-9-]{1,100}',page['id'])and page['title']and page_url(page['source'])==page['source']
         assert len(page['hero'])<=12 and 1<=len(page['shelves'])<=80

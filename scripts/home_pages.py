@@ -10,6 +10,7 @@ LABELS={'Top 10 TV Shows':'Top 10 电视剧','Top 10 Movies':'Top 10 电影','Ne
 LABELS.update({'Coming to Apple TV+':'即将上线','Latest Trailers':'最新预告','Explore Upcoming Apple Originals & Add to Watchlist':'即将上线的原创作品','Recent Highlights':'近期精选','Sports':'体育','Nature':'自然','Real-Life Stories':'真实故事','Music':'音乐','All Nonfiction Movies':'全部非虚构电影','All Nonfiction TV Shows':'全部非虚构剧集','Spies & Detectives':'间谍与侦探','Historical Epics':'历史史诗','Sci-Fi Action':'科幻动作','All Action Adventure':'全部动作冒险','Action':'动作','Comedy':'喜剧','Drama':'剧情','Nonfiction':'非虚构','Sci-Fi':'科幻','Kids & Family':'儿童与家庭','Crime Dramas':'犯罪剧情','Workplace Dramas':'职场故事','Go Back in Time':'回望历史','All Drama TV Shows':'全部剧情剧集','Feel-Good Comedies':'轻松治愈喜剧','Dark Comedies':'黑色喜剧','Funny Co-Workers':'职场喜剧','All Comedy TV Shows':'全部喜剧剧集','Based on a Book':'根据文学作品改编','Sci-Fi Thrillers':'科幻惊悚','Psychological Thrillers':'心理惊悚','Action Thrillers':'动作惊悚','All Thrillers':'全部惊悚作品','Crime Comedies':'犯罪喜剧','Crime Documentaries':'犯罪纪录片','All Crime':'全部犯罪题材','Great Movies Now on Apple TV':'Apple TV 正在热播','Comedies':'喜剧电影','Dramas':'剧情电影','Documentaries':'纪录片'})
 LABELS['A Holiday Classic']='节日经典'
 FEATURE_SIZE=(640,800)
+FEATURE_LOGO_LAYOUT='aligned-31-v1'
 
 def excluded_home_shelf(shelf):
     title=(shelf.get('header')or{}).get('title')or shelf.get('officialTitle')or''

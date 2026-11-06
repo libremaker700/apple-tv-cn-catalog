@@ -3,6 +3,7 @@ import copy,hashlib,json,os,re,time
 from datetime import date
 import requests
 from home_sources import CHANNEL,data_page
+from home_pages import FEATURE_LOGO_LAYOUT
 from title_lookup import read,dump
 from gemini_titles import GeminiTitles
 
@@ -142,26 +143,27 @@ def featured_source(shelf, page, works):
 def localize_featured(shelf, official, works, cache, translator, now, poster):
     raw=featured_source(shelf,official,works)
     rows=[dict(row,copy=row['showcaseCopy'])if 'showcaseCopy'in row else row for row in shelf['items']]
-    if not raw and not any(row.get('copy',{}).get('descriptionEn')or row.get('copy',{}).get('noteEn')for row in rows):return None
+    if not raw and not any('copy'in row for row in rows):return None
     localized,report=enrich({'hero':rows},raw,cache,translator,now,source_url=shelf['source'])
     report['recomposed']=report['artworkPending']=0
+    next_rows=[]
     for row,translation in zip(shelf['items'],localized['hero']):
+        row=dict(row);next_rows.append(row)
         caption=translation.get('copy')
         if caption is None:continue
-        try:recomposed=position_featured_copy(row,caption,poster)
+        try:recomposed=position_featured_copy(row,poster)
         except (OSError,ValueError,requests.RequestException):report['artworkPending']+=1;continue
         row['showcaseCopy']=caption
         report['recomposed']+=int(recomposed)
+    # Never activate a mixture of new and old title heights in one shelf.
+    if report['artworkPending']:report['recomposed']=0
+    else:shelf['items'][:]=next_rows
     return dict(report,shelfId=shelf['id'],title=shelf['title'],layout='featured')
 
-def position_featured_copy(row, caption, poster):
-    if row.get('logoTreatment')!='official-composite-v1':return False
-    raised=bool(caption['descriptionZh'] or caption['noteZh'])
-    if raised==(row.get('showcaseCopyPosition')=='raised-logo-v1'):return False
+def position_featured_copy(row, poster):
+    if row.get('logoTreatment')!='official-composite-v1' or row.get('featuredLogoLayout')==FEATURE_LOGO_LAYOUT:return False
     if poster is None:raise ValueError('Featured logo composition unavailable')
-    row.update(poster.reposition(row,raised))
-    if raised:row['showcaseCopyPosition']='raised-logo-v1'
-    else:row.pop('showcaseCopyPosition',None)
+    row.update(poster.reposition(row))
     return True
 
 def preserve_featured_copy(home, previous, poster=None):
@@ -175,10 +177,11 @@ def preserve_featured_copy(home, previous, poster=None):
         prior=old.get(key)
         if prior is None:continue
         caption=prior['showcaseCopy']
-        try:position_featured_copy(row,caption,poster)
+        try:position_featured_copy(row,poster)
         except (OSError,ValueError,requests.RequestException):
             if prior.get('showcaseCopyPosition')!='raised-logo-v1':continue
             for field in ('artwork','logoTreatment','showcaseCopyPosition'):row[field]=prior[field]
+            if prior.get('featuredLogoLayout')==FEATURE_LOGO_LAYOUT:row['featuredLogoLayout']=FEATURE_LOGO_LAYOUT
         row['showcaseCopy']=copy.deepcopy(caption)
 
 class Translator:

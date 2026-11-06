@@ -152,14 +152,14 @@ class ShowcaseCopyTests(unittest.TestCase):
                          {'id':'family','items':[item(identities[0],'Official card text.'),item(identities[2],'Wrong type.','ShowPageIntent'),item(identities[3])]}]}
         pending=copy.deepcopy(shelf)
         class Poster:
-            def reposition(self,row,raised):
-                self.raised.append((row['officialId'],raised))
-                return {'artwork':'recomposed'}
+            def reposition(self,row):
+                self.raised.append(row['officialId'])
+                return {'artwork':'recomposed','showcaseCopyPosition':'raised-logo-v1','featuredLogoLayout':'aligned-31-v1'}
             raised=[]
         cache={};translator=Translator();poster=Poster();report=localize_featured(shelf,page,works,cache,translator,1,poster)
         self.assertEqual(report['translated'],1)
-        self.assertEqual(report['recomposed'],1)
-        self.assertEqual(poster.raised,[(identities[0],True)])
+        self.assertEqual(report['recomposed'],2)
+        self.assertEqual(poster.raised,[identities[0],identities[3]])
         caption=rows[0]['showcaseCopy'];validate_copy(identities[0],caption)
         self.assertEqual(caption['descriptionEn'],'Official card text.')
         self.assertEqual(caption['descriptionZh'],'和史努比一起庆祝万圣节。')
@@ -168,13 +168,16 @@ class ShowcaseCopyTests(unittest.TestCase):
         self.assertEqual(rows[0]['showcaseCopyPosition'],'raised-logo-v1')
         self.assertNotIn('showcaseCopy',rows[1]);self.assertNotIn('showcaseCopy',rows[2])
         self.assertEqual(rows[3]['showcaseCopy']['descriptionZh'],'')
-        self.assertEqual(rows[3]['artwork'],'original')
+        self.assertEqual(rows[3]['featuredLogoLayout'],'aligned-31-v1')
         class BrokenPoster:
-            def reposition(self,row,raised):raise ValueError('no image')
+            def reposition(self,row):
+                if row['officialId']==identities[0]:raise ValueError('no image')
+                return poster.reposition(row)
         failed=localize_featured(pending,page,works,cache,translator,2,BrokenPoster())
         self.assertEqual(failed['artworkPending'],1)
         self.assertNotIn('showcaseCopy',pending['items'][0])
         self.assertEqual(pending['items'][0]['artwork'],'original')
+        self.assertNotIn('featuredLogoLayout',pending['items'][3])
         recovered=localize_featured(pending,page,works,cache,translator,3,poster)
         self.assertEqual(recovered['cacheHits'],1)
         self.assertEqual(translator.calls,1)
@@ -186,6 +189,24 @@ class ShowcaseCopyTests(unittest.TestCase):
         self.assertEqual(result['retainedCopy'],1)
         self.assertEqual(refreshed['items'][0]['showcaseCopy'],caption)
         self.assertEqual(refreshed['items'][0]['showcaseCopyPosition'],'raised-logo-v1')
+
+    def test_copy_only_recomposes_genre_only_legacy_poster_when_room_is_missing(self):
+        from home_copy import localize_featured
+        identity='umc.cmc.test'
+        source='https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus'
+        caption={'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':['动画']}
+        translator=Translator()
+        original,_=enrich({'hero':[{'officialId':identity}]},{identity:caption},{},translator,1,source_url=source)
+        old_copy=original['hero'][0]['copy']
+        shelf={'id':'legacy-fraggle','source':source,'title':'布偶奇遇记的世界','items':[{'officialId':identity,'showcaseCopy':old_copy,'logoTreatment':'official-composite-v1','artwork':'old'}]}
+        class Poster:
+            def reposition(self,row):
+                return {'artwork':'new','showcaseCopyPosition':'raised-logo-v1','featuredLogoLayout':'aligned-31-v1'}
+        report=localize_featured(shelf,{}, {},{},translator,2,Poster())
+        self.assertEqual(report['recomposed'],1)
+        self.assertEqual(shelf['items'][0]['showcaseCopy'],old_copy)
+        self.assertEqual(translator.calls,0)
+        self.assertEqual(localize_featured(shelf,{}, {},{},translator,3,Poster())['recomposed'],0)
 
     def test_featured_heading_uses_verified_franchise_term(self):
         import tempfile
