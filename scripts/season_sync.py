@@ -44,6 +44,24 @@ def label_seasons(entry):
 def public_seasons(rows):
     return [{k:v for k,v in row.items() if k not in ('checkedAt','imageCheckedAt')} for row in rows]
 
+def apply_reviewed_summaries(entries, root):
+    from metadata_policy import allowed_source
+    path = root / 'data/reviewed-season-summaries.json'
+    if not path.is_file():
+        return
+    reviewed = json.loads(path.read_text(encoding='utf-8'))
+    for entry in entries:
+        for season in entry.get('seasons', []):
+            row = reviewed.get(season.get('officialId'))
+            if not row or season.get('metadataStatus') != 'verified':
+                continue
+            if any(str(season.get(field)) != str(row[field]) for field in ('showId', 'season', 'year')):
+                continue
+            summary = chinese_summary(row['summary'])
+            current = chinese_summary(season.get('summary'))
+            if summary and current in ('', summary) and allowed_source(row['source']):
+                season.update(summary=summary, summaryPending=False, summarySource=row['source'])
+
 def parse_show(text,show_id,allow_partial=False):
     blocks=Scripts(text).blocks
     packed=next((v for a,v in blocks if a.get('id')=='serialized-server-data'),None)
