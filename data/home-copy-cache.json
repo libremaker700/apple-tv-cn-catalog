@@ -469,13 +469,19 @@
       "nextRetry": 1793929245
     },
     "f1db82604d0b10bc6f3ea4878f5f592be6850228f80fd265e6e4b2e5936bb672": {
-      "nextRetry": 1793929245
+      "text": "广阔天地",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793980123
     },
     "826cf496115a0a248f1213ed79aac1b3133f6c2bed449de9bf4c0c6c2d4e2743": {
-      "nextRetry": 1793929245
+      "text": "趣味学习",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793980123
     },
     "6c7dee0646e41087546458c9ca41d4b9442491798eae8f06169e319f0d3d5f06": {
-      "nextRetry": 1793929245
+      "text": "取材真实生活",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1793980123
     },
     "8cf7012cd15de84b5ed81b2e5fa622bf6e651b857dbd190372ae715a00e28f8f": {
       "text": "文斯·沃恩在天堂的阴暗面惹上了麻烦。",
