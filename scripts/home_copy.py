@@ -13,6 +13,17 @@ def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_a
 def clean(value):return re.sub(r'\s+',' ',str(value or '')).strip()
 def valid_zh(text,max_length=500):return isinstance(text,str)and 0<len(text)<=max_length and bool(re.search(r'[\u3400-\u9fff]',text))and not re.search(r'<|>|https?://|AIza|tvly-',text)
 
+def remove_classifications(home):
+    for page in [home]+home.get('pages',[]):
+        rows=page.get('hero',[])+[r for shelf in page.get('shelves',[])for r in shelf['items'] if 'showcaseCopy'in r]
+        for row in rows:
+            for field in ('copy','showcaseCopy'):
+                caption=row.get(field,{})
+                if 'contentRating' not in caption:continue
+                del caption['contentRating']
+                source={k:caption[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
+                caption['sourceHash']=digest([row['officialId'],source])
+
 def fixed(text):
     text=clean(text)
     known={'':'','New':'新上线','All Episodes Now Available':'全集已上线','Another Season Is Coming':'新一季即将上线'}
@@ -59,8 +70,7 @@ def extract(html,home,allow_partial=False,source_url=CHANNEL):
         if dest.get('storefront')!='us' or dest.get('$kind')!=('MoviePageIntent'if w['kind']=='movie'else'ShowPageIntent'):raise ValueError('Copy identity mismatch')
         # Only these public display strings survive; offers, sessions and video URLs never do.
         metadata=item.get('primaryMetadata');genres=metadata[1:]if isinstance(metadata,list)and metadata else w.get('genres',[])
-        rating=next((b.get('fallbackText')for b in item.get('ratingBadges',[])if isinstance(b,dict)and b.get('$type')=='rating'and b.get('fallbackText')in RATINGS),'')
-        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2],'contentRating':rating}
+        result[identity]={'descriptionEn':clean(item.get('description'))[:1800],'badgeEn':clean(item.get('badge'))[:200],'noteEn':clean(item.get('explainabilityLine'))[:200],'genresZh':[GENRES[g]for g in genres if isinstance(g,str)and g in GENRES][:2]}
     if not allow_partial and not all(r['officialId']in result for r in home['hero']):raise ValueError('Incomplete official hero copy')
     if not result:raise ValueError('Official hero copy unavailable')
     return result
@@ -191,6 +201,7 @@ def heading_glossary(title,shelf,works):
 def process(home,root,html,now,fetcher=None,showcases_only=False):
     fetcher=fetcher or fetch_topic
     value=copy.deepcopy(home)
+    remove_classifications(value)
     from home_pages import excluded_home_shelf
     value['shelves']=[s for s in value.get('shelves',[])if not excluded_home_shelf(s)]
     path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})

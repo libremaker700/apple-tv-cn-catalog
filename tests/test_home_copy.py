@@ -46,18 +46,26 @@ class CopyTests(unittest.TestCase):
         html='<script id="serialized-server-data">'+json.dumps(data)+'</script>'
         result=extract(html,self.home);self.assertNotIn('private',json.dumps(result))
         with self.assertRaises(ValueError):extract(html.replace('MoviePageIntent','ShowPageIntent'),self.home)
-    def test_official_rating_and_primary_genres_not_inferred(self):
+    def test_primary_genres_are_kept_and_classification_ignored(self):
         item={'primaryMetadata':['Movie','Animation','Classics'],'ratingBadges':[{'$type':'rating','fallbackText':'G'}],'segue':{'destination':{'id':'umc.cmc.test','storefront':'us','$kind':'MoviePageIntent'}}}
         def html():return '<script id="serialized-server-data">'+json.dumps({'data':[{'intent':{'$kind':'ChannelPageIntent','id':'tvs.sbd.4000','storefront':'us'},'data':{'shelves':[{'id':'uts.col.tv-plus-epic-stage','items':[item]}]}}]})+'</script>'
-        c=extract(html(),self.home)['umc.cmc.test'];self.assertEqual(c['contentRating'],'G');self.assertEqual(c['genresZh'],['动画','经典'])
-        item['ratingBadges'][0]['fallbackText']='invented';self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')
-        item.pop('ratingBadges');self.assertEqual(extract(html(),self.home)['umc.cmc.test']['contentRating'],'')
+        c=extract(html(),self.home)['umc.cmc.test'];self.assertNotIn('contentRating',c);self.assertEqual(c['genresZh'],['动画','经典'])
+
+    def test_legacy_classification_is_removed_without_retranslating(self):
+        from home_copy import remove_classifications,digest
+        source=dict(self.raw['umc.cmc.test'],contentRating='G')
+        original,_=enrich(self.home,self.raw,{},Translator(),100)
+        legacy=copy.deepcopy(original)
+        legacy['hero'][0]['copy'].update(contentRating='G',sourceHash=digest(['umc.cmc.test',source]))
+        validate_copy('umc.cmc.test',legacy['hero'][0]['copy'])
+        remove_classifications(legacy)
+        self.assertEqual(legacy,original)
 
 class SharedCopyTests(unittest.TestCase):
     def test_new_hero_never_duplicates_shared_translation(self):
-        t=Translator();home={'hero':[{'officialId':'umc.cmc.new'}]};raw={'umc.cmc.new':{'descriptionEn':'New English copy.','badgeEn':'New','noteEn':'','genresZh':['犯罪'],'contentRating':'TV-MA'}}
+        t=Translator();home={'hero':[{'officialId':'umc.cmc.new'}]};raw={'umc.cmc.new':{'descriptionEn':'New English copy.','badgeEn':'New','noteEn':'','genresZh':['犯罪']}}
         result,report=enrich(home,raw,{'records':{}},t,100,{'umc.cmc.new':True})
-        self.assertEqual(t.calls,0);self.assertEqual(report['requested'],0);self.assertEqual(result['hero'][0]['copy']['contentRating'],'TV-MA')
+        self.assertEqual(t.calls,0);self.assertEqual(report['requested'],0);self.assertEqual(result['hero'][0]['copy']['genresZh'],['犯罪'])
 
 class TopicCopyTests(unittest.TestCase):
     def test_topic_copy_is_contextual_and_same_original_translates_once(self):
