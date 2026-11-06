@@ -1,5 +1,6 @@
 """Translate official homepage display copy, independently of title/source matching."""
 import copy,hashlib,json,os,re,time
+from datetime import date
 import requests
 from home_sources import CHANNEL,data_page
 from title_lookup import read,dump
@@ -8,6 +9,7 @@ from gemini_titles import GeminiTitles
 VERSION='hero-copy-zh-cn-v2'
 GENRES={'Action':'动作','Adventure':'冒险','Animation':'动画','Classics':'经典','Comedy':'喜剧','Crime':'犯罪','Documentary':'纪录片','Drama':'剧情','Family':'家庭','Fantasy':'奇幻','History':'历史','Horror':'恐怖','Kids & Family':'儿童与家庭','Music':'音乐','Mystery':'悬疑','Romance':'爱情','Sci-Fi':'科幻','Sports':'体育','Thriller':'惊悚','War':'战争','Western':'西部','Holiday':'节日','Biography':'传记','Educational':'教育','Musical':'歌舞','News':'新闻','Reality':'真人秀','Short Films':'短片','Talk Show':'脱口秀','Travel':'旅行','War & Military':'战争与军事','Young Adult':'青少年','Independent':'独立电影','Interview':'访谈','LGBTQ':'多元题材','Action Comedy':'动作喜剧','Anthology Series':'单元剧','Comedy Series':'喜剧','Documentary Series':'纪录片','Docuseries':'纪录片','Drama Series':'剧情','Limited Series':'限定剧','Short Film':'短片','Special':'特别节目'}
 RATINGS={'TV-Y','TV-Y7','TV-Y7-FV','TV-G','TV-PG','TV-14','TV-MA','G','PG','PG-13','R','NC-17','NR'}
+MONTHS=('january','february','march','april','may','june','july','august','september','october','november','december')
 
 def digest(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 def clean(value):return re.sub(r'\s+',' ',str(value or '')).strip()
@@ -38,6 +40,28 @@ def fixed(text):
     m=re.fullmatch(r'((?:19|20)\d{2}) Emmy® Winner',text)
     return m[1]+'年艾美奖获奖作品'if m else ''
 
+def dated_badge(text):
+    match=re.fullmatch(r'(New Season|Coming) ([a-z]{3,9})\.? ([0-9]{1,2})',clean(text),re.I)
+    if match is None:return ''
+    name=match[2].lower()
+    month=next((n for n,word in enumerate(MONTHS,1)if name in (word,word[:3])),9 if name=='sept'else 0)
+    try:release=date(2000,month,int(match[3]))
+    except ValueError:return ''
+    prefix='新一季 ' if match[1].casefold()=='new season' else ''
+    return f'{prefix}{release.month}月{release.day}日上线'
+
+def fixed_badge(text):
+    return dated_badge(text) or fixed(text)
+
+def localize_cached_badges(home):
+    updated=0
+    for page in [home]+home.get('pages',[]):
+        for row in page.get('hero',[]):
+            caption=row.get('copy',{})
+            text=dated_badge(caption.get('badgeEn',''))
+            if text and caption.get('badgeZh')!=text:caption['badgeZh']=text;updated+=1
+    return updated
+
 def validate_copy(identity,c):
     required={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
     assert required<=set(c)<=required|{'contentRating'}
@@ -49,7 +73,8 @@ def validate_copy(identity,c):
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
     if 'contentRating'in c:source['contentRating']=c['contentRating']
     legacy_empty_note=c['noteZh']==''and bool(re.fullmatch(r'#\d{1,3} in .+ on Apple TV',c['noteEn']))and bool(fixed(c['noteEn']))
-    assert c['sourceHash']==digest([identity,source])and (c['noteZh']==fixed(c['noteEn'])or legacy_empty_note)and c['badgeZh']==fixed(c['badgeEn'])
+    legacy_empty_badge=c['badgeZh']==''and bool(dated_badge(c['badgeEn']))
+    assert c['sourceHash']==digest([identity,source])and (c['noteZh']==fixed(c['noteEn'])or legacy_empty_note)and (c['badgeZh']==fixed_badge(c['badgeEn'])or legacy_empty_badge)
     assert not c['descriptionZh']or valid_zh(c['descriptionZh'])
     assert c['status']==('ready'if not c['descriptionEn']or valid_zh(c['descriptionZh'])else'pending')
     assert c['translationMethod']in(('machine','reviewed')if c['descriptionZh']else('pending',))
@@ -227,7 +252,7 @@ def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL):
     for row in out['hero']:
         if row['officialId']not in raw:continue
         identity=row['officialId'];source=raw[identity];record=records.get(keys[identity],{});translated=record.get('text','')
-        c=dict(source,source=source_url,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
+        c=dict(source,source=source_url,sourceHash=digest([identity,source]),descriptionZh=translated,badgeZh=fixed_badge(source['badgeEn']),noteZh=fixed(source['noteEn']),status='ready'if not source['descriptionEn']or valid_zh(translated)else'pending',translationMethod=record.get('method','machine')if translated else'pending')
         if c['status']=='pending':report['pending']+=1
         row['copy']=c
     return out,report
@@ -264,6 +289,7 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
     fetcher=fetcher or fetch_topic
     value=copy.deepcopy(home)
     remove_classifications(value)
+    updated_badges=localize_cached_badges(value)
     from home_pages import excluded_home_shelf
     value['shelves']=[s for s in value.get('shelves',[])if not excluded_home_shelf(s)]
     path=root/'data/home-copy-cache.json';cache=read(path,{'records':{}})
@@ -346,7 +372,7 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
                 cache.setdefault('records',{})[digest([VERSION,identity,source['descriptionEn']])]={'text':record['descriptionZh'],'method':'reviewed','model':'human-review'}
         enriched,report=enrich(dict(target,works=value['works']),raw,cache,translator,now,source_url=url)
         target['hero']=enriched['hero'];pages.append(dict(report,source=url));dump(path,cache)
-    report={'checkedAt':now,'copyVersion':VERSION,'pages':pages,'showcases':showcases,'headings':heading_report,'translated':sum(p.get('translated',0)for p in pages+showcases+heading_report),'pending':sum(p.get('pending',0)for p in pages+showcases)+sum(not valid_zh(cache['records'].get(key,{}).get('text'),80)for key in {key for _,key in heading_rows})}
+    report={'checkedAt':now,'copyVersion':VERSION,'pages':pages,'showcases':showcases,'headings':heading_report,'datedBadgesBackfilled':updated_badges,'translated':sum(p.get('translated',0)for p in pages+showcases+heading_report),'pending':sum(p.get('pending',0)for p in pages+showcases)+sum(not valid_zh(cache['records'].get(key,{}).get('text'),80)for key in {key for _,key in heading_rows})}
     dump(path,cache);dump(root/'logs/home-copy.json',report)
     return value,report
 

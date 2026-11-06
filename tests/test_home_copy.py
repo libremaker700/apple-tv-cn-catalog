@@ -1,7 +1,7 @@
 import copy,json,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from home_copy import enrich,fixed,extract,validate_copy
+from home_copy import enrich,fixed,fixed_badge,extract,validate_copy
 from home_sources import CHANNEL
 
 class Translator:
@@ -66,6 +66,43 @@ class SharedCopyTests(unittest.TestCase):
         t=Translator();home={'hero':[{'officialId':'umc.cmc.new'}]};raw={'umc.cmc.new':{'descriptionEn':'New English copy.','badgeEn':'New','noteEn':'','genresZh':['犯罪']}}
         result,report=enrich(home,raw,{'records':{}},t,100,{'umc.cmc.new':True})
         self.assertEqual(t.calls,0);self.assertEqual(report['requested'],0);self.assertEqual(result['hero'][0]['copy']['genresZh'],['犯罪'])
+
+class DatedBadgeTests(unittest.TestCase):
+    def test_explicit_official_dates_are_localized_and_validated(self):
+        self.assertEqual(fixed_badge('New Season Dec\u00a02'),'新一季 12月2日上线')
+        self.assertEqual(fixed_badge('Coming Nov 13'),'11月13日上线')
+        self.assertEqual(fixed_badge('Coming January 22'),'1月22日上线')
+        self.assertEqual(fixed_badge('Coming Sept. 6'),'9月6日上线')
+        for text in ('Coming February 30','New Season Foo 2','Coming Dec 0','Coming Dec 32','Coming Friday','New Season Dec 2 teaser'):
+            self.assertEqual(fixed_badge(text),'')
+        self.assertEqual(fixed_badge('New'),'新上线')
+
+    def test_enrich_and_copy_only_backfill_derive_from_existing_official_date(self):
+        from tempfile import TemporaryDirectory
+        from unittest.mock import patch
+        from home_copy import process
+        identity='umc.cmc.test'
+        home={'hero':[{'officialId':identity}],'works':[]}
+        raw={identity:{'descriptionEn':'','badgeEn':'New Season Dec 2','noteEn':'','genresZh':[]}}
+        translator=Translator()
+        new,_=enrich(home,raw,{},translator,1)
+        current=new['hero'][0]['copy']
+        self.assertEqual(current['badgeZh'],'新一季 12月2日上线')
+        validate_copy(identity,current)
+        with self.assertRaises(AssertionError):
+            validate_copy(identity,dict(current,badgeZh='新一季 12月3日上线'))
+        legacy=dict(current,badgeZh='')
+        validate_copy(identity,legacy)
+        home['hero'][0]['copy']=legacy
+        source='https://tv.apple.com/us/room/coming-to-appletv/edt.item.example'
+        home['pages']=[{'source':source,'hero':[{'officialId':identity,'copy':dict(legacy,source=source)}]}]
+        with TemporaryDirectory()as directory,patch('home_copy.Translator',return_value=translator):
+            result,report=process(home,Path(directory),'',2,showcases_only=True)
+        self.assertEqual(report['datedBadgesBackfilled'],2)
+        self.assertEqual(result['hero'][0]['copy'],current)
+        self.assertEqual(result['pages'][0]['hero'][0]['copy'],dict(current,source=source))
+        self.assertEqual(home['hero'][0]['copy'],legacy)
+        self.assertEqual(translator.calls,0)
 
 class TopicCopyTests(unittest.TestCase):
     def test_topic_copy_is_contextual_and_same_original_translates_once(self):
