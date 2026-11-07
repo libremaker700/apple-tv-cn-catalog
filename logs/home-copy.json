@@ -1,10 +1,10 @@
 {
-  "checkedAt": 1794058879,
+  "checkedAt": 1794065104,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
       "requested": 0,
-      "cacheHits": 9,
+      "cacheHits": 8,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
@@ -212,5 +212,5 @@
   "badgesBackfilled": 0,
   "translated": 0,
   "pending": 0,
-  "version": "56d1c352c86f63065cdcb4275cfbc874aefa853942b27d7d30cea6220438471a"
+  "version": "ae7cd4fdec241793d5f1c10a5f4b3ce580562c41dcf190e72917bb62ab258206"
 }
