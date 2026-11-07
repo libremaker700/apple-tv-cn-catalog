@@ -2,7 +2,7 @@
 
 候选编号只用于定位条目；不是中文名、季数、年份或版本的自动批准。保留原有已核实结果，不把第一季资料套给后续季。没有候选或请求失败不等于未收录。
 
-检查时间：2026-11-07T04:34:16+00:00
+检查时间：2026-11-07T11:04:20+00:00
 
 | 英文原名 | 当前中文名 | 结果 | 当前年／季 | 候选条目 |
 |---|---|---|---|---|
@@ -51,7 +51,7 @@
 | Tropic Thunder | 热带惊雷 | 已核实名称保留在缓存，本期目录无此作品 |  / 0 | [1994879](https://movie.douban.com/subject/1994879/) |
 | Twas the Fight Before Christmas | 圣诞讼 | 已核实中文名，保留现有资料 | 2021 / 0 | [35657015](https://movie.douban.com/subject/35657015/) |
 | Way of the Warrior Kid | 海豹小子 | 已核实中文名，保留现有资料 | 2026 / 0 | [36877090](https://movie.douban.com/subject/36877090/) |
-| Wonder Pets | 神奇宠物救援队 | 已核实名称保留在缓存，本期目录无此作品 |  / 1 | [5238948](https://movie.douban.com/subject/5238948/) |
+| Wonder Pets | 神奇宠物救援队 | 已核实中文名，保留现有资料 | 2006 / 1 | [5238948](https://movie.douban.com/subject/5238948/) |
 | Wonder Pets: In the City | — | 候选季数与当前季不同，未套用资料 | 2026 / 2 | [37135394](https://movie.douban.com/subject/37135394/) |
 | Yo Gabba GabbaLand! | — | 候选季数与当前季不同，未套用资料 | 2026 / 2 | [36988909](https://movie.douban.com/subject/36988909/) |
 | You Would Do It Too (Tú También lo Harías) | 大巴劫案疑云 | 已核实中文名，保留现有资料 | 2024 / 1 | [35853143](https://movie.douban.com/subject/35853143/) |

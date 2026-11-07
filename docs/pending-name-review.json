@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-07T04:34:16+00:00",
+  "checkedAt": "2026-11-07T11:04:20+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": true,
@@ -4901,14 +4901,1502 @@
           }
         ]
       },
+      "status": "identity_no_chinese_name"
+    },
+    {
+      "slug": "argylle",
+      "en": "Argylle",
+      "year": "2024",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "argylle",
+        "en": "Argylle",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "阿盖尔：神秘特工",
+            "机密特务：阿盖尔",
+            "特工亚皆老",
+            "阿吉尔"
+          ],
+          "aiSources": [
+            {
+              "title": "阿盖尔：神秘特工 - 维基百科，自由的百科全书",
+              "url": "https://zh.wikipedia.org/zh-cn/%E6%A9%9F%E5%AF%86%E7%89%B9%E5%8B%99%EF%BC%9A%E9%98%BF%E8%93%8B%E7%88%BE"
+            },
+            {
+              "title": "阿盖尔：神秘特工 Argylle - 火星研究社",
+              "url": "https://huo720.com/sub/35520056"
+            },
+            {
+              "title": "阿盖尔：神秘特工 Argylle 海报",
+              "url": "https://movie.douban.com/subject/35520056/photos?type=R"
+            },
+            {
+              "title": "阿盖尔：神秘特工_详细资料_1905电影网",
+              "url": "https://www.1905.com/mdb/film/2257090/info/"
+            },
+            {
+              "title": "阿盖尔：神秘特工Argylle (2024)",
+              "url": "https://movie.douban.com/subject/35520056/"
+            },
+            {
+              "title": "阿盖尔：神秘特工 (豆瓣)",
+              "url": "https://movie.douban.com/subject/35520056/?suggest=%E9%98%BFgai"
+            },
+            {
+              "title": "[HD-1080] 阿盖尔：神秘特工 看-Argylle - 在线观看-电影完整版",
+              "url": "https://ypqzmf7973.expandcart.com/index.php?route=product/product&product_id=374"
+            },
+            {
+              "title": "2024美国动作惊悚片《阿盖尔:神秘特工》高清下载",
+              "url": "https://www.cnmkv.com/9693.html"
+            }
+          ],
+          "queryNames": [
+            "阿盖尔：神秘特工",
+            "机密特务：阿盖尔",
+            "特工亚皆老",
+            "阿吉尔"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "阿盖尔：神秘特工",
+          "selectedTitle": "阿盖尔：神秘特工",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35520056",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "阿盖尔：神秘特工",
+        "sourceMatch": {
+          "title": "阿盖尔：神秘特工",
+          "routes": 28,
+          "libraries": 19,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "阿盖尔：神秘特工",
+            "libraries": 18,
+            "checkedLibraries": 15,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "阿盖尔：神秘特工",
+                "libraries": 18
+              },
+              {
+                "title": "阿盖尔：神秘特工 Argylle",
+                "libraries": 1
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "network"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 10
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "beastie-boys-story",
+      "en": "Beastie Boys Story",
+      "year": "2020",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "beastie-boys-story",
+        "en": "Beastie Boys Story",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "野兽男孩的故事",
+            "Beastie Boys 的音乐之路"
+          ],
+          "aiSources": [
+            {
+              "title": "野兽男孩的故事",
+              "url": "https://www.goldposter.com/zh/movie/670827/"
+            },
+            {
+              "title": "野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 纪录片仓库",
+              "url": "https://jilulib.com/subject/39208/"
+            },
+            {
+              "title": "[其他]野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 我爱纪录片",
+              "url": "https://ilovedocu.com/movie/6981"
+            },
+            {
+              "title": "Apple TV+纪录片《野兽男孩的故事 Beastie Boys Story 2020》[全1集][中字][4K][1080P][网盘][资源下载]-暴雪纪录片自媒体剪辑解说素材下载",
+              "url": "https://bxtrip.com/thread-34437-1-1.html"
+            },
+            {
+              "title": "观看《Beastie Boys Story》- Apple TV+ (SG)",
+              "url": "https://tv.apple.com/sg/movie/beastie-boys-story/umc.cmc.6d0mrskjsusw2jd2d228p88c2?l=zh-HANS"
+            },
+            {
+              "title": "《野兽男孩的故事》IMAX首映后，登陆Apple TV+_纪录片",
+              "url": "https://www.sohu.com/a/367187066_394375"
+            },
+            {
+              "title": "Beastie Boys Story - Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q91484984"
+            },
+            {
+              "title": "野兽男孩的故事/Beastie Boys Story(2020)高清迅雷BT下载_完整版在线免费观看 - 比兔TV",
+              "url": "https://www.miuwa.com/info/BeastieBoysStory/"
+            }
+          ],
+          "queryNames": [
+            "野兽男孩的故事",
+            "Beastie Boys 的音乐之路"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "野兽男孩的故事",
+          "selectedTitle": "野兽男孩的故事",
+          "decision": "douban_fallback_no_confirmed_source",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query",
+            "bounded_keyword_discovery"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "34950452",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "野兽男孩的故事",
+        "sourceMatch": null,
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ff",
+            "reason": "http"
+          },
+          {
+            "provider": "hn",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "lz",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jy",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "gs",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "bd",
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "reason": "http"
+          },
+          {
+            "provider": "bf",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "js",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "hh",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "sb",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xl",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "yy",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "zy360",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "huya",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xigua",
+            "reason": "http"
+          },
+          {
+            "provider": "modu",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "zzoc",
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "reason": "http"
+          },
+          {
+            "provider": "iqy",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "wujin",
+            "reason": "transport"
+          },
+          {
+            "provider": "zuida",
+            "reason": "transport"
+          },
+          {
+            "provider": "piaoling",
+            "reason": "http"
+          },
+          {
+            "provider": "maoyan",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jiji",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "uku",
+            "reason": "transport"
+          },
+          {
+            "provider": "ruyi",
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ikun",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "changzhang",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "shared",
+            "reason": "session_or_api_rejected"
+          },
+          {
+            "provider": "ikanbot",
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shenhua",
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "reason": "origin_changed"
+          }
+        ]
+      },
+      "status": "verified"
+    },
+    {
+      "slug": "billie-eilish-the-worlds-a-little-blurry",
+      "en": "Billie Eilish: The World’s A Little Blurry",
+      "year": "2021",
+      "season": 0,
+      "skip": "",
+      "result": {
+        "slug": "billie-eilish-the-worlds-a-little-blurry",
+        "en": "Billie Eilish: The World’s A Little Blurry",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "碧丽·艾莉许：模糊世界",
+            "怪奇比莉：我眼中的迷蒙世界",
+            "碧丽艾莉许模糊世界"
+          ],
+          "aiSources": [
+            {
+              "title": "碧丽·艾莉许：模糊世界(2021年完整版电影)_百度云网盘/bt磁力下载_美国纪录传记",
+              "url": "https://bttags.cyou/movie/60601c0dfe84451440380f20"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片仓库",
+              "url": "https://jilulib.com/subject/39423/"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry (2021)/怪奇比莉：我眼中的迷濛世界 2160p.ATVP.WEB-DL.x265.1",
+              "url": "https://www.aiyunpan.org/dubi/5278.html"
+            },
+            {
+              "title": "2021年美国纪录片《碧丽・艾莉许：模糊世界》HD英语中字迅雷下载_小调网_电影天堂",
+              "url": "https://www.xiaopian.vip/html/gndy/jddy/20241209/125502.html"
+            },
+            {
+              "title": "[2021 [欧美] [其他] [BD-4K] 碧丽·艾莉许:模糊世界/怪奇比莉:我眼中的迷蒙世界 Billie.Eilish.the.Worlds.A.Lit - 电影区(BT) - 天使论坛 - Powered by Discuz!",
+              "url": "https://seeangel.cc/forum.php?extra=page%3D1&mod=viewthread&tid=71301"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界(2021)-英语/豆瓣8.6分-影视动漫-十四洲资源社",
+              "url": "https://www.sszzys.cn/thread-95610.htm"
+            },
+            {
+              "title": "[其他]碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片数据库",
+              "url": "https://www.docu-lib.com/movie/6193"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 (豆瓣)",
+              "url": "https://movie.douban.com/subject/35211637/?from=subject-page"
+            }
+          ],
+          "queryNames": [
+            "碧丽·艾莉许：模糊世界",
+            "怪奇比莉：我眼中的迷蒙世界",
+            "碧丽艾莉许模糊世界"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "碧丽·艾莉许：模糊世界",
+          "selectedTitle": "碧丽·艾莉许：模糊世界",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35211637",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "碧丽·艾莉许：模糊世界",
+        "sourceMatch": {
+          "title": "碧丽·艾莉许：模糊世界",
+          "routes": 8,
+          "libraries": 8,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "碧丽·艾莉许：模糊世界",
+            "libraries": 8,
+            "checkedLibraries": 15,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "碧丽·艾莉许：模糊世界",
+                "libraries": 8
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
       "status": "verified"
     }
   ],
   "summary": {
     "future_release": 1,
-    "identity_no_chinese_name": 12,
+    "identity_no_chinese_name": 13,
     "missing_identity": 1,
     "unverified": 8,
-    "verified": 38
+    "verified": 40
   }
 }

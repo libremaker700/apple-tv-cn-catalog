@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-07T04:34:16+00:00",
+  "checkedAt": "2026-11-07T11:04:20+00:00",
   "candidateOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": false,
@@ -2503,10 +2503,10 @@
       "kind": "series",
       "active": true,
       "finalTitle": "神奇宠物救援队",
-      "status": "verified_cached_not_in_current_catalog",
+      "status": "verified_name_preserved",
       "requestedSeason": 1,
-      "requestedYear": "",
-      "currentKind": null,
+      "requestedYear": "2006",
+      "currentKind": "series",
       "nameOnlyScope": null,
       "subjects": [
         {
@@ -2647,9 +2647,9 @@
     "no_candidate_supplied": 3,
     "regional_alias_only": 1,
     "season_conflict": 4,
-    "verified_cached_not_in_current_catalog": 5,
+    "verified_cached_not_in_current_catalog": 4,
     "verified_name_only": 3,
-    "verified_name_preserved": 23,
+    "verified_name_preserved": 24,
     "year_conflict": 2
   }
 }
