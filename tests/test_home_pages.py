@@ -1,7 +1,7 @@
 import sys,copy,unittest,tempfile,json
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from home_pages import KIDS_HOME_ROOM,LEARN_SHELF,LEARN_URL,MOVIES_HOME_ROOM,collect,kids_editorial_shelves,kids_search_room,page_id,topic_shelf_changes
+from home_pages import FAMILY_SHELF,FAMILY_URL,KIDS_HOME_ROOM,LEARN_SHELF,LEARN_URL,MOVIES_HOME_ROOM,collect,kids_editorial_shelves,kids_search_room,page_id,topic_shelf_changes
 from home_sources import SEARCH
 from home_validation import validate_pages
 from official_pages import slim_item,slim_shelf,Pages
@@ -112,7 +112,18 @@ class HomePages(unittest.TestCase):
         self.assertEqual((banner['items'][0]['width'],banner['items'][0]['height']),(1920,720))
         self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/holiday/1920x720.jpg',1920,720),calls)
 
-    def test_official_tall_showcase_uses_four_or_more_four_by_five_posters(self):
+    def test_single_epic_item_without_a_native_banner_uses_its_landscape(self):
+        api=Fake();original=api.canvas
+        def canvas(kind,identity):
+            value=original(kind,identity)
+            if kind=='channel':value['shelves'].insert(3,shelf('Landscape Feature',[api.rows[4]],'epicShowcase'))
+            return value
+        api.canvas=canvas
+        value,_=collect({'entries':[]},api,image);validate_pages(value)
+        row=next(s for s in value['shelves'] if s['officialTitle']=='Landscape Feature')
+        self.assertEqual((row['layout'],row['items'][0]['width'],row['items'][0]['height']),('landscape',640,360))
+
+    def test_official_tall_showcase_keeps_its_layout_and_complete_membership(self):
         api=Fake();original=api.canvas;calls=[]
         for n,row in enumerate(api.rows[:5]):
             row['images']['shelfItemImage']={'url':f'https://is1-ssl.mzstatic.com/image/thumb/tall{n}/{{w}}x{{h}}BDT.TVAES01.{{f}}','width':1680,'height':3636}
@@ -120,17 +131,45 @@ class HomePages(unittest.TestCase):
         def canvas(kind,identity):
             value=original(kind,identity)
             if kind=='room' and identity=='uts.room.kids':
-                for n in (3,4,5):value['shelves'].append(shelf(f'Featured {n}',api.rows[:n],'epicShowcase'))
+                for n in (1,2,3,4,5):
+                    value['shelves'].append(shelf(f'Featured {n}',api.rows[:n]+[api.rows[0]],'epicShowcase'))
             return value
         api.canvas=canvas
         value,_=collect({'entries':[]},api,lambda url,w,h:(calls.append((url,w,h))or image(url,w,h)))
         validate_pages(value)
         kids=next(p for p in value['pages']if p['officialId']=='uts.room.kids')
-        self.assertEqual([s['layout']for s in kids['shelves']],['portrait','landscape','featured','featured'])
-        for s in kids['shelves'][2:]:
+        self.assertEqual([s['layout']for s in kids['shelves']],['portrait']+['featured']*5)
+        self.assertEqual([s['count'] for s in kids['shelves'][1:]],[1,2,3,4,5])
+        for s in kids['shelves'][1:]:
             self.assertEqual([r['officialId']for r in s['items']],[r['id']for r in api.rows[:len(s['items'])]])
             self.assertTrue(all((r['width'],r['height'])==(640,800) and r['showcaseCopy']['genresZh']==['儿童与家庭','喜剧']for r in s['items']))
+            self.assertEqual(all('featuredCopyTop' in r for r in s['items']),s['count']<4)
         self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/tall0/640x800BDT.TVAES01.jpg',640,800),calls)
+
+    def test_short_featured_members_offer_native_wide_fallbacks_when_available(self):
+        api=Fake();original=api.canvas
+        works=api.rows[3:6]
+        for n,row in enumerate(works):
+            row['images']['shelfItemImage']={'url':f'https://is1-ssl.mzstatic.com/image/thumb/tall{n}/{{w}}x{{h}}.{{f}}','width':1600,'height':2000}
+        works[0]['images'].pop('shelfImageBackground')
+        def canvas(kind,identity):
+            value=original(kind,identity)
+            if kind=='channel':
+                value['shelves'].insert(3,shelf('Small Editorial Shelf',works,'epicShowcase'))
+                next(s for s in value['shelves'] if s['header']['title']=='Dark Destinations')['items']=api.rows[:3]
+            return value
+        def capture(url,w,h):
+            if '/w4/' in url and (w,h)==(960,540):raise OSError('Optional image unavailable')
+            return image(url,w,h)
+        api.canvas=canvas
+        entries=[{'slug':'known-'+r['id'].split('.')[-1],'en':r['title'],'kind':'movie',
+                  'officialIdentity':{'watchUrl':r['url']}} for r in works]
+        value,_=collect({'entries':entries},api,capture);validate_pages(value)
+        row=next(s for s in value['shelves'] if s['title']=='Small Editorial Shelf')
+        self.assertEqual([r['officialId'] for r in row['items']],[r['id'] for r in works])
+        fallbacks={r['officialId']:r.get('landscapeArtwork') for r in value['works']}
+        self.assertEqual([fallbacks[r['id']] for r in works],[None,None,image(
+            'https://is1-ssl.mzstatic.com/image/thumb/w5/960x540.jpg',960,540)['artwork']])
 
     def value(self):return collect({'entries':[]},Fake(),image)[0]
     def test_seven_sections_and_complete_destination_counts(self):
@@ -207,6 +246,19 @@ class HomePages(unittest.TestCase):
         self.assertEqual(kids_editorial_shelves(api,[before,after]),[before,full,after])
         self.assertEqual(kids_editorial_shelves(api,[before,dict(full,items=[]),after]),[before,full,after])
         api.editorial_shelf.assert_called_with(LEARN_SHELF,LEARN_URL)
+
+    def test_family_time_uses_contextual_collection_when_room_layout_or_pagination_is_incomplete(self):
+        from unittest.mock import Mock
+        api=Mock()
+        family=dict(shelf('Family Time',[item(0)],'epicShowcase'),id=FAMILY_SHELF,url=FAMILY_URL,nextToken='20')
+        self.assertEqual(kids_editorial_shelves(api,[family]),[family])
+        api.editorial_shelf.assert_not_called()
+        official=dict(family,items=[item(0),item(1)],nextToken=None)
+        api.editorial_shelf.return_value=official
+        for suspect in [dict(family,nextToken=None),dict(family,displayType='lockup'),
+                        dict(family,url=FAMILY_URL.split('?')[0])]:
+            self.assertEqual(kids_editorial_shelves(api,[suspect]),[official])
+            api.editorial_shelf.assert_called_with(FAMILY_SHELF,FAMILY_URL)
 
     def test_official_editorial_art_and_caption_are_kept_for_short_shelves(self):
         api=Fake();original=api.canvas;chosen=[]

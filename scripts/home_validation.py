@@ -89,7 +89,7 @@ def validate_pages(value):
             if 'subtitle' in shelf:
                 assert isinstance(shelf['subtitle'],str) and 0<len(shelf['subtitle'])<=160 and not re.search(r'<|>|https?://',shelf['subtitle'])
             if shelf['layout']=='featured':
-                assert shelf.get('kind')!='topics' and (len(shelf['items'])>=4 or len(shelf['items'])>=2 and all('featuredCopyTop'in r for r in shelf['items']))
+                assert shelf.get('kind')!='topics' and (len(shelf['items'])>=4 or all('featuredCopyTop'in r for r in shelf['items']))
             if shelf.get('morePageId'):assert shelf['morePageId']in page_ids
             rows(shelf['items'],*sizes[shelf['layout']],shelf.get('kind')=='topics',shelf['source'])
     assert value['shelves'][-1]['title']=='即将上线'

@@ -16,6 +16,8 @@ KIDS_HOME_ROOM='uts.room.kids-tv-plus'
 MOVIES_HOME_ROOM='uts.room.movies-on-apple-tv'
 SHELF_SUBTITLES={'Watch these shows and movies together.':'一起观看这些电视节目和电影。'}
 KIDS_EDITORIAL_ROOM='edt.item.6126cd40-38d1-4e11-8211-3f41619392df'
+FAMILY_SHELF='edt.col.6126d47a-db5a-4bdc-a0fa-0aa10ecf71f9'
+FAMILY_URL='https://tv.apple.com/us/collection/family-time/'+FAMILY_SHELF+'?ctx_cvs=edt.cvs.6126cd67-fc86-4eea-a72c-5aa69ce16575&ctx_shelf=edt.shelf.653ae356-7401-450d-a300-9d450d39cf38'
 LEARN_SHELF='edt.col.6a7e3ee5-401c-4f44-a2e7-735a055a3ef1'
 LEARN_URL='https://tv.apple.com/us/collection/lets-learn-together/'+LEARN_SHELF+'?ctx_cvs=edt.cvs.6126cd67-fc86-4eea-a72c-5aa69ce16575&ctx_shelf=edt.shelf.6a162139-2028-41f5-bbd5-2360b25eb83b'
 
@@ -67,24 +69,31 @@ def topic_shelf_changes(previous,current):
     return changes
 
 def kids_editorial_shelves(api,shelves):
+    from official_pages import editorial_context
     # The room endpoint can omit or shorten this web editorial row.
     before='edt.col.6a036cf4-74fa-4d18-9994-75ec1f1338f8'
     after='edt.col.638d9741-269d-469e-9762-48dbf059c5e1'
     indexes={row['id']:i for i,row in enumerate(shelves)}
-    if not {LEARN_SHELF,before,after}.intersection(indexes):return shelves
+    out=list(shelves)
+    if FAMILY_SHELF in indexes:
+        pos=indexes[FAMILY_SHELF];family=out[pos];context=editorial_context(family)
+        # A truncated or generic room response cannot settle the official item count.
+        if not context or not family.get('nextToken') or family.get('displayType')!='epicShowcase':
+            url=family['url'] if context else FAMILY_URL
+            out[pos]=dict(api.editorial_shelf(FAMILY_SHELF,url),url=url)
+    if not {LEARN_SHELF,before,after}.intersection(indexes):return out
     try:
         official=api.editorial_shelf(LEARN_SHELF,LEARN_URL)
     except HTTPError as error:
         if error.response is not None and error.response.status_code in (404,410) and LEARN_SHELF not in indexes:
-            return shelves
+            return out
         raise
-    out=list(shelves)
     if LEARN_SHELF in indexes:out[indexes[LEARN_SHELF]]=official
     else:out.insert(indexes[before] if before in indexes else indexes[after]+1,official)
     return out
 
 def collect(catalog,api,image,poster=None,kids_room=None):
-    entries={};works={};details={};art_jobs={};pages=[]
+    entries={};works={};details={};art_jobs={};required_art=set();pages=[]
     for e in catalog['entries']:
         for url in [(e.get('officialIdentity')or{}).get('watchUrl',''),(e.get('zh')or{}).get('watchUrl','')]:
             m=re.search(r'umc\.cmc\.[a-z0-9]+',url)
@@ -96,7 +105,7 @@ def collect(catalog,api,image,poster=None,kids_room=None):
             if value.get('id')!=identity or value.get('type')!=it['type'] or clean(value.get('title')).casefold()!=clean(it['title']).casefold():raise ValueError('Detail identity mismatch')
             details[identity]=value
         return details[identity]
-    def art(it,w,h):
+    def art(it,w,h,optional=False):
         imgs=it.get('images',{});names=('shelfItemImage','shelfImageBackground','contentImage16X9')if(w,h)==(1920,720)else ('shelfImageBackground','contentImage16X9','shelfItemImage')if w>h else('shelfItemImage','posterArt','contentImageTall')
         def choose(images):
             if (w,h)==FEATURE_SIZE:return (images.get('shelfItemImage')or{}).get('url')
@@ -110,11 +119,16 @@ def collect(catalog,api,image,poster=None,kids_room=None):
                 if stage_background or (a and b and ((w>h and 1.6<a/b<1.9)or(w<h and .4<a/b<.8))):return x.get('url')
         url=choose(imgs)
         if not url and it.get('type')in('Movie','Show'):url=choose(metadata(it).get('images',{}))
+        if not url and optional:return None
         if not url:raise ValueError('Missing native artwork '+str(it.get('title')))
         url=url.replace('{w}',str(w)).replace('{h}',str(h)).replace('{f}','jpg').replace('{c}','sr')
-        if not re.match(r'https://is\d+-ssl\.mzstatic\.com/image/',url)or'{'in url:raise ValueError('Invalid image origin')
-        art_jobs[url]=(w,h);return {'sourceArtwork':url,'width':w,'height':h}
-    def work(it,w=400,h=600):
+        if not re.match(r'https://is\d+-ssl\.mzstatic\.com/image/',url)or'{'in url:
+            if optional:return None
+            raise ValueError('Invalid image origin')
+        art_jobs[url]=(w,h)
+        if not optional:required_art.add(url)
+        return {'sourceArtwork':url,'width':w,'height':h}
+    def work(it,w=400,h=600,short_featured=False):
         identity=it.get('id','');kind={'Movie':'movie','Show':'series'}.get(it.get('type'))
         if not kind or not re.fullmatch(r'umc\.cmc\.[a-z0-9]+',identity):return None
         en=clean(it['title']);entry=entries.get(identity)
@@ -125,7 +139,8 @@ def collect(catalog,api,image,poster=None,kids_room=None):
                 years={str((e.get('zh')or{}).get('_identityYear','')),str((e.get('officialIdentity')or{}).get('year','')),str(e.get('releaseDate',''))[:4]}|{str(s.get('year',''))for s in e.get('seasons',[])}
                 if year and year in years:entry=e;entries[identity]=e
         slug=entry['slug']if entry else'home-'+identity[8:]
-        if identity not in works:
+        new=identity not in works
+        if new:
             value={'slug':slug,'officialId':identity,'en':entry['en']if entry else en,'kind':kind,'watchUrl':watch_url(it['url'],identity,kind),'genres':[g['name']for g in (metadata(it).get('genres')or it.get('genres',[]))if g.get('name')]}
             if entry:value['knownCatalog']=True
             else:
@@ -133,43 +148,49 @@ def collect(catalog,api,image,poster=None,kids_room=None):
                 if isinstance(date,(int,float))and date>0:
                     iso=datetime.fromtimestamp(date/1000,timezone.utc).date().isoformat();value.update(year=iso[:4],releaseDate=iso)
                 value['summaryEn']=str(detail.get('description')or detail.get('heroDescription')or'')[:1800]
-                value['landscapeSource']=art(detail,960,540)['sourceArtwork']
             works[identity]=value
+        value=works[identity]
+        if not value.get('landscapeSource') and (short_featured or new and not entry):
+            landscape=art(it if short_featured else metadata(it),960,540,optional=short_featured)
+            if landscape:value['landscapeSource']=landscape['sourceArtwork']
         row=dict(slug=slug,officialId=identity,**art(it,w,h))
         logo=(it.get('images',{}).get('contentLogo')or{}).get('url','')
         if (w,h)in((400,600),(1920,720),FEATURE_SIZE) and logo:
             row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
         return row
-    def work_rows(items,w,h):
+    def work_rows(items,w,h,short_featured=False):
         rows=[];seen=set()
         for item in items:
-            row=work(item,w,h)
+            row=work(item,w,h,short_featured)
             if row and row['officialId']not in seen:seen.add(row['officialId']);row['rank']=len(rows)+1;rows.append(row)
         return rows
     def shelf(sh,source,forced=None):
         title=clean((sh.get('header')or{}).get('title'))
         if not title or title=='Watch Premieres for Free':return None
         items=api.shelf(sh)['items']
-        shows=[i for i in items if i.get('type')in('Movie','Show') and re.fullmatch(r'umc\.cmc\.[a-z0-9]+',i.get('id',''))]
+        shows={}
+        for item in items:
+            if item.get('type')in('Movie','Show') and re.fullmatch(r'umc\.cmc\.[a-z0-9]+',item.get('id','')):
+                shows.setdefault(item['id'],item)
         epic=sh.get('displayType')=='epicShowcase'
         def has_tall_art(item):
             art=(item.get('images')or{}).get('shelfItemImage')or{}
             return art.get('width',0)>0 and art.get('height',0)>art['width'] and bool(art.get('url'))
-        editorial=epic and len(shows)>=2 and all(i.get('flavorType')=='Flavor_F' and has_tall_art(i) for i in shows)
-        layout=forced or ('showcase' if epic and len(shows)==1 else
-            'featured' if editorial or epic and len({i['id']for i in shows})>=4 and all(map(has_tall_art,shows)) else
-            'landscape' if epic else 'portrait')
+        tall=epic and bool(shows) and all(map(has_tall_art,shows.values()))
+        editorial=tall and (len(shows)<4 or all(i.get('flavorType')=='Flavor_F' for i in shows.values()))
+        layout=forced or ('featured' if tall else 'landscape' if epic else 'portrait')
+        if not forced and epic and not tall and len(shows)==1 and art(next(iter(shows.values())),1920,720,optional=True):
+            layout='showcase'
         w,h={'showcase':(1920,720),'featured':FEATURE_SIZE,'landscape':(640,360),'portrait':(400,600)}[layout]
-        rows=work_rows(items,w,h)
+        rows=work_rows(shows.values(),w,h,short_featured=layout=='featured' and len(shows)<4)
         if not rows:return None
         if layout=='featured':
             from home_copy import GENRES,enrich,featured_api_copy
-            by_id={i['id']:i for i in shows}
             copy={}
             for row in rows:
                 identity=row['officialId']
-                genres=[GENRES[g['name']]for g in by_id[identity].get('genres',[])if g.get('name')in GENRES]
-                copy[identity]=featured_api_copy(by_id[identity]) if editorial else {'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
+                genres=[GENRES[g['name']]for g in shows[identity].get('genres',[])if g.get('name')in GENRES]
+                copy[identity]=featured_api_copy(shows[identity]) if editorial else {'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
                 if editorial:row['featuredCopyTop']=760
             # Keep catalogue genres as a fallback until official room copy is available.
             for row in enrich({'hero':rows},copy,{},None,0,source_url=source)[0]['hero']:
@@ -246,7 +267,13 @@ def collect(catalog,api,image,poster=None,kids_room=None):
     upcoming=[existing[r['officialId']]for r in upcoming if r['officialId']in existing]
     if not upcoming:raise ValueError('Missing upcoming portraits')
     home['shelves'].append({'id':'coming-to-apple-tv','title':'即将上线','officialTitle':'Coming to Apple TV','source':coming['source'],'layout':'portrait','items':upcoming,'count':len(upcoming),'morePageId':coming['id']})
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3)as pool:rendered=dict(pool.map(lambda row:(row[0],image(row[0],*row[1])),art_jobs.items()))
+    def render(row):
+        url,size=row
+        try:return url,image(url,*size)
+        except (OSError,ValueError):
+            if url in required_art:raise
+            return url,None
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3)as pool:rendered=dict(pool.map(render,art_jobs.items()))
     for page in [home]+pages:
         for row in page['hero']+[r for s in page['shelves']for r in s['items']]:
             if 'sourceArtwork'in row:row.update(rendered[row.pop('sourceArtwork')])
@@ -255,7 +282,8 @@ def collect(catalog,api,image,poster=None,kids_room=None):
                 logo=row.pop('sourceLogo')
                 row.update(poster(row,logo,editorial=True) if 'featuredCopyTop' in row else poster(row,logo))
     for value in works.values():
-        if value.get('landscapeSource'):value['landscapeArtwork']=rendered[value.pop('landscapeSource')]['artwork']
+        landscape=rendered.get(value.pop('landscapeSource',None))
+        if landscape:value['landscapeArtwork']=landscape['artwork']
     out={'schema':3,'source':CHANNEL,'sources':list(dict.fromkeys([CHANNEL]+[p['source']for p in pages])),'hero':home['hero'],'shelves':home['shelves'],'pages':pages,'works':list(works.values())}
     return out,{'heroCount':len(out['hero']),'shelfCount':len(out['shelves']),'topicPages':len(pages),'workCount':len(works),'additionalWorks':sum(not w.get('knownCatalog')for w in works.values()),'orderPolicy':'official-canvas-with-user-exclusions','officialCanvasOrder':[{'id':s['id'],'title':clean((s.get('header')or{}).get('title'))}for s in root_shelves],'officialShelves':[{'title':s['title'],'count':len(s['items'])}for s in out['shelves']]}
 
