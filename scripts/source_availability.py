@@ -32,15 +32,12 @@ def query_names(zh):
     return list(dict.fromkeys(base(name) for name in [zh.get('title','')]+zh.get('aliases',[]) if re.search(r'[\u3400-\u9fff]',name)))[:4]
 
 def source_query(work,ref):
-    from detail_metadata import valid as valid_detail
-    from mainland_names import DIRECTOR_CUT,source_people,verified_subject
+    from mainland_names import DIRECTOR_CUT,season_subject,source_people
     zh=work.get('zh')or{}
     query=source_people({'kind':ref['kind'],'year':ref['year'],'season':ref['season']or 1},zh)
     if ref['kind']=='movie' and DIRECTOR_CUT.search(work['en']):query['nameOnlyScope']='director_cut'
     if query.get('nameOnlyScope'):return query
-    packet=next((p for p in zh.get('detailSeasons',[])+[zh.get('detailMetadata')]
-                 if valid_detail(p,work['kind'])and p['season']==ref['season']and str(p['year'])==ref['year']),None)
-    subject=packet['subjectId'] if packet else verified_subject(zh)
+    subject=season_subject(zh,ref['kind'],ref['season'],ref['year'])
     if subject:query['douban_id']=str(subject)
     return query
 
@@ -142,6 +139,8 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
             if subject:
                 if not zh.get('name_sources'):zh['name_sources']=[{'type':'douban_mobile_identity','url':'https://movie.douban.com/subject/'+str(subject)+'/','retrieved_at':str(now)}]
             if best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
+        if not same_query and not (best or {}).get('selection') and isinstance(zh.get('nameSelection'),dict):
+            zh['nameSelection']['complete']=False
         fingerprint=query_fingerprint(scope,ref,source_query(work,ref),query_names(zh))
         cache['records'][slug]={'checkedAt':now,'lastAttemptAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{'complete':(best or{}).get('complete',True)}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
         report['records'].append({'slug':slug,'check':check,'recallOnly':bool(best and best.get('recallOnly')),'libraries':(best or{}).get('libraries',0),'complete':(best or{}).get('complete',False),'events':events});report['changed'].append(slug);dump(path,cache)

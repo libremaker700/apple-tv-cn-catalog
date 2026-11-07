@@ -2,7 +2,7 @@ import copy,json,sys,tempfile,unittest
 from pathlib import Path
 from unittest.mock import Mock,patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from source_availability import reference,make_check,applies,run,apply_cached,sync_home_zh
+from source_availability import reference,source_query,make_check,applies,run,apply_cached,sync_home_zh
 
 class CloudChecks(unittest.TestCase):
     def work(self,**kwargs):
@@ -15,6 +15,19 @@ class CloudChecks(unittest.TestCase):
         for kwargs in ({'en':'Other'},{'kind':'movie'},{'artworkSeasonNumber':3},{'artworkSeasonYear':'2025'}):self.assertFalse(applies(check,self.work(**kwargs)))
     def test_unknown_later_season_year_is_not_guessed_from_first_season(self):
         work=self.work(seasons=[],seasonNumber=3,releaseDate='2027-01-01');self.assertEqual(reference(work)['year'],'')
+    def test_later_season_needs_its_own_douban_identity(self):
+        from detail_metadata import from_patch
+        work=self.work();zh=work['zh'];ref=reference(work)
+        zh['name_sources']=[{'type':'douban_mobile_identity','url':'https://movie.douban.com/subject/35715946/'}]
+        self.assertEqual(source_query(work,dict(ref,season=1,year='2024'))['douban_id'],'35715946')
+        self.assertNotIn('douban_id',source_query(work,ref))
+        zh['sourceSeason']={'policy':'verified-subseries-v1','season':2,'year':'2026','subjectId':'37457350'}
+        self.assertEqual(source_query(work,ref)['douban_id'],'37457350')
+        self.assertNotIn('douban_id',source_query(work,dict(ref,year='2025')))
+        zh['detailSeasons']=[from_patch({'douban_id':'87654321','rating_status':'NO_RATING',
+            'display_name_zh':'豆瓣名称','name_checked_at':'2026-01-01T00:00:00+00:00'},
+            {'kind':'tv','season':2,'year':'2026'})]
+        self.assertEqual(source_query(work,ref)['douban_id'],'87654321')
     def test_scheduled_checks_reuse_results_and_use_cloud_selected_name(self):
         for animated in (True,False):
             with self.subTest(animated=animated),tempfile.TemporaryDirectory()as folder:
@@ -110,6 +123,19 @@ class CloudChecks(unittest.TestCase):
             cache=json.loads((root/'data/cloud-source-cache.json').read_text())['records']['example']
             self.assertTrue(cache['pending']);self.assertNotIn('check',cache)
             self.assertNotIn('sourceCheck',apply_cached(saved,root)['zh'])
+
+    def test_recall_only_result_does_not_keep_stale_complete_name_coverage(self):
+        with tempfile.TemporaryDirectory()as folder:
+            root=Path(folder);work=self.work();now=1793440000
+            work['zh']['nameSelection']={'title':'豆瓣名称','complete':True}
+            self.fixture(root,[work],{'records':{'example':{'queryPolicy':'previous'}}})
+            probe=Mock(return_value=({'title':'豆瓣名称','routes':1,'recallOnly':True,'complete':False},[]))
+            with patch('source_availability.publish')as publish,patch('mainland_names.republish_home'):
+                run(root,probe=probe,now=now)
+                saved=publish.call_args.args[0]['entries'][0]
+            zh=apply_cached(saved,root)['zh']
+            self.assertTrue(zh['sourceCheck']['found'])
+            self.assertFalse(zh['nameSelection']['complete'])
 
     def test_retry_moves_failed_work_behind_unattempted_works(self):
         with tempfile.TemporaryDirectory()as folder:

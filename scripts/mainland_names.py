@@ -38,6 +38,20 @@ def verified_subject(info):
         if match:return match[1]
     return None
 
+def season_subject(info,kind,number,year):
+    from detail_metadata import valid as valid_detail
+    if name_only_scope(info):return None
+    details=[p for p in info.get('detailSeasons',[])+[info.get('detailMetadata')] if valid_detail(p,kind)]
+    exact=next((p for p in details if p['season']==number and str(p['year'])==str(year)),None)
+    if exact:return exact['subjectId']
+    if kind=='series'and number>1:
+        scope=info.get('sourceSeason')or{}
+        if scope.get('policy')=='verified-subseries-v1'and scope.get('season')==number and str(scope.get('year'))==str(year):
+            return verified_subject({'douban_id':scope.get('subjectId')})
+        return None
+    subject=verified_subject(info)
+    return None if any(p['subjectId']==subject and p['season']!=number for p in details)else subject
+
 SEASON_MARKER=re.compile(r'第\s*([\d零一二三四五六七八九十百]+)\s*季|season\s*(\d+)',re.I)
 DIRECTOR_CUT=re.compile(r'導演剪輯版|导演剪辑版|\bdirector[’\x27]?s\s+cut\b',re.I)
 
@@ -223,13 +237,14 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 ref['year']=hint['releaseYear']
         source_ref=source_people({'year':ref['year'],'season':n,'kind':work['kind']},zh)
         if work['kind']=='movie'and DIRECTOR_CUT.search(work['en']):source_ref['nameOnlyScope']='director_cut'
-        if not source_ref.get('nameOnlyScope')and verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
+        subject=season_subject(zh,work['kind'],ref['season'],ref['year'])
+        if not source_ref.get('nameOnlyScope')and subject:source_ref['douban_id']=subject
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=None;discovery_events=[];hits=[];resolution=None
         if released_after_name_only and zh.get('name_sources'):
             status='cached_verified_name';patch={'display_name_zh':zh['title']if chinese(zh['title'])else zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
             if name_only_scope(zh):patch['name_only_scope']=name_only_scope(zh)
         else:
-            mobile=DoubanMobile(lookup.pages);subject=verified_subject(zh)
+            mobile=DoubanMobile(lookup.pages)
             patch=mobile.subject(ref,subject,str(now))if subject else None
             if not patch:patch=mobile.lookup(ref,str(now))
             identities=list(mobile.identities.values())if isinstance(mobile.identities,dict)else[]
