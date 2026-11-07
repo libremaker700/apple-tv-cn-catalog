@@ -422,18 +422,14 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
 def main():
     import argparse
     parser=argparse.ArgumentParser();parser.add_argument('--showcases-only',action='store_true');args=parser.parse_args()
-    from catalog import ROOT,DOCS,load,raw_json
-    from home_sync import fetch,image_inventory,validate,validate_publication
+    from catalog import ROOT,DOCS,load
+    from home_sync import fetch,publish_home,validate_publication
     from poster_logos import PosterLogos
     folder=DOCS/'home';home=load(folder/'home.json');manifest=load(folder/'version.json');now=int(time.time())
     value,report=process(home,ROOT,fetch(CHANNEL).decode('utf-8'),now,showcases_only=args.showcases_only,
-                         poster=PosterLogos(ROOT,fetch));validate(value)
-    blob=raw_json(value);sha=hashlib.sha256(blob).hexdigest()
-    if sha!=manifest['version']:
-        path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob)
-        manifest.update(image_inventory(value,folder))
-        manifest.update(version=sha,path=path,checkedAt=now);(folder/'home.json').write_bytes(blob);(folder/'version.json').write_bytes(raw_json(manifest))
-    report.update(version=sha,checkedAt=now,copyVersion=VERSION)
+                         poster=PosterLogos(ROOT,fetch))
+    published=publish_home(value,folder,now,manifest,refresh_images=True,only_if_changed=True)
+    report.update(version=published['version'],checkedAt=now,copyVersion=VERSION)
     dump(ROOT/'logs/home-copy.json',report);validate_publication();print(json.dumps(report,ensure_ascii=False))
 
 if __name__=='__main__':main()

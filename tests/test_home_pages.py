@@ -19,9 +19,8 @@ class Fake:
     def get(self,kind,identity):return next(x for x in self.rows if x['id']==identity)
 def image(url,w,h):
     import hashlib
-    suffix='png' if w is None else 'jpg'
-    return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.'+suffix,
-            'width':w or 640,'height':h or 240}
+    return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.jpg',
+            'width':w,'height':h}
 class HomePages(unittest.TestCase):
     def test_kids_search_destination_requires_browse_us_room_identity(self):
         entry={'title':'Kids & Family','segue':{'destination':{'$kind':'RoomPageIntent','storefront':'us','id':'edt.item.verified'}}}
@@ -100,9 +99,9 @@ class HomePages(unittest.TestCase):
         self.assertIn(('https://is1-ssl.mzstatic.com/image/thumb/w0/1920x1080.jpg',1920,1080),calls)
         self.assertNotIn(('https://is1-ssl.mzstatic.com/image/thumb/generic/1920x1080.jpg',1920,1080),calls)
 
-    def test_hero_and_topic_share_title_logo_artwork_without_changing_the_jpeg_rows(self):
-        from home_pages import title_logo_rows,image_rows
-        api=Fake();original=api.canvas;logo_calls=[]
+    def test_carousels_do_not_collect_title_logos_but_poster_composition_still_does(self):
+        from home_pages import image_rows
+        api=Fake();original=api.canvas;poster_calls=[]
         for n in range(2):
             api.rows[n]['images']['contentLogo']={'url':f'https://is1-ssl.mzstatic.com/image/thumb/logo{n}/{{w}}x{{h}}.{{f}}'}
         def canvas(kind,identity):
@@ -111,22 +110,20 @@ class HomePages(unittest.TestCase):
                 value['shelves'].append(shelf('Featured',api.rows[:3],'epicStage'))
             return value
         def assets(url,w,h):
-            if url.endswith('.jpg'):return image(url,w,h)
-            logo_calls.append((url,w,h))
-            if '/logo1/' in url:raise OSError('Optional mark unavailable')
-            return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+'a'*64+'.png',
-                    'width':180,'height':70}
+            self.assertTrue(url.endswith('.jpg'))
+            return image(url,w,h)
+        def poster(row,url):
+            poster_calls.append(url)
+            self.assertEqual((row['width'],row['height']),(400,600))
+            return {}
         api.canvas=canvas
-        value,_=collect({'entries':[]},api,assets,poster=lambda *_:{})
+        value,_=collect({'entries':[]},api,assets,poster=poster)
         validate_pages(value)
-        self.assertCountEqual(logo_calls,[(f'https://is1-ssl.mzstatic.com/image/thumb/logo{n}/640x240.png',None,None) for n in range(2)])
+        self.assertEqual(set(poster_calls),{f'https://is1-ssl.mzstatic.com/image/thumb/logo{n}/470x140.png' for n in range(2)})
         topic=next(p for p in value['pages']if p.get('officialId')=='uts.room.kids')
-        self.assertEqual(value['hero'][0]['titleLogo'],topic['hero'][0]['titleLogo'])
-        self.assertTrue(all('titleLogo' not in row for row in value['hero'][1:]))
+        self.assertEqual(len(topic['hero']),3)
+        self.assertTrue(all('titleLogo' not in row for row in value['hero']+topic['hero']))
         self.assertTrue(all(row['artwork'].endswith('.jpg') for row in image_rows(value)))
-        self.assertEqual(title_logo_rows(value),[value['hero'][0]['titleLogo']]*2)
-        value['hero'][0]['titleLogo']['width']=641
-        with self.assertRaises(AssertionError):validate_pages(value)
 
     def test_official_single_showcase_keeps_banner_art_and_dimensions(self):
         api=Fake();original=api.canvas

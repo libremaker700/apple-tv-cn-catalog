@@ -35,6 +35,25 @@ def image_inventory(value,folder):
     assert sum(x['bytes']for assets in inventory.values()for x in assets.values())<=96*1024*1024
     return inventory
 
+def publish_home(value,folder,checked_at,manifest=None,*,refresh_images=False,only_if_changed=False):
+    # Legacy immutable releases remain readable. New publications only use the carousel background.
+    for page in [value,*value.get('pages',[])]:
+        for row in page['hero']:
+            row.pop('titleLogo',None)
+    validate(value)
+    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest()
+    manifest=dict(manifest or {})
+    if only_if_changed and manifest.get('version')==sha and 'titleLogos' not in manifest:
+        return manifest
+    if refresh_images or 'images' not in manifest:
+        manifest['images']=image_inventory(value,folder)['images']
+    manifest.pop('titleLogos',None)
+    path='releases/'+sha+'/home.json'
+    (folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
+    manifest.update(schema=1,version=sha,path=path,checkedAt=checked_at)
+    (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))
+    return manifest
+
 def fetch(url):
     u=urlsplit(url)
     if not (url in (SOURCE,ROOM,SEARCH) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
@@ -117,28 +136,18 @@ def validate(value,entries=None):
         assert re.fullmatch(r'images/[a-f0-9]{64}\.jpg',row['artwork'].removeprefix(BASE))
 
 def sync():
-    from poster_logos import PosterLogos,normalize_hero_logo
+    from poster_logos import PosterLogos
     folder=DOCS/'home';(folder/'images').mkdir(parents=True,exist_ok=True)
     cache_file=ROOT/'data/home-image-cache.json';cache=load(cache_file) if cache_file.exists() else {};now=int(time.time())
     cache_lock=threading.Lock()
     def image(url,width=1920,height=1080):
-        is_logo=width is None and height is None
         previous=cache.get(url);path=folder/previous['path'] if previous else None
-        cached=None
-        if path and path.is_file() and (is_logo or now-previous.get('checkedAt',0)<6*3600) and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
-            cached={'artwork':BASE+previous['path'],'width':previous['width']if is_logo else width,'height':previous['height']if is_logo else height}
-            if now-previous.get('checkedAt',0)<6*3600:return cached
-        if is_logo:
-            try:raw,width,height=normalize_hero_logo(fetch(url))
-            except (OSError,ValueError):
-                # Keep the last verified mark for this exact Apple artwork URL.
-                if cached:return cached
-                raise
-        else:raw=normalize_image(fetch(url),width,height)
-        ref='images/'+hashlib.sha256(raw).hexdigest()+('.png'if is_logo else'.jpg');(folder/ref).write_bytes(raw)
+        if path and path.is_file() and now-previous.get('checkedAt',0)<6*3600 and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
+            return {'artwork':BASE+previous['path'],'width':width,'height':height}
+        raw=normalize_image(fetch(url),width,height)
+        ref='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(folder/ref).write_bytes(raw)
         with cache_lock:
             cache[url]={'path':ref,'checkedAt':now}
-            if is_logo:cache[url].update(width=width,height=height)
             from title_lookup import dump
             dump(cache_file,cache)
         print(json.dumps({'homeImageReady':ref,'bytes':len(raw)}),flush=True)
@@ -183,14 +192,10 @@ def sync():
     value,copy_report=process(value,ROOT,html,now,poster=logos)
     report['copy']=copy_report
     report['topicShelfChanges']=topic_shelf_changes(previous,value)
-    validate(value)
-    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();inventory=image_inventory(value,folder)
-    path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
-    manifest={'schema':1,'version':sha,'path':path,'checkedAt':now,**inventory}
-    (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))
+    manifest=publish_home(value,folder,now);sha=manifest['version']
     cache_file.write_bytes(raw_json(cache));(folder/'sync-report.json').write_bytes(raw_json(dict(report,checkedAt=now,version=sha)))
     details_path.write_bytes(raw_json(details))
-    print(json.dumps(dict(report,version=sha,imageBytes=sum(x['bytes'] for assets in inventory.values() for x in assets.values()),titleLogoCount=len(inventory['titleLogos']))),flush=True)
+    print(json.dumps(dict(report,version=sha,imageBytes=sum(x['bytes'] for x in manifest['images'].values()))),flush=True)
     return value,manifest
 
 def validate_publication():
@@ -217,4 +222,10 @@ def validate_publication():
 if __name__=='__main__':
     import sys
     if '--validate' in sys.argv:validate_publication()
+    elif '--remove-carousel-logos' in sys.argv:
+        validate_publication()
+        folder=DOCS/'home';previous=load(folder/'version.json')
+        manifest=publish_home(load(folder/'home.json'),folder,int(time.time()),previous,only_if_changed=True)
+        validate_publication()
+        print(json.dumps({'version':manifest['version'],'removedCarouselLogos':len(previous.get('titleLogos',{}))}))
     else:sync()

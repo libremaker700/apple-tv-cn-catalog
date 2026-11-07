@@ -60,15 +60,13 @@ def apply_home(home,root):
     return out
 
 def publish_reviewed(root):
-    import hashlib,time
-    from catalog import load,publish,raw_json
-    from home_sync import validate,validate_publication
+    import time
+    from catalog import load,publish
+    from home_sync import publish_home,validate_publication
     folder=root/'docs';main=load(folder/'catalog.json');manifest=load(folder/'version.json')
     publish(apply_catalog(main,root),manifest.get('checked_at'),'audited-workbook-title-import')
-    home=apply_home(load(folder/'home/home.json'),root);validate(home);m=load(folder/'home/version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest()
-    if sha!=m['version']:
-        path='releases/'+sha+'/home.json';(folder/'home'/path).parent.mkdir(parents=True,exist_ok=True);(folder/'home'/path).write_bytes(blob)
-        m.update(path=path,version=sha,checkedAt=int(time.time()));(folder/'home/home.json').write_bytes(blob);(folder/'home/version.json').write_bytes(raw_json(m))
-    validate_publication();print(json.dumps({'importedTitles':len(records(root)),'homeVersion':sha}))
+    home=apply_home(load(folder/'home/home.json'),root)
+    published=publish_home(home,folder/'home',int(time.time()),load(folder/'home/version.json'),only_if_changed=True)
+    validate_publication();print(json.dumps({'importedTitles':len(records(root)),'homeVersion':published['version']}))
 
 if __name__=='__main__':publish_reviewed(Path(__file__).resolve().parents[1])

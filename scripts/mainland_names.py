@@ -2,13 +2,13 @@
 
 Only verified page fields may become titles. Gemini is never called here.
 """
-import argparse,copy,hashlib,json,re,time
+import argparse,copy,json,re,time
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlsplit
 import requests
 from api_accounts import SearchAccounts
-from catalog import ROOT,load,publish,raw_json
+from catalog import ROOT,load,publish
 from title_lookup import read,dump,identity
 from title_sources import Lookup,norm,chinese
 from douban_mobile import DoubanMobile
@@ -121,16 +121,15 @@ def independent_name(ref,hits,lookup,now,http=None):
 
 
 def republish_home(home,root):
-    from home_sync import validate
+    from home_sync import publish_home
     from detail_metadata import apply_cached
     home=apply_cached(home,root,home=True)
     from source_availability import apply_cached as apply_sources
     for work in home.get('works',[]):apply_sources(work,root)
     from metadata_policy import restore_display_titles
     restore_display_titles(home.get('works',[]),root)
-    validate(home);folder=root/'docs/home';manifest=load(folder/'version.json');blob=raw_json(home);sha=hashlib.sha256(blob).hexdigest();path='releases/'+sha+'/home.json'
-    (folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob);(folder/'home.json').write_bytes(blob)
-    manifest.update(version=sha,path=path,checkedAt=int(time.time()));(folder/'version.json').write_bytes(raw_json(manifest))
+    folder=root/'docs/home'
+    publish_home(home,folder,int(time.time()),load(folder/'version.json'))
 
 def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None,names_only=False):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');cache_path=root/'data/mainland-name-cache.json';cache=read(cache_path,{'records':{},'budgets':{}});now=int(time.time());month=time.strftime('%Y-%m',time.gmtime(now));budget=200

@@ -13,9 +13,9 @@ def page(items,storefront='us'):
 def image(url):return {'artwork':h.BASE+'images/'+'a'*64+'.jpg','width':1920,'height':1080}
 
 class Home(unittest.TestCase):
-    def test_png_inventory_is_separate_and_validates_bytes_and_dimensions(self):
+    def test_legacy_logo_snapshot_validates_and_republication_removes_only_logos(self):
         from home_pages import image_rows
-        from poster_logos import normalize_hero_logo
+        from stage_pages import snapshot_files
         from test_home_pages import Fake,collect,image as fixture_image
         with tempfile.TemporaryDirectory() as tmp:
             folder=Path(tmp)/'home';(folder/'images').mkdir(parents=True)
@@ -31,7 +31,7 @@ class Home(unittest.TestCase):
             for work in value['works']:
                 if work.get('landscapeArtwork'):work['landscapeArtwork']=h.BASE+jpegs[(960,540)]
             mark=Image.new('RGBA',(90,30));mark.paste((255,255,255,255),(10,10,80,20))
-            encoded=io.BytesIO();mark.save(encoded,'PNG');blob,width,height=normalize_hero_logo(encoded.getvalue())
+            encoded=io.BytesIO();mark.save(encoded,'PNG');blob=encoded.getvalue();width,height=mark.size
             logo_ref='images/'+hashlib.sha256(blob).hexdigest()+'.png';(folder/logo_ref).write_bytes(blob)
             value['hero'][0]['titleLogo']={'artwork':h.BASE+logo_ref,'width':width,'height':height}
             inventory=h.image_inventory(value,folder)
@@ -49,6 +49,16 @@ class Home(unittest.TestCase):
             manifest['titleLogos'][logo_ref]['width']=width
             (folder/logo_ref).write_bytes(blob+b'corruption')
             with self.assertRaises(AssertionError):check()
+            (folder/logo_ref).write_bytes(blob)
+            self.assertIn(logo_ref,snapshot_files(manifest,'home'))
+            current=h.publish_home(value,folder,100,manifest)
+            self.assertEqual(current['images'],manifest['images'])
+            self.assertNotIn('titleLogos',current)
+            self.assertNotIn(logo_ref,snapshot_files(current,'home'))
+            self.assertEqual((folder/path).read_bytes(),raw)
+            expected=json.loads(raw);expected['hero'][0].pop('titleLogo')
+            self.assertEqual(h.load(folder/current['path']),expected)
+            with patch.object(h,'DOCS',Path(tmp)):h.validate_publication()
 
     def test_repeated_check_reuses_bytes_and_failed_fetch_keeps_manifest(self):
         with tempfile.TemporaryDirectory() as tmp:

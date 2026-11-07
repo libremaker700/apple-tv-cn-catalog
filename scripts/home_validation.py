@@ -2,6 +2,7 @@ import re
 from home_sources import CHANNEL,ROOM,watch_url
 from metadata_policy import POLICY,allowed_source
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
+LEGACY_HERO_LOGO_SIZE=(640,240)
 def validate_home(value):
     assert value.get('schema')==2 and value.get('source')==CHANNEL and value.get('sources')==[CHANNEL,ROOM]
     assert 3<=len(value['hero'])<=12 and 8<=len(value['shelves'])<=20 and 3<=len(value['works'])<=250
@@ -56,7 +57,7 @@ def validate_pages(value):
             from detail_metadata import valid as valid_detail
             zh=w['zh'];assert clean_zh(zh)is not None and zh.get('metadataPolicy')==POLICY and (not zh.get('title')or zh.get('name_status')=='verified_title_sources'and zh.get('name_sources')and all(allowed_source(s.get('url',''))for s in zh['name_sources'])) and all(allowed_source(s.get('url',''))for s in zh.get('summary_sources',[]))
             assert all(valid_detail(packet,w['kind'])for packet in zh.get('detailSeasons',[]))and(not zh.get('detailMetadata')or valid_detail(zh['detailMetadata'],w['kind']))
-    from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE,HERO_LOGO_SIZE
+    from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
     def rows(rows,w,h,topics=False,source=None):
         seen=set()
         for r in rows:
@@ -72,7 +73,7 @@ def validate_pages(value):
                 logo=r['titleLogo']
                 assert not topics and (w,h)==(1920,1080) and set(logo)=={'artwork','width','height'}
                 assert re.fullmatch(re.escape(BASE)+r'images/[a-f0-9]{64}\.png',logo['artwork'])
-                assert all(type(logo[key])is int and 1<=logo[key]<=bound for key,bound in zip(('width','height'),HERO_LOGO_SIZE))
+                assert all(type(logo[key])is int and 1<=logo[key]<=bound for key,bound in zip(('width','height'),LEGACY_HERO_LOGO_SIZE))
             if 'showcaseCopy'in r:
                 from home_copy import validate_copy
                 assert not topics and ((w,h)==(1920,720) and len(rows)==1 or (w,h)==FEATURE_SIZE) and r['showcaseCopy']['source']==source

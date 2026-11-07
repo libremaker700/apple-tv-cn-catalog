@@ -20,6 +20,8 @@ Detail presentation uses atomic `zh.detailMetadata` / `zh.detailSeasons` packets
 
 Official homepage hero copy continues through the existing Gemini `home_copy.py` pipeline. Its text and the legacy shared official synopsis cache are independent of the Douban detail packets, so a later official translation cannot overwrite the detail synopsis or score. See `docs/metadata-pipeline.md` for the packet contract and actual coverage.
 
+Homepage and topic carousels collect only the official background artwork and display copy. Every new home publication removes the legacy separate carousel title Logo fields. Poster and editorial showcase artwork still use their own official title treatments.
+
 Commands:
 
 Display-name selection runs in GitHub, never in the Android playback page. The name workflow compares all bounded public CMS checks, counts each distinct library address once per confirmed title, and prefers the verified current name on equal counts. Multiple records or play lines in one library cannot inflate its vote. Only a matching independently verified subject ID, or matching director and at least two main cast names together with title/year/type/season checks, can supply a vote. Web/share lines and extras are excluded. Animation follows this same server-side selection policy; the Douban name remains an alias and identity reference. Future releases still receive names only, with no source probing before release.

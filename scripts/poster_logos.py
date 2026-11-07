@@ -3,7 +3,7 @@ import hashlib,io,re
 from pathlib import Path
 from PIL import Image,ImageOps
 from title_lookup import read,dump
-from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE,HERO_LOGO_SIZE
+from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 FEATURE_LOGO_BOTTOM=248
 def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
@@ -15,16 +15,6 @@ def transparent_mark(raw):
         mark=im.convert('RGBA');alpha=mark.getchannel('A')
         if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
         return mark
-
-def normalize_hero_logo(raw):
-    if len(raw)>4*1024*1024:raise ValueError('Logo is too large')
-    mark=transparent_mark(raw)
-    mark=mark.crop(mark.getchannel('A').getbbox())
-    # Retain at least one transparent pixel even for art whose tight box is opaque.
-    mark.thumbnail((HERO_LOGO_SIZE[0]-2,HERO_LOGO_SIZE[1]-2),Image.Resampling.LANCZOS)
-    mark=ImageOps.expand(mark,border=1,fill=(0,0,0,0))
-    output=io.BytesIO();mark.save(output,'PNG',optimize=True)
-    return output.getvalue(),mark.width,mark.height
 
 def _render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM,editorial_top=None):
     with Image.open(io.BytesIO(base))as im:
