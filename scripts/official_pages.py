@@ -65,7 +65,8 @@ class Pages:
             shelf=data['shelf']
             if not isinstance(shelf.get('items'),list):raise ValueError('Invalid official shelf items')
             # The website omits the provider badge on shelf continuation cards.
-            value=slim_shelf(shelf)
+            channels={'tvs.sbd.4000':{}} if context and token is None else None
+            value=slim_shelf(shelf,channels)
         else:value=slim_item(data['content'])
         self.cache[key]={'checkedAt':now,'metadataVersion':2,'value':value};dump(self.path,self.cache);return copy.deepcopy(value)
     def canvas(self,kind,identity):
@@ -88,3 +89,10 @@ class Pages:
             if epic and more.get('displayType')!='epicShowcase':raise ValueError('Official editorial shelf returned regular posters')
             out['items'].extend(more['items']);token=more.get('nextToken')
         out.pop('nextToken',None);return out
+    def editorial_shelf(self,identity,url):
+        context=editorial_context({'id':identity,'url':url})
+        if not context:raise ValueError('Invalid editorial shelf context')
+        shelf=self.get('shelf',identity,context=context)
+        if shelf.get('id')!=identity or shelf.get('displayType')!='epicShowcase' or not shelf['items']:
+            raise ValueError('Invalid contextual editorial shelf')
+        return shelf

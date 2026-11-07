@@ -2,6 +2,7 @@
 import re,hashlib,concurrent.futures
 from datetime import datetime,timezone
 from urllib.parse import urlsplit
+from requests import HTTPError
 from home_sources import CHANNEL,SEARCH,data_page,watch_url
 
 CATEGORY_NAMES={'Coming to Apple TV':'即将上线','Kids & Family':'儿童与家庭','Sci-Fi':'科幻','Nonfiction':'非虚构','Action Adventure':'动作冒险','TV Shows':'电视剧','Dramas':'剧情','Comedies':'喜剧','Thrillers':'惊悚','Crime':'犯罪','Movies':'电影'}
@@ -14,6 +15,9 @@ FEATURE_LOGO_LAYOUT='aligned-31-v1'
 KIDS_HOME_ROOM='uts.room.kids-tv-plus'
 MOVIES_HOME_ROOM='uts.room.movies-on-apple-tv'
 SHELF_SUBTITLES={'Watch these shows and movies together.':'一起观看这些电视节目和电影。'}
+KIDS_EDITORIAL_ROOM='edt.item.6126cd40-38d1-4e11-8211-3f41619392df'
+LEARN_SHELF='edt.col.6a7e3ee5-401c-4f44-a2e7-735a055a3ef1'
+LEARN_URL='https://tv.apple.com/us/collection/lets-learn-together/'+LEARN_SHELF+'?ctx_cvs=edt.cvs.6126cd67-fc86-4eea-a72c-5aa69ce16575&ctx_shelf=edt.shelf.6a162139-2028-41f5-bbd5-2360b25eb83b'
 
 def excluded_home_shelf(shelf):
     title=(shelf.get('header')or{}).get('title')or shelf.get('officialTitle')or''
@@ -61,6 +65,23 @@ def topic_shelf_changes(previous,current):
             changes.append({'pageId':identity,'title':(new or old)['title'],'added':added,'removed':removed,
                             'renamed':renamed,'sourceChanged':source_changed})
     return changes
+
+def kids_editorial_shelves(api,shelves):
+    # The room endpoint can omit or shorten this web editorial row.
+    before='edt.col.6a036cf4-74fa-4d18-9994-75ec1f1338f8'
+    after='edt.col.638d9741-269d-469e-9762-48dbf059c5e1'
+    indexes={row['id']:i for i,row in enumerate(shelves)}
+    if not {LEARN_SHELF,before,after}.intersection(indexes):return shelves
+    try:
+        official=api.editorial_shelf(LEARN_SHELF,LEARN_URL)
+    except HTTPError as error:
+        if error.response is not None and error.response.status_code in (404,410) and LEARN_SHELF not in indexes:
+            return shelves
+        raise
+    out=list(shelves)
+    if LEARN_SHELF in indexes:out[indexes[LEARN_SHELF]]=official
+    else:out.insert(indexes[before] if before in indexes else indexes[after]+1,official)
+    return out
 
 def collect(catalog,api,image,poster=None,kids_room=None):
     entries={};works={};details={};art_jobs={};pages=[]
@@ -168,7 +189,8 @@ def collect(catalog,api,image,poster=None,kids_room=None):
         name=CATEGORY_NAMES.get(title,title)
         page={'id':pid,'officialId':room_id,'title':name,'officialTitle':title,'source':source,'hero':[],'shelves':[]}
         stage=None;seen=set()
-        for sh in raw['shelves']:
+        official_shelves=kids_editorial_shelves(api,raw['shelves']) if room_id==KIDS_EDITORIAL_ROOM else raw['shelves']
+        for sh in official_shelves:
             if sh['id'] in seen:raise ValueError('Duplicate official shelf in topic '+title)
             seen.add(sh['id'])
             if sh.get('displayType')in('epicStage','epicStageWithUpsell'):

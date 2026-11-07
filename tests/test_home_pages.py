@@ -1,7 +1,7 @@
 import sys,copy,unittest,tempfile,json
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from home_pages import KIDS_HOME_ROOM,MOVIES_HOME_ROOM,collect,kids_search_room,page_id,topic_shelf_changes
+from home_pages import KIDS_HOME_ROOM,LEARN_SHELF,LEARN_URL,MOVIES_HOME_ROOM,collect,kids_editorial_shelves,kids_search_room,page_id,topic_shelf_changes
 from home_sources import SEARCH
 from home_validation import validate_pages
 from official_pages import slim_item,slim_shelf,Pages
@@ -196,6 +196,17 @@ class HomePages(unittest.TestCase):
         self.assertEqual(calls,[('shelf','edt.col.family','1:0:20',{'ctx_cvs':'edt.cvs.kids','ctx_shelf':'edt.shelf.family'})])
         api.get=lambda *a,**k:dict(original,items=[item(1)],displayType='lockup')
         with self.assertRaisesRegex(ValueError,'regular posters'):api.shelf(original)
+
+    def test_learning_uses_contextual_items_when_room_is_partial_or_missing(self):
+        from unittest.mock import Mock
+        before={'id':'edt.col.638d9741-269d-469e-9762-48dbf059c5e1'}
+        after={'id':'edt.col.6a036cf4-74fa-4d18-9994-75ec1f1338f8'}
+        full={'id':LEARN_SHELF,'items':[item(i) for i in range(4)]}
+        api=Mock()
+        api.editorial_shelf.return_value=full
+        self.assertEqual(kids_editorial_shelves(api,[before,after]),[before,full,after])
+        self.assertEqual(kids_editorial_shelves(api,[before,dict(full,items=[]),after]),[before,full,after])
+        api.editorial_shelf.assert_called_with(LEARN_SHELF,LEARN_URL)
 
     def test_official_editorial_art_and_caption_are_kept_for_short_shelves(self):
         api=Fake();original=api.canvas;chosen=[]
