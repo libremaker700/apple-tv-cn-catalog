@@ -2,7 +2,7 @@
 import re,hashlib,concurrent.futures
 from datetime import datetime,timezone
 from urllib.parse import urlsplit
-from home_sources import CHANNEL,watch_url
+from home_sources import CHANNEL,SEARCH,data_page,watch_url
 
 CATEGORY_NAMES={'Coming to Apple TV':'即将上线','Kids & Family':'儿童与家庭','Sci-Fi':'科幻','Nonfiction':'非虚构','Action Adventure':'动作冒险','TV Shows':'电视剧','Dramas':'剧情','Comedies':'喜剧','Thrillers':'惊悚','Crime':'犯罪','Movies':'电影'}
 LABELS={'Top 10 TV Shows':'Top 10 电视剧','Top 10 Movies':'Top 10 电影','New Releases':'最新上线','Dark Destinations':'暗黑秘境','Browse All Apple Originals':'浏览全部 Apple 原创作品','Must-See Hits':'必看热门影视',
@@ -11,6 +11,8 @@ LABELS.update({'Coming to Apple TV+':'即将上线','Latest Trailers':'最新预
 LABELS['A Holiday Classic']='节日经典'
 FEATURE_SIZE=(640,800)
 FEATURE_LOGO_LAYOUT='aligned-31-v1'
+KIDS_HOME_ROOM='uts.room.kids-tv-plus'
+MOVIES_HOME_ROOM='uts.room.movies-on-apple-tv'
 
 def excluded_home_shelf(shelf):
     title=(shelf.get('header')or{}).get('title')or shelf.get('officialTitle')or''
@@ -23,7 +25,43 @@ def page_url(url):
     p=urlsplit(url)
     if p.scheme!='https' or p.hostname!='tv.apple.com' or p.username or p.password or not re.fullmatch(r'/us/(room|shelf|collection|channel)/[^?#]+',p.path):raise ValueError('Invalid topic source')
     return 'https://tv.apple.com'+p.path
-def collect(catalog,api,image,poster=None):
+
+def kids_search_room(html):
+    search=data_page(html,'SearchPageIntent',None)
+    if search.get('canonicalURL')!=SEARCH:raise ValueError('Unexpected Apple search landing page')
+    matches=set()
+    for shelf in search.get('shelves',[]):
+        if clean((shelf.get('header')or{}).get('title'))!='Browse':continue
+        for row in shelf.get('items',[]):
+            if clean(row.get('title'))!='Kids & Family':continue
+            destination=(row.get('segue')or{}).get('destination')or{}
+            identity=destination.get('id','')
+            if (destination.get('$kind')=='RoomPageIntent' and destination.get('storefront')=='us'
+                    and isinstance(identity,str) and re.fullmatch(r'(?:edt\.item\.|uts\.room\.)[a-zA-Z0-9.\-]{1,100}',identity)):
+                matches.add(identity)
+    if len(matches)!=1:raise ValueError('Missing or ambiguous US Kids & Family search destination')
+    return matches.pop()
+
+def topic_shelf_changes(previous,current):
+    before={page['id']:page for page in previous.get('pages',[]) if page.get('officialId')}
+    after={page['id']:page for page in current.get('pages',[]) if page.get('officialId')}
+    changes=[]
+    for identity in dict.fromkeys([*after,*before]):
+        old=before.get(identity,{})
+        new=after.get(identity,{})
+        old_shelves={s['id']:s['officialTitle'] for s in old.get('shelves',[])}
+        new_shelves={s['id']:s['officialTitle'] for s in new.get('shelves',[])}
+        added=[title for key,title in new_shelves.items() if key not in old_shelves]
+        removed=[title for key,title in old_shelves.items() if key not in new_shelves]
+        renamed=[{'before':old_shelves[key],'after':title} for key,title in new_shelves.items()
+                 if key in old_shelves and title!=old_shelves[key]]
+        source_changed=bool(old and new and old['source']!=new['source'])
+        if added or removed or renamed or source_changed:
+            changes.append({'pageId':identity,'title':(new or old)['title'],'added':added,'removed':removed,
+                            'renamed':renamed,'sourceChanged':source_changed})
+    return changes
+
+def collect(catalog,api,image,poster=None,kids_room=None):
     entries={};works={};details={};art_jobs={};pages=[]
     for e in catalog['entries']:
         for url in [(e.get('officialIdentity')or{}).get('watchUrl',''),(e.get('zh')or{}).get('watchUrl','')]:
@@ -113,24 +151,52 @@ def collect(catalog,api,image,poster=None):
             for row in enrich({'hero':rows},copy,{},None,0,source_url=source)[0]['hero']:
                 rows[row['rank']-1]['showcaseCopy']=row['copy']
         return {'id':sh['id'],'title':LABELS.get(title,title),'officialTitle':title,'source':source,'layout':layout,'items':rows,'count':len(rows)}
-    root=api.canvas('channel','tvs.sbd.4000');root_shelves=root['shelves'];home={'hero':[],'shelves':[]}
-    for sh in root_shelves:
-        if sh.get('displayType')=='epicStageWithUpsell':home['hero']=work_rows(sh['items'],1920,1080)
-    categories=next(s for s in root_shelves if s['id']=='uts.col.tv-plus-browse-by-category');topic_rows=[];coming=None
-    for it in categories['items']:
-        if it.get('type')!='Room':continue
-        title=clean(it['title']);source=page_url(it['url']);pid=page_id(it['id']);name=CATEGORY_NAMES.get(title,title)
-        raw=api.canvas('room',it['id']);page={'id':pid,'officialId':it['id'],'title':name,'source':source,'hero':[],'shelves':[]}
+    def topic_page(title,room_id,pid,source=None):
+        raw=api.canvas('room',room_id)
+        canonical=page_url(raw['source']) if raw.get('source') else None
+        for candidate in (canonical,source):
+            if candidate and ('/us/room/' not in candidate or candidate.rsplit('/',1)[-1]!=room_id):
+                raise ValueError('Topic destination identity changed')
+        if not (source or canonical):raise ValueError('Topic destination missing')
+        source=source or canonical
+        name=CATEGORY_NAMES.get(title,title)
+        page={'id':pid,'officialId':room_id,'title':name,'officialTitle':title,'source':source,'hero':[],'shelves':[]}
+        stage=None;seen=set()
         for sh in raw['shelves']:
-            if sh.get('displayType')in('epicStage','epicStageWithUpsell'):page['hero']=work_rows(sh['items'],1920,1080)
+            if sh['id'] in seen:raise ValueError('Duplicate official shelf in topic '+title)
+            seen.add(sh['id'])
+            if sh.get('displayType')in('epicStage','epicStageWithUpsell'):
+                stage=sh
+                page['hero']=work_rows(sh['items'],1920,1080)
             else:
                 row=shelf(sh,source)
                 if row:page['shelves'].append(row)
-        if not page['shelves'] and page['hero']:page['shelves']=[{'id':it['id']+'-all','title':name,'officialTitle':title,'source':source,'layout':'portrait','items':work_rows(next(s['items']for s in raw['shelves']if s.get('displayType')in('epicStage','epicStageWithUpsell')),400,600)}]
+        if not page['shelves'] and page['hero']:
+            rows=work_rows(stage['items'],400,600)
+            page['shelves']=[{'id':room_id+'-all','title':name,'officialTitle':title,'source':source,'layout':'portrait','items':rows}]
         if not page['shelves']:raise ValueError('Empty topic '+title)
+        return page
+
+    root=api.canvas('channel','tvs.sbd.4000');root_shelves=root['shelves'];home={'hero':[],'shelves':[]}
+    for sh in root_shelves:
+        if sh.get('displayType')=='epicStageWithUpsell':home['hero']=work_rows(sh['items'],1920,1080)
+    categories=api.shelf(next(s for s in root_shelves if s['id']=='uts.col.tv-plus-browse-by-category'))
+    topic_rows=[];topic_ids=set();coming=None
+    for it in categories['items']:
+        if it.get('type')!='Room':continue
+        title=clean(it['title']);room_id=it['id'];source=page_url(it['url']);pid=page_id(room_id)
+        if kids_room and (room_id==KIDS_HOME_ROOM or title=='Kids & Family'):
+            pid=page_id(KIDS_HOME_ROOM);room_id=kids_room;source=None
+        elif room_id==MOVIES_HOME_ROOM or title=='Movies':
+            pid=page_id(MOVIES_HOME_ROOM)
+        if pid in topic_ids:continue
+        topic_ids.add(pid)
+        page=topic_page(title,room_id,pid,source)
         pages.append(page)
         if title=='Coming to Apple TV':coming=page
-        else:topic_rows.append(dict(pageId=pid,officialId=it['id'],title=name,**art(it,400,600)))
+        else:topic_rows.append(dict(pageId=pid,officialId=room_id,title=page['title'],**art(it,400,600)))
+    if kids_room and page_id(KIDS_HOME_ROOM) not in topic_ids:
+        pages.append(topic_page('Kids & Family',kids_room,page_id(KIDS_HOME_ROOM)))
     # Traverse Apple's canvas order. Only skip non-film/show offers/sports and the
     # explicitly hidden free-premiere shelf; the upcoming destination stays last.
     for sh in root_shelves:

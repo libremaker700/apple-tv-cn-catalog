@@ -2,6 +2,7 @@
 import copy,json,re,concurrent.futures
 from urllib.parse import urlsplit
 CHANNEL='https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000'
+SEARCH='https://tv.apple.com/us/search'
 ROOM='https://tv.apple.com/us/room/sci-fi-on-appletv/edt.item.650b3154-accd-4b87-9f89-6bde117cee31'
 ROOM_ID='edt.item.650b3154-accd-4b87-9f89-6bde117cee31'
 LABELS={'Great Movies Now on Apple TV':'精选电影','Top 10 TV Shows':'热门剧集','Top 10 Movies':'热门电影','Watch Premieres for Free':'免费试看首集','New Releases':'最新上线',

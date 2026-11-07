@@ -1,7 +1,8 @@
 import sys,copy,unittest,tempfile,json
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from home_pages import collect
+from home_pages import KIDS_HOME_ROOM,MOVIES_HOME_ROOM,collect,kids_search_room,page_id,topic_shelf_changes
+from home_sources import SEARCH
 from home_validation import validate_pages
 from official_pages import slim_item,Pages
 
@@ -20,6 +21,61 @@ def image(url,w,h):
     import hashlib
     return {'artwork':'https://libremaker700.github.io/apple-tv-cn-catalog/home/images/'+hashlib.sha256(url.encode()).hexdigest()+'.jpg','width':w,'height':h}
 class HomePages(unittest.TestCase):
+    def test_kids_search_destination_requires_browse_us_room_identity(self):
+        entry={'title':'Kids & Family','segue':{'destination':{'$kind':'RoomPageIntent','storefront':'us','id':'edt.item.verified'}}}
+        intent={'$kind':'SearchPageIntent','storefront':'us'}
+        page={'data':[{'intent':intent,'data':{'canonicalURL':SEARCH,
+               'shelves':[{'header':{'title':'Browse'},'items':[entry]}]}}]}
+        def html():return '<script id="serialized-server-data">'+json.dumps(page)+'</script>'
+        self.assertEqual(kids_search_room(html()),'edt.item.verified')
+        entry['segue']['destination']['storefront']='tw'
+        with self.assertRaises(ValueError):kids_search_room(html())
+
+    def test_search_kids_replaces_the_content_under_the_existing_home_topic_id(self):
+        api=Fake();original=api.canvas;room_calls=[]
+        kids='edt.item.search-kids'
+        kids_source='https://tv.apple.com/us/room/kids--family-on-apple-tv/'+kids
+        def canvas(kind,identity):
+            result=original(kind,identity)
+            if kind=='channel':
+                categories=next(s for s in result['shelves'] if s['id']=='uts.col.tv-plus-browse-by-category')
+                categories['items'].append({'id':MOVIES_HOME_ROOM,'type':'Room','title':'Movies',
+                    'url':'https://tv.apple.com/us/room/movies/'+MOVIES_HOME_ROOM,'images':item(0)['images']})
+                return result
+            room_calls.append(identity)
+            if identity==kids:
+                return {'source':kids_source,'shelves':[shelf('For Bigger Kids',api.rows[:3]),shelf('New Kids Shelf',api.rows[3:6])]}
+            return result
+        api.canvas=canvas
+        value,_=collect({'entries':[]},api,image,kids_room=kids);validate_pages(value)
+        kids_page=next(p for p in value['pages'] if p['id']==page_id(KIDS_HOME_ROOM))
+        self.assertEqual((kids_page['officialId'],kids_page['source']),(kids,kids_source))
+        self.assertEqual([s['officialTitle'] for s in kids_page['shelves']],['For Bigger Kids','New Kids Shelf'])
+        self.assertNotIn('uts.room.kids',room_calls)
+        self.assertIn(MOVIES_HOME_ROOM,room_calls)
+        movies=next(p for p in value['pages'] if p['id']==page_id(MOVIES_HOME_ROOM))
+        self.assertEqual(movies['officialId'],MOVIES_HOME_ROOM)
+        home_topics=next(s['items'] for s in value['shelves'] if s.get('kind')=='topics')
+        self.assertEqual(next(r['officialId'] for r in home_topics if r['pageId']==kids_page['id']),kids)
+
+    def test_topic_refresh_follows_new_rows_and_drops_removed_rows(self):
+        api=Fake();original=api.canvas
+        previous,_=collect({'entries':[]},api,image)
+        new_work=item(99);api.rows.append(new_work)
+        def changed(kind,identity):
+            result=original(kind,identity)
+            if kind=='room' and identity=='uts.room.kids':
+                return {'shelves':[shelf('New Official Collection',[new_work]+api.rows[:3])]}
+            return result
+        api.canvas=changed
+        current,_=collect({'entries':[]},api,image)
+        page=next(p for p in current['pages'] if p.get('officialId')=='uts.room.kids')
+        self.assertEqual([s['officialTitle'] for s in page['shelves']],['New Official Collection'])
+        self.assertEqual(page['shelves'][0]['items'][0]['officialId'],new_work['id'])
+        self.assertTrue(any(w['officialId']==new_work['id'] for w in current['works']))
+        changes=topic_shelf_changes(previous,current)
+        self.assertEqual([(c['added'],c['removed']) for c in changes],[(['New Official Collection'],['All Movies'])])
+
     def test_shelf_art_precedes_generic_poster_and_detail_genres_win(self):
         api=Fake()
         for row in api.rows:
@@ -125,4 +181,6 @@ class HomePages(unittest.TestCase):
         api.get=get;self.assertEqual(len(api.canvas('room','uts.room.a')['shelves']),2);self.assertEqual(calls,[None,'10'])
         api.get=lambda *a,**k:{'id':'canvas','shelves':[],'nextToken':'10'}
         with self.assertRaises(ValueError):api.canvas('room','uts.room.a')
+        api.get=lambda *a,**k:{'id':'shelf','items':[]}
+        with self.assertRaises(ValueError):api.shelf({'id':'shelf','items':[item(1)],'nextToken':'10'})
 if __name__=='__main__':unittest.main()

@@ -315,41 +315,53 @@ def process(home,root,html,now,fetcher=None,showcases_only=False,poster=None):
     # Shelf headings are official display copy, never candidate work names.
     from home_pages import LABELS
     headings={};featured_headings={};heading_rows=[];heading_report=[]
-    for target in [value]+value.get('pages',[]):
-        for shelf in target.get('shelves',[]):
-            showcase=shelf.get('layout') in ('showcase','featured') and shelf.get('kind')!='topics'
-            # Copy-only limits the artwork and synopsis refresh below, not heading translation.
-            original=clean(shelf.get('officialTitle')or shelf.get('title'))
-            if shelf.get('layout')=='featured':shelf['title']=LABELS.get(original,original)
-            if original in LABELS and not showcase:shelf['title']=LABELS[original]
-            if original and (showcase or not valid_zh(shelf.get('title'))):
-                policy={'showcase':'showcase-heading-v1','featured':'featured-heading-v2'}.get(shelf.get('layout'),'shelf-heading-v1')
-                glossary=heading_glossary(original,shelf,works) if shelf.get('layout')=='featured' else {}
-                key=digest([policy,original,glossary]if glossary else[policy,original]);saved=cache.setdefault('records',{}).get(key,{})
-                heading_rows.append((shelf,key))
-                if valid_zh(saved.get('text'),80):shelf['title']=saved['text']
-                elif now>=saved.get('nextRetry',0):
-                    (featured_headings if shelf.get('layout')=='featured' else headings)[key]=(original,glossary)
-    for batch,limit in [(featured_headings,4),(headings,8)]:
-        if not batch:continue
-        selected=list(batch.items())[:limit]
-        rows=[dict({'id':str(i),'text':text,'purpose':'heading'},**({'glossary':glossary}if glossary else{}))
-              for i,(_,(text,glossary)) in enumerate(selected,1)]
-        requested=len(rows);done=0
-        translator.http=0
-        try:
-            translated=translator.translate(rows)
-            for row,(key,_) in zip(rows,selected):
-                text=translated.get(row['id'])
-                if valid_zh(text,80) and all(term in text for term in row.get('glossary',{}).values()):
-                    cache['records'][key]={'text':text,'model':translator.model,'createdAt':now};done+=1
-                else:cache['records'][key]={'nextRetry':now+6*3600}
-        except (ValueError,requests.RequestException,KeyError):
-            for key,_ in selected:cache['records'][key]={'nextRetry':now+6*3600}
-        heading_report.append({'requested':requested,'translated':done,'apiHttp':translator.http,'model':translator.model or ''})
-    for shelf,key in heading_rows:
+    targets=value.get('pages',[])
+    heading_targets=[page for page in targets if page.get('officialTitle')]
+    heading_targets.extend(shelf for target in [value]+targets for shelf in target.get('shelves',[]))
+    for target in heading_targets:
+        layout=target.get('layout')
+        showcase=layout in ('showcase','featured') and target.get('kind')!='topics'
+        # Copy-only limits the artwork and synopsis refresh below, not heading translation.
+        original=clean(target.get('officialTitle')or target.get('title'))
+        if layout=='featured':target['title']=LABELS.get(original,original)
+        if layout and original in LABELS and not showcase:target['title']=LABELS[original]
+        if original and (showcase or not valid_zh(target.get('title'))):
+            policy={'showcase':'showcase-heading-v1','featured':'featured-heading-v2'}.get(layout,'shelf-heading-v1')
+            glossary=heading_glossary(original,target,works) if layout=='featured' else {}
+            key=digest([policy,original,glossary]if glossary else[policy,original]);saved=cache.setdefault('records',{}).get(key,{})
+            heading_rows.append((target,key))
+            if valid_zh(saved.get('text'),80):target['title']=saved['text']
+            elif now>=saved.get('nextRetry',0):
+                (featured_headings if layout=='featured' else headings)[key]=(original,glossary)
+    # A topic refresh can introduce multiple batches. Bound the work for a
+    # malformed or unexpectedly large catalog and keep unprocessed copy pending.
+    for group,size in [(featured_headings,4),(headings,8)]:
+        pending=list(group.items())[:64]
+        for offset in range(0,len(pending),size):
+            batch=pending[offset:offset+size]
+            rows=[dict({'id':str(i),'text':text,'purpose':'heading'},**({'glossary':glossary}if glossary else{}))
+                  for i,(_,(text,glossary)) in enumerate(batch,1)]
+            requested=len(rows);done=0
+            translator.http=0
+            try:
+                translated=translator.translate(rows)
+                for row,(key,_) in zip(rows,batch):
+                    text=translated.get(row['id'])
+                    if valid_zh(text,80) and all(term in text for term in row.get('glossary',{}).values()):
+                        cache['records'][key]={'text':text,'model':translator.model,'createdAt':now};done+=1
+                    else:cache['records'][key]={'nextRetry':now+6*3600}
+            except (ValueError,requests.RequestException,KeyError):
+                for key,_ in batch:cache['records'][key]={'nextRetry':now+6*3600}
+            heading_report.append({'requested':requested,'translated':done,'apiHttp':translator.http,'model':translator.model or ''})
+            if not done and translator.http>=400:break
+    for target,key in heading_rows:
         saved=cache['records'].get(key,{})
-        if valid_zh(saved.get('text'),80):shelf['title']=saved['text']
+        if valid_zh(saved.get('text'),80):target['title']=saved['text']
+    topic_titles={p['id']:p['title'] for p in targets if p.get('officialTitle')}
+    for shelf in value.get('shelves',[]):
+        if shelf.get('kind')=='topics':
+            for row in shelf['items']:
+                if row.get('pageId') in topic_titles:row['title']=topic_titles[row['pageId']]
     dump(path,cache)
     for target in [value]+value.get('pages',[]):
         url=target.get('source',CHANNEL)

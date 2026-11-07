@@ -40,8 +40,13 @@ class Pages:
         if r.status_code!=200 or len(r.content)>12_000_000:raise ValueError('Invalid public page response')
         data=r.json()['data']
         if route in ('channel','room'):
-            c=data['canvas'];value={'id':c['id'],'source':c['url'],'nextToken':c.get('nextToken'),'shelves':[slim_shelf(s)for s in c.get('shelves',[])]}
-        elif route=='shelf':value=slim_shelf(data['shelf'])
+            c=data['canvas']
+            if not isinstance(c.get('shelves'),list):raise ValueError('Invalid official canvas shelves')
+            value={'id':c['id'],'source':c['url'],'nextToken':c.get('nextToken'),'shelves':[slim_shelf(s)for s in c['shelves']]}
+        elif route=='shelf':
+            shelf=data['shelf']
+            if not isinstance(shelf.get('items'),list):raise ValueError('Invalid official shelf items')
+            value=slim_shelf(shelf)
         else:value=slim_item(data['content'])
         self.cache[key]={'checkedAt':now,'metadataVersion':2,'value':value};dump(self.path,self.cache);return copy.deepcopy(value)
     def canvas(self,kind,identity):
@@ -49,7 +54,7 @@ class Pages:
         while token:
             if token in seen or len(seen)>=15:raise ValueError('Repeating or excessive page pagination')
             seen.add(token);more=self.get(kind,identity,token)
-            if more['id']!=page['id']:raise ValueError('Pagination changed canvas identity')
+            if more['id']!=page['id'] or not more['shelves']:raise ValueError('Invalid official canvas page')
             out['shelves'].extend(more['shelves']);token=more.get('nextToken')
         out.pop('nextToken',None);return out
     def shelf(self,shelf):
@@ -57,6 +62,6 @@ class Pages:
         while token:
             if token in seen or len(seen)>=35:raise ValueError('Repeating or excessive shelf pagination')
             seen.add(token);more=self.get('shelf',shelf['id'],token)
-            if more['id']!=shelf['id']:raise ValueError('Pagination changed shelf identity')
+            if more['id']!=shelf['id'] or not more['items']:raise ValueError('Invalid official shelf page')
             out['items'].extend(more['items']);token=more.get('nextToken')
         out.pop('nextToken',None);return out

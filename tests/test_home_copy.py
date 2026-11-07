@@ -286,3 +286,25 @@ class ShowcaseCopyTests(unittest.TestCase):
             shelf['officialTitle']='A Different Holiday';item['description']='Snoopy greets friends.'
             process(home,root,html(),3,showcases_only=True)
             self.assertEqual(inputs[-2:],['A Different Holiday','Snoopy greets friends.'])
+
+    def test_new_topic_headings_translate_in_multiple_batches_in_same_run(self):
+        import tempfile
+        from unittest.mock import patch
+        from home_copy import process
+        titles=['New Shelf '+str(n) for n in range(11)]
+        page={'id':'topic-example','officialTitle':'New Official Topic','title':'New Official Topic',
+              'hero':[],'shelves':[{'title':title,'officialTitle':title,'layout':'portrait','items':[]} for title in titles]}
+        card={'pageId':page['id'],'title':page['title']}
+        home={'works':[],'hero':[],'pages':[page],
+              'shelves':[{'kind':'topics','layout':'portrait','officialTitle':'Browse All Apple Originals',
+                         'title':'浏览全部 Apple 原创作品','items':[card]}]}
+        translator=Translator()
+        def translate(rows):
+            return {row['id']:'中文：'+row['text'] for row in rows}
+        translator.translate=translate
+        with tempfile.TemporaryDirectory() as folder,patch('home_copy.Translator',return_value=translator):
+            localized,report=process(home,Path(folder),'',1,showcases_only=True)
+            self.assertEqual([group['requested'] for group in report['headings']],[8,4])
+            self.assertEqual(report['pending'],0)
+            self.assertEqual([row['title'] for row in localized['pages'][0]['shelves']],['中文：'+title for title in titles])
+            self.assertEqual(localized['shelves'][0]['items'][0]['title'],localized['pages'][0]['title'])

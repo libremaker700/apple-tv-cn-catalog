@@ -19,10 +19,10 @@ class Home(unittest.TestCase):
             (root/'docs/catalog.json').write_text(json.dumps({'entries':[entry(n)for n in range(3)]}),encoding='utf8')
             buffer=io.BytesIO();Image.new('RGB',(1920,1080)).save(buffer,format='JPEG');blob=buffer.getvalue();calls=[]
             def fetch(url):
-                if url in (h.SOURCE,h.ROOM):return page([item(n)for n in range(3)]).encode()
+                if url in (h.SOURCE,h.ROOM,h.SEARCH):return page([item(n)for n in range(3)]).encode()
                 calls.append(url);return blob
             import home_pages,home_titles,official_pages,home_copy
-            with patch.object(h,'ROOT',root),patch.object(h,'DOCS',root/'docs'),patch.object(h,'fetch',fetch),patch.object(h.time,'time',return_value=1000000),patch.object(official_pages,'Pages',return_value=None),patch.object(home_pages,'collect',side_effect=lambda catalog,api,image,**kwargs:h.collect(catalog,page([item(n)for n in range(3)]),image)),patch.object(home_titles,'enrich'),patch.object(home_copy,'process',side_effect=lambda v,*args,**kwargs:(v,{})):
+            with patch.object(h,'ROOT',root),patch.object(h,'DOCS',root/'docs'),patch.object(h,'fetch',fetch),patch.object(h.time,'time',return_value=1000000),patch.object(official_pages,'Pages',return_value=None),patch.object(home_pages,'kids_search_room',return_value='edt.item.kids'),patch.object(home_pages,'collect',side_effect=lambda catalog,api,image,**kwargs:h.collect(catalog,page([item(n)for n in range(3)]),image)),patch.object(home_titles,'enrich'),patch.object(home_copy,'process',side_effect=lambda v,*args,**kwargs:(v,{})):
                 _,first=h.sync();self.assertEqual(len(calls),3)
                 _,second=h.sync();self.assertEqual(len(calls),3);self.assertEqual(first['version'],second['version'])
                 changed=io.BytesIO();Image.new('RGB',(1920,1080),'red').save(changed,format='JPEG');blob=changed.getvalue()

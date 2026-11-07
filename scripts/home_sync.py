@@ -5,6 +5,7 @@ from urllib.parse import urlsplit
 import requests
 from PIL import Image,ImageOps
 from catalog import ROOT,DOCS,load,raw_json
+from home_sources import SEARCH
 
 SOURCE='https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
@@ -30,7 +31,7 @@ def image_inventory(value,folder):
 
 def fetch(url):
     u=urlsplit(url)
-    if not (url in (SOURCE,ROOM) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
+    if not (url in (SOURCE,ROOM,SEARCH) or u.hostname=='tv.apple.com' and re.fullmatch(r'/us/(movie|show)/[^/]+/umc\.cmc\.[a-z0-9]+',u.path) or re.fullmatch(r'is\d+-ssl\.mzstatic\.com',u.hostname or '') and u.path.startswith('/image/')) or u.scheme!='https' or u.username or u.password:
         raise ValueError('Unsupported homepage endpoint')
     r=requests.get(url,headers={'User-Agent':'Mozilla/5.0 AppleTVCatalog/1.0'},timeout=(15,35),allow_redirects=False)
     r.raise_for_status()
@@ -135,7 +136,7 @@ def sync():
         from title_lookup import dump
         dump(details_path,details);return found
     from official_pages import Pages
-    from home_pages import collect as collect_official
+    from home_pages import collect as collect_official,kids_search_room,topic_shelf_changes
     from home_titles import remember as remember_home_titles
     previous_home=folder/'home.json'
     previous=load(previous_home)if previous_home.is_file()else{}
@@ -143,7 +144,8 @@ def sync():
     html=fetch(SOURCE).decode('utf-8')
     from poster_logos import PosterLogos
     logos=PosterLogos(ROOT,fetch)
-    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image,poster=logos.apply)
+    kids_room=kids_search_room(fetch(SEARCH).decode('utf-8'))
+    value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image,poster=logos.apply,kids_room=kids_room)
     report['officialLogoPosters']=logos.count
     from home_seasons import enrich as enrich_seasons,reconcile as reconcile_seasons
     from catalog import get as season_get
@@ -165,6 +167,7 @@ def sync():
     preserve_featured_copy(value,previous,logos)
     value,copy_report=process(value,ROOT,html,now,poster=logos)
     report['copy']=copy_report
+    report['topicShelfChanges']=topic_shelf_changes(previous,value)
     validate(value)
     raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images=image_inventory(value,folder)
     path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)

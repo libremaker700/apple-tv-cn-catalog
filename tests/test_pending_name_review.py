@@ -21,6 +21,30 @@ class NameOnlyReview(unittest.TestCase):
             probe.assert_not_called();client.search.assert_not_called()
             self.assertEqual(report['records'][0]['sourcePolicy'],'not_checked_name_review')
             self.assertNotIn('sourceCheck',json.loads((root/'docs/catalog.json').read_text())['entries'][0].get('zh',{}))
+    def test_new_movie_topic_works_are_checked_before_general_backlog(self):
+        from home_pages import MOVIES_HOME_ROOM, page_id
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.setup_root(root, [{'slug': 'other', 'en': 'A Different Film', 'kind': 'movie', 'year': '2020'}])
+            home = {
+                'pages': [{'id': page_id(MOVIES_HOME_ROOM), 'hero': [], 'shelves': [
+                    {'items': [{'slug': 'missing'}, {'slug': 'new-film'}]}]}],
+                'works': [
+                    {'slug': 'missing', 'en': 'A Film Without a Date', 'kind': 'movie'},
+                    {'slug': 'new-film', 'en': 'New Film', 'kind': 'movie', 'zh': {'officialReleaseYear': 2025}},
+                ],
+            }
+            (root/'docs/home/home.json').write_text(json.dumps(home), encoding='utf8')
+            client = Mock(events=[])
+            client.search.return_value = ([], 'ok')
+            lookup = Mock()
+            lookup.pages.events = []
+            with patch('mainland_names.DoubanMobile') as mobile:
+                mobile.return_value.lookup.return_value = None
+                result = run(root, limit=1, client=client, lookup=lookup, names_only=True)
+            self.assertEqual([row['slug'] for row in result['records']], ['new-film'])
+            self.assertEqual(result['movieTopicMissingYear'], ['missing'])
+            self.assertEqual(mobile.return_value.lookup.call_args.args[0]['year'], '2025')
     def test_review_reports_network_and_future_separately_without_using_hint_as_approval(self):
         with tempfile.TemporaryDirectory()as tmp:
             root=Path(tmp)

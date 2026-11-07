@@ -135,6 +135,10 @@ def republish_home(home,root):
 def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=None,names_only=False):
     main=load(root/'docs/catalog.json');home=load(root/'docs/home/home.json');cache_path=root/'data/mainland-name-cache.json';cache=read(cache_path,{'records':{},'budgets':{}});now=int(time.time());month=time.strftime('%Y-%m',time.gmtime(now));budget=200
     report={'order':['douban_direct','verified_search_fallback']if names_only else['douban_direct','public_source_match','you.com_fallback','douban_or_plex_identity','public_source_match'],'records':[],'changed':[],'geminiUsed':False,'namesOnly':names_only};used=int(cache['budgets'].get(month,0))
+    from home_pages import MOVIES_HOME_ROOM, page_id
+    movies = next((page for page in home.get('pages', []) if page.get('id') == page_id(MOVIES_HOME_ROOM)), {})
+    movie_topic_slugs = {item['slug'] for item in movies.get('hero', [])}
+    movie_topic_slugs.update(item['slug'] for shelf in movies.get('shelves', []) for item in shelf['items'])
     search_hints_by_slug=read(root/'data/name-search-hints.json',{'works':{}}).get('works',{})
     def reserve():
         nonlocal used
@@ -149,7 +153,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
     def priority(pair):
         work=pair[0];n=int(work.get('artworkSeasonNumber')or work.get('seasonNumber')or 1)
         current=next((s for s in work.get('seasons',[])if s.get('season')==n),{})
-        return (source_deferred(current or work,now),cache['records'].get(work['slug'],{}).get('checkedAt',0),work['en'])
+        checked_at = cache['records'].get(work['slug'], {}).get('checkedAt', 0)
+        new_movie = (work['kind'] == 'movie' and work['slug'] in movie_topic_slugs and not checked_at
+                     and (work.get('zh') or {}).get('name_status') != 'verified_title_sources')
+        return (source_deferred(current or work, now), not new_movie, checked_at, work['en'])
     selected.sort(key=priority)
     for work,is_home in selected:
         from candidate_name_rules import apply_kind
@@ -168,8 +175,13 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if zh.get('name_status')=='verified_title_sources'and has_detail and not force and not released_after_name_only:continue
         if now<old.get('nextRetry',0)and not force and not released_after_name_only:continue
         year=str(zh.get('_identityYear')or(work.get('year')if is_home else identity(work,{})['year'])or'')
-        if not re.fullmatch(r'(19|20)\d{2}',year):continue
         if len(report['records'])>=max(0,min(5,int(limit))):break
+        if not year and is_home and work['kind'] == 'movie':
+            year = str(zh.get('officialReleaseYear') or '')
+        if not re.fullmatch(r'(19|20)\d{2}', year):
+            if work['slug'] in movie_topic_slugs:
+                report.setdefault('movieTopicMissingYear', []).append(work['slug'])
+            continue
         detail_year=str(current.get('year')or year)
         ref={'english_title':work['en'],'kind':'movie'if work['kind']=='movie'else'tv','year':detail_year,'season':0 if work['kind']=='movie'else n,'want_summary':True,'display_name_zh':zh.get('title','')}
         watch=work.get('watchUrl')or(work.get('officialIdentity')or{}).get('watchUrl','')
