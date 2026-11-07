@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1794050003,
+  "checkedAt": 1794057402,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -139,12 +139,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 20,
+      "cacheHits": 31,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 11,
-      "sourceMissing": 11,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "edt.col.6126d47a-db5a-4bdc-a0fa-0aa10ecf71f9",
@@ -171,8 +171,8 @@
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 4,
-      "sourceMissing": 4,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "edt.col.6a10b1a0-39f6-4c59-80e3-b53ecf5d041a",
@@ -185,8 +185,8 @@
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 4,
-      "sourceMissing": 4,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "edt.col.69d43c34-cea9-469d-8fe7-4da5496a73ba",
@@ -198,5 +198,5 @@
   "badgesBackfilled": 0,
   "translated": 0,
   "pending": 0,
-  "version": "b2400b59690c8e2081f0c8a6dbe56fa174d88a6e2925e9c1c6247dbb1fdc6c33"
+  "version": "2b860715afe2230abceb048a8cd789739543a88239658ba582d7f08a8c338225"
 }

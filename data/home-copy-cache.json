@@ -767,6 +767,51 @@
       "text": "在不远的将来，学生们经历了神秘的事件。",
       "model": "gemini-3.5-flash-lite",
       "createdAt": 1794049116
+    },
+    "c9ff923339b19a70f89093dede48bd23eb72edaf96a1df297db73c32715a5484": {
+      "text": "一个13岁的女孩探索了对生活的新热情，并直面曾束缚着她的恐惧。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "cd72fea9abf23777a7aad5f76bfce17fe308c118b2936f1f86bdf7edda7dde01": {
+      "text": "海滩边的好友二人组调查了一系列超自然谜团。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "508f5df58cb2c1325af6521fa7f5f85e6f928ff8f69075081d475251fbc03725": {
+      "text": "一个装有假肢的12岁男孩开始寻找他在公立学校中的位置。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "3d703316d6472d22331c73335c87cd350e23c7c8062705a215e3996fc6ec40c8": {
+      "text": "探索备受喜爱的儿童读物的动画改编版。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "694fd54b104cabf261a79782b7bccaa8019a9fce98a9929d58cb0fb3638a2c1e": {
+      "text": "在旁白汤姆·希德勒斯顿的带领下，以全彩视角见证动物们的夜间生活。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "fae4ba9691904eaa48f7cfdf113f662f5e7ea168d1efe6599a166c0101b5b495": {
+      "text": "探索世界上最具想象力的住宅背后的故事与理念。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "72c6bfa0dec9963e47fdb482d941b9c568532aabe6ce4775e78ad7e2e0bd19c2": {
+      "text": "在这部动画短片中，一个陌生星球上的宇航员偶遇了一位飘渺的访客。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "fd0b30664a5b304ce8e49e9b54504adb21569b0b40ef4ff12c76299066f5b772": {
+      "text": "载歌载舞，欢笑不断——可爱的弗吉尔带着全新的冒险归来。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
+    },
+    "2cc171ab0c326a742489e6b94459b9d77d6714ad30495e28e60250aa31ab12d6": {
+      "text": "在这部写给面临威胁的物种的合家欢情书中，开启一段史诗般的旅程。",
+      "model": "gemini-3.5-flash-lite",
+      "createdAt": 1794057346
     }
   }
 }
