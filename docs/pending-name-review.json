@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-11-04T04:40:28+00:00",
+  "checkedAt": "2026-11-07T04:34:16+00:00",
   "namesOnly": true,
   "geminiUsed": false,
   "sourceProbingPerformed": true,
@@ -3462,7 +3462,7 @@
           }
         ]
       },
-      "status": "verified"
+      "status": "identity_no_chinese_name"
     },
     {
       "slug": "911-inside-the-presidents-war-room",
@@ -3957,7 +3957,7 @@
           }
         ]
       },
-      "status": "verified"
+      "status": "identity_no_chinese_name"
     },
     {
       "slug": "home-7grdgbjdq3tiy37f4dc3yeyms",
@@ -4408,13 +4408,507 @@
         ]
       },
       "status": "verified"
+    },
+    {
+      "slug": "acapulco",
+      "en": "Acapulco",
+      "year": "2021",
+      "season": 1,
+      "skip": "",
+      "result": {
+        "slug": "acapulco",
+        "en": "Acapulco",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "阿卡普高 第四季",
+            "阿卡普高",
+            "阿卡普科"
+          ],
+          "aiSources": [
+            {
+              "title": "阿卡普高 第四季 Acapulco Season 4",
+              "url": "https://m.douban.com/movie/subject/37019478/"
+            },
+            {
+              "title": "阿卡普高 第四季 - DramasQ線上看",
+              "url": "https://dramasq.io/detail/202524156.html"
+            },
+            {
+              "title": "[BT下载][阿卡普高.第四季][第06集][WEB-MKV/4.77G][简繁英字幕][4K-2160P][H265][流媒体][ColorTV]-电视剧集-BT之家1LOU站-回归初心，追求极简",
+              "url": "https://www.1lou.me/thread-828591.htm?user=20911"
+            },
+            {
+              "title": "阿卡普高系列",
+              "url": "https://www.douban.com/doulist/158069458/"
+            },
+            {
+              "title": "阿卡普高.第四季[第01-02集][简繁英字幕].Acapulco.S04.2021.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-ColorT-高清剧集-BT之家1LOU站-回归初心，追求极简",
+              "url": "https://www.1lou.me/thread-807665.htm?user=49107"
+            },
+            {
+              "title": "[BT下载][阿卡普高 Acapulco 第四季][全10集][英语中字][MKV][1080P/2160P][AppleTV+]-电视剧集-BT之家1LOU站-回归初心，追求极简",
+              "url": "https://www.1lou.me/thread-808222.htm?user=33237"
+            },
+            {
+              "title": "阿卡普高.第四季[第08集][简繁英字幕].Acapulco.S04.2021.1080p.ATVP.WEB-DL.DDP5.1.Atmos.H264-ColorTV 2.-高清剧集-BT之家1LOU站-回归初心，追求极简",
+              "url": "https://www.1lou.pro/thread-837015.htm?user=50795"
+            }
+          ],
+          "queryNames": [
+            "阿卡普高 第四季",
+            "阿卡普高",
+            "阿卡普科"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "阿卡普高",
+          "selectedTitle": "阿卡普高",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 4,
+          "subjectId": "37019478",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING"
+        },
+        "title": "阿卡普高",
+        "sourceMatch": {
+          "title": "阿卡普高第四季",
+          "routes": 30,
+          "libraries": 21,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "阿卡普高",
+            "libraries": 18,
+            "checkedLibraries": 14,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "阿卡普高",
+                "libraries": 18
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 0,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 0,
+            "routes": 1
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "network"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 0,
+            "routes": 10
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "status": "verified"
     }
   ],
   "summary": {
     "future_release": 1,
-    "identity_no_chinese_name": 10,
+    "identity_no_chinese_name": 12,
     "missing_identity": 1,
     "unverified": 8,
-    "verified": 39
+    "verified": 38
   }
 }

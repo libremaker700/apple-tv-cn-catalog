@@ -2,7 +2,7 @@
 
 本报告复核中文名，不使用 Gemini。已上线且豆瓣身份已核实的作品，使用 YDC／Tavily 查询候选名，再查片库；同片同季且有播放条目即可按片库数量选名，已确认片名不会因线路过期被撤销。用户确认的片库名称另记来源；没有片库名称证据时保留豆瓣名称。超时不代表未收录；名称确认不等于播放器已出画面。
 
-检查时间（UTC）：2026-11-04T04:40:28+00:00
+检查时间（UTC）：2026-11-07T04:34:16+00:00
 
 | 英文原名 | 结果 | 已核实中文名 | 年份 / 季数 |
 |---|---|---|---|
@@ -62,6 +62,7 @@
 | Formula 1: Drive to Survive | 已确认中文名 | 一级方程式：疾速争胜 | 2026 / 8 |
 | It's Christmastime Again, Charlie Brown | 已确认中文名 | 查理·布朗，圣诞节又到了 | 1992 / 0 |
 | Peanuts in Space: Secrets of Apollo 10 | 已确认中文名 | 花生在太空：阿波罗十号的秘密 | 2021 / 0 |
-| 1971: The Year That Music Changed Everything | 已确认中文名 | 1971音乐改变世界的一年 | 2021 / 1 |
-| 9/11: Inside the President’s War Room | 已确认中文名 | 911：总统作战室 | 2021 / 0 |
+| 1971: The Year That Music Changed Everything | 身份已核实，暂无经片库确认的中文名 | 1971音乐改变世界的一年 | 2021 / 1 |
+| 9/11: Inside the President’s War Room | 身份已核实，暂无经片库确认的中文名 | 911：总统作战室 | 2021 / 0 |
 | A Charlie Brown Thanksgiving | 已确认中文名 | 史努比的故事：查理布朗的感恩节 | 1973 / 0 |
+| Acapulco | 已确认中文名 | 阿卡普高 | 2021 / 1 |
