@@ -101,3 +101,5 @@ jobs:
         with:
           path: docs
       - uses: actions/deploy-pages@v4
+        with:
+          timeout: '900000'
