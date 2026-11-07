@@ -3,6 +3,8 @@
   "works": {
     "prehistoric-planet-ice-age": {
       "englishTitle": "Prehistoric Planet: Ice Age",
+      "parentSlug": "prehistoric-planet",
+      "parentTitle": "Prehistoric Planet",
       "showId": "umc.cmc.4lh4bmztauvkooqz400akxav",
       "seasonId": "umc.cmc.4o0kctke9ymgkyzaxqp5a0xz7",
       "season": 3,

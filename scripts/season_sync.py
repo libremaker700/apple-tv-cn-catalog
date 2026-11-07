@@ -62,7 +62,9 @@ def base_title(entry):
     return re.sub(r'\s*(?:第\s*[0-9一二三四五六七八九十百]+\s*季|Season\s+\d+)\s*$','',name,flags=re.I).strip()
 
 def label_seasons(entry):
-    for season in entry.get('seasons',[]):season['title']=base_title(entry)+' 第'+str(season['season'])+'季'
+    for season in entry.get('seasons',[]):
+        if season.get('originalTitle',entry['en'])==entry['en']:
+            season['title']=base_title(entry)+' 第'+str(season['season'])+'季'
 
 def public_seasons(rows):
     return [{k:v for k,v in row.items() if k not in ('checkedAt','imageCheckedAt','summaryOriginal')} for row in rows]

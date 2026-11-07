@@ -70,10 +70,11 @@ def publish(catalog,checked_at,mode):
     value=apply_details(value,ROOT)
     from list_artwork import apply_cached as apply_list_artwork
     value=apply_list_artwork(value,ROOT)
-    from season_scope import apply as apply_season_scope
-    for entry in value['entries']:apply_season_scope(entry,ROOT)
     from metadata_policy import restore_display_titles
     restore_display_titles(value['entries'],ROOT)
+    from season_scope import apply as apply_season_scope
+    by_slug={entry['slug']:entry for entry in value['entries']}
+    for entry in value['entries']:apply_season_scope(entry,ROOT,by_slug)
     images={}
     for e in value['entries']:
         from source_availability import apply_cached

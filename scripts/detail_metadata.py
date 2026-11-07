@@ -65,10 +65,12 @@ def remember(work,packet,root):
     if not attach(work,packet):return False
     path=root/'data/detail-metadata-cache.json';cache=json.loads(path.read_text(encoding='utf8'))if path.exists()else{'schema':1,'works':{}}
     identity=work_id(work);old=cache['works'].get(identity,{})
-    if old and (old.get('en')!=work['en']or old.get('kind')!=work['kind']):raise ValueError('Detail work identity changed')
+    from season_scope import rules,same_family_title
+    if old and (old.get('kind')!=work['kind'] or old.get('en')!=work['en'] and not same_family_title(work,old.get('en'),rules(root))):
+        raise ValueError('Detail work identity changed')
     if any(p.get('subjectId')==packet['subjectId']and p.get('season')!=packet['season']for p in old.get('details',[])):raise ValueError('A Douban subject cannot label two seasons')
     rows=[p for p in old.get('details',[])if valid(p,work['kind'])and p['season']!=packet['season']]+[packet]
-    cache['works'][identity]={'en':work['en'],'kind':work['kind'],'details':sorted(rows,key=lambda p:p['season'])}
+    cache['works'][identity]={'en':old.get('en',work['en']),'kind':work['kind'],'details':sorted(rows,key=lambda p:p['season'])}
     path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(cache,ensure_ascii=False,indent=2),encoding='utf8');tmp.replace(path)
     return True
 
@@ -76,9 +78,11 @@ def apply_cached(value,root,home=False):
     out=copy.deepcopy(value);path=root/'data/detail-metadata-cache.json'
     if not path.exists():return out
     cache=json.loads(path.read_text(encoding='utf8'));assert cache.get('schema')==1
+    from season_scope import rules,same_family_title
+    scopes=rules(root)
     for work in out.get('works'if home else'entries',[]):
         row=cache['works'].get(work_id(work),{})
-        if row.get('en')!=work['en']or row.get('kind')!=work['kind']:continue
+        if row.get('kind')!=work['kind'] or row.get('en')!=work['en'] and not same_family_title(work,row.get('en'),scopes):continue
         for packet in row.get('details',[]):attach(work,packet)
     return out
 
