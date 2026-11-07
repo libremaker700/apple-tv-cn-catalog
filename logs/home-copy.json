@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1794049116,
+  "checkedAt": 1794050003,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -138,26 +138,13 @@
       "status": "ready"
     },
     {
-      "requested": 5,
-      "cacheHits": 15,
-      "translated": 5,
+      "requested": 0,
+      "cacheHits": 20,
+      "translated": 0,
       "pending": 0,
-      "apiHttp": 200,
+      "apiHttp": 0,
       "retainedCopy": 11,
       "sourceMissing": 11,
-      "model": "gemini-3.5-flash-lite",
-      "usage": {
-        "promptTokenCount": 390,
-        "candidatesTokenCount": 307,
-        "totalTokenCount": 697,
-        "promptTokensDetails": [
-          {
-            "modality": "TEXT",
-            "tokenCount": 390
-          }
-        ],
-        "serviceTier": "standard"
-      },
       "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "edt.col.6126d47a-db5a-4bdc-a0fa-0aa10ecf71f9",
@@ -170,8 +157,8 @@
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "recomposed": 0,
       "artworkPending": 0,
       "shelfId": "edt.col.6a036cf4-74fa-4d18-9994-75ec1f1338f8",
@@ -209,7 +196,7 @@
   ],
   "headings": [],
   "badgesBackfilled": 0,
-  "translated": 5,
+  "translated": 0,
   "pending": 0,
-  "version": "0ee0bab883ec7d3f3ecd7c281e5945ab53b2be2007b6ee2f8f639b63238019bf"
+  "version": "b2400b59690c8e2081f0c8a6dbe56fa174d88a6e2925e9c1c6247dbb1fdc6c33"
 }
