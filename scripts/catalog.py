@@ -6,7 +6,7 @@ import requests
 from urllib.parse import urljoin
 from PIL import Image
 from metadata_policy import POLICY,allowed_source,clean_entry,clean_zh
-from season_sync import Collector,apply_reviewed_summaries,label_seasons,public_seasons
+from season_sync import Collector,label_seasons,public_seasons
 ROOT=Path(__file__).resolve().parents[1]
 DOCS=ROOT/'docs'
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/'
@@ -74,7 +74,6 @@ def publish(catalog,checked_at,mode):
     for entry in value['entries']:apply_season_scope(entry,ROOT)
     from metadata_policy import restore_display_titles
     restore_display_titles(value['entries'],ROOT)
-    apply_reviewed_summaries(value['entries'],ROOT)
     images={}
     for e in value['entries']:
         from source_availability import apply_cached

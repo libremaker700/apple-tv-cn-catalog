@@ -8,6 +8,7 @@ SHOW='umc.cmc.testshow';NOW=int(datetime(2026,10,30,tzinfo=timezone.utc).timesta
 def metadata(number):
     return {'id':'umc.cmc.season'+str(number),'showId':SHOW,'seasonNumber':number,'type':'Season',
             'releaseDate':int(datetime(2024 if number==1 else 2026,1,1,tzinfo=timezone.utc).timestamp()*1000),
+            'description':'Exact synopsis for season '+str(number),
             'images':{'coverArt16X9':{'url':'https://is1-ssl.mzstatic.com/image/season'+str(number)+'/{w}x{h}.{f}'}}}
 def page(numbers=(1,2)):
     data={'data':[{'intent':{'$kind':'UtsConfigureIntent'},'data':{'configuration':{'applicationProps':{'requiredParamsMap':{'Default':{'sf':'143441','locale':'en-US','utsk':'public-web-session','v':'101','pfm':'web','caller':'web'}}}}}},
@@ -58,6 +59,8 @@ class Seasons(unittest.TestCase):
         self.assertEqual([s['year'] for s in out['seasons']],['2024','2026']);self.assertEqual(out['officialIdentity']['year'],'2024')
         self.assertEqual(out['seasons'][0]['summary'],'已核验第一季中文简介');self.assertTrue(out['seasons'][1]['summaryPending'])
         self.assertEqual(out['seasons'][1]['title'],'国内片名 第2季')
+        self.assertNotIn('summaryOriginal',out['seasons'][1])
+        self.assertEqual(c.cache['shows']['example']['seasons'][1]['summaryOriginal'],'Exact synopsis for season 2')
         for raw in (json.dumps(out),json.dumps(c.cache)):
             for name in ('utsk','utscf','developerToken','configuration','public-web-session'):self.assertNotIn(name,raw)
     def test_announced_latest_does_not_relabel_old_artwork(self):

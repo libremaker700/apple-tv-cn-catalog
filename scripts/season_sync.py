@@ -34,6 +34,29 @@ def chinese_summary(value):
     value=re.sub(r'\s+',' ',str(value or '')).strip()
     return value if re.search(r'[\u4e00-\u9fff]',value) and not re.search(r'暂无简介|简介.*(?:待完善|暂未提供)',value) else ''
 
+def official_synopsis(value):
+    if not isinstance(value,str):return ''
+    text=re.sub(r'\s+',' ',value).strip()
+    if len(text)>1800 or re.search(r'<|>|https?://|AIza|tvly-',text):return ''
+    if re.fullmatch(r'(?:内详|暂无(?:简介|剧情)|coming soon|no (?:synopsis|description) available)[。.!…\s]*',text,re.I):return ''
+    return text
+
+
+def season_synopsis_identity(row, show_id):
+    sid=row.get('officialId','');number=row.get('season');release=row.get('releaseDate','')
+    if (row.get('metadataStatus')!='verified' or not isinstance(show_id,str) or not ID.fullmatch(show_id)
+            or not isinstance(sid,str) or not ID.fullmatch(sid)
+            or row.get('showId',show_id)!=show_id or type(number)is not int or not 1<=number<=100
+            or not isinstance(release,str) or year_date(release)!=release or not release
+            or str(row.get('year'))!=release[:4]):return None
+    return sid,show_id,number,release
+
+
+def season_synopsis_url(identity):
+    sid,show_id,number,_=identity
+    return f'https://tv.apple.com/us/season/season-{number}/{sid}?showId={show_id}'
+
+
 def base_title(entry):
     name=(entry.get('zh') or {}).get('title') or entry['en']
     return re.sub(r'\s*(?:第\s*[0-9一二三四五六七八九十百]+\s*季|Season\s+\d+)\s*$','',name,flags=re.I).strip()
@@ -42,7 +65,7 @@ def label_seasons(entry):
     for season in entry.get('seasons',[]):season['title']=base_title(entry)+' 第'+str(season['season'])+'季'
 
 def public_seasons(rows):
-    return [{k:v for k,v in row.items() if k not in ('checkedAt','imageCheckedAt')} for row in rows]
+    return [{k:v for k,v in row.items() if k not in ('checkedAt','imageCheckedAt','summaryOriginal')} for row in rows]
 
 def apply_reviewed_summaries(entries, root):
     from metadata_policy import allowed_source
@@ -57,9 +80,13 @@ def apply_reviewed_summaries(entries, root):
                 continue
             if any(str(season.get(field)) != str(row[field]) for field in ('showId', 'season', 'year')):
                 continue
+            if row.get('releaseDate') and season.get('releaseDate')!=row['releaseDate']:
+                continue
             summary = chinese_summary(row['summary'])
             current = chinese_summary(season.get('summary'))
-            if summary and current in ('', summary) and allowed_source(row['source']):
+            identity=season_synopsis_identity(season,row['showId'])
+            previous_official=identity is not None and season.get('summarySource')==season_synopsis_url(identity)
+            if summary and (current in ('',summary) or previous_official) and allowed_source(row['source']):
                 season.update(summary=summary, summaryPending=False, summarySource=row['source'])
 
 def parse_show(text,show_id,allow_partial=False):
@@ -131,10 +158,16 @@ class Collector:
                 image_checked=self.now
             out={**row,'showId':show_id,'year':date[:4],'releaseDate':date,'artwork':art,'sourceArtwork':image,
                  'officialUrl':'https://tv.apple.com/us/season/season-'+str(number)+'/'+sid+'?showId='+show_id,
-                 'metadataStatus':'verified','checkedAt':self.now,'imageCheckedAt':image_checked}
+                 'metadataStatus':'verified','checkedAt':self.now,'imageCheckedAt':image_checked,
+                 'summaryOriginal':official_synopsis(meta.get('description'))}
         out['officialEpisodeCount']=row['officialEpisodeCount']
-        valid=next((s for s in trusted if s.get('season')==number and str(s.get('year'))==out['year'] and chinese_summary(s.get('summary'))),{})
+        valid=next((s for s in trusted if s.get('season')==number and str(s.get('year'))==out['year']
+                    and s.get('officialId',sid)==sid and s.get('showId',show_id)==show_id
+                    and s.get('releaseDate',out['releaseDate'])==out['releaseDate']
+                    and chinese_summary(s.get('summary'))),{})
         out['summary']=chinese_summary(valid.get('summary'));out['summaryPending']=not bool(out['summary'])
+        out.pop('summarySource',None)
+        if out['summary'] and valid.get('summarySource'):out['summarySource']=valid['summarySource']
         return out
     def sync(self,entry,seed):
         if entry['kind']!='series':return entry

@@ -1,7 +1,7 @@
 """Discover actual seasons for channel-only shows absent from the PR inventory."""
 import copy, time
 from urllib.parse import urlencode
-from season_sync import parse_show, year_date
+from season_sync import official_synopsis, parse_show, public_seasons, year_date
 from title_lookup import read, dump
 
 
@@ -27,7 +27,9 @@ def enrich(home, root, get, now=None):
                     if (meta.get('id') != option['officialId'] or meta.get('showId') != identity
                             or meta.get('seasonNumber') != option['season'] or not date):
                         raise ValueError('Season identity/date mismatch')
-                    verified.append(dict(option, year=date[:4], releaseDate=date, metadataStatus='verified'))
+                    summary=official_synopsis(meta.get('description')) if meta.get('type')=='Season' else ''
+                    verified.append(dict(option,year=date[:4],releaseDate=date,metadataStatus='verified',
+                                         showId=identity,summaryOriginal=summary))
                 rows = verified
                 cache['records'][identity] = {'checkedAt': now, 'seasons': rows}
                 status = 'verified'
@@ -35,7 +37,7 @@ def enrich(home, root, get, now=None):
                 # Retain the last complete set; never infer another season from a title.
                 status = 'retained' if rows else 'unavailable'
         if rows:
-            work['seasons'] = rows
+            work['seasons'] = public_seasons(rows)
             bind_display_season(work)
         report.append({'officialId': identity, 'status': status, 'seasons': [r['season'] for r in rows]})
     dump(path, cache)

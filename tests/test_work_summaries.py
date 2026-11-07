@@ -57,3 +57,80 @@ class Summaries(unittest.TestCase):
   from official_pages import slim_item
   self.assertNotIn('contentRating',slim_item({'rating':{'displayName':'TV-MA','value':600}}))
   self.assertNotIn('contentRating',slim_item({'rating':{'displayName':'invented'}}));self.assertNotIn('contentRating',slim_item({'rating':'8.5'}))
+
+ def test_work_pending_counts_current_valid_text_and_retries(self):
+  from title_lookup import dump
+  from work_summaries import run,apply_home
+  class API:
+   def get(self,kind,identity):
+    if identity=='umc.cmc.new':raise OSError('Temporary Apple failure')
+    return {'id':identity,'type':'Movie','description':'Changed official work synopsis'}
+  class Translator:
+   usage={};model='test';http=503;fail=True
+   def __init__(self):self.rows=[]
+   def translate(self,rows):
+    self.rows.extend(rows)
+    if self.fail:raise OSError('Temporary translation failure')
+    return {r['id']:'当前作品对应的中文简介。' for r in rows}
+  with tempfile.TemporaryDirectory() as temp:
+   root=Path(temp)
+   new='umc.cmc.new';old='umc.cmc.old'
+   def work(identity):
+    return {'en':identity,'kind':'movie','officialId':identity,'watchUrl':'https://tv.apple.com/us/movie/item/'+identity}
+   home={'works':[work(old),dict(work(new),summaryEn='Verified home synopsis')]}
+   old_translation={'text':'当前已显示的旧版官方简介。','source':work(old)['watchUrl'],'original':'Old original','hash':'old'}
+   dump(root/'docs/catalog.json',{'entries':[]})
+   dump(root/'docs/home/home.json',home)
+   dump(root/'data/work-summary-cache.json',{'records':{},'works':{old:old_translation,new:{'officialReleaseYear':2026},'retired':old_translation}})
+   translator=Translator()
+   report=run(root,API(),translator,100,limit=1)
+   self.assertEqual([row['id'] for row in translator.rows],[new])
+   self.assertEqual((report['works'],report['ready'],report['pending'],report['sourceErrors']),(2,1,1,1))
+   self.assertEqual(apply_home(home,root)['works'][0]['zh']['summary'],old_translation['text'])
+   self.assertEqual(run(root,API(),translator,101,limit=0)['pending'],1)
+   translator.fail=False
+   report=run(root,API(),translator,100+6*3600,limit=1)
+   self.assertEqual((report['ready'],report['pending']),(2,0))
+   self.assertEqual(translator.rows[-1]['text'],'Verified home synopsis')
+   self.assertIn('中文简介',apply_home(home,root)['works'][1]['zh']['summary'])
+
+ def test_only_exact_season_copy_is_translated_and_published(self):
+  from title_lookup import dump
+  from work_summaries import run,apply_main
+  show='umc.cmc.testshow'
+  class API:
+   def get(self,kind,identity):return {'id':identity,'type':'Show','description':'Official show synopsis'}
+  class Translator:
+   usage={};model='test';http=200
+   def __init__(self):self.rows=[]
+   def translate(self,rows):
+    self.rows.extend(rows)
+    return {r['id']:'官方本季的中文故事简介。' for r in rows}
+  def season(number):
+   return {'officialId':f'umc.cmc.season{number}','showId':show,'season':number,'year':'2024',
+           'releaseDate':f'2024-0{number}-01','metadataStatus':'verified','summary':'','summaryPending':True}
+  with tempfile.TemporaryDirectory() as temp:
+   root=Path(temp)
+   official='https://tv.apple.com/us/show/item/'+show
+   rows=[season(n) for n in range(1,6)]
+   rows[4].update(summary='已核验的豆瓣本季简介。',summarySource='https://movie.douban.com/subject/123456/')
+   item={'en':'Item','kind':'series','officialIdentity':{'watchUrl':official},'seasons':rows}
+   main={'entries':[item]}
+   dump(root/'docs/catalog.json',main)
+   dump(root/'docs/home/home.json',{'works':[]})
+   cached=[dict(s,summaryOriginal='Official exact seasonal synopsis') for s in rows]
+   cached[0]['summaryOriginal']='Official show synopsis'
+   cached[2]['releaseDate']='2024-03-02'
+   cached[3]['showId']='umc.cmc.wrongshow'
+   dump(root/'data/season-cache.json',{'shows':{'item':{'showId':show,'seasons':cached}}})
+   translator=Translator()
+   report=run(root,API(),translator,100,season_limit=0)
+   self.assertEqual((report['seasonCandidates'],report['seasonPending']),(1,1))
+   report=run(root,API(),translator,101)
+   self.assertEqual([r['id'] for r in translator.rows],[show,rows[1]['officialId']])
+   self.assertEqual((report['seasonTranslated'],report['seasonPending']),(1,0))
+   published=apply_main(main,root)['entries'][0]['seasons']
+   self.assertEqual([row['summary'] for row in published],['','官方本季的中文故事简介。','','','已核验的豆瓣本季简介。'])
+   self.assertTrue(published[1]['summarySource'].endswith('/'+rows[1]['officialId']+'?showId='+show))
+   self.assertFalse(published[1]['summaryPending'])
+   self.assertTrue(published[0]['summaryPending'])
