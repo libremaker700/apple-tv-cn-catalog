@@ -1188,6 +1188,47 @@
           "originalTitle": "Acapulco"
         }
       ]
+    },
+    "umc.cmc.4w1tfn11hyb3frc9tp5fpksbb": {
+      "en": "The Wild Ones",
+      "kind": "series",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "36486516",
+          "sourceUrl": "https://movie.douban.com/subject/36486516/",
+          "title": "野性生灵",
+          "summary": "",
+          "summaryStatus": "PENDING",
+          "ratingStatus": "NO_RATING",
+          "season": 1,
+          "year": 2025,
+          "checkedAt": "2026-11-07T07:19:43+00:00",
+          "originalTitle": "The Wild Ones"
+        }
+      ]
+    },
+    "umc.cmc.oxoxnpaecaatg9tzf6pgfsh2": {
+      "en": "Bono: Stories of Surrender",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "37252237",
+          "sourceUrl": "https://movie.douban.com/subject/37252237/",
+          "title": "波诺：救赎之路",
+          "summary": "本片改编自波诺风靡全球的回忆录《屈服：四十首歌，一个故事》，并融合其同名新书巡演及剧场表演《波诺：救赎之路》的精华，将这位U2主唱广受赞誉的个人舞台秀《救赎之路：关于文字、音乐与戏谑时刻的夜晚》进行全新影像化重构。通过剖白非凡人生中支撑他前行的家庭羁绊、挚友情谊与信仰之光，这位摇滚巨星首度袒露身为儿子、父亲、丈夫、社会活动家等多重身份的心灵史诗。除了灯塔剧院演出的独家首度曝光珍贵幕后，影片更收录波诺倾情演绎多首贯穿其艺术生命与精神传承的U2金曲现场，让观众在音符与故事的共振中，见证一代传奇的自我救赎之旅。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2025,
+          "checkedAt": "2026-11-07T07:19:43+00:00",
+          "originalTitle": "Bono: Stories of Surrender",
+          "rating": 7.6
+        }
+      ]
     }
   }
 }

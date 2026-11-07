@@ -1949,39 +1949,344 @@
     },
     "shape-island": {
       "checkedAt": 1794026056,
-      "lastAttemptAt": 1794026056,
-      "nextRetry": 1794029656,
+      "nextRetry": 1794630856,
       "fingerprint": "50d27570d7dc6b8dba2985264e09d3ac86a645e503658127fa1fae6e4f3418c8",
       "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1794026056,
         "en": "Shape Island",
-        "kind": "series",
-        "season": 2,
-        "year": "2025",
         "found": true,
+        "kind": "series",
         "routes": 1,
-        "checkedAt": 1794026056
+        "schema": 1,
+        "season": 2,
+        "year": "2025"
       },
       "selection": null
     },
     "invasion": {
       "checkedAt": 1794026056,
-      "lastAttemptAt": 1794026056,
-      "nextRetry": 1794029656,
+      "nextRetry": 1794630856,
       "fingerprint": "171cc2fe4593092abc212aad5fb8e63246bab89f2042d753fb6e045e094f606a",
       "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1794026056,
         "en": "Invasion",
+        "found": true,
+        "kind": "series",
+        "routes": 31,
+        "schema": 1,
+        "season": 3,
+        "year": "2025"
+      },
+      "selection": null
+    },
+    "snoopy-presents-a-summer-musical": {
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "5f9b2da1b5fa116277a02989ffdeee4a07130a175c4a5be2a0ca43464195c962",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "platonic": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "d70e2a0a2f48737c8ce5ef7a534c50cec77d81c6bfe32d1761bbc632fb71e0fb",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Platonic",
+        "kind": "series",
+        "season": 2,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "柏拉图关系",
+        "libraries": 23,
+        "checkedLibraries": 4,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "柏拉图关系",
+            "libraries": 23
+          }
+        ]
+      }
+    },
+    "chief-of-war": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "736628a37f68e342be0b9055cc3f94e53ae0f5a65cd3dbca2e9793ea6d98969d",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Chief of War",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "战酋",
+        "libraries": 22,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "战酋",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "acapulco": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "1a573a50232e511e6ad6282be35032ca599171624c7820d8d257b439fbf06cf4",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Acapulco",
+        "kind": "series",
+        "season": 4,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "阿卡普高",
+        "libraries": 19,
+        "checkedLibraries": 18,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "阿卡普高",
+            "libraries": 19
+          }
+        ]
+      }
+    },
+    "foundation": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "f4cf8b3978eb309fd2711f2c9277bfcab485ca75e1f010390ef553e30446aa42",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Foundation",
         "kind": "series",
         "season": 3,
         "year": "2025",
         "found": true,
         "routes": 31,
-        "checkedAt": 1794026056
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "基地",
+        "libraries": 22,
+        "checkedLibraries": 2,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "基地",
+            "libraries": 22
+          }
+        ]
+      }
+    },
+    "the-wild-ones": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "e5e60fa8a3fd67f80e4c857937b84965f42bceb810d4c8a36ef2f2aa2a23f682",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "The Wild Ones",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 10,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "野性生灵",
+        "libraries": 7,
+        "checkedLibraries": 19,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "野性生灵",
+            "libraries": 7
+          }
+        ]
+      }
+    },
+    "smoke": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "7c121c3b56989587052bd598b0a76cb0fa14b2814613e353d06a211f8ef6a5e6",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Smoke",
+        "kind": "series",
+        "season": 1,
+        "year": "2025",
+        "found": true,
+        "routes": 30,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "烟火寻凶",
+        "libraries": 20,
+        "checkedLibraries": 20,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "烟火寻凶",
+            "libraries": 20
+          }
+        ]
+      }
+    },
+    "the-buccaneers": {
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "9bb276a5f8be6b95f913a6fa763ff764955db7196ba054eab63d86dc3efc9cd2",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "echo-valley": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "eabc54a599a0756e0cd9fefad9d7c25e4b0e3d3516db072293aee865c6d6b18b",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Echo Valley",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 29,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "回声谷",
+        "libraries": 20,
+        "checkedLibraries": 22,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "回声谷",
+            "libraries": 20
+          }
+        ]
+      }
+    },
+    "not-a-box": {
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "58042ef4efaf557f621aae4a1aecfae133919ca1ead21593ae38083f74e145f3",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "pending": true
+    },
+    "bono-stories-of-surrender": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "8e804369c02bc3a13579fed76c4a7b2ae20f436770f5c0cee0087e91816e8018",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Bono: Stories of Surrender",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 17,
+        "checkedAt": 1794035983
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "波诺：救赎之路",
+        "libraries": 17,
+        "checkedLibraries": 20,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "波诺：救赎之路",
+            "libraries": 17
+          }
+        ]
+      }
+    },
+    "lulu-is-a-rhinoceros": {
+      "checkedAt": 1794035983,
+      "lastAttemptAt": 1794035983,
+      "nextRetry": 1794039583,
+      "fingerprint": "b4b49e00b0a01f222296e570b470837d530eeca89e3f95be37fe8a423f38a2a7",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Lulu Is a Rhinoceros",
+        "kind": "movie",
+        "season": 0,
+        "year": "2025",
+        "found": true,
+        "routes": 32,
+        "checkedAt": 1794035983
       },
       "selection": null
     }
