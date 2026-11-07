@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1794015633,
+  "checkedAt": 1794044076,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -54,12 +54,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 9,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 1,
+      "sourceMissing": 1,
       "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
     },
     {
@@ -170,5 +170,5 @@
   "badgesBackfilled": 0,
   "translated": 0,
   "pending": 0,
-  "version": "aa0bf736fcffdc60da3c9d056c686e261485d552bfdb08102b9ff65b22b5756f"
+  "version": "e5327abe38ea1c94264099eca5c82706bf059a1a818783ba574ba3f5cbe5d66a"
 }

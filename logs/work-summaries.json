@@ -1,26 +1,15 @@
 {
   "works": 379,
-  "translated": 2,
-  "cacheHits": 377,
-  "existingChinese": 0,
+  "translated": 0,
+  "cacheHits": 379,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 1,
-  "usage": [
-    {
-      "promptTokenCount": 318,
-      "candidatesTokenCount": 198,
-      "totalTokenCount": 516,
-      "promptTokensDetails": [
-        {
-          "modality": "TEXT",
-          "tokenCount": 318
-        }
-      ],
-      "serviceTier": "standard"
-    }
-  ],
+  "apiCalls": 0,
+  "usage": [],
   "errors": [],
-  "ready": 400,
-  "pending": 0
+  "seasonCandidates": 0,
+  "seasonTranslated": 0,
+  "ready": 379,
+  "pending": 0,
+  "seasonPending": 0
 }
