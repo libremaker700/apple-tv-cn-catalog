@@ -1992,7 +1992,14 @@
       "model": "gemini-3.5-flash-lite"
     },
     "542133491267d8c244664b7d24c24e1478c3e5bc35a102649e027fe7ca69886f": {
-      "nextRetry": 1793929440
+      "text": "为了脱离圣诞老人的淘气名单，史努比全力以赴，想要成为镇上最友善的小猎犬。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "e65ebf8250a277e8f34c78023b413e0a4e679cd9037efbe016a96de3c326f278": {
+      "text": "在广受好评的“史努比呈献”系列最新特辑中，正值假期，所有的花生村孩子都在表现得乖巧懂事。然而，史努比却发现自己上了圣诞老人的淘气名单！距离圣诞节只有12天了，史努比必须证明自己其实并不是一只坏小猎犬，并明白圣诞节的意义不仅仅是收礼物。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     }
   },
   "works": {
@@ -5579,8 +5586,22 @@
       "officialReleaseYear": 1989
     },
     "umc.cmc.7js98w9pfzw394wpm8da3cuzq": {
-      "officialReleaseYear": 2026,
-      "source": "https://tv.apple.com/us/movie/12-days-of-snoopy/umc.cmc.7js98w9pfzw394wpm8da3cuzq"
+      "text": "为了脱离圣诞老人的淘气名单，史努比全力以赴，想要成为镇上最友善的小猎犬。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "Eager to get off Santa’s naughty list, Snoopy goes all out to be the nicest beagle in town.",
+      "hash": "542133491267d8c244664b7d24c24e1478c3e5bc35a102649e027fe7ca69886f",
+      "source": "https://tv.apple.com/us/movie/12-days-of-snoopy/umc.cmc.7js98w9pfzw394wpm8da3cuzq",
+      "officialReleaseYear": 2026
+    },
+    "pr:snoopy-presents-12-days-of-snoopy": {
+      "text": "在广受好评的“史努比呈献”系列最新特辑中，正值假期，所有的花生村孩子都在表现得乖巧懂事。然而，史努比却发现自己上了圣诞老人的淘气名单！距离圣诞节只有12天了，史努比必须证明自己其实并不是一只坏小猎犬，并明白圣诞节的意义不仅仅是收礼物。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "original": "In the latest special under the acclaimed “Snoopy Presents” banner, it’s the holidays and all the Peanuts kids are on their best behavior. Snoopy, however, finds himself on Santa’s naughty list! With just 12 days to go until Christmas, Snoopy has to prove he’s not such a bad beagle after all, and learn there’s more to Christmas than just getting gifts.",
+      "hash": "e65ebf8250a277e8f34c78023b413e0a4e679cd9037efbe016a96de3c326f278",
+      "source": "https://www.apple.com/tv-pr/originals/snoopy-presents-12-days-of-snoopy/",
+      "officialReleaseYear": null
     }
   }
 }

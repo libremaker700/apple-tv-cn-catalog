@@ -1,7 +1,128 @@
 {
-  "checkedAt": 1793980123,
+  "checkedAt": 1794015633,
   "copyVersion": "hero-copy-zh-cn-v2",
-  "pages": [],
+  "pages": [
+    {
+      "requested": 0,
+      "cacheHits": 9,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.4000"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 6,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/coming-to-appletv/edt.item.62e4314e-8707-4e17-9b77-cdb29787ba94"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/sci-fi/edt.item.650b3154-accd-4b87-9f89-6bde117cee31"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/nonfiction/edt.item.645ac94d-2a19-439b-8a72-c8588eb16067"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/tv-shows/edt.item.690d376a-3d01-4c9f-825e-79e3f8ba78ea"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/dramas/edt.item.6452b08d-74b7-469c-8398-16932e421e67"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/comedies/edt.item.6452ad5e-06aa-4fcf-9411-ea551f0bf88a"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/thrillers/edt.item.690cf573-8799-46cd-afb2-5e05e157044f"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 10,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/crime/edt.item.690cf4c6-9eb0-458d-bf61-9e834befe4fb"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 9,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
+      "source": "https://tv.apple.com/us/room/movies/uts.room.movies-on-apple-tv"
+    }
+  ],
   "showcases": [
     {
       "requested": 0,
@@ -45,16 +166,9 @@
       "layout": "featured"
     }
   ],
-  "headings": [
-    {
-      "requested": 3,
-      "translated": 3,
-      "apiHttp": 200,
-      "model": "gemini-3.5-flash-lite"
-    }
-  ],
-  "badgesBackfilled": 7,
-  "translated": 3,
+  "headings": [],
+  "badgesBackfilled": 0,
+  "translated": 0,
   "pending": 0,
-  "version": "0bb3557a69239afec339ee8cabb52334ac5879a462f3394150d17d9e62a74729"
+  "version": "aa0bf736fcffdc60da3c9d056c686e261485d552bfdb08102b9ff65b22b5756f"
 }

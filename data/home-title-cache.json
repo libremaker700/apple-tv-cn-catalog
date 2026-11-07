@@ -526,8 +526,11 @@
       "verifiedZh": {
         "_identityYear": 1973,
         "aliases": [
+          "查理布朗的感恩节",
+          "查理·布朗的感恩节",
           "史努比的故事：查理布朗的感恩节",
-          "查理布朗的感恩节"
+          "史努比的故事查理布朗的感恩节",
+          "A Charlie Brown Thanksgiving"
         ],
         "detailMetadata": {
           "checkedAt": "2026-11-04T04:38:13+00:00",
@@ -586,13 +589,7 @@
         "name_checked_at": "2026-10-30T18:20:48+00:00",
         "name_sources": [
           {
-            "retrieved_at": "1793767093",
-            "type": "douban_identity_cms_alias",
-            "url": "https://movie.douban.com/subject/5300042/"
-          },
-          {
-            "retrieved_at": "1793767093",
-            "type": "douban_mobile_identity",
+            "type": "reviewed_douban_display_evidence",
             "url": "https://movie.douban.com/subject/5300042/"
           }
         ],
@@ -610,7 +607,7 @@
           }
         ],
         "summary_status": "translated_official",
-        "title": "史努比的故事：查理布朗的感恩节",
+        "title": "查理布朗的感恩节",
         "watchUrl": "https://tv.apple.com/us/movie/a-charlie-brown-thanksgiving/umc.cmc.7grdgbjdq3tiy37f4dc3yeyms"
       }
     },
