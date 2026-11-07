@@ -1740,6 +1740,22 @@
       "logoSha256": "b206283abefb686261df4c5e58e1889e20550fe8cfa9ed412013cdf192b4255a",
       "officialId": "umc.cmc.amuoq00hqelfi98j0gvg641x",
       "featuredCopyTop": 862
+    },
+    "a8329bc0302df34b7225f8811a0df0e9373fc1c9da5ebaa7fe92277ea8ff57de": {
+      "path": "images/dc921ea0fc38445ed605dc0bb2cac5fc4a436fccb96558db1dc4fd9e52a3bece.jpg",
+      "background": "images/17d0ff3f48b009968b155d29c3e0ecfd7cc68c3d438b36f5ce64ee34e95c7fb1.jpg",
+      "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/NWFOl5qWrSCm64_W1ZC3kA/470x140bb.png",
+      "logoSha256": "8980f5e4995de0443007d92ac3a02d916d444f8acc9fca2e327d237e7ab4ab86",
+      "officialId": "umc.cmc.3czcagetjq31vvbgkkyp1xiao",
+      "featuredCopyTop": 909
+    },
+    "2611c362067fbe25d9b1e87dee3c50b16c61092b4eedf2736f34d7c745620298": {
+      "path": "images/0924f33c2f0263a19ea2e3bd626ddb07fb9812c0b45498a8da4a316f536e1722.jpg",
+      "background": "images/043a204c445003a328d00f0b8520a21514c5527f1d2f87f17ad0400eed497a34.jpg",
+      "logoSource": "https://is1-ssl.mzstatic.com/image/thumb/mD5llItgzQ1AmxEKLmdliA/470x140bb.png",
+      "logoSha256": "c3600a39a0676281afafd8e0f6a706a81fd5e20fdca24f16756ee813ac762b5b",
+      "officialId": "umc.cmc.5v5f721a2mlxcurdhh0wm56if",
+      "featuredCopyTop": 881
     }
   }
 }
