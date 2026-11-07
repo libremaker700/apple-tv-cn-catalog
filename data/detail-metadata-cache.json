@@ -1259,6 +1259,69 @@
           "rating": 7.6
         }
       ]
+    },
+    "umc.cmc.3qy6j44hfqtekx6fx3yzh9w8i": {
+      "en": "Argylle",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35520056",
+          "sourceUrl": "https://movie.douban.com/subject/35520056/",
+          "title": "阿盖尔：神秘特工",
+          "summary": "影片围绕间谍小说作家叶利·康韦（布莱丝·达拉斯·霍华德 Bryce Dallas Howard 饰）的作品展开。叶利的小说讲述神秘特工阿盖尔（亨利·卡维尔 Henry Cavill 饰）及其瓦解全球间谍集团的任务，而小说中的情节却意外开始与真实间谍组织的秘密行动出现惊人 的一致。在特工艾登（山姆·洛克威尔 Sam Rockwell 饰）的陪同下，叶利带着猫咪阿尔菲（Chip 饰）穿越世界，竭力赶在间谍组织的杀手们行动之前化解危机，此时小说的虚构世界与现实之间的界限开始变得模糊不清。随之而来的是一场跨越全球的冒险。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2024,
+          "checkedAt": "2026-11-07T11:02:17+00:00",
+          "originalTitle": "Argylle",
+          "rating": 5.6
+        }
+      ]
+    },
+    "umc.cmc.6d0mrskjsusw2jd2d228p88c2": {
+      "en": "Beastie Boys Story",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "34950452",
+          "sourceUrl": "https://movie.douban.com/subject/34950452/",
+          "title": "野兽男孩的故事",
+          "summary": "该片是斯派克·琼斯与野兽男孩组合（Beastie Boys）的两位成员Mike Diamond、Adam Horovitz共同合作的作品，讲述该组合成员间长达40年私人友谊的故事，野兽男孩是名噪一时的白人说唱组合，融合了后朋克等音乐元素，在说唱历史上享有崇高地位。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2020,
+          "checkedAt": "2026-11-07T11:02:17+00:00",
+          "originalTitle": "Beastie Boys Story",
+          "rating": 8.0
+        }
+      ]
+    },
+    "umc.cmc.5waz3hfo9r1133t8arap8b6nq": {
+      "en": "Billie Eilish: The World’s A Little Blurry",
+      "kind": "movie",
+      "details": [
+        {
+          "schema": 1,
+          "source": "douban",
+          "subjectId": "35211637",
+          "sourceUrl": "https://movie.douban.com/subject/35211637/",
+          "title": "碧丽·艾莉许：模糊世界",
+          "summary": "熟悉的歌声响起，从小到大的她的影像出现，聚焦这个尚未满19岁的年轻歌手的崛起、她那些改变了自己和许多人人生的音乐、她台前幕后的生活。",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE",
+          "season": 0,
+          "year": 2021,
+          "checkedAt": "2026-11-07T11:02:17+00:00",
+          "originalTitle": "Billie Eilish: The World’s A Little Blurry",
+          "rating": 8.7
+        }
+      ]
     }
   }
 }

@@ -8102,10 +8102,2140 @@
       },
       "identity": null,
       "discovery": {}
+    },
+    "argylle": {
+      "checkedAt": 1794049337,
+      "nextRetry": 1794135737,
+      "result": {
+        "slug": "argylle",
+        "en": "Argylle",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "阿盖尔：神秘特工",
+            "机密特务：阿盖尔",
+            "特工亚皆老",
+            "阿吉尔"
+          ],
+          "aiSources": [
+            {
+              "title": "阿盖尔：神秘特工 - 维基百科，自由的百科全书",
+              "url": "https://zh.wikipedia.org/zh-cn/%E6%A9%9F%E5%AF%86%E7%89%B9%E5%8B%99%EF%BC%9A%E9%98%BF%E8%93%8B%E7%88%BE"
+            },
+            {
+              "title": "阿盖尔：神秘特工 Argylle - 火星研究社",
+              "url": "https://huo720.com/sub/35520056"
+            },
+            {
+              "title": "阿盖尔：神秘特工 Argylle 海报",
+              "url": "https://movie.douban.com/subject/35520056/photos?type=R"
+            },
+            {
+              "title": "阿盖尔：神秘特工_详细资料_1905电影网",
+              "url": "https://www.1905.com/mdb/film/2257090/info/"
+            },
+            {
+              "title": "阿盖尔：神秘特工Argylle (2024)",
+              "url": "https://movie.douban.com/subject/35520056/"
+            },
+            {
+              "title": "阿盖尔：神秘特工 (豆瓣)",
+              "url": "https://movie.douban.com/subject/35520056/?suggest=%E9%98%BFgai"
+            },
+            {
+              "title": "[HD-1080] 阿盖尔：神秘特工 看-Argylle - 在线观看-电影完整版",
+              "url": "https://ypqzmf7973.expandcart.com/index.php?route=product/product&product_id=374"
+            },
+            {
+              "title": "2024美国动作惊悚片《阿盖尔:神秘特工》高清下载",
+              "url": "https://www.cnmkv.com/9693.html"
+            }
+          ],
+          "queryNames": [
+            "阿盖尔：神秘特工",
+            "机密特务：阿盖尔",
+            "特工亚皆老",
+            "阿吉尔"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "阿盖尔：神秘特工",
+          "selectedTitle": "阿盖尔：神秘特工",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35520056",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "阿盖尔：神秘特工",
+        "sourceMatch": {
+          "title": "阿盖尔：神秘特工",
+          "routes": 28,
+          "libraries": 19,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "阿盖尔：神秘特工",
+            "libraries": 18,
+            "checkedLibraries": 15,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "阿盖尔：神秘特工",
+                "libraries": 18
+              },
+              {
+                "title": "阿盖尔：神秘特工 Argylle",
+                "libraries": 1
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "network"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 10
+          },
+          {
+            "provider": "shared",
+            "http": 0,
+            "reason": "deadline"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "35520056",
+        "title": "阿盖尔：神秘特工",
+        "originalTitle": "Argylle",
+        "aliases": [
+          "阿吉尔",
+          "闪耀先生",
+          "特务亚盖尔"
+        ],
+        "year": "2024",
+        "season": 0,
+        "actors": [
+          "布莱丝·达拉斯·霍华德",
+          "山姆·洛克威尔",
+          "亨利·卡维尔",
+          "塞缪尔·杰克逊",
+          "布莱恩·克兰斯顿",
+          "凯瑟琳·奥哈拉",
+          "奇普",
+          "阿丽亚娜·德博斯",
+          "杜阿·利帕",
+          "约翰·塞纳",
+          "索菲亚·波多拉",
+          "理查德·E·格兰特",
+          "罗伯·德兰尼",
+          "陆思敬",
+          "路易斯·帕特里奇",
+          "本·丹尼尔斯",
+          "斯坦利·摩根",
+          "托米瓦·埃敦",
+          "托马斯·帕雷德斯",
+          "杰森·富克斯",
+          "格雷西亚·德拉巴斯",
+          "阿拉·哈比卜",
+          "菲奥娜·马尔",
+          "鲍比·霍兰德·汉顿",
+          "阿尔弗雷多·塔瓦雷斯",
+          "丹尼尔·辛格"
+        ],
+        "directors": [
+          "马修·沃恩"
+        ],
+        "url": "https://movie.douban.com/subject/35520056/"
+      },
+      "discovery": {
+        "aiSourceNames": {
+          "key": "b0cb3498b42c26c7ee686a1380b089967a0e01aeaedb196a5ff2153f972878aa",
+          "answer": {
+            "names": [
+              "阿盖尔：神秘特工",
+              "机密特务：阿盖尔",
+              "特工亚皆老",
+              "阿吉尔"
+            ],
+            "sources": [
+              {
+                "title": "阿盖尔：神秘特工 - 维基百科，自由的百科全书",
+                "url": "https://zh.wikipedia.org/zh-cn/%E6%A9%9F%E5%AF%86%E7%89%B9%E5%8B%99%EF%BC%9A%E9%98%BF%E8%93%8B%E7%88%BE"
+              },
+              {
+                "title": "阿盖尔：神秘特工 Argylle - 火星研究社",
+                "url": "https://huo720.com/sub/35520056"
+              },
+              {
+                "title": "阿盖尔：神秘特工 Argylle 海报",
+                "url": "https://movie.douban.com/subject/35520056/photos?type=R"
+              },
+              {
+                "title": "阿盖尔：神秘特工_详细资料_1905电影网",
+                "url": "https://www.1905.com/mdb/film/2257090/info/"
+              },
+              {
+                "title": "阿盖尔：神秘特工Argylle (2024)",
+                "url": "https://movie.douban.com/subject/35520056/"
+              },
+              {
+                "title": "阿盖尔：神秘特工 (豆瓣)",
+                "url": "https://movie.douban.com/subject/35520056/?suggest=%E9%98%BFgai"
+              },
+              {
+                "title": "[HD-1080] 阿盖尔：神秘特工 看-Argylle - 在线观看-电影完整版",
+                "url": "https://ypqzmf7973.expandcart.com/index.php?route=product/product&product_id=374"
+              },
+              {
+                "title": "2024美国动作惊悚片《阿盖尔:神秘特工》高清下载",
+                "url": "https://www.cnmkv.com/9693.html"
+              }
+            ],
+            "status": "ok",
+            "service": "ydc"
+          },
+          "expiresAt": 1794654137,
+          "knownLibraryName": {
+            "identityKey": "54707a5b981b6a5c1e34154daa827d5c15ff347df762b3e410f3b075de17e024",
+            "title": "阿盖尔：神秘特工",
+            "selection": {
+              "policy": "library-votes-v1",
+              "title": "阿盖尔：神秘特工",
+              "libraries": 18,
+              "checkedLibraries": 15,
+              "attemptedLibraries": 33,
+              "requestedLibraries": 33,
+              "complete": false,
+              "options": [
+                {
+                  "title": "阿盖尔：神秘特工",
+                  "libraries": 18
+                },
+                {
+                  "title": "阿盖尔：神秘特工 Argylle",
+                  "libraries": 1
+                }
+              ]
+            },
+            "checkedAt": 1794049337
+          }
+        }
+      }
+    },
+    "beastie-boys-story": {
+      "checkedAt": 1794049337,
+      "nextRetry": 1794135737,
+      "result": {
+        "slug": "beastie-boys-story",
+        "en": "Beastie Boys Story",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "野兽男孩的故事",
+            "Beastie Boys 的音乐之路"
+          ],
+          "aiSources": [
+            {
+              "title": "野兽男孩的故事",
+              "url": "https://www.goldposter.com/zh/movie/670827/"
+            },
+            {
+              "title": "野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 纪录片仓库",
+              "url": "https://jilulib.com/subject/39208/"
+            },
+            {
+              "title": "[其他]野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 我爱纪录片",
+              "url": "https://ilovedocu.com/movie/6981"
+            },
+            {
+              "title": "Apple TV+纪录片《野兽男孩的故事 Beastie Boys Story 2020》[全1集][中字][4K][1080P][网盘][资源下载]-暴雪纪录片自媒体剪辑解说素材下载",
+              "url": "https://bxtrip.com/thread-34437-1-1.html"
+            },
+            {
+              "title": "观看《Beastie Boys Story》- Apple TV+ (SG)",
+              "url": "https://tv.apple.com/sg/movie/beastie-boys-story/umc.cmc.6d0mrskjsusw2jd2d228p88c2?l=zh-HANS"
+            },
+            {
+              "title": "《野兽男孩的故事》IMAX首映后，登陆Apple TV+_纪录片",
+              "url": "https://www.sohu.com/a/367187066_394375"
+            },
+            {
+              "title": "Beastie Boys Story - Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q91484984"
+            },
+            {
+              "title": "野兽男孩的故事/Beastie Boys Story(2020)高清迅雷BT下载_完整版在线免费观看 - 比兔TV",
+              "url": "https://www.miuwa.com/info/BeastieBoysStory/"
+            }
+          ],
+          "queryNames": [
+            "野兽男孩的故事",
+            "Beastie Boys 的音乐之路"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "野兽男孩的故事",
+          "selectedTitle": "野兽男孩的故事",
+          "decision": "douban_fallback_no_confirmed_source",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query",
+            "bounded_keyword_discovery"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "34950452",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "野兽男孩的故事",
+        "sourceMatch": null,
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ff",
+            "reason": "http"
+          },
+          {
+            "provider": "hn",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "lz",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jy",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "gs",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "bd",
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "reason": "http"
+          },
+          {
+            "provider": "bf",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "js",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "hh",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "sb",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xl",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "yy",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "zy360",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "huya",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "xigua",
+            "reason": "http"
+          },
+          {
+            "provider": "modu",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "zzoc",
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "reason": "http"
+          },
+          {
+            "provider": "iqy",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "wujin",
+            "reason": "transport"
+          },
+          {
+            "provider": "zuida",
+            "reason": "transport"
+          },
+          {
+            "provider": "piaoling",
+            "reason": "http"
+          },
+          {
+            "provider": "maoyan",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "jiji",
+            "reason": "detail_limit"
+          },
+          {
+            "provider": "uku",
+            "reason": "transport"
+          },
+          {
+            "provider": "ruyi",
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ikun",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "changzhang",
+            "reason": "page_limit"
+          },
+          {
+            "provider": "shared",
+            "reason": "session_or_api_rejected"
+          },
+          {
+            "provider": "ikanbot",
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shenhua",
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "reason": "origin_changed"
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "34950452",
+        "title": "野兽男孩的故事",
+        "originalTitle": "Beastie Boys Story",
+        "aliases": [],
+        "year": "2020",
+        "season": 0,
+        "actors": [
+          "亚当·霍罗维茨",
+          "麦克·D"
+        ],
+        "directors": [
+          "斯派克·琼斯"
+        ],
+        "url": "https://movie.douban.com/subject/34950452/"
+      },
+      "discovery": {
+        "aiSourceNames": {
+          "key": "cab8a61c91b3f767b7d28405c202228bebfe01d8f9173e91b12940ce5741a453",
+          "answer": {
+            "names": [
+              "野兽男孩的故事",
+              "Beastie Boys 的音乐之路"
+            ],
+            "sources": [
+              {
+                "title": "野兽男孩的故事",
+                "url": "https://www.goldposter.com/zh/movie/670827/"
+              },
+              {
+                "title": "野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 纪录片仓库",
+                "url": "https://jilulib.com/subject/39208/"
+              },
+              {
+                "title": "[其他]野兽男孩的故事 Beastie Boys Story - 纪录片下载 - 我爱纪录片",
+                "url": "https://ilovedocu.com/movie/6981"
+              },
+              {
+                "title": "Apple TV+纪录片《野兽男孩的故事 Beastie Boys Story 2020》[全1集][中字][4K][1080P][网盘][资源下载]-暴雪纪录片自媒体剪辑解说素材下载",
+                "url": "https://bxtrip.com/thread-34437-1-1.html"
+              },
+              {
+                "title": "观看《Beastie Boys Story》- Apple TV+ (SG)",
+                "url": "https://tv.apple.com/sg/movie/beastie-boys-story/umc.cmc.6d0mrskjsusw2jd2d228p88c2?l=zh-HANS"
+              },
+              {
+                "title": "《野兽男孩的故事》IMAX首映后，登陆Apple TV+_纪录片",
+                "url": "https://www.sohu.com/a/367187066_394375"
+              },
+              {
+                "title": "Beastie Boys Story - Wikidata",
+                "url": "https://www.wikidata.org/wiki/Q91484984"
+              },
+              {
+                "title": "野兽男孩的故事/Beastie Boys Story(2020)高清迅雷BT下载_完整版在线免费观看 - 比兔TV",
+                "url": "https://www.miuwa.com/info/BeastieBoysStory/"
+              }
+            ],
+            "status": "ok",
+            "service": "ydc"
+          },
+          "expiresAt": 1794654137,
+          "discovery": {
+            "ff": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "hn": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "lz": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 4,
+              "offset": 0,
+              "done": false
+            },
+            "jy": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "gs": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "bd": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "dytt": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "bf": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 4,
+              "offset": 0,
+              "done": false
+            },
+            "js": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "hh": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "sb": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "xl": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "yy": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 5
+            },
+            "zy360": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 14
+            },
+            "huya": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 0,
+              "done": false
+            },
+            "xigua": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "modu": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "zzoc": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "5o5k": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "iqy": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 18
+            },
+            "wujin": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "zuida": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 1,
+              "page": 1,
+              "offset": 0
+            },
+            "piaoling": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "maoyan": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "jiji": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 1,
+              "offset": 8
+            },
+            "uku": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "ruyi": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "ikun": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "changzhang": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 2,
+              "page": 2,
+              "offset": 0,
+              "done": false
+            },
+            "shared": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 2
+            },
+            "ikanbot": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 8
+            },
+            "shenhua": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            },
+            "bblue": {
+              "queries": [
+                "Beastie Boys Story",
+                "野兽男孩的故事",
+                "故事",
+                "Beastie Boys 的音乐之路"
+              ],
+              "q": 0,
+              "page": 1,
+              "offset": 0
+            }
+          }
+        }
+      }
+    },
+    "billie-eilish-the-worlds-a-little-blurry": {
+      "checkedAt": 1794049337,
+      "nextRetry": 1794135737,
+      "result": {
+        "slug": "billie-eilish-the-worlds-a-little-blurry",
+        "en": "Billie Eilish: The World’s A Little Blurry",
+        "searchStatus": "ai_candidates_then_sources_or_douban",
+        "confidence": "VERIFIED",
+        "sourceNameResolution": {
+          "policy": "ai-answer-library-entry-or-douban-v3",
+          "aiStatus": "ok",
+          "aiService": "ydc",
+          "aiCandidates": [
+            "碧丽·艾莉许：模糊世界",
+            "怪奇比莉：我眼中的迷蒙世界",
+            "碧丽艾莉许模糊世界"
+          ],
+          "aiSources": [
+            {
+              "title": "碧丽·艾莉许：模糊世界(2021年完整版电影)_百度云网盘/bt磁力下载_美国纪录传记",
+              "url": "https://bttags.cyou/movie/60601c0dfe84451440380f20"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片仓库",
+              "url": "https://jilulib.com/subject/39423/"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry (2021)/怪奇比莉：我眼中的迷濛世界 2160p.ATVP.WEB-DL.x265.1",
+              "url": "https://www.aiyunpan.org/dubi/5278.html"
+            },
+            {
+              "title": "2021年美国纪录片《碧丽・艾莉许：模糊世界》HD英语中字迅雷下载_小调网_电影天堂",
+              "url": "https://www.xiaopian.vip/html/gndy/jddy/20241209/125502.html"
+            },
+            {
+              "title": "[2021 [欧美] [其他] [BD-4K] 碧丽·艾莉许:模糊世界/怪奇比莉:我眼中的迷蒙世界 Billie.Eilish.the.Worlds.A.Lit - 电影区(BT) - 天使论坛 - Powered by Discuz!",
+              "url": "https://seeangel.cc/forum.php?extra=page%3D1&mod=viewthread&tid=71301"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界(2021)-英语/豆瓣8.6分-影视动漫-十四洲资源社",
+              "url": "https://www.sszzys.cn/thread-95610.htm"
+            },
+            {
+              "title": "[其他]碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片数据库",
+              "url": "https://www.docu-lib.com/movie/6193"
+            },
+            {
+              "title": "碧丽·艾莉许：模糊世界 (豆瓣)",
+              "url": "https://movie.douban.com/subject/35211637/?from=subject-page"
+            }
+          ],
+          "queryNames": [
+            "碧丽·艾莉许：模糊世界",
+            "怪奇比莉：我眼中的迷蒙世界",
+            "碧丽艾莉许模糊世界"
+          ],
+          "discoveredAliases": [],
+          "confirmedLibraryNames": [],
+          "priorLibraryEvidence": {},
+          "doubanTitle": "碧丽·艾莉许：模糊世界",
+          "selectedTitle": "碧丽·艾莉许：模糊世界",
+          "decision": "verified_library_entry_name",
+          "playbackVerified": false,
+          "stages": [
+            "ai_candidates_source_query"
+          ]
+        },
+        "sourcePolicy": "ai_name_source_verification",
+        "detailMetadata": {
+          "season": 0,
+          "subjectId": "35211637",
+          "summaryStatus": "AVAILABLE",
+          "ratingStatus": "AVAILABLE"
+        },
+        "title": "碧丽·艾莉许：模糊世界",
+        "sourceMatch": {
+          "title": "碧丽·艾莉许：模糊世界",
+          "routes": 8,
+          "libraries": 8,
+          "complete": false,
+          "nameEvidenceOnly": true,
+          "selection": {
+            "policy": "library-votes-v1",
+            "title": "碧丽·艾莉许：模糊世界",
+            "libraries": 8,
+            "checkedLibraries": 15,
+            "attemptedLibraries": 33,
+            "requestedLibraries": 33,
+            "complete": false,
+            "options": [
+              {
+                "title": "碧丽·艾莉许：模糊世界",
+                "libraries": 8
+              }
+            ]
+          }
+        },
+        "sourceEvents": [
+          {
+            "provider": "ff",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "ff",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hn",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bd",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "bd",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "dytt",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "dytt",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "gs",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "lz",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "js",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "hh",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "yy",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xl",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bf",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "xigua",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "xigua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "modu",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "sb",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "5o5k",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "5o5k",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zzoc",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "zzoc",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "huya",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "zy360",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "piaoling",
+            "http": 403,
+            "reason": "http"
+          },
+          {
+            "provider": "piaoling",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 0
+          },
+          {
+            "provider": "wujin",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 0
+          },
+          {
+            "provider": "iqy",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "zuida",
+            "http": 0
+          },
+          {
+            "provider": "zuida",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "maoyan",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ruyi",
+            "http": 0,
+            "reason": "invalid_response"
+          },
+          {
+            "provider": "ruyi",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "uku",
+            "http": 0
+          },
+          {
+            "provider": "uku",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 0
+          },
+          {
+            "provider": "jiji",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "ikun",
+            "http": 200,
+            "reason": "checked",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "ikanbot",
+            "http": 0,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "ikanbot",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "shenhua",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "shenhua",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "bblue",
+            "http": 0,
+            "reason": "origin_changed"
+          },
+          {
+            "provider": "bblue",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 0
+          },
+          {
+            "provider": "changzhang",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 1,
+            "identityRecords": 1,
+            "routes": 1
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "identity_pending"
+          },
+          {
+            "provider": "shared",
+            "http": 200,
+            "reason": "partial_results",
+            "matchedRecords": 0,
+            "identityRecords": 0,
+            "routes": 0
+          }
+        ]
+      },
+      "identity": {
+        "douban_id": "35211637",
+        "title": "碧丽·艾莉许：模糊世界",
+        "originalTitle": "Billie Eilish: The World’s A Little Blurry",
+        "aliases": [
+          "怪奇比莉：我眼中的迷蒙世界"
+        ],
+        "year": "2021",
+        "season": 0,
+        "actors": [
+          "比莉·艾利什",
+          "菲尼亚斯·奥康奈尔",
+          "帕特里克·奥康奈尔",
+          "玛姬·贝尔德",
+          "贾斯汀·比伯",
+          "爱莉安娜·格兰德",
+          "凯蒂·派瑞",
+          "奥兰多·布鲁姆"
+        ],
+        "directors": [
+          "R·J·卡特勒"
+        ],
+        "url": "https://movie.douban.com/subject/35211637/"
+      },
+      "discovery": {
+        "aiSourceNames": {
+          "key": "0f4ee929dbde6fb1b155831ff48609ff9c7bfb69b900210c5dddb7a3d2b43ff1",
+          "answer": {
+            "names": [
+              "碧丽·艾莉许：模糊世界",
+              "怪奇比莉：我眼中的迷蒙世界",
+              "碧丽艾莉许模糊世界"
+            ],
+            "sources": [
+              {
+                "title": "碧丽·艾莉许：模糊世界(2021年完整版电影)_百度云网盘/bt磁力下载_美国纪录传记",
+                "url": "https://bttags.cyou/movie/60601c0dfe84451440380f20"
+              },
+              {
+                "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片仓库",
+                "url": "https://jilulib.com/subject/39423/"
+              },
+              {
+                "title": "碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry (2021)/怪奇比莉：我眼中的迷濛世界 2160p.ATVP.WEB-DL.x265.1",
+                "url": "https://www.aiyunpan.org/dubi/5278.html"
+              },
+              {
+                "title": "2021年美国纪录片《碧丽・艾莉许：模糊世界》HD英语中字迅雷下载_小调网_电影天堂",
+                "url": "https://www.xiaopian.vip/html/gndy/jddy/20241209/125502.html"
+              },
+              {
+                "title": "[2021 [欧美] [其他] [BD-4K] 碧丽·艾莉许:模糊世界/怪奇比莉:我眼中的迷蒙世界 Billie.Eilish.the.Worlds.A.Lit - 电影区(BT) - 天使论坛 - Powered by Discuz!",
+                "url": "https://seeangel.cc/forum.php?extra=page%3D1&mod=viewthread&tid=71301"
+              },
+              {
+                "title": "碧丽·艾莉许：模糊世界(2021)-英语/豆瓣8.6分-影视动漫-十四洲资源社",
+                "url": "https://www.sszzys.cn/thread-95610.htm"
+              },
+              {
+                "title": "[其他]碧丽·艾莉许：模糊世界 Billie Eilish: The World’s A Little Blurry - 纪录片下载 - 纪录片数据库",
+                "url": "https://www.docu-lib.com/movie/6193"
+              },
+              {
+                "title": "碧丽·艾莉许：模糊世界 (豆瓣)",
+                "url": "https://movie.douban.com/subject/35211637/?from=subject-page"
+              }
+            ],
+            "status": "ok",
+            "service": "ydc"
+          },
+          "expiresAt": 1794654137,
+          "knownLibraryName": {
+            "identityKey": "e2c6b1289754ff17cfd3ade112d377df2f84d0e3ec1692726affc1e9cfe9a81c",
+            "title": "碧丽·艾莉许：模糊世界",
+            "selection": {
+              "policy": "library-votes-v1",
+              "title": "碧丽·艾莉许：模糊世界",
+              "libraries": 8,
+              "checkedLibraries": 15,
+              "attemptedLibraries": 33,
+              "requestedLibraries": 33,
+              "complete": false,
+              "options": [
+                {
+                  "title": "碧丽·艾莉许：模糊世界",
+                  "libraries": 8
+                }
+              ]
+            },
+            "checkedAt": 1794049337
+          }
+        }
+      }
     }
   },
   "budgets": {
     "2026-10": 4,
-    "2026-11": 166
+    "2026-11": 169
   }
 }
