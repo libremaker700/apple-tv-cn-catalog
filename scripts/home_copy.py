@@ -431,7 +431,7 @@ def main():
     blob=raw_json(value);sha=hashlib.sha256(blob).hexdigest()
     if sha!=manifest['version']:
         path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(blob)
-        manifest['images']=image_inventory(value,folder)
+        manifest.update(image_inventory(value,folder))
         manifest.update(version=sha,path=path,checkedAt=now);(folder/'home.json').write_bytes(blob);(folder/'version.json').write_bytes(raw_json(manifest))
     report.update(version=sha,checkedAt=now,copyVersion=VERSION)
     dump(ROOT/'logs/home-copy.json',report);validate_publication();print(json.dumps(report,ensure_ascii=False))

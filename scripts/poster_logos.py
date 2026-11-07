@@ -3,27 +3,41 @@ import hashlib,io,re
 from pathlib import Path
 from PIL import Image,ImageOps
 from title_lookup import read,dump
-from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
+from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE,HERO_LOGO_SIZE
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 FEATURE_LOGO_BOTTOM=248
 def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
     return _render(base,logo,featured_bottom=featured_bottom)[0]
 
+def transparent_mark(raw):
+    with Image.open(io.BytesIO(raw))as im:
+        if im.format!='PNG'or im.width*im.height>2_000_000:raise ValueError('Invalid title treatment')
+        mark=im.convert('RGBA');alpha=mark.getchannel('A')
+        if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
+        return mark
+
+def normalize_hero_logo(raw):
+    if len(raw)>4*1024*1024:raise ValueError('Logo is too large')
+    mark=transparent_mark(raw)
+    mark=mark.crop(mark.getchannel('A').getbbox())
+    # Retain at least one transparent pixel even for art whose tight box is opaque.
+    mark.thumbnail((HERO_LOGO_SIZE[0]-2,HERO_LOGO_SIZE[1]-2),Image.Resampling.LANCZOS)
+    mark=ImageOps.expand(mark,border=1,fill=(0,0,0,0))
+    output=io.BytesIO();mark.save(output,'PNG',optimize=True)
+    return output.getvalue(),mark.width,mark.height
+
 def _render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM,editorial_top=None):
     with Image.open(io.BytesIO(base))as im:
         if im.format!='JPEG'or im.size not in((400,600),(1920,720),FEATURE_SIZE):raise ValueError('Invalid poster background')
         canvas=im.convert('RGBA');banner=im.size==(1920,720);featured=im.size==FEATURE_SIZE
-    with Image.open(io.BytesIO(logo))as im:
-        if im.format!='PNG'or im.width*im.height>2_000_000:raise ValueError('Invalid title treatment')
-        mark=im.convert('RGBA');alpha=mark.getchannel('A')
-        if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
-        if featured:mark=mark.crop(alpha.getbbox())
-        if editorial_top is not None:
-            # 49% of the 4:5 card width and at most 9.25% of its height.
-            limit=(314,74)
-        else:
-            limit=(280,90)if banner else(310,76)if featured else(235,70)
-        mark=ImageOps.contain(mark,limit,Image.Resampling.LANCZOS)
+    mark=transparent_mark(logo)
+    if featured:mark=mark.crop(mark.getchannel('A').getbbox())
+    if editorial_top is not None:
+        # 49% of the 4:5 card width and at most 9.25% of its height.
+        limit=(314,74)
+    else:
+        limit=(280,90)if banner else(310,76)if featured else(235,70)
+    mark=ImageOps.contain(mark,limit,Image.Resampling.LANCZOS)
     if banner or featured:
         copy_top=None
         if editorial_top is not None:

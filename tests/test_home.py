@@ -1,4 +1,4 @@
-import copy,json,sys,unittest,tempfile,io
+import copy,hashlib,json,sys,unittest,tempfile,io
 from unittest.mock import patch
 from PIL import Image
 from pathlib import Path
@@ -13,6 +13,43 @@ def page(items,storefront='us'):
 def image(url):return {'artwork':h.BASE+'images/'+'a'*64+'.jpg','width':1920,'height':1080}
 
 class Home(unittest.TestCase):
+    def test_png_inventory_is_separate_and_validates_bytes_and_dimensions(self):
+        from home_pages import image_rows
+        from poster_logos import normalize_hero_logo
+        from test_home_pages import Fake,collect,image as fixture_image
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp)/'home';(folder/'images').mkdir(parents=True)
+            value,_=collect({'entries':[]},Fake(),fixture_image)
+            jpegs={}
+            for row in image_rows(value):
+                size=(row['width'],row['height'])
+                if size not in jpegs:
+                    encoded=io.BytesIO();Image.new('RGB',size).save(encoded,'JPEG');blob=encoded.getvalue()
+                    ref='images/'+hashlib.sha256(blob).hexdigest()+'.jpg';(folder/ref).write_bytes(blob)
+                    jpegs[size]=ref
+                row['artwork']=h.BASE+jpegs[size]
+            for work in value['works']:
+                if work.get('landscapeArtwork'):work['landscapeArtwork']=h.BASE+jpegs[(960,540)]
+            mark=Image.new('RGBA',(90,30));mark.paste((255,255,255,255),(10,10,80,20))
+            encoded=io.BytesIO();mark.save(encoded,'PNG');blob,width,height=normalize_hero_logo(encoded.getvalue())
+            logo_ref='images/'+hashlib.sha256(blob).hexdigest()+'.png';(folder/logo_ref).write_bytes(blob)
+            value['hero'][0]['titleLogo']={'artwork':h.BASE+logo_ref,'width':width,'height':height}
+            inventory=h.image_inventory(value,folder)
+            self.assertEqual(set(inventory['images']),set(jpegs.values()))
+            self.assertEqual(set(inventory['titleLogos']),{logo_ref})
+            raw=h.raw_json(value);sha=hashlib.sha256(raw).hexdigest();path='releases/'+sha+'/home.json'
+            (folder/path).parent.mkdir(parents=True);(folder/path).write_bytes(raw)
+            manifest=dict(inventory,version=sha,path=path)
+            def check():
+                (folder/'version.json').write_bytes(h.raw_json(manifest))
+                with patch.object(h,'DOCS',Path(tmp)):h.validate_publication()
+            check()
+            manifest['titleLogos'][logo_ref]['width']=width+1
+            with self.assertRaises(AssertionError):check()
+            manifest['titleLogos'][logo_ref]['width']=width
+            (folder/logo_ref).write_bytes(blob+b'corruption')
+            with self.assertRaises(AssertionError):check()
+
     def test_repeated_check_reuses_bytes_and_failed_fetch_keeps_manifest(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'data').mkdir();(root/'docs').mkdir()

@@ -1,7 +1,7 @@
 import io,tempfile,unittest,hashlib
 from pathlib import Path
 from PIL import Image,PngImagePlugin
-from poster_logos import render,PosterLogos,BASE
+from poster_logos import render,PosterLogos,BASE,normalize_hero_logo,transparent_mark
 class Logos(unittest.TestCase):
     def blob(self,mode,size,color,fmt):
         b=io.BytesIO();Image.new(mode,size,color).save(b,fmt);return b.getvalue()
@@ -23,6 +23,16 @@ class Logos(unittest.TestCase):
         base=self.blob('RGB',(400,600),'gray','JPEG')
         for logo in [b'not a logo',self.blob('RGB',(470,140),'white','PNG')]:
             with self.assertRaises((ValueError,OSError)):render(base,logo)
+
+    def test_hero_mark_is_cropped_bounded_and_remains_transparent(self):
+        logo=Image.new('RGBA',(800,500));logo.paste((255,255,255,255),(50,150,750,350));encoded=io.BytesIO();logo.save(encoded,'PNG')
+        raw,width,height=normalize_hero_logo(encoded.getvalue())
+        mark=transparent_mark(raw)
+        self.assertEqual((width,height),mark.size)
+        self.assertEqual(width,640)
+        self.assertAlmostEqual((width-2)/(height-2),3.5,places=1)
+        self.assertEqual(mark.getpixel((0,0))[3],0)
+        self.assertEqual(mark.getpixel((width//2,height//2))[3],255)
     def test_reposition_uses_clean_official_background_and_cache(self):
         with tempfile.TemporaryDirectory()as d:
             root=Path(d);folder=root/'docs/home/images';folder.mkdir(parents=True);(root/'data').mkdir()

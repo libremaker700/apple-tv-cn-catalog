@@ -12,6 +12,7 @@ LABELS.update({'Coming to Apple TV+':'即将上线','Latest Trailers':'最新预
 LABELS['A Holiday Classic']='节日经典'
 FEATURE_SIZE=(640,800)
 FEATURE_LOGO_LAYOUT='aligned-31-v1'
+HERO_LOGO_SIZE=(640,240)
 KIDS_HOME_ROOM='uts.room.kids-tv-plus'
 MOVIES_HOME_ROOM='uts.room.movies-on-apple-tv'
 SHELF_SUBTITLES={'Watch these shows and movies together.':'一起观看这些电视节目和电影。'}
@@ -155,8 +156,14 @@ def collect(catalog,api,image,poster=None,kids_room=None):
             if landscape:value['landscapeSource']=landscape['sourceArtwork']
         row=dict(slug=slug,officialId=identity,**art(it,w,h))
         logo=(it.get('images',{}).get('contentLogo')or{}).get('url','')
-        if (w,h)in((400,600),(1920,720),FEATURE_SIZE) and logo:
-            row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
+        if logo:
+            if (w,h)==(1920,1080):
+                source=logo.replace('{w}',str(HERO_LOGO_SIZE[0])).replace('{h}',str(HERO_LOGO_SIZE[1])).replace('{f}','png')
+                if re.fullmatch(r'https://is\d+-ssl\.mzstatic\.com/image/[^\s{}]+\.png',source):
+                    art_jobs[source]=(None,None)
+                    row['sourceHeroLogo']=source
+            elif (w,h)in((400,600),(1920,720),FEATURE_SIZE):
+                row['sourceLogo']=logo.replace('{w}','470').replace('{h}','140').replace('{f}','png')
         return row
     def work_rows(items,w,h,short_featured=False):
         rows=[];seen=set()
@@ -277,6 +284,8 @@ def collect(catalog,api,image,poster=None,kids_room=None):
     for page in [home]+pages:
         for row in page['hero']+[r for s in page['shelves']for r in s['items']]:
             if 'sourceArtwork'in row:row.update(rendered[row.pop('sourceArtwork')])
+            title_logo=rendered.get(row.pop('sourceHeroLogo',None))
+            if title_logo:row['titleLogo']=title_logo
             if row.get('sourceLogo'):
                 if not callable(poster):raise ValueError('Official logo renderer is required')
                 logo=row.pop('sourceLogo')
@@ -289,3 +298,6 @@ def collect(catalog,api,image,poster=None,kids_room=None):
 
 def image_rows(home):
     return [r for p in [home]+home.get('pages',[])for r in p['hero']+[r for s in p['shelves']for r in s['items']if r.get('artwork')]]+[{'artwork':w['landscapeArtwork'],'width':960,'height':540}for w in home.get('works',[])if w.get('landscapeArtwork')]
+
+def title_logo_rows(home):
+    return [r['titleLogo'] for page in [home,*home.get('pages',[])] for r in page['hero'] if 'titleLogo' in r]

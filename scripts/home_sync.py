@@ -20,14 +20,20 @@ def normalize_image(raw,width,height):
         if im.size==(width,height):return raw
         output=io.BytesIO();ImageOps.fit(im.convert('RGB'),(width,height),method=Image.Resampling.LANCZOS).save(output,'JPEG',quality=95)
         return output.getvalue()
+def media_rows(value):
+    from home_pages import image_rows,title_logo_rows
+    return {'images':image_rows(value),'titleLogos':title_logo_rows(value)}
+
 def image_inventory(value,folder):
-    from home_pages import image_rows
-    images={}
-    for row in image_rows(value):
-        ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes()
-        images[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
-    assert sum(x['bytes']for x in images.values())<=96*1024*1024
-    return images
+    inventory={}
+    for group,rows in media_rows(value).items():
+        assets={}
+        for row in rows:
+            ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes()
+            assets[ref]={'sha256':hashlib.sha256(blob).hexdigest(),'bytes':len(blob),'width':row['width'],'height':row['height']}
+        inventory[group]=assets
+    assert sum(x['bytes']for assets in inventory.values()for x in assets.values())<=96*1024*1024
+    return inventory
 
 def fetch(url):
     u=urlsplit(url)
@@ -111,18 +117,28 @@ def validate(value,entries=None):
         assert re.fullmatch(r'images/[a-f0-9]{64}\.jpg',row['artwork'].removeprefix(BASE))
 
 def sync():
+    from poster_logos import PosterLogos,normalize_hero_logo
     folder=DOCS/'home';(folder/'images').mkdir(parents=True,exist_ok=True)
     cache_file=ROOT/'data/home-image-cache.json';cache=load(cache_file) if cache_file.exists() else {};now=int(time.time())
     cache_lock=threading.Lock()
     def image(url,width=1920,height=1080):
+        is_logo=width is None and height is None
         previous=cache.get(url);path=folder/previous['path'] if previous else None
-        if previous and now-previous.get('checkedAt',0)<6*3600 and path.is_file():
-            raw=path.read_bytes()
-            if hashlib.sha256(raw).hexdigest()==path.stem:return {'artwork':BASE+previous['path'],'width':width,'height':height}
-        raw=normalize_image(fetch(url),width,height)
-        ref='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(folder/ref).write_bytes(raw)
+        cached=None
+        if path and path.is_file() and (is_logo or now-previous.get('checkedAt',0)<6*3600) and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
+            cached={'artwork':BASE+previous['path'],'width':previous['width']if is_logo else width,'height':previous['height']if is_logo else height}
+            if now-previous.get('checkedAt',0)<6*3600:return cached
+        if is_logo:
+            try:raw,width,height=normalize_hero_logo(fetch(url))
+            except (OSError,ValueError):
+                # Keep the last verified mark for this exact Apple artwork URL.
+                if cached:return cached
+                raise
+        else:raw=normalize_image(fetch(url),width,height)
+        ref='images/'+hashlib.sha256(raw).hexdigest()+('.png'if is_logo else'.jpg');(folder/ref).write_bytes(raw)
         with cache_lock:
             cache[url]={'path':ref,'checkedAt':now}
+            if is_logo:cache[url].update(width=width,height=height)
             from title_lookup import dump
             dump(cache_file,cache)
         print(json.dumps({'homeImageReady':ref,'bytes':len(raw)}),flush=True)
@@ -142,7 +158,6 @@ def sync():
     previous=load(previous_home)if previous_home.is_file()else{}
     if previous:remember_home_titles(previous,ROOT)
     html=fetch(SOURCE).decode('utf-8')
-    from poster_logos import PosterLogos
     logos=PosterLogos(ROOT,fetch)
     kids_room=kids_search_room(fetch(SEARCH).decode('utf-8'))
     value,report=collect_official(load(DOCS/'catalog.json'),Pages(ROOT,html),image,poster=logos.apply,kids_room=kids_room)
@@ -169,27 +184,34 @@ def sync():
     report['copy']=copy_report
     report['topicShelfChanges']=topic_shelf_changes(previous,value)
     validate(value)
-    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();images=image_inventory(value,folder)
+    raw=raw_json(value);sha=hashlib.sha256(raw).hexdigest();inventory=image_inventory(value,folder)
     path='releases/'+sha+'/home.json';(folder/path).parent.mkdir(parents=True,exist_ok=True);(folder/path).write_bytes(raw)
-    manifest={'schema':1,'version':sha,'path':path,'images':images,'checkedAt':now}
+    manifest={'schema':1,'version':sha,'path':path,'checkedAt':now,**inventory}
     (folder/'home.json').write_bytes(raw);(folder/'version.json').write_bytes(raw_json(manifest))
     cache_file.write_bytes(raw_json(cache));(folder/'sync-report.json').write_bytes(raw_json(dict(report,checkedAt=now,version=sha)))
     details_path.write_bytes(raw_json(details))
-    print(json.dumps(dict(report,version=sha,imageBytes=sum(x['bytes'] for x in images.values()))),flush=True)
+    print(json.dumps(dict(report,version=sha,imageBytes=sum(x['bytes'] for assets in inventory.values() for x in assets.values()),titleLogoCount=len(inventory['titleLogos']))),flush=True)
     return value,manifest
 
 def validate_publication():
     folder=DOCS/'home';manifest=load(folder/'version.json');raw=(folder/manifest['path']).read_bytes()
     assert hashlib.sha256(raw).hexdigest()==manifest['version']
     value=json.loads(raw);validate(value)
-    refs=set()
-    from home_pages import image_rows
-    rows=image_rows(value)
-    for row in rows:
-        ref=row['artwork'].removeprefix(BASE);refs.add(ref);blob=(folder/ref).read_bytes();meta=manifest['images'][ref]
-        assert hashlib.sha256(blob).hexdigest()==meta['sha256']==Path(ref).stem and len(blob)==meta['bytes']
-        with Image.open(io.BytesIO(blob)) as im:assert im.size==(row['width'],row['height']);im.verify()
-    assert refs==set(manifest['images']) and sum(x['bytes']for x in manifest['images'].values())<=96*1024*1024
+    from poster_logos import transparent_mark
+    total=0
+    for group,rows in media_rows(value).items():
+        refs=set();assets=manifest.get(group,{})
+        for row in rows:
+            ref=row['artwork'].removeprefix(BASE);blob=(folder/ref).read_bytes();meta=assets[ref]
+            assert hashlib.sha256(blob).hexdigest()==meta['sha256']==Path(ref).stem and len(blob)==meta['bytes']
+            assert (meta['width'],meta['height'])==(row['width'],row['height'])
+            if group=='titleLogos':assert transparent_mark(blob).size==(row['width'],row['height'])
+            else:
+                with Image.open(io.BytesIO(blob)) as im:assert im.size==(row['width'],row['height']);im.verify()
+            refs.add(ref)
+        assert refs==set(assets)
+        total+=sum(x['bytes']for x in assets.values())
+    assert total<=96*1024*1024
     print('PASS home identities, manifest hash and full HD image files')
 
 if __name__=='__main__':
