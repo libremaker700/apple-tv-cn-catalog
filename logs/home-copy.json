@@ -1,5 +1,5 @@
 {
-  "checkedAt": 1794044076,
+  "checkedAt": 1794049116,
   "copyVersion": "hero-copy-zh-cn-v2",
   "pages": [
     {
@@ -24,13 +24,13 @@
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 11,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
       "retainedCopy": 0,
       "sourceMissing": 0,
-      "source": "https://tv.apple.com/us/room/kids--family/uts.room.kids-tv-plus"
+      "source": "https://tv.apple.com/us/room/kids--family-on-apple-tv/edt.item.6126cd40-38d1-4e11-8211-3f41619392df"
     },
     {
       "requested": 0,
@@ -54,12 +54,12 @@
     },
     {
       "requested": 0,
-      "cacheHits": 9,
+      "cacheHits": 10,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 1,
-      "sourceMissing": 1,
+      "retainedCopy": 0,
+      "sourceMissing": 0,
       "source": "https://tv.apple.com/us/room/action-adventure/edt.item.690d34b6-2288-4c14-a4bd-8c8b2073b1e5"
     },
     {
@@ -138,37 +138,78 @@
       "status": "ready"
     },
     {
+      "requested": 5,
+      "cacheHits": 15,
+      "translated": 5,
+      "pending": 0,
+      "apiHttp": 200,
+      "retainedCopy": 11,
+      "sourceMissing": 11,
+      "model": "gemini-3.5-flash-lite",
+      "usage": {
+        "promptTokenCount": 390,
+        "candidatesTokenCount": 307,
+        "totalTokenCount": 697,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 390
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "recomposed": 0,
+      "artworkPending": 0,
+      "shelfId": "edt.col.6126d47a-db5a-4bdc-a0fa-0aa10ecf71f9",
+      "title": "家庭时光",
+      "layout": "featured"
+    },
+    {
       "requested": 0,
       "cacheHits": 0,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 1,
+      "sourceMissing": 1,
       "recomposed": 0,
       "artworkPending": 0,
-      "shelfId": "edt.col.6acd7c3d-a004-4a4c-9bc0-0871a0d7063a",
-      "title": "布偶奇遇记的世界",
+      "shelfId": "edt.col.6a036cf4-74fa-4d18-9994-75ec1f1338f8",
+      "title": "夏天到了，查理·布朗",
       "layout": "featured"
     },
     {
       "requested": 0,
-      "cacheHits": 10,
+      "cacheHits": 0,
       "translated": 0,
       "pending": 0,
       "apiHttp": 0,
-      "retainedCopy": 0,
-      "sourceMissing": 0,
+      "retainedCopy": 4,
+      "sourceMissing": 4,
       "recomposed": 0,
       "artworkPending": 0,
-      "shelfId": "uts.col.kids-tv-plus-family-time",
-      "title": "全家共赏",
+      "shelfId": "edt.col.6a10b1a0-39f6-4c59-80e3-b53ecf5d041a",
+      "title": "妙趣歌声",
+      "layout": "featured"
+    },
+    {
+      "requested": 0,
+      "cacheHits": 0,
+      "translated": 0,
+      "pending": 0,
+      "apiHttp": 0,
+      "retainedCopy": 4,
+      "sourceMissing": 4,
+      "recomposed": 0,
+      "artworkPending": 0,
+      "shelfId": "edt.col.69d43c34-cea9-469d-8fe7-4da5496a73ba",
+      "title": "魔法奇幻世界",
       "layout": "featured"
     }
   ],
   "headings": [],
   "badgesBackfilled": 0,
-  "translated": 0,
+  "translated": 5,
   "pending": 0,
-  "version": "e5327abe38ea1c94264099eca5c82706bf059a1a818783ba574ba3f5cbe5d66a"
+  "version": "0ee0bab883ec7d3f3ecd7c281e5945ab53b2be2007b6ee2f8f639b63238019bf"
 }

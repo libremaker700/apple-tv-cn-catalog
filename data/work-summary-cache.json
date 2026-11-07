@@ -2000,6 +2000,26 @@
       "text": "在广受好评的“史努比呈献”系列最新特辑中，正值假期，所有的花生村孩子都在表现得乖巧懂事。然而，史努比却发现自己上了圣诞老人的淘气名单！距离圣诞节只有12天了，史努比必须证明自己其实并不是一只坏小猎犬，并明白圣诞节的意义不仅仅是收礼物。",
       "method": "machine",
       "model": "gemini-3.5-flash-lite"
+    },
+    "bd8df6a274a4256b80a265f7afe67921f39f4ed8d2d387e85c401f454518cabf": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "a9fa63839fbd88d6d92fd7bcca125227f3c62f6e39e398de482407bea205136c": {
+      "text": "伊万·麦格雷戈和查理·布鲁曼回归《漫长之路》系列的第二季旅程，行程 15,000 英里，从苏格兰最北端一直到南非最南端。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "3f5c22d93e502d5354c7dfa051180600be939a5513d6cdb477c959f07950109a": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "6d4499cee4ea296be4ba4c7932afa0f09d4aad5a74ea64349f21edea3bc032f6": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite"
     }
   },
   "works": {
@@ -5590,5 +5610,46 @@
       "source": "https://www.apple.com/tv-pr/originals/snoopy-presents-12-days-of-snoopy/"
     }
   },
-  "seasons": {}
+  "seasons": {
+    "umc.cmc.x8vy3tnuw04v64ypyrczesvi": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "showId": "umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "season": 1,
+      "releaseDate": "2006-03-03",
+      "original": "Explore the original adventures of opera-singing superheroes Linny the Guinea Pig, Tuck the Turtle, and Ming-Ming the Duckling as they embark on missions to help animals in need.",
+      "hash": "6d4499cee4ea296be4ba4c7932afa0f09d4aad5a74ea64349f21edea3bc032f6"
+    },
+    "umc.cmc.48o2ztkow2j75ga29kl5sfrid": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "showId": "umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "season": 2,
+      "releaseDate": "2007-10-23",
+      "original": "Explore the original adventures of opera-singing superheroes Linny the Guinea Pig, Tuck the Turtle, and Ming-Ming the Duckling as they embark on missions to help animals in need.",
+      "hash": "3f5c22d93e502d5354c7dfa051180600be939a5513d6cdb477c959f07950109a"
+    },
+    "umc.cmc.6let0e03pxeky0uv4pljbm74o": {
+      "text": "探索歌剧超级英雄天竺鼠林尼、乌龟塔克和鸭子明明的原创冒险经历，他们踏上了帮助需要帮助的动物的任务。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "showId": "umc.cmc.ns4q9hpoj4b1749wbl7crwbl",
+      "season": 3,
+      "releaseDate": "2009-05-18",
+      "original": "Explore the original adventures of opera-singing superheroes Linny the Guinea Pig, Tuck the Turtle, and Ming-Ming the Duckling as they embark on missions to help animals in need.",
+      "hash": "bd8df6a274a4256b80a265f7afe67921f39f4ed8d2d387e85c401f454518cabf"
+    },
+    "umc.cmc.3g65kl59lhyh4hucrl4fa5sqy": {
+      "text": "伊万·麦格雷戈和查理·布鲁曼回归《漫长之路》系列的第二季旅程，行程 15,000 英里，从苏格兰最北端一直到南非最南端。",
+      "method": "machine",
+      "model": "gemini-3.5-flash-lite",
+      "showId": "umc.cmc.cal17ey3zhv2lx3xkzjqjstb",
+      "season": 1,
+      "releaseDate": "2007-10-28",
+      "original": "Ewan McGregor and Charley Boorman return for a second spin in the Long Way series, travelling 15,000 miles from the northernmost tip of Scotland to the southernmost tip of South Africa.",
+      "hash": "a9fa63839fbd88d6d92fd7bcca125227f3c62f6e39e398de482407bea205136c"
+    }
+  }
 }

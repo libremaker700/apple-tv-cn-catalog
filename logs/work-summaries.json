@@ -1,15 +1,28 @@
 {
-  "works": 379,
+  "works": 380,
   "translated": 0,
-  "cacheHits": 379,
+  "cacheHits": 380,
   "missingOriginal": 0,
   "sourceErrors": 0,
-  "apiCalls": 0,
-  "usage": [],
+  "apiCalls": 1,
+  "usage": [
+    {
+      "promptTokenCount": 432,
+      "candidatesTokenCount": 326,
+      "totalTokenCount": 758,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 432
+        }
+      ],
+      "serviceTier": "standard"
+    }
+  ],
   "errors": [],
-  "seasonCandidates": 0,
-  "seasonTranslated": 0,
-  "ready": 379,
+  "seasonCandidates": 4,
+  "seasonTranslated": 4,
+  "ready": 380,
   "pending": 0,
   "seasonPending": 0
 }
