@@ -13,6 +13,7 @@ FEATURE_SIZE=(640,800)
 FEATURE_LOGO_LAYOUT='aligned-31-v1'
 KIDS_HOME_ROOM='uts.room.kids-tv-plus'
 MOVIES_HOME_ROOM='uts.room.movies-on-apple-tv'
+SHELF_SUBTITLES={'Watch these shows and movies together.':'一起观看这些电视节目和电影。'}
 
 def excluded_home_shelf(shelf):
     title=(shelf.get('header')or{}).get('title')or shelf.get('officialTitle')or''
@@ -133,24 +134,29 @@ def collect(catalog,api,image,poster=None,kids_room=None):
         def has_tall_art(item):
             art=(item.get('images')or{}).get('shelfItemImage')or{}
             return art.get('width',0)>0 and art.get('height',0)>art['width'] and bool(art.get('url'))
+        editorial=epic and len(shows)>=2 and all(i.get('flavorType')=='Flavor_F' and has_tall_art(i) for i in shows)
         layout=forced or ('showcase' if epic and len(shows)==1 else
-            'featured' if epic and len({i['id']for i in shows})>=4 and all(map(has_tall_art,shows)) else
+            'featured' if editorial or epic and len({i['id']for i in shows})>=4 and all(map(has_tall_art,shows)) else
             'landscape' if epic else 'portrait')
         w,h={'showcase':(1920,720),'featured':FEATURE_SIZE,'landscape':(640,360),'portrait':(400,600)}[layout]
         rows=work_rows(items,w,h)
         if not rows:return None
         if layout=='featured':
-            from home_copy import GENRES,enrich
+            from home_copy import GENRES,enrich,featured_api_copy
             by_id={i['id']:i for i in shows}
             copy={}
             for row in rows:
                 identity=row['officialId']
                 genres=[GENRES[g['name']]for g in by_id[identity].get('genres',[])if g.get('name')in GENRES]
-                copy[identity]={'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
+                copy[identity]=featured_api_copy(by_id[identity]) if editorial else {'descriptionEn':'','badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2]}
+                if editorial:row['featuredCopyTop']=760
             # Keep catalogue genres as a fallback until official room copy is available.
             for row in enrich({'hero':rows},copy,{},None,0,source_url=source)[0]['hero']:
                 rows[row['rank']-1]['showcaseCopy']=row['copy']
-        return {'id':sh['id'],'title':LABELS.get(title,title),'officialTitle':title,'source':source,'layout':layout,'items':rows,'count':len(rows)}
+        result={'id':sh['id'],'title':LABELS.get(title,title),'officialTitle':title,'source':source,'layout':layout,'items':rows,'count':len(rows)}
+        subtitle=SHELF_SUBTITLES.get(clean((sh.get('header')or{}).get('shortNote')))
+        if subtitle:result['subtitle']=subtitle
+        return result
     def topic_page(title,room_id,pid,source=None):
         raw=api.canvas('room',room_id)
         canonical=page_url(raw['source']) if raw.get('source') else None
@@ -224,7 +230,8 @@ def collect(catalog,api,image,poster=None,kids_room=None):
             if 'sourceArtwork'in row:row.update(rendered[row.pop('sourceArtwork')])
             if row.get('sourceLogo'):
                 if not callable(poster):raise ValueError('Official logo renderer is required')
-                row.update(poster(row,row.pop('sourceLogo')))
+                logo=row.pop('sourceLogo')
+                row.update(poster(row,logo,editorial=True) if 'featuredCopyTop' in row else poster(row,logo))
     for value in works.values():
         if value.get('landscapeSource'):value['landscapeArtwork']=rendered[value.pop('landscapeSource')]['artwork']
     out={'schema':3,'source':CHANNEL,'sources':list(dict.fromkeys([CHANNEL]+[p['source']for p in pages])),'hero':home['hero'],'shelves':home['shelves'],'pages':pages,'works':list(works.values())}

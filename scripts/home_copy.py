@@ -69,7 +69,8 @@ def localize_cached_badges(home):
 
 def validate_copy(identity,c):
     required={'descriptionEn','badgeEn','noteEn','genresZh','source','sourceHash','descriptionZh','badgeZh','noteZh','status','translationMethod'}
-    assert required<=set(c)<=required|{'contentRating'}
+    assert required<=set(c)<=required|{'contentRating','serviceLogo'}
+    assert 'serviceLogo' not in c or type(c['serviceLogo']) is bool
     assert c.get('contentRating','')in RATINGS|{''}
     from home_pages import page_url
     assert page_url(c['source'])==c['source'] and ('/us/room/'in c['source']or c['source']==CHANNEL)
@@ -77,6 +78,7 @@ def validate_copy(identity,c):
     assert isinstance(c['genresZh'],list)and len(c['genresZh'])<=8 and all(g in GENRES.values()for g in c['genresZh'])
     source={k:c[k]for k in ('descriptionEn','badgeEn','noteEn','genresZh')}
     if 'contentRating'in c:source['contentRating']=c['contentRating']
+    if 'serviceLogo'in c:source['serviceLogo']=c['serviceLogo']
     legacy_empty_note=c['noteZh']==''and bool(re.fullmatch(r'#\d{1,3} in .+ on Apple TV',c['noteEn']))and bool(fixed(c['noteEn']))
     localized_badge=fixed_badge(c['badgeEn'])
     legacy_empty_badge=c['badgeZh']==''and bool(localized_badge)and not fixed(c['badgeEn'])
@@ -151,11 +153,24 @@ def featured_source(shelf, page, works):
                           'genresZh':list(dict.fromkeys(genres))[:8]}
     return result
 
+def featured_api_copy(item):
+    note=clean(item.get('shortNote'))
+    genres=[GENRES[g['name']] for g in item.get('genres',[]) if g.get('name') in GENRES]
+    return {'descriptionEn':note[:1800] if not re.search(r'<|>|https?://|AIza|tvly-',note) else '',
+            'badgeEn':'','noteEn':'','genresZh':list(dict.fromkeys(genres))[:2],
+            'serviceLogo':item.get('serviceLogo') is True}
+
 def localize_featured(shelf, official, works, cache, translator, now, poster):
     raw=featured_source(shelf,official,works)
     rows=[dict(row,copy=row['showcaseCopy'])if 'showcaseCopy'in row else row for row in shelf['items']]
+    editorial=False
+    for row in rows:
+        if 'featuredCopyTop' not in row:continue
+        editorial=True
+        copy=row['copy']
+        raw[row['officialId']]={key:copy[key] for key in ('descriptionEn','badgeEn','noteEn','genresZh','serviceLogo')}
     if not raw and not any('copy'in row for row in rows):return None
-    localized,report=enrich({'hero':rows},raw,cache,translator,now,source_url=shelf['source'])
+    localized,report=enrich({'hero':rows},raw,cache,translator,now,source_url=shelf['source'],batches=3 if editorial else 1)
     report['recomposed']=report['artworkPending']=0
     next_rows=[]
     for row,translation in zip(shelf['items'],localized['hero']):
@@ -172,7 +187,7 @@ def localize_featured(shelf, official, works, cache, translator, now, poster):
     return dict(report,shelfId=shelf['id'],title=shelf['title'],layout='featured')
 
 def position_featured_copy(row, poster):
-    if row.get('logoTreatment')!='official-composite-v1' or row.get('featuredLogoLayout')==FEATURE_LOGO_LAYOUT:return False
+    if 'featuredCopyTop' in row or row.get('logoTreatment')!='official-composite-v1' or row.get('featuredLogoLayout')==FEATURE_LOGO_LAYOUT:return False
     if poster is None:raise ValueError('Featured logo composition unavailable')
     row.update(poster.reposition(row))
     return True
@@ -185,6 +200,7 @@ def preserve_featured_copy(home, previous, poster=None):
                     for row in shelf['items']:yield (shelf['source'],shelf['id'],row['officialId']),row
     old={key:row for key,row in rows(previous)if 'showcaseCopy'in row}
     for key,row in rows(home):
+        if 'featuredCopyTop' in row:continue
         prior=old.get(key)
         if prior is None:continue
         caption=prior['showcaseCopy']
@@ -240,7 +256,7 @@ class Translator:
             result[r['id']]=r['text'].strip()
         return result
 
-def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL):
+def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL,batches=1):
     out=copy.deepcopy(home);records=cache.setdefault('records',{});pending={};keys={};report={'requested':0,'cacheHits':0,'translated':0,'pending':0,'apiHttp':0,'retainedCopy':0,'sourceMissing':0}
     for row in out['hero']:
         if row['officialId']not in raw:
@@ -252,12 +268,13 @@ def enrich(home,raw,cache,translator,now,shared=None,source_url=CHANNEL):
         old=records.get(key,{})
         if text and identity not in (shared or {}) and not valid_zh(old.get('text'))and now>=old.get('nextRetry',0):pending[identity]={'id':identity,'text':text}
         elif valid_zh(old.get('text')):report['cacheHits']+=1
-    if pending:
-        rows=list(pending.values())[:12];report['requested']=len(rows)
+    pending_rows=list(pending.values())[:12*batches] if translator else []
+    for offset in range(0,len(pending_rows),12):
+        rows=pending_rows[offset:offset+12];report['requested']+=len(rows)
         try:
             result=translator.translate(rows)
             for r in rows:records[keys[r['id']]]={'text':result[r['id']],'model':translator.model,'createdAt':now}
-            report['translated']=len(rows)
+            report['translated']+=len(rows)
         except (ValueError,requests.RequestException,KeyError):
             for r in rows:records[keys[r['id']]]={'nextRetry':now+6*3600}
             report['failure']='translation_unavailable'

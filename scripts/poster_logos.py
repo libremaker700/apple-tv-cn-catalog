@@ -7,6 +7,9 @@ from home_pages import FEATURE_LOGO_LAYOUT,FEATURE_SIZE
 BASE='https://libremaker700.github.io/apple-tv-cn-catalog/home/'
 FEATURE_LOGO_BOTTOM=248
 def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
+    return _render(base,logo,featured_bottom=featured_bottom)[0]
+
+def _render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM,editorial_top=None):
     with Image.open(io.BytesIO(base))as im:
         if im.format!='JPEG'or im.size not in((400,600),(1920,720),FEATURE_SIZE):raise ValueError('Invalid poster background')
         canvas=im.convert('RGBA');banner=im.size==(1920,720);featured=im.size==FEATURE_SIZE
@@ -15,12 +18,23 @@ def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
         mark=im.convert('RGBA');alpha=mark.getchannel('A')
         if not alpha.getbbox()or alpha.getextrema()[0]==255:raise ValueError('Title treatment must be transparent')
         if featured:mark=mark.crop(alpha.getbbox())
-        mark=ImageOps.contain(mark,(280,90)if banner else(310,76)if featured else(235,70),Image.Resampling.LANCZOS)
+        if editorial_top is not None:
+            # 49% of the 4:5 card width and at most 9.25% of its height.
+            limit=(314,74)
+        else:
+            limit=(280,90)if banner else(310,76)if featured else(235,70)
+        mark=ImageOps.contain(mark,limit,Image.Resampling.LANCZOS)
     if banner or featured:
-        x,bottom=(34,featured_bottom)if featured else(34,145)
-        canvas.alpha_composite(mark,(x,canvas.height-bottom-mark.height))
+        copy_top=None
+        if editorial_top is not None:
+            y=round(canvas.height*editorial_top/1000)
+            copy_top=round((y+mark.height+13)*1000/canvas.height)
+        else:
+            bottom=featured_bottom if featured else 145
+            y=canvas.height-bottom-mark.height
+        canvas.alpha_composite(mark,(34,y))
         out=io.BytesIO();canvas.convert('RGB').save(out,'JPEG',quality=95,subsampling=0)
-        return out.getvalue()
+        return out.getvalue(),copy_top
     # Official portrait treatment: bottom legibility gradient and centred 100x30 logo box.
     stops=[(0,0),(.54,0),(.70,.35),(.85,.58),(1,.70)]
     shade=Image.new('RGBA',canvas.size);pixels=shade.load()
@@ -33,11 +47,11 @@ def render(base,logo,*,featured_bottom=FEATURE_LOGO_BOTTOM):
     canvas=Image.alpha_composite(canvas,shade)
     canvas.alpha_composite(mark,((400-mark.width)//2,417+(70-mark.height)//2))
     out=io.BytesIO();canvas.convert('RGB').save(out,'JPEG',quality=95,subsampling=0)
-    return out.getvalue()
+    return out.getvalue(),None
 class PosterLogos:
     def __init__(self,root,fetch):
         self.root=Path(root);self.folder=self.root/'docs/home';self.path=self.root/'data/home-logo-cache.json';self.cache=read(self.path,{'schema':1,'records':{}});self.fetch=fetch;self.count=0
-    def apply(self,row,source,expected_logo=None,legacy=None):
+    def apply(self,row,source,expected_logo=None,legacy=None,*,editorial=False):
         if not re.fullmatch(r'https://is\d+-ssl\.mzstatic\.com/image/[^\s{}]+\.png',source):raise ValueError('Invalid logo origin')
         ref=row['artwork'].removeprefix(BASE)
         if not re.fullmatch(r'images/[a-f0-9]{64}\.jpg',ref):raise ValueError('Invalid poster origin')
@@ -45,9 +59,15 @@ class PosterLogos:
         featured=(width,height)==FEATURE_SIZE
         treatment='official-banner-logo-v1'if (width,height)==(1920,720) else'official-logo-v1'
         if featured:treatment='official-featured-'+FEATURE_LOGO_LAYOUT+'|'+row['officialId']
+        editorial_top=None
+        if editorial:
+            if not featured:raise ValueError('Official editorial logo requires a 4:5 poster')
+            editorial_top=758 if (row.get('showcaseCopy')or{}).get('descriptionEn')else 800
+            treatment='apple-editorial-v1|'+str(editorial_top)+'|'+row['officialId']
         key=hashlib.sha256((treatment+'|'+ref+'|'+source).encode()).hexdigest();old=self.cache['records'].get(key,{})
         path=self.folder/old.get('path','missing')
-        if old and (expected_logo is None or expected_logo in (old.get('logoSha256'),old.get('verifiedPriorLogo'))) and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
+        copy_top=old.get('featuredCopyTop')
+        if old and (not editorial or type(copy_top)is int and 750<=copy_top<=940) and (expected_logo is None or expected_logo in (old.get('logoSha256'),old.get('verifiedPriorLogo'))) and path.is_file()and hashlib.sha256(path.read_bytes()).hexdigest()==path.stem:
             dest=old['path']
         else:
             logo=self.fetch(source)
@@ -60,13 +80,15 @@ class PosterLogos:
                 # A CDN can re-encode the PNG. Only identical archived JPEG bytes prove it is still the same artwork.
                 if legacy is None or hashlib.sha256(render(base,logo,featured_bottom=legacy[1])).hexdigest()!=Path(legacy[0]).stem:
                     raise ValueError('Official title logo changed since verification')
-            raw=render(base,logo);dest='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(self.folder/dest).write_bytes(raw)
+            raw,copy_top=_render(base,logo,editorial_top=editorial_top);dest='images/'+hashlib.sha256(raw).hexdigest()+'.jpg';(self.folder/dest).write_bytes(raw)
             record={'path':dest,'background':ref,'logoSource':source,'logoSha256':logo_hash,'officialId':row['officialId']}
             if reencoded:record['verifiedPriorLogo']=expected_logo
+            if editorial:record['featuredCopyTop']=copy_top
             self.cache['records'][key]=record;dump(self.path,self.cache)
         self.count+=1
         result=dict(artwork=BASE+dest,width=width,height=height,logoTreatment='official-composite-v1')
-        if featured:result.update(showcaseCopyPosition='raised-logo-v1',featuredLogoLayout=FEATURE_LOGO_LAYOUT)
+        if editorial:result['featuredCopyTop']=copy_top
+        elif featured:result.update(showcaseCopyPosition='raised-logo-v1',featuredLogoLayout=FEATURE_LOGO_LAYOUT)
         return result
 
     def reposition(self,row):

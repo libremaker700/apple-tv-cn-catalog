@@ -70,8 +70,11 @@ def validate_pages(value):
                 validate_copy(r['officialId'],r['copy'])
             if 'showcaseCopy'in r:
                 from home_copy import validate_copy
-                assert not topics and ((w,h)==(1920,720) and len(rows)==1 or (w,h)==FEATURE_SIZE and len(rows)>=4) and r['showcaseCopy']['source']==source
+                assert not topics and ((w,h)==(1920,720) and len(rows)==1 or (w,h)==FEATURE_SIZE) and r['showcaseCopy']['source']==source
                 validate_copy(r['officialId'],r['showcaseCopy'])
+            if 'featuredCopyTop' in r:
+                assert not topics and (w,h)==FEATURE_SIZE and 'showcaseCopy'in r
+                assert type(r['featuredCopyTop']) is int and 600<=r['featuredCopyTop']<=950
             if 'showcaseCopyPosition'in r:
                 assert not topics and (w,h)==FEATURE_SIZE and len(rows)>=4 and r['showcaseCopyPosition']=='raised-logo-v1' and r.get('logoTreatment')=='official-composite-v1' and 'showcaseCopy'in r
             if 'featuredLogoLayout'in r:
@@ -83,7 +86,10 @@ def validate_pages(value):
         for shelf in page['shelves']:
             sizes={'portrait':(400,600),'landscape':(640,360),'showcase':(1920,720),'featured':FEATURE_SIZE}
             assert shelf['title']and shelf['officialTitle']and page_url(shelf['source'])==shelf['source']and shelf['layout']in sizes and 0<len(shelf['items'])<=600
-            if shelf['layout']=='featured':assert len(shelf['items'])>=4 and shelf.get('kind')!='topics'
+            if 'subtitle' in shelf:
+                assert isinstance(shelf['subtitle'],str) and 0<len(shelf['subtitle'])<=160 and not re.search(r'<|>|https?://',shelf['subtitle'])
+            if shelf['layout']=='featured':
+                assert shelf.get('kind')!='topics' and (len(shelf['items'])>=4 or len(shelf['items'])>=2 and all('featuredCopyTop'in r for r in shelf['items']))
             if shelf.get('morePageId'):assert shelf['morePageId']in page_ids
             rows(shelf['items'],*sizes[shelf['layout']],shelf.get('kind')=='topics',shelf['source'])
     assert value['shelves'][-1]['title']=='即将上线'

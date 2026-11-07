@@ -61,3 +61,35 @@ class Logos(unittest.TestCase):
             renderer=PosterLogos(root,lambda url:(calls.append(url)or logo));row={'artwork':BASE+'images/'+name,'officialId':'umc.cmc.abc'};url='https://is1-ssl.mzstatic.com/image/thumb/example/470x140bb.png'
             a=renderer.apply(row,url);b=renderer.apply(row,url);self.assertEqual(a,b);self.assertEqual(len(calls),1);self.assertEqual(a['logoTreatment'],'official-composite-v1');self.assertNotEqual(a['artwork'],row['artwork'])
             with self.assertRaises(ValueError):renderer.apply(row,'https://example.com/logo.png')
+
+    def test_editorial_logo_preserves_proportions_and_reserves_space_for_copy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);folder=root/'docs/home/images';folder.mkdir(parents=True)
+            base=self.blob('RGB',(640,800),(180,180,180),'JPEG')
+            ref=hashlib.sha256(base).hexdigest()+'.jpg';(folder/ref).write_bytes(base)
+            logo=Image.new('RGBA',(470,140));logo.paste((255,0,0,255),(35,20,435,120))
+            encoded=io.BytesIO();logo.save(encoded,'PNG')
+            calls=[]
+            renderer=PosterLogos(root,lambda url:(calls.append(url)or encoded.getvalue()))
+            row={'artwork':BASE+'images/'+ref,'officialId':'umc.cmc.test','width':640,'height':800}
+            url='https://is1-ssl.mzstatic.com/image/thumb/example/470x140bb.png'
+            with_copy=dict(row,showcaseCopy={'descriptionEn':'Official text'})
+            treatment=renderer.apply(with_copy,url,editorial=True)
+            self.assertEqual(treatment['featuredCopyTop'],866)
+            self.assertNotIn('featuredLogoLayout',treatment)
+            self.assertNotIn('showcaseCopyPosition',treatment)
+            with Image.open(root/'docs/home'/treatment['artwork'].removeprefix(BASE)) as image:
+                # The logo's 4:1 content fits in 296x74 at x=34, y=606.
+                self.assertLess(image.getpixel((40,610))[1],30)
+                self.assertLess(image.getpixel((320,676))[1],30)
+                self.assertGreater(image.getpixel((350,620))[1],160)
+                self.assertGreater(image.getpixel((100,690))[1],160)
+            self.assertEqual(renderer.apply(with_copy,url,editorial=True),treatment)
+            self.assertEqual(len(calls),1)
+            without_copy=renderer.apply(row,url,editorial=True)
+            self.assertEqual(without_copy['featuredCopyTop'],909)
+            self.assertNotEqual(without_copy['artwork'],treatment['artwork'])
+            self.assertEqual(len(calls),2)
+            self.assertEqual(renderer.apply(row,url)['featuredLogoLayout'],'aligned-31-v1')
+            with self.assertRaisesRegex(ValueError,'4:5 poster'):
+                renderer.apply(dict(row,width=400,height=600),url,editorial=True)

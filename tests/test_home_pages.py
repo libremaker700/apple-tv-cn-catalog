@@ -4,7 +4,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from home_pages import KIDS_HOME_ROOM,MOVIES_HOME_ROOM,collect,kids_search_room,page_id,topic_shelf_changes
 from home_sources import SEARCH
 from home_validation import validate_pages
-from official_pages import slim_item,Pages
+from official_pages import slim_item,slim_shelf,Pages
 
 def item(n):
     return {'id':'umc.cmc.work'+str(n),'type':'Movie','title':'Work '+str(n),'url':'https://tv.apple.com/us/movie/work/umc.cmc.work'+str(n),'releaseDate':1704067200000,'images':{'posterArt':{'url':'https://is1-ssl.mzstatic.com/image/thumb/p'+str(n)+'/{w}x{h}.{f}','width':2000,'height':3000},'shelfImageBackground':{'url':'https://is1-ssl.mzstatic.com/image/thumb/w'+str(n)+'/{w}x{h}.{f}','width':3840,'height':2160}}}
@@ -183,4 +183,46 @@ class HomePages(unittest.TestCase):
         with self.assertRaises(ValueError):api.canvas('room','uts.room.a')
         api.get=lambda *a,**k:{'id':'shelf','items':[]}
         with self.assertRaises(ValueError):api.shelf({'id':'shelf','items':[item(1)],'nextToken':'10'})
+
+    def test_editorial_pagination_keeps_the_official_room_and_shelf_context(self):
+        api=object.__new__(Pages);calls=[]
+        original=dict(shelf('Family Time',[item(0)],'epicShowcase'),id='edt.col.family',nextToken='1:0:20',
+                      url='https://tv.apple.com/us/collection/family/edt.col.family?ctx_cvs=edt.cvs.kids&ctx_shelf=edt.shelf.family')
+        def get(route,identity,token,context=None):
+            calls.append((route,identity,token,context))
+            return dict(original,items=[item(1)],nextToken=None)
+        api.get=get
+        self.assertEqual([i['id'] for i in api.shelf(original)['items']],[item(0)['id'],item(1)['id']])
+        self.assertEqual(calls,[('shelf','edt.col.family','1:0:20',{'ctx_cvs':'edt.cvs.kids','ctx_shelf':'edt.shelf.family'})])
+        api.get=lambda *a,**k:dict(original,items=[item(1)],displayType='lockup')
+        with self.assertRaisesRegex(ValueError,'regular posters'):api.shelf(original)
+
+    def test_official_editorial_art_and_caption_are_kept_for_short_shelves(self):
+        api=Fake();original=api.canvas;chosen=[]
+        works=api.rows[:3]
+        for n,row in enumerate(works):
+            row.update(flavorType='Flavor_F',shortNote='An official note.' if n==1 else '',channelId='tvs.sbd.4000')
+            row['images'].update(shelfItemImage={'url':f'https://is1-ssl.mzstatic.com/image/thumb/editorial{n}/{{w}}x{{h}}BDT.TVAES01.{{f}}','width':1680,'height':3636},
+                                 contentLogo={'url':f'https://is1-ssl.mzstatic.com/image/thumb/mark{n}/{{w}}x{{h}}bb.{{f}}','width':400,'height':100})
+        def canvas(kind,identity):
+            result=original(kind,identity)
+            if kind=='room' and identity=='uts.room.kids':
+                first=slim_shelf(shelf('Family Time',works[:1],'epicShowcase'),{'tvs.sbd.4000':{}})
+                second=slim_shelf(shelf('Family Time',works[1:],'epicShowcase'))
+                first['items'].extend(second['items'])
+                first['header']['shortNote']='Watch these shows and movies together.'
+                result['shelves'].append(first)
+            return result
+        def poster(row,url,editorial=False):
+            if editorial:chosen.append((row['officialId'],url))
+            return {'featuredCopyTop':835} if editorial else {}
+        api.canvas=canvas
+        value,_=collect({'entries':[]},api,image,poster=poster);validate_pages(value)
+        kids=next(p for p in value['pages']if p['officialId']=='uts.room.kids')
+        row=kids['shelves'][-1]
+        self.assertEqual((row['layout'],row['count']),('featured',3))
+        self.assertIn('电视节目',row['subtitle'])
+        self.assertEqual([r['showcaseCopy']['serviceLogo'] for r in row['items']],[True,False,False])
+        self.assertEqual(row['items'][1]['showcaseCopy']['descriptionEn'],'An official note.')
+        self.assertEqual([identity for identity,_ in chosen],[r['id'] for r in works])
 if __name__=='__main__':unittest.main()
