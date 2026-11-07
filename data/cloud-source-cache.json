@@ -1579,20 +1579,19 @@
     },
     "stick": {
       "checkedAt": 1793777676,
-      "lastAttemptAt": 1793777676,
-      "nextRetry": 1793781276,
+      "nextRetry": 1794382476,
       "fingerprint": "c2dbca5fec3ebca60ccd9d98f27f529212ae00bc2bfea1dafd0f22ee9934579d",
       "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793777676,
         "en": "Stick",
-        "kind": "series",
-        "season": 2,
-        "year": "2026",
         "found": true,
+        "kind": "series",
         "routes": 28,
-        "checkedAt": 1793777676
+        "schema": 1,
+        "season": 2,
+        "year": "2026"
       },
       "selection": null
     },
@@ -1833,20 +1832,19 @@
     },
     "the-reluctant-traveler": {
       "checkedAt": 1793777676,
-      "lastAttemptAt": 1793777676,
-      "nextRetry": 1793781276,
+      "nextRetry": 1794382476,
       "fingerprint": "a66f2d11118602a92cc29c1389a7a9dc2ca466f22144bc67088f0c0586f4dfc8",
       "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
       "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
       "check": {
-        "schema": 1,
+        "checkedAt": 1793777676,
         "en": "The Reluctant Traveler With Eugene Levy",
-        "kind": "series",
-        "season": 3,
-        "year": "2025",
         "found": true,
+        "kind": "series",
         "routes": 1,
-        "checkedAt": 1793777676
+        "schema": 1,
+        "season": 3,
+        "year": "2025"
       },
       "selection": null
     },
@@ -1915,6 +1913,77 @@
           }
         ]
       }
+    },
+    "awkwafina-the-unlikely-cook": {
+      "checkedAt": 1794026056,
+      "lastAttemptAt": 1794026056,
+      "nextRetry": 1794029656,
+      "fingerprint": "29d61515fa8c1317567bb0ac9920e3e1d77537df448f69ba0735eee3ee80e5bc",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Awkwafina: The Unlikely Cook",
+        "kind": "series",
+        "season": 1,
+        "year": "2026",
+        "found": true,
+        "routes": 4,
+        "checkedAt": 1794026056
+      },
+      "selection": {
+        "policy": "library-votes-v1",
+        "title": "奥卡菲娜：意想不到的厨师",
+        "libraries": 3,
+        "checkedLibraries": 19,
+        "attemptedLibraries": 33,
+        "requestedLibraries": 33,
+        "complete": false,
+        "options": [
+          {
+            "title": "奥卡菲娜：意想不到的厨师",
+            "libraries": 3
+          }
+        ]
+      }
+    },
+    "shape-island": {
+      "checkedAt": 1794026056,
+      "lastAttemptAt": 1794026056,
+      "nextRetry": 1794029656,
+      "fingerprint": "50d27570d7dc6b8dba2985264e09d3ac86a645e503658127fa1fae6e4f3418c8",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Shape Island",
+        "kind": "series",
+        "season": 2,
+        "year": "2025",
+        "found": true,
+        "routes": 1,
+        "checkedAt": 1794026056
+      },
+      "selection": null
+    },
+    "invasion": {
+      "checkedAt": 1794026056,
+      "lastAttemptAt": 1794026056,
+      "nextRetry": 1794029656,
+      "fingerprint": "171cc2fe4593092abc212aad5fb8e63246bab89f2042d753fb6e045e094f606a",
+      "queryPolicy": "verified-alias-punctuation-scoped-season-v7",
+      "scopeHash": "dcae79a925eea1126e46f288266e65fa23d6602170f3d84b91b235cd7188c2be",
+      "check": {
+        "schema": 1,
+        "en": "Invasion",
+        "kind": "series",
+        "season": 3,
+        "year": "2025",
+        "found": true,
+        "routes": 31,
+        "checkedAt": 1794026056
+      },
+      "selection": null
     }
   }
 }
