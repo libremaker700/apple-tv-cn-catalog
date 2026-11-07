@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import requests
 from urllib.parse import urljoin
-from PIL import Image
+from PIL import Image, ImageOps
 from metadata_policy import POLICY,allowed_source,clean_entry,clean_zh
 from season_sync import Collector,label_seasons,public_seasons
 ROOT=Path(__file__).resolve().parents[1]
@@ -32,10 +32,11 @@ def save_image(raw):
     if not ext: raise ValueError('unsupported image')
     path='images/'+digest(raw)+'.'+ext
     (DOCS/path).parent.mkdir(parents=True,exist_ok=True);(DOCS/path).write_bytes(raw);return path
-def validate(catalog):
+def validate(catalog,folder=None):
+    folder=DOCS if folder is None else folder
     assert catalog.get('metadataPolicy')==POLICY, 'Unsupported Chinese metadata policy'
-    entries=catalog['entries'];assert 50<=len(entries)<=2000
-    seen=set()
+    entries=catalog['entries'];assert catalog.get('complete') is True and 50<=len(entries)<=2000,'Incomplete catalog'
+    seen=set();images={}
     for e in entries:
         assert re.fullmatch('[a-z0-9-]{1,150}',e['slug']) and e['slug'] not in seen;seen.add(e['slug'])
         assert e['kind'] in ('movie','series') and e['en']
@@ -55,9 +56,32 @@ def validate(catalog):
                 assert season.get('officialId','').startswith('umc.cmc.') and season.get('showId')==e.get('officialIdentity',{}).get('watchUrl','').rstrip('/').split('/')[-1],'Season/show identity mismatch'
         for url in [e.get('artwork'),e.get('heroArtwork')]+[s.get('artwork') for s in seasons]:
             if not url: continue
-            path=url.removeprefix(BASE);assert re.fullmatch(r'images/[a-f0-9]{64}\.(jpg|png|webp)',path)
-            b=(DOCS/path).read_bytes();assert digest(b)==Path(path).stem
+            assert url.startswith(BASE),'Invalid image origin'
+            path=url.removeprefix(BASE);assert re.fullmatch(r'images/[a-f0-9]{64}\.(jpg|png|webp)',path),'Invalid image path'
+            if path in images:continue
+            image=folder/path;size=image.stat().st_size
+            assert 0<size<=8*1024*1024,'Invalid image size: '+path
+            b=image.read_bytes();sha=digest(b)
+            assert sha==image.stem,'Invalid image hash: '+path
             with Image.open(io.BytesIO(b)) as im: im.verify()
+            images[path]={'sha256':sha,'bytes':len(b)}
+    assert sum(image['bytes'] for image in images.values())<=128*1024*1024,'Image inventory exceeds App limit'
+    return images
+
+def validate_publication(folder=None):
+    folder=DOCS if folder is None else folder
+    manifest=load(folder/'version.json')
+    assert manifest.get('schema')==1 and manifest.get('metadata_policy')==POLICY,'Unsupported manifest'
+    sha=manifest['version']
+    assert re.fullmatch(r'[a-f0-9]{64}',sha) and manifest.get('catalog_sha256')==sha,'Invalid catalog version hash'
+    path=f'releases/{sha}/catalog.json'
+    assert manifest.get('catalog_path')==path,'Invalid release path'
+    raw=(folder/path).read_bytes()
+    assert digest(raw)==sha,'Invalid release hash'
+    catalog=json.loads(raw)
+    assert manifest.get('item_count')==len(catalog['entries']),'Invalid item count'
+    images=validate(catalog,folder)
+    assert manifest.get('image_count')==len(images) and manifest.get('images')==images,'Invalid image inventory'
 def publish(catalog,checked_at,mode):
     value=copy.deepcopy(catalog)
     from reviewed_titles import apply_catalog
@@ -75,7 +99,6 @@ def publish(catalog,checked_at,mode):
     from season_scope import apply as apply_season_scope
     by_slug={entry['slug']:entry for entry in value['entries']}
     for entry in value['entries']:apply_season_scope(entry,ROOT,by_slug)
-    images={}
     for e in value['entries']:
         from source_availability import apply_cached
         apply_cached(e,ROOT)
@@ -86,9 +109,9 @@ def publish(catalog,checked_at,mode):
         for row,keys in [(e,('artwork','heroArtwork'))]+[(s,('artwork',)) for s in e.get('seasons',[])]:
             for key in keys:
                 if row.get(key):
-                    p=row[key].removeprefix(BASE);b=(DOCS/p).read_bytes();images[p]={'sha256':digest(b),'bytes':len(b)};row[key]=BASE+p
+                    row[key]=BASE+row[key].removeprefix(BASE)
     if isinstance(value.get('seasonStats'),dict):value['seasonStats'].pop('checkedAt',None)
-    value['complete']=True;validate(value)
+    value['complete']=True;images=validate(value)
     raw=raw_json(value);sha=digest(raw);path='releases/'+sha+'/catalog.json'
     (DOCS/path).parent.mkdir(parents=True,exist_ok=True);(DOCS/path).write_bytes(raw)
     manifest={'schema':1,'metadata_policy':POLICY,'version':sha,'catalog_path':path,'catalog_sha256':sha,'item_count':len(value['entries']),
@@ -129,11 +152,21 @@ def collect(previous):
         hero_source=e.get('heroSource') or seeds.get(slug,{}).get('heroSource')
         if hero_source:
             assert re.match(r'https://is[0-9]+-ssl\.mzstatic\.com/image/',hero_source)
-            # Keep hero imagery large and landscape instead of upscaling small PR thumbnails.
-            with Image.open(io.BytesIO(get(hero_source).content)) as im:
-                from PIL import ImageOps
-                im=ImageOps.fit(im.convert('RGB'),(1280,720));out=io.BytesIO();im.save(out,format='JPEG',quality=88)
-            e['heroArtwork']=save_image(out.getvalue());e['heroSource']=hero_source
+            try:
+                with Image.open(io.BytesIO(get(hero_source).content)) as im:
+                    out=io.BytesIO()
+                    ImageOps.fit(im.convert('RGB'),(1280,720)).save(out,format='JPEG',quality=88)
+                e['heroArtwork']=save_image(out.getvalue())
+            except (OSError,ValueError,Image.DecompressionBombError):
+                # The PR thumbnail is already available. Only retain a verified cached background.
+                ref=(e.pop('heroArtwork',None) or '').removeprefix(BASE)
+                if e.get('heroSource')==hero_source and re.fullmatch(r'images/[a-f0-9]{64}\.(jpg|png|webp)',ref):
+                    cached=DOCS/ref
+                    try:
+                        if cached.stat().st_size<=8*1024*1024 and digest(cached.read_bytes())==cached.stem:e['heroArtwork']=ref
+                    except OSError:pass
+                print(json.dumps({'optionalHeroArtworkUnavailable':slug,'retained':bool(e.get('heroArtwork'))}),flush=True)
+            e['heroSource']=hero_source
         # Localized fields come exclusively from mainland policy data.
         e=clean_entry(e)
         if not e.get('zh') and slug in mainland:e['zh']=clean_zh(mainland[slug]);e['chinesePending']=not bool(e['zh'])
@@ -151,7 +184,7 @@ def collect(previous):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--seed',action='store_true');p.add_argument('--force',action='store_true');p.add_argument('--validate',action='store_true');a=p.parse_args()
     if a.validate:
-        v=load(DOCS/'version.json');raw=(DOCS/v['catalog_path']).read_bytes();assert digest(raw)==v['catalog_sha256'];validate(json.loads(raw));print('PASS complete catalog and all image hashes');return
+        validate_publication();print('PASS complete catalog and all image hashes');return
     if a.seed: publish(load(ROOT/'data/seed.json'),None,'bundled-reviewed-snapshot');return
     prior=load(DOCS/'catalog.json');manifest=load(DOCS/'version.json');last=manifest.get('checked_at') or 0
     if not a.force and time.time()-last<6*3600: print('Not due; retain verified snapshot');return

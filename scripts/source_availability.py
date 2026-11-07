@@ -27,9 +27,30 @@ def verified_name(zh):
     # The reviewed baseline is also an accepted App title authority.
     return zh.get('metadataPolicy')=='mainland-v1'and bool(re.search(r'[\u3400-\u9fff]',str(zh.get('title',''))))and(zh.get('name_status')=='verified_title_sources'or zh.get('provenance')=='reviewed_mainland_catalog')
 
+def query_names(zh):
+    from mainland_names import base
+    return list(dict.fromkeys(base(name) for name in [zh.get('title','')]+zh.get('aliases',[]) if re.search(r'[\u3400-\u9fff]',name)))[:4]
+
+def source_query(work,ref):
+    from detail_metadata import valid as valid_detail
+    from mainland_names import DIRECTOR_CUT,source_people,verified_subject
+    zh=work.get('zh')or{}
+    query=source_people({'kind':ref['kind'],'year':ref['year'],'season':ref['season']or 1},zh)
+    if ref['kind']=='movie' and DIRECTOR_CUT.search(work['en']):query['nameOnlyScope']='director_cut'
+    if query.get('nameOnlyScope'):return query
+    packet=next((p for p in zh.get('detailSeasons',[])+[zh.get('detailMetadata')]
+                 if valid_detail(p,work['kind'])and p['season']==ref['season']and str(p['year'])==ref['year']),None)
+    subject=packet['subjectId'] if packet else verified_subject(zh)
+    if subject:query['douban_id']=str(subject)
+    return query
+
+def query_fingerprint(scope,ref,query,names):
+    from mainland_names import SOURCE_QUERY_POLICY
+    return hashlib.sha256(json.dumps([SOURCE_QUERY_POLICY,scope,ref,query,names],sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+
 def sync_home_zh(home_work,main_work):
     incoming=main_work.get('zh')or{};zh=home_work.setdefault('zh',{})
-    for key in ('sourceCheck','nameSelection','detailMetadata','detailSeasons'):
+    for key in ('sourceCheck','nameSelection','detailMetadata','detailSeasons','nameOnlyScope'):
         if key in incoming:zh[key]=copy.deepcopy(incoming[key])
         else:zh.pop(key,None)
     # Homepage-only names require independent evidence; a reviewed main-catalog
@@ -40,17 +61,18 @@ def sync_home_zh(home_work,main_work):
     return home_work
 
 def apply_cached(work,root=ROOT):
-    from mainland_names import source_deferred
+    from mainland_names import SOURCE_QUERY_POLICY,source_deferred
     ref=reference(work);current=next((s for s in work.get('seasons',[])if s.get('season')==ref['season']),{})
     if source_deferred(current or work):return work
     record=read(root/'data/cloud-source-cache.json',{'records':{}})['records'].get(work['slug'],{})
     check=record.get('check');zh=work.get('zh')or{}
     existing=zh.get('sourceCheck')or{}
-    from mainland_names import SOURCE_QUERY_POLICY
     providers=read(root/'data/public-source-providers.json',[])
     scope=hashlib.sha256(json.dumps(providers,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
-    if record.get('queryPolicy')!=SOURCE_QUERY_POLICY or record.get('scopeHash')!=scope:
-        if existing.get('found')is False:zh.pop('sourceCheck',None)
+    query=source_query(work,ref)
+    fingerprint=query_fingerprint(scope,ref,query,query_names(zh))
+    if record.get('queryPolicy')!=SOURCE_QUERY_POLICY or record.get('scopeHash')!=scope or record.get('fingerprint')!=fingerprint:
+        if existing.get('found')is False or query.get('nameOnlyScope')=='director_cut':zh.pop('sourceCheck',None)
         if isinstance(zh.get('nameSelection'),dict):zh['nameSelection']['complete']=False
         work['zh']=zh
         return work
@@ -76,26 +98,18 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
         seen.add(slug);ref=reference(work);current=next((s for s in work.get('seasons',[])if s.get('season')==ref['season']),{})
         if source_deferred(current or work,now)or not verified_name(zh)or not re.fullmatch(r'(19|20)\d{2}',ref['year']):continue
         report['eligible']+=1
-        names=list(dict.fromkeys(base(n)for n in [zh['title']]+zh.get('aliases',[])if re.search(r'[\u3400-\u9fff]',n)))[:4]
-        fingerprint=hashlib.sha256(json.dumps([SOURCE_QUERY_POLICY,scope,ref,names,zh.get('actors'),zh.get('directors')],sort_keys=True,ensure_ascii=False).encode()).hexdigest();old=cache['records'].get(slug,{})
-        inline=zh.get('sourceCheck')or{}
-        selection=zh.get('nameSelection')or old.get('selection')or{}
-        policy_ready=old.get('queryPolicy')==SOURCE_QUERY_POLICY and old.get('scopeHash')==scope
-        if not force and old.get('pending')and old.get('fingerprint')==fingerprint and now<old.get('nextRetry',0):report['cached']+=1;continue
-        if not force and applies(inline,work)and policy_ready and now<inline['checkedAt']+retry_interval(inline,selection)and inline['checkedAt']>=old.get('checkedAt',0):
-            cache['records'][slug]={'checkedAt':inline['checkedAt'],'nextRetry':inline['checkedAt']+retry_interval(inline,selection),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':copy.deepcopy(inline),'selection':selection or None};report['cached']+=1
-            dump(path,cache);continue
-        if not force and old.get('fingerprint')==fingerprint and now<old.get('nextRetry',0)and applies(old.get('check'),work):
-            report['cached']+=1
-            if zh.get('sourceCheck')!=old['check']:zh['sourceCheck']=copy.deepcopy(old['check']);report['changed'].append(slug)
-            continue
+        names=query_names(zh);query=source_query(work,ref)
+        fingerprint=query_fingerprint(scope,ref,query,names);old=cache['records'].get(slug,{})
+        same_query=old.get('fingerprint')==fingerprint
+        if not force and same_query and now<old.get('nextRetry',0):
+            if old.get('pending'):report['cached']+=1;continue
+            if applies(old.get('check'),work):
+                report['cached']+=1
+                if (zh.get('sourceCheck')or{}).get('checkedAt',0)<old['check']['checkedAt']:
+                    zh['sourceCheck']=copy.deepcopy(old['check']);report['changed'].append(slug)
+                continue
         if len(report['records'])>=max(0,min(24,int(limit)))or time.monotonic()>=deadline:continue
-        query=source_people({'kind':ref['kind'],'year':ref['year'],'season':ref['season']or 1},zh)
-        subject=zh.get('douban_id')or next((re.search(r'/subject/(\d+)',s.get('url',''))[1]for s in zh.get('name_sources',[])if re.search(r'/subject/(\d+)',s.get('url',''))),None)
-        from detail_metadata import valid as valid_detail
-        packet=next((p for p in zh.get('detailSeasons',[])+[zh.get('detailMetadata')]if valid_detail(p,work['kind'])and p['season']==ref['season']and str(p['year'])==ref['year']),None)
-        if packet:subject=packet['subjectId']
-        if subject:query['douban_id']=str(subject)
+        subject=query.get('douban_id')
         if not probe and subject and(not query.get('actors')or not query.get('directors')):
             from title_sources import Lookup
             from douban_mobile import DoubanMobile
@@ -112,11 +126,13 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
         best,events=probe(query,names,providers)if probe else public_sources(query,names,providers,deadline=min(deadline,time.monotonic()+90))
         if not best and incomplete(events):
             pending=dict(old,lastAttemptAt=now,nextRetry=now+3600,fingerprint=fingerprint,queryPolicy=SOURCE_QUERY_POLICY,scopeHash=scope,pending=True)
-            # A previous smaller scope cannot supply a negative result for this scope.
-            if not policy_ready:
-                if not (pending.get('check')or{}).get('found'):pending.pop('check',None)
-                if (zh.get('sourceCheck')or{}).get('found')is False:zh.pop('sourceCheck',None);report['changed'].append(slug)
-                if isinstance(zh.get('nameSelection'),dict):zh['nameSelection']['complete']=False
+            # A changed query cannot inherit the previous check under a new fingerprint.
+            if not same_query:
+                pending.pop('check',None);pending.pop('selection',None)
+                if (zh.get('sourceCheck')or{}).get('found')is False or query.get('nameOnlyScope')=='director_cut' and 'sourceCheck'in zh:
+                    zh.pop('sourceCheck',None);report['changed'].append(slug)
+                if isinstance(zh.get('nameSelection'),dict)and zh['nameSelection'].get('complete')is not False:
+                    zh['nameSelection']['complete']=False;report['changed'].append(slug)
             cache['records'][slug]=pending;dump(path,cache)
             report['records'].append({'slug':slug,'status':'incomplete','events':events});continue
         check=make_check(work,query,best,now);zh['sourceCheck']=check;work['zh']=zh
@@ -126,6 +142,7 @@ def run(root=ROOT,limit=12,probe=None,now=None,slugs=None,force=False):
             if subject:
                 if not zh.get('name_sources'):zh['name_sources']=[{'type':'douban_mobile_identity','url':'https://movie.douban.com/subject/'+str(subject)+'/','retrieved_at':str(now)}]
             if best.get('selection'):zh['nameSelection']=copy.deepcopy(best['selection'])
+        fingerprint=query_fingerprint(scope,ref,source_query(work,ref),query_names(zh))
         cache['records'][slug]={'checkedAt':now,'lastAttemptAt':now,'nextRetry':now+retry_interval(check,(best or{}).get('selection')or{'complete':(best or{}).get('complete',True)}),'fingerprint':fingerprint,'queryPolicy':SOURCE_QUERY_POLICY,'scopeHash':scope,'check':check,'selection':copy.deepcopy(best.get('selection'))if best else None}
         report['records'].append({'slug':slug,'check':check,'recallOnly':bool(best and best.get('recallOnly')),'libraries':(best or{}).get('libraries',0),'complete':(best or{}).get('complete',False),'events':events});report['changed'].append(slug);dump(path,cache)
     by_slug={e['slug']:e for e in main['entries']}

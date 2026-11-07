@@ -72,4 +72,35 @@ class Policy(unittest.TestCase):
                 value=catalog.collect(previous)
         self.assertEqual(value['metadataPolicy'],POLICY);self.assertTrue(all(e['zh'] is None for e in value['entries']))
 
+    def test_optional_hero_timeout_keeps_valid_artwork_and_continues(self):
+        from requests import Timeout
+        rows=[{'url':f'/tv-pr/originals/test-{i}/','title':f'Test {i}','showTypeKey':'films',
+               'image':{'dirpath':'/tv-pr/shows-and-films/test/','name':str(i),'type':'jpg'}} for i in range(50)]
+        hero='https://is1-ssl.mzstatic.com/image/fixture.jpg'
+        class Reply:
+            content=b'fixture image'
+            def json(self):return {'results':{'originals':rows}}
+        def get(url):
+            if url==hero:raise Timeout('fixture')
+            return Reply()
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'data').mkdir();(root/'docs').mkdir()
+            (root/'data/seed.json').write_text(json.dumps({'entries':[{'slug':'test-1','heroSource':hero}]}))
+            (root/'data/mainland-catalog.json').write_text(json.dumps({'records':{}}))
+            with patch.object(catalog,'ROOT',root),patch.object(catalog,'DOCS',root/'docs'),patch.object(catalog,'get',get):
+                from io import BytesIO
+                from PIL import Image
+                image=BytesIO();Image.new('RGB',(8,8)).save(image,format='JPEG');Reply.content=image.getvalue()
+                background=BytesIO();Image.new('RGB',(32,18)).save(background,format='JPEG')
+                cached=catalog.save_image(background.getvalue())
+                previous={'entries':[{'slug':'test-0','heroSource':hero,'heroArtwork':catalog.BASE+cached},
+                                     {'slug':'test-2','heroSource':hero,'heroArtwork':catalog.BASE+'images/'+'a'*64+'.jpg'}]}
+                entries=catalog.collect(previous)['entries']
+        self.assertEqual(len(entries),50)
+        self.assertEqual(entries[0]['heroArtwork'],cached)
+        self.assertNotIn('heroArtwork',entries[1])
+        self.assertNotIn('heroArtwork',entries[2])
+        self.assertEqual(entries[1]['heroSource'],hero)
+        self.assertEqual(entries[-1]['artwork'],'images/'+catalog.digest(Reply.content)+'.jpg')
+
 if __name__=='__main__':unittest.main()

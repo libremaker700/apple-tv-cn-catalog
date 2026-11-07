@@ -1,5 +1,15 @@
 [
   {
+    "id": "juzi-shared",
+    "name": "共享橘",
+    "type": "juzi"
+  },
+  {
+    "id": "shared",
+    "name": "共享猫",
+    "type": "shared"
+  },
+  {
     "id": "ff",
     "url": "https://cj.ffzyapi.com/api.php/provide/vod"
   },
@@ -60,10 +70,6 @@
     "url": "https://www.huyaapi.com/api.php/provide/vod"
   },
   {
-    "id": "xigua",
-    "url": "https://caiji.xgzyapi.com/api.php/provide/vod"
-  },
-  {
     "id": "modu",
     "url": "https://www.mdzyapi.com/api.php/provide/vod"
   },
@@ -116,26 +122,33 @@
     "url": "https://api.changzhang.tv/api.php/provide/vod"
   },
   {
-    "id": "shared",
-    "name": "共享片库",
-    "type": "shared"
+    "id": "mangguo",
+    "url": "https://caiji.mgzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "dazhong",
+    "url": "https://cdn.dzzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "juliang",
+    "url": "https://api.juliang.live/api/provide/vod"
+  },
+  {
+    "id": "ff2",
+    "url": "http://api.ffzyapi.com/api.php/provide/vod"
+  },
+  {
+    "id": "maotai",
+    "url": "https://caiji.maotaizy.cc/api.php/provide/vod"
+  },
+  {
+    "id": "xigua",
+    "url": "https://caiji.xgzyapi.com/api.php/provide/vod"
   },
   {
     "id": "ikanbot",
     "name": "爱看机器人",
     "type": "ikanbot",
     "url": "https://www2.ikanbot.com"
-  },
-  {
-    "id": "shenhua",
-    "name": "神话蓝光",
-    "type": "juzi",
-    "line": "qsvip"
-  },
-  {
-    "id": "bblue",
-    "name": "B蓝光",
-    "type": "juzi",
-    "line": "bfzym3u8"
   }
 ]

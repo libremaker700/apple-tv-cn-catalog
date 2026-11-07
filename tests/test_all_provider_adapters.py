@@ -15,20 +15,23 @@ class Registry(unittest.TestCase):
         deadlines=[];seen=[];deadline=time.monotonic()+90
         def adapter(provider,session,local):
             deadlines.append(local-time.monotonic());seen.append(provider['id']);value=Mock();value.search.return_value=[cms()];value.playable.side_effect=lambda row:row;return value
-        providers=[{'id':str(i),'url':'https://source'+str(i)+'.test/api'}for i in range(33)]
+        providers=[{'id':str(i),'url':'https://source'+str(i)+'.test/api'}for i in range(37)]
         with patch('source_votes.create',side_effect=adapter):
             best,_=public_sources({'kind':'series','year':'2026','season':1,'actors':'演员甲,演员乙','directors':'导演甲'},['夜曲'],providers,session=Mock(),deadline=deadline)
-        self.assertEqual(len(set(seen)),33);self.assertTrue(all(0<left<=10 for left in deadlines));self.assertEqual(best['libraries'],33);self.assertTrue(best['selection']['complete'])
+        self.assertEqual(len(set(seen)),37);self.assertTrue(all(0<left<=9 for left in deadlines));self.assertEqual(best['libraries'],37);self.assertTrue(best['selection']['complete'])
     def test_http_query_errors_do_not_prove_empty_catalog(self):
         for code in(400,404,422,500):
             session=Mock();session.get.return_value=Mock(status_code=code)
             best,events=public_sources({'kind':'series','year':'2026','season':1},['夜曲'],[{'id':'a','url':'https://example.test/api'}],session=session)
             self.assertIsNone(best);self.assertTrue(incomplete(events));self.assertEqual(events[0]['reason'],'http');self.assertEqual(events[0]['http'],code)
-    def test_all_33_app_libraries_and_protocol_types(self):
+    def test_all_37_app_libraries_and_protocol_types(self):
         rows=json.loads((Path(__file__).resolve().parents[1]/'data/public-source-providers.json').read_text(encoding='utf8'))
-        self.assertEqual(len(rows),33);self.assertEqual(len({r['id']for r in rows}),33);self.assertEqual(len({provider_key(r)for r in rows}),33)
-        kinds={r['id']:r.get('type','cms')for r in rows};self.assertEqual(sum(v=='cms'for v in kinds.values()),29)
-        self.assertEqual({k:kinds[k]for k in('shared','ikanbot','shenhua','bblue')},{'shared':'shared','ikanbot':'ikanbot','shenhua':'juzi','bblue':'juzi'})
+        self.assertEqual(len(rows),37);self.assertEqual(len({r['id']for r in rows}),37);self.assertEqual(len({provider_key(r)for r in rows}),37)
+        special={r['id']:r['type']for r in rows if 'type'in r}
+        self.assertEqual(special,{'shared':'shared','ikanbot':'ikanbot','juzi-shared':'juzi'})
+        cms_ids={r['id']for r in rows if 'type'not in r}
+        self.assertTrue({'mangguo','dazhong','juliang','ff2','maotai'}<=cms_ids)
+        self.assertFalse({'shenhua','bblue'}&cms_ids)
         self.assertFalse(any(key in json.dumps(rows)for key in('guest','signingSecret','bodyKey','responseKeyHex','token')))
     def test_missing_private_settings_are_pending_and_not_an_empty_library(self):
         with patch.dict('os.environ',{},clear=True):
@@ -88,17 +91,43 @@ class SharedSession(unittest.TestCase):
         transport.fetch.assert_not_called()
 
 class JuziProtocol(unittest.TestCase):
-    def adapter(self,line='qsvip'):return Juzi(Mock(),{'origin':Juzi.ORIGIN,'publicKey':'fixture','signingSecret':'0123456789abcdef','bodyKey':'0123456789abcdef','bootstrapUrls':['https://example.test/bootstrap'],'packageName':'test','versionCode':'1','versionName':'1','fakePosition':3},line)
+    def adapter(self):return Juzi(Mock(),{'origin':Juzi.ORIGIN,'publicKey':'fixture','signingSecret':'0123456789abcdef','bodyKey':'0123456789abcdef','bootstrapUrls':['https://example.test/bootstrap'],'packageName':'test','versionCode':'1','versionName':'1','fakePosition':3})
     def test_protobuf_detail_medium_uses_field_15_not_field_14(self):
         row=Fields(field(4,1)+field(9,'夜曲第一季')+field(14,777)+field(15,21)+field(18,2026)+field(12,'导演甲')+field(25,'演员甲,演员乙'))
         adapter=self.adapter();adapter.request=Mock(return_value=row);out=adapter.describe({'vod_id':'1'})
         self.assertEqual((out['type_name'],out['vod_year']),('电视剧','2026'));self.assertEqual(out['vod_actor'],'演员甲,演员乙')
-    def test_two_juzi_libraries_keep_their_line_selectors(self):
-        eps=[field(3,'第1集')+field(4,'private-path-one')+field(9,'qsvip')+field(12,1),field(3,'第1集')+field(4,'private-path-two')+field(9,'bfzym3u8')+field(12,1)]
-        detail=Fields(b''.join(blob(29,value)for value in eps))
-        for line,wanted in [('qsvip','private-path-one'),('bfzym3u8','private-path-two')]:
-            adapter=self.adapter(line);adapter.details['1']=detail;adapter.request=Mock(return_value=Fields(field(1,'https://media.test/real.m3u8')));row=adapter.playable({'vod_id':'1'})
-            self.assertEqual(row['vod_play_from'],line);self.assertEqual(usable_groups(row),1);self.assertIn(wanted,adapter.request.call_args.args[1]);self.assertNotIn('private-path',json.dumps(row))
+    def episode(self,line,label='第01集',group=1,number=1):
+        return blob(29,field(3,label)+field(4,'private-path-'+line)+field(9,line)+field(12,group)+field(13,number))
+    def test_juzi_five_supported_routes_vote_as_one_library(self):
+        lines=('SH4K','pylg','PAN1','qsvip','bfzym3u8')
+        metadata=field(4,1)+field(9,'夜曲第一季')+field(15,21)+field(18,2026)+field(12,'导演甲')+field(25,'演员甲,演员乙')
+        detail=Fields(metadata+b''.join(self.episode(line) for line in reversed(lines+('unsupported',)))+self.episode('qsvip','预告',number=0))
+        adapter=self.adapter();adapter.search=Mock(return_value=[{'vod_id':'1','vod_name':'夜曲第一季'}])
+        def respond(path,query):
+            if path.endswith('getDetail'):return detail
+            return Fields(field(1,'https://media.test/real.m3u8'))
+        adapter.request=Mock(side_effect=respond)
+        ref={'kind':'series','season':1,'year':'2026','directors':'导演甲','actors':'演员甲,演员乙'}
+        with patch('source_votes.create',return_value=adapter):
+            result,events=public_sources(ref,['夜曲'],[{'id':'juzi-shared','type':'juzi'}],session=Mock())
+        self.assertEqual((result['libraries'],result['routes']),(1,5))
+        self.assertEqual(result['selection']['libraries'],1);self.assertEqual(result['selection']['requestedLibraries'],1)
+        self.assertEqual([call.args[1].split('&')[0]for call in adapter.request.call_args_list[1:]],['vodPlayFrom='+line for line in lines])
+        self.assertNotIn('private-path',json.dumps(events));self.assertNotIn('media.test',json.dumps(result))
+    def test_juzi_bad_siblings_do_not_hide_successful_routes(self):
+        detail=Fields(field(4,1)+field(9,'夜曲第一季')+field(15,21)+field(18,2026)
+                      +self.episode('SH4K')+self.episode('PAN1')+self.episode('qsvip')+self.episode('qsvip','第2集',2))
+        adapter=self.adapter();adapter.search=Mock(return_value=[{'vod_id':'1','vod_name':'夜曲第一季'}])
+        def respond(path,query):
+            if path.endswith('getDetail'):return detail
+            if 'SH4K'in query:raise AdapterError('network')
+            return Fields(field(1,'https://media.test/real.m3u8'))
+        adapter.request=Mock(side_effect=respond)
+        ref={'kind':'series','season':1,'year':'2026'}
+        with patch('source_votes.create',return_value=adapter):
+            result,events=public_sources(ref,['夜曲'],[{'id':'juzi-shared','type':'juzi'}],session=Mock())
+        self.assertEqual((result['libraries'],result['routes']),(1,1));self.assertFalse(result['complete'])
+        self.assertTrue({'network','episode_groups_ambiguous'}<={event.get('reason')for event in events})
     def test_proto_rejects_truncation(self):
         with self.assertRaises(AdapterError):Fields(b'\x0a\x64\x01')
     def test_real_aes_rsa_primitives_match_protocol_padding(self):

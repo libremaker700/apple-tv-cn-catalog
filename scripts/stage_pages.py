@@ -27,7 +27,8 @@ def snapshot_files(manifest, name):
     if not re.fullmatch(r'releases/[a-f0-9]{64}/' + name + r'\.json', release):
         raise ValueError('Unexpected release path in Pages manifest')
     images = set(manifest['images']) | set(manifest.get('titleLogos', {}))
-    if any(not re.fullmatch(r'images/[a-f0-9]{64}\.(?:jpg|png)', ref) for ref in images):
+    extensions = r'(?:jpg|png|webp)' if name == 'catalog' else r'(?:jpg|png)'
+    if any(not re.fullmatch(r'images/[a-f0-9]{64}\.' + extensions, ref) for ref in images):
         raise ValueError('Unexpected image path in Pages manifest')
     return images | {release}
 

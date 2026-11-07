@@ -9,7 +9,9 @@ class AdapterError(Exception):
 
 def provider_key(provider):
     kind=provider.get('type','cms')
-    return kind+':'+(str(provider.get('url','')).rstrip('/')if kind=='cms'else provider.get('line')or kind)
+    if kind=='cms':
+        return kind+':'+str(provider.get('url','')).rstrip('/')
+    return kind
 
 def plain(value):return re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',str(value or'')))).strip()
 def names(value):
@@ -204,9 +206,10 @@ class Fields:
 
 class Juzi:
     ORIGIN='https://juziapp.hzhcbkj.cn'
-    def __init__(self,transport,settings,line):
-        self.http=transport;self.settings=settings;self.line=line;self.server_key='';self.details={}
-        if settings.get('origin')!=self.ORIGIN or line not in('qsvip','bfzym3u8'):raise AdapterError('needs_configuration')
+    LINES=('SH4K','pylg','PAN1','qsvip','bfzym3u8')
+    def __init__(self,transport,settings):
+        self.http=transport;self.settings=settings;self.server_key='';self.details={}
+        if settings.get('origin')!=self.ORIGIN:raise AdapterError('needs_configuration')
         if any(not settings.get(key)for key in('publicKey','signingSecret','bodyKey','bootstrapUrls','packageName','versionCode','versionName','fakePosition')):raise AdapterError('invalid_configuration')
     @staticmethod
     def nonce(length):return ''.join(secrets.SystemRandom().sample(string.ascii_letters+string.digits,length-1))+'='
@@ -256,18 +259,66 @@ class Juzi:
         data=self.request('/api/proto/v5/drama/getDetail','id='+identity)
         if not data.text(9)and isinstance(data.raw(1),bytes):data=Fields(data.raw(1))
         if str(data.number(4))!=identity or not data.text(9):raise AdapterError('identity_changed')
-        self.details[identity]=data;kind=data.text(14)or{20:'电影',21:'电视剧',22:'综艺',23:'动漫'}.get(data.number(15),'')
-        return dict(row,vod_name=data.text(9),vod_year=str(data.number(18)),type_name=kind,vod_director=data.text(12),vod_actor=data.text(25))
+        kind=data.text(14)or{20:'电影',21:'电视剧',22:'综艺',23:'动漫'}.get(data.number(15),'')
+        routes,errors=self.routes(data,movie=bool(re.search(r'电影|電影|movie|film',kind,re.I)))
+        self.details[identity]=routes,errors
+        return dict(row,vod_name=data.text(9),vod_year=str(data.number(18)),type_name=kind,
+                    vod_director=data.text(12),vod_actor=data.text(25),_hasPlayEntries=bool(routes))
+    @classmethod
+    def routes(cls,data,movie):
+        episodes={line:[] for line in cls.LINES}
+        for entry in data.messages(29):
+            line=entry.text(9)
+            path=entry.text(4)
+            if line in episodes and path:
+                episodes[line].append((entry.number(12),entry.number(13),entry.text(3)or entry.text(2),path))
+        routes={}
+        errors=[]
+        for line,entries in episodes.items():
+            if len({entry[0] for entry in entries})>1:
+                errors.append(AdapterError('episode_groups_ambiguous'))
+                continue
+            candidates=[]
+            for _,_,label,path in sorted(entries,key=lambda entry:entry[:3]):
+                label=label.strip()
+                if not label or len(label)>60 or re.search(r'[$#\r\n]|预告|預告|花絮|彩蛋|特辑|特輯|幕后',label):
+                    continue
+                number=re.fullmatch(r'(?:第|EP?\s*)?0*([0-9]+)(?:集|话|期)?',label,re.I)
+                if number and 0<int(number[1])<=1000:
+                    label=f'第{int(number[1])}集'
+                elif number or not movie:
+                    continue
+                candidates.append((label,path))
+            if len({label for label,_ in candidates})!=len(candidates):
+                errors.append(AdapterError('episode_identity_ambiguous'))
+            elif candidates:
+                routes[line]=candidates[0]
+        return routes,errors
     def playable(self,row):
-        data=self.details[str(row['vod_id'])];candidates=[ep for ep in data.messages(29)if ep.text(9)==self.line and ep.text(4)];groups={ep.number(12)for ep in candidates}
-        if len(groups)>1:raise AdapterError('episode_groups_ambiguous')
-        for ep in candidates:
-            label=ep.text(3)or ep.text(2)
-            if re.search('预告|花絮|彩蛋|特辑|幕后',label):continue
-            value=self.request('/api/proto/v5/videoUsableUrl','vodPlayFrom='+self.line+'&playUrl='+quote(ep.text(4),safe="~!*'()")).text(1)
-            if not re.match(r'^https?://',value)or re.search(r'[\s<>\"\'\\]',value):raise AdapterError('media_unavailable')
-            return dict(row,vod_play_from=self.line,vod_play_url=(plain(label)or'正片')+'$'+value)
-        return dict(row,vod_play_from=self.line,vod_play_url='')
+        routes,route_errors=self.details[str(row['vod_id'])]
+        flags=[]
+        groups=[]
+        errors=list(route_errors)
+        for line,(label,path) in routes.items():
+            try:
+                query='vodPlayFrom='+line+'&playUrl='+quote(path,safe="~!*'()")
+                value=self.request('/api/proto/v5/videoUsableUrl',query).text(1)
+                target=urlsplit(value)
+                if (target.scheme not in ('http','https') or not target.hostname or target.username is not None
+                    or len(value)>8192 or re.search(r'[\x00-\x20<>\"\'\\$#]',value)
+                    or not re.search(r'\.(m3u8|mp4|m4v|mpd|mkv)$',target.path,re.I)):
+                    raise AdapterError('media_unavailable')
+            except ValueError:
+                errors.append(AdapterError('media_unavailable'))
+                continue
+            except AdapterError as error:
+                errors.append(error)
+                if error.reason=='deadline':
+                    break
+                continue
+            flags.append(line)
+            groups.append(label+'$'+value)
+        return dict(row,vod_play_from='$$$'.join(flags),vod_play_url='$$$'.join(groups),_playbackErrors=errors)
 
 def create(provider,session,deadline):
     kind=provider.get('type','cms')
@@ -275,5 +326,5 @@ def create(provider,session,deadline):
     transport=Transport(session,deadline)
     if kind=='ikanbot':return Ikanbot(transport)
     if kind=='shared':return Shared(transport,config('APPLETV_SHARED_SESSION_JSON'))
-    if kind=='juzi':return Juzi(transport,config('APPLETV_JUZI_PROTOCOL_JSON'),provider.get('line'))
+    if kind=='juzi':return Juzi(transport,config('APPLETV_JUZI_PROTOCOL_JSON'))
     raise AdapterError('unsupported_adapter')

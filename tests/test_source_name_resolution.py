@@ -20,6 +20,13 @@ class NameAuthority(unittest.TestCase):
         self.assertNotIn('不是盒子',result['patch']['aliases_zh'])
         self.client.candidate_names.assert_called_once()
         self.assertIn('不是盒子',probe.call_args.args[1])
+    def test_verified_chinese_display_name_and_alias_survive_an_english_douban_title(self):
+        patch={'display_name_zh':'豆瓣核验中文名','aliases_zh':['豆瓣核验别名'],'sources':[]}
+        result,probe=self.call(direct_patch=patch)
+        self.assertEqual(result['patch']['display_name_zh'],'豆瓣核验中文名')
+        self.assertEqual(result['patch']['douban_title'],'Not a Box')
+        self.assertIn('豆瓣核验别名',result['patch']['aliases_zh'])
+        self.assertIn('豆瓣核验中文名',probe.call_args.args[1])
     def test_only_strong_playable_library_vote_renames(self):
         vote={'title':'不是一个盒子第一季','routes':2,'selection':{'libraries':2,'options':[{'title':'不是一个盒子','libraries':2}]}}
         result,_=self.call(vote)

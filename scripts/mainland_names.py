@@ -24,27 +24,45 @@ def source_deferred(work,now=None):
 def source_count(row):
     from source_votes import usable_groups
     return usable_groups(row)
+
+def name_only_scope(info):
+    return info.get('name_only_scope') or info.get('nameOnlyScope')
+
 def verified_subject(info):
-    if info.get('name_only_scope')or info.get('nameOnlyScope'):return None
+    if name_only_scope(info):return None
     value=str(info.get('douban_id')or'')
     if re.fullmatch(r'[1-9][0-9]{4,9}',value):return value
     for source in info.get('sources',info.get('name_sources',[])):
+        if str(source.get('type','')).endswith('_name_only'):continue
         match=re.search(r'^https://(?:movie|m)\.douban\.com/(?:movie/)?subject/(\d+)',source.get('url',''))
         if match:return match[1]
     return None
+
+SEASON_MARKER=re.compile(r'第\s*([\d零一二三四五六七八九十百]+)\s*季|season\s*(\d+)',re.I)
+DIRECTOR_CUT=re.compile(r'導演剪輯版|导演剪辑版|\bdirector[’\x27]?s\s+cut\b',re.I)
+
 def season(title):
-    found=re.search(r'第([0-9一二三四五六七八九十百]+)季|season\s*(\d+)',title,re.I)
+    found=SEASON_MARKER.search(title)
     if not found:return 1
     word=found[1]or found[2]
     if word.isdigit():return int(word)
     if word=='一百':return 100
-    digits='零一二三四五六七八九';pos=word.find('十')
-    return (1 if pos==0 else digits.index(word[0]))*10+(digits.index(word[-1])if pos<len(word)-1 else 0)if pos>=0 else digits.index(word)
-def base(text):return re.sub(r'\s*(?:第[0-9一二三四五六七八九十百]+季|season\s*\d+)\s*$','',text,flags=re.I).strip()
+    digits='零一二三四五六七八九'
+    if len(word)==1 and word in digits:return digits.index(word)
+    tens=re.fullmatch(r'([一二三四五六七八九]?)十([一二三四五六七八九]?)',word)
+    if tens:return (digits.index(tens[1])if tens[1]else 1)*10+(digits.index(tens[2])if tens[2]else 0)
+    return 0
 
-SOURCE_QUERY_POLICY='verified-alias-punctuation-scoped-season-v7'
+def base(text):
+    return re.sub(r'\s*(?:'+SEASON_MARKER.pattern+r')\s*$','',text,flags=re.I).strip()
+
+SOURCE_QUERY_POLICY='verified-alias-punctuation-scoped-season-v8'
 
 def source_people(ref,patch):
+    scope=name_only_scope(patch)
+    if scope:
+        ref['nameOnlyScope']=scope
+        ref.pop('douban_id',None)
     if patch.get('sourceSeason'):ref['sourceSeason']=copy.deepcopy(patch['sourceSeason'])
     for key in ('directors','actors'):
         value=patch.get(key)or[]
@@ -80,7 +98,7 @@ def source_queries(ref,names):
                 expanded.append(variant);seen.add(variant.casefold())
     return expanded[:12]
 def matched_season(ref,title):
-    if re.search(r'第\s*[0-9一二三四五六七八九十百]+\s*季|season\s*\d+',title,re.I):return season(title)
+    if SEASON_MARKER.search(title):return season(title)
     scope=ref.get('sourceSeason')or{}
     if scope.get('policy')=='verified-subseries-v1'and scope.get('season')==ref.get('season')and str(scope.get('year'))==str(ref.get('year'))and scope.get('subjectId')==str(ref.get('douban_id')or'')and norm(title)in {norm(t)for t in scope.get('titles',[])if isinstance(t,str)}:
         return scope['season']
@@ -90,6 +108,7 @@ def recall_matches(ref,row,names,strong=False):
     """Recall an existing verified alias; this alone never authorizes renaming."""
     title=str(row.get('vod_name',''));kind=str(row.get('type_name',''));year=str(row.get('vod_year',''))
     if not kind or re.search(r'解说|预告|花絮|短剧|伦理',kind+' '+title):return False
+    if ref.get('kind')=='movie'and bool(DIRECTOR_CUT.search(title))!=(ref.get('nameOnlyScope')=='director_cut'):return False
     expected=str(ref.get('douban_id')or'');actual=str(row.get('vod_douban_id')or'');valid=lambda s:bool(re.fullmatch(r'[1-9][0-9]{4,9}',s))
     if valid(expected)and valid(actual)and expected!=actual:return False
     same_id=valid(expected)and expected==actual
@@ -203,10 +222,12 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if allowed and official==hint.get('officialId')and ref['year']==hint.get('expectedPlatformYear')and re.fullmatch(r'(19|20)\d{2}',hint.get('releaseYear',''))and re.fullmatch(r'https://www\.imdb\.com/title/tt\d{7,10}/',hint.get('releaseYearEvidence','')):
                 ref['year']=hint['releaseYear']
         source_ref=source_people({'year':ref['year'],'season':n,'kind':work['kind']},zh)
-        if verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
+        if work['kind']=='movie'and DIRECTOR_CUT.search(work['en']):source_ref['nameOnlyScope']='director_cut'
+        if not source_ref.get('nameOnlyScope')and verified_subject(zh):source_ref['douban_id']=verified_subject(zh)
         deferred=deferred_now;best=None;events=[];probed=False;probed_names=set();discovery=dict(old.get('discovery')or{});identity_record=None;discovery_events=[];hits=[];resolution=None
         if released_after_name_only and zh.get('name_sources'):
-            status='cached_verified_name';patch={'display_name_zh':zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
+            status='cached_verified_name';patch={'display_name_zh':zh['title']if chinese(zh['title'])else zh.get('douban_title')or zh['title'],'aliases_zh':zh.get('aliases',[]),'sources':zh['name_sources']}
+            if name_only_scope(zh):patch['name_only_scope']=name_only_scope(zh)
         else:
             mobile=DoubanMobile(lookup.pages);subject=verified_subject(zh)
             patch=mobile.subject(ref,subject,str(now))if subject else None
@@ -219,7 +240,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
             if not identity_record and(discovery.get('aiSourceNames',{}).get('knownLibraryName')or hint.get('confirmedSourceNames'))and str(previous_identity.get('year'))==ref['year']and previous_identity.get('season')==ref['season']:
                 identity_record=previous_identity
             status='douban_direct'
-            if not deferred and identity_record and callable(getattr(type(client),'candidate_names',None)):
+            if not deferred and identity_record and not name_only_scope(patch or {}) and callable(getattr(type(client),'candidate_names',None)):
                 from source_name_resolution import resolve
                 ref['name_context']=str(zh.get('summary_original')or zh.get('summary')or'')[:500]
                 bound_hints=hint.get('sourceNameHints',[])if hint.get('englishTitle')==work['en']and hint.get('officialId')==official else[]
@@ -228,7 +249,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                 patch=resolution['patch'];best=resolution['best'];events=resolution['events'];probed=True;status='ai_candidates_then_sources_or_douban'
             if resolution is None and patch and not deferred and not names_only:
                 source_people(source_ref,patch)
-                if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
+                if not source_ref.get('nameOnlyScope')and verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
                 direct_names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
                 best,events=(probe or public_sources)(source_ref,direct_names,providers);probed=True;probed_names.update(direct_names)
             if resolution is None and (not patch or not deferred and not best and not names_only):
@@ -241,10 +262,10 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
                         fallback['sources']=patch['sources']+fallback.get('sources',[])
                         fallback['display_name_zh']=patch['display_name_zh']
                         # Keep the single Douban response's synopsis and rating packet intact.
-                        for field in ('detailMetadata','douban_id','douban_url','rating_status','douban_rating','rating_checked_at','summary_zh','summary_sources','summary_checked_at','actors','directors'):
+                        for field in ('detailMetadata','douban_id','douban_url','rating_status','douban_rating','rating_checked_at','summary_zh','summary_sources','summary_checked_at','actors','directors','name_only_scope'):
                             if field in patch:fallback[field]=copy.deepcopy(patch[field])
                     patch=fallback;probed=False
-            if resolution is None and not names_only and (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
+            if resolution is None and source_ref.get('nameOnlyScope')!='director_cut'and not names_only and (not patch or not best)and not deferred and identity_record and str(identity_record.get('year'))==detail_year and identity_record.get('season')==ref['season']:
                 from alias_discovery import discover,search_hints
                 if discovery.get('_hintPolicy')!='ydc-tavily-v1':discovery.pop('_hints',None)
                 discovery['_hintPolicy']='ydc-tavily-v1'
@@ -265,7 +286,7 @@ def run(root=ROOT,limit=3,force=False,client=None,lookup=None,probe=None,slugs=N
         if patch:
             source_people(source_ref,patch)
             if work['kind']=='movie'and patch.get('release_date_evidence')and patch.get('release_year'):source_ref['year']=str(patch['release_year'])
-            if verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
+            if not source_ref.get('nameOnlyScope')and verified_subject(patch):source_ref['douban_id']=verified_subject(patch)
             names=list(dict.fromkeys([patch['display_name_zh']]+patch.get('aliases_zh',[])))
             if not deferred and not probed and not names_only:
                 remaining=[name for name in names if name not in probed_names]

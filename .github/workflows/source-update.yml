@@ -50,7 +50,7 @@ jobs:
           python-version: '3.12'
       - run: pip install requests Pillow opencc-python-reimplemented cryptography
       - run: python -m unittest discover -s tests -v
-      - name: Check all 33 libraries with dedicated adapters and private configuration
+      - name: Check App libraries with dedicated adapters and private configuration
         env:
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
@@ -71,7 +71,8 @@ jobs:
           git diff --cached --quiet || git commit -m 'catalog: refresh released-work source coverage'
           git push
       - uses: actions/configure-pages@v5
+      - run: python scripts/stage_pages.py "$RUNNER_TEMP/catalog-pages"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: ${{ runner.temp }}/catalog-pages
       - uses: actions/deploy-pages@v4

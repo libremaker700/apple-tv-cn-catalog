@@ -187,7 +187,8 @@ def sync():
     report['reconciledShows']=reconcile_seasons(value,load(DOCS/'catalog.json'))
     from metadata_policy import restore_display_titles
     restore_display_titles(value.get('works',[]),ROOT)
-    from home_copy import process,preserve_featured_copy
+    from home_copy import process,preserve_featured_copy,preserve_hero_copy
+    preserve_hero_copy(value,previous)
     preserve_featured_copy(value,previous,logos)
     value,copy_report=process(value,ROOT,html,now,poster=logos)
     report['copy']=copy_report

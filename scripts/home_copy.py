@@ -54,6 +54,8 @@ def dated_badge(text):
 
 def fixed_badge(text):
     text=clean(text)
+    oscar=re.fullmatch(r'((?:19|20)\d{2}) Oscar®? Winner',text)
+    if oscar:return oscar[1]+'年奥斯卡奖获奖作品'
     weekday=DAYS.get(text.removeprefix('Coming ')) if text.startswith('Coming ') else None
     return dated_badge(text) or BADGES.get(text.casefold()) or (weekday+'上线' if weekday else fixed(text))
 
@@ -90,7 +92,14 @@ def validate_copy(identity,c):
 def official_display_page(html,source_url):
     from home_pages import page_url
     source_url=page_url(source_url);is_room='/us/room/'in source_url
-    return data_page(html,'RoomPageIntent'if is_room else'ChannelPageIntent',source_url.rsplit('/',1)[-1])
+    try:
+        page=data_page(html,'RoomPageIntent'if is_room else'ChannelPageIntent',source_url.rsplit('/',1)[-1])
+    except (AttributeError,KeyError,TypeError) as error:
+        raise ValueError('Incomplete official display data') from error
+    shelves=page.get('shelves') if isinstance(page,dict) else None
+    if not isinstance(shelves,list) or not all(isinstance(s,dict) for s in shelves):
+        raise ValueError('Incomplete official display shelves')
+    return page
 
 def official_badge(item):
     badge=item.get('badge')
@@ -102,7 +111,10 @@ def extract(html,home,allow_partial=False,source_url=CHANNEL):
     data=official_display_page(html,source_url)
     stage=next(s for s in data['shelves']if s.get('id')=='uts.col.tv-plus-epic-stage' or s.get('displayType')in ('epicStage','epicStageWithUpsell') or ((s.get('presentation')or{}).get('layout')or{}).get('kind')=='epicStage')
     works={w['officialId']:w for w in home['works']};result={}
-    for item in stage.get('items',[]):
+    items=stage.get('items')
+    if not isinstance(items,list) or not all(isinstance(item,dict) for item in items):
+        raise ValueError('Incomplete official hero items')
+    for item in items:
         dest=(item.get('segue')or{}).get('destination')or{};identity=dest.get('id','')
         if identity not in works:continue
         w=works[identity]
@@ -191,6 +203,20 @@ def position_featured_copy(row, poster):
     if poster is None:raise ValueError('Featured logo composition unavailable')
     row.update(poster.reposition(row))
     return True
+
+def preserve_hero_copy(home, previous):
+    def rows(value):
+        for page in [value,*value.get('pages',[])]:
+            source=page.get('source',CHANNEL)
+            for row in page.get('hero',[]):
+                yield (page.get('id'),source,row['officialId']),row
+    old={key:row['copy'] for key,row in rows(previous) if 'copy'in row}
+    for key,row in rows(home):
+        caption=old.get(key)
+        if 'copy'in row or not caption or caption.get('source')!=key[1]:continue
+        try:validate_copy(row['officialId'],caption)
+        except (AssertionError,TypeError,ValueError):continue
+        row['copy']=copy.deepcopy(caption)
 
 def preserve_featured_copy(home, previous, poster=None):
     def rows(value):

@@ -49,6 +49,48 @@ class CloudChecks(unittest.TestCase):
             with patch('source_availability.publish'),patch('mainland_names.republish_home'):run(root,probe=probe,now=now)
             probe.assert_called_once()
 
+    def test_alias_change_does_not_promote_inline_negative_or_republish_it(self):
+        with tempfile.TemporaryDirectory()as folder:
+            root=Path(folder);work=self.work();now=1793440000
+            self.fixture(root,[work]);probe=Mock(return_value=(None,[]))
+            with patch('source_availability.publish')as publish,patch('mainland_names.republish_home'):
+                run(root,probe=probe,now=now)
+                work=publish.call_args.args[0]['entries'][0]
+                self.assertFalse(work['zh']['sourceCheck']['found'])
+                work['zh']['aliases'].append('新核验别名')
+                self.assertNotIn('sourceCheck',apply_cached(copy.deepcopy(work),root)['zh'])
+                (root/'docs/catalog.json').write_text(json.dumps({'entries':[work]}),encoding='utf8')
+                probe.return_value=(None,[{'reason':'network','http':0}])
+                result=run(root,probe=probe,now=now+10)
+                self.assertEqual(result['records'][0]['status'],'incomplete')
+                self.assertIn('新核验别名',probe.call_args.args[1])
+                work=publish.call_args.args[0]['entries'][0]
+                self.assertNotIn('sourceCheck',apply_cached(work,root)['zh'])
+                self.assertEqual(probe.call_count,2)
+
+    def test_director_cut_does_not_inherit_original_subject_or_old_positive(self):
+        from mainland_names import recall_matches
+        with tempfile.TemporaryDirectory()as folder:
+            root=Path(folder);now=1793440000
+            work=self.work(en='Napoleon: The Director’s Cut',kind='movie',year=2024)
+            work['zh'].update(title='拿破仑：导演剪辑版',aliases=['拿破仑'],nameOnlyScope='director_cut',douban_id='35224919',_identityYear=2024)
+            work['zh']['name_sources']=[{'type':'douban_director_cut_name_only','url':'https://movie.douban.com/subject/35224919/'}]
+            work['zh']['sourceCheck']=make_check(work,reference(work),{'routes':1},now-10)
+            self.fixture(root,[work],{'records':{'example':{'queryPolicy':'legacy','check':work['zh']['sourceCheck']}}})
+            self.assertNotIn('sourceCheck',apply_cached(copy.deepcopy(work),root)['zh'])
+            probe=Mock(return_value=(None,[]))
+            with patch('source_availability.publish'),patch('mainland_names.republish_home'):
+                run(root,probe=probe,now=now)
+            query,names,_=probe.call_args.args
+            self.assertNotIn('douban_id',query)
+            row={'vod_name':'拿破仑','vod_year':'2024','vod_douban_id':'35224919','type_name':'剧情片'}
+            self.assertFalse(recall_matches(query,row,names))
+            cut=dict(row,vod_name='拿破仑：导演剪辑版')
+            self.assertTrue(recall_matches(query,cut,names))
+            ordinary={'kind':'movie','year':'2024','season':1,'douban_id':'35224919'}
+            self.assertTrue(recall_matches(ordinary,row,['拿破仑']))
+            self.assertFalse(recall_matches(ordinary,cut,['拿破仑']))
+
     def fixture(self,root,works,cache=None):
         (root/'docs/home').mkdir(parents=True);(root/'data').mkdir()
         for file,data in [('docs/catalog.json',{'entries':works}),('docs/home/home.json',{'works':[]}),('docs/version.json',{}),('data/cloud-source-cache.json',cache or {'records':{}}),('data/public-source-providers.json',[])]:

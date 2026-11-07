@@ -25,6 +25,10 @@ class CopyTests(unittest.TestCase):
         second,report=enrich(first,{},cache,t,200)
         self.assertEqual(first,second);self.assertEqual(report['retainedCopy'],1);self.assertEqual(t.calls,1)
         second,report=enrich(self.home,{},cache,t,300);self.assertNotIn('copy',second['hero'][0]);self.assertEqual(report['pending'],1)
+        self.raw['umc.cmc.test']['badgeEn']='All Episodes Now Available'
+        refreshed,report=enrich(first,self.raw,cache,t,400)
+        self.assertEqual(refreshed['hero'][0]['copy']['badgeZh'],'全集已上线')
+        self.assertEqual(report['retainedCopy'],0)
     def test_source_change_invalidates_only_changed_description(self):
         cache={};t=Translator();enrich(self.home,self.raw,cache,t,100)
         self.raw['umc.cmc.test']['noteEn']='#2 Movie on Apple TV';v,_=enrich(self.home,self.raw,cache,t,200)
@@ -126,7 +130,52 @@ class DatedBadgeTests(unittest.TestCase):
         for item in ({'note':'New Season'},{'badge':{'text':'New Season'}},{'badge':'<b>New</b>'}):
             self.assertEqual(official_badge(item),'')
 
+    def test_official_oscar_badge_backfills_without_a_translation_request(self):
+        from home_copy import localize_cached_badges
+        identity='umc.cmc.test'
+        raw={identity:{'descriptionEn':'','badgeEn':'2026 Oscar® Winner','noteEn':'','genresZh':[]}}
+        home,_=enrich({'hero':[{'officialId':identity}]},raw,{},None,1)
+        caption=home['hero'][0]['copy'];expected=caption['badgeZh']
+        self.assertEqual(expected,'2026年奥斯卡奖获奖作品')
+        caption['badgeZh']='';validate_copy(identity,caption)
+        self.assertEqual(localize_cached_badges(home),1)
+        self.assertEqual(caption['badgeZh'],expected)
+        self.assertEqual(localize_cached_badges(home),0)
+        validate_copy(identity,caption)
+
 class TopicCopyTests(unittest.TestCase):
+    def test_transient_topic_failure_preserves_only_matching_hero_copy(self):
+        from tempfile import TemporaryDirectory
+        from unittest.mock import patch
+        from requests import Timeout
+        from home_copy import preserve_hero_copy,process
+        source='https://tv.apple.com/us/room/sci-fi/edt.item.example'
+        changed='https://tv.apple.com/us/room/sci-fi/edt.item.changed'
+        identity='umc.cmc.test';row={'officialId':identity}
+        old,_=enrich({'hero':[row]},{identity:{'descriptionEn':'The original description.',
+                     'badgeEn':'New','noteEn':'','genresZh':['科幻']}},{},Translator(),1,source_url=source)
+        old_page=dict(old,id='sci-fi',source=source)
+        previous={'hero':[],'pages':[old_page]}
+        current={'hero':[dict(row)],'works':[], 'pages':[
+            {'id':'sci-fi','source':source,'hero':[dict(row),{'officialId':'umc.cmc.new'}]},
+            {'id':'other','source':source,'hero':[dict(row)]},
+            {'id':'sci-fi','source':changed,'hero':[dict(row)]}]}
+        preserve_hero_copy(current,previous)
+        intent={'$kind':'RoomPageIntent','id':'edt.item.example','storefront':'us'}
+        invalid=[{'intent':intent},{'intent':intent,'data':{}},
+                 {'intent':intent,'data':{'shelves':[{'displayType':'epicStage','items':None}]}}]
+        def unavailable(url):raise Timeout('fixture')
+        for response in [None,*invalid]:
+            with self.subTest(response=response),TemporaryDirectory()as directory,patch('home_copy.Translator',return_value=Translator()):
+                html=('<script id="serialized-server-data">'+json.dumps({'data':[response]})+'</script>').encode()
+                result,report=process(current,Path(directory),'',2,fetcher=unavailable if response is None else lambda url:html)
+            self.assertEqual(result['pages'][0]['hero'][0]['copy'],old['hero'][0]['copy'])
+            self.assertNotIn('copy',result['hero'][0])
+            self.assertNotIn('copy',result['pages'][0]['hero'][1])
+            self.assertNotIn('copy',result['pages'][1]['hero'][0])
+            self.assertNotIn('copy',result['pages'][2]['hero'][0])
+            self.assertEqual([p['retainedCopy']for p in report['pages']],[0,1,0,0])
+
     def test_topic_copy_is_contextual_and_same_original_translates_once(self):
         import tempfile
         from unittest.mock import patch

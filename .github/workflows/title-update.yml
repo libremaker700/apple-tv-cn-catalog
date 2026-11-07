@@ -104,15 +104,8 @@ jobs:
           python scripts/mainland_names.py "${ARGS[@]}"
           python scripts/pending_name_review.py --summarize
           if [ -f docs/douban-candidate-review.json ]; then python scripts/audit_douban_candidates.py --summarize; fi
-          python - <<'PY'
-          import json, os
-          records = json.load(open('logs/mainland-name-sync.json'))['records']
-          resolved = bool(records) and all('sourceNameResolution' in row for row in records)
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
-              output.write('resolved_sources=' + str(resolved).lower() + '\n')
-          PY
       - name: Verify pending playback availability in GitHub
-        if: inputs.pending_only != true && steps.lookup.outputs.resolved_sources != 'true'
+        if: inputs.pending_only != true
         env:
           APPLETV_SHARED_SESSION_JSON: ${{ secrets.APPLETV_SHARED_SESSION_JSON }}
           APPLETV_JUZI_PROTOCOL_JSON: ${{ secrets.APPLETV_JUZI_PROTOCOL_JSON }}
@@ -140,7 +133,8 @@ jobs:
           git diff --cached --quiet || git commit -m 'catalog: publish independently verified mainland names'
           git push
       - uses: actions/configure-pages@v5
+      - run: python scripts/stage_pages.py "$RUNNER_TEMP/catalog-pages"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: ${{ runner.temp }}/catalog-pages
       - uses: actions/deploy-pages@v4

@@ -58,6 +58,16 @@ class SeasonQueries(unittest.TestCase):
         found,_=public_sources({'kind':'series','year':'2005','season':1,'douban_id':'12345678'},['邪恶力量'],[{'id':'test','url':'https://example.invalid/api'}],session=session)
         self.assertEqual(found['routes'],1);self.assertEqual(session.get.call_count,3)
 class Identity(unittest.TestCase):
+    def test_spaced_season_marker_overrides_first_season_default(self):
+        from mainland_names import base
+        names=['正确剧名'];row={'vod_douban_id':'12345678','vod_name':'正确剧名 第 2 季','vod_year':'2026','type_name':'欧美剧'}
+        ref={'kind':'series','year':'2026','season':2,'douban_id':'12345678'}
+        self.assertEqual(base(row['vod_name']),'正确剧名')
+        self.assertEqual(season('正确剧名 第 二 季'),2)
+        self.assertEqual(season('正确剧名 第 ２ 季'),2)
+        self.assertTrue(candidate_matches(ref,row,names))
+        self.assertFalse(candidate_matches(dict(ref,season=1),row,names))
+
     def test_year_season_medium_and_full_name_are_kept(self):
         ref={'kind':'series','year':'2026','season':2,'douban_id':'12345678'};row={'vod_douban_id':'12345678','vod_name':'正确剧名第二季','vod_year':'2026','type_name':'欧美剧'}
         self.assertTrue(candidate_matches(ref,row,['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_name='正确剧名第三季'),['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_year='2025'),['正确剧名']));self.assertFalse(candidate_matches(ref,dict(row,vod_name='正确剧名的另一部'),['正确剧名']))

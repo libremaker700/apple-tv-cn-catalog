@@ -24,10 +24,10 @@ def enrich(home, root, get, now=None):
                 for option in options:
                     meta = get('https://uts-api.itunes.apple.com/uts/v3/seasons/' + option['officialId'] + '/metadata?' + urlencode(params)).json()['data']
                     date = year_date(meta.get('releaseDate'))
-                    if (meta.get('id') != option['officialId'] or meta.get('showId') != identity
+                    if (meta.get('type') != 'Season' or meta.get('id') != option['officialId'] or meta.get('showId') != identity
                             or meta.get('seasonNumber') != option['season'] or not date):
                         raise ValueError('Season identity/date mismatch')
-                    summary=official_synopsis(meta.get('description')) if meta.get('type')=='Season' else ''
+                    summary=official_synopsis(meta.get('description'))
                     verified.append(dict(option,year=date[:4],releaseDate=date,metadataStatus='verified',
                                          showId=identity,summaryOriginal=summary))
                 rows = verified

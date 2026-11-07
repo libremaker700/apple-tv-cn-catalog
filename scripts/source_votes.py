@@ -66,6 +66,9 @@ def collect(ref,names,providers,session,deadline,matches,queries,base,norm,recal
                             rows.append((canonical_name(ref,str(row['vod_name']),names,base,norm),usable_groups(row),True))
                             continue
                         row=adapter.playable(row);count=usable_groups(row)
+                        for error in row.get('_playbackErrors',()):
+                            complete=False
+                            events.append({'provider':provider['id'],'http':error.http,'reason':error.reason})
                         if count:rows.append((canonical_name(ref,str(row['vod_name']),names,base,norm),count,strong))
                 except AdapterError as error:
                     complete=False;events.append({'provider':provider['id'],'http':error.http,'reason':error.reason})
