@@ -336,6 +336,25 @@ class ShowcaseCopyTests(unittest.TestCase):
             process(home,root,html(),3,showcases_only=True)
             self.assertEqual(inputs[-2:],['A Different Holiday','Snoopy greets friends.'])
 
+    def test_reviewed_heading_replaces_mixed_language_translation(self):
+        import tempfile
+        from unittest.mock import Mock,patch
+        from home_copy import process
+
+        original='Picked by Common Sense Media'
+        translator=Mock()
+        with tempfile.TemporaryDirectory() as folder,patch('home_copy.Translator',return_value=translator):
+            for title in (original,'Common Sense Media 精选'):
+                with self.subTest(title=title):
+                    shelf={'title':title,'officialTitle':original,'layout':'portrait','items':[]}
+                    home={'works':[],'hero':[],'shelves':[],
+                          'pages':[{'id':'kids','hero':[],'shelves':[shelf]}]}
+                    localized,_=process(home,Path(folder),'',1,showcases_only=True)
+                    result=localized['pages'][0]['shelves'][0]
+                    self.assertEqual(result['title'],'常识媒体精选')
+                    self.assertEqual(result['officialTitle'],original)
+        translator.translate.assert_not_called()
+
     def test_new_topic_headings_translate_in_multiple_batches_in_same_run(self):
         import tempfile
         from unittest.mock import patch
